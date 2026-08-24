@@ -1,0 +1,687 @@
+ 
+Journal Pre-proof
+Augmented Reality Navigation for Spinal Pedicle Screw
+Instrumentation using Intraoperative 3D Imaging
+Fabio M¨uller , Simon Roner , Florentin Liebmann , Jos´e M. Spirig ,
+Philipp F¨urnstahl , Mazda Farshad
+PII:
+S1529-9430(19)31058-7
+DOI:
+https://doi.org/10.1016/j.spinee.2019.10.012
+Reference:
+SPINEE 58046
+To appear in:
+The Spine Journal
+Received date:
+6 July 2019
+Revised date:
+19 October 2019
+Accepted date:
+21 October 2019
+Please cite this article as:
+Fabio M¨uller ,
+Simon Roner ,
+Florentin Liebmann ,
+Jos´e M. Spirig ,
+Philipp F¨urnstahl ,
+Mazda Farshad ,
+Augmented
+Reality
+Navigation
+for
+Spinal
+Pedicle
+Screw
+Instrumentation
+using
+Intraoperative
+3D
+Imaging,
+The
+Spine
+Journal
+(2019),
+doi:
+https://doi.org/10.1016/j.spinee.2019.10.012
+This is a PDF ﬁle of an article that has undergone enhancements after acceptance, such as the addition
+of a cover page and metadata, and formatting for readability, but it is not yet the deﬁnitive version of
+record. This version will undergo additional copyediting, typesetting and review before it is published
+in its ﬁnal form, but we are providing this version to give early visibility of the article. Please note that,
+during the production process, errors may be discovered which could affect the content, and all legal
+disclaimers that apply to the journal pertain.
+© 2019 Published by Elsevier Inc.
+
+
+Augmented Reality Navigation for Spinal Pedicle Screw Instrumentation  
+using Intraoperative 3D Imaging 
+RUNNING TITLE: AR navigation using imaging registration 
+Fabio Müllera,*; Simon Ronera; Florentin Liebmannb, c; José M. Spiriga; Philipp Fürnstahlb; 
+Mazda Farshada 
+a Department of Orthopaedics, Balgrist University Hospital, University of Zurich, 
+Forchstrasse 340, 8008 Zurich, Switzerland 
+b Computer Assisted Research and Development Group, Balgrist University Hospital, 
+University of Zurich, Lengghalde 5, 8008 Zurich, Switzerland 
+c Laboratory for Orthopaedic Biomechanics, ETH Zurich, Forchstrasse 328, 8008 Zurich, 
+Switzerland 
+* CORRESPONDENCE TO 
+Fabio Müller 
+University Hospital Balgrist 
+Forchstrasse 340 
+8008 Zurich 
+Switzerland 
+Phone: +41 (0)44 386 11 11; Fax: +41 (0)44 386 11 09 
+E-mail: fabio.mueller3@uzh.ch 
+ 
+ 
+         
+         
+
+
+ACKNOWLEDGMENTS 
+This work is part of "SURGENT" under the auspices of University Medicine Zurich / 
+Hochschulmedizin Zürich. Imaging was performed with the support of the Swiss Center for 
+Musculoskeletal Imaging, SCMI, Balgrist Campus AG, Zurich. We thank Fabio Carrillo and 
+Jonas Walker for their great support throughout the experiments, especially during the design 
+of custom-made guides and markers as well as illustrations. 
+ 
+ABSTRACT 
+Background context: 
+Due to recent developments in augmented reality with head-mounted devices, holograms of a 
+surgical plan can be displayed directly in the surgeon’s field of view. To the best of our 
+knowledge, 3D intraoperative fluoroscopy has not been explored for the use with holographic 
+navigation by head-mounted devices in spine surgery.  
+Purpose: 
+To evaluate the surgical accuracy of holographic pedicle screw navigation by head-mounted 
+device using 3D intraoperative fluoroscopy. 
+Study design: 
+In this experimental cadaver study, the accuracy of surgical navigation using a head-mounted 
+device was compared to navigation with a state-of-the-art pose-tracking system.  
+Methods: 
+Three lumbar cadaver spines were embedded in non-transparent agar gel, leaving only 
+commonly visible anatomy in sight. Intraoperative registration of preoperative planning was 
+         
+         
+
+
+achieved by 3D fluoroscopy and fiducial markers attached to lumbar vertebrae. Trackable 
+custom-made drill sleeve guides enabled real-time navigation. In total, 20 K-wires were 
+navigated into lumbar pedicles using AR-navigation, 10 K-wires by the state-of-the-art pose-
+tracking system. 3D models obtained from post-experimental CT scans were used to measure 
+surgical accuracy. MF is founder and shareholder of Incremed AG, a Balgrist University 
+Hospital start-up focusing on the development of innovative techniques for surgical 
+executions. The other authors declare no conflict of interest concerning the contents of this 
+study. No external funding was received for this study. 
+Results: 
+No significant difference in accuracy was measured between AR-navigated drillings and the 
+gold standard with pose-tracking system with mean translational errors between entry points 
+(3D vector distance; p = 0.85) of 3.4 ± 1.6 mm compared to 3.2 ± 2.0 mm, and mean angular 
+errors between trajectories (3D angle; p = 0.30) of 4.3 ± 2.3° compared to 3.5 ± 1.4°. 
+Conclusion: 
+In conclusion, holographic navigation by use of a head-mounted device achieves an accuracy 
+comparable to the gold standard of high-end pose-tracking systems.  
+Clinical significance: 
+These promising results could result in a new way of surgical navigation with minimal 
+infrastructural requirements but now have to be confirmed in clinical studies.  
+KEYWORDS: augmented reality; surgical navigation; HoloLens; pedicle screw; 3D surgical 
+accuracy; spine; surgical accuracy. 
+ 
+         
+         
+
+
+INTRODUCTION 
+The proximity of vital and neural structures in spine surgery requires very high accuracy from 
+the surgeons [1]. Recently, there has been increasing interest in augmented reality (AR1) and 
+its potential to improve accuracy of orthopaedic surgeries [2–5]. To perform surgical 
+navigation by holographic guidance, a three-dimensional (3D2) preoperative plan can be 
+uploaded to the AR head-mounted device (HMD3) and registered (superimposed) with the 
+intraoperative anatomy [6]. HMDs enable visualization of a 3D hologram directly into the 
+surgeon’s field of view. Compared to current state-of-the-art pose-tracking systems (PTS4) 
+working with two-dimensional (2D5) monitors, HMDs have the advantage of direct overlay of 
+navigation on anatomy and that the surgeon can stay focused on the operating field without 
+having to turn away.    
+A systematic review of most recent AR advancements reported a surgical accuracy between 
+1 mm to 5 mm and attested improvements in safety and efficacy of surgical procedures 
+[2,6,7]. In a comparison of three different HMDs, Qian et al. presented the HoloLens 
+(Microsoft, Redmond, USA) to be most suitable for supporting surgical interventions [8].  
+Since the position of the patient’s anatomy in surgery is different from the position in the 
+preoperatively acquired computed tomography (CT6), the anatomy can be registered 
+                                                        
+Abbreviations 
+1 AR: augmented reality 
+2 3D: three-dimensional 
+3 HMD: head-mounted device 
+4 PTS: pose-tracking system 
+5 2D: two-dimensional 
+6 CT: computed tomography 
+7 ICP: itierative closest point 
+8 DG: drill sleeve guide 
+9 TE: translational error 
+10 AE: angular error 
+11 SD: standard deviation 
+         
+         
+
+
+intraoperatively in order to align it with the hologram of the 3D preoperative plan [9]. Several 
+registration techniques such as manual or landmark-based surface registration, surface 
+digitalization or intraoperative ultrasound have been employed [5–7,9,10]. However, in 
+conventional navigation of spine surgeries, imaging-based registration remains the gold 
+standard to perform the registration task precisely, and 3D fluoroscopy has been shown to be 
+a reliable imaging technique in this regard [11]. Surprisingly, to the best of our knowledge, 
+imaging-based registration has not been investigated for holographic navigation and 
+compared to a state-of-the-art real-time PTS.   
+In this cadaver study, AR-enabled holographic navigation of pedicle screw instrumentation by 
+use of an HMD (HoloLens, Microsoft, Redmond, USA) was compared to gold standard 
+navigation with a state-of-the-art PTS (fusionTrack500, Atracsys LLC, Puidoux, 
+Switzerland). Intraoperative registration by 3D fluoroscopy was used in both methods to 
+ensure identical experimental setups and comparable results. 
+ 
+MATERIAL AND METHODS 
+This experimental cadaver study was approved by the Cantonal Ethics Committee on research 
+involving humans (ID: KEK 2017-00874). Consent to use a person’s body for research 
+purposes was given by the person itself or his/her representative. After the experiments, all 
+exogenic material was extracted and cadavers were cremated.  
+Study design: 
+Three isolated and fresh-frozen lumbar cadaver spines ranging from T12 to coccyx, with 
+intact and healthy anatomy, shortened ribs and autochthonic spinal muscles, were acquired 
+from Science Care (Phoenix, USA). On each spine, all five lumbar vertebrae were planned to 
+         
+         
+
+
+be instrumented by pedicle screws on both sides, resulting in 10 pedicles per spine. Two 
+groups were formed: The “AR group”, representing the study group, comprised two cadaver 
+spines with 20 pedicle screws navigated by AR hologram guidance through an HMD. The 
+control group included one cadaver spine with 10 pedicle screws navigated by a state-of-the-
+art PTS and was called “PTS group”. Due to limited availability of specimens, the smaller 
+sample size of the control group was assumed to be justifiable considering also the vast 
+amount of literature reporting reliability and small divergence in the performance of surgical 
+navigation with PTS. All lumbar pedicles were instrumented by an experienced senior 
+surgeon (M. F.). Instead of pedicle screws, K-wires (diameter: 1.5 mm) were inserted.  
+Experimental setup: 
+CT scans with a slice thickness of 1 mm (SOMATOM Edge Plus, Siemens Healthcare GmbH, 
+Erlangen, Germany) were obtained in supine position without fixation of specimens. Semi-
+automatic segmentation of CT data was conducted by commercial software (Mimics 19.0, 
+Materialise NV, Leuven, Belgium) to generate 3D triangular surface bone models. The 
+anatomical coordinate system of each vertebra was defined by x = sagittal axis 
+(anteroposterior; red arrow in Figure 1), y = coronal axis (mediolateral, green arrow in 
+Figure 1), z = longitudinal axis (craniocaudal; blue arrow in Figure 1).  Preoperative 
+planning of trajectories for lumbar pedicle screws from L1 to L5 was executed using the 
+preoperative planning software CASPA (Balgrist CARD AG, Zurich, Switzerland). 
+Trajectories were planned by an experienced spine surgeon (M. F.) according to the 
+traditional Weinstein technique [12]: Screw trajectories were planned in the center of the 
+pedicles,  being parallel to the superior endplates of the vertebrae. The screw entry points 
+were determined by calculating the intersection between the central cylindrical screw 
+         
+         
+
+
+trajectory (diameter: 2 mm) and the posterior surface of the vertebra, lateral to the superior 
+articular facet.  
+The autochthonic spinal muscles were dissected and removed to gain access to the spine 
+mimicking a standard surgical approach from posterior. The lumbar spines were embedded in 
+non-transparent agar gel (Repligel-PG, dent-e-con e.K., Lonsee, Germany) in a prone 
+position. The setup was covered with surgical drapes such that only the vertebral surface 
+visible in an open posterior approach was left uncovered. For the AR group, sterile 
+commercial fiducial registration markers (IMAGE LOCK VisiMARKER, CLEAR GUIDE 
+MEDICAL, Baltimore, USA) were attached to custom-made frames and fixed onto the 
+spinous processes by three K-wires (1.2 mm). Due to space constraints, not every vertebra in 
+the study group was equipped with markers. The spinous process of L1, L3 and L5 for one 
+cadaver spine and L2 and L4 for the other were mounted with registration markers. Therefore, 
+5 lumbar vertebrae were registered with a marker attached to their corresponding spinous 
+process, whereas 5 had a registration marker on the neighboring spinous process (Figure 2a). 
+For the PTS group, sterile commercial infrared-reflective spheres (model 2010-03; navigation 
+marker Snap, ILUMARK GmbH, Feldkirchen b. München, Germany; diameter 11 mm) were 
+attached to custom-made frames and fixed laterally through the agar gel to each lumbar 
+vertebral body, on the opposite side of the surgeon. Every marker was pinned with two K-
+wires (Figure 2b).  
+The registration markers of both groups were equipped with four titanium spheres each 
+(model TI006830; Goodfellow Cambridge Limited, Huntingdon, UK) being visible in 3D 
+fluoroscopy. Intraoperative imaging by 3D fluoroscopy (Ziehm Vision RFD 3D, Ziehm 
+Imaging GmbH, Nuremberg, Germany; slice thickness 1 mm) was obtained from each 
+specimen. For registration between CT and 3D fluoroscopy, the titanium spheres and the 
+         
+         
+
+
+vertebrae were semi-automatically segmented from the 3D fluoroscopy data and imported into 
+the CASPA software. The registration process is illustrated in Figure 1. In a first step, the 
+registration marker’s coordinate system was calculated using the titanium spheres (Figure 1a 
+bottom; bright dots). Thereby, the current marker’s position (Figure 1b bottom; light green) 
+relative to the intraoperative anatomy was determined. In a second step, iterative closest point 
+(ICP7) was applied similar to Liebmann et al. to align the preoperative with the intraoperative 
+anatomy [6], yielding the corresponding coordinate system transformation of the vertebrae. 
+Based on the transformations of the marker relative to the intraoperative vertebra and the 
+transformation between pre- and intra-operative anatomy, the correspondence between 
+preoperative plan and intraoperative situation was established (Figure 1c).  
+After registration to each cadaver specimen, the 3D preoperative planning of the desired level 
+was displayed, either by superimposing the real anatomy with a hologram (AR group) or by 
+displaying it on a screen facing the surgeon (PTS group). Marker positions were tracked in 
+real-time, compensating motion during instrumentation. To increase processing speed, unused 
+markers were covered (AR group) and reflective spheres were only mounted onto the marker 
+corresponding to the level to be worked on (PTS group). The PTS was placed cranial to the 
+cadaver spine. In both groups, navigation of K-wire insertion was performed with a trackable 
+drill sleeve guide (DG8), similar to the approach of Liebmann et al., except that infrared-
+reflective spheres were used for tracking with the PTS (Figure 3a and b) [6].  
+Navigation was conducted in two steps. First, entry points of the pedicle screws were 
+displayed by blue spheres with diameters of 2 mm (Figure 4a). Additionally, the Euclidean 
+distance between the planned entry point and current tip position of the DG was calculated 
+and displayed in millimeters next to the DG. Secondly, a triangle illustrating the deviation 
+         
+         
+
+
+between the planned trajectory (Figure 4b) and the trajectory of the DG was displayed. The 
+corresponding 3D angle in degrees indicated the accuracy of the alignment [6]. The surgeon 
+was additionally supported by the colors of the triangle, illustrating the quality of the 
+alignment. Red indicated that the distance or the 3D angle of the current trajectory was 
+deviating more than 2 mm or 3°, respectively, whereas green represented less than 2 mm or 
+3°, respectively. Hand gestures, performing a double-tap with thumb and index finger, were 
+used to switch between insertion point and trajectory navigation in the AR group, whereas 
+navigation in the PTS group was controlled by a second person using the computer keyboard. 
+Each specimen was instrumented from cranial to caudal, always starting on the right pedicle. 
+After completion of the experiments, the surgeon filled in a questionnaire rating the following 
+evaluation points from 1 (very bad) to 5 (very good): visual impression of registration 
+accuracy, comfort of usability, intuitiveness of system, visualization of entry points, 
+visualization of trajectory navigation, time expenditure, stability of system, feasibility for 
+surgery, preserved sterility of surgical site. 
+ 
+CALCULATION 
+3D evaluation method: 
+Post-experimentally, CT scans with 1 mm slice thickness of the three cadaver specimens were 
+conducted in prone position embedded within agar gel. Vertebrae and K-wires were semi-
+automatically segmented and registered with the 3D planning, as explained before [6].  
+         
+         
+
+
+With the CASPA software, cylinders of 2 mm diameter were aligned with the 3D models of 
+the K-wires and sphere centers (diameter 2 mm), representing the entry points, were placed 
+where the cylinder passed through the posterior surface of the vertebral arch (Figure 5a). The 
+3D translational error (TE9) of the entry point navigation was calculated by the 3D Euclidean 
+distance between the centers of the spheres representing planned (𝑥1, 𝑦1, 𝑧1) and executed 
+(𝑥2, 𝑦2, 𝑧2) entry points using the following formula [13]: 
+𝑇𝐸= √(𝑥1 −𝑥2)2 + (𝑦1 −𝑦2)2 + (𝑧1 −𝑧2)2 
+For the calculation of the 3D angular error (AE10), the direction vector of the planned (𝐴⃑) and 
+executed (𝐵⃑⃑) trajectories were used and the following formula was applied (Figure 5b) [13]:  
+𝐴𝐸= cos−1 ( 𝐴⃑∙𝐵⃑⃑
+‖𝐴⃑‖‖𝐵⃑⃑‖
+) 
+To allow comparison of the outcome with historical data from literature, the method proposed 
+by Guha et al. was implemented as well [14]. Overall time required for navigation was 
+measured from the moment of entry point visualization until the surgeon was finished with K-
+wire insertion. To assess the influence of registration marker positions in the AR group, the 
+accuracies for levels on which registration markers were directly mounted, were compared to 
+levels navigated by registration markers mounted on neighboring spinous processes.  
+Statistical analysis: 
+Statistical analysis was performed in MATLAB version R2016b (MathWorks, Natick, USA). 
+Metric parameters were presented by mean values and corresponding standard deviation 
+(SD11), categorical parameters by frequency and percentage.  Comparisons of varying, 
+         
+         
+
+
+normally distributed parameters were done by Welch’s t-test with unequal variance due to 
+unequal sample size. A p-value of < 0.05 was considered statistically significant.  
+ 
+RESULTS 
+20 K-wires were navigated in the AR group, 10 in the PTS group.  
+The evaluation of the surgical accuracy resulted in a mean 3D TE in the AR and PTS groups 
+of 3.4 ± 1.6 mm and 3.2 ± 2.0 mm, respectively (Figure 6a). Mean 3D AE was 4.3 ± 2.3° in 
+the AR group and 3.5 ± 1.4° in the PTS group (Figure 6b). No statistically significant 
+difference between the groups was found for TE (p = 0.85) or AE (p = 0.30).  
+In 2D, the axial TE was 1.8 ± 1.3 mm (AR group) versus 1.6 ± 1.0 mm (PTS group) and the 
+sagittal TE was 2.6 ± 4.7 mm versus 0.9 ± 0.8 mm. The axial AE was 3.4 ± 2.5° and 2.4 ± 
+1.4° in the AR and PTS group, respectively. The sagittal AE was 2.1 ± 1.5° (AR group) and 
+2.3 ± 1.4° (PTS group). 
+Two major outliers in pedicles navigated by PTS had to be excluded from the analysis (L2 
+right and L4 right). In case of L2 right, the surgeon slipped off the vertebral arch during K-
+wire insertion. Whereas for L4 right, the laterally attached registration marker touched the 
+table during instrumentation of the ipsilateral side, resulting in modification of the 
+registration. 
+The overall time required for navigation was 57.5 ± 46.9 s in the AR group and 45 ± 16.5 s in 
+the PTS group (p = 0.30).  Within the AR group, no statistically significant difference (p-
+value for TE = 0.63; p-value for AE = 0.85) between surgical accuracy of levels on which 
+registration markers were directly attached compared to levels with registration markers 
+         
+         
+
+
+attached to neighboring vertebrae could be noted. According to the questionnaire (Table 1), 
+the surgeon experienced more intuitive handling and subjectively easier trajectory navigation 
+by using AR. 
+ 
+DISCUSSION 
+Although being the gold standard in surgical navigation [11], to our knowledge, image-based 
+registration has not been explored for the use with AR-based HMD and compared to state-of-
+the-art navigation systems in spine surgery. In the here performed cadaveric pilot study we 
+found surgical accuracy achieved by AR navigation using HMD with image-based 
+registration to be within the range of commercially available navigation systems.  
+Various different clinical grading systems have been applied to evaluate the outcome of 
+pedicle screw placement, making reproducibility and comparisons between studies difficult 
+[15,16]. Only few studies assessing the performance of navigation systems in spinal surgery 
+reported on the surgical accuracy of pedicle screw placement at all [6,14,17–23]. Results 
+reported in literature were mostly conducted in 2D [14,17–22]. Kleck et al. used a commercial 
+high-precision PTS for the navigation of pedicle screw placement [23]. They achieved a mean 
+TE of 5.9 mm and mean AE of 3.1° which is more accurate for AE but less accurate for TE 
+compared to our results [23].  
+To compare our results with 2D error metrics reported in literature, we derived the projected 
+measurements using the method proposed by Guha et al. [14]. Mean axial and sagittal 
+translational errors in 2D were ranging from 1.3 –  1.8 mm and 1.2 – 1.5 mm in literature 
+[7,14], whereas other studies did not report on TE [17,20–22]. The 2D accuracy reported 
+ranged from 2.2 – 4.0° and 2.6 – 4.0° for axial and sagittal AE, respectively [7,14,17,20–22]. 
+         
+         
+
+
+Elmi-Terander et al. described a higher accuracy, with mean TE of 2.2 mm and mean AE of 
+0.9°, using a hybrid operating room [18].  
+Other experimental studies evaluating different registration methods for AR navigation in 
+orthopaedic surgery have achieved a similar accuracy, but none of those were performed on 
+human cadavers [5–7]. 
+Increasing distance between registration makers and the levels to be instrumented can be a 
+potential source of error if vertebrae move independently during instrumentation [9,11]. 
+However, no significant difference in the surgical accuracy was noted in our study, regardless 
+of whether the markers were attached directly on the vertebrae or beside them. This is in line 
+with the findings of Boon Tow et al., reporting about accurate registration of two adjacent 
+spinal levels with a single registration marker [24]. Yet, these findings do not imply that the 
+use of a single registration marker might be sufficiently accurate for the surgical navigation of 
+an entire spine, as it is suggested by some commercially available tracking and navigation 
+systems for spine surgery [9,24,25]. Since fewer registration markers result in less preparation 
+time in surgery, experiments assessing the accuracy of AR navigation dependent on the 
+number of registration markers should be considered in future studies.  
+There have also been no significant differences in navigation times between the AR and the 
+PTS groups. The navigation times measured in our study were even below the results reported 
+in literature ranging from 90-200s [6,7,18]. However, it has to be stated that intraoperative 
+registration by 3D fluoroscopy is time-consuming and segmentation was not fully automated 
+within our study. The time needed for registration has not been added to the reported 
+navigation times. 
+         
+         
+
+
+The comparison of the surgical accuracy between studies should be handled with care because 
+different evaluation methods had been applied. So far, varying error measures of navigated 
+pedicle screw placement in spine surgery have been reported in literature and no gold 
+standard was established. Our study described a 3D evaluation method to report on surgical 
+accuracy [23]. Liebmann et al. had used the same error measures as our study for the technical 
+evaluation of AR-guided navigation of pedicle screw placement with the Microsoft HoloLens 
+[6]. Besides Liebmann et al., Kleck et al. was the only study reporting the accuracy based on 
+3D error metrics [6,23]. Contrary, Guha et al. proposed an evaluation based on 2D error 
+measures as a standard for future studies [14]. To improve reporting on surgical accuracy, 
+they suggested measuring the translational and angular error in axial and sagittal planes of CT 
+scans relative to a reference line [14]. In our opinion, a 3D evaluation method is more reliable, 
+since no reader-dependent reference lines or planes need to be defined to measure the 
+projected angles and distances in 2D.  
+This study faced also limitations of AR navigation using HMD. In the 3D preoperative 
+planning, the entry points and corresponding trajectories were placed directly onto the bony 
+surface. However, some spine surgeons remove parts of the cortical bone with a rongeur at the 
+location of entry to gain easier access to the pedicle. The amount of bone removal cannot be 
+planned preoperatively, and entry point navigation was thereby limited. Further drawbacks 
+have been the use of isolated cadaver spines instead of cadaver torsos as well as the small 
+number of specimens. However, this is the first report of its kind with the design of a pilot 
+study evaluating feasibility and accuracy.  
+Also, technical limitations currently exist and need to be solved before clinical application; 
+First, transfer of imaging data, segmentation of the intraoperative anatomy and registration 
+         
+         
+
+
+with the preoperative planning was not performed in an automatic fashion as it would be the 
+case in a real surgery. However, automation of these steps was not the focus of our research as 
+it has already been achieved for other commercial tracking and navigation systems using 
+intraoperative imaging registration [14,17,18,21–23]. Secondly, the software application for 
+holographic navigation was unstable, because constant access to internal sensor data through 
+the HoloLens research mode was required [26]. Moreover, simultaneous tracking of two or 
+more markers while the HMD was moving in space, sometimes caused jittering of the 
+hologram and could even provoke application breakdowns requiring restart [6].  
+Due to the technical limitations mentioned, it has to be stated that the AR navigation by HMD 
+is not yet ready for clinical use. However, despite using hardware that has not primarily been 
+designed for medical purposes, the accuracy of the surgical navigation is surprisingly high 
+and very comparable to high-end optical tracking or navigation systems. Furthermore, studies 
+investigating the performance in a real surgical setting are needed to evaluate the influence of 
+factors such as light conditions, blood, noise disturbance, and breathing artefacts. Since the 
+surgeon is forced to flex his neck more than usual to have the surgical site within the camera’s 
+field of view, also ergonomic aspects should be considered in the design of future HMDs. 
+Our vision of AR-enhanced surgery is an HMD interfacing with all relevant OR devices and 
+thereby acting as a command control interface operated by the surgeon (Figure 7a). Not only 
+navigational assistance but also further important information (e.g. heart rate, blood pressure, 
+blood loss, operation time, imaging) could be visualized within the surgeon’s field of view 
+(Figure 7b).  Accordingly, AR navigation could reduce infrastructural requirements 
+compared to state-of-the-art navigation systems. Depending on the registration method, at 
+         
+         
+
+
+least an HMD, fiducial registration markers and a specific DG would be required. (Figures 3a 
+and 7a).   
+ 
+CONCLUSION 
+In conclusion, navigation for pedicle instrumentation by augmented reality-based head-
+mounted devices achieves comparable results to state-of-the-art high precision navigation 
+systems when using 3D image-based registration.  
+ 
+REFERENCES 
+[1] 
+Rampersaud YR, Simon DA, Foley KT. Accuracy requirements for image-guided 
+spinal pedicle screw placement. Spine (Phila Pa 1976) 2001;26:352–9. 
+doi:10.1097/00007632-200102150-00010. 
+[2] 
+Vávra P, Roman J, Zonča P, Ihnát P, Němec M, Kumar J, et al. Recent Development of 
+Augmented Reality in Surgery: A Review. J Healthc Eng 2017;2017. 
+doi:10.1155/2017/4574172. 
+[3] 
+Fischer M, Fuerst B, Lee SC, Fotouhi J, Habert S, Weidert S, et al. Preclinical usability 
+study of multiple augmented reality concepts for K-wire placement. Int J Comput 
+Assist Radiol Surg 2016;11:1007–14. doi:10.1007/s11548-016-1363-x. 
+[4] 
+Belmustakov S, Bailey C, Weiss CR. Augmented and Virtual Reality Navigation for 
+Interventions in the Musculoskeletal System. Curr Radiol Rep 2018;6:33. 
+doi:10.1007/s40134-018-0293-5. 
+[5] 
+Ma L, Zhao Z, Chen F, Zhang B, Fu L, Liao H. Augmented reality surgical navigation 
+         
+         
+
+
+with ultrasound-assisted registration for pedicle screw placement: a pilot study. Int J 
+Comput Assist Radiol Surg 2017;12:2205–15. doi:10.1007/s11548-017-1652-z. 
+[6] 
+Liebmann F, Roner S, von Atzigen M, Scaramuzza D, Sutter R, Snedeker J, et al. 
+Pedicle screw navigation using surface digitization on the Microsoft HoloLens. Int J 
+Comput Assist Radiol Surg 2019;14:1157–65. doi:10.1007/s11548-019-01973-7. 
+[7] 
+Gibby JT, Swenson SA, Cvetko S, Rao R, Javan R. Head-mounted display augmented 
+reality to guide pedicle screw placement utilizing computed tomography. Int J Comput 
+Assist Radiol Surg 2019;14:525–35. doi:10.1007/s11548-018-1814-7. 
+[8] 
+Qian L, Barthel A, Johnson A, Osgood G, Kazanzides P, Navab N, et al. Comparison 
+of optical see-through head-mounted displays for surgical interventions with object-
+anchored 2D-display. Int J Comput Assist Radiol Surg 2017;12:901–10. 
+doi:10.1007/s11548-017-1564-y. 
+[9] 
+Scheufler K-M, Franke J, Eckardt A, Dohmen H. Accuracy of Image-Guided Pedicle 
+Screw Placement Using Intraoperative Computed Tomography- Based Navigation 
+With Automated Referencing. Part II: Thoracolumbar Spine. Neurosurgery 
+2011;69:1307–16. doi:10.1227/NEU.0b013e31822ba190. 
+[10] Urakov TM, Wang MY, Levi AD. Workflow Caveats in Augmented Reality–Assisted 
+Pedicle Instrumentation: Cadaver Lab. World Neurosurg 2019;126:e1449–55. 
+doi:10.1016/j.wneu.2019.03.118. 
+[11] Du JP, Fan Y, Wu QN, Wang DH, Zhang J, Hao DJ. Accuracy of Pedicle Screw 
+Insertion Among 3 Image-Guided Navigation Systems: Systematic Review and Meta-
+Analysis. World Neurosurg 2018;109:24–30. doi:10.1016/j.wneu.2017.07.154. 
+[12] Weinstein JN, Spratt KF, Spengler D, Brick C, Reid S. Spinal pedicle fixation: 
+reliability and validity of roentgenogram-based assessment and surgical factors on 
+         
+         
+
+
+successful screw placement. Spine (Phila Pa 1976) 1988;13:1012–8. 
+[13] Schneider PJ, Eberly DH. Geometric tools for computer graphics - The Morgan 
+Kaufmann Series in Computer Graphics and Geometric Modeling. San Francisco: 
+Morgan Kaufmann Publishers; 2003. 
+[14] Guha D, Jakubovic R, Gupta S, Alotaibi NM, Cadotte D, da Costa LB, et al. Spinal 
+intraoperative three-dimensional navigation: correlation between clinical and absolute 
+engineering accuracy. Spine J 2017;17:489–98. doi:10.1016/j.spinee.2016.10.020. 
+[15] Tian W, Zeng C, An Y, Wang C, Liu Y, Li J. Accuracy and postoperative assessment 
+of pedicle screw placement during scoliosis surgery with computer-assisted navigation: 
+a meta-analysis. Int J Med Robot Comput Assist Surg 2017;13:e1732. 
+doi:10.1002/rcs.1732. 
+[16] Kosmopoulos V, Schizas C. Pedicle screw placement accuracy: A meta-analysis. Spine 
+(Phila Pa 1976) 2007;32:E111-120. doi:10.1097/01.brs.0000254048.79024.8b. 
+[17] Miller CA, Ledonio CG, Hunt MA, Siddiq F, Polly DW. Reliability of the Planned 
+Pedicle Screw Trajectory versus the Actual Pedicle Screw Trajectory using Intra-
+operative 3D CT and Image Guidance. Int J Spine Surg 2016;10:38. 
+doi:10.14444/3038. 
+[18] Elmi-Terander A, Nachabe R, Skulason H, Pedersen K, Söderman M, Racadio J, et al. 
+Feasibility and accuracy of thoracolumbar minimally invasive pedicle screw placement 
+with augmented reality navigation technology. Spine (Phila Pa 1976) 2018;43:1018–
+23. doi:10.1097/BRS.0000000000002502. 
+[19] Kotani Y, Abumi K, Ito M, Takahata M, Sudo H, Ohshima S, et al. Accuracy analysis 
+of pedicle screw placement in posterior scoliosis surgery: Comparison between 
+conventional fluoroscopic and computer-assisted technique. Spine (Phila Pa 1976) 
+         
+         
+
+
+2007;32:1543–50. doi:10.1097/BRS.0b013e318068661e. 
+[20] Fan Y, Du J, Zhang J, Liu S, Xue X, Huang Y, et al. Comparison of Accuracy of 
+Pedicle Screw Insertion Among 4 Guided Technologies in Spine Surgery. Med Sci 
+Monit 2017;23:5960–8. doi:10.12659/msm.905713. 
+[21] Oertel MF, Hobart J, Stein M, Schreiber V, Scharbrodt W. Clinical and methodological 
+precision of spinal navigation assisted by 3D intraoperative O-arm radiographic 
+imaging. J Neurosurg Spine 2011;14:532–6. doi:10.3171/2010.10.spine091032. 
+[22] Mathew JE, Mok K, Goulet B. Pedicle violation and Navigational errors in pedicle 
+screw insertion using the intraoperative O-arm: A preliminary report. Int J Spine Surg 
+2013;7:e88–94. doi:10.1016/j.ijsp.2013.06.002. 
+[23] Kleck CJ, Cullilmore I, LaFleur M, Lindley E, Rentschler ME, Burger EL, et al. A new 
+3-dimensional method for measuring precision in surgical navigation and methods to 
+optimize navigation accuracy. Eur Spine J 2016;25:1764–74. doi:10.1007/s00586-015-
+4235-0. 
+[24] Boon Tow BP, Yue WM, Srivastava A, Lai JM, Guo CM, Wearn Peng BC, et al. Does 
+Navigation Improve Accuracy of Placement of Pedicle Screws in Single-level Lumbar 
+Degenerative Spondylolisthesis? J Spinal Disord Tech 2015;28:E472–7. 
+doi:10.1097/BSD.0b013e3182a9435e. 
+[25] Jin M, Liu Z, Qiu Y, Yan H, Han X, Zhu Z. Incidence and risk factors for the 
+misplacement of pedicle screws in scoliosis surgery assisted by O-arm navigation—
+analysis of a large series of one thousand, one hundred and forty five screws. Int 
+Orthop 2017;41:773–80. doi:10.1007/s00264-016-3353-6. 
+[26] Microsoft. HoloLens Research Mode 2018. https://docs.microsoft.com/en-
+us/windows/mixed-reality/research-mode (accessed June 13, 2019). 
+         
+         
+
+
+FIGURE LEGENDS 
+ 
+Figure 1 –Registration workflow: Surgical planning of entry points (blue spheres) and 
+trajectories (green cylinders) on 3D models (1b top) obtained from preoperative CT scans (1a 
+top). Intraoperative registration using 3D fluoroscopy (1a bottom) to obtain registration 
+marker positions (1b bottom) by titanium spheres. Using iterative closest point (ICP), 
+preoperative planning was semi-automatically aligned with intraoperative anatomy and the 
+corresponding marker’s position (1c). 
+ 
+ 
+ 
+         
+         
+
+
+ 
+Figure 2 – Registration markers: Experimental setup featuring 3D model of the lumbar 
+spine with custom-made a) fiducial and b) infrared registration markers including titanium 
+spheres (violet spheres). 
+ 
+Figure 3 –Drill sleeve guides: Custom-made drill sleeve guides mounted with a) fiducial to 
+navigate K-wire insertion by HMD and b) with reflecting spheres to navigate K-wire insertion 
+by PTS. 
+         
+         
+
+
+ 
+Figure 4 – 3D planning: a) Planned entry points and b) K-wire trajectories on the surface 
+mesh of the vertebral arch. 
+ 
+Figure 5 – 3D evaluation method: a) Planned (green) and executed (red) K-wire trajectories 
+and b) entry points on the surface mesh of the vertebral arch. 
+ 
+ 
+         
+         
+
+
+ 
+Figure 6 - Results: Box plots of a) translational error and b) angular error for AR (left) and 
+PTS (right) groups.  
+ 
+Figure 7 – AR-enhanced surgery: Our vision of AR applied as surgeon enhancing 
+technology. a) Surgeon wearing the HMD as a command control interface. b) Surgeon’s 
+augmented view through an HMD. 
+ 
+ 
+         
+         
+
+
+Table 1: subjective evaluation of surgical methods 
+  
+Free-hand  
+(incl. Fluoroscopy) 
+AR1 
+PTS2 
+visual impression of registration 
+accuracy 
+N/A3 
+3 
+5 
+comfort of usability 
+3 
+4 
+4 
+intuitiveness of system 
+2 
+5 
+4 
+visualization of entry points 
+N/A3 
+3 
+4 
+visualization of angle navigation 
+N/A3 
+4 
+3 
+time expenditure 
+5 
+3 
+4 
+stability of system 
+5 
+3 
+4 
+feasibility for surgery 
+5 
+N/A3 
+3 
+preserved sterility of surgical site 
+3 
+5 
+5 
+Mean 
+N/A3 
+3.4 
+4.0 
+1 AR: augmented reality 
+2 PTS: pose-tracking system 
+3 N/A: not applicable 
+ 
+ 
+ 
+ 
+Scoring from 1-5, whereas 1 represents very bad, 3 average and 5 very good. 
+ 
+         
+         
+
+

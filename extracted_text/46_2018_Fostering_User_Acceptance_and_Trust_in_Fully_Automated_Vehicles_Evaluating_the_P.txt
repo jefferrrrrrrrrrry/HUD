@@ -1,0 +1,1282 @@
+--- Page 1 ---
+Philipp Wintersberger*
+Center of Automotive Research on
+Integrated Safety Systems and
+Measurement Area (CARISSMA)
+Technische Hochschule Ingolstadt
+(THI)
+and
+Johannes Kepler University Linz
+Anna-Katharina Frison
+Andreas Riener
+Faculty of Electrical Engineering and
+Computer Science
+Technische Hochschule Ingolstadt
+(THI)
+and
+Johannes Kepler University Linz
+Tamara von Sawitzky
+Center of Automotive Research on
+Integrated Safety Systems and
+Measurement Area (CARISSMA)
+Technische Hochschule Ingolstadt
+(THI)
+and
+Johannes Kepler University Linz
+Presence, Vol. 27, No. 1, Winter 2018, 46–62
+doi:10.1162/PRES_a_00320
+© 2019 by the Massachusetts Institute of Technology
+Fostering User Acceptance and
+Trust in Fully Automated
+Vehicles: Evaluating the Potential
+of Augmented Reality
+Abstract
+Lack of trust in or acceptance of technology are some of the fundamental problems
+that might prevent the dissemination of automated driving. Technological advances,
+such as augmented reality aids like full-sized windshield displays or AR contact lenses,
+could be of help to provide a better system understanding to the user. In this work,
+we picked up on the question of whether augmented reality assistance has the po-
+tential to increase user acceptance and trust by communicating system decisions (i.e.,
+transparent system behavior). To prove our hypothesis, we conducted two driving sim-
+ulator studies to investigate the benefit of scenario augmentation in fully automated
+driving—first in normal (N = 26) and then in rearward viewing (N = 18) direction.
+Quantitative results indicate that the augmentation of traffic objects/participants oth-
+erwise invisible (e.g., due to dense fog), or the presentation of upcoming driving ma-
+neuvers while sitting backwards, is a feasible approach to increase user acceptance
+and trust. Results are further backed by qualitative findings from semistructured inter-
+views and UX curves (a method to retrospectively report experience over time). We
+conclude that the application of augmented reality, in particular with the emergence
+of more powerful, lightweight, or integrated devices, is a good opportunity with high
+potential for automated driving.
+1
+Introduction
+Automated driving systems (ADS) and cooperative, intelligent, trans-
+portation systems (C-ITS) promise to revolutionize mobility as we are used to,
+and visions of tomorrow’s traffic do not have much in common with the reality
+present on our roads today. Inspired by network and control theory (Parent,
+2007), decreased travel time and maximized throughput while eliminating
+headways, traffic lights, or signs (Au, Zhang, & Stone, 2015) are promised.
+Finally, also the fixed assigned directions of lanes will be abandoned (Riener
+& Ferscha, 2013). System performance, usually demonstrated in theory or by
+traffic simulation, depicts a nearly perfect image of a future without conges-
+tions, pollution, or accidents. However, although it is clear that the path to-
+wards this future depends on technological, societal, and legal transformations
+(Litman, 2014), crucial hurdles will emerge from human factors. Exploiting the
+full benefits of ADSs and C-ITSs demands a high (or even full) penetration of
+*Correspondence to Philipp.Wintersberger@carissma.eu.
+46
+PRESENCE: VOLUME 27, NUMBER 1
+
+--- Page 2 ---
+Wintersberger et al.
+47
+automated vehicles (Au, Zhang, & Stone, 2015), so hu-
+man users must accept and trust safety-critical systems as
+they proverbially put their lives in the hands of comput-
+ers (Wintersberger & Riener, 2016).
+1.1 Trust Issues in Automated Driving
+As of today, many people express skepticism to-
+wards the concept of automated driving. Reasons in-
+clude loss of control (Kyriakidis, Happee, & de Winter,
+2014), reduced pleasure (Frison, Wintersberger, Riener,
+& Schartmüller, 2017), but also lack of trust (Winters-
+berger, Frison, & Riener, 2016). Since fully automated
+level-5 vehicles (SAE, 2014) have not yet been devel-
+oped, studies on trust in automated vehicles (AVs) either
+address lower levels of automation (Helldin, Falkman,
+Riveiro, & Davidsson, 2013), are purely survey-based
+(Rödel, Stadler, Meschtscherjakov, & Tscheligi, 2014),
+or just put automated vehicles in today’s traffic scenar-
+ios (Lee, Kim et al., 2016). However, reality will be
+more complex: A wide penetration of fully automated
+vehicles is not expected before 2050 (Bansal & Kock-
+elman, 2017). Therefore, we should consider accom-
+panying developments and technical advances to inves-
+tigate trust in fully automated driving. To accept and
+trust level-5 vehicles as part of fully automated C-ITSs
+means more than just believing that a computer can op-
+erate a vehicle as good as a human driver. It will mean
+to trust traffic systems that have superhuman (Sieg-
+wart, Nourbakhsh, & Scaramuzza, 2011) capabilities
+(such as being able to operate on environmental infor-
+mation beyond the line of sight, maintain ultimately
+short headways, etc.) emerging from advances in com-
+munication, cooperation, or artificial intelligence. To
+increase user trust (and deal with distrust), a promising
+approach is to present why-and-how information (Koo
+et al., 2015), and make system decisions transparent to
+the user—a method that can take advantage of head-
+up-displays (HUD) or augmented reality (AR) tech-
+niques (Haeuslschmid, Von Buelow, Pfleging, & Butz,
+2017).
+The great potential of AR applications has already
+been shown in the context of manual driving, where the
+presentation of information in the driver’s line of sight
+can diminish distraction and improve driving perfor-
+mance (Smith, Streeter, Burnett, & Gabbard, 2015).
+Recent work shows examples of superimposing sen-
+sor information, such as radar-vision for improved for-
+ward collision warnings (Park, Lee, Yoon, & Kyong-
+Ho, 2015), displaying warning information (Hosseini,
+Bacara, & Linkamp, 2014), enhancing night vision for
+drivers (Hu, Zhau, & Li, 2015), or augmenting the
+brake way of vehicles to prevent crashes (Tangmanee
+& Teeravanrunyou, 2012). AR-HUDs currently are
+still facing problems like change blindness (Rensink,
+O’Regan, & Clark, 1997) or limited interaction space
+and field of view. However, future technologies such as
+optical see-through light-field displays (Lee, Changwon
+et al., 2016) could eliminate these issues, finally allowing
+“windshield displays” (WSDs, AR-HUDs that cover the
+entire windshield), AR glasses with a small form factor,
+or even AR contact lenses (Perlin, 2016).
+1.2 Approach
+The aim of our work is to demonstrate the ap-
+plicability of AR for fostering trust and acceptance
+in fully automated driving under consideration of
+technological advances in both display and C-ITS tech-
+nologies. For the context of our studies, we define ac-
+ceptance according to the technology acceptance model
+(TAM) as a user’s intention to actually use a given sys-
+tem, determined by his/her “overall attitude towards
+using [it]” (Davis, 1993, p. 475). We further argue
+that trust, the “attitude that an agent will achieve an
+individual’s goals in a situation characterized by uncer-
+tainty and vulnerability” (Lee & See, 2004, p. 51), is
+an important determinant for acceptance of safety crit-
+ical systems, such as automated vehicles. To prove our
+hypotheses, we conducted two driving simulator stud-
+ies addressing potential level-5 driving scenarios (see
+Figure 1).
+The first experiment evaluates whether augmenting
+other traffic objects, which are relevant for maneuver
+decisions, can foster trust in AVs with superhuman ca-
+pabilities. More precisely, participants faced a trip in an
+automated vehicle that, due to advances in sensor fusion
+and C2X communication, is able to drive through dense
+
+--- Page 3 ---
+48
+PRESENCE: VOLUME 27, NUMBER 1
+Figure 1. Overview of the two experiments presented in this article. Passengers of a fully automated vehicle were presented augmented reality
+aids (in both normal and rearward facing directions) to increase trust and acceptance.
+fog faster than the direct line of sight in manual driv-
+ing would allow. To increase user trust, we simulated an
+artificial full-sized windshield display that can augment
+any object outside the vehicle.
+In the second experiment, participants were sitting
+on a rotated seat, facing against the driving direction.
+Vehicle manufacturers (e.g., the Mercedes Benz F015
+concept car) have already presented similar concepts.
+To communicate system decisions, participants were
+presented upcoming maneuvers on a head-mounted
+display (Microsoft HoloLens) that could be substi-
+tuted in the future by enhanced AR glasses or contact
+lenses.
+Both experiments are unique in a way that they holis-
+tically address the potential of AR to foster trust in and
+acceptance of future automated driving concepts. AR
+thereby shows advantages compared to classical in-
+vehicle displays: It provides the opportunity to high-
+light objects directly in the environment (what we call
+“implicit communication of system decisions”; see Sec-
+tion 3), head-mounted displays (HMDs) further allow
+perceiving visual feedback regardless of the head/body
+pose.
+The rest of the article is structured as follows: In Sec-
+tion 2, we present relevant groundwork addressing user
+acceptance and trust, discuss them along the levels of
+automation, and highlight future C-ITS scenarios. In
+Section 3, we present the underlying concept shared
+by both of our experiments, while in Sections 4 and 5
+the studies are introduced in detail. We conclude with a
+comprehensive discussion about our results and present
+an outlook.
+2
+Acceptance of and Trust in Automated
+Vehicle Technology
+User acceptance is one of the critical factors deter-
+mining whether or not information systems succeed
+or fail (Davis, 1993). Especially the success of auto-
+mated driving is strongly dependent on a widespread
+acceptance in society. Davis (1993) postulated the Tech-
+nology Acceptance Model (TAM), which is based on
+the Psychological Attitude Paradigm (Ajzen & Fish-
+bein, 1975), linking between users’ beliefs, attitudes,
+and behaviors. Here, the perceived usefulness (PU)
+and ease of use (PEOU) of an external stimuli (or de-
+sign feature) influence the general attitude towards us-
+ing a system (ATT, affective response), which in turn
+leads to use or disuse (Intent, behavioral response).
+Over the years, TAM was extended with additional at-
+tributes, leading to TAM 2 (Venkatesh & Davis, 2000)
+and TAM 3 (Venkatesh, Morris, Davis, & Davis, 2003).
+Belanche, Casalo, and Carlos (2012) added another fac-
+tor to the TAM: trust. By including uncertainty and vul-
+nerability, they postulate a research model addressing
+the causality between trust, perceived usefulness, ease
+of use, attitude, and intention to use a system. Their
+
+--- Page 4 ---
+Wintersberger et al.
+49
+studies revealed that both attitude and intention to
+use significantly connect to trust, and thus they added
+trust as a third belief “able to explain the mechanisms”
+(Belanche, Casalo, & Carlos, 2012, p. 199) to the TAM
+framework.
+Trust is a multidimensional construct built by analytic,
+analogical and affective processes (Lee & See, 2004).
+Marsh and Dibben (2003) categorized trust into three
+different layers: dispositional trust, representing some-
+one’s general trust in automation (influenced by culture,
+gender, personality, etc.); situational trust, depending
+on context and interaction with the automation; and
+learned trust, which emerges from working with the
+system for a certain period. Hoff and Bashir (2015) fur-
+ther divided learned trust into initial learned trust (given
+by understanding, attitudes, or brand reputation) and
+dynamic learned trust (depending on a system’s perfor-
+mance and reliability). Ekman, Johansson, and Sochor
+(2016, p. 4) summarized the three main components of
+trust: “trust is built on the possibility to observe the sys-
+tem’s behavior (performance), understand the intended
+use of the system (purpose), as well as understand how
+it makes decisions (process).” They further identified 11
+key factors that affect trust: feedback, error information,
+uncertainty information, why-and-how information,
+training, common goals, adaptive information, anthro-
+pomorphism, customization, expert/reputable, and
+mental models.
+However, it is not enough to trust and use AVs—to
+responsibly operate safety critical systems, one must
+trust them appropriately and use them properly. Trust
+research thereby provides principles for safe operation
+by introducing the terms use, disuse, and misuse (Para-
+suraman & Riley, 1997). While use reflects proper in-
+teraction, misuse stands for use under wrong circum-
+stances, and disuse finally means not using the automa-
+tion at all. Both disuse and misuse can be the result of
+trust issues (distrust and, respectively, overtrust) and
+automated systems should aim to foster use and pre-
+vent disuse/misuse. This process, also called “calibra-
+tion of trust” (Muir, 1987, p. 535), should eliminate
+wrongly calibrated trust by education and retraining. In
+the following, we discuss trust issues in automated driv-
+ing along the six levels of automation as introduced by
+SAE (2014).
+2.1 Human Driver Monitors the Driving
+Environment (Levels 0–2)
+Both distrust and overtrust can be relevant bar-
+riers for the success of automated vehicle technology;
+however, we expect changing priorities with increasing
+levels of automation. Dickie and Boyle (2009) showed
+that many users of adaptive cruise control (ACC) face
+overtrust and use these systems in circumstances they
+were not designed for (e.g., road with high curvature,
+etc.). Further on, the first known fatality in automated
+driving (Tesla Accident, May 2016) is suspected to be
+a result of overtrust. This presumption indicates that
+overtrust is a crucial problem for automated vehicles
+upon level-3—as long as the human is responsible for
+monitoring, systems must deal with misuse emerg-
+ing from overtrust or limited knowledge about system
+boundaries.
+2.2 ADS Monitors the Driving
+Environment (Levels 3–5)
+In higher levels of automation, overtrust will be-
+come less safety critical since the vehicle itself will be able
+to reach the minimal risk condition. Still, a special case
+is level-3 (conditional automation), where the driver is
+not required to monitor the vehicle but must be able
+to take over control on short notice. Here, appropri-
+ately calibrated trust will be a key issue to guarantee a
+safe collaboration between the driver and the vehicle, as
+overtrust could lead to delayed reactions (Helldin, Falk-
+man, Riveiro, & Davidsson, 2013). As soon as sophisti-
+cated fully automated driving systems become available,
+distrust will become the more important trust issue.
+According to recent publications, level-4 capabilities
+are expected to be implemented in 24.8% (pessimistic
+guess) to 87.2% (optimistic guess) of all vehicles in 2045
+(Bansal & Kockelman, 2017) at the earliest. At the latest
+when large numbers of level-5 vehicles are penetrat-
+ing the markets, users must quickly be convinced of the
+
+--- Page 5 ---
+50
+PRESENCE: VOLUME 27, NUMBER 1
+Figure 2. Driving simulator used to carry out the presented studies (left). Study 1 (middle) addresses superhuman driving in foggy environments.
+In Study 2 (right) we placed participants on the passenger seat, covered the steering wheel and let the vehicle drive backward to create the illusion
+of a rotated seat.
+technology to exploit the benefit of C-ITS systems and
+trust them in various potentially ambiguous situations,
+such as:
+2.2.1 Platooning. Multiple vehicles build up a pla-
+toon to reduce fuel consumption and increase through-
+put (Kamali, Dennis, McAree, Fisher, & Veres, 2017),
+and thus the headway to the preceding vehicle is much
+smaller than what can be called “safe” in manual driving.
+2.2.2 Dynamic Lane Reversal. To maximize through-
+put, driving lanes can be dynamically assigned to differ-
+ent directions by C-ITS (Riener & Ferscha, 2013). Such
+dynamic adaptations could be perceived as dangerous
+and must be properly communicated to the user.
+2.2.3 Intersection Management. Traditional traffic
+lights might disappear at future intersections that dy-
+namically open corridors to vehicles. Such junctions are
+characterized by small gaps, multiple open directions,
+and speeds higher than in manual driving (Au, Zhang, &
+Stone, 2015).
+2.2.4 Superhuman Driving. Due to the possibili-
+ties emerging from cooperative sensing (Hobert et al.,
+2015), vehicles can see parts of the environment that are
+invisible to human eyes. Thus, they could drive faster or
+overtake other vehicles in ambiguous situations (foggy
+environments, etc.).
+2.2.5 Rotated Vehicle Seats. As the need for the
+driver to monitor the environment vanishes, rotating
+seats will allow to face backwards to interact with other
+occupants in a comfortable environment, or effectively
+work in office-like settings (Diels & Bos, 2016). How-
+ever, drivers must trust the vehicle to behave correctly, as
+they have no longer a chance for quick intervention.
+3
+Concept and Research Questions
+We conducted two user studies in a high-fidelity
+driving simulator (hexapod moving platform) addressing
+potentially ambiguous future automated driving con-
+cepts (see Figure 2).
+In the first study, participants had to ride in a fully
+automated vehicle that performs multiple overtaking
+maneuvers in dense fog (superhuman driving). In the
+second experiment, participants were sitting on a ro-
+tated seat, facing backwards (backward driving). Thus,
+in both scenarios, important parts of the environment
+were invisible for participants, and we aimed for creat-
+ing augmented reality aids that communicate system
+decisions, increase transparency, and let users anticipate
+upcoming driving maneuvers. Therefore, we designed a
+visualization strategy for each scenario and thereby dis-
+tinguish between implicit and explicit communication of
+system decisions.
+Traffic Augmentation. In contrast to already known
+methods for presenting why-and-how information that
+
+--- Page 6 ---
+Wintersberger et al.
+51
+explicitly explain vehicle behavior, we decided to just
+augment sensor data and highlight objects in the scene
+that are relevant for maneuver decisions. We call this
+method “implicit communication of system decisions,”
+as the actual system output (maneuver) is not presented
+to users, but they can “see what the vehicle sees” and
+thus anticipate upcoming actions. The justification,
+therefore, is that driving consists of plenty of maneu-
+vers that can be initiated by arbitrary reasons—designing
+display information capable of explaining all these vari-
+ations might be hard to achieve and could further over-
+whelm users. Augmenting relevant objects, on the other
+hand, is possible with a few symbols, while we believe
+most users can predict the vehicle’s behavior based on
+knowledge about the objects most relevant for a deci-
+sion. To present the augmentation, we used an addi-
+tional layer in the driving simulation software represent-
+ing a full-size windshield display.
+Maneuver Augmentation. In the backward driving
+scenario, augmenting objects directly in the environ-
+ment makes no sense because of two reasons: first, due
+to the facing direction, the user can only see objects that
+have already been passed. Second, rotating the driver’s
+seat will usually happen to engage in other tasks, such
+as communicating with other occupants, working, etc.,
+and thus the driver will not permanently be able to ob-
+serve the environment through the rear window or an
+in-vehicle display. Consequently, we chose to present
+upcoming maneuvers (or more precisely: turns, stops,
+overtaking, etc.; see Figure 4) in form of indicators on
+a head-mounted display. We call this method “explicit
+communication,” as here system decisions are directly
+presented to users. For our experiment, we used the Mi-
+crosoft HoloLens device.
+Currently, it is not fully clear whether or not peo-
+ple will adopt AR glasses/contact lenses, but research
+highlights the importance of presenting useful con-
+cepts to ease adoption by potential customers (Koelle,
+Ali, Cobus, V., & Boll, 2017; Kalantari & Rauschnabel,
+2018). We argue that our setting highlights such an ad-
+vantage: in contrast to visualizations on an in-vehicle
+display, users can perceive visualizations in their periph-
+eral vision, regardless of their head and body position
+during arbitrary secondary activities.
+Figure 3. Trust integration in TAM, adapted from Belanche, Casalo,
+and Carlos (2012).
+3.1 Measurements
+To quantify the impact of the presented
+AR visualizations on user acceptance and trust at
+the subjective level, we used the TAM model with
+trust integration (see Figure 3) as proposed by Be-
+lanche, Casalo, and Carlos (2012). Additionally, we
+adapted the “Trust in Automation Questionnaire”
+that was used by Moeckli et al. (2015, p. 115) for the
+evaluation of adaptive cruise control. We removed
+four items that we believed to be not relevant for our
+experiment. Two questions were removed as they ad-
+dress manual intervention and interactions (as partici-
+pants in our experiments were just passive observers),
+one question considering trust development in dif-
+ferent circumstances, and another two questions have
+been merged into a single one (as we did not differ
+between subsystems and wanted to evaluate the AV
+as a whole). The resulting questionnaire consisting of
+eight items is further on referred to as the “trust scale”
+(TS).
+3.2 Research Question
+By statistically evaluating the results of the subjec-
+tive measurements addressing user acceptance and trust
+as described above in both user studies, we wanted to
+investigate our main research question:
+RQ: Are augmented reality aids eligible to increase
+user acceptance and trust (in automated driving)
+by displaying the relevant information about envi-
+ronment (implicit communication) and behavior
+(explicit communication)?
+
+--- Page 7 ---
+52
+PRESENCE: VOLUME 27, NUMBER 1
+Figure 4. Condition A utilizing augmentation of important traffic objects in the environment (left), and condition B (no augmentation, right).
+Figure 5. Color coding concepts for oncoming (left) and preceding vehicles (right).
+4
+Study 1:Traffic Augmentation in
+Superhuman Driving
+In the first study, we evaluated the effect of aug-
+mented reality aids presented on a windshield display on
+trust in ambiguous driving scenarios. Participants were
+instructed to perform a trip with a fully automated vehi-
+cle on a straight rural road in dense fog (line of sight ap-
+proximately 25 m). We argued that the vehicle can take
+advantage of future Lidar/Radar sensors, while getting
+information from the cars ahead via cooperative sensing
+(Hobert et al., 2015), and thus it can drive with a much
+higher speed than the situation would allow in manual
+driving. To provoke additional trust issues, the vehicle
+performed multiple overtaking maneuvers, where par-
+ticipants could not see whether overtaking was safely
+possible or not, as oncoming traffic was hidden by fog.
+Participants faced two conditions—they experienced the
+scenario once with augmentation (A), and once without
+any aids (B) in a between-subjects design (see Figure 4).
+By statistical investigation of the employed measures, we
+investigated the following hypothesis:
+H1.i: Augmenting sensory data by highlighting traffic
+objects on a windshield display significantly increases
+user acceptance and trust in automated driving systems.
+4.1 Interaction Concept and
+Implementation
+We used bounding boxes to highlight other, due
+to fog temporary invisible (preceding and oncoming)
+vehicles in the scene. A triangle pointing downwards was
+used to highlight oncoming vehicles, a triangle pointing
+upwards preceding vehicles.
+To encode additional information we implemented a
+color coding concept (see Figure 5): Oncoming vehicles
+were highlighted in green as long as the distance remain-
+ing allows for safe overtaking with a speed difference of
+20 km/h without a collision, and red otherwise. Pre-
+ceding vehicles used an additional color code inspired by
+
+--- Page 8 ---
+Wintersberger et al.
+53
+Table 1: Overview of the Employed Subscales of TAM and TS Including Cronbach’s α, the Median,
+and the Mean (in parenthesis) Rating for the Conditions A (with Augmentation) and B (without
+Augmentation)
+Variable
+Nr. of Items
+Cronbach’s α
+Mdn (M) Cond. A
+Mdn (M) Cond. B
+TAM
+PU
+3
+.769
+5 (4.22)
+4 (3.08)
+PEOU
+3
+.838
+5 (5.01)
+3 (3.88)
+Trust
+3
+.907
+4 (4.23)
+3 (3.48)
+ATT
+3
+.798
+5 (5.06)
+4 (4.18)
+Intention
+1
+–
+5 (4.31)
+3 (3.38)
+TS
+TS
+8
+.901
+5 (4.59)
+4 (3.86)
+(Park, Lee, Yoon, & Kyong-Ho, 2015) with the colors
+green, yellow, orange, and red. The different colors used
+indicate the danger of a rear-end collision considering
+the time-to-collision (TTC) as present in typical For-
+ward Collision Warning (FCW) systems (see Figure 4).
+The augmented-reality aids were presented on a trans-
+parent layer placed above the visual output of the driving
+simulation software.
+Therefore, we directly rooted the positions of the ve-
+hicles in 3D space to a C#-Unity application that was
+responsible for showing the bounding boxes in the de-
+sired size and color.
+4.2 Method
+4.2.1 Participants. Twenty-six students and members
+of university staff voluntarily participated in the exper-
+iment. They were aged between 19 and 35 (11 female,
+15 male, Mage = 23.77, SDage = 3.99) and all hold a
+valid driver’s license. No participant had to be excluded
+because of missing data or simulator sickness.
+4.2.2 Procedure. The ego vehicle drove with a speed
+of 70 km/h. In every scenario, we placed 8 preceding
+and 8 oncoming vehicles with a speed of 50 km/h each.
+The ego vehicle thus frequently overtook these vehi-
+cles to potentially stress participant’s trust levels. Each
+participant experienced both conditions (A, with; B,
+without augmentation) in randomized order, and was
+further instructed to look out of the window, perceive
+the environment and do not engage in side activities. Af-
+ter each condition, participants completed TAM and TS
+on a tablet computer. Afterwards, we asked participants
+to describe their experience in a short semi-structured
+interview. In total, every session took about 20 min-
+utes (5 minutes for preparation, 5 minutes for each trip
+in conditions A and B, and another 5 minutes for the
+interview).
+4.3 Results
+4.3.1 Quantitative Evaluation. TAM and TS results
+were collected on a 7-point Likert scale. Before eval-
+uation, we confirmed the validity of our results using
+Cronbach’s α (see Table 1). The medians of the evalu-
+ated TAM subscales (perceived usefulness PU, perceived
+ease of use PEOU, attitude towards using ATT, Inten-
+tion to use, and Trust of the system) show that condi-
+tion A (with augmentation) received better ratings than
+condition B in all scales.
+
+--- Page 9 ---
+54
+PRESENCE: VOLUME 27, NUMBER 1
+This effect is also apparent when performing
+Wilcoxon test (reported as significant with p < .05).
+Perceived usefulness (PU) was significantly higher for
+condition A (Mdn = 5) than for B (Mdn = 4, T = 78,
+p = .000, r = −.58). Similarly, perceived ease of use
+(PEOU) showed a significant difference for condition
+A (Mdn = 5) compared to condition B (Mdn = 4, T =
+76, p = .000, r = −.60). Also, driving with augmenta-
+tion (Mdn = 5) was rated a higher attitude (ATT) than
+driving without visual assistance (Mdn = 4, T = 77,
+p = .000, r = −.57). Condition A (Mdn = 5) further
+received higher values for intention to use the system
+(condition B: Mdn = 3, T = 26, p = .001, r = −.63).
+Interestingly, Trust was the only TAM subscale with
+a median below 5 in condition A (Mdn = 4), what
+is, however, still significantly higher than condition B
+(Mdn = 3, T = 76, p = .000, r = −.51).
+Considering the Trust Scale (TS), condition A
+(Mdn = 5) received significantly higher scores than con-
+dition B (Mdn = 4, T = 206, p = .000, r = −.52). To
+summarize, augmenting relevant traffic objects led to a
+statistically significant increase in all investigated scales of
+TAM and TS.
+4.3.2 Qualitative Evaluation. Participants expressed
+their experiences and attitudes towards the system in a
+short semi-structured interview after the experiment.
+Nearly all participants stated trust issues to be highly
+relevant in the presented scenario and reported to have
+tense or even anxious feelings during the “blind” over-
+taking maneuvers when experiencing the scenario with-
+out augmentation (translated from German): “Driving
+without highlighting of traffic totally feared me,” or
+“due to the fog, you can never know if a vehicle is on-
+coming.” As expected, highlighting relevant traffic ob-
+jects increased trust and acceptance and further allowed
+participants to comprehend the vehicle’s behavior: “In
+the driving scenario with additional augmentation of
+the surrounding traffic you know if there is a vehicle
+or not,” “I was able to see why the car is reacting and
+understand its actions.” Still, level-5 driving with all its
+consequences (relinquishing full vehicle control to the
+car) raised concerns. A participant stated: “indicating
+the oncoming and preceding vehicles conveys a feel-
+ing of control.” One also suggested that the “reduction
+or complete omission of the vehicle’s indication over
+time would be reasonable when other drivers or I are
+understanding the car’s action (of specific maneuvers)
+completely.”
+4.4 Discussion
+Consideration of TAM and TS results shows that
+augmenting traffic objects relevant for a driving scenario
+can increase user trust as well as other related acceptance
+parameters. This is confirmed by a statistically significant
+increase in all investigated subscales. Participants rated
+PU, PEOU, ATT, Intention, and Trust of the system
+(condition A) higher than in the control condition. In
+addition, the results of the TS, composed of eight trust-
+influencing factors, confirm the improvement. Subjects
+further stated that experiencing the scenario without
+augmentation led to anxious feelings or fear, while aug-
+mentation helped to comprehend the situation even
+when they (due to dense fog) could not see the objects
+themselves. It seems that when presenting why-and-how
+information, augmenting relevant objects (implicit com-
+munication of system decisions) is sufficient to explain
+upcoming driving actions as users become familiar with
+the consequences and can easily anticipate the vehicle’s
+behavior. Consequently, we accept our hypothesis H1.i:
+Augmenting sensory data by highlighting traffic objects
+on a WSD indeed increases user acceptance and trust in
+ADS.
+5
+Study 2:Maneuver Augmentation in
+Backward Driving
+The second experiment addressed the concept of
+rotated drivers’ seats, which was already presented in
+multiple design concepts for automated vehicles. Since
+the immediate future of the traffic situation becomes
+invisible for the driver/passenger, upcoming turns and
+maneuvers cannot be anticipated and the resulting sur-
+prise effect might decrease acceptance, comfort and
+system trust. To cope with these issues, we presented
+
+--- Page 10 ---
+Wintersberger et al.
+55
+Figure 6. Different visualization methods during a left turn: in condition P (left) upcoming maneuvers were presented as perceived by the user
+facing rearwards; in condition L (middle), the arrow showed the actual driving direction of the vehicle. In the baseline condition N (right), no visual aid
+was provided.
+details about upcoming maneuvers on a HMD (Mi-
+crosoft HoloLens). In contrast to the previous experi-
+ment, we believe presentation on a WSD not to fulfill
+the requirements of the driving situation—users will
+not necessarily look outside the rear window (or at an
+in-vehicle display) all the time, but we wanted them
+to perceive the upcoming maneuvers with any head or
+body position. To simulate such a situation, participants
+performed a Skype call that was interrupted by search
+tasks in an Oxford dictionary. To evaluate how a proper
+communication of upcoming maneuvers could look like,
+we evaluated two different types of visualization: arrows
+pointing in the perceived direction (condition P, arrows
+facing downwards) and arrows pointing in the driving
+direction (condition L, arrows facing upwards; see Fig-
+ure 6 for a more detailed explanation). By comparison
+with the baseline condition (N, no visual feedback), we
+evaluated the following hypotheses:
+H2.i: Presenting upcoming maneuvers significantly
+increases user acceptance and trust in automated driving
+systems when users sit facing backwards.
+H2.ii: When sitting facing backwards, symbols depict-
+ing upcoming maneuvers as perceived from the perspec-
+tive of the driver/passenger are significantly rated better
+than a representation of the real driving direction.
+5.1 Interaction Concept and
+Implementation
+We used different symbols to encode upcom-
+ing maneuvers that were presented in the peripheral
+region on the top right of the HMD. For our experi-
+ment we discriminated between four different symbols
+that we believed to be relevant for anticipating the im-
+mediate future of the driving situation—indicators for
+curves/turns in both directions, one symbol represent-
+ing a stop or decrease of speed, and another one to indi-
+cate an upcoming overtaking or lane change maneuver.
+Upcoming maneuvers were announced 500 ms before
+execution to give users enough time to interpret the sce-
+nario (Kosinski, 2015).
+5.2 Method
+5.2.1 Participants. In total 18 participants (6 women,
+12 men, Mage = 24.8, SDage = 4.84), all students and
+university staff aged between 19 and 41 years, took
+part in our experiment. We recruited them via mailing
+lists, and all participated voluntarily without compensa-
+tion. No participant had to be excluded due to technical
+problems or simulator sickness. In total 66% stated to
+be technology oriented; only 16% described themselves
+as not particularly interested in new technology. Thirty-
+eight percent of them liked the idea of possessing an
+automated vehicle, while 16% did not—all other partici-
+pants did not reveal a preference.
+5.2.2 Additional Materials. In addition to the mea-
+surements as utilized in both studies, we used the UX
+Curve (Kujala, Roto, Väänänen-Vainio-Mattila, &
+Sinnelä, 2011) method during the semistructured
+interview to evaluate participants’ user acceptance
+and trust in the overall system by exploring their user
+
+--- Page 11 ---
+56
+PRESENCE: VOLUME 27, NUMBER 1
+Table 2: Overview of the Employed Subscales of TAM and TS Including Cronbach’s α, the Median Rating, and the Mean (in
+Parenthesis) for the Conditions L (Logical Direction), P (Perceived Direction), and N (Baseline)
+Variable
+Nr. Items
+Cronbach’s α
+Mdn (M) Cond. P
+Mdn (M) Cond. L
+Mdn (M) Cond. N
+TAM
+PU
+3
+.870
+4 (4.21)
+3 (3.32)
+4 (3.00)
+PEOU
+3
+.793
+4 (4.21)
+3 (3.37)
+3 (2.65)
+Trust
+3
+.937
+4 (4.05)
+3 (3.21)
+3 (2.47)
+ATT
+3
+.922
+4 (4.21)
+3 (2.22)
+4 (3.24)
+Intention
+1
+–
+4 (3.84)
+3 (2.68)
+3 (2.71)
+TS
+TS
+8
+.949
+5 (4.16)
+3 (3.68)
+4 (3.08)
+experience over time. Participants had to draw a line in a
+two-dimensional coordinate system in which the x-axis
+represents the timeline of each condition. Positive val-
+ues at the y-axis represent a positive experience and vice
+versa. The emerging graph represents the experience
+over time for a specific condition. Thereby we focused
+on the relation between their user experience and trust
+in the overall system. Additionally, we utilized the simu-
+lator sickness questionnaire (SSQ) proposed by Kennedy
+et al. (1993), to evaluate if knowledge about upcoming
+maneuvers can reduce the effect of motion sickness.
+5.2.3 Procedure. We used a within-subject, full-
+factorial design in randomized order. Each participant
+had to pass three drives in the simulator, experiencing
+each condition. Before entering the simulator, partic-
+ipants were equipped with the Microsoft HoloLens.
+After a short test of the functionality (correct orienta-
+tion of the HMD for a correct field of view), they were
+instructed into the scenario (short explanation of the
+upcoming condition). During the drive, participants
+performed a Skype video call with the experimenter as
+additional visual/auditory task. A research assistant con-
+ducted the interview and tried to get additional insights
+into participants’ views on automated driving. We em-
+phasize here, that the interview had no connection to
+the experiment itself (augmented reality, trust or rotated
+seats) and assessed other questions (such as “do you
+think driving in a train is similar to automated driving,”
+“do you own a vehicle, and if yes, which one,” etc.).
+In addition, participants periodically had to look for
+the meaning of specific words in an Oxford dictionary.
+Participants could thus not permanently concentrate
+on the driving situation (or focus on the environment)
+and had to switch between different tasks frequently.
+After each driving scenario, participants completed the
+questionnaires. At the end of the study, we conducted a
+semistructured interview, utilizing the UX curve, which
+should help subjects to describe their experience during
+all three conditions.
+5.3 Results
+5.3.1 Quantitative Evaluation. As in study 1, we
+used a 7-Point Likert to collect data for TAM and TS.
+Again, we can report acceptable values for the internal
+reliability of multi-item scales by calculating Cronbach’s
+α (see Table 2). The medians values for PU, PEOU,
+ATT, Intention, Trust and as well the trust scale (TS)
+are higher for maneuver augmentation in perceived
+direction (P) than in logical direction (L). For some
+scales, such as TS or TAM PU, the logical direction of
+
+--- Page 12 ---
+Wintersberger et al.
+57
+Figure 7. UX-Curves, drawn by participants describing their experience over time while exposed to the individual conditions.
+maneuver augmentation has even lower rates than no
+augmentation at all (N). Comparing condition P and
+N shows similar values for PU and ATT. PEOU, Inten-
+tion, Trust, and TS values are rated better for condition
+P than for condition N.
+Statistical analysis using Friedman’s ANOVA (as the
+data was not normally distributed) shows significant ef-
+fects for all variables. We further applied Wilcoxon tests
+with Bonferroni correction using a significance level of
+p < .017, and report only significant effects, such as
+visible for perceived usefulness (PU), χ2(2) = 18.636,
+p = .000. Here we can report significant differences
+between conditions P and N (Z = −3.320, p = .003),
+and P and L (Z = −2.887, p = .012). Also for PEOU
+we can observe significant effects, χ2(2) = 17.152,
+p = .000, but here only a significant difference between
+P and N was found.
+Also for Trust, only between N and P a statistically
+significant difference exists, χ2(2) = 19.563, p = .000
+(Z = 3.300, p = .003). Concerning ATT, we can a re-
+port a significant effect (χ2(2) = 9.542, p = .008), but
+the post-hoc tests do not reveal any significant differ-
+ences between the conditions. For the intention to use
+a system, there is no significant effect at all, (χ2(2) =
+2.909, p = 2.34).
+Considering TS, we can observe a significant effect,
+χ2(2) = 70.240, p = .000, where Wilcoxon follow-up
+tests reveal differences between all conditions. Augmen-
+tation in the perceived direction (P) leads to significantly
+higher trust in the overall system than no augmentation
+(N, Z = −6425, p = .000), and augmentation in log-
+ical direction (L, Z = −3.340, p = .003). Further, no
+augmentation (N) was rated significantly better than the
+logical direction (L, Z = 3.085, p = .006).
+The total scores of the simulator sickness question-
+naire (SSQ), however, showed no significant differences
+between the three conditions P (M = 59.00, SD =
+43.20), L (M = 70.43, SD = 48.19) and N (58.17,
+SD = 48.19).
+5.3.2 Qualitative Evaluation. A structured analysis
+of semistructured interviews with respect to the UX-
+Curves drawn by participants confirms the results. Over-
+all, condition P led to better experiences that are more
+heterogeneous (see Figure 7). In the following, we dis-
+cuss interview statements of participants and relate them
+to the corresponding UX curve. Interview statements
+were translated from German to English.
+In total 83.3% (n = 15) reported positive experi-
+ences for condition P, compared to the conditions L
+(39.0%, n = 7) and N (33.3%, n = 6). Further, for
+condition P, 10 participants (55.6%) stated that trust
+increased while using the system, 3 (16.7%) reported
+a stable but positive experience, while only one par-
+ticipant emphasized his experience as negative (this
+participant also rated the other conditions L and N
+as continuously negative). Comparison of the gradi-
+ents in the (positive) UX curves reveals, that in con-
+dition P, 60% (n = 9) positively increase over time,
+13% (n = 2) remain stable, and 13% (n = 2) are de-
+veloping negatively. One curve thereby changed from
+the positive to the negative range, also one vice-versa.
+Participant P1 expressed that his trust was increasing
+from the moment when he recognized and understood
+the maneuver augmentations. Especially the indica-
+tions of upcoming overtaking maneuvers helped him
+not to be “surprised by unexpected behavior” (P1).
+
+--- Page 13 ---
+58
+PRESENCE: VOLUME 27, NUMBER 1
+Another participant (P2) described the experience
+during condition P as better, but because of a risky over-
+taking maneuver, his trust decreased. After some time,
+he stated his trust becoming stable again (but still stay-
+ing in the negative range).
+Having a detailed look at conditions L and N reveals
+that both have similar results. 38.9% (n = 7) of the
+curves showed a positive change over time, for 38.9%
+(n = 7) remained stable, and for 16.7% (n = 3) the
+experience impaired. Gradients show that for all pos-
+itive curves in condition L, 28.5% (n = 2) improved,
+while 57.1% (n = 4) stay at a certain level in the posi-
+tive range. Further, three curves in condition L changed
+from a positive to a negative and even five from a nega-
+tive to a positive experience.
+L1 described his experience as “scary” from the be-
+ginning, but then his trust increased continuously dur-
+ing a learning process. He/she stated to “try to under-
+stand it first, and after a certain time, it became clear and
+then I also had a good experience” (L1). Others, such
+as L2, stated to become more and more “puzzled” by
+the system. He/she stated that even no augmentation
+would be better than condition L.
+In condition N, 50% (n = 3) of experiences in the
+positive range further increased, another 50% (n = 3) re-
+mained stable. Only two participants stated that their ex-
+perience changed from a negative to a positive one, but
+four reported a change from the positive to the nega-
+tive range. Four curves continuously remained negative.
+For example, participant N2 described the experience
+without any visual aid as “strange from beginning to the
+end.” He/she emphasized that without any system feed-
+back, he/she would never be able to trust an automated
+vehicle. Participant N1 reported a positive experience
+in the beginning, as he/she was excited to drive with an
+AV. After some unexpected situations (such as overtak-
+ing maneuvers or turns), his trust decreased. He stated
+his sense of balance to be troubled, which led to a dizzy
+feeling.
+5.4 Discussion
+Considering our hypothesis, we accept H2.i
+as presenting upcoming driving maneuvers to
+driver/passengers that sit facing rearwards indeed in-
+creases user acceptance and trust. Especially for scales
+addressing trust, such as TS and TAM trust, a statisti-
+cally significant difference is visible—at least for one of
+the investigated visualization methods (condition P) that
+used aids oriented in the direction as perceived by partic-
+ipants. However, for some TAM scales (ATT, Intention)
+there was no significant difference between any of the
+conditions at all. Still, condition P received significantly
+higher scores than condition L in TAM PU and TS.
+Semi-structured interviews and UX curves confirmed
+the assumption that it is easier for passengers to interpret
+and anticipate upcoming maneuvers when indicators
+point in the direction as experienced, and we thus accept
+H2.ii. Of course, the advantage of condition P com-
+pared to condition L could be due to the mental effort
+needed to “rotate” the visualization to fit the driving
+direction. Maybe this advantage would diminish after a
+learning phase when exposed to condition L. However,
+participants emphasized condition P to be more intuitive
+from the beginning, and interview statements confirmed
+our initial assumption: facing backwards while driving
+with a fully automated vehicle raises concerns for some
+users. Beside the lack of trust that can emerge from the
+impossibility to monitor the vehicle behavior, some users
+also feared to suffer from motion sickness while driving.
+Our assumption that knowledge about upcoming ma-
+neuvers may reduce motion sickness was, at least by in-
+vestigation of SSQ scores, not confirmed. However, this
+could also be an effect of the complex setup (the combi-
+nation of moving-based driving simulator, HMD, per-
+manent need to switch between activities), and should
+be addressed in future experiments.
+6
+Conclusion
+In this article, we have presented the results of two
+studies addressing user acceptance and trust for future
+situations of fully automated driving. We have inves-
+tigated two scenarios for level-5 vehicles that demand
+high levels of trust from potential users, such as super-
+human driving (where vehicles benefit from cooperative
+sensing and can drive much faster than the direct line
+
+--- Page 14 ---
+Wintersberger et al.
+59
+Figure 8. Summary of the results obtained in the conducted experiments. In both studies, communication of system decisions using AR technolo-
+gies raised TAM and TS scores.
+of sight would allow in manual driving) and backward
+driving (where the driver/passenger sits in a rotated seat
+facing rearwards). In both experiments, we used aug-
+mented reality aids aiming to foster trust by increasing
+system transparency and communicating upcoming ma-
+neuvers. Statistical evaluation of results obtained from
+measurements targeting trust and acceptance (TAM and
+TS) resulted in significant improvements, and demon-
+strate the potential of the presented approach in both
+studies (see Figure 8). This was confirmed in additional
+qualitative statements given by study participants. In
+semistructured interviews, participants further expressed
+that negative feelings resulting from the loss of control
+in automated driving become more intense in situa-
+tions where it becomes harder to anticipate system de-
+cisions and foresee vehicle behavior, like in the scenarios
+evaluated.
+As soon as large numbers of fully automated vehicles
+are going to pervade into our traffic systems it will be
+highly important to implement means for fostering user
+acceptance and trust. To exploit the full benefit of au-
+tomated vehicle and C-ITS technology a large ratio of
+AVs is essential, and thus skeptic drivers need to be con-
+vinced of the advantages. Therefore, augmented reality
+is an approach with high potential. Although some argu-
+ments for utilizing AR (information in the line of sight
+to follow the eyes-on-the-road mantra) in driving ap-
+plications become obsolete in fully automated driving,
+there are many advantages.
+World-fixed augmentation (as evaluated in Study 1)
+can use the real environment as display to highlight
+which objects in the surrounding are currently im-
+portant for decisions of the automation. This method
+(implicit communication of system decisions) lets users
+quickly anticipate vehicle behavior from the spatial infor-
+mation encoded in the augmentation. In contrast to ex-
+plicit communication of system decisions (such as symbolic
+representation), the approach can more easily be tailored
+to fit the needs of individual users and environments,
+and further allows to automatically extend to new, yet
+unknown driving situations. However, when letting
+users “see what the vehicle sees,” an important question
+remaining is, which and how (in terms of color coding,
+timing, etc.) objects need to be highlighted/augmented.
+Still, screen fixed augmentations as presented in Study
+2 also have advantages—when presented on a HMD,
+they allow notifying the user independent of the viewing
+direction, further they could also be presented on clas-
+sical in-vehicle displays that need less advanced display
+technology.
+7
+Limitations and Future Work
+Studies about trust in automation are highly im-
+portant considering the great potential of automated
+vehicle and C-ITS technology. The scenarios used
+within this article are just examples, but future visions of
+
+--- Page 15 ---
+60
+PRESENCE: VOLUME 27, NUMBER 1
+traffic systems show many other scenarios where users
+must trust technology in potentially ambiguous situa-
+tions (such as listed in Section 2). All these concepts are
+eligible, but it will be essential to discuss these visions
+from a human factors perspective, as humans are more
+than just simple goods that do not care about how they
+are transported. Further, also the underlying relations
+between the theoretical constructs of user acceptance,
+user experience and trust need to be investigated in or-
+der to uncover possible inter-correlations. Since no fully
+automated vehicle have been developed yet, it is hard to
+draw conclusions on general acceptance.
+Although we believe our results to be valid, there
+are some limitations. Both studies suffer from a rela-
+tively small sample size, and mainly young people from
+a technical university have been included. Future studies
+should re-evaluate the concepts with additional partic-
+ipants representing users of different age, education or
+cultural background. Further on, the presented studies
+only lay the groundwork for many important investi-
+gations. It must be evaluated which symbols and color
+coding has the most potential, and which maneuvers
+should be addressed, or how to successfully deal with
+motion sickness when users perform arbitrary activi-
+ties while driving. Additionally, good timings for the
+presentations must be identified, and the temporal de-
+velopment of trust as well as personality traits of individ-
+uals must be considered. To support users in an optimal
+way, that is, build a personalized and experience-based
+support system, their individual preconditions (such as
+dispositional and learned trust, driving experience, etc.)
+should be considered, too. Finally, the concept should
+also be evaluated in other potentially ambiguous future
+automated driving scenarios, such as platooning, lane
+reversal, or dynamic intersection management.
+Acknowledgments
+This work is supported under the FH-Impuls program of the
+German Federal Ministry of Education and Research (BMBF)
+under Grant No. 13FH7I01IA (SAFIR). We further acknowl-
+edge the help of our colleagues Thomas Kundinger, Andreas
+Riegler, and Clemens Schartmüller in the implementation of
+software components and the execution of the user study, and
+Julia Reibel for designing the maneuver augmentations.
+References
+Ajzen, I., & Fishbein, M. (1975). Belief, attitude, inten-
+tion and behavior: An introduction to theory and research.
+Boston: Addison-Wesley.
+Au, T.-C., Zhang, S., & Stone, P. (2015). Autonomous inter-
+section management for semi-autonomous vehicles. In D.
+Teodorovi´c (Ed.), The Routledge handbook of transportation
+(pp. 88–104).
+Bansal, P., & Kockelman, K. (2017). Forecasting Americans’
+long-term adoption of connected and autonomous vehicle
+technologies. Transportation Research Part A: Policy and
+Practice, 95, 49–63.
+Belanche, D., Casalo, L. V., & Carlos, F. (2012). Integrat-
+ing trust and personal values into the technology accep-
+tance model: The case of e-government services adoption.
+Cuadernos de Econiomia y Direccion de la Empresa, 192–
+204.
+Davis, F. D. (1993). User acceptance of information technol-
+ogy: Systems, characteristics, user perceptions and behavioral
+impacts. International Journal of Man-Machine Studies,
+38(3) 475–487.
+Dickie, D. A., & Boyle, L. N. (2009, October). Drivers’ un-
+derstanding of adaptive cruise control limitations. Human
+Factors and Ergonomics Society Annual Meeting, 1806–
+1810.
+Diels, C., & Bos, J. E. (2016). Self-driving car sickness. Ap-
+plied Ergonomics, 53, 374–382.
+Ekman, F., Johansson, M., & Sochor, J. L. (2016). Creating
+appropriate trust for autonomous vehicle systems: A frame-
+work for HMI design. Proceedings of the 95th Annual Meet-
+ing of the Transportation Research Board. Available from
+https://ieeexplore.ieee.org/document/8125704
+Frison, A. K., Wintersberger, P., Riener, A., & Schartmüller,
+C. (2017). Driving Hotzenplotz: A vehicle interface that
+fosters the joy of driving. 9th International Conference on
+Automotive User Interfaces and Interactive Vehicular Appli-
+cations, pp. 247–248.
+Haeuslschmid, R., Von Buelow, M., Pfleging, B., & Butz, A.
+(2017). Supporting trust in autonomous driving. Interna-
+tional Conference on Intelligent User Interfaces, 319–329.
+Helldin, T., Falkman, G., Riveiro, M., & Davidsson, S. (2013).
+Presenting system uncertainty in automotive UIs for sup-
+porting trust calibration in autonomous driving. Proceedings
+
+--- Page 16 ---
+Wintersberger et al.
+61
+of the 5th International Conference on Automotive User In-
+terfaces and Interactive Vehicular Applications, 210–217.
+Hobert, L., Festag, A., Llatser, I., Altomare, L., Visintainer,
+F., & Kovacs, A. (2015). Enhancements of V2X communi-
+cation in support of cooperative autonomous driving. IEEE
+Communications Magazine, 53, 64–70.
+Hoff, K. A., & Bashir, M. (2015). Trust in automation inte-
+grating empirical evidence on factors that influence trust.
+Human Factors: The Journal of the Human Factors and Er-
+gonomics Society, 407–434.
+Hosseini, A., Bacara, D., & Linkamp, M. (2014). A system
+design for automotive augmented reality using stereo night
+vision. IEEE Intelligent Vehicles Symposium, 217–133.
+Hu, C., Zhau, G., & Li, D. (2015). An augmented real-
+ity night vision enhancement application for see-through
+glasses. IEEE International Conference on Multimedia &
+Expo Workshops. doi:10.1109/ICMEW.2015.7169860
+Kalantari, M., & Rauschnabel, P. (2018). Exploring the early
+adopters of augmented reality smart glasses: The case of
+Microsoft HoloLens. In Augmented Reality and Vir-
+tual Reality (pp. 229–245). Cham: Springer. Retrieved
+from https://link.springer.com/chapter/10.1007/978
+-3-319-64027-3_16
+Kamali, M., Dennis, L. A., McAree, O., Fisher, M., & Veres,
+S. M. (2017). Formal verification of autonomous vehicle
+platooning. In A. Ireland (Ed.), Science of computer pro-
+gramming (pp. 88–106). Amsterdam: Elsevier.
+Kennedy, R. S., Norman, E. L., Berbaum, K. S., & Lilien-
+thal, M. G. (1993). Simulator sickness questionnaire: An
+enhanced method for quantifying simulator sickness. The
+International Journal of Aviation Psychology, S203–S220.
+Koelle, M., El Ali, A., Cobus, V., Heuten, W., & Boll, S.
+(2017). All about acceptability? Identifying factors for the
+adoption of data glasses. CHI Conference on Human Factors
+in Computing Systems, S295–S300.
+Koo, J., Kwac, J., Ju, W., Steinert, M., Leifer, L., & Nass,
+C. (2015). Why did my car just do that? Explaining semi-
+autonomous driving actions to improve driver understand-
+ing, trust, and performance. International Journal on Inter-
+active Design and Manufacturing, 269–275.
+Kosinski, R. J. (2015). A literature review on reaction
+time. Retrieved from http://www.fon.hum.uva.nl/rob
+/Courses/InformationInSpeech/CDROM/Literature
+/LOTwinterschool2006/biae.clemson.edu/bpc/bp
+/Lab/110/reaction.htm
+Kujala, S., Roto, V., Väänänen-Vainio-Mattila, K., & Sinnelä,
+A. (2011). UX Curve: A method for evaluating long-term
+user experience. Interacting with Computers, 23(5), 473–
+483. doi:10.1016/j.intcom.2011.06.005
+Kyriakidis, M., Happee, R., & de Winter, J. (2014). Public
+opinion on automated driving: Results of an international
+questionnaire among 5,000 respondents. SSRN Electronic
+Journal, 32, 127–140.
+Lee, J. D., & See, K. A. (2004). Trust in automation: Design-
+ing for appropriate reliance. Human Factors: The Journal of
+the Human Factors and Ergonomics Society 46(1), 50–80.
+Lee, J., Kim, N., Imm, C., Kim, B., Yi, K., & Kim, J. (2016).
+A question of trust: An ethnographic study of automated
+cars on real roads. 8th International Conference on Automo-
+tive User Interfaces and Interactive Vehicular Applications,
+201–208.
+Lee, S., Changwon, J., Seokil, M., Byounghyo, L., Jaebum,
+C., & Byoungho, L. (2016). See-through light field dis-
+plays for augmented reality. SIGGRAPH Asia Virtual Re-
+ality Meets Physical Reality: Modelling and Simulating Vir-
+tual Humans and Environments, 3:1–3:2. Retrieved from
+http://doi.acm.org/10.1145/2992138.2992142
+Litman, T. (2014). Autonomous vehicle implementation predic-
+tions. Victora Transport Policy Institute 28.
+Marsh, S., & Dibben, M. R. (2003). The role of trust in infor-
+mation science and technology. Annual Review of Informa-
+tion Science and Technology, 465–498.
+Moeckli, J., Brown, T. D., Boyle, L. N., Schwarz, C., & Xiong,
+H. (2015). Evaluation of adaptive cruise control interface
+requirements on the National Advanced Driving Simulator.
+Washington DC: NHTSA Technical Report DOT HS 812
+172.
+Muir, B. M. (1987). Trust between humans and machines, and
+the design of decision aids. International Journal of Man-
+Machine Studies, 527–539.
+Parasuraman, R., & Riley, V. (1997). Humans and automa-
+tion: Use, misuse, disuse, abuse. Human Factors: The Jour-
+nal of the Human Factors and Ergonomics Society, 39(2),
+230–253.
+Parent, M. (2007). Advanced urban transport: Automation is
+on the way. IEEE Intelligent Systems, 22(2), 9–11.
+Park, B.-J., Lee, J.-W., Yoon, C., & Kyong-Ho, K. (2015).
+Augmented reality and representation in vehicle for safe
+driving at night. International Conference on Informa-
+tion and Communication Technology Convergence, 1261–
+1263.
+Perlin, K. (2016, May-June). Future reality: How emerging
+technologies will change language itself. IEEE Computer
+Graphics and Applications, 84–89.
+
+--- Page 17 ---
+62
+PRESENCE: VOLUME 27, NUMBER 1
+Rensink, R. A., O’Regan, J. K., & Clark, J. J. (1997). To see
+or not to see: The need for attention to perceive changes in
+scenes. Psychological Science, 8, 368–373.
+Riener, A., & Ferscha, A. (2013). Enhancing future mass ICT
+with social capabilities. In E. Mitteton-Kelly (Ed.), Co-
+evolution of intelligent socio-technical systems (pp. 141–184).
+New York: Springer.
+Rödel, C., Stadler, S., Meschtscherjakov, A., & Tscheligi, M.
+(2014). Towards autonomous cars: The effect of autonomy
+levels on acceptance and user experience. Proceedings of the
+6th International Conference on Automotive User Interfaces
+and Interactive Vehicular Applications, 1–8.
+SAE On-Road Automated Vehicle Standards Committee.
+(2014). Taxonomy and definitions for terms related to on-
+road motor vehicle automated driving systems. Retrieved from
+https://sae.org/standards/content/j3016_201806/
+Siegwart, R., Nourbakhsh, l. R., & Scaramuzza, D. (2011).
+Introduction to autonomous mobile robots. Cambridge, MA:
+MIT Press.
+Smith, M., Streeter, J., Burnett, G., & Gabbard, J. L. (2015).
+Visual search tasks: The effects of head-up displays on driv-
+ing and task performance. 7th International Conference on
+Automotive User Interfaces and Interactive Vehicular Appli-
+cations, 80–87.
+Tangmanee, K., & Teeravanrunyou, S. (2012). Effects of
+guided arrows on head-up display towards the vehicle wind-
+shield. Network of Ergonomics Societies Conference, 1–6.
+Venkatesh, V., & Davis, F. D. (2000). A theoretical extension
+of the technology acceptance model: Four longitudinal field
+studies. Management Science, 46(2), 186–204.
+Venkatesh, V., Morris, M., Davis, G. B., & Davis, F. D.
+(2003). User acceptance of information technology: Toward
+a unified view. MIS Quarterly, 425–478.
+Wintersberger, P., & Riener, A. (2016). Trust in technology
+as a safety aspect in highly automated driving. ICom, 15(3),
+297–310. doi:10.1515/icom-2016-0034
+Wintersberger, P., Frison, A.-K., & Riener, A. (2016). Auto-
+mated driving system, male, or female driver: Who would
+you prefer? Comparative analysis of passengers’ mental con-
+ditions, emotional states and qualitative feedback. Proceed-
+ings of the 8th International Conference on Automotive User
+Interfaces and Interactive Vehicular Applications, 51–58.

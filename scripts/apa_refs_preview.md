@@ -1,0 +1,634 @@
+# APA 7th 题录预览（102 条）
+> 由 `scripts/apa_refs.json` 生成。正文中文式引注见每条的「中文引注」列。
+
+## #1
+
+- **APA**：Kim, H., Gabbard, J. L., Anon, A. M., & Misu, T. (2018). Driver Behavior and Performance with Augmented Reality Pedestrian Collision Warning: An Outdoor User Study. *IEEE Transactions on Visualization and Computer Graphics*, *24*(4), 1515–1524. https://doi.org/10.1109/tvcg.2018.2793680
+- **英文引注**：(Kim et al., 2018)
+- **类型**：journal-article
+
+## #2
+
+- **APA**：Phan, M. T., Thouvenin, I., & Frémont, V. (2016). Enhancing the driver awareness of pedestrian using augmented reality cues. In *2016 IEEE 19th International Conference on Intelligent Transportation Systems (ITSC)* (pp. 1298–1304). IEEE. https://doi.org/10.1109/itsc.2016.7795724
+- **英文引注**：(Phan et al., 2016)
+- **类型**：proceedings-article
+- **核验备注**：Crossref 将完整姓名置于 family 字段，已按论文署名切分 given/family
+
+## #3
+
+- **APA**：Kim, H., Isleib, J. D., & Gabbard, J. L. (2016a). Casting shadows: Ecological interface design for augmented reality pedestrian collision warning. In *2016 IEEE Virtual Reality (VR)* (pp. 205–206). IEEE. https://doi.org/10.1109/vr.2016.7504725
+- **英文引注**：(Kim et al., 2016a)
+- **类型**：proceedings-article
+- **核验备注**：与 #04 同作者同年（同一数据的 IEEE VR 短文版），按 APA 7th 加后缀（标题字母序 C < V）
+
+## #4
+
+- **APA**：Kim, H., Isleib, J. D., & Gabbard, J. L. (2016b). Virtual Shadow. *Proceedings of the Human Factors and Ergonomics Society Annual Meeting*, *60*(1), 2093–2097. https://doi.org/10.1177/1541931213601474
+- **英文引注**：(Kim et al., 2016b)
+- **类型**：journal-article
+- **核验备注**：与 #03 同作者同年（同一数据的 HFES 版），按 APA 7th 加后缀（标题字母序 C < V）
+
+## #5
+
+- **APA**：Yoon, C., Kim, K., Park, H. S., Park, M. W., & Jung, S. K. (2014). Development of augmented forward collision warning system for Head-Up Display. In *17th International IEEE Conference on Intelligent Transportation Systems (ITSC)* (pp. 2277–2279). IEEE. https://doi.org/10.1109/itsc.2014.6958054
+- **英文引注**：(Yoon et al., 2014)
+- **类型**：proceedings-article
+- **核验备注**：Crossref 将完整姓名置于 family 字段，已按论文署名切分 given/family
+
+## #6
+
+- **APA**：Ma, J., Li, Y., & Zuo, Y. (2024). Design and Evaluation of Ecological Interface of Driving Warning System Based on AR-HUD. *Sensors*, *24*(24), 8010. https://doi.org/10.3390/s24248010
+- **英文引注**：(Ma et al., 2024)
+- **类型**：journal-article
+
+## #7
+
+- **APA**：Chen, W., Niu, L., Liu, S., Ma, S., Li, H., & Yang, Z. (2024a). Evaluating the Effectiveness of Contact-Analog and Bounding Box Prototypes in Augmented Reality Head-Up Display Warning for Chinese Novice Drivers Under Various Collision Types and Traffic Density. *International Journal of Human–Computer Interaction*, *41*(4), 2677–2691. https://doi.org/10.1080/10447318.2024.2327197
+- **英文引注**：(Chen et al., 2024a)
+- **类型**：journal-article
+- **核验备注**：与 #40 同为 Chen W. 等 2024 年发表，按 APA 7th 加后缀（标题字母序 E < P）
+
+## #8
+
+- **APA**：Wu, Z., Liang, Y., Liu, G., & Ai, X. (2024). Comparative Analysis of AR-HUDs Crash Warning Icon Designs: An Eye-Tracking Study Using 360° Panoramic Driving Simulation. *Sustainability*, *16*(21), 9167. https://doi.org/10.3390/su16219167
+- **英文引注**：(Wu et al., 2024)
+- **类型**：journal-article
+
+## #9
+
+- **APA**：Ye, M., & Yin, J. (2025). Spatial Plane Positioning of AR-HUD Graphics: Implications for Driver Inattentional Blindness in Navigation and Collision Warning Scenarios. *Electronics*, *14*(23), 4768. https://doi.org/10.3390/electronics14234768
+- **英文引注**：(Ye & Yin, 2025)
+- **类型**：journal-article
+
+## #10
+
+- **APA**：Tong, Y., Jia, B., & Bao, S. (2021). An Augmented Warning System for Pedestrians: User Interface Design and Algorithm Development. *Applied Sciences*, *11*(16), 7197. https://doi.org/10.3390/app11167197
+- **英文引注**：(Tong et al., 2021)
+- **类型**：journal-article
+
+## #11
+
+- **APA**：Bram-Larbi, K., Charissis, V., Khan, S., Lagoo, R., Harrison, D. K., & Drikakis, D. (2020). Collision Avoidance Head-Up Display: Design Considerations for Emergency Services’ Vehicles. In *2020 IEEE International Conference on Consumer Electronics (ICCE)* (pp. 1–7). IEEE. https://doi.org/10.1109/icce46568.2020.9043068
+- **英文引注**：(Bram-Larbi et al., 2020)
+- **类型**：proceedings-article
+
+## #12
+
+- **APA**：Zhang, Y., Bian, Y., Zhao, X., Li, X., & Zhang, J. (2024). Improving Pedestrian Safety with Head-Up Display Warning in a Connected Environment. *International Journal of Human–Computer Interaction*, *41*(6), 3724–3744. https://doi.org/10.1080/10447318.2024.2368910
+- **英文引注**：(Zhang et al., 2024)
+- **类型**：journal-article
+
+## #13
+
+- **APA**：Kim, H., & Gabbard, J. L. (2019). Assessing Distraction Potential of Augmented Reality Head-Up Displays for Vehicle Drivers. *Human Factors: The Journal of the Human Factors and Ergonomics Society*, *64*(5), 852–865. https://doi.org/10.1177/0018720819844845
+- **英文引注**：(Kim & Gabbard, 2019)
+- **类型**：journal-article
+
+## #14
+
+- **APA**：Lubbe, N. (2017). Brake reactions of distracted drivers to pedestrian Forward Collision Warning systems. *Journal of Safety Research*, *61*, 23–32. https://doi.org/10.1016/j.jsr.2017.02.002
+- **英文引注**：(Lubbe, 2017)
+- **类型**：journal-article
+
+## #15
+
+- **APA**：Winkler, S., Kazazi, J., & Vollrath, M. (2015). Distractive or Supportive -- How Warnings in the Head-up Display Affect Drivers' Gaze and Driving Behavior. In *2015 IEEE 18th International Conference on Intelligent Transportation Systems* (pp. 1035–1040). IEEE. https://doi.org/10.1109/itsc.2015.172
+- **英文引注**：(Winkler et al., 2015)
+- **类型**：proceedings-article
+
+## #16
+
+- **APA**：Kazazi, J., Winkler, S., & Vollrath, M. (2015). Accident Prevention through Visual Warnings: How to Design Warnings in Head-up Display for Older and Younger Drivers. In *2015 IEEE 18th International Conference on Intelligent Transportation Systems* (pp. 1028–1034). IEEE. https://doi.org/10.1109/itsc.2015.171
+- **英文引注**：(Kazazi et al., 2015)
+- **类型**：proceedings-article
+
+## #17
+
+- **APA**：Roh, D. H., & Lee, J. Y. (2023). Augmented Reality-Based Navigation Using Deep Learning-Based Pedestrian and Personal Mobility User Recognition—A Comparative Evaluation for Driving Assistance. *IEEE Access*, *11*, 62200–62211. https://doi.org/10.1109/access.2023.3286872
+- **英文引注**：(Roh & Lee, 2023)
+- **类型**：journal-article
+
+## #18
+
+- **APA**：Park, H. S., Park, M. W., Won, K. H., Kim, K., & Jung, S. K. (2013). In‐Vehicle AR‐HUD System to Provide Driving‐Safety Information. *ETRI Journal*, *35*(6), 1038–1047. https://doi.org/10.4218/etrij.13.2013.0041
+- **英文引注**：(Park et al., 2013)
+- **类型**：journal-article
+
+## #19
+
+- **APA**：Winkler, M., & Soleimani, M. (2025). A Review of Augmented Reality Heads Up Display in Vehicles: Effectiveness, Application, and Safety. *International Journal of Human–Computer Interaction*, *41*(18), 11405–11420. https://doi.org/10.1080/10447318.2024.2443252
+- **英文引注**：(Winkler & Soleimani, 2025)
+- **类型**：journal-article
+
+## #20
+
+- **APA**：Wang, C., Chu, D., & Martens, M. (2025). ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection. *Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies*, *9*(1), 1–27. https://doi.org/10.1145/3712270
+- **英文引注**：(Wang et al., 2025)
+- **类型**：journal-article
+
+## #21
+
+- **APA**：Huo, F., & Alla, R. (2025). Differences in drivers’ dependence on AR warning information in urban driving environments: the role of driving experience. *Frontiers in Virtual Reality*, *6*, 1638823. https://doi.org/10.3389/frvir.2025.1638823
+- **英文引注**：(Huo & Alla, 2025)
+- **类型**：journal-article
+
+## #22
+
+- **APA**：Zhou, P., Zhang, W., Braud, T., Hui, P., & Kangasharju, J. (2018). ARVE. In *Proceedings of the 2018 Workshop on Mobile Edge Communications* (pp. 25–30). ACM. https://doi.org/10.1145/3229556.3229564
+- **英文引注**：(Zhou et al., 2018)
+- **类型**：proceedings-article
+
+## #23
+
+- **APA**：Kim, S., Oh, J., Seong, M., Jeon, E., Moon, Y. K., & Kim, S. (2023). Assessing the Impact of AR HUDs and Risk Level on User Experience in Self-Driving Cars: Results from a Realistic Driving Simulation. *Applied Sciences*, *13*(8), 4952. https://doi.org/10.3390/app13084952
+- **英文引注**：(Kim et al., 2023)
+- **类型**：journal-article
+
+## #24
+
+- **APA**：Li, J., Chen, K., & Chen, M. (2025b). The Influence of Information Redundancy on Driving Behavior and Psychological Responses Under Different Fog and Risk Conditions: An Analysis of AR-HUD Interface Designs. *Applied Sciences*, *15*(20), 11072. https://doi.org/10.3390/app152011072
+- **英文引注**：(Li et al., 2025b)
+- **类型**：journal-article
+- **核验备注**：与 #52 同课题组同年（Li J. 与 Chen M. 共同署名），按 APA 7th 加后缀（标题字母序 E < T）
+
+## #25
+
+- **APA**：Gabbard, J. L., Smith, M., Tanous, K., Kim, H., & Jonas, B. (2019). AR DriveSim: An Immersive Driving Simulator for Augmented Reality Head-Up Display Research. *Frontiers in Robotics and AI*, *6*, 98. https://doi.org/10.3389/frobt.2019.00098
+- **英文引注**：(Gabbard et al., 2019)
+- **类型**：journal-article
+
+## #26
+
+- **APA**：Charissis, V., Falah, J., Lagoo, R., Alfalah, S. F. M., Khan, S., Wang, S., Altarteer, S., Larbi, K. B., & Drikakis, D. (2021). Employing Emerging Technologies to Develop and Evaluate In-Vehicle Intelligent Systems for Driver Support: Infotainment AR HUD Case Study. *Applied Sciences*, *11*(4), 1397. https://doi.org/10.3390/app11041397
+- **英文引注**：(Charissis et al., 2021)
+- **类型**：journal-article
+
+## #27
+
+- **APA**：Ma, X., Jia, M., Hong, Z., Kwok, A. P. K., & Yan, M. (2021). Does Augmented-Reality Head-Up Display Help? A Preliminary Study on Driving Performance Through a VR-Simulated Eye Movement Analysis. *IEEE Access*, *9*, 129951–129964. https://doi.org/10.1109/access.2021.3112240
+- **英文引注**：(Ma et al., 2021)
+- **类型**：journal-article
+
+## #28
+
+- **APA**：Doshi, A., Cheng, S. Y., & Trivedi, M. M. (2009). A Novel Active Heads-Up Display for Driver Assistance. *IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)*, *39*(1), 85–93. https://doi.org/10.1109/tsmcb.2008.923527
+- **英文引注**：(Doshi et al., 2009)
+- **类型**：journal-article
+- **核验备注**：Crossref 将完整姓名置于 family 字段，已按论文署名切分 given/family
+
+## #29
+
+- **APA**：Teng, J., Wan, F., Kong, Y., & Kim, J. K. (2023). Machine learning-based cognitive load prediction model for AR-HUD to improve OSH of professional drivers. *Frontiers in Public Health*, *11*, 1195961. https://doi.org/10.3389/fpubh.2023.1195961
+- **英文引注**：(Teng et al., 2023)
+- **类型**：journal-article
+
+## #30
+
+- **APA**：Frémont, V., Phan, M. T., & Thouvenin, I. (2019). Adaptive Visual Assistance System for Enhancing the Driver Awareness of Pedestrians. *International Journal of Human–Computer Interaction*, *36*(9), 856–869. https://doi.org/10.1080/10447318.2019.1698220
+- **英文引注**：(Frémont et al., 2019)
+- **类型**：journal-article
+
+## #31
+
+- **APA**：Kettle, L., & Lee, Y. C. (2022). Augmented Reality for Vehicle-Driver Communication: A Systematic Review. *Safety*, *8*(4), 84. https://doi.org/10.3390/safety8040084
+- **英文引注**：(Kettle & Lee, 2022)
+- **类型**：journal-article
+
+## #32
+
+- **APA**：Skirnewskaja, J., & Wilkinson, T. D. (2022). Automotive Holographic Head‐Up Displays. *Advanced Materials*, *34*(19), 2110463. https://doi.org/10.1002/adma.202110463
+- **英文引注**：(Skirnewskaja & Wilkinson, 2022)
+- **类型**：journal-article
+
+## #33
+
+- **APA**：Cheng, Y. N., Zhong, X., Ye, M., & Tian, L. W. (2022). Usability Evaluation of in-Vehicle AR-HUD Interface Applying AHP-GRA. *Human-Centric Intelligent Systems*, *2*(3-4), 124–137. https://doi.org/10.1007/s44230-022-00011-1
+- **英文引注**：(Cheng et al., 2022)
+- **类型**：journal-article
+- **核验备注**：Crossref 将「名」记入 family 字段，已按论文署名 Cheng Yunuo / Zhong Xia / Ye Min / Tian Liwei 复原姓氏
+
+## #34
+
+- **APA**：Zhong, X., Cheng, Y., & Tian, L. (2022). Color Visibility Evaluation of In-Vehicle AR-HUD Under Different Illuminance. In *Proceedings of the International Conference on Information Economy, Data Modeling and Cloud Computing, ICIDC 2022, 17-19 June 2022, Qingdao, China*. EAI. https://doi.org/10.4108/eai.17-6-2022.2322686
+- **英文引注**：(Zhong et al., 2022)
+- **类型**：proceedings-article
+
+## #35
+
+- **APA**：Guan, L. (2024). Interface Design of Automobile Head-up Display from the Perspective of Human-Machine Interaction. In *Proceedings of the 3rd International Conference on Art Design and Digital Technology, ADDT 2024, May 24–26, 2024, Luoyang, China*. EAI. https://doi.org/10.4108/eai.24-5-2024.2350098
+- **英文引注**：(Guan, 2024)
+- **类型**：proceedings-article
+
+## #36
+
+- **APA**：Strle, G., Košir, A., Sodnik, J., & Pečečnik, K. S. (2023). Physiological Signals as Predictors of Cognitive Load Induced by the Type of Automotive Head-Up Display. *IEEE Access*, *11*, 87835–87848. https://doi.org/10.1109/access.2023.3305383
+- **英文引注**：(Strle et al., 2023)
+- **类型**：journal-article
+
+## #37
+
+- **APA**：Jung, H., Choi, M. K., Soon, K., & Jung, W. Y. (2018). End-to-end pedestrian collision warning system based on a convolutional neural network with semantic segmentation. In *2018 IEEE International Conference on Consumer Electronics (ICCE)* (pp. 1–3). IEEE. https://doi.org/10.1109/icce.2018.8326129
+- **英文引注**：(Jung et al., 2018)
+- **类型**：proceedings-article
+
+## #38
+
+- **APA**：Kim, U. H., Ka, D., Yeo, H., & Kim, J. H. (2022). *A Real-Time Predictive Pedestrian Collision Warning Service for Cooperative Intelligent Transportation Systems* [Preprint]. arXiv. https://arxiv.org/abs/2009.10868
+- **英文引注**：(Kim et al., 2022)
+- **类型**：preprint
+- **核验备注**：arXiv:2009.10868v4；首次投递 2020-09-23，v4 更新 2022-02-22
+
+## #39
+
+- **APA**：Banerjee, S., Jeihani, M., Khadem, N. K., & Kabir, M. M. (2023). Influence of Pedestrian Collision Warning Systems on Driver Behavior—A Driving Simulator Study. In *International Conference on Transportation and Development 2023* (pp. 299–314). American Society of Civil Engineers. https://doi.org/10.1061/9780784484876.027
+- **英文引注**：(Banerjee et al., 2023)
+- **类型**：proceedings-article
+
+## #40
+
+- **APA**：Chen, W., Song, C., Luo, J., Xu, Z., Li, H., Ma, S., Wang, Q., & Yang, Z. (2024b). Priority Design in Multi-Target AR-HUD Warning: Evidence from Eye Movement and Behavior of the Novice Driver. *International Journal of Human–Computer Interaction*, *41*(17), 10923–10939. https://doi.org/10.1080/10447318.2024.2439572
+- **英文引注**：(Chen et al., 2024b)
+- **类型**：journal-article
+- **核验备注**：与 #07 同为 Chen W. 等 2024 年发表，按 APA 7th 加后缀（标题字母序 E < P）
+
+## #41
+
+- **APA**：Bolton, A., Burnett, G., & Large, D. R. (2015). An investigation of augmented reality presentations of landmark-based navigation using a head-up display. In *Proceedings of the 7th International Conference on Automotive User Interfaces and Interactive Vehicular Applications* (pp. 56–63). ACM. https://doi.org/10.1145/2799250.2799253
+- **英文引注**：(Bolton et al., 2015)
+- **类型**：proceedings-article
+
+## #42
+
+- **APA**：Chen, H., Wang, W., Gao, J., Tao, X., Li, Z., Lu, Q., Liu, Y., & Huang, J. (2026). Hierarchical Feature Evaluation and Decision‑Making for In‐Vehicle Augmented‐Reality Head‐Up Display Based on Pythagorean Hamacher Aggregation. *Annals of the New York Academy of Sciences*, *1555*(1), e70167. https://doi.org/10.1111/nyas.70167
+- **英文引注**：(Chen et al., 2026)
+- **类型**：journal-article
+
+## #43
+
+- **APA**：Chen, W., Song, J., Wang, Y., Wu, C., Ma, S., Wang, D., Yang, Z., & Li, H. (2023). Inattentional blindness to unexpected hazard in augmented reality head-up display assisted driving: The impact of the relative position between stimulus and augmented graph. *Traffic Injury Prevention*, *24*(4), 344–351. https://doi.org/10.1080/15389588.2023.2186735
+- **英文引注**：(Chen et al., 2023)
+- **类型**：journal-article
+
+## #44
+
+- **APA**：Chen, W., Zhuang, X., Cui, Z., & Ma, G. (2019). Drivers’ recognition of pedestrian road-crossing intentions: Performance and process. *Transportation Research Part F: Traffic Psychology and Behaviour*, *64*, 552–564. https://doi.org/10.1016/j.trf.2019.07.004
+- **英文引注**：(Chen et al., 2019)
+- **类型**：journal-article
+
+## #45
+
+- **APA**：Cheng, Y. N., Zhong, X., & Tian, L. W. (2023a). Does the AR-HUD system affect driving behaviour? An eye-tracking experiment study. *Transportation Research Interdisciplinary Perspectives*, *18*, 100767. https://doi.org/10.1016/j.trip.2023.100767
+- **英文引注**：(Cheng et al., 2023a)
+- **类型**：journal-article
+- **核验备注**：与 #67 同作者同年（疑似同一数据两次发表），按 APA 7th 加 a/b 后缀，本条为 2023a
+
+## #46
+
+- **APA**：Wintersberger, P., Frison, A. K., Riener, A., & Sawitzky, T. V. (2018). Fostering User Acceptance and Trust in Fully Automated Vehicles: Evaluating the Potential of Augmented Reality. *PRESENCE: Virtual and Augmented Reality*, *27*(1), 46–62. https://doi.org/10.1162/pres_a_00320
+- **英文引注**：(Wintersberger et al., 2018)
+- **类型**：journal-article
+
+## #47
+
+- **APA**：Yau, T., Malekmohammadi, S., Rasouli, A., Lakner, P., Rohani, M., & Luo, J. (2021). Graph-SIM: A Graph-based Spatiotemporal Interaction Modelling for Pedestrian Action Prediction. In *2021 IEEE International Conference on Robotics and Automation (ICRA)* (pp. 8580–8586). IEEE. https://doi.org/10.1109/icra48506.2021.9561107
+- **英文引注**：(Yau et al., 2021)
+- **类型**：proceedings-article
+
+## #48
+
+- **APA**：Hou, G., Dong, Q., & Wang, H. (2024). The Effect of Dynamic Effects and Color Transparency of AR-HUD Navigation Graphics on Driving Behavior Regarding Inattentional Blindness. *International Journal of Human–Computer Interaction*, *41*(12), 7581–7592. https://doi.org/10.1080/10447318.2024.2400376
+- **英文引注**：(Hou et al., 2024)
+- **类型**：journal-article
+
+## #49
+
+- **APA**：Jing, C., Shang, C., Yu, D., Chen, Y., & Zhi, J. (2022). The impact of different AR-HUD virtual warning interfaces on the takeover performance and visual characteristics of autonomous vehicles. *Traffic Injury Prevention*, *23*(5), 277–282. https://doi.org/10.1080/15389588.2022.2055752
+- **英文引注**：(Jing et al., 2022)
+- **类型**：journal-article
+
+## #50
+
+- **APA**：Karatas, N., Tanaka, T., Fujikakc, K., Yoshihara, Y., Kanamori, H., Fuwamoto, Y., & Yoshida, M. (2020). Evaluation of AR-HUD Interface During an Automated Intervention in Manual Driving. In *2020 IEEE Intelligent Vehicles Symposium (IV)* (pp. 2158–2164). IEEE. https://doi.org/10.1109/iv47402.2020.9304610
+- **英文引注**：(Karatas et al., 2020)
+- **类型**：proceedings-article
+
+## #51
+
+- **APA**：Langlois, S., & Soualmi, B. (2016). Augmented reality versus classical HUD to take over from automated driving: An aid to smooth reactions and to anticipate maneuvers. In *2016 IEEE 19th International Conference on Intelligent Transportation Systems (ITSC)* (pp. 1571–1578). IEEE. https://doi.org/10.1109/itsc.2016.7795767
+- **英文引注**：(Langlois & Soualmi, 2016)
+- **类型**：proceedings-article
+
+## #52
+
+- **APA**：Li, J., Wang, C., & Chen, M. (2025a). Effects of Driving Background Complexity and Interface Opacity on Visual Cognition in AR‐HUD Systems. *Journal of the Society for Information Display*, *33*(8), 919–936. https://doi.org/10.1002/jsid.2096
+- **英文引注**：(Li et al., 2025a)
+- **类型**：journal-article
+- **核验备注**：与 #24 同课题组同年（Li J. 与 Chen M. 共同署名），按 APA 7th 加后缀（标题字母序 E < T）
+
+## #53
+
+- **APA**：Lopez, J. C., & Moacdieh, N. M. (2025). Opacity in car augmented reality head-up displays: users’ preferences, visual attention, and situation awareness. *Applied Ergonomics*, *129*, 104610. https://doi.org/10.1016/j.apergo.2025.104610
+- **英文引注**：(Lopez & Moacdieh, 2025)
+- **类型**：journal-article
+
+## #54
+
+- **APA**：Merenda, C., Kim, H., Tanous, K., Gabbard, J. L., Feichtl, B., Misu, T., & Suga, C. (2018). Augmented Reality Interface Design Approaches for Goal-directed and Stimulus-driven Driving Tasks. *IEEE Transactions on Visualization and Computer Graphics*, *24*(11), 2875–2885. https://doi.org/10.1109/tvcg.2018.2868531
+- **英文引注**：(Merenda et al., 2018)
+- **类型**：journal-article
+
+## #55
+
+- **APA**：Pammer, K., & Blink, C. (2013). Attentional differences in driving judgments for country and city scenes: Semantic congruency in inattentional blindness. *Accident Analysis & Prevention*, *50*, 955–963. https://doi.org/10.1016/j.aap.2012.07.026
+- **英文引注**：(Pammer & Blink, 2013)
+- **类型**：journal-article
+
+## #56
+
+- **APA**：Park, H., & Kim, K. H. (2013). Efficient Information Representation Method for Driver-Centered AR-HUD System. In *Lecture Notes in Computer Science* (pp. 393–400). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-39238-2_43
+- **英文引注**：(Park & Kim, 2013)
+- **类型**：book-chapter
+
+## #57
+
+- **APA**：Pfannmüller, L., Kramer, M., Senner, B., & Bengler, K. (2015). A Comparison of Display Concepts for a Navigation System in an Automotive Contact Analog Head-up Display. *Procedia Manufacturing*, *3*, 2722–2729. https://doi.org/10.1016/j.promfg.2015.07.678
+- **英文引注**：(Pfannmüller et al., 2015)
+- **类型**：journal-article
+
+## #58
+
+- **APA**：Strayer, D. L., & McDonnell, A. S. (2025). SPIDER 2.0: Driver Distraction and Visual Attention. *Annual Review of Vision Science*, *11*(1), 521–540. https://doi.org/10.1146/annurev-vision-110423-025626
+- **英文引注**：(Strayer & McDonnell, 2025)
+- **类型**：journal-article
+
+## #59
+
+- **APA**：Wang, J., Yang, J., Fu, Q., Zhang, J., & Zhang, J. (2024). A new dynamic spatial information design framework for AR-HUD to evoke drivers’ instinctive responses and improve accident prevention. *International Journal of Human-Computer Studies*, *183*, 103194. https://doi.org/10.1016/j.ijhcs.2023.103194
+- **英文引注**：(Wang et al., 2024)
+- **类型**：journal-article
+
+## #60
+
+- **APA**：Wang, Y., Wu, Y., Chen, C., Wu, B., Ma, S., Wang, D., Li, H., & Yang, Z. (2021). Inattentional Blindness in Augmented Reality Head-Up Display-Assisted Driving. *International Journal of Human–Computer Interaction*, *38*(9), 837–850. https://doi.org/10.1080/10447318.2021.1970434
+- **英文引注**：(Wang et al., 2021)
+- **类型**：journal-article
+
+## #61
+
+- **APA**：Wei, C., Jin, Y., Fu, Y., Zhang, Y., Su, Y., & Li, W. (2025). Study on AR-HUD Design in Unprotected Intersection Scenario Under Autonomous Driving. In *2025 9th CAA International Conference on Vehicular Control and Intelligence (CVCI)* (pp. 1–6). IEEE. https://doi.org/10.1109/cvci66304.2025.11348153
+- **英文引注**：(Wei et al., 2025)
+- **类型**：proceedings-article
+
+## #62
+
+- **APA**：Winkler, S., Kazazi, J., & Vollrath, M. (2018). How to warn drivers in various safety-critical situations – Different strategies, different reactions. *Accident Analysis & Prevention*, *117*, 410–426. https://doi.org/10.1016/j.aap.2018.01.040
+- **英文引注**：(Winkler et al., 2018)
+- **类型**：journal-article
+
+## #63
+
+- **APA**：Wu, Z., Zhao, L., Liu, G., Chai, J., Huang, J., & Ai, X. (2023). The Effect of AR-HUD Takeover Assistance Types on Driver Situation Awareness in Highly Automated Driving: A 360-Degree Panorama Experiment. *International Journal of Human–Computer Interaction*, *40*(20), 6492–6509. https://doi.org/10.1080/10447318.2023.2254645
+- **英文引注**：(Wu et al., 2023)
+- **类型**：journal-article
+
+## #64
+
+- **APA**：Yamin, P. A., Park, J., & Kim, H. K. (2024). In-vehicle human–machine interface guidelines for augmented reality head-up displays: A review, guideline formulation, and future research directions. *Transportation Research Part F: Traffic Psychology and Behaviour*, *104*, 266–285. https://doi.org/10.1016/j.trf.2024.06.001
+- **英文引注**：(Yamin et al., 2024)
+- **类型**：journal-article
+
+## #65
+
+- **APA**：You, F., Zhang, J., Zhang, J., Shen, L., Fang, W., Cui, W., & Wang, J. (2023). A Novel Cooperation-Guided Warning of Invisible Danger from AR-HUD to Enhance Driver’s Perception. *International Journal of Human–Computer Interaction*, *40*(8), 1873–1891. https://doi.org/10.1080/10447318.2023.2233734
+- **英文引注**：(You et al., 2023)
+- **类型**：journal-article
+
+## #66
+
+- **APA**：Yu, K., Du, D., Yu, D., Zhi, J., Wang, Y., & Jing, C. (2024). Effects of a color gradient and emoji in AR-HUD warning interfaces in autonomous vehicles on takeover performance and driver emotions. *Traffic Injury Prevention*, *25*(5), 714–723. https://doi.org/10.1080/15389588.2024.2337120
+- **英文引注**：(Yu et al., 2024)
+- **类型**：journal-article
+
+## #67
+
+- **APA**：Cheng, Y. N., Zhong, X., & Tian, L. W. (2023b). How does AR-HUD system affect driving behaviour Evidence from an eye-tracking experiment study. *International Journal of Vehicle Design*, *92*(1), 1–21. https://doi.org/10.1504/ijvd.2023.133262
+- **英文引注**：(Cheng et al., 2023b)
+- **类型**：journal-article
+- **核验备注**：Crossref 姓名颠倒已复原；与 #45 同作者同年（疑似一稿两投），按 APA 7th 加 a/b 后缀，本条为 2023b
+
+## #68
+
+- **APA**：Zeng, M., Tang, Q., Deng, P., Jia, Y., Zhang, Y., Chen, H., Yu, D., & Zhao, X. (2024). The impact of AR-HUD lane enhancement on lateral control performance under fog conditions. In *Eighth International Conference on Traffic Engineering and Transportation System (ICTETS 2024)* (pp. 253). SPIE. https://doi.org/10.1117/12.3054840
+- **英文引注**：(Zeng et al., 2024)
+- **类型**：proceedings-article
+
+## #69
+
+- **APA**：Zhu, Q., Li, J., & Liu, Y. (2025). Visual Saliency Design for AR-HUD Navigation in Extreme Weather: Reducing Inattentional Blindness. *IEEE Access*, *13*, 137613–137622. https://doi.org/10.1109/access.2025.3588576
+- **英文引注**：(Zhu et al., 2025)
+- **类型**：journal-article
+
+## #70
+
+- **APA**：Kang, H., Han, K., & Lee, J. (2016). Differences in drivers’ pedestrian avoidance response based on Warning timing, stimulus-response compatibility and Drivers’ distraction of auditory pedestrian collision warning system. *Korean Journal of Industrial and Organizational Psychology*, *29*(2), 257–277. https://doi.org/10.24230/kjiop.v29i2.257-277
+- **英文引注**：(Kang et al., 2016)
+- **类型**：journal-article
+
+## #71
+
+- **APA**：Zhang, Y. T., Li, X. M., Yan, X. D., & Xue, Q. W. (2015). Effects of collision warning system under different warning timing on driving speed and distanc. In *2015 International Conference on Transportation Information and Safety (ICTIS)* (pp. 380–385). IEEE. https://doi.org/10.1109/ictis.2015.7232174
+- **英文引注**：(Zhang et al., 2015)
+- **类型**：proceedings-article
+- **核验备注**：Crossref 姓名颠倒已复原（张钰婷 / 李晓萌 / 严学栋 / 薛清婉）
+
+## #72
+
+- **APA**：Chen, Y. L., Shen, K. Y., & Wang, S. C. (2013). Forward collision warning system considering both time-to-collision and safety braking distance. In *2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)* (pp. 972–977). IEEE. https://doi.org/10.1109/iciea.2013.6566508
+- **英文引注**：(Chen et al., 2013)
+- **类型**：proceedings-article
+- **核验备注**：Crossref 将完整姓名置于 family 字段，已按论文署名切分 given/family
+
+## #73
+
+- **APA**：Wang, Y., He, Q., Guo, J., Stevenson, M., & Xu, Y. (2026). A-TTC: a multimodal fusion framework for personalized truck forward collision warning via dynamic threshold calibration. *Accident Analysis & Prevention*, *236*, 108635. https://doi.org/10.1016/j.aap.2026.108635
+- **英文引注**：(Wang et al., 2026)
+- **类型**：journal-article
+
+## #74
+
+- **APA**：Abe, G., & Richardson, J. (2006). Alarm timing, trust and driver expectation for forward collision warning systems. *Applied Ergonomics*, *37*(5), 577–586. https://doi.org/10.1016/j.apergo.2005.11.001
+- **英文引注**：(Abe & Richardson, 2006)
+- **类型**：journal-article
+
+## #75
+
+- **APA**：Abe, G., & Richardson, J. (2004). *The human factors of collision warning systems: System performance, alarm timing, and driver trust* [Conference paper record]. American Psychological Association (APA). https://doi.org/10.1037/e577202012-006
+- **英文引注**：(Abe & Richardson, 2004)
+- **类型**：dataset
+
+## #76
+
+- **APA**：Thammakaroon, P., & Tangamchit, P. (2012). Improvement of warning lag time in forward collision warning systems based on multifunctional warnings. In *2012 IEEE International Conference on Vehicular Electronics and Safety (ICVES 2012)* (pp. 146–150). IEEE. https://doi.org/10.1109/icves.2012.6294314
+- **英文引注**：(Thammakaroon & Tangamchit, 2012)
+- **类型**：proceedings-article
+
+## #77
+
+- **APA**：Lind, H. (2007). An Efficient Visual Forward Collision Warning Display for Vehicles. In *SAE Technical Paper Series* (pp. 2007-01-1105). SAE International. https://doi.org/10.4271/2007-01-1105
+- **英文引注**：(Lind, 2007)
+- **类型**：proceedings-article
+
+## #78
+
+- **APA**：Large, D. R., Kim, H., Merenda, C., Leong, S., Harvey, C., Burnett, G., & Gabbard, J. (2019). Investigating the effect of urgency and modality of pedestrian alert warnings on driver acceptance and performance. *Transportation Research Part F: Traffic Psychology and Behaviour*, *60*, 11–24. https://doi.org/10.1016/j.trf.2018.09.028
+- **英文引注**：(Large et al., 2019)
+- **类型**：journal-article
+
+## #79
+
+- **APA**：Bao, W. Y. (2024). Effects of Visual Crowding and Stimulus Location on Driver Pedestrian Perception in AR-HUD Warning. *Advances in Psychology*, *14*(08), 227–236. https://doi.org/10.12677/ap.2024.148539
+- **英文引注**：(Bao, 2024)
+- **类型**：journal-article
+
+## #80
+
+- **APA**：Shen, C., Qin, H., Li, S., Shi, X., ZOU, C., & Ran, L. (2026). Effect of AR-HUD Warning Information Presentation Modes on Driver Situation Awareness under Single-Hazard Scenarios. In *AHFE International*. AHFE International. https://doi.org/10.54941/ahfe1008065
+- **英文引注**：(Shen et al., 2026)
+- **类型**：proceedings-article
+
+## #81
+
+- **APA**：Phan, M. T. (2016). *Estimation of driver awareness of pedestrian for an augmented reality advanced driving assistance system* [Doctoral dissertation, Université de Technologie de Compiègne]. https://doi.org/10.70675/a7d4e2caz40d9z4210z8fb2z164f9a83bf26
+- **英文引注**：(Phan, 2016)
+- **类型**：dissertation
+- **核验备注**：theses.fr NNT 2016COMP2280；答辩 2016-06-27；École doctorale Sciences pour l'ingénieur (Compiègne)；实验室 Heudiasyc UMR-7253；导师 Frémont & Thouvenin。Crossref 原记 publisher='ABES'（书目机构）已更正
+
+## #82
+
+- **APA**：Schall, M. C. (2013). *Augmented reality cues and elderly driver hazard perception* [Doctoral dissertation, The University of Iowa]. https://doi.org/10.17077/etd.tbjq72y2
+- **英文引注**：(Schall, 2013)
+- **类型**：dissertation
+
+## #83
+
+- **APA**：Maroto, M., Caño, E., González, P., & Villegas, D. (2018). *Head-up Displays (HUD) in driving* [Preprint]. arXiv. https://arxiv.org/abs/1803.08383
+- **英文引注**：(Maroto et al., 2018)
+- **类型**：preprint
+- **核验备注**：arXiv:1803.08383v1
+
+## #84
+
+- **APA**：Char, F. (2020). *Pedestrian and cyclist forward collision warning system effectiveness estimation based on simulation of kinematic reconstructions* [Doctoral dissertation, Aix-Marseille Université]. https://doi.org/10.70675/3b5791f1z1884z4ee3z8ff1z001f38f0b61c
+- **英文引注**：(Char, 2020)
+- **类型**：dissertation
+- **核验备注**：theses.fr NNT 2020AIXM0610；答辩 **2020-12-18**（Crossref 记 2022 为登记年，非答辩年）；École Doctorale Sciences du mouvement humain (Marseille)；LMA UMR 7031 + Université Gustave Eiffel；导师 Serre。**本库多处此前写作『Char 2022』，应统一改为 2020**
+
+## #85
+
+- **APA**：Chang, C. Y., & Chang, T. W. (2013). The Development of Parameters and Warning Algorithms for an Intersection Bus-Pedestrian Collision Warning System. In *Implementation and Integration of Information Systems in the Service Sector* (pp. 163–182). IGI Global. https://doi.org/10.4018/978-1-4666-2649-2.ch011
+- **英文引注**：(Chang & Chang, 2013)
+- **类型**：book-chapter
+
+## #86
+
+- **APA**：Chang, C. Y., & Chang, T. W. (2009). Parameters analysis for an intersection bus-pedestrian collision warning system. In *2009 IEEE Asia-Pacific Services Computing Conference (APSCC)* (pp. 239–245). IEEE. https://doi.org/10.1109/apscc.2009.5394118
+- **英文引注**：(Chang & Chang, 2009)
+- **类型**：proceedings-article
+
+## #87
+
+- **APA**：Cangut, S. H., & Alver, Y. (2026). Machine Learning-Based Pedestrian Intention Prediction Models for Collision Warning at Unsignalized Crosswalks. In *International Conference on Road and Rail Infrastructure* (pp. 791–798). University of Zagreb Faculty of Civil Engineering. https://doi.org/10.5592/co/cetra.2026.1849
+- **英文引注**：(Cangut & Alver, 2026)
+- **类型**：proceedings-article
+
+## #88
+
+- **APA**：Certad, N., Del Re, E., Varughese, J., & Olaverri-Monreal, C. (2025). V2P Collision Warnings for Distracted Pedestrians: A Comparative Study with Traditional Auditory Alerts. In *2025 IEEE Intelligent Vehicles Symposium (IV)* (pp. 1340–1345). IEEE. https://doi.org/10.1109/iv64158.2025.11097625
+- **英文引注**：(Certad et al., 2025)
+- **类型**：proceedings-article
+
+## #89
+
+- **APA**：Wolf, J. C. (2021). *Early warning of pedestrians and cyclists* [Preprint]. arXiv. https://arxiv.org/abs/2107.05186
+- **英文引注**：(Wolf, 2021)
+- **类型**：preprint
+- **核验备注**：arXiv:2107.05186v1
+
+## #90
+
+- **APA**：Suzuki, S., Raksincharoensak, P., Shimizu, I., Nagai, M., & Adomat, R. (2010). Sensor fusion-based pedestrian collision warning system with crosswalk detection. In *2010 IEEE Intelligent Vehicles Symposium* (pp. 355–360). IEEE. https://doi.org/10.1109/ivs.2010.5548120
+- **英文引注**：(Suzuki et al., 2010)
+- **类型**：proceedings-article
+
+## #91
+
+- **APA**：Sun, Y. H., Wu, X., Gong, S. Y., & Yang, R. (2023). A Reinforcement Learning-Based Adaptive Forward Collision Warning System by Considering Drivers’ Reaction Time in Real Time. In *CICTP 2023* (pp. 245–256). American Society of Civil Engineers. https://doi.org/10.1061/9780784484869.024
+- **英文引注**：(Sun et al., 2023)
+- **类型**：proceedings-article
+
+## #92
+
+- **APA**：Kuo, Y. C., Fu, C. M., Tsai, C. T., Lin, C. C., & Chang, G. H. (2016). Pedestrian Collision Warning of Advanced Driver Assistance Systems. In *2016 International Symposium on Computer, Consumer and Control (IS3C)* (pp. 740–743). IEEE. https://doi.org/10.1109/is3c.2016.189
+- **英文引注**：(Kuo et al., 2016)
+- **类型**：proceedings-article
+
+## #93
+
+- **APA**：Zhang, Y., Wang, X., Zhuo, K., Jiao, W., & Yang, W. (2023). Research on pedestrian vehicle collision warning based on path prediction. In *2023 7th International Conference on Transportation Information and Safety (ICTIS)* (pp. 1267–1272). IEEE. https://doi.org/10.1109/ictis60134.2023.10243767
+- **英文引注**：(Zhang et al., 2023)
+- **类型**：proceedings-article
+
+## #94
+
+- **APA**：Joo, Y. J., Kim, D. K., & Kim, E. J. (2024). *Predictive Safety-Aware Transmit Rate Control Scheme for Real-Time Proactive Forward Collision Warning System* [Preprint]. Elsevier BV. https://doi.org/10.2139/ssrn.4927850
+- **英文引注**：(Joo et al., 2024)
+- **类型**：posted-content
+
+## #95
+
+- **APA**：Miyoshi, N., Nagai, M., Kamada, T., & Yoshida, H. (2005). *Development of Forward-Collision Avoidance Warning System Adapted for Driver Characteristics* [Technical paper]. SAE International. https://doi.org/10.4271/2005-08-0554
+- **英文引注**：(Miyoshi et al., 2005)
+- **类型**：report
+
+## #96
+
+- **APA**：Elliott, D., Keen, W., & Miao, L. (2019). Recent advances in connected and automated vehicles. *Journal of Traffic and Transportation Engineering (English Edition)*, *6*(2), 109–131. https://doi.org/10.1016/j.jtte.2018.09.005
+- **英文引注**：(Elliott et al., 2019)
+- **类型**：journal-article
+
+## #97
+
+- **APA**：Rasouli, A., & Tsotsos, J. K. (2020). Autonomous Vehicles That Interact With Pedestrians: A Survey of Theory and Practice. *IEEE Transactions on Intelligent Transportation Systems*, *21*(3), 900–918. https://doi.org/10.1109/tits.2019.2901817
+- **英文引注**：(Rasouli & Tsotsos, 2020)
+- **类型**：journal-article
+
+## #98
+
+- **APA**：Ezzati Amini, R., Katrakazas, C., & Antoniou, C. (2019). Negotiation and Decision-Making for a Pedestrian Roadway Crossing: A Literature Review. *Sustainability*, *11*(23), 6713. https://doi.org/10.3390/su11236713
+- **英文引注**：(Ezzati Amini et al., 2019)
+- **类型**：journal-article
+
+## #99
+
+- **APA**：Takada, S., Hiraoka, T., & Kawakami, H. (2014). Effectiveness of forward obstacles collision warning system based on deceleration for collision avoidance. *IET Intelligent Transport Systems*, *8*(6), 570–579. https://doi.org/10.1049/iet-its.2013.0024
+- **英文引注**：(Takada et al., 2014)
+- **类型**：journal-article
+
+## #100
+
+- **APA**：Gray, R., Ho, C., & Spence, C. (2014). A Comparison of Different Informative Vibrotactile Forward Collision Warnings: Does the Warning Need to Be Linked to the Collision Event?. *PLoS ONE*, *9*(1), e87070. https://doi.org/10.1371/journal.pone.0087070
+- **英文引注**：(Gray et al., 2014)
+- **类型**：journal-article
+
+## #101
+
+- **APA**：SAE International. (2003). *Human Factors in Forward Collision Warning Systems: Operating Characteristics and User Interface Requirements*. https://doi.org/10.4271/j2400_200308
+- **英文引注**：(SAE International, 2003)
+- **类型**：standard
+- **核验备注**：SAE J2400_200308；团体作者，in-text 作 (SAE International, 2003)
+
+## #102
+
+- **APA**：Coelingh, E., Eidehall, A., & Bengtsson, M. (2010). Collision Warning with Full Auto Brake and Pedestrian Detection - a practical example of Automatic Emergency Braking. In *13th International IEEE Conference on Intelligent Transportation Systems* (pp. 155–160). IEEE. https://doi.org/10.1109/itsc.2010.5625077
+- **英文引注**：(Coelingh et al., 2010)
+- **类型**：proceedings-article

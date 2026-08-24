@@ -1,0 +1,512 @@
+{
+ "27": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "84": {
+  "证据等级": "**A**（提供 FCW 触发时机 1.7/2/2.3/2.6 s 的完整参数扫描、tLTTB 分布、驾驶员反应时均值±SD 与上下限、LTTB 运动学公式、200 人模拟器反应时分布）",
+  "资料来源": "全文精读（覆盖法/英文摘要 + 第 1 章文献综述 + 第 2 章事故重建与 AEB/FCW 参数 + 第 3 章模拟器实验全部场景与反馈 + 第 4 章仿真收益估计 + 第 5 章总结与展望）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/84_2022_Pedestrian_and_cyclist_forward_collision_warning_system_effectiveness_estimation.pdf`"
+ },
+ "49": {
+  "证据等级": "**B**（可支撑设计原则——给出\"虚拟阴影 vs 箭头指向 vs 无 AR\"的**场景依赖性**结论，且明确指出行人横穿场景下虚拟阴影接管效率最高；但摘要未提供被试外的任何数值、接管时间毫秒数与统计量）",
+  "资料来源": "**仅摘要**（来源：s2；已核对 epmc / openalex 版本，三版内容一致，为结构化摘要 Objective/Methods/Results/Conclusions，1746 字符）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "13": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/13_2019_Assessing_Distraction_Potential_of_Augmented_Reality_Head-Up_Displays_for_V.pdf`"
+ },
+ "72": {
+  "证据等级": "**A**（就「时间参数的公式化取值」而言是本批次中最完整的一篇：给出反应时分龄分解、制动压力建立时间、临界 TTC、路面附着系数表与全部公式）；但就「人因实验证据」而言仅为 **C**（无被试实验，纯算法 + 单次实车数据仿真）",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/72_2013_Forward_collision_warning_system_considering_both_time-to-collision_and_safety_b.pdf`"
+ },
+ "29": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "4": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/04_2016_Virtual_Shadow.pdf"
+ },
+ "43": {
+  "证据等级": "**B**（可支撑设计原则——给出「AR 图形位置 × 危险相对位置」的交互方向，但摘要未提供任何 IB 发生率百分比与统计量，故不能作为数值锚点）",
+  "资料来源": "**仅摘要**（来源：s2；已核对 epmc / openalex 版本，内容一致，含完整的 Objective/Method/Results/Conclusion 结构化摘要，2737 字符，是本批次信息量最大的摘要）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "70": {
+  "证据等级": "A（TTC 2 s vs 4 s 的直接对照实验，量化参数明确）— 但受限于「仅摘要」，等级实际按 A/B 交界处理",
+  "资料来源": "**仅摘要（来源：Crossref）**",
+  "本地PDF": "未获取，见下方说明（manifest 中 `pdf` 字段为空，`has_pdf=false`）"
+ },
+ "22": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "23": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "28": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "93": {
+  "证据等级": "**C**（纯算法论文；摘要**未给出任何数值**——无阈值、无样本量、无测试结果数字、无统计量；仅提供概念结构与建模路线）",
+  "资料来源": "**仅摘要（来源：s2）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "89": {
+  "证据等级": "**A**——直接给出「早期预警」的时间定义（≥ 3 s 早于紧急预警）、预警触发门限（相交时间 < 4 s 且相交点 ≤ 60 m）、以及横/纵向运动估计所需的最小样本数（12 帧 ≈ 333 ms / 30 帧 ≈ 833 ms）；并给出**实车条件下的失败证据**——这是本课题「预警最早能提前到多久」的**能力上界的负面证据**，价值极高",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/89_2021_Early_warning_of_pedestrians_and_cyclists.pdf`"
+ },
+ "2": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/02_2016_Enhancing_the_driver_awareness_of_pedestrian_using_augmented_reality_cues.pdf"
+ },
+ "8": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/08-sustainability-16-09167.pdf"
+ },
+ "31": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "94": {
+  "证据等级": "**C**（**通信层辅助证据**：V2X beacon 发射速率自适应，与显示时机无直接关系；无被试、无 HMI、无时间参数数值。**明确不进入本课题的人因阈值结论**）",
+  "资料来源": "**仅摘要（来源：crossref）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "65": {
+  "证据等级": "**B**（可支撑设计原则：给出「人—机协同感知模型」这一设计生成路径，并明确报告 SA 与**反应时**在手动与自动两模式下均改善、对自动驾驶的信任提升；但摘要无被试量、无任何反应时毫秒数、无 SA 得分、无统计量）",
+  "资料来源": "**仅摘要（来源：s2 / Semantic Scholar）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "58": {
+  "证据等级": "**C**（综述类，摘要内**无任何数值**——无被试量、无统计量、无阶段耗时；但为本课题唯一的注意加工阶段理论骨架，理论重要性远高于一般 C 级）",
+  "资料来源": "**仅摘要（来源：Crossref / OpenAlex / Semantic Scholar）**",
+  "本地PDF": "未获取（`local_pdf` 字段为空，`has_pdf=false`）"
+ },
+ "63": {
+  "证据等级": "**B**（可支撑设计原则：给出 N = 79 与 **TOR lead time 5 s vs 7 s** 的明确对照，并报告「TORlt 越短 → SA 越低」这一方向性结论；但摘要无任何 SA 得分、眼动数值与统计量，且**显示时长与 TORlt 共变形成混淆**）",
+  "资料来源": "**仅摘要（来源：s2 / Semantic Scholar）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "11": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/11_2020_Collision_Avoidance_Head-Up_Display_Design_Considerations_for_Emergency_Services.pdf`"
+ },
+ "101": {
+  "证据等级": "**B**——摘要（Scope 段）明确给出文件性质、覆盖对象与**排除范围**，可作为工程锚点的边界条件依据；但**摘要不含任何具体的界面要求数值、时机阈值或测试方法参数**",
+  "资料来源": "**仅摘要（来源：crossref，为标准文件的 Scope 段）**",
+  "本地PDF": "未获取（出版商付费墙，SAE 标准需购买），见第七节补全建议"
+ },
+ "41": {
+  "证据等级": "**A**——给出「图形提前 15 s 出现」「反应时 5.01–8.81 s 对应 133.0–80.5 m」「注视时长占比 1.2%–26.6%」等可直接引用的时空参数",
+  "资料来源": "全文精读（8 页完整正文 + 结果表格）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/41_2015_An_investigation_of_augmented_reality_presentations_of_landmark-based_navigation.pdf`"
+ },
+ "100": {
+  "证据等级": "**A**（提供 FCW 触发的完整运动学触发公式 `D = TTC_thres·dD/dt + SP·V_f`、TTC_thres = 3 s 触发 / 7 s 误报、预警持续时长 1 s 与 645 ms、触觉子刺激时长 215 ms / 150 ms、ITI 50–150 ms、误报判定窗 1 s、两个实验的完整 ANOVA 与 t 检验）；**但正文未报告 BRT 的绝对毫秒数**，故在「反应时基线」这一项上只能作 B 级支撑",
+  "资料来源": "全文精读（8 页全文，含两个实验的方法、公式、统计结果与讨论）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/100_2014_A_Comparison_of_Different_Informative_Vibrotactile_Forward_Collision_Warnings_Do.pdf`"
+ },
+ "9": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/09-electronics-14-04768.pdf`"
+ },
+ "60": {
+  "证据等级": "A（提供 IB 发生率、IB 类型、反应时差值等可直接引用的量化参数，且明确给出 IB 操作化判定窗口）",
+  "资料来源": "全文精读（Crossref 摘要字段为空，正文摘要与方法、结果均从本地 txt 全文提取）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/60_2021_Inattentional_Blindness_in_Augmented_Reality_Head-Up_Display-Assisted_Driving.pdf`"
+ },
+ "54": {
+  "证据等级": "**A**——给出「2s/3s/4s TTC 三级紧迫度」「9/13.5/18 m 三级距离」「体积式 HUD 焦距 8 m 至无穷（0.125D–0D）、约 17° 圆形 FOV」「商用 HUD FOV 6–15°」「5° 中央半径禁区」「HUD 不超过视线下方 30°」等大量可直接引用的时空参数，并含真实道路（on-road）实验的客观制动与眼动数据",
+  "资料来源": "全文精读（11 页完整正文 + 两项用户研究的全部统计结果）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/54_2018_Augmented_Reality_Interface_Design_Approaches_for_Goal-directed_and_Stimulus-dri.pdf`"
+ },
+ "75": {
+  "证据等级": "**C**（**摘要未获取**，当前无任何可转录的原文内容；其价值主要在于作为 idx 74 的前置研究与「误报/漏报 × 报警时机 × 信任」议题的出处标记）",
+  "资料来源": "**仅摘要（来源：none —— Crossref / Semantic Scholar / OpenAlex / Europe PMC 四源均未返回摘要，`abstract_source: none`，`abstract_all: {}`）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "88": {
+  "证据等级": "**B**——提供实车条件下 V2P 视觉预警 vs 听觉预警的行为效应量（速度变化比 SCRv 与完整 t 检验矩阵）与空间几何参数；**无 TTC / 预警提前期 / 预测时间窗数据**",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/88_2025_V2P_Collision_Warnings_for_Distracted_Pedestrians_A_Comparative_Study_with_Tradi.pdf`"
+ },
+ "69": {
+  "证据等级": "A（给出图形像素尺寸、颜色、轮廓条件、反应时/注视时长均值±SD 与完整 ANOVA 统计量；但**文内多处数值自相矛盾**，见第四节标注）",
+  "资料来源": "全文精读（Semantic Scholar 摘要 + 本地 txt 全文）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/69_2025_Visual_Saliency_Design_for_AR-HUD_Navigation_in_Extreme_Weather_Reducing_Inatten.pdf`"
+ },
+ "42": {
+  "证据等级": "**C**（方法学/评价工具类；不提供任何时间或空间设计参数的量化取值）",
+  "资料来源": "**仅摘要**（来源：crossref；另已核对 s2 / epmc / openalex 四版摘要，实质内容一致，仅标点与连字符差异）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "52": {
+  "证据等级": "**B（接近 B+）**——摘要给出了**明确的不透明度数值阈值（≥ 0.6、0.7 分界）与 10 级梯度（0.1–1.0）**，是本批次中数值信息最具体的一篇；但因摘要未提供被试数、任何反应时毫秒数与统计量，且结论对象是**文本类信息**而非行人预警图形，故不升为 A 级",
+  "资料来源": "**仅摘要**（来源：crossref；已核对 s2 / openalex 版本，三版一致，仅 \"ABSTRACT\" 字样差异，1395 字符）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "40": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "57": {
+  "证据等级": "**B**（可支撑设计原则）——给出「投影屏距 mock-up 10 m」「虚像起始于 mock-up 前方 12 m」「路线约 600 m」「cHUD 物理分辨率 858×600」等空间参数，以及 8 个主观维度的完整 ANOVA 结果；但**因变量全部为主观评分，无任何客观时间指标（无反应时、无注视时长、无 TTC）**",
+  "资料来源": "全文精读（8 页完整正文 + 全部 ANOVA 结果）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/57_2015_A_Comparison_of_Display_Concepts_for_a_Navigation_System_in_an_Automotive_Contac.pdf`"
+ },
+ "55": {
+  "证据等级": "**B**——提供无意视盲率、刺激视角、呈现时长等可量化参数与「语义一致性」设计原则；无 TTC/预警时机数据",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/55_2013_Attentional_differences_in_driving_judgments_for_country_and_city_scenes_Semanti.pdf`"
+ },
+ "6": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/06_2024_Design_and_Evaluation_of_Ecological_Interface_of_Driving_Warning_System_Based_on.pdf"
+ },
+ "50": {
+  "证据等级": "**A**——给出「距行人 50 m 触发」「圆柱半径 0.5 m、上下各移动 0.5 m」「持续至通过行人」「橙色警告而非紧急」等可直接引用的时空参数，且有客观眼动识别时间统计量",
+  "资料来源": "全文精读（7 页完整正文 + 全部量表与相关分析表）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/50_2020_Evaluation_of_AR-HUD_Interface_During_an_Automated_Intervention_in_Manual_Drivin.pdf`"
+ },
+ "66": {
+  "证据等级": "**B**（结构化摘要，给出**样本量 N=48**、分组数（4 组）与统计方法（two-way ANOVA + Kruskal–Wallis），并给出明确的**零效应**与**方向性效应**；但无任何均值、SD、F/χ²/p 值）",
+  "资料来源": "**仅摘要（来源：s2；另有 Europe PMC 与 OpenAlex 两版本，文本一致）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "16": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/16_2015_Accident_Prevention_through_Visual_Warnings_How_to_Design_Warnings_in_Head-up_Di.pdf`"
+ },
+ "15": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/15_2015_Distractive_or_Supportive_--_How_Warnings_in_the_Head-up_Display_Affect_Drivers_.pdf`"
+ },
+ "76": {
+  "证据等级": "**A**（就时间参数而言：提供了「实车实测的 warning lag time = +1.47 s / +1.32 s」这一其他文献极少给出的量化值，且提出了 warning lag time 这一评价指标本身）；就人因证据而言为 **B**（仅一名驾驶员、30 min 实车）",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/76_2012_Improvement_of_warning_lag_time_in_forward_collision_warning_systems_based_on_mu.pdf`"
+ },
+ "33": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "24": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "102": {
+  "证据等级": "**A**（提供 AEB 介入时刻「碰撞前约 1 s」、最大减速度 10 m/s²（前两代 5 m/s²）、制动系统纯延迟 180 ms、减速度斜坡 20 m/s³、TTC 完整分段公式、ttc_brake 与 ttc_steer 的解析式、可避撞速度上界 35 km/h、四套官方测试场景的实测降速值、MLIT 停车距离 < 1 m 要求）",
+  "资料来源": "全文精读（6 页全文，含系统描述、测试场景选择、理论分析、实测结果与讨论）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/102_2010_Collision_Warning_with_Full_Auto_Brake_and_Pedestrian_Detection_-_a_practical_ex.pdf`"
+ },
+ "47": {
+  "证据等级": "**A**（就「观测窗长度 / 预测提前量 / 精度」三元组而言）；对人因设计参数为 C 级",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/47_2021_Graph-SIM_A_Graph-based_Spatiotemporal_Interaction_Modelling_for_Pedestrian_Acti.pdf`"
+ },
+ "39": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "64": {
+  "证据等级": "**C**（综述+指南制定类；且**摘要未获取**，无任何可核验的内容性信息，故不得作为任何结论或数值的出处）",
+  "资料来源": "**仅摘要（来源：none —— Crossref / Semantic Scholar / OpenAlex / Europe PMC 四源均未返回摘要；ScienceDirect、Elsevier Pure、PsycNET 页面被反爬拦截。即摘要未获取，本篇当前仅有题录级信息）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "97": {
+  "证据等级": "B（转述的行人侧时间参数可直接支撑冲突场景运动学设定；本文自身不产生一手数据，故不列 A）",
+  "资料来源": "全文精读（18 页密排正文 + 2 个圆形树图 + 1 张算法汇总表）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/97_2020_Autonomous_Vehicles_That_Interact_With_Pedestrians_A_Survey_of_Theory_and_Practi.pdf`"
+ },
+ "74": {
+  "证据等级": "**A**（给出完整的 alarm time 数值矩阵、信任评分、以及「感知晚报警的阈值 = 无报警时松油门时点 0.72 s」这一可操作判据）",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/74_2006_Alarm_timing_trust_and_driver_expectation_for_forward_collision_warning_systems.pdf`"
+ },
+ "26": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "73": {
+  "证据等级": "**B**（就「固定阈值不足、需动态标定」这一**论点**而言证据充分且带完整量化性能指标；但因仅有摘要且为**未经同行评审的预印本**，其性能数字**不得作为本课题的参数锚点**，只能作为论点支撑）",
+  "资料来源": "**仅摘要（来源：crossref）**（Semantic Scholar 与 OpenAlex 均无摘要，Europe PMC 无收录；本篇仅有单一摘要来源）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议。**注：SSRN 条目通常提供免费下载，本条目未获取的原因可能是抓取脚本未适配 SSRN 页面而非真实付费墙——见第七节，这使本篇成为本批次最容易补全的一篇**"
+ },
+ "85": {
+  "证据等级": "**B**——摘要明确列出三个基本参数与全部交付物（预警时机、检测器位置、显示装置位置），但**摘要不含任何数值**，参数取值须转引 idx 86",
+  "资料来源": "**仅摘要（来源：crossref）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "46": {
+  "证据等级": "**B**（可支撑设计原则）+ 局部 **A**（提供「机动提前 500 ms 预告」「雾天视距约 25 m」「20 km/h 速差安全超车判据」「TTC 四色分级」等可量化参数）",
+  "资料来源": "全文精读（17 页完整正文 + 两个实验的全部量表结果表）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/46_2018_Fostering_User_Acceptance_and_Trust_in_Fully_Automated_Vehicles_Evaluating_the_P.pdf`"
+ },
+ "14": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/14_2017_Brake_reactions_of_distracted_drivers_to_pedestrian_Forward_Collision_Warning_sy.pdf`"
+ },
+ "1": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/01_2018_Driver_Behavior_and_Performance_with_Augmented_Reality_Pedestrian_Collision.pdf"
+ },
+ "83": {
+  "证据等级": "**C**（叙事性综述，无原创实验；无被试、无统计、无实验设计；主要价值在于转述若干二手量化数值与产品/工程参数。**须注意：manifest 中作者顺序与 PDF 首页顺序不一致，且 arXiv 题录把 Maroto 列为第一作者；本文按 PDF 首页署名顺序记录**）",
+  "资料来源": "全文精读（Crossref 摘要 + 本地 txt 全文；**本文本身为综述，其量化数值全部为转引二手来源，未经本文验证**）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/83_2018_Head-up_Displays_HUD_in_driving.pdf`"
+ },
+ "3": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/03_2016_Casting_shadows__Ecological_interface_design_for_augmented_reality_pedestri.pdf"
+ },
+ "35": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "80": {
+  "证据等级": "A（**本课题目前唯一提供闪烁占空比量化对比的文献**：2 s 显示周期 × 0/25%/50%/75% 四水平，反应时与情境意识均给出 M ± SD 与完整 ANOVA；但样本仅 12 人，且部分统计量存在内部矛盾）",
+  "资料来源": "全文精读（Crossref 摘要 + 本地 txt 全文）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/80_2026_Effect_of_AR-HUD_Warning_Information_Presentation_Modes_on_Driver_Situation_Awar.pdf`"
+ },
+ "78": {
+  "证据等级": "**A**（本批次与本课题**最直接对口**的一篇：行人 + TTC 四档梯度 + HUD 模态 + 完整统计量；且给出产业界系统的 TTC 实值）",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/78_2019_Investigating_the_effect_of_urgency_and_modality_of_pedestrian_alert_warnings_on.pdf`"
+ },
+ "10": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/10_2021_An_Augmented_Warning_System_for_Pedestrians_User_Interface_Design_and_Algorithm_.pdf`"
+ },
+ "62": {
+  "证据等级": "A（60 名被试、8 个安全关键场景 ×2 次重复、HUD 视角度数明确、制动反应时与最大制动力均给出均值±95% CI）",
+  "资料来源": "全文精读（Crossref 摘要为空；文中 Table 2「场景与预警触发点」为图片表格，PDF 文本抽取未能取到其单元格内容，已在下文标注）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/62_2018_How_to_warn_drivers_in_various_safety-critical_situations_Different_strategies_d.pdf`"
+ },
+ "67": {
+  "证据等级": "**B**（指标集完整，是本库少见的「AR-HUD 缩短 perception time」直接证据；但**摘要未给任何数值、样本量与统计量**，故方向性可引、数值不可引）",
+  "资料来源": "**仅摘要（来源：openalex —— Crossref 与 Semantic Scholar 均未返回摘要，本篇仅有单一摘要来源）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "61": {
+  "证据等级": "**C**（会议论文 + 仅摘要；给出了明确的方向性结论「信任无差异、某组合负荷最低」，但**全篇无任何数值、样本量、统计量**，不可作为定量锚点）",
+  "资料来源": "**仅摘要（来源：Crossref）**",
+  "本地PDF": "未获取（`local_pdf` 为空、`pdf_url` 为空、`is_oa=false`）"
+ },
+ "32": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "38": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "98": {
+  "证据等级": "B（大量可直接转录的行人侧时间/速度参数与代理安全指标定义；本文自身不产生一手数据）",
+  "资料来源": "全文精读（24 页，正文 1–17 页 + 参考文献；含 5 张自制统计/流程图）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/98_2019_Negotiation_and_Decision-Making_for_a_Pedestrian_Roadway_Crossing_A_Literature_R.pdf`"
+ },
+ "48": {
+  "证据等级": "**B**（可支撑设计原则，且提供了**明确的透明度水平取值 T1 / T0.75 / T0.5 / T0.35 与三种动效类型的最优结论**——是本批次中参数信息最具体的一篇；但因摘要未给出 IB 率百分比、反应时毫秒数与统计量，仍不足以升为 A 级）",
+  "资料来源": "**仅摘要**（来源：s2；已核对 openalex 版本，两版一致，仅 \"Abstract\" 字样差异，1184 字符）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "91": {
+  "证据等级": "**B**（提供两个可引的分类性能数值 94% / 49%，并给出「实时估计个体反应时并据此调整触发」的完整方法学范式；但无被试实验、无主观测量、无阈值秒数，故不足 A）",
+  "资料来源": "**仅摘要（来源：openalex —— Crossref 与 Semantic Scholar 均未返回摘要，本篇仅有单一摘要来源）**",
+  "本地PDF": "未获取（出版商付费墙，ASCE），见第七节补全建议"
+ },
+ "92": {
+  "证据等级": "**C**（纯算法论文：给出「行人到达碰撞点时间」与「车辆到达碰撞点时间」的实测样例，但**无预警时机阈值、无被试、无 HMI**）",
+  "资料来源": "全文精读（4 页全文）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/92_2016_Pedestrian_Collision_Warning_of_Advanced_Driver_Assistance_Systems.pdf`"
+ },
+ "7": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/07-Chen 等 - 2025 - Evaluating the effectiveness of contact-analog and bounding box prototypes in augmented reality head.pdf"
+ },
+ "51": {
+  "证据等级": "**A**——给出完整的接管时序链（TOR 前置 546 m / 转换期 10 s / hands-on 3.12–3.13 s / 按键 4.63–5.09 s / 首次踩踏板 7.55–8.95 s / 最大制动踏板动作时刻 15.6–27.5 s）与 HUD 视场角（4°×15° 与 9°×15°）、虚拟标志间距 14 m 等可直接引用的时空参数",
+  "资料来源": "全文精读（8 页完整正文 + 全部四张结果表）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/51_2016_Augmented_reality_versus_classical_HUD_to_take_over_from_automated_driving_An_ai.pdf`"
+ },
+ "20": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "68": {
+  "证据等级": "**C**（会议论文 + 仅摘要；结论方向明确且指标定义清晰（SS、SDLP），但**无任何数值、样本量、统计量**；且**任务与本课题不同——车道增强而非行人预警**）",
+  "资料来源": "**仅摘要（来源：s2；OpenAlex 版本文本一致）**",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "17": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "45": {
+  "证据等级": "**B**（可支撑设计原则——给出\"AR-HUD 缩短风险感知时间、夜间提升风险 AOI 注意\"的方向性结论，但摘要未提供任何毫秒数、统计量与被试数）",
+  "资料来源": "**仅摘要**（来源：openalex；已核对 doaj 版本，两版完全一致，1408 字符）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议。**注意：本刊为开放获取，理论上不应有付费墙，本篇很可能可直接下载——补全成本极低，见 §7.4**"
+ },
+ "25": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "53": {
+  "证据等级": "**B**（可支撑设计原则——给出\"20% 与 60% 不透明度均支持情境意识\"这一明确的双阈值结论，且明确了\"不透明度效应因图像类型而异\"这一边界；但摘要未提供任何眼动数值、SA 得分与统计量）",
+  "资料来源": "**仅摘要**（来源：s2；已核对 epmc 版本，两版完全一致，1039 字符——本批次最短的摘要之一）",
+  "本地PDF": "未获取（出版商付费墙），见第七节补全建议"
+ },
+ "37": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "82": {
+  "证据等级": "A（交互式驾驶模拟器、20 名老年驾驶员、**给出 AR 提示的视角度数（0.7°→16.7°）、更新距离（每 43.75 m）、显示时长（11–13 s）、触发距离（350 m）与反应时收益（0.35 s）**，且用线性混合模型控制年龄/性别/认知能力协变量）",
+  "资料来源": "全文精读（Crossref 摘要为空；本地 txt 为期刊版全文，含方法、结果、讨论与全部统计表）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/82_2013_Augmented_reality_cues_and_elderly_driver_hazard_perception.pdf`"
+ },
+ "12": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "`/home/gezhuocheng/moe/HUD/papers/12-Improving_Pedestrian_Safety_with_Head-Up_Display_Warning_in_a_Connected_Environment(科研通-ablesci.com).pdf`"
+ },
+ "96": {
+  "证据等级": "C（背景/概念性综述；仅第 5–6 节含少量可用的传感与制动量化指标，**不含任何行人侧时间/运动学参数**）",
+  "资料来源": "全文精读（56 页 AM 版，正文 44 页 + 参考文献；共 7 节、13 幅图、1 张表）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/96_2019_Recent_advances_in_connected_and_automated_vehicles.pdf`"
+ },
+ "86": {
+  "证据等级": "**A**——直接给出感知-反应时（2.1–2.3 s）、紧急减速率（2.77–3.56 m/s²）、行人步速（0.72–1.29 m/s）、预警提前期（6.07–6.28 s）等全套时间参数与其解析式",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/86_2009_Parameters_analysis_for_an_intersection_bus-pedestrian_collision_warning_system.pdf`"
+ },
+ "34": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "5": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": "papers/05_2014_Development_of_augmented_forward_collision_warning_system_for_Head-Up_Display.pdf"
+ },
+ "90": {
+  "证据等级": "**A**（给出明确的 4.0 s / 2.0 s 双级 TTC 阈值、1.0 s 分级粒度与预测位置运动学公式）；但**无被试实验**，故对人因结论只能作 B 级支撑",
+  "资料来源": "全文精读（6 页全文，含算法公式与实车验证）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/90_2010_Sensor_fusion-based_pedestrian_collision_warning_system_with_crosswalk_detection.pdf`"
+ },
+ "44": {
+  "证据等级": "**A**——直接给出「TTA = 2/3/4/5 s 四个预测时域下人类驾驶员的命中率、虚警率、d′、判定反应时」，是「预警最早能提前到多久」的人类基线上界",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/44_2019_Drivers_recognition_of_pedestrian_road-crossing_intentions_Performance_and_proce.pdf`"
+ },
+ "81": {
+  "证据等级": "**A**（提供 TTC 阈值表、TTC-人群响应时百分位对照、1.5 s 时间窗、紧急制动判定阈值、VRT/VRD 量化结果）",
+  "资料来源": "全文精读（覆盖摘要 + 第 2 章建模 + 第 3 章分类器标定 + 第 4 章 AR 隐喻与决策模型 + 第 5 章实验结果 + 第 6 章结论与局限）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/81_2016_Estimation_of_driver_awareness_of_pedestrian_for_an_augmented_reality_advanced_d.pdf`"
+ },
+ "77": {
+  "证据等级": "**A**（HUD 预警显示的制动反应时优势 ≈ 200 ms、闪烁时序参数、亮度与尺寸参数均为量化值，且为本课题「HUD 位置优势」的直接证据）",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/77_2007_An_Efficient_Visual_Forward_Collision_Warning_Display_for_Vehicles.pdf`"
+ },
+ "87": {
+  "证据等级": "**A**（就「观测窗-预测时域-安全缓冲-F1」四元组而言，是本批次中**唯一显式写出预测时域秒数**的算法论文）；对人因/图形设计为 C 级",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/87_2026_Machine_Learning-Based_Pedestrian_Intention_Prediction_Models_for_Collision_Warn.pdf`"
+ },
+ "95": {
+  "证据等级": "**C**——摘要未获取，仅有标题与作者；不得作为任何数值或结论来源",
+  "资料来源": "**仅摘要（来源：openalex —— 但该「摘要」实为 Crossref「该 DOI 未挂载任何元数据」的占位提示文本，故等同于**摘要未获取**，本篇仅有题录级信息）**",
+  "本地PDF": "未获取（出版商付费墙，SAE），见第七节补全建议"
+ },
+ "30": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "99": {
+  "证据等级": "**A**（提供 DCA 完整运动学公式组、4.0 m/s² 报警阈值、2.0 m/s² 解除阈值、0.6 G = 5.88 m/s² 前车假设减速度、1.2 s / 0.2 s 双档反应时定义、TTC 4.0 s 对照阈值，以及 16 人模拟器实验的 ANOVA 结果）",
+  "资料来源": "全文精读（10 页全文，含公式、实验设计、结果与主观评价）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/99_2014_Effectiveness_of_forward_obstacles_collision_warning_system_based_on_deceleratio.pdf`"
+ },
+ "56": {
+  "证据等级": "**C**（背景/概念性 + 系统架构与实验设计描述）——**本文是一篇「实验设计与系统架构」论文，明确声明结果将在未来分析，未报告任何实验结果数据**。提供的可量化参数仅限于**设备参数（130°×40° 视场角、60 Hz 帧率、1024×768 分辨率、50 Hz 车辆数据采样、80 km/h 路段、30 名被试、50 个事件、4 条路线）** 与**六类信息的表征形式分类**。",
+  "资料来源": "全文精读（8 页完整正文；论文本身无结果章节）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/56_2013_Efficient_Information_Representation_Method_for_Driver-Centered_AR-HUD_System.pdf`"
+ },
+ "18": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "79": {
+  "证据等级": "A（**明确给出偏心度角度值**：中心视野 0°–5°、外周 5°–10°，实验中心行人约 2°、外周约 7°；反应时与眼动均给出 M ± SD 与完整 GEE 统计量）",
+  "资料来源": "全文精读（Crossref 摘要为空；中文全文自本地 txt）",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/79_2024_Effects_of_Visual_Crowding_and_Stimulus_Location_on_Driver_Pedestrian_Perception.pdf`"
+ },
+ "21": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "19": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "59": {
+  "证据等级": "**B**（可支撑设计原则：提供完整的 SRK + SA 理论驱动设计框架与「三要素全含界面最优」的明确比较结论；但摘要无被试量、无任何 SA/负荷数值、无统计量、无时间参数）",
+  "资料来源": "**仅摘要（来源：OpenAlex；该篇仅 openalex 一个摘要源，1403 字符，Crossref/S2/EPMC 均无 abstract，故无法多源交叉核对）**",
+  "本地PDF": "未获取（`local_pdf` 为空，`has_pdf=false`）"
+ },
+ "36": {
+  "证据等级": null,
+  "资料来源": null,
+  "本地PDF": null
+ },
+ "71": {
+  "证据等级": "**A**——给出 7 个预警释放时机（2.5–5.5 s，步长 0.5 s）的完整梯度实验与量化结论",
+  "资料来源": "全文精读",
+  "本地PDF": "`/home/gezhuocheng/HUD/papers/71_2015_Effects_of_collision_warning_system_under_different_warning_timing_on_driving_sp.pdf`"
+ }
+}

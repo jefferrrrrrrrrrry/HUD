@@ -1,0 +1,992 @@
+--- Page 1 ---
+Forward Collision Warning System Considering 
+Both Time-to-Collision and Safety Braking 
+Distance 
+Yuan-Lin Chen1, Kun-Yuan Shen2, Shun-Chung Wang3 
+1Ming Chi University of Technology, New Taipei City, TAIWAN 
+2Taipei Chengshih University of Science and Technology, Taipei TAIWAN 
+3Lunghwa University of Science and Technology, Taoyuan, TAIWAN 
+ 
+Abstract- A novel algorithm considering both time- to-collision 
+(TTC) and safety braking distance for forward collision warning 
+system is presented for to alert and to assist driver keeping 
+safety braking distance to avoid the collision accident in highway 
+driving. We calculate the safety braking distance and TCC 
+based on the most important parameters which are the distance 
+between the driving car and the vehicle (obstacle) ahead, the 
+variable of the distance between the driving car and the vehicle 
+(obstacle) ahead, vehicle weight, vehicle speed, slope of road, 
+condition of road surface and the age of driver. The system 
+compares the distance of vehicle (obstacle) ahead and safety 
+braking distance and to determine the moving vehicle’s safety 
+braking distance is enough or not. The reaction time of driver 
+and pressure buildup time of braking system are all taken into 
+account. The useful alert messages can serve as a safety 
+assistance system for safer driving in highway. 
+Keyword–time to collision, vehicle safety braking distance 
+1. INTRODUCTION 
+In order to improve the drive safety, many researchers 
+have devoted efforts on automobile anti-collision technology 
+in recent years [1-16]. The statistics show that around 21% of 
+collision accidents are forward collision accidents. To avoid 
+the forward collision accidents is very important and the 
+modern cars are equipped with all kinds of measuring and 
+alert system in order to assist driver in safety driving status. 
+The passive safety driving assistance system played a main 
+role in the past and the active safety driving assistance 
+systems so-called advanced driver assistance systems (ADAS) 
+will be the trend for future vehicle development. 
+Masumi Nakaoka1 et al. [3] focused on a forward collision 
+warning algorithm based on road friction coefficient and 
+driver characteristics. Jing-Fu Liu et al. [4] developed an 
+advanced driver assistance system with lane departure 
+warning and forward collision warning functions. The driving 
+simulator experiments with 65 participants and investigated 
+drivers acceptance of multiple warnings (visual and auditory 
+displays) including forward collision warning system and 
+lateral 
+collision 
+warning 
+system 
+while 
+driving 
+on 
+Metropolitan Expressway were described in [7]. Stefan K. 
+Gehrig and Fridtjof J. Stein [13] introduced a planning and 
+decision component to generalize vehicle following to 
+situations with nonautomated interfering vehicles in mixed 
+traffic. 
+The salient features of this paper are summarized as follows: 
+(1) A useful structure of the vehicle safety distance warning 
+system considering both TTC and safety braking distance for 
+to assist the driver driving in safety condition is presented. 
+(2) The presented algorithm can calculate the real time TTC 
+and safety braking distance for moving vehicle considering 
+the real time of driving conditions. 
+(3) The presented algorithm can inform driver the messages 
+of TTC and braking distance between the moving vehicles. 
+Four level warning signals for to assist driver to drive in 
+safety are presented in this paper.  
+2. STRUCTURE OF FORWARD COLLISION 
+WARNING SYSTEM  
+A vehicle safety distance warning system uses ultrared ray 
+reader and transmitter to detect the distance between driving 
+vehicle and car (obstacle) ahead and deliver necessary 
+information to the calculating unit is shown in figure 1[14]. 
+The proposed algorithm will utilize the vehicle speed, vehicle 
+weight, weather condition, slope of the road, road surface, age 
+of driver, and etc. to figure out the minimum safety braking 
+distance (Ds,min) and maximum safety braking distance (Ds,max) 
+respectively. The TTC will take into consideration for to 
+inform the driver the driving condition, safety or dangerous. 
+There are four level warning signals for to assist driver to 
+drive in safety. 
+3. SAFETY BRAKING DISTANCE 
+The braking distance for the moving vehicle from in speed 
+V to stop completely in speed zero is expressed in equation (1) 
+[17,18]. 
+Db(x)=
+)
+Wsin
+)Wcos
+(
+V
+C
+ln(1
+2gC
+ W
+s
+s
+r
+2
+ae
+ae
+θ
+θ
+μ
+η
+γ
+±
++
++
+f
+b
+    (1) 
+where, 
+Db(x) : braking distance of moving vehicle to speed zero. 
+Ȗ 
+: equivalent mass factor. 
+W 
+: vehicle weight. 
+g 
+: gravity speed. 
+Cae 
+=(ȡ*Af*Cd)/2 
+ȡ 
+:mass density of the air. 
+972
+978-1-4673-6322-8/13/$31.00 c⃝2013 IEEE
+
+--- Page 2 ---
+Af 
+:characteristic area of the vehicle. 
+Cd 
+:coefficient of aerodynamic resistance. 
+V 
+: vehicle speed. 
+Șb 
+: brake efficiency. 
+ȝ 
+: road adhesion coefficient. 
+fr 
+: rolling resistance coefficient. 
+șs 
+: angle of the road slope with the horizontal. 
+± 
+:positive sign for vehicle moving uphill, negative sign 
+for vehicle moving downhill grade. 
+ 
+The braking distance is the traveling distance for a vehicle 
+from speed V to complete stop after the brake is pushed. The 
+parameter of brake efficiency is depended on braking system, 
+tire condition and so on. Usually, the value of brake efficiency 
+is varies in the range of 80% to 100%. The rolling resistance 
+coefficient will be affected by road condition and the tire 
+rotation speed, and its value varies between 0.007 and 0.015. 
+For the passenger vehicles and light trucks, the equivalent 
+mass factor, Ȗ, is in the range 1.03 to 1.05. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In here, the parameter ȝ, road adhesion coefficient, is 
+dependent upon the factors of weather, road condition and so 
+on. In addition, the wheel slip ratio, sr, is defined as equation 
+(2) and the road adhesion coefficient is a nonlinear function of 
+the wheel slip ratio [18]. 
+ 
+ 
+sr=(V-Rw)/V                           (2) 
+where R is radius of tire and w is angular speed of tire. The 
+main purpose of ABS is to prevent the wheel slip ratio equal 1 
+(w=0). When the tire is locked the driving vehicle will lose 
+directional control and stability, and the stopping distance and 
+braking time will be longer than equipped with ABS. 
+The summary of average values of road adhesion 
+coefficient in different road conditions is list in table 1 [18]. 
+Table 2 summarizes the parameters of the passenger vehicle 
+of Mitsubishi Zinger 2.4 in Taiwan for simulation data. 
+Table 1 Average values of road adhesion coefficient in different road 
+conditions. 
+Pavement 
+With 
+ABS 
+Setting 
+Without 
+ABS 
+Setting 
+Asphalt 
+Dry 
+0.8-0.9 
+ȝmin=0.8 
+ȝmax=0.9 
+0.75 
+ȝmin=0.75 
+ȝmax=0.75 
+Wet 
+0.5-0.7 
+ȝmin=0.5 
+ȝmax=0.7 
+0.45-0.6 
+ȝmin=0.45 
+ȝmax=0.60 
+Concrete 
+Dry 
+0.8-0.9 
+ȝmin=0.8 
+ȝmax=0.9 
+0.75 
+ȝmin=0.75 
+ȝmax=0.75 
+Wet 
+0.8 
+ȝmin=0.8 
+ȝmax=0.8 
+0.7 
+ȝmin=0.70 
+ȝmax=0.70 
+Snow 
+0.2 
+ȝmin=0.2 
+ȝmax=0.2 
+0.15 
+ȝmin=0.15 
+ȝmax=0.15 
+Ice 
+0.1 
+ȝmin=0.1 
+ȝmax=0.1 
+0.07 
+ȝmin=0.07 
+ȝmax=0.07 
+ 
+Table 2 Simulate parameters setting of Mitsubishi Zinger 2.4. 
+Parameter 
+Value range  
+or conditions 
+Setting for simulation 
+W, vehicle weight 
+- 
+Zinger(1,620 kg) + one 
+person weight (60 kg)= 
+1,680 kg 
+g, gravity acceleration 
+- 
+9.8(m/s2) 
+ȡ, air density 
+in 25°C 
+environment 
+1.18 kg/m3 
+Af, Projection area 
+- 
+High*Wide=1.61m*1.775m 
+Cd, aerodynamic 
+resistance coefficient 
+0.15-0.5 
+0.45 
+Șb, braking efficiency 
+0.8-1.0 
+Șmin=0.85, Șmax=0.95 
+fr, rolling resistance 
+coefficient 
+0.012-0.015 
+0.015 
+Ȗ, equivalent mass 
+factor 
+1.03-1.05 
+1.04 
+ 
+Reaction distance 
+When driver operates the vehicle, all the data will be 
+transferred through nerve system and processed by human 
+brain. In the emergency condition, after the brain making 
+correct judgment, the command will be transmitted to limbs 
+or other organs. This is a succession of response course, called 
+the “reaction ability”. The reaction process, Consciousnessĺ 
+Judgmentĺ Action, the time duration that this response 
+Figure 1 Configuration of vehicle safety distance warning 
+system. 
+Ultrared ray reader and transmitter 
+Ultrared ray driver 
+Calculating unit 
+(Safety distance 
+calculating and 
+analysis, TTC, 
+D, Ds,min and Ds,max) 
+Vehicle speed (V) 
+Road slop (șs) 
+Age of diver 
+Vehicle weight (W) 
+Road surface 
+Weather status 
+Alarm 
+Distance between driving car 
+and vehicle (obstacle) ahead (D) 
+2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)
+973
+
+--- Page 3 ---
+˦̇ ˴̅̇
+˜́̃̈̇
+ʳˣ˴̅ ˴̀ ˸̇ ˸̅̆ ˍ
+˄ˁ˪˼̇ ˻ʳ˔˕˦˒
+˅ˁˣ˴̅ ˴̀ ˸̇ ˸̅̆ ˍfr, Af, Cd, ȡ, Ȗ
+ANN Calculating
+1.Safety Braking Distance, 
+Ds,minand Ds,max
+2.Safety TTC: Ts,minand Ts,max
+3.TTC
+1.Measure D, 
+2.Measure W,
+3.Measure Slope
+4.Measure Velocity
+5.Calculating dD/dt
+If
+D<Ds,min ?
+NO
+YES
+If
+D<Ds,max ?
+NO
+YES
+˦˴˹˸̇̌ ʳ
+˗̅ ˼̉ ˼́ ˺
+˥̈ ˿˸ʳ˄
+˥̈ ˿˸ʳ˅
+course needs, is called reaction time. The distance traveled by 
+vehicle during the reaction time is called the reaction distance. 
+The length of reaction time will be affected by age, distinction, 
+physical stamina, emotion. General speaking, the reaction 
+time can be divided into three components: 
+(1) Reflection time: The time which uses vision, hearing or 
+experience to investigate external conditions, is called 
+reflection or experience time. The reflection time of 
+common people is about 0.440.52 second. However, it is 
+different with the driver's emotion and physical stamina. 
+Moreover, road conditions or environment are the factors 
+which must be taken into account too. If road conditions 
+are more complicated, it will lengthen the reflection time. 
+The reflection time varies in the range 0.44 to 0.52 
+seconds. 
+(2) Judgment time: We use our brain and wisdom to 
+understand, and judge. The time of this process is called 
+judgment time. Judgment time of common people is about 
+0.150.25 second. But it is affected greatly by emotion. 
+When people nervous, or perfectly calm, it will show more 
+differences. 
+(3) Action time: After the judgment to apply an action at the 
+appropriate situation is called action time. The action time 
+of common people is about 0.150.4 second. 
+Finally, the reaction time, tr, including reflection time, 
+judgment time and action time is vary in range 0.74 to 1.17 
+seconds depending on age of driver. The summaries of the 
+driver reaction time depending on driver’s age are list in table 
+3. The reaction distance, Dr, is vary in range tr,min V to tr,max V 
+where V is the vehicle speed. The minimum and maximum 
+reaction distance, Dr,min and Dr,max, can be expressed as follow 
+respectively. 
+ 
+ 
+ 
+Dr,min= tr,min V                  (3) 
+ 
+ 
+ 
+Dr,max= tr,max V                  (4) 
+Table 3 Reaction time of driver. 
+Age of driver 
+Reaction time range 
+Setting 
+18-33 
+0.74-1.10 
+tr,min=0.74 
+tr,max=1.10 
+34-47 
+0.75-1.12 
+tr,min=0.75 
+tr,max=1.12 
+48-57 
+0.77-1.13 
+tr,min=0.77 
+tr,max=1.13 
+58-70 
+0.78-1.17 
+tr,min=0.78 
+tr,max=1.17 
+ 
+Pressure buildup distance 
+The pressure buildup distance, Dp, is the distance of vehicle 
+travel during the initiation of braking action to the full setup 
+the braking pressure. Usually the pressure buildup time, tp, 
+varies in the range between 0.3 and 0.75 second for the 
+braking system to build up the braking forces to the between 
+wheels and road. The pressure buildup distance, Dp can be 
+expressed as follow. 
+ 
+ 
+Dp=tpV0-(aptp
+2)/2                   
+    (5) 
+where V0 is vehicle speed before braking. The ap is the 
+average deceleration of the vehicle and it could be neglected 
+because the speed of vehicle approximate the same during the 
+pressure buildup period. So the minimum and maximum 
+pressure buildup distance can be presented as equations (6) 
+and (7). 
+ 
+ 
+Dp,min=tp,minV0                          (6) 
+Dp,max=tp,maxV0                          (7) 
+Where tp,min and tp,max are the minimum and maximum 
+pressure buildup time respectively and its values are 0.3s and 
+0.75s respectively. 
+Safety braking distance of the driving vehicle 
+Finally, the safety braking distance of the driving vehicle , Ds, 
+can be described as follow. 
+ 
+Ds=Db+Dr+Dp                               (8) 
+According to the varies of the reaction time and the pressure 
+buildup time, The maximum safety braking distance and the 
+minimum safety braking distance can be determined 
+respectively as follow. 
+Ds,max=Db(ȝnjo-!Șnjo)+!Es-nby + Dp,max         
+    (9) 
+ 
+Ds,min=Db(ȝnby-!Șnby)+ Es-njo + Dp,min          
+   (10) 
+4. ALGORITHM OF FORWARD COLLISION 
+WARNING 
+  A novel algorithm for forward collision warning system is 
+presented in this section. Figure 2 depicts the presented 
+algorithm for forward collision warning system. Firstly, the 
+parameters such as the vehicle with ABS or not, rolling  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 2 Algorithm of forward collision warning system. 
+974
+2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)
+
+--- Page 4 ---
+˥̈ ˿˸ʳ˄
+If
+TTC<Tc ?
+NO
+YES
+If
+dD/dt > 0 ?
+NO
+YES
+Level 3 
+Dangerous
+Level 2 
+Warning
+Level 1
+˪˴̅́ ˼́ ˺
+Return
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3 Rule 1algorithm of forward collision warning system. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 4 Rule 2 algorithm of forward collision warning system. 
+ 
+resistance coefficient, characteristic area of the vehicle, 
+coefficient of aerodynamic resistance, mass density of the air 
+and equivalent mass factor are necessary to input the system. 
+And then we calculate the maximum and minimum safety 
+braking distance and TTC. At the same time, the critical TTC 
+will be calculated. If the distance between driving cars, D, is 
+shorter than minimum safety braking distance, Ds,min, then go 
+to rule 1 algorithm. Otherwise, if D is shorter than maximum 
+safety braking distance, Ds,max, then go to rule 2 algorithm. 
+Otherwise the system will inform that the driving vehicle is 
+under safety driving condition. Figure 3 shows the rule 1 
+algorithm of forward collision warning system. In the rule 1, 
+the distance between driving cars is shorter than minimum 
+safety braking distance. If TTC is smaller than critical TTC, 
+Tc, then the driving vehicle is under dangerous situation. The 
+driver needs to slow down the velocity to avoid forward 
+collision accident. This is the worst situation mean level 3 
+warning. In rule 1 algorithm, there are three levels warning 
+signals will be produced, level 3, level 2 and level 1. There 
+are also three levels warning signals will be produced in rule 
+2 algorithm. Figure 4 presented the algorithm of rule 2.  
+ 
+5. SIMULATION RESULTS 
+  The simulation results are presented in this section. A 
+passenger vehicle with model Mitsubishi Zinger 2.4 in Taiwan 
+for experimental is a weight 1,620 kg vehicle with 2,400 cc 
+engine. Simulate parameters setting of Mitsubishi Zinger 2.4 
+are listed in table 2. The critical TTC, Tc, is set to be 
+1.5s[15,16]. The definition of TTC could be expressed as 
+equation (11). 
+TTC=D(t)/( dD(t)/dt)                   (11) 
+Where D(t) is the distance between driving cars. 
+    A period of 767 seconds start at AM10:21:34 on 
+February 5, 2010 for highway driving is presented for 
+demonstrate the performance of the presented algorithm. 
+Figure 5 shows the RPM of engine of vehicle operating. 
+Velocity of vehicle operating is shown in figure 6. In the 
+beginning 96 seconds, it is an acceleration period. The 
+velocity accelerated from low speed to high speed and keep in 
+high speed for about 600 seconds. Finally, a period about 50 
+seconds operated for decelerated the velocity until to stop. 
+Figure 7 described the distance between driving cars during 
+the period. The value beyond 200 meters is not appearing in 
+the figure. The maximum and minimum of safety braking 
+distances of driving vehicles are depicted in figure 8. To 
+compare the distance between driving cars in figure 8, it is 
+obvious to see that the driving cars are not to keep a safety 
+braking distance during at about 140th second to 165th second. 
+The TTC and critical TTC of vehicle operating are shown in 
+figure 9. In the figure, we could find that there are 5 times 
+happening the TTC smaller than critical TTC. Figure 10 
+presented the critical TTC and warning signal of vehicle 
+operating. The forward collision system informs five type 
+warning signals to driver for warning. The warning levels 
+from level 0 to level 4 are presented in this paper. The level 4 
+warning signal means the driving car in the most dangerous 
+situation and driver needs to slow down the speed. And the 
+level 0 signal is only warning driver to pay attention in 
+distance between driving cars. 
+  The performance of using presented algorithm in forward 
+collision warning system is guaranteed. The simulation results 
+described the presented method is suitable applying in 
+forward collision warning system for to avoid the forward 
+collision accident.  
+ 
+2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)
+975
+
+--- Page 5 ---
+0
+100
+200
+300
+400
+500
+600
+700
+800
+500
+1000
+1500
+2000
+2500
+3000
+3500
+Time: start at 10:21:34 on Feb. 5 (sec.)
+RPM of engine
+0
+100
+200
+300
+400
+500
+600
+700
+800
+0
+20
+40
+60
+80
+100
+120
+Time: start at 10:21:34 on Feb. 5 (sec.)
+Velocity (km/h)
+0
+100
+200
+300
+400
+500
+600
+700
+800
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+Time: start at 10:21:34 on Feb. 5 (sec.)
+Distance between driving cars (m)
+0
+100
+200
+300
+400
+500
+600
+700
+800
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+Time: start at 10:21:34 on Feb. 5 (sec.)
+maximum and minimum safety braking distance (m)
+ 
+ 
+minimum safety braking distance
+maximum safety braking distance
+distance between driving cars
+0
+100
+200
+300
+400
+500
+600
+700
+800
+0
+5
+10
+15
+20
+25
+30
+Time: start at 10:21:34 on Feb. 5 (sec.)
+Tc and TTC (sec.)
+ 
+ 
+Tc
+Warning
+0
+100
+200
+300
+400
+500
+600
+700
+800
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+Time: start at 10:21:34 on Feb. 5 (sec.)
+Tc (sec.), Warning level
+ 
+ 
+Tc
+Warning
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5 The engine RPM of vehicle operating on February 5, 2010 
+start at AM10:21:34. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 6 Velocity of vehicle operating on February 5, 2010 start at 
+AM10:21:34. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 7 The distance between driving cars on February 5, 2010 start 
+at AM10:21:34. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 8 The maximum and minimum of safety braking distances of 
+driving vehicles on February 5, 2010 start at AM10:21:34. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 9 The TTC and critical TTC of vehicle operating on February 
+5, 2010 start at AM10:21:34. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 10 The critical TTC and warning signal of vehicle operating 
+on February 5, 2010 start at AM10:21:34. 
+976
+2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)
+
+--- Page 6 ---
+6. CONCLUSION 
+A novel algorithm considering both time- to-collision 
+(TTC) and safety braking distance for forward collision 
+warning system is presented for to alert and to assist driver 
+keeping safety braking distance to avoid the collision accident 
+in highway driving. The simulation results described the 
+presented method is suitable applying in forward collision 
+warning system for to avoid the forward collision accident. 
+The useful alert messages can serve as a safety assistance 
+system for safer driving in highway. 
+7. ACKNOWLEDGEMENT 
+This work was supported by the National Science 
+Council of Taiwan for financial support under contract 
+number NSC100-2221-E-131-034. 
+ 
+8. REFERENCES 
+[1] 
+W. Ulke, R. Adomat, K Butscher and W. Lauer, “Radar 
+Based Automotive Obstacle Detection System”, SAE 
+Technical Series, 1994, pp. 41-53. 
+[2] 
+Yuan-Lin Chen and Chong-An Wang, “Vehicle Safety 
+Distance Warning System: A Novel Algorithm for 
+Vehicle Safety Distance Calculating Between Moving 
+Cars”, IEEE VTC2007-Spring in Dublin, 23-25 April 
+2007, pp. 2570-2574. 
+[3] 
+Masumi Nakaoka, Pongsathorn Raksincharoensak and 
+Masao Nagai, “Study on Forward Collision Warning 
+System Adapted to Driver Characteristics and Road 
+Environment”, International Conference on Control, 
+Automation and Systems 2008, Oct. 14-17, 2008 in 
+COEX, Seoul, Korea, pp.2890-2895. 
+[4] 
+Jing-Fu Liu , Yi-Feng Su, Ming-Kuan Ko, Pen-Ning Yu, 
+“Development of a Vision-Based Driver Assistance 
+System with Lane Departure Warning and Forward 
+Collision Warning Functions”, Computing: Techniques 
+and Applications, 2008. DICTA '08.Digital Image, pp. 
+480-485. 
+[5] 
+Dagan, E.; Mano, O.; Stein, G.P.; Shashua, A., 
+“Forward Collision Warning with a Single Camera”, 
+2004 IEEE Intelligent Vehicles Symposium, Parma, 
+Italy June 1447,2004, pp. 37-42. 
+[6] 
+Shih-Ken Chen, and Jayendra S. Parikh, “Developing a 
+Forward Collision Warning System Simulation”, IEEE 
+Intelligent Vehicles Symposium 2000, Dearborn (MI), 
+USA October 3-5, 2000, pp. 338-343. 
+[7] 
+Toshihisa 
+Sato1 
+and 
+Motoyuki 
+Akamatsu1, 
+“Preliminary Study on Driver Acceptance of Multiple 
+Warnings while Driving on Highway”, SICE Annual 
+Conference 2008, August 20-22, 2008, The University 
+Electro- Communications, Japan, pp. 872-877. 
+[8] 
+Ardalan Vahidi and Azim Eskandarian, “Research 
+Advances in Intelligent Collision Avoidance and 
+Adaptive Cruise Control”, IEEE Transactions on 
+Intelligent Transportation Systems, Vol. 4, No. 3, 
+September 2003, pp. 143-153. 
+[9] 
+Donghoon Han, Kyongsu yi and Seungjong Yi, 
+“Evaluation 
+of 
+Integrated 
+ACC(Adaptive 
+Cruise 
+Control)/ CA(Collision Avoidance) on a Virtual Test 
+Track”, SICE-ICASE International Joint Conference 
+2006, Oct. 18-2 1, 2006 in Bexco, Busan, Korea, pp. 
+2127-2132. 
+[10] C. L. Robinson, H.-J. Sch¨utz, G. Baliga and P. R. 
+Kumar, “Architecture and Algorithm for a Laboratory 
+Vehicle Collision Avoidance System”, 22nd IEEE 
+International 
+Symposium 
+on 
+Intelligent 
+Control, 
+Singapore, 1-3 October 2007, pp. 23-28. 
+[11] D. F. Llorca, M. A. Sotelo, I. Parra, J. E. Naranjo, M. 
+Gavilán, and S. Álvarez, “An Experimental Study on 
+Pitch Compensation in Pedestrian-Protection Systems 
+for Collision Avoidance and Mitigation”, IEEE 
+Transactions on Intelligent Transportation Systems, Vol. 
+10, No. 3, September 2009, pp. 469-474. 
+[12] Dae-Jin Kim, Kwang-Hyun Park, and Zeungnam Bien, 
+“Hierarchical Longitudinal Controller for Rear-End 
+Collision Avoidance”, IEEE Transactions on Industrial 
+Electronics, Vol. 54, No. 2, April 2007, pp. 805-817. 
+[13] Stefan K. Gehrig and Fridtjof J. Stein, “Collision 
+Avoidance for Vehicle-Following Systems”, IEEE 
+Transactions on Intelligent Transportation Systems, Vol. 
+8, No. 2, June 2007, pp. 233-244. 
+[14] Yuan-Lin Chen, and Wei-Jen Lee, “Safety Distance 
+Warning System with a Novel Algorithm for Vehicle 
+Safety Braking Distance Calculating”, International 
+Journal of Vehicle Safety, Vol. 5, No. 3, 2011, pp. 
+213-231. 
+[15] Richard 
+van 
+der 
+Horst 
+and 
+Jeroen 
+Hogema, 
+“Time-to-Collision and Collision Avoidance Systems”, 
+6th ICTCT workshop Salzburg. 
+[16] Richard van der Horst, “Time-To-Collision as a cue for 
+decision-making in braking”, Vision in Vehicles III, 
+Elsevier Science Publisher B.V., Amsterdam 1991, 
+19-26. 
+[17] J. Y. Wong ,Theory of Ground Vehicle, 3th e, 
+Wiley-Interscience Publication. 
+[18] Rao V. Dukkipati, Jian Pang, Mohamad S. Qatu, and 
+Zuo Shuguang, “Road Vehicle Dynamics”, SAE 
+International, 2008. 
+ 
+2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)
+977

@@ -1,0 +1,1350 @@
+--- Page 1 ---
+第 52 卷 第 4 期
+2024 年 4 月
+Vol. 52 No. 4
+April 2024
+华南理工大学学报（自然科学版）
+Journal of South China University of Technology
+（Natural Science Edition）
+行人过街事件网联HUD 预警系统对驾驶行为的影响
+边扬 张钰 赵晓华
+† 赵雪娜 李雪玮
+（北京工业大学 交通工程北京市重点实验室，北京 100124）
+摘
+要：为探索行人过街事件网联环境下平视显示预警系统在不同天气条件下对驾驶行
+为的影响，以论证预警系统的有效性。文中首先设计基线条件（Baseline）、低头显示
+（HDD）、平视显示（HUD）3种预警系统，依托驾驶模拟平台开发晴天和雾天天气条件下城
+市道路网联场景，通过实验测试提取驾驶行为参数；然后，从微观层面刻画行人过街事件
+网联HUD预警系统作用下驾驶行为的整个空间变化过程，分析预警系统和天气状况两种
+因素对驾驶行为的作用规律，构建包含避险阶段和恢复阶段的驾驶行为影响模式，提出了
+反映避险阶段安全水平、恢复阶段恢复水平以及全过程稳定水平等3个层面的综合指标
+体系，包括首次制动距离、最小冲突距离、恢复稳定时间、速度恢复量、最大减速度和最大
+加速度；最后，量化不同预警系统（Baseline/HDD/HUD）、天气状况（晴天/雾天）以及两
+因素间交互作用对驾驶行为的影响。结果表明：行人过街网联HUD预警系统对驾驶人在
+避险阶段和恢复阶段中的驾驶行为存在显著性作用，显著提高避险阶段驾驶行为的安全
+水平，同时对恢复阶段恢复效率具有明显的提升作用，也显著影响全过程运行特性的稳定
+水平；在雾天条件下行人过街网联HUD预警系统表现出更为明显的优势。
+关键词：网联环境；平视显示预警系统；行人过街事件；驾驶行为；驾驶模拟技术
+中图分类号：U491.2+5
+文章编号： 1000-565X（2024）04-0114-12
+随着通信技术和传感技术的发展，实现了车与
+车（V2V）、车与人（V2P）、车与基础设施（V2I）之间
+的互联互通，形成了V2X的网联环境［1-2］。网联环境
+可为驾驶人提供更多视野内外的信息，这些信息通
+过驾驶辅助系统的形式为安全驾驶提供必要的支持，
+如自适应巡航系统、预警系统等［3］。其中，网联环
+境下的预警系统能够更早地感知更大范围内的潜在
+危险信息，并及时告知驾驶人，以保证其有足够的
+时间应对危险情景，极大地提升了驾驶安全［4］。
+预警系统获取到周围的潜在危险信息之后，如
+何有效地将相关信息传递给驾驶人，是一个值得关
+注的问题。目前，预警形式包括听觉、视觉和触觉
+3种。研究发现，和驾驶相关的信息超过90％都是
+通过视觉通道呈现的［5］，因此视觉通道是呈现预警
+信息的关键通道。低头显示（HDD）作为传统的视觉
+信息呈现方式，被设置在车辆的仪表盘或控制面板
+中间，需要驾驶人低头获取信息，存在诱发分心的
+潜在风险。相比之下，平视显示（HUD）通过将危险
+警告信息投影至驾驶人的前方道路视野内［6］，减少
+了眼部调节时间，降低了忽视道路中危险刺激的可
+能［7］。网联环境下HUD预警系统在提升驾驶人反应
+能力和改善道路安全水平上存在巨大潜能。
+doi： 10. 12141/j. issn. 1000-565X. 230096
+收稿日期：2023⁃03⁃10
+基金项目：国家自然科学基金资助项目（52072012）
+Foundation item：Supported by the National Natural Science Foundation of China （52072012）
+作者简介：边扬（1980-），女，博士，副教授，主要从事交通规划、交通行为研究。E-mail： bianyang@bjut. edu. cn
+†通信作者：赵晓华（1971-），女，博士，教授，主要从事驾驶行为及智能交通研究。E-mail： zhaoxiaohua@bjut. edu. cn
+
+--- Page 2 ---
+第 4 期
+边扬 等：行人过街事件网联HUD预警系统对驾驶行为的影响
+网联环境下HUD 预警系统已被用于改善驾驶
+人在各种安全关键场景中的驾驶行为，如追尾碰
+撞［8］、行人过街［9］和交叉口冲突［10］等。近年来，行人
+安全因其较高的事故率和死亡率而受到广泛的关注。
+中国统计年鉴中提到，2019 年人车事故共发生
+3 432起，死亡人数高达1 437人［11］。意大利2020年
+事故数据报告中提到，7 336 起交通事故（占3. 3%）
+是由司机在人行横道不给行人让路造成的，而
+7 204 起交通事故（占3. 2%）是由行人在人行横道外
+过马路的不当行为造成的［12］。因此，网联环境下
+HUD 预警系统能否有效改善驾驶人的驾驶行为，
+提升行人安全，成为社会各界重点关注的问题。
+学者针对行人过街事件下HUD 预警系统对驾
+驶行为的影响已经做了相关研究。以往的研究重点
+关注HUD 预警系统在提升避险阶段安全水平和稳
+定水平上的有效性。通过探究HUD 预警系统对安
+全水平的影响，学者们发现与基线条件（没有警告，
+Baseline）相比，HUD 预警系统减少了反应时间［7，9］，
+延迟了与行人的碰撞时间（TTC）
+［13］，降低了与行人
+碰撞的风险［14］，显著提升了驾驶行为的安全性。
+然而，以往关于HUD 预警系统对稳定水平的影响
+探究存在不一致的结论。一方面有研究表明，HUD
+预警系统产生更大的最大减速度和更强的制动踏板
+力［15-16］，这种制动性能被认为可以提高制动效率，
+减少碰撞的数量和严重程度，但不利于制动过程的
+稳定性和舒适性［17］；另一方面有研究表明，网联环
+境下预警系统可以使减速过程更加温和［10］。因此，
+关于网联环境下HUD 预警系统能否在不损失安全
+性的前提下提高避险阶段稳定性的问题尚不明确。
+事实上，受行人过街事件的影响，驾驶人经历减速
+避险阶段和加速起步阶段，而后一阶段的努力程度
+和稳定水平会受到前一阶段的影响。HUD 预警系
+统对驾驶行为的影响可能持续到加速起步阶段，这
+值得进一步探究。综上可知，在行人过街事件中
+HUD 预警系统对驾驶行为的影响是必然存在的，
+但在减速避险阶段和加速起步阶段的具体影响机制
+需要进一步明确。同时以往研究中主要以宏观的统
+计特性为主，对于不同预警系统影响下驾驶过程的
+微观变化并不清楚。而已有研究表明，基于微观的
+驾驶行为变化过程能够更好地反映HUD 预警系统
+的影响机制［18-19］。可见，通过刻画行人过街事件网
+联HUD 预警系统作用下驾驶行为的空间变化过程，
+探究HUD 预警系统在减速避险阶段和加速起步阶
+段对驾驶行为的影响机制十分有必要。
+此外，在HUD 预警系统有效性测试的相关研
+究中，部分学者会叠加复杂的外部条件，以测试预
+警系统在更紧急情况下的有效性。复杂的外部条件
+包括天气条件（如雾、雨、雪等）、道路线形条件
+（如急转弯、陡坡等）和光照条件（如昼、夜）。雾天
+作为能见度下降的典型不良天气，降低驾驶人对周
+围环境的视觉距离和感知［20］，对驾驶人行为产生
+显著的负面影响［21］，同时增加驾驶人对预警信息的
+依赖程度［19］。HUD 预警系统已被证明可以有效避
+免雾天条件下交叉口的车辆碰撞以及路段的追尾
+碰撞，帮助驾驶人更早地做出反应，采取更平稳的
+制动过程［19，22］。因此，在雾天更加危险的情况下，
+需要进一步探究HUD 预警系统在提升行人安全上
+的有效性。
+鉴于此，面向行人过街事件，文中探讨了网联
+环境下HUD 预警系统在不同天气条件下对驾驶行
+为的影响，依托驾驶模拟实验平台，搭建了3种预
+警系统（Baseline/HDD/HUD）和两种天气条件（晴天/
+雾天）下城市道路网联场景，通过实验测试获取驾
+驶行为参数，并从微观层面刻画行人过街事件预警
+系统作用下驾驶行为的整个空间变化过程及影响
+特性，以期为网联环境下HUD 预警系统的优化设
+计提供理论方法及依据。
+1　实验测试
+1. 1　实验设备
+1. 1. 1　网联驾驶模拟实验平台
+基于驾驶模拟技术搭建网联环境下的驾驶模拟
+实验平台，该平台由驾驶模拟系统、人因数据采集
+系统、数据协同处理中心和车载终端（人机界面，
+HMI）组成，如图1所示。每个组成部分通过无线通
+信技术实现互联互通。
+眼动数据
+UDP/车辆操作与
+运行数据
+路与环境
+驾驶人
+心电数据
+视频数据
+主观数据
+API/场景元素
+Wi-Fi/驾驶辅助信息
+HDD
+HUD
+①驾驶模拟系统
+③数据协同
+处理中心
+④车载终端
+②人因数据采集系统
+驾驶模拟器
+驾驶模拟器
+中控平台
+图1　网联驾驶模拟实验平台
+Fig. 1　Connected driving simulation experiment platform
+115
+
+--- Page 3 ---
+第 52 卷
+华南理工大学学报（自然科学版）
+驾驶模拟系统由固定基座的驾驶模拟器和计算
+机组成，该系统具有虚拟场景设计与开发、车载数
+据采集、数据传输等功能。虚拟场景的设计和开发
+包括道路的建设和内置参数的设置，完成后将场景
+导入驾驶模拟系统，通过应用程序接口（API）添加
+天气、交通流量等场景元素。车载数据采集包括车
+辆和相邻相关车辆的运行参数（如速度、加速度、
+制动踏板功效、加速踏板功效、横向位置等），采
+集频率设置为30 Hz，并通过UDP 协议传输到协同
+数据管理中心。人因数据采集系统通过眼动仪获取
+驾驶人的眼动数据。数据协同处理中心实时接收来
+自驾驶模拟系统的车辆、道路和环境信息，传输方
+式可视为V2V和V2I通信相结合，将信息进行过滤
+和融合后通过Wi-Fi 与车辆终端HMI 互联。车载终
+端HMI 接收数据协同处理中心过滤和融合后的
+信息，通过HDD 或HUD 完成驾驶辅助信息的实时
+动态发布。
+1. 1. 2　信息交互设计
+实验设计3 组车载显示：Baseline 组、HDD 组
+和HUD 组。Baseline 组只提供常规语音导航信息，
+HUD 和HDD 组提供网联环境下的安全预警信息。
+鉴于HUD 组提供的不合理或不清楚的信息可能会
+导致司机分心和误解，从而产生负面影响［23］。文中
+综合考虑了驾驶人的认知能力、HUD 的尺寸限
+制［24］和车载驾驶辅助系统产品的现状（奥迪A7），
+同时遵循重要性、使用频率、功能分组和使用顺序
+等界面设计原则［25］，最终设计并开发网联环境下的
+HUD 界面，如图2 所示。根据显示信息的内容，
+HUD 界面信息分为车辆状态信息、导航信息、安
+全预警信息和娱乐通信信息4个模块。安全预警信
+息模块可以显示连续或基于事件触发的网联信息。
+HUD 的尺寸受车辆类型和界面设计的影响
+很大，没有统一的标准。考虑到驾驶模拟器的类
+型与HDD 尺寸的一致性，文中将HUD 界面尺寸设
+置为215. 5 mm×124. 2 mm。HUD 界面使用Scanner
+软件开发，并集成到驾驶模拟中，使用Wi-Fi 实时
+通信，最终显示在方向盘上方的道路上。为了保证
+变量的唯一性，HDD 的界面设计和尺寸与HUD 完
+全一致，只有显示位置的不同。HDD 由HUAWEI 
+pad M3显示，放置在车辆方向盘的右前方，与车辆
+中控面板的位置相似，见图3。
+1. 2　场景设计
+实验共设计了3 种预警系统（Baseline/HDD/
+HUD）与两种天气条件（晴天/雾天）下的6 个实验
+场景，具体包括晴天_Baseline（A1）、晴天_HDD
+（A2）、晴天_HUD（A3）、雾天_Baseline（B1）、雾天_ 
+HDD（B2）和雾天_HUD（B3）。其中雾天设置为能见
+度240 m的大雾天气。当使用任意一种预警系统时，
+驾驶人从起点行驶4 km 的城市道路至终点结束，
+过程中经历5个典型的危险事件，分别为左侧车辆
+并道、交叉口与对向直行车辆冲突、行人过街、交
+叉口与左转车冲突以及前方车辆急停，如图4（a）
+所示。使用3 种预警系统下的3 个场景首尾相接形
+成一个环路，驾驶人在两种天气条件（晴天/雾天）
+下各驾驶一圈。除了预警系统和天气状况外，6 个
+场景的其他因素都相同。
+文中仅考虑行人过街事件，其余的危险事件将
+在其他文章中进行研究。行人过街事件场景设计如
+图4（b）所示，事件发生的道路为双向四车道，车道
+宽3. 5 m，人行道宽5. 0 m，限速60 km/h。交通流
+为自由流状态，该路段的左侧车道存在稳定的交
+通流，迫使主车只能在右侧车道行驶，且主车所在
+车道前方没有其他车辆，保证主车的纵向行为不受
+约束。行人在距离机动车道右边缘线2. 5 m 的地方
+ 
+②
+①
+500 m
+70 km/h
+④
+③
+80
+Mary
+①导航：方向和距离②车速、限速与异常车辆状态提醒
+④娱乐及通信信息：来电提醒和音乐播放信息
+③安全辅助
+信息：监测
+前车、车周
+障碍物、
+前车间距
+图2　HDD/HUD界面
+Fig. 2　HDD/HUD interface
+（a）HDD位置
+（b）HUD位置
+图3　HDD/HUD的设置位置
+Fig. 3　HDD/HUD setting position
+116
+
+--- Page 4 ---
+第 4 期
+边扬 等：行人过街事件网联HUD预警系统对驾驶行为的影响
+被停在路边的公交车遮挡。
+作为典型的V2I场景，路侧设备或基础设施（毫
+米波雷达、激光雷达及高清摄像头）检测到行人，
+将信息汇聚整合后通过无线通信技术实时发送至
+主车，当主车到达距离行人100 m 处时，网联环境
+下的HUD 和HDD 发出预警；当主车到达距离行人
+60 m 处时，行人被激活，开始以1 m/s 的速度过
+马路，主车只能减速避让行人。
+警告采取了视觉和听觉相结合的形式［6］。在距
+离行人100 m 处，语音提示一次“注意前方行人”。
+同时，HUD 和HDD 界面上的安全预警模块显示
+前方行人过街的图形符号，直到车辆经过行人位
+置后，行人过街的视觉预警信息消失，如图4（c）
+所示。
+1. 3　参与者
+从符合要求的大学和社会团体中招募35 名视
+力及听力状态良好的被试，其中1名被试因个人原
+因退出实验，最终有效样本量为34，男性73. 53%，
+女性26. 47%。性别比例的分布大致符合当前中国
+驾驶人的统计特征［26］。受试者年龄21~53岁，平均
+29. 21岁，标准差9. 46岁。他们的驾驶经验在1~22年
+之间（平均值为5. 79，标准差为5. 32）。
+为了保证结果的有效性，有必要计算实验所需
+的样本量。根据期望方差、目标置信水平和误差幅
+度计算所需样本量N：
+N = Z2 δ2/e2
+（1）
+式中，Z 为标准正态分布统计量，δ 为总体标准差
+估计，e为最大误差。
+选择10%的显著性阈值来反映未知参数的90%
+置信水平。当置信水平为90% 时，Z 等于1. 25。
+δ 的取值范围在0. 25~0. 50 之间［27］。根据驾驶模拟
+的局限性，将δ 值设置为0. 42，e 取10%。为平衡
+研究的效度和成本效益，采用80% 的效度和10%
+的显著性阈值。通过计算，所需样本量为28，小于
+有效样本量34，因此，本实验所选择的样本量符合
+要求，能够为研究内容提供可靠的答案。
+1. 4　实验安排
+在实验中，每个被试都被要求在6 个场景中
+驾驶。为了尽可能地消除记忆效应，场景顺序以拉
+丁方顺序排列。同时安排6 个场景在2 个工作日内
+完成，间隔3 d。
+实验前，在被试填写人口学问卷后，实验员向
+被试简单介绍实验过程和车载信息界面，并进行实
+验前测试，以确保无不良反应；然后，实验员向被
+试宣读实验说明，要求被试遵守日常驾驶习惯，遵
+守交通规则和信息引导，安全完成驾驶任务。
+在实验测试过程中，被试调整座位至舒适的位
+置后，按拉丁方顺序进行驾驶模拟实验，单个场景
+进行实验约5 min，每完成一个场景后休息约5 min，
+再进行下一个场景实验，直到完成第一个工作日的
+3个测试场景。3 d后，再次进行驾驶模拟实验，以
+完成剩余3 个场景的实验。所有场景实验结束后，
+每个被试获得160元奖励。
+1. 5　数据提取
+根据实验设计，选取行人前100 m 和行人后首
+次达到稳态作为该事件的影响范围。行人前100 m
+处为HUD 和HDD 的预警点，此时驾驶人接收到行
+人过街的信息并准备开始采取行动。受行人过街事
+件的影响，驾驶过程中速度呈现先降低后上升的
+趋势，当速度回升到一定程度并维持5 s 内上下波
+动不超过5% 即达到稳态［28-29］，此时认为行人过街
+（c）行人过街事件HUD预警界面
+（b）场景设计
+（a）实验路线
+与主车速度相同的交通流
+60 m
+100 m
+5.0 m
+2.5 m
+1 800 m
+1 200 m
+650 m
+550 m
+1 m/s
+3.5 m 3.5 m
+公交车
+公交站
+主车
+触发点
+预警点
+行人位置
+   
+行人过街
+前方车辆急停与左转车冲突
+ 与对向直行
+车辆冲突
+左侧车辆
+并道
+行车方向
+开始点
+终点
+交叉口
+交叉口
+公交站
+350 m
+1 000 m
+图4　行人过街场景设计
+Fig. 4　Design of pedestrian crossing scenario
+117
+
+--- Page 5 ---
+第 52 卷
+华南理工大学学报（自然科学版）
+事件所造成的影响结束。
+实验中收集了行人过街事件影响范围内的驾驶
+行为基础指标，包括速度、加速度、制动踏板功效
+和油门踏板功效等。
+2　实验结果与分析
+2. 1　驾驶行为空间变化规律
+受行人过街事件影响，驾驶人经历先降速、后
+起步的驾驶过程。为进一步探究在不同天气条件下使
+用不同预警系统对驾驶行为的影响规律，文中先给出
+了34 位驾驶人在晴天和雾天条件下使用Baseline、
+HDD、HUD预警系统时的速度空间变化曲线，如图5
+所示。图中横坐标0 m 处代表行人所在位置，取值
+范围从行人前100 m 处到该场景下所有驾驶人速度
+达到稳态时所在位置的均值处。
+对比图5（a）和图5（b）可以知道，晴天和雾天下
+使用Baseline 时驾驶人的减速位置主要集中在距离
+行人40 m 处，速度最低点集中在距离行人30 m 内，
+速度恢复过程所需要的距离更长，减速过程和速度
+恢复过程更为陡峭。对比图5（c）和图5（d）可以知道，
+晴天和雾天下使用HDD 时驾驶人的减速位置主要
+集中在距离行人50 m处，速度最低点集中在距离行
+人10~40 m内，雾天下使用HDD时速度恢复至稳态
+所需要的距离比晴天下更短，减速过程和速度恢复
+过程较为缓和。对比图5（e）和图5（f）可以知道，
+晴天和雾天下使用HUD时驾驶人的减速位置主要集
+中在距离行人70 m处，速度最低点集中在距离行人
+10~40 m 内，速度恢复至稳态所需要的距离最短，
+减速过程和速度恢复过程更为缓和。
+0
+20
+40
+60
+80
+-100
+-70
+-40
+-10
+20
+50
+80
+速度/(km·h-1)
+0
+20
+40
+60
+80
+速度/(km·h-1)
+0
+20
+40
+60
+80
+速度/(km·h-1)
+距离/m
+1-34号驾驶人速度曲线
+34位驾驶人速度均值曲线
+1-34号驾驶人速度曲线
+34位驾驶人速度均值曲线
+1-34号驾驶人速度曲线
+34位驾驶人速度均值曲线
+（d）雾天_HDD组
+-100
+-70
+-40
+-10
+20
+50
+80
+距离/m
+（e）晴天_HUD组
+-100
+-70
+-40
+-10
+20
+50
+80
+距离/m
+（f）雾天_HUD组
+图5　速度空间变化曲线
+Fig. 5　Spatial variation curves of speed
+（a）晴天_Baseline组
+（b）雾天_Baseline组
+（c）晴天_HDD组
+0
+0
+0
+20
+40
+60
+80
+-100
+-100
+-60
+-60
+-80
+-20
+-20
+-40
+20
+60
+60
+40
+20
+100
+120
+100
+80
+距离/m
+距离/m
+距离/m
+1-34号驾驶人速度曲线
+34位驾驶人速度均值曲线
+1-34号驾驶人速度曲线
+34位驾驶人速度均值曲线
+1-34号驾驶人速度曲线
+34位驾驶人速度均值曲线
+速度/(km·h-1)
+0
+20
+40
+60
+80
+速度/(km·h-1)
+20
+40
+60
+80
+速度/(km·h-1)
+-100
+-60
+-20
+20
+60
+100
+118
+
+--- Page 6 ---
+第 4 期
+边扬 等：行人过街事件网联HUD预警系统对驾驶行为的影响
+为更清晰地比较两种天气条件下使用3种预警
+系统时驾驶行为变化规律的差异，文中绘制了6个
+场景下34位驾驶人的速度均值、加速度均值和制动
+踏板功效均值曲线，如图6所示。依据行人过街事
+件影响范围内驾驶行为的空间变化规律，在图中依
+次标注了5个关键点位，包括开始制动点、最大减
+速度点、最小速度点、最大加速度点、稳态开始点。
+从图中可以看出：驾驶人使用不同的预警系统时所
+表现出的驾驶行为变化规律存在显著差异；尽管在
+不同天气条件下驾驶人使用相同的预警系统会表现
+出相似的驾驶行为变化规律，但在关键点位处仍存
+在差异；天气条件和预警系统对驾驶行为的影响可
+能存在交互作用。
+2. 2　驾驶行为影响模式
+为进一步挖掘行人过街事件中，预警系统和天
+气状况对驾驶行为的影响模式。文中以晴天_HUD的
+场景为例，通过刻画该场景下34位驾驶人的速度、
+加速度和制动踏板功效均值的空间变化曲线（如图7
+所示），构建了包含避险和恢复两阶段的驾驶行为
+影响模式。
+根据所设计的行人过街事件，依次标注出预
+警点、行人触发点、行人消失点和行人位置4个关
+键点位。根据事件影响范围内驾驶行为的变化
+规律，分别标注了开始制动点、最大减速度点、最小
+速度点、最大加速度点和稳态开始点5个关键点位。
+依据驾驶人的驾驶目的和行为变化，将整个驾驶过
+程划分为避险和恢复两个阶段。其中避险阶段关注
+的是危险的出现和消失，因此避险阶段的起点为预
+警点，终点为行人位置；而恢复阶段关注的是速度
+的回升，因此恢复阶段的起点为最小速度点，终点
+为速度恢复至稳定的点（稳态开始点）。不同阶段在
+评价时所关注的对象不同，就避险阶段而言，更加
+关注避险过程的安全性；就恢复阶段而言，更加关
+注恢复过程的恢复水平，包括其恢复速度和恢复
+能力；就整个全过程而言，更加关注整体的稳定
+水平。基于此，文中构建了行人过街事件中预警系
+统和天气条件作用下的驾驶行为影响模式：
+I = Y1(X1，X31) + Y2(X2，X32) = X1(
+)
+db，dc +
+X2(
+)
+t，Δv + X3(
+)
+X31( )
+a1 ，X32( )
+a2
+（2）
+式中，I代表驾驶行为影响模式，Y1代表避险阶段，
+Y2 代表恢复阶段，X1 代表安全水平，X2 代表恢复
+水平，X31 代表避险阶段的稳定水平，X32 代表恢复
+阶段的稳定水平，X3 代表整个全过程的稳定水平，
+db和dc分别代表体现初始安全水平的首次制动距离
+和体现最终安全水平的最小冲突距离，t和Δv分别
+代表体现恢复快速性的恢复稳定时间和体现恢复能
+力的速度恢复量，a1和a2分别代表体现避险阶段稳
+定性的最大减速度和体现恢复阶段稳定性的最大加
+速度。
+基于前面构建的驾驶行为影响模式，从安全
+水平、恢复水平和稳定水平3个层面选取能够反映
+不同影响模式之间差异的指标，从多维度构建衡量
+驾驶绩效的综合指标体系。具体的指标解释见表1。
+0
+0
+120
+100
+80
+60
+40
+20
+120
+80
+160
+40
+-20
+-40
+-60
+-80
+-100
+距离/m
+-3
+-5
+-1
+1
+3
+20
+30
+10
+40
+50
+60
+A1
+B1
+B2
+B3
+A2
+A3
+A1
+B1
+B2
+B3
+A2
+A3
+A1
+B1
+B2
+B3
+A2
+A3
+速度/(km·h-1)
+加速度/(m·s-2)
+制动踏板功效/(N·s)
+稳态开始点
+最小速度点
+最大加速度点
+最大减速度点
+开始制动点
+图6　速度、加速度和制动踏板功效的空间曲线
+Fig. 6　Spatial variation curves of speed， acceleration and 
+brake pedal efficacy
+速度/(km·h-1)
+加速度/(m·s-2)
+制动踏板功效/(N·s)
+最小速度点
+最大加速度点
+最大减速度点
+开始
+制动点
+行人触发点
+行人消失点
+行人位置
+预警
+点
+最小冲
+突距离
+首次制动距离
+稳态开始点
+速度恢复量
+恢复稳定时间
+恢复阶段
+避险阶段
+70
+50
+30
+10
+3
+0
+-3
+90
+60
+30
+0
+距离/m
+-100
+-70
+-40
+-10
+20
+50
+80
+图7　驾驶行为影响模式图
+Fig. 7　Influence model diagram of driving behavior
+119
+
+--- Page 7 ---
+第 52 卷
+华南理工大学学报（自然科学版）
+2. 3　结果分析
+2. 3. 1　各指标的描述性统计结果
+对晴天和雾天条件下使用3 种预警系统时的
+6 项指标进行描述性统计，结果以均值±标准差的
+形式呈现，如表2所示。从表中可以看出，相同天
+气条件下不同预警系统之间和相同预警系统下不同
+天气条件之间，各指标可能存在差异。
+2. 3. 2　双因素重复测量方差分析
+在本实验中，同一被试在不同的时间点被重复
+测量，样本数据之间存在相关性。因此，本研究采
+用双因素重复测量方差分析方法，探究预警系统、
+天气条件以及两因素间交互作用对驾驶过程中稳定
+水平、恢复水平以及安全水平的影响。在重复测量
+分析过程中，为验证研究结果的重要性，文中还计
+算了效应量，效应量值越大，表明该方案对指标的
+变异解释率越高。效应量的具体计算公式为
+η2 = Sb/St = Sb/(Sb + Sw)
+（3）
+式中，η2为效应量，Sb为组间差异，Sw为组内差异，
+St为总偏差平方和。Ferguson［30］总结了社会科学领
+域中小、中、大3种参数水平所对应的效应量临界
+参考值，分别为0. 01、0. 25和0. 64。
+各指标显著性和效应量的计算结果如表3所示，
+其中F为自由度，P为显著性计算结果。
+（1）首次制动距离反映预警系统和天气状况
+对避险阶段初始安全水平的影响。结果显示，预警
+系统对首次制动距离的主效应存在统计学差异
+（F = 284. 295，P < 0. 001），天气状况对首次制动距
+离的主效应呈弱显著（F = 2. 970，P = 0. 094 < 0. 1），
+预警系统和天气对首次制动距离的影响存在交互
+效应（F = 5. 293，P = 0. 007 < 0. 05）（参考图8）。
+因此，需要对预警系统和天气进行单独的效应检验，
+结果如图9所示，其中，相同字母之间的对比为预
+表2　指标的描述性统计结果
+Table 2　Descriptive statistic results of indicators
+实验场景
+晴天_Baseline
+晴天_HDD
+晴天_HUD
+雾天_Baseline
+雾天_HDD
+雾天_HUD
+db/m
+64. 50±10. 22
+53. 16±12. 26
+27. 33±7. 98
+68. 22±10. 07
+47. 18±12. 73
+23. 96±5. 72
+dc/m
+10. 75±6. 97
+15. 02±5. 25
+20. 96±6. 58
+10. 63±6. 42
+16. 36±5. 38
+21. 65±5. 91
+t/s
+12. 70±3. 95
+12. 86±4. 34
+11. 84±4. 50
+14. 33±4. 85
+10. 78±3. 56
+11. 05±3. 83
+Δv/（km·h−1）
+50. 03±7. 43
+44. 49±11. 32
+42. 73±8. 62
+46. 04±10. 94
+43. 71±8. 30
+39. 98±7. 30
+a1/（m·s−2）
+8. 30±1. 94
+6. 94±2. 34
+5. 03±1. 23
+7. 77±2. 66
+6. 59±1. 88
+4. 61±1. 12
+a2/（m·s−2）
+5. 84±0. 77
+5. 80±0. 84
+5. 45±0. 93
+5. 85±0. 72
+5. 92±0. 77
+5. 26±1. 30
+表3　指标显著性及效应量计算结果1）
+Table 3　Calculation results of indicators significance and 
+effect size
+指标
+db
+dc
+t
+Δv
+a1
+a2
+因素
+预警系统
+天气
+天气×预警系统
+预警系统
+天气
+天气×预警系统
+预警系统
+天气
+天气×预警系统
+预警系统
+天气
+天气×预警系统
+预警系统
+天气
+天气×预警系统
+预警系统
+天气
+天气×预警系统
+F
+284. 295
+2. 970
+5. 293
+58. 698
+0. 907
+0. 376
+4. 509
+0. 675
+3. 393
+9. 216
+4. 880
+0. 792
+62. 221
+2. 927
+0. 059
+8. 365
+0. 044
+0. 674
+P
+0. 000***
+0. 094*
+0. 007**
+0. 000***
+0. 348
+0. 688
+0. 015**
+0. 417
+0. 040**
+0. 001**
+0. 034**
+0. 457
+0. 000***
+0. 097*
+0. 943
+0. 001**
+0. 834
+0. 513
+η2
+0. 896
+0. 083
+0. 138
+0. 640
+0. 027
+0. 011
+0. 120
+0. 020
+0. 093
+0. 218
+0. 129
+0. 023
+0. 653
+0. 081
+0. 002
+0. 202
+0. 001
+0. 020
+1）*表示0. 05 < P < 0. 10，**表示0. 001 ≤ P ≤ 0. 05，***表示
+P < 0. 001，下同。
+表1　指标体系
+Table 1　Index system
+维度
+安全
+水平
+恢复
+水平
+稳定
+水平
+指标
+db/m
+dc/m
+t/s
+Δv/（km·h−1）
+a1/（m·s−2）
+a2/（m·s−2）
+含义
+从预警点到首次踩下制动踏板，主车所行驶
+的距离，称为首次制动距离，db越小，表明对
+危险越早地做出反应
+当行人开始移动并离开主车所在车道时，主
+车与行人之间的最小碰撞距离，dc越大，表
+明避险完成得越早
+从最小速度点到稳态开始点所经历的时间，
+称为恢复稳定时间，t 越短，表明恢复速度
+越快
+最小速度与稳态速度之间的差值，称为速度
+恢复量，Δv越大，表明恢复能力越强
+从预警点到行人位置范围内的最大减速度
+（取绝对值），a1越小，表明减速过程越缓和
+从最小速度点到稳态开始点范围内的最大
+加速度，a2越小，表明加速过程越平稳
+120
+
+--- Page 8 ---
+第 4 期
+边扬 等：行人过街事件网联HUD预警系统对驾驶行为的影响
+警系统的单独效应，不同字母之间的对比为天气状
+况的单独效应，下同。预警系统的成对比较结果
+显示：在晴天条件下，Baseline组与HDD组存在显
+著差异（P < 0. 001），差值为11. 349（差值95% 置信
+区间为4. 824~17. 874）；Baseline 组与HUD 组存在
+显著差异（P < 0. 001），差值为37. 170（差值95% 置
+信区间为31. 092~43. 248）；HDD 组与HUD 组存在
+显著差异（P < 0. 001），差值为25. 821（差值95% 置
+信区间为20. 731~30. 911）。雾天条件下得到与晴
+天条件下相似的结论。天气的成对比较结果显示：
+Baseline 组在晴天和雾天条件下无显著差异；HDD
+组在晴天和雾天条件下存在显著差异（P = 0. 018 < 
+0. 05），差值为5. 979（差值95% 置信区间为1. 111~
+10. 847）；HUD 组在晴天和雾天条件下存在显著差
+异（P = 0. 030 < 0. 05），差值为3. 377（差值95% 置
+信区间为0. 350~6. 404）。
+综上，晴天和雾天条件下，HUD 组的首次制
+动距离最小，其次是HDD 组；相比晴天条件下，
+Baseline 组在雾天条件下表现出更长的制动距离，
+而HDD 和HUD 组在雾天条件下表现出更短的首次
+制动距离。以上结果表明，HUD 和HDD 预警系统
+均缩短了驾驶人的感知距离，使驾驶人更早地对危
+险做出反应［3］，且HUD 组优于HDD 组，而雾天条
+件下，这种优势更为明显。
+（2）最小冲突距离反映预警系统和天气状况对
+避险阶段最终安全水平的影响。结果显示，预警系
+统对最小冲突距离的主效应存在统计学差异（F = 
+58. 698，P < 0. 001），主效应下两两比较的结果如
+图10 所示。其中HUD 组的最小冲突距离最大，
+与以往研究中HUD 预警系统提高了与行人之间安
+全裕度的结论相一致［31］。天气状况对最小冲突距离
+的主效应以及两因素的交互效应均不存在统计学
+差异，表明天气状况虽然降低驾驶人的感知，但尚
+未发现其对最终安全水平的影响，这可能与减速过
+程中采取更加紧急的制动行为有关［17］。
+（3）恢复稳定时间反映预警系统和天气状况对恢
+复阶段恢复速度的影响。结果显示，预警系统对恢
+复稳定时间的主效应存在统计学差异（F = 4. 509，
+P = 0. 015 < 0. 05），天气状况对恢复稳定时间的主
+效应不存在统计学差异，预警系统和天气对恢复稳
+定时间的影响存在交互效应（F = 3. 393，P = 0. 040 < 
+0. 05）（参考图11）。因此，需要对预警系统和天气
+状况进行单独的效应检验，结果如图12 所示。预
+警系统的成对比较结果显示，在晴天条件下，
+Baseline组、HDD组和HUD组两两之间均不存在显
+著差异。而在雾天条件下，Baseline 组与HDD 组存
+在显著差异（P = 0. 008），差值为3. 552（差值95%
+置信区间为0. 808~6. 295）；Baseline组与HUD组存
+在显著差异（P = 0. 032），差值为3. 279（差值95%
+置信区间为0. 229~6. 328）；HDD 组与HUD 组不存
+在显著差异。天气状况的成对比较结果显示：
+A2—B2
+**
+A3—B3
+**
+A2
+90
+60
+30
+0
+A3
+A1
+A1—A2
+A1—A3
+A2—A3
+***
+B1—B2
+B1—B3
+B2—B3
+***
+B2
+B3
+B1
+场景
+首次制动距离/m
+图9　首次制动距离的单独效应图
+Fig. 9　Simple effect diagram of first braking distance
+HDD
+68.22
+64.5
+47.18
+53.16
+27.33
+23.96
+80
+60
+40
+20
+0
+Baseline
+HUD
+晴天
+系统
+雾天
+首次制动距离/m
+图8　首次制动距离交互效应图
+Fig. 8　Interaction effect diagram of first braking distance
+HDD
+P < 0.001***
+P < 0.001***
+P < 0.001***
+HUD
+30
+20
+10
+0
+最小冲突距离/m
+Baseline
+系统
+图10　最小冲突距离主效应图
+Fig. 10　Main effect diagram of minimum conflict distance
+121
+
+--- Page 9 ---
+第 52 卷
+华南理工大学学报（自然科学版）
+Baseline 组和HUD 组在晴天和雾天条件下无显著
+差异；HDD 组在晴天和雾天条件下存在显著差异
+（P = 0. 021 < 0. 05），差值为2. 081（差值95% 置信
+区间为0. 338~3. 824）。
+综上，晴天条件下，HUD 组的恢复稳定时间
+最短；雾天条件下，HDD 组的恢复稳定时间最短。
+相比晴天条件下，Baseline组在雾天条件下表现出更
+长的恢复稳定时间，而HDD 和HUD 组在雾天下表
+现出更短的恢复稳定时间。以上结果表明，在晴天
+条件下，HDD和HUD预警系统均加快了恢复速度，
+缩短了速度恢复至稳定的时间，提高了恢复水平。
+而雾天条件下，这种优势更为明显，可能与雾天增
+加了驾驶人对预警系统的依赖程度有关，使其预警
+系统在雾天条件下能够发挥更大的效用［19］。
+（4）速度恢复量反映预警系统和天气状况对恢
+复阶段恢复能力的影响。结果显示：预警系统对速
+度恢复量的主效应存在统计学差异（F = 9. 216，
+P = 0. 001），主效应下两两比较的结果如图13所示，
+其中Baseline组的速度恢复量最大，恢复程度更高，
+恢复能力更强；天气状况对速度恢复量的主效应存
+在统计学差异（F = 4. 880，P = 0. 034），晴天条件
+下的速度恢复量更大，恢复水平更高；两因素对速
+度恢复量的影响不存在交互效应。综上，HUD 组
+表现出最低的速度恢复量，这可能与HUD 组中驾
+驶人具有更小的降速程度有关；雾天下驾驶人所表
+现出更加小心的驾驶行为，可能导致雾天下的速度
+恢复量更低［32］。
+（5）可通过最大减速度反映预警系统和天气状
+况对避险阶段驾驶稳定水平的影响。结果显示：预
+警系统对最大减速度的主效应存在统计学差异（F = 
+62. 221，P < 0. 001），主效应下两两比较的结果如
+图14 所示，其中HUD 组的最大减速度最小，稳定
+水平更高，结合安全水平中最小冲突距离的结果可
+以看出，在避险过程中HUD组可以在不损失安全性
+的前提下采取更加缓和、稳定的减速过程［17］；天气
+状况对最大减速度的主效应呈弱显著（F = 2. 927，
+P = 0. 097 < 0. 1），雾天条件下的最大减速度更小，
+稳定水平更高，这可能与雾天条件下更加小心的驾
+驶行为有关［8，32］；两因素对最大减速度的影响不存
+在交互效应。
+（6）可通过最大加速度反映预警系统和天气状
+B1—B2
+B1—B3
+**
+A2—B2
+**
+A2
+A3
+A1
+20
+16
+12
+8
+4
+0
+B2
+B3
+B1
+场景
+恢复稳定时间/s
+图12　恢复稳定时间的单独效应图
+Fig. 12　Simple effect diagram of recovery stability time
+P < 0.001***
+速度恢复量/(km·h-1)
+HDD
+60
+40
+20
+0
+HUD
+Baseline
+系统
+图13　速度恢复量的主效应图
+Fig. 13　Main effect diagram of velocity recovery degree
+P < 0.001***
+P < 0.001***
+P = 0.001**
+最大减速度/(m·s-2)
+HDD
+12
+8
+4
+0
+HUD
+Baseline
+系统
+图14　最大减速度的主效应图
+Fig. 14　Main effect diagram of maximum deceleration
+12.70
+14.33
+16
+14
+12
+10
+8
+12.86
+10.78
+11.84
+11.05
+HDD
+Baseline
+HUD
+系统
+晴天
+雾天
+ 
+ 
+ 
+ 
+ 
+恢复稳定时间/s
+图11　恢复稳定时间交互效应图
+Fig. 11　Interaction effect diagram of recovery stability time
+122
+
+--- Page 10 ---
+第 4 期
+边扬 等：行人过街事件网联HUD预警系统对驾驶行为的影响
+况对恢复阶段驾驶稳定水平的影响。结果显示：预
+警系统对最大加速度的主效应存在统计学差异（F = 
+8. 365，P = 0. 001 < 0. 05），主效应下两两比较的
+结果如图15所示，其中HUD组的最大加速度最小，
+稳定水平更高，这可能与HUD 组更早地完成避险，
+留给恢复阶段充足的起步空间有关，也可能与
+HUD 组在避险阶段中速度降低程度更小有关，因
+此在恢复阶段所需要的努力更小；天气状况对最大
+加速度的主效应以及两因素的交互效应均不存在统
+计学差异。
+3　结语
+面向行人过街事件，文中探讨了网联环境下
+HUD 预警系统在晴天和雾天条件下对驾驶行为的
+影响；依托网联环境的驾驶模拟实验平台，获取晴
+天和雾天两种天气条件下，使用3 种预警系统
+（Baseline/HDD/HUD）驾驶时的驾驶行为指标，并通
+过对行人过街事件网联HUD 预警系统作用下驾驶
+人的避险恢复过程进行描述，完成驾驶行为影响模
+式和综合指标体系的构建；从安全、恢复和稳定
+3个层面综合分析了在行人过街事件中，预警系统、
+天气状况以及两因素间交互作用对驾驶行为的
+影响，得到的主要结论如下：
+（1）在行人过街事件中，不同预警系统在不同
+天气状况下对驾驶行为的影响存在显著差异。
+（2）网联HUD 预警系统显著提高了避险阶段的
+安全水平，使驾驶人对危险更快地做出反应，更早
+地完成避险；同时也提升了驾驶人在雾天条件下的
+感知能力。
+（3）网联HUD 预警系统显著缩短了雾天条件下
+速度恢复至稳定的时间，提高了速度恢复效率，晴
+天条件下的速度恢复量均高于雾天条件下。
+（4）网联HUD 预警系统对全过程的稳定水平具
+有明显的提升作用，使驾驶人在全过程中采取更缓
+和的加、减速行为。
+文中以行人过街事件为例，对3种预警系统在
+晴天和雾天条件下的有效性展开研究，而随着增
+强现实（AR）技术的发展，在未来可以增加新型AR
+预警系统有效性的相关研究。同时，各类预警系
+统在不同等级雾天（轻雾、浓雾等）和其他不良天
+气（雪、雨等）条件下的有效性也值得进一步探讨。
+此外，研究中考虑了预警系统和天气条件两种外
+部作用因素对驾驶行为的影响，未来可探究不同
+驾驶人属性（性别、年龄等）在驾驶行为上的差异，
+以进一步提升HUD 预警系统效用评估的有效性和
+全面性。
+参考文献：
+［1］  ALI Y，BLIEMER M C J，ZHENG Z，et al．Cooperate 
+or not？Exploring drivers’ interactions and response 
+times to a lane-changing request in a connected environ⁃
+ment ［J］．Transportation Research Part C：Emerging 
+Technologies，2020，120：102816/1-23.
+［2］  常鑫，李海舰，荣建，等．混有网联车队的高速公路
+通行能力分析［J］．华南理工大学学报（自然科学
+版），2020，48（4）：142-148.
+CHANG Xin，LI Haijian，RONG Jian，et al．Analysis 
+of capacity for mixed traffic flow with connected vehicle 
+platoon on freeway ［J］．Journal of South China Univer⁃
+sity of Technology （Natural Science Edition），2020，48
+（4）：142-148.
+［3］  WINKLER S，KAZAZI J，VOLLRATH M．Distractive 
+or supportive-how warnings in the head-up display affect 
+drivers’ gaze and driving behavior ［C］∥ Proceedings of 
+2015 IEEE the 18th International Conference on Intelli⁃
+gent Transportation Systems．Gran Canaria：IEEE，
+2015：1035-1040.
+［4］  WERNEKE J，KLEEN A，VOLLRATH M．Perfect 
+timing：urgency，not driving situations，influence the 
+best timing to activate warnings ［J］．Human Factors，
+2014，56（2）：249-259.
+［5］  HORREY W J，WICKENS C D．In-vehicle glance dura⁃
+tion：distributions，tails，and model of crash risk ［J］．
+Transportation Research Record，2007，2018（1）：22-28.
+［6］  JAKUS G，DICKE C，SODNIK J．A user study of audi⁃
+tory，head-up and multi-modal displays in vehicles ［J］．
+Applied Ergonomics，2015，46：184-192.
+［7］  LIU Y C，WEN M H．Comparison of head-up display 
+P = 0.004**
+P = 0.006**
+最大加速度/(m·s-2)
+8
+6
+4
+2
+0
+HDD
+HUD
+Baseline
+系统
+图15　最大加速度的主效应图
+Fig. 15　Main effect diagram of maximum acceleration
+123
+
+--- Page 11 ---
+第 52 卷
+华南理工大学学报（自然科学版）
+（HUD） vs．head-down display （HDD）：driving perfor⁃
+mance of commercial vehicle operators in Taiwan ［J］．
+International Journal of Human Computer Studies，
+2004，61（5）：679-697.
+［8］  WU Y，ABDEL-ATY M，CAI Q，et al．Developing an 
+algorithm to assess the rear-end collision risk under fog 
+conditions using real-time data ［J］．Transportation 
+Research Part C：Emerging Technologies，2018，87：
+11-25.
+［9］  WINKLER S，KAZAZI J，VOLLRATH M．How to 
+warn drivers in various safety-critical situations：different 
+strategies，different reactions ［J］．Accident Analysis 
+and Prevention，2018，117：410-426.
+［10］  NAUJOKS F，NEUKUM A．Specificity and timing of 
+advisory warnings based on cooperative perception
+［C］∥ Proceedings of Mensch & Computer 2014-Work⁃
+shopband．Munich：Oldenburg Science Press，2014：
+229-238.
+［11］  国家统计局．中国统计年鉴2020 ［M］．北京：中国
+统计出版社，2020.
+［12］  Istituto Nazionale di Statistica．ACI-ISTAT incidenti 
+stradali 2017 ［EB/OL］．（2019-09-17）［2023-02-10］．
+https：//www. istat. it/it/files//2018/07/Incidenti-stradali_
+2017.
+［13］  ALI Y，SHARMA A，HAQUE M M，et al．The im⁃
+pact of the connected environment on driving behavior 
+and safety：a driving simulator study ［J］．Accident 
+Analysis and Prevention，2020，144：105643/1-17.
+［14］  史金磊．基于用户调研和模拟驾驶的平视显示预警
+系统有效性研究［D］．杭州：浙江理工大学，2020.
+［15］  WINKLER S，KAZAZI J，VOLLRATH M．Practice 
+makes better：learning effects of driving with a multi-
+stage collision warning ［J］．Accident Analysis and 
+Prevention，2018，117：398-409.
+［16］  HAQUE M M，OVIEDO-TRESPALACIOS O，SHARMA 
+A，et al．Examining the driver-pedestrian interaction 
+at pedestrian crossings in the connected environment：a 
+hazard-based duration modelling approach ［J］．Trans⁃
+portation Research Part A：Policy and Practice，2021，
+150：33-48.
+［17］  YUE L，ABDEL-ATY M，WU Y，et al．Influence of 
+pedestrian-to-vehicle technology on drivers’ response 
+and safety benefits considering pre-crash conditions
+［J］．Transportation Research Part F：Traffic Psychology 
+and Behaviour，2020，73：50-65.
+［18］  SHARMA A，ZHENG Z，KIM J，et al．Is an in⁃
+formed driver a better decision maker？A grouped ran⁃
+dom parameters with heterogeneity-in-means approach 
+to investigate the impact of the connected environment 
+on driving behaviour in safety-critical situations ［J］．
+Analytic Methods in Accident Research，2020，27：
+100127/1-24.
+［19］  WU Y，ABDEL-ATY M，PARK J，et al．Effects of 
+crash warning systems on rear-end crash avoidance 
+behavior under fog conditions ［J］．Transportation 
+Research Part C：Emerging Technologies，2018，95：
+481-492.
+［20］  MUELLER A S，TRICK L M．Driving in fog：the 
+effects of driving experience and visibility on speed 
+compensation and hazard avoidance ［J］．Accident 
+Analysis and Prevention，2012，48：472-479.
+［21］  GAO K，TU H，SUN L，et al．Impacts of reduced 
+visibility under hazy weather condition on collision risk 
+and car-following behavior：implications for traffic con⁃
+trol and management ［J］．International Journal of Sus⁃
+tainable Transportation，2020，14（8）：635-642.
+［22］  ZHANG Y，YAN X，WU J，et al．Effect of warning 
+system on interactive driving behavior at unsignalized 
+intersection under fog conditions：a study based on 
+multiuser driving simulation ［J］．Journal of Advanced 
+Transportation，2020，2020：8871875/1-16.
+［23］  AHMED M M，YANG G，GAWEESH S．Assessment 
+of drivers’ perceptions of connected vehicle-human ma⁃
+chine interface for driving under adverse weather condi⁃
+tions：preliminary findings from Wyoming ［J］．Fron⁃
+tiers in Psychology，2020，11：1889/1-12.
+［24］  STRAYER D L，COOPER J M，GOETHE R M，et al．
+Assessing the visual and cognitive demands of in-
+vehicle information systems ［J］．Cognitive Research：
+Principles and Implications，2019，4（1）：1-22.
+［25］  李雪玮，赵晓华，李振龙，等．基于雾天高速车路
+协同模拟驾驶的驾驶人视觉信息加工模式［J］．华
+南理工大学学报（自然科学版），2021，49（3）：131-
+138，148.
+LI Xuewei，ZHAO Xiaohua，LI Zhenlong，et al.
+Driver’s visual information processing mode in foggy 
+highway cooperative vehicle-infrastructure system envi⁃
+ronment based on simulated driving ［J］．Journal of 
+South China University of Technology （Natural Science 
+Edition），2021，49（3）：131-138，148.
+［26］  公安部交通管理局．2020年全国新注册登记机动车
+3 328 万辆新能源汽车达492 万辆［EB/OL］．（2021-
+01-07）［2023-02-10］．https：//app.mps.gov.cn/gdnps/
+pc/content.jsp?id=7647257&mtype=.
+［27］  CHOW S C，SHAO J，WANG H，et al．Sample size 
+calculations in clinical research ［M］．3ed．State of 
+124
+
+--- Page 12 ---
+第 4 期
+边扬 等：行人过街事件网联HUD预警系统对驾驶行为的影响
+Florida：Chapman and Hall/ CRC Press，2017.
+［28］  胡寿松．自动控制原理［M］．北京：科学出版社，
+2001.
+［29］  陈晨．城市道路驾驶员生态驾驶行为评估方法研究
+［D］．北京：北京工业大学，2016.
+［30］  FERGUSON C J．An effect size primer：a guide for cli⁃
+nicians and researchers ［J］．Professional Psychology 
+Research and Practice，2009，40（5）：532-538.
+［31］  LARGE D R，KIM H，MERENDA C，et al．Investi⁃
+gating the effect of urgency and modality of pedestrian 
+alert warnings on driver acceptance and performance
+［J］．Transportation Research Part F：Traffic Psychology 
+and Behaviour，2019，60：11-24.
+［32］  WU Y，ABDEL-ATY M，PARK J，et al．Effects of 
+real-time warning systems on driving under fog condi⁃
+tions using an empirically supported speed choice modeling 
+framework ［J］．Transportation Research Part C：
+Emerging Technologies，2018，86：97-110.
+Effect of Connected HUD Warning System on Driving Behavior for 
+Pedestrian Crossing Events
+BIAN Yang ZHANG Yu ZHAO Xiaohua ZHAO Xuena LI Xuewei
+（Beijing Key Laboratory of Traffic Engineering，Beijing University of Technology，Beijing 100124，China）
+Abstract：In order to demonstrate the effectiveness of the warning system, this study explored the influence of the 
+head up display warning system on driving behavior under different weather conditions in the connected 
+environment for pedestrian crossing events.  Firstly, this paper designed three warning systems: baseline, head down 
+display (HDD), and head up display (HUD).  Based on the driving simulation platform, it developed connected 
+scenarios of urban roads under clear and foggy weather conditions and extracted driving behavior parameters 
+through experimental testing.  Then, from the micro level, the paper described the whole spatial change process of 
+driving behavior under the action of connected HUD warning system for pedestrian crossing events, analyzed the 
+influence rules of the warning systems and weather conditions on driving behavior, and constructed the influence 
+model of driving behavior including risk avoidance stage and recovery stage.  Next, a comprehensive index system 
+was proposed to reflect the safety level at the risk avoidance stage, the recovery level at the recovery stage and the 
+stability level of the whole process, including the first braking distance, the minimum conflict distance, the recovery 
+stabilization time, the recovery amount of velocity, the maximum deceleration and the maximum acceleration.  
+Finally, it quantified the effects of different warning systems (Baseline/ HDD/ HUD), weather conditions (clear 
+weather/ foggy weather) and the interaction between the two factors on driving behavior.  Research shows that the 
+connected HUD warning system for pedestrian crossing events has a significant effect on drivers’ driving behavior 
+in the risk avoidance and recovery stage, and it significantly improves the safety level of driving behavior in the risk 
+avoidance stage.  At the same time, it has a significant improvement effect on the recovery efficiency during the 
+recovery stage, and also significantly affects the stability level of the operational characteristics throughout the 
+whole process.  The connected HUD warning system for pedestrian crossing events shows more obvious advantages 
+under foggy conditions.
+Key words：connected environment；head up display warning system；pedestrian crossing event；driving behaviour；
+driving simulation technology
+125

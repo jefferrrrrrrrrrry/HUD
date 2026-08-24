@@ -1,0 +1,17 @@
+# Python 构建产物
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# nature-skills 原本是独立 git 仓库，其 .git 已改名为 .git.disabled 以便正常纳入本仓库；
+# 该目录是另一个仓库的对象库（约 37M），不随本仓库提交。
+# 恢复其独立仓库身份：mv nature-skills/.git.disabled nature-skills/.git
+nature-skills/.git.disabled/
+
+# 网页抓取缓存（可由 scripts/verify_jcr_if.py 重新生成）
+scripts/_wos_journal_cache.json
+
+# 打包产物
+*.tar.gz
+HUD.zip

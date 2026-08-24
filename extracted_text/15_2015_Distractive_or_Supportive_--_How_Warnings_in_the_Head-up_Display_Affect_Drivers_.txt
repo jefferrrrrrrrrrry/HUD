@@ -1,0 +1,655 @@
+--- Page 1 ---
+Distractive or supportive – how warnings in the head-
+up display affect drivers’ gaze and driving behavior 
+ 
+Susann Winkler, Juela Kazazi & Mark Vollrath 
+Department of Traffic and Engineering Psychology 
+Technische Universität Braunschweig 
+Braunschweig, Germany 
+ 
+ 
+Abstract— Urban areas expose drivers to a lot of challenges 
+(e.g., many kinds of distracting stimuli and road users) and 
+critical situations, increasing the probability of driver errors. 
+Therefore the accident rate in urban areas is quite high and 
+driver assistance is needed. As part of the research project 
+UR:BAN, this study investigates the effectiveness of four 
+different types of driver warnings (+ control group), presented in 
+a head-up display (HUD), to support drivers in a very critical 
+urban scenario. The aim of these driver warnings was to alert 
+drivers to a forthcoming pedestrian crossing the ego vehicle’s 
+road, eliciting a fast and strong response from the drivers like an 
+emergency brake. The driver warnings varied in their strategy 
+(attention vs. reaction oriented) and specificity (generic vs. 
+specific). In a driving simulation the drivers’ gaze and driving 
+behavior were analyzed. A total of sixty drivers were tested in a 
+between-subjects design (27 female, 33 male; M = 23.7 years, 
+SD = 3.7 years). In general, all driver warnings affected the 
+drivers’ performance positively. Even though the number of 
+collisions was not reduced, drivers showed a faster and stronger 
+brake reaction when being warned, which nevertheless reduced 
+the collision severity. While all drivers gazed at the safety-critical 
+object, only about half of the drivers showed a HUD glance. 
+When the drivers gazed at the HUD, the positive effect of the 
+driver warnings on the brake reaction time was reduced. Thus, 
+driver warnings which do not have to be fixated in order to be 
+perceived are an interesting perspective for future research. 
+Furthermore, the warning types differed little from each other in 
+their effects on the drivers’ performance. However, one warning, 
+which was somewhat more unusual and difficult to understand, 
+was least effective. This shows that a bad design of a warning can 
+negate the potential benefits. Overall, the examined driver 
+warnings can be recommended for very critical situations as they 
+improved the drivers’ performance and did not distract them. 
+However, not all driver warnings are equally well suited. 
+Keywords— driver warning; accident prevention; driving and 
+gaze behavior; head-up display; urban area 
+I. INTRODUCTION 
+Urban areas and their complex driving situations are a big 
+challenge to drivers. They are confronted with numerous 
+distracting stimuli and high information density, combined 
+with short decision times. Additionally, the interaction between 
+various road users (vehicles, pedestrians, bicyclists) is at its 
+maximum here. Thus, many critical situations arise in urban 
+areas, combined with driver errors this result in a large number 
+of accidents. Assisting drivers here is of great importance and 
+thus is also aim of the research project UR:BAN. The 
+following study, as being part of this project, investigates the 
+effectiveness of different visual driver warning concepts in 
+supporting drivers in critical urban situations. 
+Recent research concentrates on developing methods to 
+detect objects (e.g., pedestrians, bicyclists, obstacles) in the 
+driving environment and assess the hazard they present in order 
+to trigger driver (collision) warnings if needed [1]. Aim of 
+these is to alert drivers to the impending critical situation so 
+that they can react adequately such as by braking or swerving. 
+For example, in a very critical situation with imminent 
+collision risk, driver warnings should elicit a fast and strong 
+brake reaction from drivers that could reduce the occurrence 
+and severity of accidents. In order to achieve this, the design of 
+driver warnings becomes very important. 
+First of all, driver warnings have to be perceived by drivers. 
+For that purpose they should be salient enough to attract 
+drivers’ glances even in time-critical situations, but without 
+distracting the drivers from the road and the critical situation. 
+This brings the head-up display (HUD) into focus as a location 
+for driver warnings. As compared to head-down displays 
+(HDD) like instrument panels [2] [3] or center column displays 
+[4], the HUD projects warnings into the windshield. Thus, 
+drivers can perceive them in their field of view, overlapping 
+the road reality, which means shorter eye accommodation 
+times and shorter gaze retention times than instrument panels 
+[5] or center column displays [4]. Furthermore, displaying 
+driver warnings in the HUD lessens the chances of overseeing 
+a critical event in the environment and saves time for the 
+drivers to react upon such [6]. 
+However, driver warnings should not capture the drivers’ 
+glance for too long, which might occur if drivers do not 
+immediately understand the warnings, perhaps causing them to 
+be distracted from the actual critical situation and slowing 
+down their reaction. Hence, driver warnings should be 
+designed in a way that drivers can perceive them promptly, 
+understand the enclosed information intuitively and process it 
+rapidly [7] in order to assess the critical situation appropriately. 
+This is supported by [8], who found an increase in driver 
+reaction and detection times upon changes with increasing 
+cognitive demand of warnings. As traffic signs are well known 
+to all drivers from driver license training and everyday traffic, 
+their use as driver warnings might help drivers to process and 
+2015 IEEE 18th International Conference on Intelligent Transportation Systems
+978-1-4673-6596-3/15 $31.00 © 2015 IEEE
+DOI 10.1109/ITSC.2015.172
+1035
+
+--- Page 2 ---
+understand critical situations better, supporting them optimally 
+to select and trigger an adequate reaction [9] [10] [11] [12]. 
+In very critical scenarios the time left to prevent a collision 
+with a safety-critical object is limited. During this short time 
+one might concentrate primarily on raising and/or guiding the 
+drivers’ attention in order to improve the understanding of the 
+critical situation (attention oriented), while another warning 
+strategy might skip this step and try to elicit automatic driver 
+responses (reaction oriented). Furthermore, the specificity of 
+the driver warnings may matter. Being specific, they might 
+provide drivers with additional details about the critical 
+situation like the safety-critical object involved (e.g., pedestrian 
+or bicyclist) or the optimal reaction choice (e.g., braking or 
+steering). In contrast, driver warnings could also be generic to 
+avoid the presentation of information which might take drivers 
+too much time to process and thus slow down their reaction. 
+Each warning strategy (attention vs. reaction oriented) in its 
+specificity (generic vs. specific) has advantages and 
+disadvantages. For example, generic driver warnings may lack 
+important details for the understanding of the situation leading 
+to confusion and thus increasing reaction times or they might 
+immediately trigger an automatic driver reaction like 
+emergency braking and thus save time. Aim of this paper is to 
+analyze which warning type would be most effective in 
+supporting drivers in critical urban situations. 
+Exemplary for a very critical urban situation a pedestrian 
+crossing scenario is used in this study, as this type of accident 
+leads to the most deaths in urban areas (26.8% of all fatal 
+accidents in German urban areas in 2013 [13]). The scenario 
+only leaves enough time for a late warning timing, additionally 
+contributing to its high criticality. In this situation driver 
+distraction through the warnings (e.g., by guiding the drivers’ 
+glance away from the relevant scene) might have the most 
+negative impact. If the proposed driver warnings show positive 
+effects over no warning even in this highly critical situation, 
+they could be recommended in general. Therefore this scenario 
+is analyzed in detail in this paper, while the other seven 
+scenarios, examined for drivers to experience the warning in 
+diverse situations, will be reported in a further paper. 
+To summarize, in this driving simulator study the effects of 
+four different driver warnings in the HUD were analyzed in a 
+pedestrian crossing scenario. The aim of this paper is to give a 
+detailed analysis of the drivers’ performance after warning 
+presentation. Special interest lies on how the different warning 
+types influence the attention processes measured by eye-
+tracking and how that affects the brake reactions. Positive 
+effects of every warning type over no warning were expected, 
+as well as differences in the driving and gaze behavior due the 
+warning type (varied in warning strategy and specificity). 
+II. METHODS 
+A. Driver warnings 
+Drivers were supported by visual warnings in form of 
+traffic signs displayed in a multicolor HUD. As any additional 
+acoustic or haptic warning signal might have masked the visual 
+effects of the different warning types, the driver warnings were 
+exclusively given visually. They were projected into the 
+windshield overlapping with the scenery. Presented driver-
+centered, right above the engine hood, measuring maximum 
+21x21 cm (6° visual angle), they were triggered as the safety-
+critical object started moving (around 1.66 s before its crossing 
+point with the ego vehicle). Moreover, the driver warnings 
+varied in their strategy (reaction vs. attention oriented) and 
+specificity (generic vs. specific). In sum, four different warning 
+types were generated (see Table I). As reaction oriented 
+generic (RG) warning, a stop sign was to elicit an immediate 
+brake reaction by the drivers, while the reaction oriented 
+specific (RS) warning displayed a stop sign for brake reactions 
+or a swerving sign when steering reactions were more 
+beneficial like in the analyzed scenario. In the attention 
+oriented generic (AG) warning the drivers’ general attention 
+was to be raised by a caution sign, whereas in the attention 
+specific (AS) warning the triangle included the current safety-
+critical object (a pedestrian in the analyzed scenario) in order to 
+guide the drivers’ attention directly towards it. Table I shows 
+all implemented warning types as well as the control group (C), 
+receiving no warning at all. 
+TABLE I.  
+IMPLEMENTED WARNING VISUALIZATIONS IN THE HUD WITH 
+THE WARNING TYPES PRESENTED IN THE VERY CRITICAL SCENARIO IN COLOR 
+Warning type 
+Presentation in head-up display 
+1) Control (C) 
+No warning 
+2) Reaction generic (RG) 
+3) Reaction specific (RS) 
+4) Attention generic (AG) 
+5) Attention specific (AS) 
+B. Scenario and simulator 
+The study was conducted in the fixed base medium fidelity 
+driving simulator of the Technische Universität Braunschweig. 
+It consists of a seat box with typical car interiors like a steering 
+wheel with force feedback, accelerator and brake pedals as 
+well as two LCD screens serving as rear-view mirrors. The 
+virtual urban scenery created by the driving simulation 
+software SILAB 3.0 (from WIVW [14]; see www.wivw.de) is 
+projected onto three silver screens (left, ahead, right), 
+providing the drivers with a 180° field of view at about 2.1 m 
+distance from the driver’s seat. In the examined very critical 
+driving scenario the ego vehicle was driving straight ahead 
+with 50 km/h on a one-way road with a free green area to the 
+left and a long row of parking cars to the right, when suddenly 
+a pedestrian crossed the ego vehicle’s path from right to left. 
+The pedestrian was occluded from sight by a small van before 
+starting to cross. It was activated to a speed of 2 m/s as soon as 
+the drivers passed a fixed point (hedgehog) in the simulated 
+scene, being around 23 m before the pedestrian crossing point. 
+Drivers had to react immediately, either by very strong braking 
+or swerving onto the green area in order to avoid an imminent 
+collision with the pedestrian. Although both reactions would 
+have been efficient, all drivers braked, whereas almost no one 
+swerved. So the analysis will focus on the braking behavior. 
+The research is supported by the German Federal Ministry for Economic 
+Affairs and Energy on the basis of a decision by the German Bundestag 
+1036
+
+--- Page 3 ---
+C. Participants 
+In total, sixty drivers (27 female, 33 male) participated in 
+the experiment (Mean (M) = 23.7 years, Standard Deviation 
+(SD) = 3.7 years). They were recruited through flyers, mailing 
+lists and an existing pool of trained simulator drivers. The 
+average driving experience was 5.7 years (SD = 3.6 years) and 
+the annual mileage was mainly less than 3000 km. All 
+participants had normal or corrected-to-normal visual acuity. 
+Simulator training was required for participation in order to 
+avoid simulation sickness. Drivers were compensated with 12 € 
+for a successful participation or received course credits (if 
+students at the Technische Universität Braunschweig). 
+D. Procedure 
+After a welcome, participants were instructed in written 
+form about the experiment’s objectives. They signed a consent 
+form and filled in a demographic questionnaire. To familiarize 
+the drivers with the simulator, they absolved an about 15 min 
+training drive in the simulator. Subsequently equipped with the 
+Dikablis glance tracking glasses, they started the actual test 
+drive with in sum eight different critical situations. After the 
+first test drive, a small break was offered, before the second 
+test drive started. Both test drives included the same scenarios, 
+however in randomized orders. In the end, the participants 
+were interviewed about the driver warnings and their usability 
+and thanked for their participation as well as compensated. The 
+entire experiment took approximately one and a half hour. 
+E. Data and data analysis 
+For the experiment, a between-subjects design was used. 
+Each driver experienced one warning type in the critical 
+situation. Accordingly, there were five groups, a control group 
+without a warning and four warning groups receiving different 
+warning types (warning types: no warning (C), reaction 
+oriented generic (RG), reaction oriented specific (RS), 
+attention oriented generic (AG), attention oriented specific 
+(AS), see Table I). The paper analyzes gaze (Dikablis) and 
+driving behavior data (SILAB) separately and in combination 
+focusing on the results of the first test drive. Table II gives an 
+overview of the measured variables analyzed in this paper. 
+TABLE II.  
+ANALYZED VARIABLES 
+Variable 
+Unit 
+Description of variable 
+AOI glance 
+- 
+Number of drivers who gazed at an area of 
+interest (AOI: safety-critical object or HUD) 
+for at least 0.1 s 
+AOI glance 
+duration 
+s 
+Time period in which an AOI (safety-critical 
+object or HUD) is fixated 
+AOI glance 
+reaction time 
+s 
+Time from warning onset until AOI (safety-
+critical object or HUD) fixation 
+Number of 
+collisions 
+- 
+Number of incidents, when the ego vehicle 
+collided with the crossing pedestrian 
+Brake reaction 
+time 
+s 
+Time from warning onset until pressing of 
+the brake pedal 
+Maximum 
+braking value 
+% 
+Maximum pressing of the brake pedal after 
+warning onset in percent of the sample 
+maximum before pedestrian crossing point 
+For inferential statistical data analysis IBM SPSS Statistics 
+22 was used. When applicable a general linear model with the 
+between-subjects factor warning type or a t-test with the factor 
+HUD glance was conducted. For the number of collisions a 
+chi-squared test was computed. A significance level of alpha 
+p = .05 was adopted for all statistical tests. In all other cases 
+descriptive analyses are reported, especially for all data 
+concerning the HUD glance due to a reduced number of 
+participants (N), who actually gazed at the HUD. This will be 
+explained in detail in the following section. 
+III. RESULTS 
+A. Gaze behavior 
+The analysis of the gaze behavior showed that all drivers 
+sooner or later gazed at the safety-critical object (CO). The 
+HUD however, was gazed at before brake initiation by only 
+45.8% of all drivers who received a warning (N = 22). The 
+HUD glance distribution over the warning groups was quite 
+equal, with about half of the drivers within each warning group 
+gazing at the HUD (HUD glance before brake initiation for 
+RG: N = 6, RS: N = 5, AG: N = 5, AS: N = 6). Some more 
+HUD glances occurred after drivers began to brake, especially 
+in the RG warning (HUD glance after brake initiation for RG: 
+N = 5, RS: N = 1, AG: N = 1, AS: N = 1). However, in this 
+paper the HUD glances before brake initiation are focused as 
+this is the critical phase with the most distraction potential of 
+the driver warnings. 
+Inferential statistical analyses of the CO glance showed no 
+significant main effects of the warning type, neither for the CO 
+glance reaction time (F(4,55) = 0.32, p = .867) nor the CO glance 
+duration (F(4,55) = 1.46, p = .228). Overall, the mean CO glance 
+reaction time was about 0.36 s (SD = 0.28 s) and the mean 
+glance duration about 1.72 s (SD = 0.91 s). However, when 
+directly comparing the single warning types with the control 
+group, the RG warning had a noticeably lower CO glance 
+duration compared to the control group (C-RG: p = .022) and 
+in sum the lowest of all warning groups (C: M = 2.10 s, 
+SD = 1.04 s; RG: M = 1.23 s, SD = 0.74 s). 
+The HUD glances were only analyzed in the four warning 
+groups since no driver warnings were presented in the HUD for 
+the control group. As described above, only five to six drivers 
+within every warning group gazed at the HUD at all. Due to the 
+thereby limited number of participants, statistical analyses 
+became critical. Overall, it took drivers on average about 0.18 s 
+(SD = 0.11 s) to gaze at the HUD. Additionally, these glances 
+lasted on average about 0.24 s (SD = 0.12 s). Regarding the 
+means per warning type, the groups were quite similar except 
+for the RS warning. It led to the shortest HUD glance reaction 
+times (M = 0.04 s, SD = 0.07 s), with the glances of three 
+drivers resting already coincidentally on the HUD before the 
+warning was visible. Additionally, the HUD glances upon the 
+RS warning lasted the longest (M = 0.35 s, SD = 0.10 s). 
+B. Number of collisions 
+To analyze the effect of the warning type on the number of 
+collisions, a chi-squared (X²) test was conducted. As can be 
+seen in Fig. 1, there were no overall significant differences in 
+the number of collisions due to the warning type (X² = 1.60, 
+1037
+
+--- Page 4 ---
+p = .808). About half of the drivers encountered an accident in 
+total (n = 31) as well as within every group (see Fig. 1). 
+Fig. 1 further shows the effect of the HUD glance on the 
+number of collisions. In another chi-squared test over all 
+warning types the numbers of collisions did not differ 
+significantly due to the HUD glance either (X² = 3.02, 
+p = .082; share of collisions with HUD glance for RG: 80.0%; 
+RS: 57.1%; AG: 42.9%; AS: 60%). Furthermore, Fig. 1 shows 
+the effect of the warning type on the number of collisions for 
+drivers who showed a HUD glance and for those who did not. 
+The absolute number of collisions with HUD glance as well as 
+its relation to the absolute number of collisions avoided with 
+HUD glance was relatively similar between the warning groups 
+(see Fig. 1). Thus, no general warning type effect on the 
+number of collisions depending on the HUD glance is 
+noticeable. 
+ 
+Fig. 1. Number of collisions for the control and all four warning groups with 
+and without head-up display (HUD) glance, displaying the number of 
+participants (N) included in the bottom of the bars. 
+C. Brake reaction time (Starting to brake) 
+In order to investigate the influence of the warning type on 
+the brake reaction time, a general linear model with the factor 
+warning type was conducted. It showed a significant overall 
+effect of the warning type on the brake reaction time 
+(F(4,55) = 2.54, p = .050). Driving with a warning improved the 
+brake reaction time compared to no warning (see Fig. 2), 
+reaching some significant time improvements in post-hoc tests. 
+The RG and AS warning both led to significantly faster brake 
+reactions than the control group (C-RG: p = .019; C-AS: 
+p = .004). For the AG warning, there was a tendency of an 
+effect (C-AG: p = .052), while the RS warning did not differ 
+significantly from the control group (C-RS: p =.139). 
+Furthermore, the t-test over all warning groups showed a 
+significant main effect of the HUD glance on the brake 
+reaction time (t(46) = -2.12, p = .039). As can be seen in Fig. 2, 
+independent of the warning type drivers gazing at the HUD 
+reacted slower (M = 0.90, SD = 0.12) than drivers disregarding 
+the HUD (M = 0.82 s, SD = 0.14). Yet, only in the RS warning 
+group the positive effect of the driver warnings improving the 
+brake reaction time was evened out, when drivers gazed at the 
+HUD. However, the HUD glance still did not delay the brake 
+reaction compared to the control group either. 
+ 
+Fig. 2. Mean brake reaction time for the control and all four warning groups 
+with and without head-up display (HUD) glance, displaying the number 
+of participants (N) included in the bottom of the bars. 
+D. Maximum braking value (Braking process) 
+Besides reacting fast, it is also important to brake strong 
+enough so that a collision can be avoided. As a measure of this 
+aspect, the maximum braking value was examined by 
+conducting a general linear model with the factor warning type. 
+It showed that the maximum braking value varies significantly 
+with the warning type (F(4,55) = 3.90, p = .007). As can be seen 
+in Fig. 3, except for the RS warning, all driver warnings led to 
+a higher maximum braking value than no warning as in the 
+control group, reaching significance in post-hoc tests (C-RG: 
+p = .012; C-RS: p = .694; C-AG: p = .043; C-AS: p = .026). 
+The RS maximum braking value was also significantly lower 
+than in the other three warning groups (RS-RG: p = .004; RS-
+AG: p = .017; RS-AS: p = .010). 
+ 
+Fig. 3. Mean maximum braking value for the control and all four warning 
+groups with and without head-up display (HUD) glance, displaying the 
+number of participants (N) included in the bottom of the bars. 
+Moreover, according to another t-test over all warning 
+groups there was no difference in the maximum braking value 
+due to whether the drivers gazed at the HUD or not 
+(t(46) = 0.67, p = .506; without HUD glance: M = 91.25%, 
+SD = 14.51%; with HUD glance: M = 87.60%, SD = 22.89%). 
+1038
+
+--- Page 5 ---
+IV. DISCUSSION 
+This paper presents an explorative analysis on how 
+different types of driver warnings in the HUD affect drivers’ 
+performance (driving and gaze behavior) in a very critical 
+pedestrian crossing scenario. The aim is to create driver 
+warnings which most drivers recognize, understand easily and 
+process rapidly in order to reduce the accident rate and severity 
+in urban areas. An immediate emergency brake or swerving 
+onto the green area would have been ideal as a driver response 
+in the examined scenario. However, all but one driver (not 
+even receiving the RS warning) reacted by braking, since the 
+swerving sign might have not been familiar to the drivers. 
+Before discussing the results, some limitations have to be 
+mentioned. First of all, the drivers knew that critical situations 
+might occur through instructions and after encountering the 
+first scenario themselves. Thereby drivers were more alert than 
+perhaps in everyday traffic, to which the laboratory 
+environment additionally contributed [15]. This reduced the 
+effect of surprise, which drivers would experience in the field. 
+However, the diversity of the altogether eight critical scenarios 
+included in this study (different safety-critical objects and 
+locations) made it hard to guess what might happen next. Still 
+drivers knew they were being supported by a driver warning 
+system and that the study aimed at evaluating it, so they might 
+have been also more alert for warnings in general. This might 
+have influenced the gaze behavior. For example, drivers’ 
+glances might have frequented the HUD more often than they 
+normally would and thus already lasting there when the 
+warning was triggered in the first place. In addition, the driver 
+warnings occurred rather frequently, far more than in real 
+traffic. However, all these circumstances were practical 
+experimental necessities. Furthermore, when interpreting the 
+results, it has to be taken into account that the number of 
+analyzed participants (each of the five groups: N = 12) was 
+limited in this study due to (many potential participants being 
+excluded from the experiment as a result of) simulation 
+sickness 
+and 
+experiencing 
+many 
+critical 
+scenarios 
+consecutively being quite stressful for participants. 
+In general, warning drivers visually in very time critical 
+situations might be questionable as the warning visualization 
+might distract drivers, for example in guiding the drivers’ 
+glance onto the warning visualization and capturing it for too 
+long to the cost of the actual safety-critical object being 
+disregarded. However, in the analyzed scenario all drivers 
+gazed at the safety-critical object regardless of whether they 
+had received a warning or not. Moreover, the glance reaction 
+time and the glance duration on the safety-critical object did 
+not differ significantly. Thus, it seems that the examined driver 
+warnings did not distract the drivers from recognizing the 
+safety-critical object, which is also substantiated by the fact 
+that most drivers (around 71%) had their critical object glance 
+before their HUD glance. 
+With regard to the head-up display, in total 45.8% of the 
+warned drivers showed a HUD glance before beginning to 
+brake (N = 22). The glance reaction times were quite short 
+(overall about 0.2 s) indicating that the driver warnings had 
+probably automatically attracted the drivers’ attention. 
+Additionally, the glances on the HUD also lasted quite short 
+supporting the idea that the examined warning visualizations 
+were well-known as it did not take drivers extensively long to 
+process or understand them. However, an exception was the 
+reaction specific warning visualization, which was supposed to 
+elicit a steering reaction from drivers. The glances at the HUD 
+in this group lasted almost double as long as in the other three 
+warning groups. It seems that this sign was less familiar or 
+understandable than the other warning visualizations. It was 
+also not very effective in general as it did not induce any driver 
+to a steering reaction. Moreover, the RS warning type had the 
+weakest effect on the brake reaction time and the maximum 
+braking value as compared to the other warning groups. Thus, 
+the use of well-known and easily understandable warning 
+visualizations seems advisable to for such driver warnings. 
+Since driver warnings aim at safer driving, the driving 
+behavior was of special interest. While the warnings used in 
+this study were not effective in significantly preventing 
+accidents in the examined scenario, there were positive effects 
+of the driver warnings with regard to the brake reaction time 
+and maximum braking value. All driver warnings led to faster 
+and stronger brake reactions. The fact that independent of 
+whether drivers received a warning, still about half of the 
+drivers encountered an accident (in total N = 31 collisions) also 
+proves the high criticality of the scenario. As the driver 
+warnings neither increased nor reduced the number of 
+collisions, one might think that the driver warnings presented 
+in the HUD were not seen by the drivers, but the gaze behavior 
+data described above proved the opposite. Drivers did show 
+HUD glances. 
+However, when drivers gazed at the HUD before brake 
+initiation the positive effect of the driver warnings with regard 
+to the break reaction time seemed to be evened out as these 
+drivers reached brake reaction times quite similar to the control 
+group. In contrast, the positive effect of a stronger brake 
+reaction induced by the driver warnings was independent of 
+whether drivers showed a HUD glance or not. This difference 
+between the two parameters might be due to the drivers, who 
+gazed at the HUD after brake initiation and before reaching 
+their maximum braking value (N = 8), being disregarded. Their 
+inclusion might change the effects again and should thus be 
+further analyzed. 
+Yet regarding the negated benefit in the brake reaction 
+time, one might assume that visual driver warnings in the HUD 
+are more effective if they are perceived in the peripheral visual 
+field, without directly attracting the drivers’ attention or 
+glances, but rather enable them to focus on the outside world 
+and its dangers. This might be an interesting approach for 
+future studies on visual driver warnings. Furthermore, it might 
+explain why the content or the different visualizations of the 
+warning (with exception of the RS warning) did not seem to be 
+crucial. Thus, warning drivers at all appears of importance, less 
+what is displayed in the HUD, as long as it is well-known and 
+easily understood by the drivers. As already discussed above, 
+driver warnings with unfamiliar or complex visualizations 
+might even lead to negative effects or at least negate the 
+potential benefits. 
+Concluding, in general the driver warnings had positive 
+effects on the drivers’ performance. Even though the number 
+1039
+
+--- Page 6 ---
+of collisions could not be reduced significantly by the driver 
+warnings, probably also due to the limited time left to act at all, 
+the collision severity was reduced due to faster and stronger 
+brake reactions of the drivers, as intended by the driver 
+warnings in this very critical situation. Only the RS warning is 
+an exception, as it rather diminished the drivers’ brake force, 
+even significantly compared to the other warning types. 
+Especially if the RS warning was gazed at, the benefit of 
+receiving a warning was almost evened out in all parameters 
+(number of collisions, brake reaction time and maximum 
+braking value). Thus, the RS warning visualization cannot be 
+recommended for such driver warnings in very critical 
+situations. However, it shows that the gaze behavior should be 
+further investigated when designing visual driver warnings, for 
+its analysis also allowed to mark the other three warning 
+visualizations (RG, AG and AS) as rather supportive than 
+distractive as their HUD glances did not last extensively long 
+(especially in contrast to the RS warning). Thus, the RG, AG 
+and AS warning can be recommended, since they all achieved 
+the driver warnings’ aim, while differing little from each other 
+in their effect on drivers’ performance. 
+However, the effect of the warning type still has to be 
+analyzed further in the other seven examined scenarios 
+(following in another paper) as so far it is still unclear, what it 
+is about the examined driver warnings that makes them 
+effective, for example their pure presence, visualization (traffic 
+signs), location (HUD), modality (visual), a combination of 
+those or something else. Further reaction time improvements 
+could be expected by combining the driver warnings (in the 
+HUD) with an additional acoustical or haptic signal, in case 
+drivers are distracted, for example by a not driving related task. 
+Moreover, this study concentrated on rather young drivers, but 
+the effects might change if older drivers are tested. Thus, the 
+driver warnings should also be examined with a group of older 
+drivers since with age the information processing (e.g., [16] 
+[17]) and drivers’ performance change and possibly decrease 
+(e.g., [18] [19]) so that older drivers might react differently 
+upon the warning types than younger drivers. 
+REFERENCES 
+[1] E. Coelingh, A. Eidehall, and M. Bengtsson, “Collision warning with 
+full auto brake and pedestrian detection-a practical example of automatic 
+emergency braking,” in 2010 IEEE Intelligent Transportation Systems, 
+pp. 155-160, 2010. 
+[2] R. J. Hanowski, T. A. Dingus, J. P. Gallagher, C. A. Kieliszewski, and 
+V. L. Neale, “Driver response to in-vehicle warnings,” Transportation 
+Human Factors, vol. 1, no. 1, pp. 91-106, 1999. 
+[3] J. D. Lee, B. F. Gore, and J. L. Campbell, “Display alternatives for in-
+vehicle warning and sign information: message style, location and 
+modality,” Transportation Human Factors, vol. 1, no. 4, pp. 347-375, 
+1999. 
+[4] J. Luoma and P. Rämä, “Acceptance of traffic sign information provided 
+by an in-vehicle terminal,” in 2002 ITS World Congress on Intelligent 
+Transport Systems, 2002. 
+[5] M. Ablaßmeier, T. Poitschke, F. Wallhoff, K. Bengler, and G. Rigoll, 
+“Eye Gaze Studies Comparing Head-up and Head-down Displays in 
+Vehicles,” in 2007 IEEE Multimedia and Expo, 2007, pp. 2250-2252. 
+[6] H. Watanabe, H. Yoo, O. Tsimhoni, and P. Green, “The Effect of HUD 
+Warning Location on Driver Responses,” 1999 ITS World Congress on 
+Intelligent Transport Systems, 1999. 
+[7] NHTSA. National Highway Traffic Safety Administration, “Preliminary 
+Human Factors Guidelines for Crash Avoidance Warning Devices,” 
+Project No. DTNH22-91-C-07004, Jan. 1996. 
+[8] J. S. Wolffsohn, N. A. McBrein, G. K. Edgar, and T. Stout, “The 
+influence of cognition and age on accommodation, detection rate and 
+response times when using a car head-up display,” Ophthalmic and 
+Physiological Optics, vol. 18, no. 3, 243-253, May 1998. 
+[9] P. R. J. A. Alves, J. Gonçalves, R. J. F. Rossetti, E. C. Oliveira, and C. 
+Olaverri-Monreal, “Forward Collision Warning Systems Using Heads-
+Up Display: Testing Usability of Two New Metaphors,” in 2013 IEEE 
+Intelligent Vehicles Symposium, 2013, pp. 1-6. 
+[10] P. George, I. Thouvenin, V. Frémont, and V. Cherfaoui, “DAARIA: 
+Driver assistance by augmented reality for intelligent automobile,” in 
+2012 IEEE Intelligent Vehicles Symposium, 2012, pp. 1043–1048. 
+[11] A. W. Y. Ng and A. H. S. Chan, “The effects of driver factors and sign 
+design features on the comprehensibility of traffic signs,” Journal of 
+Safety Research, vol. 39, no. 3, pp. 321–328, June 2008. 
+[12] M. Plavšic, H. Bubb, M. Duschl, M. Tönnis, and G. Klinker, 
+“Ergonomic Design and Evaluation of Augmented Reality Based 
+Cautionary Warnings for Driving Assistance in Urban Environments,” 
+in 2009 IEA World Congress on Ergenomics, 2009. 
+[13] Statistisches Bundesamt, “Traffic. Traffic accidents 2013 [Verkehr. 
+Verkehrsunfälle 2013],“ 2014. 
+[14] H.-P. Krüger, M. Grein, A. Kaussner, & C. Mark, “SILAB-A task-
+oriented driving simulation,” in 2005 DSC Driving Simulator 
+Conference, 2005, pp. 232–331. 
+[15] J. Hoffman, J. D. Lee, T. L. Brown, and D. V. McGehee, “Comparison 
+of Driver Braking Responses in a High Fidelity Driving Simulator and 
+on a Test Track,” Transportation Research Record, vol. 1803, no. 1, pp- 
+59-65, Jan. 2002. 
+[16] Rackoff, N., 1974. An investigation of age related changes in driver’s 
+visual search patterns and driving performance and the relation to tests 
+of basic functional capacities. Ph.D. dissertation, The Ohio State 
+University, Columbus, Ohio, USA. 
+[17] B. Schlag, “Elderly drivers in Germany fitness and driving behaviour,” 
+Accident Analysis and Prevention, vol. 25, no. 1, pp. 47-55, Feb. 1993. 
+[18] J. K. Caird, S. L. Chisholm, C. J. Edwards, and J. I. Creaser, “The effect 
+of yellow light onset time on older and younger drivers’ perception 
+response time (PRT) and intersection behavior,” Transportation 
+Research Part F: Traffic Psychology and Behaviour, vol. 10, no. 5, pp. 
+383-396, Sept. 2007 
+[19] X. Yan, E. Radwan, and D. Guo, “Effects of major-road vehicle speed 
+and driver age and gender on left turn gap acceptance,” Accident 
+Analysis and Prevention, vol. 39, no. 4, pp. 843-852, Jul. 2007. 
+ 
+1040

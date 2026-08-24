@@ -1,0 +1,469 @@
+238
+Proceedings of the 5th International Conference on Automotive User Interfaces and 
+Interactive Vehicular Applications (AutomotiveUI ‚13), October 28–30, 2013,  Eindhoven, The Netherlands.
+Towards Augmented Reality Navigation  
+Using Affordable Technology
+Oskar Palinko, Andrew L. Kun,  
+Zachary Cook, Adam Downey, Aaron Lecomte, Meredith Swanson, Tina Tomaszewski 
+University of New Hampshire 
+Electrical and Computer Engineering Department, Kingsbury Hall, Durham, NH 03824, USA 
+{firstname.lastname}@unh.edu 
+ABSTRACT
+Augmented reality (AR) navigation systems are likely to improve 
+the driving experience compared to today’s personal navigation 
+devices on the dashboard, as they don’t require glances away from 
+the road ahead. As technology is not yet capable to deliver an 
+affordable and seamless HUD AR solution, we explore an 
+inexpensive version of augmentation, which would have a similar 
+benefit of reduced distraction. We propose using an LED (light 
+emitting diode) matrix in the periphery of the driver’s vision to 
+indicate turns on the road. We find that such a system produces 
+better results in visual attention, driving performance and in 
+subjective measures compared to standard navigation devices. 
+Categories and Subject Descriptors
+H.5.2 [Information Interf. And Presentation]: User Interfaces.
+General Terms
+Algorithms, Measurement, Experimentation, Human Factors. 
+Keywords
+Driving Simulator, Navigation Aids, Driving Performance. 
+1. INTRODUCTION
+Unless cars drive themselves, there will be a continued need for 
+in-car personal navigation devices (PNDs) in the future. Most of 
+today’s commercially available solutions display a map on a 
+screen either in the dashboard of the vehicle or on top of it. The 
+problem is that these systems introduce visual distraction: the 
+drivers have to point their gaze towards the screen to acquire 
+navigation information. In order to reduce glances away from the 
+road, it would be beneficial to have the navigation cues integrated 
+in the observed world using augmented reality (AR). However, 
+such head-up display (HUD) AR is not yet affordable for a 
+commercial in-vehicle navigation product. Therefore, in this study 
+we explore a simple system that could provide a low-cost 
+navigational aid, which mimics AR. This system is a matrix of 
+LEDs on top of the windshield that provides turn-by-turn 
+directions. We will explore this system by comparing it to a 
+standard PND (SPND), which uses a head-down display to 
+present directions on a 2D map of the world. We propose three 
+hypotheses: 
+(H1) The LED navigation system will allow drivers to spend more 
+time looking at the outside world than the SPND. 
+(H2) The LED navigation system will allow better driving 
+performance than the standard PND. 
+(H3) Users will prefer the LED navigation system over the SPND. 
+2. BACKGROUND 
+Augmented reality HUD navigation devices show a navigation 
+route directly on the windshield of the vehicle. These devices hold 
+the promise of a less distracting driving environment. Steinfeld et 
+al. [8] showed that AR HUD in-car displays shorten the reaction 
+time to sudden events which is crucial in avoiding accidents. In a 
+driving simulator experiment Liu [6] confirmed that drivers react 
+faster to accidental events when using HUD, both for a higher and 
+lower level of workload. Horrey et al. [3] compared HUD systems 
+to using head-down displays (HDD). They found that HDD 
+decreased driving performance, i.e. drivers reacted slower to 
+unexpected events compared to HUDs. They concluded that the 
+lack of focal vision on the road ahead is responsible for slower 
+reactions. Medenica et al. [7] compared a simulated AR 
+navigation device to a HDD Google StreetView-like navigation 
+device and a standard map-based HDD. They found that HDD 
+caused the drivers to divert their gazes from the road ahead 
+significantly more than for HUD. Cross-correlation analysis 
+showed that the increased number of glances away from the road 
+when using HDD caused deterioration in driving performance.  
+What can be said about different implementations of AR for in-
+vehicle services? Kim and Dey [4] presented a simulated HUD 
+AR system which could benefit the elderly. In their solution both 
+the immediate directions and a section of the upcoming road map 
+was displayed on the windshield. They reported a reduction in 
+navigation errors compared to a head-down map-based navigation 
+system. Tangmanee and Teeravarunyou [9] explored how the 
+position and shape of graphical elements of a HUD AR system 
+influence driver attention. Subjects in a simulator-based 
+experiment paid more attention to guiding arrows located close to 
+the middle of the screen than ones further to the side.  
+While the above results are encouraging for HUD AR, this 
+technology is not yet available in cars. Instead, elements of AR 
+navigation are available. In a road study Fröhlich et al. [1] 
+investigated the presentation of real-time telematics services using 
+three modalities, including HDD AR. Results indicated that 
+participants valued the AR visual display. Commercially a HDD 
+AR solution for smartphones is the Wikitude Drive app [12], 
+which overlays a simulated navigation route on the image 
+acquired from the phone’s camera. This technology, displayed on 
+a dashboard-mounted screen still suffers from the need to divert 
+one’s gaze away from the road. Another, less sophisticated 
+solution for guiding drivers are so-called light-bar guidance 
+systems used in agricultural vehicles such as tractors, e.g. 
+GreenStar Lightbar by John Deere [2]. This is essentially a row of 
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than ACM must be honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to 
+post on servers or to redistribute to lists, requires prior specific permission 
+and/or a fee. Request permissions from Permissions@acm.org.  
+AutomotiveUI '13, October 28 - 30 2013, Eindhoven, Netherlands 
+Copyright is held by the owner/author(s). Publication rights licensed to 
+ACM. ACM 978-1-4503-2478-6/13/10…$15.00.
+http://dx.doi.org/10.1145/2516540.2516569  
+
+
+239
+Proceedings of the 5th International Conference on Automotive User Interfaces and 
+Interactive Vehicular Applications (AutomotiveUI ‚13), October 28–30, 2013,  Eindhoven, The Netherlands.
+LED lights directing the operator of the vehicle in such a way that 
+ensures full coverage of an agricultural field, row by row. Our 
+solution presented below is similar to these low-tech AR devices, 
+but instead of a row of lights we present a matrix of LEDs. The 
+space between these lights is transparent, i.e. the world is visible 
+through the matrix. 
+3. EXPERIMENT 
+Subjects drove in our driving simulator in a city scenario while 
+receiving driving directions from two different navigation aids. 
+Our experiment used the same equipment, and very similar 
+methods, as our prior experiments described in [5] and [7]. 
+3.1 Equipment 
+The experiment was performed in a high-fidelity driving simulator 
+with a 180° field of view screen and a full-width automobile cab. 
+The cab sits on top of a motion base which simulates car 
+movements for braking and accelerating as well as bumps on the 
+road. As shown in Figure 1, the simulator was equipped with an 
+eye-tracker which tracks subjects’ gaze and head position using a 
+pair of cameras mounted on the dashboard. Figure 1 also shows 
+the location of the in-car LCD screen which was used as the 
+display for the standard PND, and the LED matrix used as the AR 
+device.  
+3.2 Method 
+3.2.1 Participants 
+Fifteen university students participated in the experiment. We 
+excluded data for five of them, because they either could not 
+finish the experiment due to feeling simulator sickness or they 
+could not master operating the driving simulator. The ten 
+remaining participants were between 18 and 22 years of age 
+(mean age 20.1 years, standard deviation 1.37 years). As 
+compensation, each received a $20 gift card to an online store. 
+3.2.2 Navigation Aids 
+Each participant performed navigation with both of the following 
+personal navigation devices: 
+1.
+LED Augmented Reality PND (LED PND). The LEDs 
+were mounted in 8 rows and 7 columns on a  sheet of transparent 
+plastic approximately 28cm x 15cm in size, see Figure 1. They 
+were remotely controlled by an experimenter seated behind the 
+simulator, see Figure 2. The experimenter initiated turn signaling 
+based on the location of the participant’s car in the simulated 
+world which was displayed on the experimenter’s LCD screen. 
+When the subjects needed to turn left, first the four left LED 
+columns lit up and started blinking. After 3 seconds, the blinking 
+turned into the four leftmost columns lighting up one after the 
+other creating an apparent leftward animation (see video [10]). 
+Similar cues were given for turning right, with the difference that 
+the four rightmost columns participated in a rightward animation. 
+When the drivers needed to continue driving straight (which was 
+the default mode), the three middle columns of LEDs were on.   
+2.
+Standard PND (SPND). Similar to the most basic PNDs, 
+our LCD screen (Figure 1) presented users with a real-time map 
+of the surrounding environment as well as the position of the 
+vehicle in a simulated world. The 2D map was presented in a 
+dynamic, exocentric, forward-up view. The car (represented by a 
+small triangle on the map) always remained in the center of the 
+screen, while the road moved about it (see video [11]). The 
+diameter of the screen was 7 inches (18cm) and the size of the 
+screen was 15cm x 9cm. The LCD screen was placed to the right 
+of the steering wheel, which is a common place for contemporary 
+built-in PNDs and smart phones with navigation capabilities. 
+While driving with the SPND, the LED matrix was removed from 
+the simulator. 
+We didn’t use spoken directions in this experiment with either 
+navigation device. We did so to explore purely the visual 
+component of the two systems. 
+3.2.3 Procedure 
+After filling out the consent form and personal information 
+questionnaire, participants proceeded to driving the simulator in a 
+city environment. They completed two experimental runs, one for 
+each PND. They trained using these systems for 5 minutes before 
+each run, on roads similar to the experimental ones. To prevent 
+ordering effects, we counterbalanced the presentation order of the 
+PNDs between subjects. Participants drove on two-lane city 
+streets. The second route traveled was the same as the first, but in 
+reverse direction. Each route also included two unexpected events. 
+After each PND the participants filled out a NASA-TLX 
+questionnaire. At the end of the experiment they also ranked their 
+agreement with statements pertaining to their experience with the 
+two navigation devices using the Likert-scale, and provided 
+written and/or verbal comments. 
+3.2.4 Design 
+The independent variable in our within-subjects factorial design 
+was the PND type, Nav.
+We measured multiple dependent variables: 
+x Percent Dwell Time (PDT) on four areas of interest: the outside 
+world, the LED display, the LCD display and other. Using the 
+eye tracker on the dashboard we calculated the time drivers 
+spent looking at these four areas. In the simulator environment 
+we defined looking at the outside world as looking at one of the 
+three projection screens (front, left, right). A low value of PDT 
+on the outside world indicates that the driver is distracted, 
+Figure 1. Locations of devices in the simulator cab. 
+Figure 2. Driving with LED (left) and  
+controlling the display (right). 
+LED display 
+
+
+240
+Proceedings of the 5th International Conference on Automotive User Interfaces and 
+Interactive Vehicular Applications (AutomotiveUI ‚13), October 28–30, 2013,  Eindhoven, The Netherlands.
+which in turn can lead to collisions. In calculating the PDT on 
+LCD we classified gazes at the area of 35cm x 25cm 
+approximately centered on the LCD display as gazes towards 
+the LCD display. Similarly we classified gazes at the 28cm x 
+17cm area approximately centered on the LED display as gazes 
+towards the LED display. We made both of these areas larger 
+than the corresponding LCD and LED objects. Thus, gazes that 
+are close to the objects are classified as gazes at the objects. 
+x Steering wheel angle variance (SWV), which measures how 
+much the angle of the steering wheel changes over time. Higher 
+values indicate worse driving.  
+x Lane position variance (LPV), which measures how much the 
+drivers swerve in their lane. As for SWV, higher values 
+indicate worse driving.  
+x Subjective measures (NASA-TLX score, and level of agreement 
+with preferential statements).
+3.2.5 Calculation 
+The city routes in our experiment can be broken up into segments 
+by treating roads between two intersections as separate segments. 
+We calculated the results using data from 13 short segments, each 
+200 meters long. As discussed in [5] and [7], these segments 
+required similar driving and participants did not encounter 
+unexpected events in any of them.  
+In analyzing these segments, we excluded data collected over the 
+first 60 meters and the final 40 meters of a segment, and analyzed 
+data generated over (200–60–40) = 100 meters. This was done 
+because driving performance is different between the excluded 
+and analyzed portions of the segments. For example, at the 
+beginning of a segment, drivers are completing the turning 
+maneuver that is necessary to get through the previous 
+intersection. And at the end of a segment, they are decelerating 
+before entering the next intersection. Thus, the resulting variances 
+can be much larger than those encountered away from 
+intersections, which makes it difficult to compare excluded and 
+analyzed portions of segments. 
+We calculated all three observed dependent variables (PDT, SWV 
+and LPV) separately for each of the 10 subjects in each of the 13 
+segments. Then we averaged all 13 segments for each subject to 
+end up with 10 averages of each PDT, SWV and LPV on which 
+we performed statistical analysis. 
+For each participant, we rejected segment values which were more 
+than 3 standard deviations away from the average of the values of 
+all segments for that participant. We rejected the 2 segments for 
+the SWV data, 1 for the LPV data, and none for the PDT data.  
+4. RESULTS 
+4.1 Visual Attention 
+We calculated the percent dwell time (PDT) of the driver’s gaze
+on four areas of interest as shown in Table 1. It can be observed 
+that the subjects did not look at the LED matrix any significant 
+amount of time (≤0.49% in either condition). They did look at the 
+LCD display (10.12%) while they were using it for navigation in 
+the SPND condition. The ‘other’ column includes gazes at the 
+speedometer, steering wheel, rear view mirror, etc.  
+We conducted a repeated measures ANOVA to assess the effect 
+of the two PNDs on visual attention using PDT on the outside 
+world as the dependent variable. The analysis revealed a 
+significant main effect on PDT for Nav (F(1,9)=16.35, p = 0.003). 
+The average PDT for LED PND was 94.38%, while it was 
+86.27% for SPND, see Figure 3. 
+4.2 Driving Performance 
+We also applied repeated measures ANOVA on driving 
+performance measures. We found a significant difference for 
+SWV (Figure 4) between LED and SPND (F(1,9)=5.17, p=0.049). 
+The difference between these two devices was marginally 
+significant for LPV (F(1,9)=4.98, p=0.052), see Figure 5. 
+4.3 Subjective measures 
+The NASA-TLX workload assessment tool did not yield any 
+significant results. The Likert-scale questionnaire at the end of the 
+experiment informed us that 7 of 10 participants preferred the 
+LED compared to the SPND. Six of 10 agreed that they needed to 
+use only their peripheral vision to acquire information from the 
+LED display. 
+Nine of 10 participants provided either written or verbal feedback 
+that indicated a preference for the LED display over the SPND. 
+Table 1. Percent dwell time on different areas. 
+outside 
+world 
+LED 
+matrix 
+LCD (SPND) 
+display 
+other 
+LED 
+94.38 % 
+0.49 % 
+0.01 % 
+5.12 % 
+SPND 
+86.27 % 
+0.02 % 
+10.12 % 
+3.59 % 
+Figure 3. Average percent dwell time on outside world.
+Figure 5. Average lane position variance. 
+Figure 4. Average steering wheel angle variance. 
+60
+70
+80
+90
+100
+LED PND
+SPND
+average PDT [%]
+0
+0.005
+0.01
+0.015
+0.02
+0.025
+LED PND
+SPND
+average LPV [m2]
+-5
+0
+5
+10
+15
+20
+25
+LED PND
+SPND
+average SWV 
+[degree2]
+Error bars: ±1 SD 
+Error bars: ±1 SD 
+Error bars: ±1 SD 
+
+
+241
+Proceedings of the 5th International Conference on Automotive User Interfaces and 
+Interactive Vehicular Applications (AutomotiveUI ‚13), October 28–30, 2013,  Eindhoven, The Netherlands.
+Quote 1 (Q1) of a written comment by participant 1 (P1) shows 
+that he found the LED display easy to use and did not need to 
+glance at it. 
+Q1 (P1): The LEDs were a lot easier to follow since I didn’t have 
+to go out of my way to look at it.”
+P7 agreed with P1 that the LED display was easier to use, and 
+further added that he would personally consider purchasing 
+something like this if it were closely priced to a commercially 
+available PND. 
+Q2 (P2): “I saw improvement in reaction times when using an 
+LED display. It was significantly easier to use and I would 
+consider using it myself if it was similarly priced.”
+Some of the participants also pointed out aspects they disliked 
+about the LED display and made suggestions for improvement. 
+Q3 is from P5, and shows that he liked the LED display but would 
+still like to have the feel of a standard PND. P12 was excluded 
+from the study due to poor driving skills. However, we include 
+this participant’s comment as it was the most negative comment, 
+and points out that there is more work to be done to improve the 
+system.  
+Q3 (P5): “I suggest adding the LED in addition to a standard GPS 
+display. 
+Q4 (P12): “Too high up, too bright, no indication of future turns. 
+Flashing distracting.”
+5. DISCUSSION 
+We started this study by proposing three hypotheses. We will now 
+consider these hypotheses in light of our results. 
+(H1) The LED navigation system will allow drivers to spend more 
+time looking at the outside world than the SPND. 
+The average percent dwell time (PDT) on the road ahead was 
+higher for the LED PND (94.38%) than for the SPND (86.27%). 
+Clearly, the LED PND allowed users to look at the road ahead 
+more instead of being distracted by the SPND. While using the 
+SPND, the drivers spent a considerable amount of time looking at 
+the LCD device displaying the map (10.12%), which might pose a 
+safety hazard because their gazes were not scanning the road 
+ahead. We also found that the LED matrix did not draw any 
+significant amount of visual attention (0.49%) which indicates 
+that drivers used their peripheral vision to detect directions from 
+the LED PND. These PDT values are consistent with the ones we 
+obtained in two previous studies [5, 7].  
+(H2) The LED navigation system will allow better driving 
+performance than the standard PND. 
+Variance of steering wheel angle was significantly lower for the 
+LED PND than for the SPND. A lower variance indicates better 
+driving performance. This improvement can be attributed to the 
+fact that drivers spent more time observing the road ahead while 
+using the LED PND, because they did not need to divert their 
+gaze to a map as in the SPND condition. Lane position variance 
+was also lower for the LED display; however this difference was 
+only marginally significant. In fact the p-value of both 
+performance measures was close to .05, indicating that it would be 
+useful to include more participants in the study.  
+(H3) Users will prefer the LED navigation system over the SPND. 
+More subjects preferred the LED system than not, but some of 
+them had reservations towards using it as a sole navigation device. 
+6. CONCLUSION
+With the LED PND our participants had a higher PDT on the 
+outside world, and better driving performance, than when they 
+used the standard PND. Furthermore, as shown in Table 1, when 
+using the LED PND, they hardly ever looked at the LED array. 
+This indicates that they used their peripheral vision to gather 
+information from the LED PND. Thus, our results suggest that 
+using a peripheral means of navigation, such as the LED PND, 
+might be a better alternative to a standard PND. Subjective 
+assessments also favored the LED PND, and participants felt that 
+with it they relied on their peripheral vision (which is confirmed 
+by the data in Table 1). 
+These results encourage us to continue exploring augmented 
+reality, even in its current unsophisticated form, as a potentially 
+useful technology for in-car navigation. 
+7. ACKNOWLEDGEMENTS 
+This work was supported by the US Department of Justice under 
+grants 2009D1BXK021 and 2010DDBXK226. 
+8. REFERENCES 
+[1]
+Fröhlich, P., Baldauf, M., Hagen, M., Suette, S., Schabus, D.,  
+Kun, A.L., Investigating Safety Services on the Motorway: 
+The Role of Realistic Visualization. In Proc. AutomotiveUI 
+2011, ACM Press (2011). 
+[2]
+GreenStar Lightbar by John Deere. 
+http://www.deere.com/wps/dcom/en_INT/products/equipmen
+t/agricultural_management_solutions/guidance_and_machine
+_control/greenstar_lightbar/greenstar_lightbar.page 
+[3]
+Horrey, W. J., Wickens, C. D., and Alexander, A. L. The 
+Effects of Head-Up Display Clutter and In-Vehicle Display 
+Separation on Concurrent Driving Performance. In Proc. 
+HFES 47th Annual Meeting (2003). 
+[4]
+Kim, S. and Dey, A. K. Simulated augmented reality 
+windshield display as a cognitive mapping aid for elder 
+driver navigation. In Proc. CHI 2009, ACM Press (2009), 
+133-142. 
+[5]
+Kun, A.L., Paek, T., Medenica, Z., Memarovic, N., Palinko, 
+O. Glancing at Personal Navigation Devices Can Affect 
+Driving: Experimental Results and Design Implications. In 
+Proc. AutomotiveUI 2009, ACM Press (2009), 129-136. 
+[6]
+Liu, Y.C. Effects of using head-up display in automobile 
+context on attention demand and driving performance. 
+Displays 24, 4-5 (2003), 157-165. 
+[7]
+Medenica, Z., Kun A.L., Paek T., and Palinko, O. 
+Augmented Reality vs. Street Views: A Driving Simulator 
+Study Comparing Two Emerging Navigation Aids. In Proc. 
+MobileHCI’11, ACM Press (2011). 
+[8]
+Steinfeld, A. and Green, P. Driver Responses to Navigation 
+Information on Full-Windshield, Head-Up Displays. Int’l 
+Journal of Vehicle Design 19, 2 (1998), 135-149. 
+[9]
+Tangmanee, K. and Teeravarunyou, S. Effects of Guided 
+Arrows on Head-Up Display Towards the Vehicle 
+Windshield, SEANES 2012, IEEE (2012). 
+[10] Video of the LED AR device:  http://youtu.be/Y-gnObrkRvY
+[11] Video of the SPND device: http://youtu.be/yji4cR7ywKo 
+[12] Wikitude Drive. http://www.wikitude.org/en/drive 
+
+

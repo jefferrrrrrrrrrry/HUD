@@ -1,0 +1,6929 @@
+OPEN ACCESS
+
+EDITED BY
+Peishan Ning,  
+Central South University, China
+
+REVIEWED BY
+Chaojie Fan,  
+Central South University, China  
+Yiming Wang,  
+Nanjing University of Science and Technology, 
+China  
+Erfan Babaee,  
+Mazandaran University of Science and 
+Technology, Iran
+
+*CORRESPONDENCE
+Ju-Kyoung Kim  
+
+ jkkim@sehan.ac.kr
+
+RECEIVED 29 March 2023
+ACCEPTED 21 July 2023
+PUBLISHED 03 August 2023
+
+CITATION
+Teng J, Wan F, Kong Y and Kim J-K (2023) 
+Machine learning-based cognitive load 
+prediction model for AR-HUD to improve OSH 
+of professional drivers.
+Front. Public Health 11:1195961.
+doi: 10.3389/fpubh.2023.1195961
+
+COPYRIGHT
+© 2023 Teng, Wan, Kong and Kim. This is an 
+open-access article distributed under the terms 
+of the Creative Commons Attribution License 
+(CC BY). The use, distribution or reproduction 
+in other forums is permitted, provided the 
+original author(s) and the copyright owner(s) 
+are credited and that the original publication in 
+this journal is cited, in accordance with 
+accepted academic practice. No use, 
+distribution or reproduction is permitted which 
+does not comply with these terms.
+
+TYPE  Original Research
+PUBLISHED  03 August 2023
+DOI  10.3389/fpubh.2023.1195961
+
+Machine learning-based cognitive 
+load prediction model for AR-HUD 
+to improve OSH of professional 
+drivers
+
+Jian Teng 1,2, Fucheng Wan 1, Yiquan Kong 3 and Ju-Kyoung Kim 2*
+
+1 School of Mechanical and Electrical Engineering, Lingnan Normal University, Zhanjiang, China, 
+2 College of Education, Sehan University, Yeongam, Jeollanam-do, Republic of Korea, 3 College of 
+Computer and Intelligent Manufacturing, Lingnan Normal University, Zhanjiang, China
+
+Motivation: Augmented reality head-up display (AR-HUD) interface design takes 
+on  critical  significance  in  enhancing  driving  safety  and  user  experience  among 
+professional drivers. However, optimizing the above-mentioned interfaces poses 
+challenges,  innovative  methods  are  urgently  required  to  enhance  performance 
+and reduce cognitive load.
+
+Description: A novel method was proposed, combining the IVPM method with a GA 
+to optimize AR-HUD interfaces. Leveraging machine learning, the IVPM-GA method 
+was adopted to predict cognitive load and iteratively optimize the interface design.
+
+Results:  Experimental  results  confirmed  the  superiority  of  IVPM-GA  over  the 
+conventional  BP-GA  method.  Optimized  AR-HUD  interfaces  using  IVPM-
+GA  significantly  enhanced  the  driving  performance,  and  user  experience  was 
+enhanced  since  80%  of  participants  rated  the  IVPM-GA  interface  as  visually 
+comfortable and less distracting.
+
+Conclusion: In this study, an innovative method was presented to optimize AR-
+HUD  interfaces  by  integrating  IVPM  with  a  GA.  IVPM-GA  effectively  reduced 
+cognitive  load,  enhanced  driving  performance,  and  improved  user  experience 
+for professional drivers. The above-described findings stress the significance of 
+using machine learning and optimization techniques in AR-HUD interface design, 
+with  the  aim  of  enhancing  driver  safety  and  occupational  health.  The  study 
+confirmed the practical implications of machine learning optimization algorithms 
+for  designing  AR-HUD  interfaces  with  reduced  cognitive  load  and  improved 
+occupational safety and health (OSH) for professional drivers.
+
+KEYWORDS
+
+AR-HUD interface design, OSH, cognitive load, machine learning, IVPM-GA
+
+1. Introduction
+
+1.1. Background and significance
+
+AR-HUD technology has become increasingly popular in the transportation industry over 
+the past few years as an advanced driver assistance technology that is capable of improving OSH 
+for professional drivers (1). AR-HUD technology is promising in providing drivers with critical 
+information while minimizing visual distraction, improving safety and reducing cognitive load, 
+
+Frontiers in Public Health
+
+01
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+which  are  recognized  as  vital  factors  for  OSH  (2).  AR-HUD 
+technology offers several advantages for professional drivers, which 
+covers  real-time  information  that  takes  on  critical  significance  in 
+drivers to perform their jobs safely and efficiently (e.g., speed, fuel 
+levels,  and  engine  temperature  for  commercial  truck  drivers)  (3). 
+Furthermore, AR-HUD technology shortens the time that drivers 
+have to take their eyes off the road, such that OSH can be improved 
+by minimizing visual distractions (4). Moreover, AR-HUD technology 
+can help reduce cognitive load by providing drivers with only the 
+necessary information, such that they are enabled to focus on their 
+primary task of driving (5).
+
+However,  existing  AR-HUD  designs  may  not  be  optimal  for 
+professional  drivers  who  are  dependent  on  more  specialized  and 
+customized  information  to  perform  their  jobs  effectively  (6). 
+Consequently,  OSH  risks  may  be  posed  since  the  information 
+presented on the display may not be easily customizable, making it 
+difficult for professional drivers to receive the specialized information 
+they  require  (7–9).  Furthermore,  the  display  is  likely  to  increase 
+cognitive  load,  particularly  for  drivers  not  accustomed  to  using 
+AR-HUD technology, such that fatigue and other OSH issues can 
+be triggered (10–12). Accordingly, designing AR-HUD interfaces that 
+are  tailored  to  the  specific  needs  of  professional  drivers  takes  on 
+critical significance in improving OSH.
+
+The significance of this study to occupational health and safety 
+(OHS) is indicated in its potential in strengthening safety measures 
+and  improving  professional  drivers’  quality  of  life.  The  study 
+leverages machine learning and optimization techniques to design 
+Augmented Reality Heads-Up Displays (AR-HUDs), which can 
+present  more  insights  into  improving  driving  tasks’  ergonomic 
+aspects, such that accident risks can be mitigated, and driver well-
+being can be elevated. Notably, the optimization of AR-HUDs with 
+the IVPM-GA method is conducive to reducing cognitive load, 
+which  when  excessive,  can  lead  to  driver  fatigue  and  higher 
+accident  rates.  Furthermore,  the  IVPM  method’s  prowess 
+in localizing eye-tracking hotspots and predicting extreme points 
+on graphs is capable of enhancing AR-HUDs’ visual ergonomics, 
+minimizing  eye  strain,  and  preventing  health  issues  (e.g., 
+headaches  or  vision  issues).  Additionally,  a  well-optimized 
+AR-HUD  interface  can  enhance  the  overall  user  experience, 
+reducing stress and discomfort during extended operation periods, 
+which contributes to mental health benefits. The study’s findings 
+can guide subsequent OHS policies and training programs, such 
+that an evidence-based method can be provided to interface design 
+that can be incorporated into professional drivers’ training. The 
+optimized  AR-HUD  interface  is  promising  in  integrating  with 
+existing driver assistance systems, such that timely and relevant 
+information can be presented, and cognitive load reduction and 
+overall driving safety enhancement can be facilitated.
+
+1.2. Research items
+
+The  item  of  this  study  refers  to  optimizing  AR-HUD  visual 
+interaction for professional drivers using machine learning techniques 
+to reduce visual fatigue and cognitive load. To be specific, this study 
+aimed at developing an optimized AR-HUD interface design using a 
+genetic algorithm based on an Image Viewpoint Prediction Model 
+(IVPM), comparing the effectiveness of the IVPM method and the 
+
+conventional Backpropagation Genetic Algorithm (BP-GA) method 
+in optimizing AR-HUD interface design, assessing the implications of 
+optimized AR-HUD interfaces for the occupational health and safety 
+(OHS) of professional drivers, employing machine learning to predict 
+cognitive load in AR-HUD design and assess its impact on driving 
+performance and user experience, and laying a solid basis for future 
+Occupational Safety and Health (OSH) policies and training programs 
+following the findings of this study. The above-mentioned research 
+items  can  guide  the  exploration  of  AR-HUD  interface  design 
+optimization, the comparison of different optimization methods, and 
+the  implications  of  the  above-described  methods  for  OHS  in 
+professional driving.
+
+The rest of this study is organized as follows. In Section 2, a 
+comprehensive review of related research on AR-HUD interfaces, 
+cognitive load, and optimization methods is presented. In Section 
+3, the methodology applied in this study is introduced, including 
+the IVPM method and the GA optimization algorithm. In Section 
+4, the experimental setup, data collection, and the assessment of 
+the proposed IVPM-GA method are presented, compared with 
+the conventional BP-GA method. In Section 5, the interpretation 
+of the results and the implications of the findings are discussed, 
+and  the  limitations  of  the  study  are  acknowledged.  Lastly,  in 
+Section 6, the research findings are summarized, the innovation 
+of  the  IVPM-GA  method  is  emphasized,  and  future  research 
+directions  in  the  field  of  AR-HUD  technology  and  interface 
+optimization are proposed.
+
+2. Literature review
+
+2.1. AR-HUD technology in assisted driving
+
+The research on cognitive load of drivers using an AR-HUD in 
+assisted  driving  refers  to  a  multidisciplinary  field  dedicated  to 
+designing  and  assessing  interactive  systems  to  enhance  the  driver 
+experience  while  improving  occupational  safety  and  health  (6). 
+AR-HUD technologies have aroused significant attention in the HCI 
+field  over  the  past  few  years.  AR  refers  to  a  technology  that 
+superimposes computer-generated virtual objects onto the real world, 
+creating a mixed reality environment where the virtual and physical 
+worlds  coexist  HUD  (12).  Besides,  it  is  a  display  technology  that 
+projects information onto a transparent screen or a windshield, such 
+that users are enbaled to view information without looking away from 
+the road or the task at hand (13). AR-HUD technology combines the 
+benefits  of  both  AR  and  HUD  to  provide  a  more  intuitive  and 
+immersive user experience. It has been extensively employed in a wide 
+variety of domains (e.g., automotive, aviation, and military) for tasks 
+(e.g., navigation, communication, and training) (14) nEVERTHELESS, 
+designing effective AR-HUD interfaces remains a challenge due to the 
+complexity of the technology and the need to balance the visual and 
+cognitive demands of the user (15).
+
+The design of AR-HUD interfaces poses several challenges for 
+HCI (Human-Computer Interaction) designers: the design should 
+consider the user’s cognitive load, as too much information presented 
+on  the  display  can  overwhelm  the  user  and  lead  to  decreased 
+performance and safety issues (16). Furthermore, the interface should 
+be  developed  to  maximize  the  user’s  attention  and  minimize 
+distraction while providing relevant and timely information (17).
+
+Frontiers in Public Health
+
+02
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+2.2. Machine learning in AR-HUD design to 
+improve OSH of drivers
+
+Machine  learning  (ML)  and  deep  learning  (DL)  have  been 
+confirmed  as  subfields  of  artificial  intelligence  that  are  highly 
+promising  in  facilitating  the  design  and  assessment  of  interactive 
+systems in HCI. ML refers to a method of teaching computers to learn 
+patterns from data without being explicitly programmed (18). DL 
+refers to a subset of ML that uses artificial neural networks to learn 
+complex patterns from large datasets (19).
+
+In the research of AR-HUD human-computer interaction, ML 
+and DL have been employed for tasks (e.g., user modeling, gesture 
+recognition, emotion detection, as well as speech recognition) (20). 
+Besides, they have been adopted to optimize the design of interfaces 
+by predicting user behavior and preferences, reducing cognitive load, 
+and improving usability (21).
+
+The research on the optimization of AR-HUD interface design 
+using machine learning in recent years is presented in the following: 
+Optimization  of  AR-HUD  interface  design  by  machine  learning. 
+Conati et al. (22) using machine learning research methods, the use of 
+interaction data was explored in this study as an alternative source to 
+predict  cognitive  abilities  during  visualization  processing  when 
+eye-tracking data was not available, and the accuracy of user models 
+was assessed based on different data sources and modalities. Results 
+indicated the potential for using interaction data to enable adaptation 
+for interactive visualizations, and the value of combining multiple 
+modalities for predicting cognitive abilities. Besides, the effect of noise 
+in gaze data on prediction accuracy was also examined. In Oppelt 
+et  al.’s  study,  (23),  machine  learning  algorithms  were  trained  and 
+assessed using single and multimodal inputs to distinguish cognitive 
+load levels. The model behavior was carefully assessed, and feature 
+importance  was  investigated.  A  novel  cognitive  load  test  was 
+introduced, and a cognitive load database was generated. Variations 
+were  validated  using  statistical  tests,  and  novel  classification  and 
+regression tasks were introduced for machine learning (12). Becerra-
+Sánchez et al. (24) uses n-back task as an auxiliary task to induce the 
+cognitive load of the main task (i.e., driving) in three different driving 
+simulation scenarios. Multi-modal machine learning method is used 
+to  classify  drivers’  cognitive  load.  Multi-component  signals,  i.e., 
+physiological measurement and vehicle characteristics, are used to 
+overcome the noise and mixed factors in physiological measurement. 
+Feature selection algorithm is used to identify the optimal feature set, 
+and random forest algorithm shows better performance than other 
+algorithms. It is found that using multi-component feature classifier 
+can classify better than using features from a single source. In the 
+research of Jacobé de Naurois et al. (25) by analyzing physiological and 
+behavioral  indicators  (e.g.,  heart  rate,  blink  duration  and  driving 
+behavior),  machine  learning  method  was  employed  to  detect  and 
+predict  drivers’  drowsiness.  AS  indicated  by  the  result,  increasing 
+information  (e.g.,  driving  time  and  participant  information)  can 
+increase the accuracy of drowsiness detection and prediction. The 
+optimal  performance  was  achieved  through  the  combination  of 
+behavioral  indicators  and  additional  information.  The  developed 
+model is capable of detecting the drowsiness level with a mean square 
+error of 0.22, and carrying out prediction when it will reach a given 
+drowsiness level with a mean square error of 4.18 min.
+
+The following is the research on the optimization of AR-HUD 
+interface design using deep learning over the past few years. Kang 
+
+et al. (26) proposed a novel deep learning-based hand interface for 
+immersive  virtual  reality,  providing  realistic  interactions  and  a 
+gesture-to-action  interface  without  the  need  for  a  graphical  user 
+interface. An application was developed to compare the proposed 
+interface with existing GUIs, and a survey experiment assessed its 
+positive effects on user satisfaction and sense of presence. Zhou (27) 
+investigated the technical challenges in applying AR-HUD systems in 
+practical driving scenarios. A lightweight deep learning-based object 
+detection algorithm was proposed, while a system calibration method 
+and a wide variety of image distortion correction techniques were 
+developed. The methods were integrated into a multi-eye AR control 
+module for the AR-HUD system, which was assessed through road 
+experiments. The results confirmed the effectiveness of the proposed 
+methods in enhancing driving safety and user experience. Rahman 
+et al. (28) employed deep learning to develop a vision-based method, 
+with the aim of classifying a driver’s cognitive load to improve road 
+safety. In the study, non-contact solutions were investigated through 
+image  processing,  with  a  focus  on  eye  movements.  Five  machine 
+learning models and three deep learning architectures were developed 
+and  tested,  achieving  up  to  92%  classification  accuracy.  This 
+non-contact  technology  is  promising  in  contributing  to  advanced 
+driver assistive systems. Methuku (29) proposed the use of a deep 
+learning system based on Convolutional Neural Network (CNN) to 
+classify in-car driver responses and create an alert system to mitigate 
+vehicle accidents. The system was developed using transfer learning 
+with  ResNet50  and  achieved  an  accuracy  of  89.71%.  The  study 
+provided  key  conclusions  and  discussed  the  significance  of  the 
+research in practical applications.
+
+2.3. Genetic algorithm in AR-HUD design 
+to improve OSH of drivers
+
+Optimization techniques (e.g., genetic algorithms (GA), particle 
+swarm optimization (PSO), and simulated annealing (SA)) have been 
+extensively employed in HCI to optimize the design and assessment 
+of interactive systems. The above-mentioned techniques were adopted 
+to find the optimal solution from a large set of possible solutions by 
+iteratively assessing and modifying the design variables (30). GA is a 
+search algorithm that mimics the process of natural selection to find 
+the  optimal  solution  to  a  problem.  It  starts  with  a  set  of  random 
+solutions and iteratively improves them by applying genetic operations 
+such as selection, crossover, and mutation (31). PSO is a swarm-based 
+optimization technique simulating the social behavior of a group of 
+individuals  to  determine  the  optimal  solution  (32).  SA  refers  to  a 
+probabilistic optimization technique simulating the process of cooling 
+a material to determine the minimum energy state (33). Goli et al. (34) 
+developed a complex model for cell formation in a manufacturing 
+system  using  automated  guided  vehicles  (AGVs).  It  introduced  a 
+hybrid  genetic  algorithm  and  a  whale  optimization  algorithm  to 
+address the problem. As revealed by the results, the above-described 
+algorithms outperform existing solutions in efficiency and accuracy, 
+with  the  whale  optimization  algorithm  proving  to  be  optimal. 
+Tirkolaee and Aydin (35) introduced a fuzzy bi-level Decision Support 
+System (DSS) for optimizing a sustainable supply chain for perishable 
+products. It employs a hybrid solution technique based on possibilistic 
+linear programming and Fuzzy Weighted Goal Programming (FWGP) 
+to  cope  with  uncertainty  and  ensure  sustainability.  The  proposed 
+
+Frontiers in Public Health
+
+03
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+methodology outperforms existing methods, solving a problem with 
+over 2.2 million variables and 1.3 million constraints in under 20 min. 
+The  above-mentioned  studies  highlight  the  effectiveness  of 
+optimization techniques in solving complex issues. The use of hybrid 
+algorithms and the application of the above-described techniques to 
+practical issues underscore their practical relevance. In this study, the 
+above-mentioned  findings  suggest  that  similar  methods  could 
+enhance the effectiveness of our IVPM-GA method for AR-HUD 
+interface design, potentially leading to significant improvements in 
+Occupational Safety and Health (OSH) for professional drivers.
+
+As revealed by the literature review, the backpropagation genetic 
+algorithm (BP-GA) has been extensively employed to predict cognitive 
+load based on eye-tracking data, such that AR-HUD and OSH of 
+professional drivers can be better optimized (36, 37). The significance 
+of BP-GA lies in its ability to optimize the AR-HUD interface design 
+while  considering  user  cognitive  load  (36),  such  that  the  OSH  of 
+professional  drivers  can  be  ultimately  enhanced.  By  optimizing 
+interface  design,  BP-GA  reduces  cognitive  load,  improves  user 
+experience,  and  ultimately  lowers  the  risk  of  accidents  caused  by 
+distraction. However, a potential drawback of BP-GA is that it is likely 
+to converge to local optima instead of global optima (38). To address 
+the above-mentioned issue, the IVPM-GA method was introduced in 
+this study, employing the lightweight deep learning image viewpoint 
+prediction model (IVPM) algorithm to predict cognitive load, as well 
+as a vision-based cognitive load prediction method based on machine 
+learning. This method is capable of overcoming the limitations of 
+existing research that relied solely on eye-tracking data, which may 
+not  fully  encompass  cognitive  abilities.  The  IVPM-GA  method 
+provides more comprehensive and accurate predictions of cognitive 
+load  and  can  be  adopted  to  optimize  AR-HUD  interface  design 
+in depth.
+
+The main novelties of this study lie in the application of advanced 
+machine  learning  techniques,  specifically  the  Image  Viewpoint 
+Prediction  Model  (IVPM)  and  the  Backpropagation  Genetic 
+Algorithm (BP-GA), to optimize the design of Augmented Reality 
+Head-Up Display (AR-HUD) interfaces for professional drivers. This 
+study is unique in its method to reducing visual fatigue and cognitive 
+load, key factors that can impact the occupational health and safety 
+(OHS)  of  professional  drivers.  By  leveraging  machine  learning  to 
+predict cognitive load in AR-HUD design, this study offers a novel 
+way to enhance driving performance and user experience.
+
+This  study  represents  a  contribution  to  the  field  of  human-
+computer interaction, demonstrating how advanced technologies such 
+as AR-HUD can be effectively adopted to enhance driver safety and 
+occupational health. Thus, this study advocates for the development 
+of safer and more ergonomic professional driving environments, a 
+requisite consideration in the modern fast-paced world, substantiating 
+its relevance to OSH.
+
+3. Materials and methods
+
+3.1. Experiment and dataset collection
+
+equipment refers to a high-performance desktop computer, and the 
+steering wheel, pedals, and gears were connected to the notebook 
+computer through relevant ports. To enable the test subjects to acquire 
+prominent  real  driving  experience  and  interactive  experience, 
+Unity3D engine was employed in the experiment to design and build 
+a driving assistance test system on AR platform. The system compiled 
+the logic codes of vehicle actions (e.g., vehicle acceleration, maximum 
+speed, and deceleration when braking). Moreover, Tobii Pro adaptive 
+eye movement analysis function was loaded in Unity3D environment. 
+The eye movement analysis SDK exhibited the capability of providing 
+eye movement data stream signals (e.g., the gaze time of left and right 
+eyes  as  the  original  data),  displaying  the  gaze  origin  (3D  eye 
+coordinates), gaze point and space comfort distance L(GazeData), and 
+synchronizing the external TTL event signals of the input port, with 
+the aim of synchronizing eye movement data and other biometric data 
+streams. Figure 1 illustrates the system architecture.
+
+The  participants  were  a  group  of  40  professional  drivers  with 
+normal or corrected vision. The group had a mean age of 31.36 years 
+(standard deviation = 4.97). At the time of testing, the participants 
+were in good mental condition and none of them experienced VR 
+simulation sickness. They all held a driver’s license and had an average 
+driving experience of over 5 years.
+
+The simulation platform was illustrated in Figure 2, comprised of 
+a mock car cockpit, large screen, audio-visual components, and an 
+AR-HUD helmet with eye-tracking capabilities. Unity3D software 
+provides panoramic modeling of road conditions and real-time data 
+recording. The helmet, integral to this study, houses an Eye Tracking 
+Module sensor and Eye Tobii VR lens on the forehead, capturing eye 
+movements during AR-HUD display. The above-described signals are 
+wirelessly transmitted to Tobii Pro Lab software for analysis.
+
+3.1.2. Experimental interface design of AR-HUD 
+display
+
+According to the design principles of AR-HUD and the visual 
+characteristics of the human eye, AR-HUD is located in the lower left 
+corner of the windshield, which is also the driver’s central visual area, 
+as shown in Figure 3A. For vehicles at a speed less than 75 km/h, the 
+visual information of AR-HUD fell into 85° of binocular vision. For 
+vehicles at a speed between 75 and 100 km/h, the information was less 
+than  65%  of  binocular  vision.  For  vehicles  at  a  speed  exceeding 
+100 km/h,  the  information  fell  into  40°  of  binocular  vision.  As 
+depicted in Figure 3B, the AR-HUD interface fell into six areas as 
+follows: A: driving status information and gear status; B: navigation 
+information,  including  navigation  instructions  and  other  driving 
+prompts;  C:  speed  information;  D:  warning  information  area, 
+including pedestrian warning, frontal collision warning, side collision 
+warning, driver abnormality warning, road speed limit warning, and 
+lane departure warning; E: default display of speed information, and 
+the driver can customize other display information; F: basic driving 
+information area, displaying time and date information. To explore 
+the  relationship  between  the  interface  design  of  AR-HUD  design 
+elements, the layout of the A-F components and the design of the 
+subcomponents will be presented in subsequent experiments.
+
+3.1.1. Experimental environment and equipment
+
+3.1.3. Experimental method
+
+In  the  experiment,  a  self-designed  integrated  helmet  with  eye 
+tracking  and  AR  function  was  adopted  to  provide  360  immersive 
+driving  simulation  and  eye  tracking  experiments.  The  operating 
+
+This study delineates AR-HUD information design patterns and 
+tests  varied  visual  colors,  layouts,  and  components.  Each  driver 
+executes 6 tasks involving random layout and component designs, 
+
+Frontiers in Public Health
+
+04
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+FIGURE 1
+Structure of virtual reality driving assistant test system.
+
+the  four  groups  of  experimental  data  were  normally  distributed 
+(p < 0.05), meeting the assumption of parametric testing. Accordingly, 
+using a paired t-test, eye-tracking variations in drivers were tested 
+through visual search and target discovery. The descriptive statistics 
+and  matched  t-test  results  for  visual  search  are  shown  in  Table  1. 
+Significant variations in eye-tracking indicators with different visual 
+layouts  of  the  flat  display  show  that  visual  search  for  targets  can 
+effectively bring the driver’s attention back to the control loop and 
+make them aware of potential dangers.
+
+As  indicated  by  the  results,  HUD  interface  layout  design  can 
+be adjusted to assist cognitive judgment and decision-making and 
+optimize  the  capture  and  processing  of  attention  to  driving  task 
+information. The unreasonable AR-HUD visual design will exceed the 
+visual capacity limit of the driver while increasing the risk of driving 
+accidents. The experimental results suggested that as the perception 
+task  involved  in  AR-HUD  visual  search  tasks  was  increased, 
+participants’ attention to the driving scene in front declined, the visual 
+search  range  was  narrowed,  and  the  scanning  path  length  was 
+shortened. In a limited time, participants should fully focus on the 
+information of the entire driving scene. The scanning path length was 
+significantly different from that of non-driving tasks, probably due to 
+the different positions and distributions of environmental elements 
+that  attract  participants’  visual  attention,  which  may  reduce  the 
+effectiveness of scanning paths (43–47). In other words, the layout of 
+AR-HUD visual elements may affect visual scanning strategies, such 
+that drivers’ cognitive load can be affected.
+
+3.3. Implementation of BP-GA
+
+3.3.1. An algorithm for integrating genetic 
+algorithm and BP neural network
+
+Recent research has employed a fitness function developed by 
+a  BP  neural  network  and  genetic  algorithm  to  optimize  the 
+interface design of AR-HUD interactive systems based on driver’s 
+visual distribution characteristics, yielding effective results (48). 
+In  this  study,  a  combination  of  machine  learning  and  deep 
+learning was adopted to compare optimization effects. The BP 
+neural network model, using AR-HUD visual interaction element 
+coding and visual cognitive load index as input and output layers, 
+was  incorporated  into  a  genetic  algorithm  to  determine  the 
+optimal  AR-HUD  design  (49).  Figure  5 
+illustrates  the 
+relevant process.
+
+FIGURE 2
+Experimental environment and equipment.
+
+with a 10-min rest between tasks. This process produces 240 samples 
+for deep learning prediction. Each driving scenario lasts 60 s, with eye 
+movement parameters extracted in 30-s intervals.
+
+Figure  4  illustrates  the  procedure,  where  a  wide  variety  of 
+AR-HUD  visual  schemes  were  covered,  randomly  presented  to 
+measure users’ visual cognitive load. The test involved driving at 50 
+kilometers per hour, maintaining a minimum 50-meter distance from 
+a preceding car, as well as locating and stating information displayed 
+on the AR-HUD. Data were collected on driving behavior and eye 
+movement after the respective task.
+
+The experiment was performed on city roads under good weather 
+and  moderate  traffic  conditions.  A  15-min  training  familiarized 
+participants with simulator operation, visual search, target warnings, 
+and driving modes. After the respective task, participants employed 
+the NASA-TLX form to assess their subjective cognitive load regarding 
+AR-HUD use. (39–42).
+
+3.2. Experimental results and analysis
+
+Eye-tracking data segments were taken before and after visual 
+search for 30 s. According to the Shapiro-Wilke test, the differences in 
+
+Frontiers in Public Health
+
+05
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+3.3.2. Topological structure of BP neural network
+
+According to practical issues, the topological structure of neural 
+network is determined, including three layers: 1 input layer, 3 hidden 
+layer and 1 output layer. The number of neurons in the input layer is 
+26 and the number of neurons in the output layer is 1. In the hidden 
+layer,  the  optimal  number  of  neurons  is  determined  by  heuristic 
+method (50, 51), and the optimal number of neurons is determined to 
+be 15 after operation. Lastly, based on the BP neural network between 
+the visual arrangement coding of the head-up display and NASA-TLX, 
+
+A
+
+B
+
+FIGURE 3
+AR-HUD design scheme: (A) AR-HUD interface design; (B) AR-HUD 
+interface layout.
+
+its topological structure is determined, as shown in Figure 6. The 
+meaning of a[1]
+(x) represents the activation function of the hidden layer 
+in the backpropagation (BP) neural network. A[0] represents the input 
+layer,  and  A[1]-A[3]  represent  the  hidden  layers.  A[4]  represents  the 
+output layer. X represents the input variable, and Y represents the 
+output variable.
+
+3.3.3. Performance of BP neural network method
+
+The activation function of neurons refers to an integral part of BP 
+neural networks, which should be differentiable, and its derivative should 
+be continuous (48, 52). Thus, the log-sigmoid activation function {logsig} 
+was selected as the activation function for the hidden layer and output 
+layer neurons of the BP neural network. The {Levenberg–Marquardt} BP 
+algorithm training function {trainlm} was used in the training process of 
+the BP network modeling. The maximum iteration number of the neural 
+network  was  1000  times,  the  training  target  error  was  set  to  10,  the 
+learning rate was 0.1, and the status was displayed every five training 
+cycles. Unmodified parameters served as the default values of the system 
+(53, 54). The neural network fitting toolbox ran in Matlab software. After 
+repeated  training  and  weight  adjustment,  the  optimal  validation 
+performance index was 0.349 at epoch 6.
+
+3.3.4. Chromosome coding of visual cognitive 
+load model
+
+As  depicted  in  Table  2,  this  study’s  AR-HUD  visual  model 
+comprised nine discrete variables, i.e., GM, GL, GF, GA, GB, GC, GD, 
+GE, and GF, which had been encoded as 26-bit binary strings in the 
+previous neural network model construction. For instance, the 26-bit 
+binary  string  of  the  design  scheme  in  Figure  6  corresponds  to 
+1000010000011001010100110,  in  which  the  respective  binary 
+character represents a gene. Among the above-mentioned variables, 
+GM, GL, GF, and GA served as 4-bit binary variables, whereas the 
+acted  as  are  2-bit  binary  variables.  In  the  integrated  operation  of 
+neural  network  and  genetic  algorithm,  the  chromosome  input  in 
+binary coding form was first converted to floating-point type, and 
+then  the  floating-point  value  was  converted  back  to  the  identical 
+binary form as the input after the calculation of the adaptive function. 
+The code conversion rules are presented as follows: a 4-bit binary code 
+
+FIGURE 4
+Experimental process.
+
+Frontiers in Public Health
+
+06
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 1  Statistical results of measurement indexes of eye movement experiment.
+
+Num
+
+Gaze/ms
+
+Glance/ms
+
+Reaction/ms
+
+NASA-TLX
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+0.44
+
+0.58
+
+0.38
+
+0.71
+
+0.86
+
+0.81
+
+0.54
+
+0.99
+
+0.56
+
+0.21
+
+0.35
+
+0.41
+
+0.40
+
+0.54
+
+0.37
+
+0.46
+
+0.11
+
+0.22
+
+0.31
+
+0.41
+
+0.52
+
+0.62
+
+0.72
+
+0.38
+
+0.55
+
+0.47
+
+0.66
+
+0.42
+
+0.59
+
+0.43
+
+0.57
+
+0.48
+
+0.63
+
+0.51
+
+0.69
+
+0.45
+
+0.58
+
+0.53
+
+0.61
+
+0.49
+
+0.65
+
+0.56
+
+0.47
+
+0.62
+
+0.46
+
+0.65
+
+0.23
+
+0.56
+
+0.59
+
+0.58
+
+0.53
+
+0.99
+
+0.94
+
+0.37
+
+0.38
+
+0.47
+
+0.45
+
+1.05
+
+0.25
+
+0.84
+
+0.27
+
+0.28
+
+0.37
+
+0.39
+
+0.57
+
+0.78
+
+0.89
+
+0.35
+
+0.62
+
+0.43
+
+0.79
+
+0.38
+
+0.66
+
+0.41
+
+0.61
+
+0.46
+
+0.76
+
+0.54
+
+0.85
+
+0.42
+
+0.64
+
+0.58
+
+0.74
+
+0.47
+
+0.81
+
+0.63
+
+0.44
+
+0.77
+
+2.28
+
+2.38
+
+1.04
+
+0.75
+
+1.30
+
+1.83
+
+2.15
+
+2.08
+
+1.72
+
+2.47
+
+1.72
+
+2.13
+
+2.64
+
+1.28
+
+1.04
+
+1.53
+
+2.28
+
+1.53
+
+1.94
+
+2.08
+
+1.72
+
+2.28
+
+2.47
+
+2.13
+
+1.94
+
+2.08
+
+1.53
+
+1.72
+
+1.28
+
+1.53
+
+1.94
+
+2.28
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+12.10
+
+12.60
+
+5.52
+
+4.25
+
+6.93
+
+9.71
+
+11.42
+
+11.14
+
+9.16
+
+13.12
+
+9.13
+
+11.33
+
+14.32
+
+6.82
+
+5.52
+
+8.13
+
+12.13
+
+8.12
+
+10.32
+
+11.15
+
+9.05
+
+12.25
+
+13.35
+
+11.32
+
+10.28
+
+11.18
+
+8.11
+
+9.05
+
+6.81
+
+8.15
+
+10.25
+
+12.19
+
+9.03
+
+13.41
+
+11.29
+
+10.31
+
+8.09
+
+9.01
+
+12.17
+
+13.38
+
+11.28
+
+10.30
+
+8.10
+
+9.03
+
+P
+
+0.03
+
+0.02
+
+0.00
+
+0.02
+
+0.01
+
+0.05
+
+0.03
+
+0.05
+
+0.04
+
+0.81
+
+1.05
+
+0.33
+
+0.23
+
+0.05
+
+0.48
+
+0.71
+
+0.95
+
+0.23
+
+0.13
+
+0.04
+
+0.03
+
+0.03
+
+0.03
+
+0.05
+
+0.04
+
+0.04
+
+0.02
+
+0.02
+
+0.02
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.03
+
+0.04
+
+0.03
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+95% confidence interval
+
+(0.92, 1.33)
+
+(0.89, 1.17)
+
+(0.21, 0.69)
+
+(1.18, 3.50)
+
+(0.95, 1.50)
+
+(0.89, 1.14)
+
+(0.21, 1.69)
+
+(0.98, 4.50)
+
+(0.95, 2.50)
+
+(0.82, 1.17)
+
+(0.71, 0.69)
+
+(1.98, 4.50)
+
+(0.95, 1.50)
+
+(0.49, 1.11)
+
+(0.31, 0.59)
+
+(0.86,1.13)
+
+(0.23, 1.39)
+
+(0.94, 3.50)
+
+(0.92, 1.50)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.12, 2.08)
+
+(1.32, 2.56)
+
+(0.85, 1.46)
+
+(0.92, 1.35)
+
+(1.05, 2.02)
+
+(1.22, 2.17)
+
+(0.98, 1.32)
+
+(1.12, 2.09)
+
+(0.89, 1.25)
+
+(1.08, 2.18)
+
+(0.96, 1.35)
+
+(1.21, 2.09)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.15, 2.06)
+
+(1.08, 2.11)
+
+(1.01, 2.28)
+
+(0.94, 1.42)
+
+(1.05, 2.12)
+
+(0.99, 1.33)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+Frontiers in Public Health
+
+07
+
+frontiersin.org
+
+(Continued)
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 1  (Continued)
+
+Num
+
+Gaze/ms
+
+Glance/ms
+
+Reaction/ms
+
+NASA-TLX
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.62
+
+0.72
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.55
+
+0.67
+
+0.48
+
+0.62
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.78
+
+0.89
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.61
+
+0.83
+
+0.46
+
+0.77
+
+0.59
+
+0.84
+
+0.48
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+2.28
+
+2.47
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+2.28
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+12.25
+
+13.35
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+12.19
+
+11.23
+
+10.32
+
+9.05
+
+13.39
+
+11.26
+
+10.33
+
+P
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.03
+
+0.03
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+95% confidence interval
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.08)
+
+(1.32, 2.56)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(1.02, 2.32)
+
+(1.10, 2.16)
+
+(0.96, 1.38)
+
+(1.18, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+Frontiers in Public Health
+
+08
+
+(Continued)
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 1  (Continued)
+
+Num
+
+Gaze/ms
+
+Glance/ms
+
+Reaction/ms
+
+NASA-TLX
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+131
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+P
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+95% confidence interval
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+Frontiers in Public Health
+
+09
+
+(Continued)
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 1  (Continued)
+
+Num
+
+Gaze/ms
+
+Glance/ms
+
+Reaction/ms
+
+NASA-TLX
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
+
+151
+
+152
+
+153
+
+154
+
+155
+
+156
+
+157
+
+158
+
+159
+
+160
+
+161
+
+162
+
+163
+
+164
+
+165
+
+166
+
+167
+
+168
+
+169
+
+170
+
+171
+
+172
+
+173
+
+174
+
+175
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+P
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+95% confidence interval
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+Frontiers in Public Health
+
+10
+
+(Continued)
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 1  (Continued)
+
+Num
+
+Gaze/ms
+
+Glance/ms
+
+Reaction/ms
+
+NASA-TLX
+
+176
+
+177
+
+178
+
+179
+
+180
+
+181
+
+182
+
+183
+
+184
+
+185
+
+186
+
+187
+
+188
+
+189
+
+190
+
+191
+
+192
+
+193
+
+194
+
+195
+
+196
+
+197
+
+198
+
+199
+
+200
+
+201
+
+202
+
+203
+
+204
+
+205
+
+206
+
+207
+
+208
+
+209
+
+210
+
+211
+
+212
+
+213
+
+214
+
+215
+
+216
+
+217
+
+218
+
+219
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+P
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+95% confidence interval
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+Frontiers in Public Health
+
+11
+
+(Continued)
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 1  (Continued)
+
+Num
+
+Gaze/ms
+
+Glance/ms
+
+Reaction/ms
+
+NASA-TLX
+
+220
+
+221
+
+222
+
+223
+
+224
+
+225
+
+226
+
+227
+
+228
+
+229
+
+230
+
+231
+
+232
+
+233
+
+234
+
+235
+
+236
+
+237
+
+238
+
+239
+
+240
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.64
+
+0.47
+
+0.61
+
+0.56
+
+0.41
+
+0.58
+
+0.51
+
+0.69
+
+0.45
+
+0.63
+
+0.54
+
+0.68
+
+0.49
+
+0.59
+
+0.55
+
+0.33
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.80
+
+0.44
+
+0.74
+
+0.63
+
+0.39
+
+0.57
+
+0.54
+
+0.85
+
+0.42
+
+0.76
+
+0.59
+
+0.84
+
+0.48
+
+0.68
+
+0.61
+
+0.35
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.28
+
+1.53
+
+1.72
+
+1.94
+
+2.08
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.72
+
+2.47
+
+2.13
+
+1.94
+
+1.53
+
+1.72
+
+2.45
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+12.15
+
+8.10
+
+9.03
+
+10.30
+
+11.15
+
+9.05
+
+13.41
+
+11.29
+
+10.31
+
+9.03
+
+13.39
+
+11.26
+
+10.33
+
+8.07
+
+9.01
+
+13.12
+
+P
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.04
+
+0.05
+
+0.04
+
+0.04
+
+0.04
+
+0.03
+
+0.05
+
+0.03
+
+0.04
+
+0.04
+
+0.04
+
+0.04
+
+0.05
+
+0.05
+
+0.04
+
+0.05
+
+95% confidence interval
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(1.05, 2.28)
+
+(1.12, 2.25)
+
+(1.18, 2.09)
+
+(0.99, 1.33)
+
+(0.94, 1.32)
+
+(0.78, 1.21)
+
+(1.05, 2.32)
+
+(1.12, 2.08)
+
+(0.98, 1.29)
+
+(1.21, 2.09)
+
+(1.02, 2.22)
+
+(1.08, 2.16)
+
+(0.95, 1.37)
+
+(1.16, 2.19)
+
+(1.12, 2.11)
+
+(0.85, 1.07)
+
+FIGURE 5
+Calculation process of AR-HUD visual cognitive load prediction model.
+
+Frontiers in Public Health
+
+12
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+Input Layer
+
+X
+
+X = A[0]
+
+Hidden Layers
+
+a[2]
+1
+
+a[2]
+2
+
+a[2]
+3
+
+a[2]
+n
+
+A[2]
+
+a[1]
+1
+
+a[1]
+2
+
+a[1]
+3
+
+a[1]
+n
+
+A[1]
+
+a[3]
+1
+
+a[3]
+2
+
+a[3]
+3
+
+a[3]
+n
+
+A[3]
+
+Output Layer
+
+a[4]
+
+Ŷ
+
+A[4]
+
+FIGURE 6
+Topological structure of BP neural network.
+
+was converted to a floating-point number that continuously ranges 
+from 0 to 4. For continuous variables with values of [0,1], [1,2], [2,3], 
+and [3,4], the corresponding binary codes turned out to be 1000, 0100, 
+0010, and 0001, respectively. A two-bit binary code was converted to 
+a floating-point number in the range of [0,2]. For continuous variables 
+with values of [0,1] and [1,2], the corresponding binary codes reached 
+10 and 01 (55), respectively. The approximate optimal solution can 
+only be explained after decoding.
+
+To  establish  a  neural  network  prediction  model,  this  study 
+constructed a training sample set. The input is chromosome coding of 
+AR-HUD visual model, and the output is the average NASA-TLX of 
+the 240 AR-HUD prototypes rated by the user in the experiment. 
+After organizing the data, the input and output data of the neural 
+network model were determined, as shown in Table 3.
+
+3.3.5. Parameters of IVPM-GA
+
+The initial population size was the total number of samples in the 
+AR-HUD dataset 240. The mutation rates range of GA algorithm in 
+this study was from 0.01 (1%) to 0.1 (10%). The crossover rate of GA 
+reached 0.8 (80%). Roulette wheel selection method was adopted to 
+select individuals from the population for reproduction (12).
+
+3.4. Implementation of IVPM-GA
+
+A  deep  learning-powered  image  view  point  prediction  model 
+(IVPM)  was  introduced  in  this  study  to  improve  AR-HUDs 
+(Augmented Reality Head-Up Displays) design with a strong focus on 
+occupational safety and health (OSH). Based on Bylinskii et al.’s work 
+(50),  the  IVPM,  trained  with  human  visual  attention  data,  can 
+be conducive to optimizing retargeting and thumbnails design. The 
+model was further integrated into a design tool providing real-time 
+feedback.  Its  application  in  AR-HUD  design  aimed  at  lessening 
+cognitive load and enhancing driver safety, emphasizing the effective 
+communication of critical information, such that its significance in 
+promoting OSH can be highlighted.
+
+3.4.1. Dataset of interface designs
+
+IVPM uses the eye movement experimental dataset in section 3.1 
+for  training,  which  contains  240  ground  truth  (GT)  significance 
+markers developed by AR-HUD HCI, and divides the training set and 
+the test set according to 80–20%.
+
+3.4.2. The loss function and model architecture 
+of IVPM
+
+The equation of importance for IVPM to predict the content of 
+each  pixel  position  in  a  bitmap  image  is  shown  in  Eq.  (1).  The 
+importance prediction Pi∈[0,1] is output for each pixel, with higher 
+values suggesting greater importance. Similar to saliency models that 
+perform  well  on  natural  images,  IVPM  is  based  on  the  FCN 
+architecture. Given the true importance Qi∈[0,1] at each pixel i, the 
+sigmoid cross-entropy loss is optimized over all pixels = 1, 2, …, N to 
+optimize the FCN model parameters θ (50):
+
+L
+
+θ(
+
+) = −
+
+1
+
+N
+
+N
+∑
+1
+=
+i
+
+(
+
+Q
+i
+
+log
+
+P
+i
+
++
+
+−(
+1
+
+Q
+i
+
+)
+
+log
+
+−(
+1
+
+)
+
+)
+
+P
+i
+
+(1)
+
+Where P_i = σ(f_i(θ)) represents the importance prediction value 
+obtained  by  passing  the  FCN  output  f(θ)  through  the  sigmoid 
+activation function σ(X) = (1 + exp(−x))-1. Notably, this loss function 
+has been commonly employed for binary classification, given that 
+Q_i∈{0,1}. To be specific, it is extended to real-valued Q_i∈[0,1].
+
+After continuous pooling, the model prediction turned out to 
+be  1/32  of  the  input  image  resolution.  To  improve  the  prediction 
+resolution and capture finer details, skip connections from earlier 
+layers were introduced, following the steps proposed by Long et al. to 
+form the FCN-16 s model (56, 57). As indicated by the experimental 
+results, FCN-16 s (with skip connections from pool4) captured more 
+details  and  improved  prediction  performance  compared  with  the 
+FCN-32 s model (due to limited samples, the pre-trained FCN-32 s 
+model was used to initialize the network parameters and fine-tuned). 
+The model architecture is shown in Figure 7 (58).
+
+Frontiers in Public Health
+
+13
+
+frontiersin.org
+
+ 
+ 
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 2  Chromosome coding of visual cognitive load model.
+
+Element
+
+Content
+
+Chromosome coding and interpretation
+
+GM
+
+GL
+
+GF
+
+Main color
+
+RGB:#2979FF
+
+RGB:#FE0000
+
+RGB:#4ADE80
+
+RGB:#F26D21
+
+1000
+
+0100
+
+0010
+
+0001
+
+Arrangement
+
+Frame shape
+
+1000
+
+0100
+
+0010
+
+0001
+
+GA: Module A
+
+Information:
+
+GB: Module B
+
+Navigation
+
+GC: Module C
+
+Speed Indicator
+
+GD: Module D
+
+Speed table
+
+GE: Module E
+
+Driving state
+
+GF: Module F
+
+Gear status
+
+1000
+
+Roboto
+
+1000
+
+0100
+
+0010
+
+Avenir Next
+
+Burlingame
+
+0100
+
+0010
+
+0001
+
+Tipperary
+
+0001
+
+10
+
+10
+
+10
+
+10
+
+01
+
+01
+
+01
+
+01
+
+4. Results
+
+4.1. Performance of IVPM model method
+
+Kullback–Leibler divergence (KL) and cross correlation (CC) are 
+used  to  assess  the  similarity  between  the  forecast  map  and  the  GT 
+importance marker map. KL severely punishes the wrong prediction, so 
+the sparse graph that fails to predict the important position of GT will get 
+a higher KL value (low score). Given the GT importance graph q and the 
+predicted importance graph p, the P,KL value is calculated as Eq. (2) (48):
+
+(
+KL P Q
+
+,
+
+) =
+
+N
+∑
+1
+=
+i
+
+(
+
+Q
+i
+
+log
+
+−
+Q Q
+i
+
+i
+
+log
+
+P
+i
+
+) = (
+
+) −
+L P Q H Q
+
+(
+
+,
+
+)
+
+(2)
+
+In addition, H Q(
+graph of GT, and L P,Q(
+
+)= − l(Q
+
+log
+
+Q
+
+i
+
+) is the entropy of the importance 
+i
+) is the cross entropy of the predicted value 
+
+and GT. A large KL divergence indicates a large difference between 
+)=0 indicates that two graphs are the same. CC 
+graphs, and KL P,Q(
+is calculated as Eq. (3) (48):
+
+(
+CC P Q
+
+,
+
+) =
+
+1
+N
+N
+1
+=
+i
+
+1
+N
+
+∑
+
+∑
+
+N
+1
+=
+i
+
+(
+)
+−(
+P P Q Q
+i
+
+−
+
+i
+
+)
+
+−(
+P P
+i
+
+)
+
+2
+
+1
+N
+
+∑
+
+N
+1
+=
+i
+
+(
+
+−
+Q Q
+
+i
+
+2
+
+)
+
+(3)
+
+Where P
+
+=
+
+1
+N
+
+N
+∑
+P
+, and q is the same. CC ranges from −1 to 1; CC 
+i
+1
+i
+=
+
+equal to 1 suggests that the greatest correlation exists between graphs 
+P  and Q;  high CC  score  and  low  KL  score  suggest  that  the  good 
+prediction effect. In the experiment on the test image dataset, the 
+average score of CC was 0.715, KL and the average score of KL reached 
+0.313, such that good performance prediction was achieved. Only 
+some results are presented in Figure 8.
+
+Frontiers in Public Health
+
+14
+
+frontiersin.org
+
+ 
+ 
+ 
+ 
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE  3  Input and output of neural network prediction model.
+
+TABLE  3  (Continued)
+
+Number
+
+Chromosomal code
+
+NASA-TLX
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+00101000010010000101011001
+
+00100100010001001001100110
+
+00100010101000010010011001
+
+00100001100100100010100110
+
+00011000010001010010010110
+
+00010100010010100010101001
+
+00010010100100000101010110
+
+00010001101000001001101001
+
+00010001101001001001101011
+
+00010001101101001001101011
+
+00010100010001001001100110
+
+00010001100100100010100100
+
+10000100010010101000101001
+
+01000001000100100010100100
+
+01000010100100001001010110
+
+00100100010010100010101001
+
+01000010100100000101010110
+
+10000001101000001001101001
+
+00010001101001001001101010
+
+01100101111010101100110000
+
+10101001011110101100110001
+
+11011011011101110101100011
+
+01010111001111010101010010
+
+11101010101001011010100001
+
+00101010111010110101100011
+
+10101010101011010101100011
+
+01110101011011010101010001
+
+11101101010101011010100001
+
+01010101010110110101010011
+
+11010101011010110101100001
+
+00101010101010110101100001
+
+10101010101010101101010011
+
+01101010101011010101010010
+
+11110101010101011010100010
+
+01010101010101010101100010
+
+11010101010101110101010010
+
+00101010101010110101010011
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101101010010
+
+01010101010101010101010011
+
+11010101010101010101100011
+
+00101010101010110101010010
+
+10101010101010110101010001
+
+12.10
+
+12.60
+
+5.52
+
+4.25
+
+6.93
+
+9.71
+
+11.42
+
+11.14
+
+9.16
+
+13.12
+
+9.13
+
+11.33
+
+14.32
+
+6.82
+
+5.52
+
+8.13
+
+12.13
+
+8.12
+
+10.32
+
+10.30
+
+12.20
+
+9.40
+
+7.90
+
+6.80
+
+8.60
+
+11.50
+
+13.20
+
+6.10
+
+9.90
+
+7.50
+
+11.80
+
+8.30
+
+14.10
+
+6.50
+
+10.60
+
+12.60
+
+9.20
+
+7.70
+
+13.70
+
+6.90
+
+11.10
+
+8.90
+
+6.70
+
+9.80
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+01101010101010110101010010
+
+11101010101010101010100010
+
+01010101010101010101010000
+
+11010101010101010101010000
+
+00101010101010110101010011
+
+10101010101010110101010001
+
+01101010101010110101010001
+
+11101010101010101010100000
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010010
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010010
+
+00101010101010110101010011
+
+10101010101010110101010000
+
+01101010101010110101010010
+
+11101010101010101010100010
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010000
+
+10101010101010110101010011
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010011
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100000
+
+01010101010101010101010000
+
+11010101010101010101010010
+
+00101010101010110101010001
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+12.10
+
+7.10
+
+10.90
+
+8.10
+
+11.60
+
+6.30
+
+13.90
+
+6.60
+
+10.10
+
+12.40
+
+9.50
+
+7.60
+
+14.00
+
+6.20
+
+11.00
+
+9.70
+
+7.30
+
+12.00
+
+8.70
+
+6.40
+
+10.70
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.30
+
+10.20
+
+12.60
+
+9.20
+
+7.70
+
+13.70
+
+6.90
+
+10.30
+
+12.20
+
+9.40
+
+7.90
+
+14.10
+
+6.10
+
+10.00
+
+12.50
+
+9.30
+
+7.80
+
+13.80
+
+6.50
+
+10.60
+
+(Continued)
+
+Frontiers in Public Health
+
+15
+
+(Continued)
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE  3  (Continued)
+
+TABLE  3  (Continued)
+
+Number
+
+Chromosomal code
+
+NASA-TLX
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+131
+
+132
+
+133
+
+11010101010101010101010001
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010010
+
+10101010101010110101010001
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010010
+
+00101010101010110101010011
+
+10101010101010110101010001
+
+01101010101010110101010001
+
+11101010101010101010100001
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010000
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010010
+
+11101010101010101010100010
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010000
+
+10101010101010110101010011
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010011
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.20
+
+10.20
+
+12.60
+
+9.50
+
+7.60
+
+13.70
+
+6.70
+
+10.90
+
+8.10
+
+11.60
+
+6.30
+
+13.90
+
+6.60
+
+10.10
+
+12.40
+
+9.50
+
+7.60
+
+14.00
+
+6.20
+
+11.50
+
+12.30
+
+9.70
+
+7.30
+
+12.80
+
+6.40
+
+10.70
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.30
+
+10.20
+
+12.60
+
+9.20
+
+7.70
+
+13.70
+
+6.90
+
+10.30
+
+12.20
+
+9.40
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
+
+151
+
+152
+
+153
+
+154
+
+155
+
+156
+
+157
+
+158
+
+159
+
+160
+
+161
+
+162
+
+163
+
+164
+
+165
+
+166
+
+167
+
+168
+
+169
+
+170
+
+171
+
+172
+
+173
+
+174
+
+175
+
+176
+
+177
+
+178
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100000
+
+01010101010101010101010000
+
+11010101010101010101010010
+
+00101010101010110101010001
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010010
+
+10101010101010110101010001
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010010
+
+00101010101010110101010011
+
+10101010101010110101010001
+
+01101010101010110101010001
+
+11101010101010101010100000
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010010
+
+11101010101010101010100010
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+7.90
+
+14.10
+
+6.10
+
+10.00
+
+12.50
+
+9.30
+
+7.80
+
+13.80
+
+6.50
+
+10.60
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.20
+
+10.20
+
+12.60
+
+9.50
+
+7.60
+
+13.70
+
+6.70
+
+10.90
+
+8.10
+
+11.60
+
+6.30
+
+13.90
+
+6.60
+
+10.10
+
+12.40
+
+9.50
+
+7.60
+
+14.00
+
+6.20
+
+11.50
+
+12.30
+
+9.70
+
+7.30
+
+12.80
+
+6.40
+
+10.70
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.30
+
+Frontiers in Public Health
+
+16
+
+(Continued)
+
+(Continued)
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE  3  (Continued)
+
+TABLE  3  (Continued)
+
+Number
+
+Chromosomal code
+
+NASA-TLX
+
+179
+
+180
+
+181
+
+182
+
+183
+
+184
+
+185
+
+186
+
+187
+
+188
+
+189
+
+190
+
+191
+
+192
+
+193
+
+194
+
+195
+
+196
+
+197
+
+198
+
+199
+
+200
+
+201
+
+202
+
+203
+
+204
+
+205
+
+206
+
+207
+
+208
+
+209
+
+210
+
+211
+
+212
+
+213
+
+214
+
+215
+
+216
+
+217
+
+218
+
+219
+
+220
+
+221
+
+222
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010011
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100000
+
+01010101010101010101010000
+
+11010101010101010101010010
+
+00101010101010110101010001
+
+10101010101010110101010000
+
+01101010101010110101010011
+
+11101010101010101010100010
+
+01010101010101010101010010
+
+11010101010101010101010001
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010010
+
+00101010101010110101010011
+
+10101010101010110101010000
+
+01101010101010110101010001
+
+11101010101010101010100010
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010010
+
+11101010101010101010100010
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+10.20
+
+12.60
+
+9.20
+
+7.70
+
+13.70
+
+6.90
+
+10.30
+
+12.20
+
+9.40
+
+7.90
+
+14.10
+
+6.10
+
+10.00
+
+12.50
+
+9.30
+
+7.80
+
+13.80
+
+6.50
+
+10.60
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.20
+
+11.00
+
+9.70
+
+7.30
+
+12.30
+
+8.70
+
+6.40
+
+10.70
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.20
+
+11.50
+
+12.30
+
+9.70
+
+7.30
+
+12.80
+
+6.40
+
+10.70
+
+12.90
+
+(Continued)
+
+223
+
+224
+
+225
+
+226
+
+227
+
+228
+
+229
+
+230
+
+231
+
+232
+
+233
+
+234
+
+235
+
+236
+
+237
+
+238
+
+239
+
+240
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+11010101010101010101010001
+
+00101010101010110101010001
+
+10101010101010110101010011
+
+01101010101010110101010010
+
+11101010101010101010100010
+
+01010101010101010101010001
+
+11010101010101010101010011
+
+00101010101010110101010000
+
+10101010101010110101010001
+
+01101010101010110101010000
+
+11101010101010101010100011
+
+01010101010101010101010001
+
+10000010101101001001100011
+
+8.80
+
+7.10
+
+14.00
+
+6.20
+
+11.50
+
+12.30
+
+9.70
+
+7.30
+
+12.80
+
+6.40
+
+10.70
+
+12.90
+
+8.80
+
+7.10
+
+14.00
+
+6.20
+
+11.50
+
+13.12
+
+4.2. BP-GA operation result
+
+Taking  the  BP  neural  network  function  of  cognitive  load 
+prediction established in section 4.1 as the fitness function of 
+genetic algorithm, a genetic algorithm is established. By adjusting 
+parameters and running the program multiple times, as shown in 
+Figure  9,  the  evolution  process  is  plotted  with  the  generation 
+number on the x-axis and the maximum fitness of individuals on 
+the y-axis. The design model in the initial randomly generated 
+parent population has a relatively high quality, which to some 
+extent  avoids  the  phenomenon  of  local  convergence  in  the 
+optimization process. The maximum fitness of individual samples 
+gradually increases with the iteration of the population. After 212 
+iterations, the optimal individual is found and its preference is 
+approximately 5.570.
+
+4.3. IVPM-GA operation result
+
+A  genetic  algorithm  fitness  function  is  established  by 
+combining  the  predicted  NASA-TLX  value  and  the  IVPM 
+function into a single fitness function. The function is developed 
+to consider the minimum prediction error between the actual and 
+predicted NASA-TLX minimum value and the predicted image 
+viewpoint as multi-objective optimization indicators. The fitness 
+function  is  used  in  a  multi-objective  optimization  algorithm 
+based on genetic algorithm, in which the distribution is updated 
+once per generation as the algorithm evolves. After 40 iterations 
+of the gene population, the optimal individual is identified. Upon 
+the termination of the iteration, the individual distribution graph 
+depicted in Figure 10 is obtained.
+
+Frontiers in Public Health
+
+17
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+FIGURE 7
+Image viewpoint prediction model (IVPM) architecture: fully participatory networks can efficiently learn to make dense predictions for per-pixel tasks 
+like semantic segmentation.
+
+FIGURE 8
+Importance predictions for Eye tracking hotspot data visualizations, compared with ground truth View and sorted by performance. The model is good 
+at localizing Eye tracking hotspot visualization as well as picking up the extreme points on graphs.
+
+Frontiers in Public Health
+
+18
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+FIGURE 9
+Genetic algorithm fitness evolution process diagram.
+
+Pareto front
+
+2
+e
+v
+i
+t
+c
+e
+b
+O
+
+j
+
+35
+
+30
+
+25
+
+20
+
+15
+
+10
+
+5
+
+0
+
+-5
+
+-40
+Pause
+
+Stop
+
+-35
+
+-30
+
+-25
+-20
+Objective 1
+
+-15
+
+-10
+
+FIGURE 10
+Evolution process of multi-objective optimization Pareto Front based on IVPM genetic algorithm.
+
+4.4. Comparison of results using the CH 
+scale
+
+The genetic algorithm was employed to obtain the optimal encoding 
+rule  for  the  AR-HUD  interface  design  problem.  After  decoding  was 
+completed, two optimized interfaces were obtained: one using the IVPM 
+method and the other based on the BP method. The cognitive loads of the 
+two solutions were assessed by comparing IVPM-GA and BP-GA.
+
+The  Cooper-Harper  (CH)  rating  scale,  which  subjectively 
+evaluates  driving  difficulty  on  a  scale  of  ten  levels,  was  used  for 
+comparison.  A  total  of  15  participants  assessed  their  driving 
+experience  and  perceptions  of  the  difficulty  levels  (59–64).  The 
+collected rating scale data was adopted to calculate the average scores 
+of corresponding factors and total scores for the respective solution, 
+and the corresponding load level strengths were examined. Table 4 
+lists the relevant results.
+
+The results in the table indicate that 11 out of 15 participants 
+(73.3%  of  the  total)  rated  the  IVPM-GA  solution  higher  than  the 
+BP-GA  solution.  As  indicated  by  the  above  result,  the  AR-HUD 
+optimized using IVPM-GA outperforms the one optimized using only 
+BP-GA in terms of the driving performance, such that the effectiveness 
+of the algorithm adopted in this study is confirmed.
+
+5. Discussion
+
+5.1. Interpretation of the results
+
+As revealed by the results of this study, the AR-HUD interface 
+optimized using the IVPM-GA method outperformed the BP-GA 
+method in terms of the driving performance. The genetic algorithm 
+based  on  the  IVPM  method  was  also  found  to  be  effective  in 
+
+Frontiers in Public Health
+
+19
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+TABLE 4  Comparison of grade distribution of driving performance 
+assessment IVPM-GA and BP-GA with CH scale.
+
+IVPM-GA  >  BP-
+GA
+
+IVPM-GA  =  BP-
+GA
+
+IVPM-GA  <  BP-
+GA
+
+Grade
+
+5/4
+
+6/4
+
+6/5
+
+7/5
+
+7/6
+
+Grade
+
+4/4
+
+5/5
+
+6/6
+
+7/7
+
+n
+
+2
+
+1
+
+2
+
+2
+
+4
+
+Sum
+
+11
+
+n
+
+1
+
+1
+
+0
+
+1
+
+3
+
+Grade
+
+4/5
+
+5/6
+
+6/7
+
+n
+
+0
+
+1
+
+1
+
+1
+
+optimizing the interface design. Furthermore, the Cooper-Harper 
+rating scale results suggested that the IVPM-GA method was preferred 
+by the majority of the participants.
+
+In terms of occupational health and safety, the findings of this 
+study  are  significant  as  they  provide  evidence  that  the  IVPM-GA 
+method can enhance driving performance and user experience. The 
+above finding is vital to professional drivers who face occupational 
+health and safety risks (e.g., fatigue and cognitive load). By reducing 
+cognitive  load  and  improving  driving  performance,  AR-HUD 
+interfaces optimized using the IVPM-GA method can contribute to 
+reducing occupational health and safety risks for professional drivers.
+
+5.2. Implications of the findings
+
+The results of the study not only confirmed the effectiveness of the 
+genetic algorithm optimization methods for AR-HUD interface design 
+while taking on great significance in the safety and health of professional 
+drivers.  The  optimized  AR-HUD  interface  using  the  IVPM  method 
+significantly improved driving performance compared with the BP-GA 
+method. This finding suggests that optimized AR-HUD interfaces can 
+potentially improve driver safety on the road. Moreover, the Cooper-
+Harper rating scale results indicated that the IVPM method was preferred 
+by the majority of the participants, suggesting that the optimized interface 
+could  improve  user  experience  and  reduce  visual  fatigue,  which  can 
+benefit the occupational health of professional drivers.
+
+5.3. Limitations and future directions for 
+research
+
+In brief, future research on real-time image processing for driving 
+applications  should  focus  on  performance  and  efficiency  while 
+consider  the  implications  of  OSH.  It  is  imperative  to  assess  the 
+cognitive load, distractions, and overall effect on driver well-being. 
+Furthermore, optimizing the system’s user interface and integrating it 
+with driver assistance systems can further improve OSH in driving 
+scenarios. By addressing the above-described aspects, researchers can 
+develop  real-time  image  processing  systems  that  enhance  driving 
+performance and occupational safety and health. The implications of 
+real-time image processing for Occupational Safety and Health (OSH) 
+in  driving  scenarios  should  be  considered  (65).  As  the  suggested 
+network operates in real time and is employed in driving scenarios, it 
+exerts direct effects on driver safety and well-being (66). Subsequent 
+research should assess OSH effects of real-time image processing in 
+
+driving scenarios (56), which comprise cognitive load and potential 
+distractions (57, 67). Quantitative measures (e.g., eye-tracking and 
+physiological monitoring) provide insights into the mental workload 
+and attention demands (68). Besides, a focus should be placed on 
+mitigating  potential  negative  OSH  effects  (69).  It  is  imperative  to 
+optimize the user interface to reduce cognitive load and distractions. 
+(70). Principles (e.g., efficient information layout and intuitive design) 
+are  capable  of  ensuring  the  system  enhances  performance  while 
+reducing  adverse  effects  (60,  71).  Integrating  real-time  image 
+processing with driver assistance systems can improve OSH in driving 
+scenarios.  (72).  Accordingly,  cognitive  load  can  be  reduced,  and 
+overall driving safety can be improved (73).
+
+6. Conclusion
+
+6.1. Summary of the research findings
+
+This study confirmed the superiority of the IVPM-GA method over 
+the conventional BP-GA method for classical HCI optimization design 
+under  AR-HUD  interface  optimization  for  professional  drivers.  The 
+IVPM-based genetic algorithm is effective in optimizing the interface 
+design  while  improving  driving  performance  and  enhancing  user 
+experience. The above-mentioned results take on vital significance in the 
+safety and well-being of professional drivers since optimized AR-HUD 
+interfaces  are  promising  in  lowering  cognitive  load,  reducing  visual 
+distractions, and ultimately enhancing driver safety.
+
+6.2. Final thoughts and future research 
+directions
+
+The importance and necessity of this study lie in its potential to 
+dramatically enhance the occupational health and safety (OHS) of 
+professional drivers. By utilizing machine learning to predict cognitive 
+load  in  AR-HUD  design,  this  study  can  lay  a  solid  basis  for 
+significantly enhancing driving performance, user experience, and 
+above all, the occupational health of drivers, an often overlooked yet 
+critically important facet of professional driving. The emphasis of this 
+study on driver OHS was the need to reduce fatigue, mitigate risks of 
+accidents, and improve overall health conditions, primarily through 
+the optimization of visual ergonomics and the reduction of cognitive 
+loads.  The  potential  benefits  are  vast,  such  that  the  day-to-day 
+experiences of professional drivers can be affected, and longer-term 
+health outcomes and safety records can be facilitated.
+
+Future  research  inspired  by  this  study  could  delve  into  the 
+application  of  a  broad  range  of  machine  learning  methods  and 
+optimization techniques. It is imperative to expand sample sizes and 
+engage  diverse  participant  groups,  such  that  the  findings  can 
+be ensured to be generalizable and applicable across a wide spectrum 
+of professional drivers. An important direction for future research is 
+exploring  how  optimized  AR-HUD  interfaces  can  integrate  with 
+existing  driver  assistance  systems,  providing  timely,  relevant 
+information and further contributing to the reduction of cognitive 
+load, ultimately enhancing overall driving safety.
+
+The results of this study are critical to inform future Occupational 
+Safety and Health (OSH) policies and training programs, offering an 
+evidence-based  method  to  interface  design  that  centers  on  driver 
+safety and wellness. This study represents a significant contribution to 
+
+Frontiers in Public Health
+
+20
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+the expansive field of human-computer interaction, emphasizing the 
+beneficial integration of advanced technologies (e.g., AR-HUD). It 
+elucidates how the above-described technologies can be efficiently 
+adopted to enhance driver safety and occupational health. Accordingly, 
+this study advocates for the development of safer and more ergonomic 
+professional driving environments, a requisite consideration in the 
+modern fast-paced world, substantiating its relevance to OSH.
+
+Data availability statement
+
+The original contributions presented in the study are included in 
+the article/supplementary material, further inquiries can be directed 
+to the corresponding author.
+
+Ethics statement
+
+The  studies  involving  human  participants  were  reviewed  and 
+approved by the Ethics Committee of Lingnan Normal University. The 
+patients/participants  provided  their  written  informed  consent  to 
+participate in this study. Written informed consent was obtained from 
+the individual(s) for the publication of any potentially identifiable 
+images or data included in this article.
+
+Author contributions
+
+JT: conceptualization, methodology, validation, visualization, and 
+writing—original draft. FW: funding acquisition. YK: software and 
+
+resources.  J-KK:  conceptualization,  supervision,  and  project 
+administration. All authors contributed to the article and approved 
+the submitted version.
+
+Funding
+
+This study was funded by Experimental Management Research 
+Fund  of  Guangdong  Higher  Education  Society  (GDJ  2016037); 
+Industry-University-Research  Innovation  Fund  of  Science  and 
+Technology  Development  Center  of  Ministry  of  Education 
+(2018C01051).  2023  Lingnan  Normal  University  Education  and 
+Teaching Reform Project.
+
+Conflict of interest
+
+The  authors  declare  that  the  research  was  conducted  in  the 
+absence  of  any  commercial  or  financial  relationships  that  could 
+be construed as a potential conflict of interest.
+
+Publisher’s note
+
+All  claims  expressed  in  this  article  are  solely  those  of  the 
+authors and do not necessarily represent those of their affiliated 
+organizations,  or  those  of  the  publisher,  the  editors  and  the 
+reviewers. Any product that may be evaluated in this article, or 
+claim that may be made by its manufacturer, is not guaranteed or 
+endorsed by the publisher.
+
+References
+
+ 1. Ma X, Jia M, Hong Z, Kwok APK, Yan MJIA. Does augmented-reality head-up 
+display help? A preliminary study on driving performance through a VR-simulated eye 
+movement  analysis 
+(2021);  9:129951–129964,  doi:  10.1109/
+ACCESS.2021.3112240
+
+IEEE  Access 
+
+ 10. Currano R, Park SY, Moore DJ, Lyons K, Sirkin D, Little road driving HUD: heads-
+up display complexity influences drivers’ perceptions of automated vehicles. Proceedings 
+of the 2021 CHI conference on human factors in computing systems. Philadelphia, PA: 
+Taylor & Francis Group. (2021).
+
+ 2. Bram-Larbi KF, Charissis V, Lagoo R, Wang S, Khan S, Altarteer S, et al., Reducing 
+driver’s  cognitive  load  with  the  use  of  artificial  intelligence  and  augmented  reality. 
+Proceedings HCI international 2021-late breaking papers: HCI applications in health, 
+transport, and industry: 23rd HCI international conference, HCII 2021, virtual event. 
+Washington DC: Springer. (2021).
+
+ 3. Park HS, Park MW, Won KH, Kim KH, Jung SKJEJ. In-vehicle AR-HUD system to 
+provide  driving-safety  information.  ETRI  J.  (2013)  35:1038–47.  doi:  10.4218/
+etrij.13.2013.0041
+
+ 4. Meschtscherjakov A, Tscheligi M, Szostak D, Krome S, Pfleging B, Ratan R, et al., 
+HCI and autonomous vehicles: contextual experience informs design. Proceedings of 
+the 2016 CHI conference extended abstracts on human factors in computing systems, 
+San Jose, CA, USA. (2016).
+
+ 5. Charissis V, Falah J, Lagoo R, Alfalah SF, Khan S, Wang S, et al. Employing emerging 
+technologies to develop and evaluate in-vehicle intelligent systems for driver support: 
+infotainment AR HUD case study. Appl. Sci. (2021) 11:1397. doi: 10.3390/app11041397
+
+ 6. Yang H, Wang Y, Jia R. Dashboard layout effects on drivers’ searching performance 
+and heart rate: experimental investigation and prediction. Front Public Health. (2022) 
+10:121. doi: 10.3389/fpubh.2022.813859
+
+ 7. Hwang Y, Park BJ, Kim KHJEJ. The effects of augmented-reality head-up display 
+system usage on drivers? risk perception and psychological change. Electr Telecommun 
+Res Instit J. (2016) 38:757–66. doi: 10.4218/etrij.16.0115.0770
+
+ 8. Schömig N, Wiedemann K, Naujoks F, Neukum A, Leuchtenberg B, Vöhringer-
+Kuhnt T, An augmented reality display for conditionally automated driving. Adjunct 
+proceedings of the 10th international conference on automotive user interfaces and 
+interactive vehicular applications. Toronto, ON, Canada. (2018).
+
+ 9. Wang Y, Wu Y, Chen C, Wu B, Ma S, Wang D, et al. Inattentional blindness in 
+augmented reality head-up display-assisted driving. Traffic Inj Prev (2022);38:837–850, 
+doi: 10.1080/10447318.2021.1970434
+
+ 11. Deng N, Zhou Y, Ye J, Yang X, A calibration method for on-vehicle AR-HUD 
+system using mixed reality glasses. Proceedings of the 2018 IEEE conference on 
+virtual  reality  and  3D  user  interfaces  (VR).  (2018).  Tuebingen/Reutlingen, 
+Germany: IEEE.
+
+ 12. Wang X, Wang Z, Zhang Y, Shi H, Wang G, Wang Q, et al. A real-time driver 
+fatigue  identification  method  based  on  GA-GRNN.  Front  Public  Health.  (2022) 
+10:1007528. doi: 10.3389/fpubh.2022.1007528
+
+ 13. Card SK. The psychology of human-computer interaction. Boca Raton: CRC Press 
+
+(2018).
+
+ 14. Zhang J, Patel VLJP. Cognition. P&C. (2006) 14:333–41. doi: 10.1075/pc.14.2.12zha
+
+ 15. Rebbani Z, Azougagh D, Bahatti L, Bouattane OJIJ. Definitions and applications 
+of augmented/virtual reality: A survey. Int J Emerg Trends Eng Res. (2021) 9:279–85. doi: 
+10.30534/ijeter/2021/21932021
+
+ 16. Schneider M, Bruder A, Necker M, Schluesener T, Henze N, Wolff C, A field study 
+to  collect  expert  knowledge  for  the  development  of  AR  HUD  navigation  concepts. 
+Proceedings of the 11th international conference on automotive user interfaces and 
+interactive vehicular applications: adjunct proceedings. Utrecht, Netherlands. (2019).
+
+ 17. Zhang M. Optimization analysis of AR-HUD technology application in automobile 
+
+industry. J Phys Conf Ser. (2021) 1746:012062. doi: 10.1088/1742-6596/1746/1/012062
+
+ 18. Hoang L, Lee S-H, Kwon K-RJE. A 3D shape recognition method using hybrid 
+learning  network  CNN–SVM.  Electronics.  (2020)  9:649.  doi:  10.3390/
+
+deep 
+electronics9040649
+
+ 19. Chu ES, Seo JH, Kicklighter C. ARtist: interactive augmented reality for curating 
+
+children’s artworks. Creat. Cogn. (2021) 1–14. doi: 10.1145/3450741.3465395
+
+ 20. Daud  NFNM,  Abdullah  MHLJJOACT.  Stimulating  Children’s  Physical  Play 
+
+through Augmented Reality Game. Application. (2020) 2:29–34.
+
+Frontiers in Public Health
+
+21
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+ 21. Billinghurst M, Kato Hirokazu. Commun ACM (2002); 45:64–70, Collaborative 
+
+augmented reality, doi: 10.1145/514236.514265
+
+ 22. Conati C, Lallé S, Rahman MA, Toker D. Comparing and combining interaction 
+data and eye-tracking data for the real-time prediction of user cognitive abilities in 
+visualization tasks. Trans Interact Intell Syst. (2020) 10:1–41. doi: 10.1145/3301400
+
+ 23. Oppelt MP, Foltyn A, Deuschel J, Lang NR, Holzer N, Eskofier BM, et al. ADABase: 
+a multimodal dataset for cognitive load estimation. Sensors. (2023) 23:340. doi: 10.3390/
+s23010340
+
+ 24. Becerra-Sánchez P, Reyes-Munoz A, Guerrero-Ibañez AJS. Feature selection model 
+based on EEG signals for assessing the cognitive workload in drivers. Sensors. (2020) 
+20:5881. doi: 10.3390/s20205881
+
+ 25. Jacobé de Naurois C, Bourdin C, Stratulat A, Diaz E, Vercher JL. Detection and 
+prediction of driver drowsiness using artificial neural network models. Accid Anal Prev. 
+(2019) 126:95–104. doi: 10.1016/j.aap.2017.11.038
+
+ 26. Kang T, Chae M, Seo E, Kim M, Kim JJE. DeepHandsVR: hand interface using 
+deep  learning  in  immersive  virtual  reality.  Electronics.  (2020)  9:1863.  doi:  10.3390/
+electronics9111863
+
+ 27. Zhou Z. Research on machine learning-based intelligent vehicle object detection and 
+scene enhancement technology [Master’s thesis]. Chongqing: Chongqing University of 
+Posts and Telecommunications (2020).
+
+ 28. Rahman  H,  Ahmed  MU,  Barua  S,  Funk  P,  Begum  SJS.  Vision-based  driver’s 
+cognitive load classification considering eye movement using machine learning and 
+deep learning. Sensors. (2021) 21:8019. doi: 10.3390/s21238019
+
+ 29. Methuku JJITIV. In-car driver response classification using deep learning (CNN) 
+
+based computer vision. (2020).
+
+ 30. Mleczko KJMAOPE. Chatbot as a tool for knowledge sharing in the maintenance 
+
+and repair processes. Sensors. (2021) 4:499–508. doi: 10.2478/mape-2021-0045
+
+ 31. Ashraf K, Varadarajan V, Rahman MR, Walden R, Ashok AJITOVT. See-through 
+a  vehicle:  augmenting  road  safety  information  using  visual  perception  and  camera 
+communication  in  vehicles.  IEEE  Trans  Vehicular  Technol.  (2021)  70:3071–86.  doi: 
+10.1109/TVT.2021.3066409
+
+ 32. Kim H, Kwon YT, Lim HR, Kim JH, Kim YS, Yeo WHJAFM. Recent advances in 
+wearable sensors and integrated functional devices for virtual and augmented reality 
+applications. Sensors. (2021) 31:2005692. doi: 10.1002/adfm.202005692
+
+ 33. Riani  A,  Utomo  E,  Nuraini  SJIJOM.  Understanding  M.  development  of  local 
+
+wisdom augmented reality (AR). Media Element Schl. (2021) 8:154–62.
+
+ 34. Goli A, Tirkolaee EB, Aydın NS. Fuzzy integrated cell formation and production 
+scheduling considering automated guided vehicles and human factors. IEEE Trans Fuzzy 
+Syst. (2021) 29:3686–95. doi: 10.1109/TFUZZ.2021.3053838
+
+ 35. Tirkolaee  EB,  Aydin  NS.  Integrated  design  of  sustainable  supply  chain  and 
+transportation network using a fuzzy bi-level decision support system for perishable 
+products. Expert Syst Appl. (2022) 195. doi: 10.1016/j.eswa.2022.116628
+
+ 36. Yang Y, Zheng G, Liu D. Editors. BP-GA mixed algorithms for short-term load 
+forecasting In: 2001 international conferences on info-tech and info-net proceedings (cat 
+no 01EX479). Beijing, China: IEEE (2001).
+
+ 37. Lu C, Shi B, Chen L. Hybrid BP-GA for multilayer feedforward neural networks 
+In: ICECS 2000 7th IEEE international conference on electronics, circuits and systems (cat 
+no 00EX445). Jounieh, Lebanon: IEEE (2000).
+
+ 38. Sexton RS, Dorsey RE, Johnson JDJDSS. Toward global optimization of neural 
+networks: a comparison of the genetic algorithm and backpropagation. Decis Support 
+Syst. (1998) 22:171–85.
+
+ 39. Park PC. Comparison of subjective mental workload assessment techniques for 
+the evaluation of in-vehicle navigation systems usability In: Towards the new horizon 
+together proceedings of the 5TH world congress on intelligent TRANSPORT systems, held 
+12–16 OCTOBER 1998, SEOUL, KOREA PAPER NO 4006 (1998).
+
+ 40. Harbluk JL, Noy YI, Eizenman M. The impact of cognitive distraction on driver 
+visual behaviour and vehicle control. TRANSPORTATION RESEARCH BOARD (2002).
+
+ 41. Cha  D-W,  Park  PJII.  Simulator-based  mental  workload  assessment  of  the  in-
+
+vehicle navigation system driver using revision of NASA-TLX (1997) 10:145–54.
+
+ 42. von Janczewski N, Kraus J, Engeln A, Baumann MJ. Behaviour a subjective one-
+item  measure  based  on  NASA-TLX  to  assess  cognitive  workload  in  driver-vehicle 
+interaction (2022) 86:210–25.
+
+ 43. Kang B, Hwang C, Yanusik I, Lee H-J, Lee J-H, Lee J-H, 53-3: Dynamic crosstalk 
+measurement for augmented reality 3D head-up display (AR 3D HUD) with eye tracking. 
+SID symposium digest of technical papers. Wiley online library (2021).
+
+ 44. Van Dolen W, Lemmink J, Mattsson J, Rhoen IJ. Affective consumer responses in 
+service encounters: the emotional content in narratives of critical incidents. J Econ 
+Psychol. (2001) 22:359–76. doi: 10.1016/S0167-4870(01)00038-1
+
+ 45. Lipton  ZC,  Berkowitz  J,  Elkan  CJAPA.  A  critical  review  of  recurrent  neural 
+
+networks for sequence learning. arXiv. (2015). doi: 10.48550/arXiv.1506.00019
+
+ 46. Kim J, Lee J, Choi DJ. Designing emotionally evocative homepages: an empirical 
+study of the quantitative relations between design factors and emotional dimensions. Int 
+J Hum Comput Stud. (2003) 59:899–940. doi: 10.1016/j.ijhcs.2003.06.002
+
+ 47. Harbour SD. Three-dimensional system integration for HUD placement on a new 
+tactical airlift platform: design eye point vs. HUD eye box with accommodation and 
+perceptual  implications  In:  Head-and  helmet-mounted  displays  XVII;  and  display 
+technologies and applications for defense, security, and avionics VI. Maryland, United 
+States: SPIE (2012). Available at: https://www.sciencedirect.com/science/article/abs/pii/
+S1071581903001320
+
+ 48. Ding S, Su C, Yu J. An optimizing BP neural network algorithm based on genetic 
+
+algorithm. Comput Intell Neurosci. (2011) 36:153–62. doi: 10.1007/s10462-011-9208-z
+
+ 49. Yang X, Song J, Wang B, Hui Y. The optimization design of product form and its 
+application  based  on  BP-GA-CBR  In:  2010  IEEE  11th  international  conference  on 
+computer-aided industrial design & conceptual design. Yiwu: IEEE (2010)
+
+ 50. Bylinskii Z, Kim NW, O'Donovan P, Alsheikh S, Madan S, Pfister H, et al., Learning 
+visual importance for graphic designs and data visualizations. Proceedings of the 30th 
+annual ACM symposium on user interface software and technology. Québec City, QC. 
+(2017).
+
+ 51. Li H, Hu C-X, Li YJEP. Application of the purification of materials based on GA-
+
+BP. Energy Proc. (2012) 17:762–9. doi: 10.1016/j.egypro.2012.02.168
+
+ 52. Zhao Z, Xin H, Ren Y, Guo X, Application and comparison of BP neural network 
+algorithm in MATLAB. Proceedings of the 2010 international conference on measuring 
+technology and mechatronics automation. Changsha, China: IEEE. (2010).
+
+ 53. Wu  W,  Feng  G,  Li  Z,  Xu  Y.  Deterministic  convergence  of  an  online  gradient 
+method  for  BP  neural  networks.  IEEE  Trans  Neural  Netw.  (2005)  16:533–40.  doi: 
+10.1109/TNN.2005.844903
+
+ 54. Wang J, Zhang L, Li ZJAE. Interval forecasting system for electricity load based on 
+data pre-processing strategy and multi-objective optimization algorithm. Appl Energy. 
+(2022) 305:117911. doi: 10.1016/j.apenergy.2021.117911
+
+ 55. Sun X, Yuan G, Dai JJ. Multi-spectral thermometry based on GA-BP algorithm 
+
+(2007) 27:213–6.
+
+ 56. Batista  JP.  A  real-time  driver  visual  attention  monitoring  system  In:  Pattern 
+recognition and image analysis, Lecture Notes in Computer Science, vol. 3522. Berlin, 
+Heidelberg: Springer (2005). 200–8.
+
+ 57. Nash C, Carreira J, Walker J, Barr I, Jaegle A, Malinowski M, et al. Transframer: 
+arbitrary frame prediction with generative models. IEEE Trans Ultrason Ferroelectr Freq 
+Control. (2022) 3522:200–8. doi: 10.48550/arXiv.2203.09494
+
+ 58. Shelhamer  E,  Long  J,  Darrell  T.  Fully  convolutional  networks  for  semantic 
+segmentation. Inst Electr Electr Eng Trans Pattern Analysis Mach Intell. (2017) 39:640–51. 
+doi: 10.1109/TPAMI.2016.2572683
+
+ 59. Hill SG, Iavecchia HP, Byers JC, Bittner AC Jr, Zaklade AL, Christ RE. Comparison 
+of  four  subjective  workload  rating  scales.  Hum  Factors.  (1992)  34:429–39.  doi: 
+10.1177/001872089203400405
+
+ 60. Wahyuniardi R, Syafei MJtI. Framework development and measurement of operator 
+workload using modified Cooper Harper scale method (case study in Pt Sinar Terang 
+Logamjaya Bandung West Java). Proceeding 8th International Seminar on Industrial 
+Engineering and Management. (2013):49–54.
+
+ 61. Green DL, Andrews H, Gallagher DW, Interpreted cooper-harper for broader use. 
+NASA Ames research center, piloting vertical flight aircraft. A Conference on Flying 
+Qualities and Human Factors. (1993).
+
+ 62. Tan W, Wu Y, Qu X, Efremov AV. A method for predicting aircraft flying qualities 
+using neural networks pilot model In: The 2014 2nd international conference on systems 
+and informatics (ICSAI 2014): IEEE (2014).
+
+ 63. Cotting MC. Uav performance rating scale based on the cooper-harper piloted 
+rating scale In: Proceedings of 49th AIAA aerospace sciences meeting including the new 
+horizons forum and aerospace exposition (2011).
+
+ 64. Coleby D, Duffy AJC, Electrical mi, engineering e. A visual interpretation rating 
+scale for validation of numerical models. IEEE: Institute of Electrical and Electronics 
+Engineers (2005) 24:1078–92. doi: 10.1108/03321640510615472
+
+ 65. Handmann U, Kalinke T, Tzomakas C, Werner M, Seelen WJI, Computing V. An 
+image processing system for driver assistance. Image Vision Comput. (2000) 18:367–76. 
+doi: 10.1016/S0262-8856(99)00032-3
+
+ 66. He J, Rong H, Gong J, Huang W, A lane detection method for lane departure warning 
+system. Proceedings of the 2010 international conference on optoelectronics and image 
+processing: Human Factors and Ergonomics Society: Santa Monica, CA. (2010).
+
+ 67. Tang X, Zhou P, Wang P. Real-time image-based driver fatigue detection and 
+monitoring system for monitoring driver vigilance In: Proceedings 2016 35th Chinese 
+control conference (CCC). Chengdu, China: IEEE (2016).
+
+ 68. Bilal H, Yin B, Khan J, Wang L, Zhang J, Kumar A. Real-time lane detection and 
+tracking for advanced driver assistance systems In: Proceedings 2019 Chinese control 
+conference (CCC). Guangzhou, China: IEEE (2019).
+
+Frontiers in Public Health
+
+22
+
+frontiersin.org
+
+Teng et al. 
+
+10.3389/fpubh.2023.1195961
+
+ 69. Pishgar M, Issa SF, Sietsema M, Pratap P, Darabi HJ, Health P. REDECA: a novel 
+framework to review artificial intelligence and its applications in occupational safety and 
+health. Int J Environ Res Public Health. (2021) 18:6705. doi: 10.3390/ijerph18136705
+
+ 70. Kutila M, Pyykönen P, Casselgren J, Jonsson PJCV. Road condition monitoring In:  
+Computer vision and imaging in intelligent transportation systems. Chichester, UK: John 
+Wiley & Sons, Ltd (2017). 375–97.
+
+ 71. Farag W, Saleh Z. Road lane-lines detection in real-time for advanced driving 
+assistance systems. Proceedings of the 2018 international conference on innovation and 
+
+intelligence for informatics, computing, and technologies (3ICT). Chichester, UK: John 
+Wiley & Sons, Ltd. (2018).
+
+ 72. Ellahyani  A,  El  Jaafari  I,  Charfi  S.  Traffic  sign  detection  for  intelligent 
+transportation systems: a survey. E3S Web Conf. (2021) 229:01006. doi: 10.1051/
+e3sconf/202122901006
+
+ 73. Ge D-y, Yao X-f, Xiang W-j, Chen Y-p. Vehicle detection and tracking based on 
+video image processing in intelligent transportation system. Neural Comput Appl. (2023) 
+35:2197–209. doi: 10.1007/s00521-022-06979-y
+
+Frontiers in Public Health
+
+23
+
+frontiersin.org
+
+

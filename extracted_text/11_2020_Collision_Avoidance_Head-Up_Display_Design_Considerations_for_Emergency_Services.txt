@@ -1,0 +1,674 @@
+--- Page 1 ---
+ 
+ 
+1
+ 
+Abstract— Emergency Services’ (ES) vehicles primary 
+objective is to attend an accident or other incident scenes in a fast, 
+safe and efficient manner. Yet this task is becoming increasingly 
+difficult due to the increasing population and the plethora of 
+emergency cases. These factors affect directly the traffic both 
+within the urban and the rural environment, increasing 
+dramatically the “time to arrive” at the point of interest. 
+Numerous Head-Down Display (HDD) systems have populated 
+the dashboard area of the ES vehicles in order to tackle this issue, 
+with limited success. To this end, the development of emerging 
+technologies in both computing and telecommunications have 
+enabled modern vehicular systems to assist drivers in their 
+decision-making process. Head-Up Displays (HUD) present a 
+combinatory approach of the aforementioned technologies, which 
+present crucial information to the driver through Augmented 
+Reality (AR) projection. In order to develop a design and 
+development framework for the utilisation of AR and HUD 
+technology, this paper presents the results of 50 drivers 
+investigation related to their activities during immobile or 
+slow-moving traffic which results in driver’s distraction and 
+inability to respond to the incoming ES vehicles. In turn, the 
+paper discusses these results and offers an overview of the 
+Human-Machine Interface requirements for a prototype HUD 
+aiming to assist the safety, speed and manoeuvrability of the ES 
+vehicles. 
+ 
+Keywords— Emergency Response Vehicles, Head-Up Display, 
+Collision Avoidance, Augmented Reality, Driver Distraction, 
+Driving Simulator  
+I. INTRODUCTION 
+Emergency Services (ES), entailing ambulance, police and 
+fire brigade services, play a vital role in ensuring that citizens 
+in-need receive support and treatment efficiently and in a 
+timely manner [1,2]. The latter though could be greatly affected 
+by a number of variables hindering the speed of support 
+provided by the ES vehicles. On a number of occasions, 
+journeys expected to take eight minutes or less were extended 
+up to three hours before ES staff could attend the incidents [3]. 
+In some parts of the world, the deplorable condition of the roads 
+makes it almost impossible for ES to gain access to, or transport 
+the patients [3]. Navigation through traffic can be a major 
+problem for ES drivers. In their effort to counteract the traffic 
+and road conditions, ambulance drivers face a great risk of 
+collision, not only from on-coming traffic, since they are 
+sometimes required to drive in the opposite lane when there is 
+stagnant traffic, but also collision into inattentive vehicles and 
+pedestrians, especially in not so favourable weather conditions. 
+Taking the aforementioned into account, being able to 
+perform such important tasks within such a short time span, will 
+require a great amount of speed and precision on the part of ES 
+personnel. Emergency vehicles’ response speed is crucial to 
+clinical outcomes in serious cases. The successful patient 
+transfer is directly related to the speed that the rescue vehicle 
+can achieve through the traffic flow, particularly in traffic 
+congestion bottlenecks [4].  
+This paper identifies the major issues related to ES vehicles’ 
+delays and collisions and offers a framework for an alternative 
+solution that aims to enhance ES drivers’ human responses in 
+high speed and when manoeuvring through traffic. 
+ In order to inform the proposed system design, this work 
+investigates the questionnaire responses of 50 drivers related to 
+their activities during immobile or slow-moving traffic which 
+results in driver’s distraction and inability to respond to the 
+incoming ES vehicles. Their responses, in turn, inform the 
+design requirements of the proposed system which employs an 
+Augmented Reality (AR) Head-Up Display (HUD). The latter 
+assumes interface design mantra and methodology from our 
+previous HUD interfaces designed for navigation and collision 
+avoidance purposes [5, 6 & 7].  
+The following section presents the current ES navigation 
+issues.  The succeeding section investigates the drivers’ failure 
+to maintain spatial and situational awareness in slow or 
+immobile traffic which hinders the ES vehicles manoeuvring 
+through the traffic. The third section discusses the system 
+design requirements, challenges and proposed solutions. 
+Finally, the paper concludes with a succinct review of the 
+potential design considerations based on the feedback from 50 
+drivers’ informing the future development of the interface 
+components for the ES HUD. 
+K.F. BRAM-LARBI1, V. CHARISSIS1, S. KHAN1, R. LAGOO1, D. K. HARRISON1 and D. DRIKAKIS2 
+ 
+1Glasgow Caledonian University, Glasgow, UK 
+School of Computing, Engineering and Built Environment 
+ 
+2University of Nicosia, Nicosia, Cyprus 
+School of Sciences and Engineering 
+Collision Avoidance Head-Up Display: Design Considerations 
+for Emergency Services’ Vehicles 
+	
+	
+			
+	
+
+ !"
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 2 ---
+ 
+ 
+2
+II. CURRENT ES NAVIGATION ISSUES 
+Contemporary navigation systems promise to improve 
+driving performance by presenting an optimal route with 
+respect to reducing travel time and or improving fuel 
+consumption. Hence, they function solely as route calculation 
+machines which affect the singular aspect of the driving 
+experience, namely spatial orientation [6, 7]. Such systems, 
+however, do not support or improve drivers' spatial and 
+situational awareness, that is primarily responsible for most 
+collisions [5, 6, 8]. The current navigation issues for ES 
+vehicles’ navigation issues discussed within this paper can be 
+attributed to the following factors.  
+A. Siren Localisation Issues 
+Sound can be the first warning perceivable by human senses 
+of events that are taking place beyond the human field of view. 
+Unlike vision, which can be obscured by buildings and other 
+objects, the sound is perceptible from multiple directions.  
+Thus, auditory information is vital for situation awareness on 
+the roads, both as complementary and supplementary to vision 
+[4].  Consequently, audible warning systems are integral to 
+emergency vehicles to allow them to be located by other 
+motorists and pedestrians [7,8].  
+However, hearing a sound does not always provide enough 
+information to determine the exact direction from which this 
+sound occurred or is occurring, especially when this sound is in 
+constant disarray of high pitch volume.  
+Notably, ES sirens typically employ a sweeping pattern with 
+most of the sound energy located in the region of 500 Hz to 
+1500 Hz as depicted in Figure 1 [9].   
+Yet, it has been documented that the localisation 
+characteristics of existing siren patterns combined with high 
+levels of background noise can significantly affect the average 
+driver’s ability to accurately define the position and heading 
+direction of the incoming emergency vehicle [4, 9]. Evidently, 
+the human inability to accurately locate the direction of an 
+approaching emergency vehicle is directly linked to the siren 
+patterns themselves [10, 11]. This spatial misjudgement 
+contributes to multiple fatalities and casualties according to the 
+British road accident statistics [12]. A previous investigation 
+into audible warning systems showed that sirens were used 
+86% of the time by ES vehicles when on call, but this was not 
+always in unison with warning lights [13]. In this survey that 
+examined public reactions to the audible warning, the results 
+showed that nearly one-third of drivers failed to detect the 
+approaching emergency vehicle until it was less than 50m 
+away. Interestingly, 25% of the participants were completely 
+unable to hear the audible warning systems on the approach of 
+the emergency vehicle. These figures reinforce the limited 
+effectiveness of current emergency vehicle audible warning 
+systems [11, 13].  Aiming to mitigate this issue, previous 
+studies have explored the current possibilities regarding the 
+types of technology used to avert collisions on the part of the 
+emergency response services [5,6].  In relation to the ES 
+drivers, even with the intervention of RDS (Radio Data 
+System), which also help in traffic situations, collision 
+avoidance is still a prominent issue. 
+B. Driver Distraction  
+The drivers’ inability to locate the sound source on multiple 
+occasions is not only an issue of sound propagation.  A number 
+of other reasons could be contributory as presented below: 
+ Driver’s age – Older drivers have naturally dampened senses 
+which affect their spatial and situational awareness.  
+ Infotainment Distraction -   One of the most common issues 
+is driver distraction due to the vehicular infotainment 
+systems. The latter is typically providing a plethora of 
+information based on mobile phone communication, 
+navigation, music, various applications in the form of 
+social media and the full access to internet resources. The 
+aforementioned infotainment resources have a detrimental 
+impact on the driver’s cognitive load and as a result, reduce 
+dramatically the spatial and situational awareness [14].  
+ Passengers’ Distraction - Similarly, the driver could be 
+distracted by the passengers as it was observed by previous 
+studies [15, 16].  
+ Vehicle’s sound system - In addition, the loud volume of the 
+vehicle’s sound system could render the driver effectively 
+deaf to any external sounds.  
+ Vehicle’s soundproofing – The above cases could be further 
+amplified by the soundproofing of modern vehicles which 
+aim to enclose the vehicle occupants in a relaxing space 
+detached from the external traffic noises.  
+Previous studies conducted on driver’s performance utilised 
+various analysis methods and metrics to identify the driver 
+ 
+ 
+Fig. 1. Typical sweeping siren pattern as described by Moore et al. 2011 [9]. 
+ 
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 3 ---
+ 
+ 
+3
+distraction issues. Eye fixation was one of the major measuring 
+systems aiming to define the mental workload involved in 
+different collision prone scenarios [17]. Similar studies 
+investigating the human position and posture during driving 
+demonstrate seven tasks related to safe, dangerous and 
+distracted driving patterns [18].  Driver’s performance and 
+assessment of distraction have also been investigated through 
+the analysis of rapid variations in vehicle dynamics and the 
+manoeuvring patterns [19]. Notably, all the aforementioned 
+studies, whilst utilising diverse driver performance analysis 
+methods, converge to the same point, namely, that secondary 
+tasks could decrease significantly driving performance. 
+Consequently, this issue multiplies in the case of ES drivers that 
+have to drive in a fast and timely fashion whilst receiving 
+incoming updates for emergencies through various information 
+systems. 
+C. ES Vehicles’ Head-Down Displays (HDD) 
+Some of the aforementioned driver distractions tend to affect 
+also the ES vehicle drivers. In their case, the information 
+provided by multiple conduits regarding navigation, traffic and 
+accident scene data could increase significantly the cognitive 
+load. The attention to the traffic conditions could further 
+deteriorate as the focus of the ES driver is to maintain a 
+multi-fold approach ensuring the safety of the ES vehicle 
+occupants (i.e. ES personnel and patients in ambulance cases), 
+identify optimal manoeuvring through traffic, maintain an 
+acceptable high speed and circumvent obstacles whilst ensuring 
+the safety of the neighbouring civilian vehicles.  
+However, this on-road unilaterally biased focus is plagued 
+with many in-vehicle distractions. Current technological 
+advancement and ES requirements tend to over-populate the 
+in-vehicle space in close proximity to the driver, which 
+accommodates the vehicles’ infotainment system and provides 
+multiple attention-seeking visual and auditory data [6, 16]. 
+Notably, the majority of the information-provision is presented 
+to the driver through devices located at the dashboard, below 
+the driver’s field of view namely Head-Down Displays (HDD) 
+depicted in Figure 2. Evidently, these mind-sharing 
+notifications could affect the driver’s attention, discerning the 
+challenging road-traffic flow [5, 7]. In turn, the HDD interfaces 
+aiming to support the speed and safety of the ES vehicles may 
+not effectively provide critical information any more as the 
+driver’s attention may be divided to several irrelevant 
+information outlets [5, 20]. Therefore, in a typical accident 
+scenario in which the lead vehicles brake abruptly, the driver 
+does not have the required time and situational awareness to 
+proceed in a collision-avoidance braking manoeuvre [6, 7]. 
+D. High Speed and Manoeuvring 
+In many countries, ambulances are granted several 
+exceptions to road traffic laws aiming to provide them with 
+ample choices under stressful and demanding traffic 
+conditions. As such, no statutory provision imposing a speed 
+limit, or traffic flow limits apply to ES vehicles [21]. 
+Nonetheless, the selective suspension of particular road traffic 
+laws have limited impact on the actual speed and manoeuvring 
+efficiency of the ES vehicles as the decision making process is 
+primarily provided by the emergency vehicle driver taking into 
+account the relations among speed, collision risk and the need 
+for a fast response [22]. Regardless of the rigorous training of 
+the ES drivers, the multiple variables occurring during 
+high-speed manoeuvring amplify the role of human factors. Yet 
+the decision-making process of the ES drivers is constantly 
+redefined based on the neighbouring vehicles’ drivers activities 
+and their ability to respond accordingly to the situation. Speed, 
+although an important factor in the time-sensitive ES response 
+time, is not the main factor that defines the successful arrival to 
+the accident scene [22]. Spasmodic peaks of high-speed 
+between traffic gaps could increase the probability of collisions 
+[6, 10, 23]. Previous work observed that maintaining a constant 
+flow through different driving conditions in medium speed and 
+informing the driver in advance regarding potential traffic 
+issues, could improve both the safety and the time of arrival to 
+the required destination [5]. Thus, maintaining the flow and 
+speed momentum could be a challenge in a real-life, 
+non-deterministic road-traffic. In this case, additional support 
+and provision of information could be employed in a timely 
+manner and with minimal cognitive load requirements to the 
+driver through a combinatory approach of AI / HUD [24-26].  
+E. Non-Deterministic Traffic Flow  
+In contemporary urban and rural environment, traffic 
+congestion has increased exponentially in the last few decades. 
+Traffic congestion, defined as a performance of traffic flow 
+ 
+
+ 
+Fig. 2. ES vehicle cabin offering multiple information-provision conduits. 
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 4 ---
+ 
+ 
+4
+instability, manifested through ease and inhibition of traffic 
+congestion are equivalent to reducing traffic flow instability. 
+Traffic flow includes many aspects such as road traffic flow, 
+network traffic flow, vehicle traffic flow and the pedestrian 
+traffic flow among others. The modern road vehicle traffic flow 
+models can be categorised into macroscopic, mesoscopic and 
+microscopic traffic flow models all with different benefits and 
+drawbacks. In particular, the microscopic traffic flow model 
+investigates the characteristics of the traffic flow by dealing 
+with traffic flow as dispersed particles and studying the effect 
+of single vehicles on the following vehicles. Its advantages are 
+that it can analyse the transitions and the separation of the 
+traffic flow phase and describe various traffic waves, which is a 
+major issue for the ES vehicles [27-29]. 
+III. ES VEHICLE DRIVERS  
+A preliminary consultation with a focus group of 5 ES 
+vehicle drivers offered an insight into the emergency vehicles’ 
+traffic navigation issues. A number of new technologies such as 
+Traffic Surveillance Technology, Mayday and Automatic 
+Collision Notification Systems have improved this task. Yet 
+other technologies currently available are not directly 
+applicable such as Dynamic (Changeable) Message Signs, due 
+to variations of the road-infrastructure capabilities. However, 
+the civilian drivers’ reduced attendance to the rapidly changing 
+traffic conditions was highlighted as the most impactful on the 
+safety and speed operation of the ERS vehicles. Consequently, 
+this influences the time-bound limitations in which the ES 
+personnel is required to reach an accident and emergency 
+scene. These suggestions were in accordance with the previous 
+studies related to the distance that could be covered by ES in a 
+given time frame [4, 9].  
+To this end, a proposed solution which will entail the 
+provision of real-time manoeuvring options (AI) directly 
+presented on the real-life scene (HUD) was considered ideal by 
+the ES focus group. In order to determine the exact operation 
+and interface design of such a system, it was deemed essential 
+to identify also the civilian drivers’ needs and behaviour whilst 
+populating traffic congestion and identify the reasons behind 
+their decision-making process or their inability to respond to 
+external stimuli.  
+IV. DRIVERS’ ATTENTION AND TRAFFIC ISSUES 
+The majority of the aforementioned issues that have a 
+negative impact on the timely and safe provision of ES is due to 
+the human factors involved.  Adhering to the above, this work 
+aims to identify not only the ES drivers’ current navigation 
+issues but also the civilian drivers’ response capability and time 
+to an incoming ES vehicle. The latter delayed response times 
+disrupt the speed and manoeuvring of the ES vehicles.  
+A. Questionnaire Design 
+The drivers’ feedback and requirements were gathered using 
+at this stage primarily qualitative data analysis and grounded 
+theory-based research study [30]. The questionnaire entailed 25 
+questions and was formed in two parts.  
+The first part gathered drivers’ demographic information as 
+well as the number of miles driven annually, type of 
+road-network mostly used and frequency of encounters with 
+ERS vehicles that need priority on the road. The second part of 
+the questionnaire (20 questions) was designed to retrieve the 
+drivers’ responses regarding their driving behaviour and habits 
+in slow-moving or immobile traffic conditions. The interest on 
+the latter is that the drivers tend to occupy themselves with 
+numerous infotainment systems and applications either 
+following a steady, dense, traffic flow or waiting for the traffic 
+gridlock resolution. Consequently, the drivers’ can be 
+distracted 
+from 
+the 
+surrounding 
+environment 
+and 
+unintentionally disregard both the siren and the lights from 
+approaching ES vehicles [6].   
+B. Participants 
+The investigation was performed with the use of 50 
+participants (40 male and 10 female), which all held a valid 
+British driving licence. The participants’ age was from 18 to 60 
+years old.   
+V. STUDY RESULTS 
+The results derived from 18 selected questions targeting the 
+drivers’ behavioural issues that hinder current ES and could 
+pose a danger to the overall traffic flow are presented below.  
+
+ 
+Fig. 3. How often do you engage in the following while driving? Responses to 
+questions 1-9. 
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 5 ---
+ 
+ 
+5
+In particular, 34% of the 50 drivers admitted that they send 
+messages (very frequently, often, sometimes) whilst driving as 
+illustrated in Figure 3. An alarming 60% of the drivers 
+responded that they read mobile phone text messages while 
+driving.  
+Adhering to previous studies related to mobile phone calls 
+and texting, the driver's attention is fully diminished during 
+these tasks which typically result in collision accidents [6, 31]. 
+In addition, the drivers’ response to the usage of navigation 
+systems is 76% whilst internet usage whilst driving was 40%. 
+Smaller percentages were encountered in reading/writing notes 
+(16%) and checklists (8%).  
+The drivers that responded to those questions were using 
+driving as part of their work such as construction workers and 
+parcel delivery staff which are an increasing group of users due 
+to the emerging Gig economy globally [32].  
+Calendar and daily events’ information received 12% of 
+interaction (sometimes).  
+Music, as expected, received the highest percentage of 
+interaction during driving with 90%, which on a number of 
+cases, relates also to the inability of the driver to hear the 
+incoming ES vehicles.  Thus, the selection process of music 
+through various devices could absorb completely driver’s 
+attention from the external environment [6].  
+Making and Receiving audio calls appeared to score also 
+highly on drivers’ secondary activities within the vehicle with 
+75% and 80% respectively as presented in Figure 4.  
+In contrast, the Making and Receiving video calls had limited 
+driver attention with 6% and 5% respectively. News’ updates 
+were also in moderate scale with 20%. The upcoming trend 
+though appears with Social Networks with  40% responding 
+that they use, which reflects the current tendency of a number 
+of automotive manufacturers to include these applications in 
+the main dashboard- touchscreen menu.  
+VI. AR HUD DESIGN FRAMEWORK 
+The aforementioned results highlighted the necessity of a 
+system that could accommodate current ES requirements whilst 
+predicting neighbouring vehicles actions.  
+A. It is evident that the typical siren and flashing lights are 
+inefficient for a growing segment of drivers’ population. These 
+typical warning methods could be improved and complemented 
+by an Emergency Vehicle to Civilian Vehicle (EV to CV) 
+warning 
+which 
+could 
+disrupt/pause 
+any 
+infotainment 
+broadcasting and application in close proximity to the incoming 
+ERS vehicle. Previous studies investigated the options of RDS 
+yet due to the new technologies embedded on the current 
+vehicles a more holistic approach is required in order to cover 
+the majority of the current infotainment systems [4]. 
+B. Additionally, an AI system will require training on 
+different traffic scenarios and driver responses in order to 
+provide relevant suggestions and alternatives to the ES driver. 
+C. A full-windshield HUD interface could provide 
+real-time AR visualisation of the proposed AI routes, 
+supporting further the driver’s decision- making process [7, 33, 
+34]. An early prototype HUD based on the information 
+provided by both ES and civilian vehicles’ drivers is illustrated 
+in Figure 5. 
+VII. CONCLUSIONS 
+This paper presented the main results of a 50 user 
+investigation regarding their driving behaviours whilst in 
+slow-moving or immobile traffic congestion. In turn, the 
+drivers' behaviours tendencies informed the design framework 
+ 
+ 
+Fig. 4. How often do you engage in the following while driving? Responses 
+to questions 10-18. 
+
+ 
+Fig. 5. Screenshot of HUD prototype testing in the Virtual Reality Driving 
+Simulator Laboratory.  
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 6 ---
+ 
+ 
+6
+for the development of a prototype AR - HUD interface for the  
+ES vehicle drivers.  
+The latter will be designed to provide alternative navigation 
+options and manoeuvring possibilities superimposed on the 
+external environment as a full-windshield AR projection. in 
+real-time for the  ERS vehicle drivers.  
+In future work, this project aims to finalise the design and 
+interactivity of the proposed HUD interface based on the latest 
+subjective feedback. Finally, the consumer-ready HUD system 
+will be evaluated by the ERS drivers in order to identify the 
+system efficiency. 
+REFERENCES 
+[1] N. Smith, “A National Perspective on Ambulance Crashes and Safety: 
+Guidance from the National Highway Traffic Safety Administration on 
+ambulance safety for patients and providers”, NHTSA Report, EMS 
+World, pp. 91-94, 2015. 
+[2] Y. Moroi and K. Takami, “A method of securing priority-use routes for 
+emergency 
+vehicles 
+using 
+inter-vehicle 
+and 
+vehicle-road 
+communication”, IEEE 7th International Conference on New 
+Technologies, Mobility and Security (NTMS), 2015. 
+[3] Osei-Ampofo, Oduro, Oteng, Donkor, Zakariah, & Jacquet, “The 
+Evolution and Current State of Emergency Care in Ghana. African 
+Journal of Emergency Medicine, pp 52 – 58, 2013. 
+[4] S. Boslem, J. D. Moore and V. Charissis, “ Investigating the Improvement 
+of the Localisation Propensity and Impact of the Emergency Vehicle 
+Sirens”, in Proceedings of the Society of Automotive Engineers (SAE) 
+World Congress 2011, 12-14 April, Detroit, Michigan, USA, 2011. 
+[5] V. Charissis, S. Papanastasiou, W. Chan, and E. Peytchev, “Evolution of 
+a full-windshield HUD designed for current VANET communication 
+standards”, IEEE Intelligent Transportation Systems International 
+Conference (IEEE ITS), The Hague, Netherlands, pp. 1637-1643, DOI: 
+10.1109/ITSC.2013.6728464, 2013. 
+[6] R. Lagoo, V. Charissis, W. Chan, S. Khan and D. Harrison, “Prototype 
+gesture recognition interface for vehicular Head-Up Display system”, 
+IEEE International Conference on Consumer Electronics, Las Vegas, 
+USA, pp.1-6, Jan. 2018. 
+[7] V. Charissis, and S. Papanastasiou, “Human-Machine Collaboration 
+Through Vehicle Head-Up Display Interface”, in International Journal of 
+Cognition, Technology and Work, P. C. Cacciabue and E. Hollangel 
+(eds.) Springer London Ltd Volume 12, Number 1, pp 41-50, DOI: 
+10.1007/s10111-008-0117, 2010. 
+[8] G. Weinberg, B. Harsham, and Z. Medenica, “Evaluating the usability of 
+a head-up display for selection from choice lists in cars”, 3rd International 
+Conference on Automotive User Interfaces and Interactive Vehicular 
+Applications, Automotive UI ’11, pp. 39–46, ACM, 2011. 
+[9] J. D. Moore, S. Boslem, and V. Charissis, “Optimisation of Sound 
+Localisation for Emergency Vehicle Sirens through Prototype Audio 
+System”, Book title: Design, User Experience, and Usability. Theory, 
+Methods, Tools and Practice, Lecture Notes in Computer Science, J. A., 
+Jacko (Ed), Vol. 6770, ISBN 978-3-642-21707-4, pp 177-186, Springer 
+Berlin / Heidelberg, 2011.  
+[10] E. M. Wenzel, M. Arruda, D. J. Kistler, and F. L. Wightman,  
+“Localisation using non-individualised head-related transfer functions”, 
+Journal of the acoustic society of America, Vol. 94, pp. 111-123, 1993. 
+[11] C. Ho and C. Spence,  “Assessing the effectiveness of various auditory 
+cues in capturing a driver’s visual attention”, Journal of experimental 
+psychology: Applied, vol. 11, pp. 157-174, 2005. 
+[12] A. Dhani and D. Robineau, “Reported road casualties in Great Britain: 
+quarterly provisional estimates year ending June 2018”, Department of 
+Transport, UK, 2018. 
+[13] G. Saunders and A. Gough, “Emergency Ambulances on the Public 
+Highway Linked with Inconvenience and Potential Danger to Road 
+Users”, Emergency Medical Journal, Vol 20, pp 277-280, 2003. 
+[14] R. Lagoo, V. Charissis and D. Harrison (2019), Mitigating Driver’s 
+Distraction with the use of Augmented Reality Head-Up Display and 
+Gesture Recognition system, in IEEE Consumer Electronics Magazine 
+(CEM) 
+Journal, 
+Vol. 
+8, 
+Issue: 
+5, 
+ 
+pp.79-85, 
+DOI: 
+10.1109/MCE.2019.2923896. 
+[15] S. Wang, V. Charissis, R. Lagoo, J. Campbell, and D. K. Harrison, 
+“Reducing Driver Distraction by Utilising Augmented Reality Head-Up 
+Display System for Rear Passengers”, IEEE International Conference on 
+Consumer Electronics (IEEE ICCE), Las Vegas, USA, pp 1-6, DOI: 
+10.1109/ICCE.2019.8661927, 2019. 
+[16] S. Wang, V. Charissis, and D. Harrison, “Augmented Reality Prototype 
+HUD for Passenger Infotainment in a Vehicular Environment”, in 
+Advances in Science, Technology and Engineering Systems Journal, Vol. 
+2, No. 3, 634-641  2017. 
+[17] Y. Liao, G. Li, S. Eben, B. Cheng, and P Green, “Understanding Driver 
+Response Patterns to Mental Workload Increase in Typical Driving 
+Scenarios”, in IEEE Access, vol 6, pp. 35890-35900, 2018. 
+[18] Y. Xing, Chen L, Z. Zhang, H. Wang, X. Na, D. Cao, E. Velenis, and F.Y. 
+Wang, “Identification and Analysis of Driver Postures for In-Vehicle 
+Driving 
+Activities 
+and 
+Secondary 
+Tasks 
+Recognition”, 
+IEEE 
+Transactions on Computational Social Systems,vol5, no 1, pp. 95-108, 
+2018. 
+[19] J. H.L. Hansen, C. Busso, Y. Zheng and A. Sathyanarayana, “Driver 
+Modeling for Detection and Assessment of Distraction: Examples from 
+the UTDrive Test Bed”, IEEE Signal Process Magazine,vol34, no 4,  
+pp.130-142, 2017. 
+[20] H. Hsiao, J. Chang and P. Simeonov, “Preventing Emergency Vehicle 
+Crashes: Status and Challenges of Human Factors Issues”, Sage,  Vol. 60 
+no. 7, pp. 1048-1072 https://doi.org/10.1177/0018720818786132, 2018. 
+[21] Fire (Scotland) Act 2005 - Scottish Parliament Bill, Legislation.gov.uk, 
+2005 
+[22] P. Albertsson and A. Sundström, "Evaluation of Insight Training of 
+Ambulance Drivers in Sweden Using DART, a New E-learning Tool", 
+Traffic Injury Prevention, pp. 621-629, ISSN: 1538-9588, 2011. 
+[23] S.S. Lam, F. N. Nguyen, Y.Y. Ng, V.P. Lee, T.H. Wong, S.M. 
+Fook-Chong and M.E. Ong, “Factors affecting the ambulance response 
+times of trauma incidents in Singapore”, Accident; analysis and 
+prevention, vol. 82, DOI: 10.1016/j.aap.2015.05.007, 2015. 
+[24] J. L. Gabbard, M. G. Fitch, K. Hyungil, “Behind the Glass: Driver 
+Challenges and Opportunities for AR Automotive Applications”, 
+Proceedings 
+of 
+the 
+IEEE, 
+Vol. 
+102:2, 
+pp.124-136, 
+DOI: 
+10.1109/JPROC.2013.2294642, 2014. 
+[25] S.Wang, V.Charissis, J. Campbell, W.Chan, D. Moore and D.Harrison, 
+“An investigation into the use of Virtual Reality technology for passenger 
+infotainment in a vehicular environment, in International Conference on 
+Advanced Materials for Science and Engineering (IEEE - ICAMSE), pp 
+404 - 407, DOI: 10.1109/ICAMSE.2016.7840359, Beijing, China, 2016. 
+[26] H. Okumura, A. Hotta, T. Sasaki, K. Horiuchi, N. Okada,  “Wide field of 
+view optical combiner for augmented reality head-up displays, 2018 
+IEEE International Conference on Consumer Electronics (IEEE ICCE), 
+2018. 
+[27] Y. Zeng, and N. Zhang, “Review and New Insights of the Traffic Flow 
+Lattice Model for Road Vehicle Traffic Flow.” Institute of Electrical and 
+Electronics Engineers Inc., pp. 100–103, 2015. 
+[28] I. Prigogine,  R. Herman, R, and R.S. Schechter, “Kinetic Theory of 
+Vehicular Traffic.” IEEE Transactions on Systems, Man, and Cybernetics 
+Apr, pp. 295–295, 1972. 
+[29] M. L. L. Ianninia and R. Dickmanb, “Kinetic Theory of Vehicular 
+Traffic”, American Journal of Physics, Vol. 84, no. 135,  
+[30] B. G. Glaser and A. L. Strauss, “Discovery of Grounded Theory”, New 
+York: Routledge, https://doi.org/10.4324/9780203793206, 1999. 
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 7 ---
+ 
+ 
+7
+[31] S.M. Simons, A. Hicks, J. K. Caird, “Safety-critical event risk associated 
+with cell phone tasks as measured in naturalistic driving studies: A 
+systematic review and meta-analysis”, Accident Analysis and Prevention 
+Journal, Elsevier, Vol 87, pp 161-169, 2016. 
+[32] A. Gandhi, A. N. Hidayanto, Y. G. Sucahyo and Y. Ruldeviyani,  
+“Exploring People’s Intention to Become Platform-based Gig Workers: 
+An Empirical Qualitative Study”, IEEE 2018 International Conference on 
+Information Technology Systems and Innovation (ICITSI), 2018. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+[33] H. Okumura, T. Sasaki, A. Hotta, and K. Shinohara, “Monocular 
+hyperrealistic virtual and augmented reality display” 2014 IEEE Fourth 
+International Conference on Consumer Electronics (ICCE-Berlin), 
+Berlin, Germany, pp.19 – 23, 2014  
+[34] H. Okumura, T. Sasaki,  A. Hotta, A. Moriya, N. Okada and O. Nagahara,  
+“Hyperrealistic head-up-display for automotive application”, 2011 IEEE 
+International Conference on Consumer Electronics (IEEE ICCE), 2011.  
+ 
+Authorized licensed use limited to: Carleton University. Downloaded on August 26,2020 at 15:52:13 UTC from IEEE Xplore.  Restrictions apply. 

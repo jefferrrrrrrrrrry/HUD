@@ -1,0 +1,909 @@
+Personal Navi: Beneﬁts of an Augmented Reality
+Navigational Aid Using a See-Thru 3D Volumetric HUD
+Karlin Bark, Cuong Tran, Kikuo Fujimura, Victor Ng-Thow-Hing
+Honda Research Institute USA
+425 National Avenue, Mountain View, CA, 94043 USA
+kbark, ctran, kfujimura, vng@honda-ri.com
+ABSTRACT
+Augmented reality (AR) is an interface that can potentially
+provide more intuitive and immersive experiences, particu-
+larly for automotive applications. In this paper we present the
+Personal Navi, a vehicular AR navigational aid designed for
+use with a see-thru 3D volumetric Head Up Display (HUD).
+In one study, we found that the Personal Navi visuals helped
+participants recognize turn locations earlier than when pro-
+vided with conventional navigation aids alone. The interface
+also helped keep users’ eyes up and ﬁxated on the driving en-
+vironment more. In a second study, we tested participants’
+depth perception of AR visuals provided with our prototype
+3D-HUD. We displayed the same visuals with a ﬁxed focal
+depth display (2D-HUD) and found that for applications such
+as Personal Navi, where the spatial location of AR visuals are
+an important component of the interface, a dynamically ad-
+justable focal plane (3D-HUD) is necessary for proper reg-
+istration. We argue that AR-based HUD navigational aids
+should be implemented only with 3D-HUDs because of in-
+ferior depth perception with 2D-HUDs.
+Author Keywords
+augmented reality; navigation; vehicle; Head Up Display;
+depth perception
+ACM Classiﬁcation Keywords
+H.1.2 User/Machine Systems:
+Human factors;
+H.5.1
+Multimedia Information Systems:
+Artiﬁcial, augmented,
+and virtual realities;
+H.5.2.
+User Interfaces:
+Evalua-
+tion/Methodology
+INTRODUCTION
+In recent years, augmented reality (AR) has become an in-
+creasingly popular interface envisioned for navigational ap-
+plications. AR aims to enhance the real world by augment-
+ing it with artiﬁcially generated visual, audio, or tactile ele-
+ments. Automotive AR can potentially enhance the driver’s
+experience by providing a new visual modality that can over-
+lay information over the driver’s ﬁeld of view. The immer-
+sive nature of AR suggests these interfaces are more suitable
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for proﬁt or commercial advantage and that copies bear this notice and the full cita-
+tion on the ﬁrst page. Copyrights for components of this work owned by others than
+ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or re-
+publish, to post on servers or to redistribute to lists, requires prior speciﬁc permission
+and/or a fee. Request permissions from Permissions@acm.org.
+AutomotiveUI ’14, September 17 - 19 2014, Seattle, WA, USA.
+Copyright 2014 ACM 978-1-4503-3212-5/14/09...$15.00.
+http://dx.doi.org/10.1145/2667317.2667329
+for helping the primary task of driving (direct operation of
+the vehicle at various cognitive levels) rather than secondary
+(mandatory tasks related to driving like turn signaling) or ter-
+tiary tasks (not related to driving such as entertainment) [1].
+Speciﬁcally, AR applications can provide situation awareness
+without needing to glance away from the windshield (for see-
+thru Head Up Displays), use generated computer graphics to
+draw the attention of the driver to important events, anno-
+tate location-based information on real-world objects in the
+driver’s view, and unambiguously provide spatial information
+relevant for driver navigation and vehicle operation [1,2].
+AR Navigation
+Vehicle navigation is a prime application where AR can pro-
+vide beneﬁts. In this scenario, AR can reduce the ambiguity
+of instructions by directly pointing out intersections and turn
+locations in context of what the driver sees. This beneﬁt and
+the public’s increasing dependency on GPS systems has re-
+sulted in the development of AR applications geared towards
+navigation such as iOnRoad and many others. One downside
+of these systems is that the AR visuals are overlaid on a sep-
+arate camera feed of the visual scene rather than the scene
+itself so users are still forced to look at an alternate display,
+such as their smartphone, to experience the augmented reality
+which can cause driver inattention or distraction.
+To address the issue of inattention, other Automotive AR
+makes use of see-thru Head Up Displays (HUDs). Although
+there are still technical hurdles to overcome before AR-HUDs
+are widely adopted, researchers have begun to explore the
+usability and effectiveness of these interfaces over conven-
+tional display systems. Using a simulated windshield naviga-
+tion system, Kim and Dey [3] found that driver’s were able to
+reduce navigational errors and distraction measures by reduc-
+ing the cognitive load of needing to switch between the real
+view and a different map viewpoint. In Frohlich et al. [4],
+driving simulation studies showed that in urgent situations,
+drivers preferred direct augmented views over conventional
+map views. This was also observed in a comparison study be-
+tween head-up display (HUD) and head-down display (HDD)
+for a simulation experiment with commercial vehicles in Tai-
+wan [5]. In particular, drivers in the HUD conﬁguration had
+faster response times in response to urgent events, more con-
+sistent speed control and less mental stress than the HDD
+conﬁguration. Medenica et al. [6] found in simulation that
+drivers were able to look at the road more often, drive with
+better steering and lane positions than alternative map-based
+displays or AR on secondary video displays.
+1
+
+
+AR Navigation Visual Designs
+As a new visual modality, methods of providing AR naviga-
+tion information are under explored. Currently, the major-
+ity of AR navigation interfaces displays a highlighted path
+or arrow overlaid directly on the road in front of the driver
+[3, 4, 7–10]. Although this design provides intuitive corre-
+spondence between the AR visuals and the environment, one
+potential drawback of this visual aid is that if another object
+or vehicle is in front of the driver, the object occludes the path
+or the path is overlaid on top of the object, creating a confus-
+ing graphic for the driver. To address this issue, another com-
+monly employed visual design is to draw the highlighted path
+in the sky, where the path is less likely to interfere with other
+objects in the driver’s view [6, 7, 11]. In their observations,
+Medenica et al. [6] state that one potential drawback of this
+visual is that it may be distracting to have the path highlighted
+in a driver’s peripheral view at all times. They also note that
+most AR navigation designs do not provide a global overview
+of the route and only provides information about what the
+driver should be doing at that particular instant. Kim et al. [3]
+uses an interesting hybrid design that combines the path on
+the road and a global top down view map in the sky, though it
+may also be distracting. MVS [12] and Pioneer [13] provide
+road directions in the upper portions of the driver’s ﬁeld of
+view, removing potential problems with augmented graphics
+obstructing actual cars or pedestrians on the road. Drawing
+graphics against a sky backdrop can potentially reduce back-
+ground clutter as well.
+Display Perceptual Issues
+The advantages of a HUD over a HDD have been well docu-
+mented, showing that users are able to keep their gaze on the
+road longer, leading to faster reaction times, improved driving
+or task performance, and less mental stress [5,6,14,15]. Cur-
+rently, HUDs are more proliﬁc in luxury brand vehicles (e.g.
+BMW, Audi, Mercedes, Cadillac, Lexus), but advancements
+in display technologies are allowing HUDs to appear in mid-
+range vehicles. HUDWAY and Sygic are smartphone naviga-
+tion apps that simulate HUDs by reﬂecting their screen on the
+windshield. In addition, several secondary add-on or wear-
+able HUDs have become commercially available (Garmin,
+Pioneer, Google Glass). Although these HUDs provide the
+advantages of keeping a driver’s eye gaze near the forward
+scene, the visuals are not truly augmenting the environment.
+One reason is that the majority of these HUDs have a rela-
+tively small ﬁeld of view and can only display images occu-
+pying the lower portion of the windshield viewing area, which
+makes direct augmentation of the environment difﬁcult.
+A more important characteristic of these HUDs are that they
+project images at a ﬁxed distance in front of the driver’s eye
+(typically around 3 meters). However, the absence of proper
+depth perception and focal distance is a safety issue that has
+been overlooked [1,16,17]. To properly conceive and design
+automotive applications using AR, it is important to review
+the research performed so far on the driver’s perception with
+these interfaces. Fixing the distance of the images results in
+the omission of consistent depth perception cues, which can
+lead to discomfort and focus issues [18]. The ﬁxed HUD dis-
+tance may also affect the accommodation and perception of
+actual objects while driving [16, 19, 20]. In essence, these
+types of HUDs require the driver to shift their focus from the
+virtual image to the real world scenery, which is often at a dif-
+ferent focal distance from the image. In an experiment where
+virtual text was presented at far distances, Gupta [20] reported
+that the text appeared more blurry to users as the experiment
+progressed. She conjectures that the blurry vision was a re-
+sult of eye strain due to the repeated need of the eyes to con-
+verge and accommodate. One reason these perceptual issues
+are often overlooked in research is that most automotive AR
+systems are studied using driving simulators, where the road
+environment is a 2D projection on a monitor or large screen
+and depth cues are not required or present. Therefore, issues
+in accommodation or focus switching have gone unnoticed.
+Volumetric 3D HUDs that are capable of generating images
+at dynamically changing focal planes can eliminate some of
+these perceptual issues but the availability of volumetric 3D
+HUDs is very limited.
+In addition, the perceptual issues related to viewing AR
+against a moving, real world backdrop (which describes nor-
+mal driving conditions) are relatively unknown. Most auto-
+motive AR has been tested indoors due to technological and
+safety constraints; however, Livingston et al. [21] performed
+AR depth perception experiments both indoors and outdoors
+and found that outdoors, users tended to overestimate depth,
+while indoors the effects were the opposite. Tonnis [10] also
+found that when driving at faster speeds (in simulation), the
+perceived distance of AR visuals worsened.
+The increase
+in speed resulted in faster pixel changes, which affected the
+user’s ability to perceive the AR visuals. These perceptual is-
+sues must not be overlooked when designing automotive AR
+systems and interfaces.
+To address some of these perceptual issues, we have built a
+prototype volumetric HUD that allows us to generate images
+using movable focal planes from 5 m to inﬁnity and a 20 de-
+gree ﬁeld of view. The ability to project images at accurate
+focal distances from the user’s eyes allows for proper mo-
+tion parallax cues without the use of head or eye tracking,
+and the prototype allows us to register virtual images to the
+real world, reducing visual fatigue. In this prototype, the eye
+box is located 60-80 cm from the windshield, and is approx-
+imately 150 cm in width. Using this system, we designed
+Personal Navi, an AR navigational aid that helps drivers rec-
+ognize where to turn quickly and accurately. In this paper, we
+demonstrate the promise of our design. In a separate percep-
+tual study, we also provide evidence that HUD based AR nav-
+igational aids require a 3D display because users are unable
+to register images with a traditional 2D HUD at the proper
+distances.
+3D AR NAVIGATION INTERFACE DESIGN
+The main purpose of a navigation system is to provide in-
+structions on how to get from one point to another. With the
+parameters of our 3D-volumetric HUD, we designed an inter-
+face aimed at helping drivers recognize where to turn earlier
+and with greater conﬁdence.
+In early prototypes, our visual designs resembled the paths
+on the road or in the sky, much like [4, 6–11], However, we
+2
+
+
+Figure 1. Personal Navi visual interface. A virtual paper airplane is
+shown as a navigation guide and a series of virtual planes show the de-
+sired path.
+observed that the paths, whether they were on the ground or
+in the sky, drew too much attention to the spatial area directly
+in front of the driver, and users tended to stare at the visuals.
+This tendency was also noted in [6]. To avoid the dangers of
+inattentional blindness and based on prior navigation design
+ﬁndings [4, 6, 22], we developed a set of guidelines to drive
+our design.
+• Show where to turn using a perspective view.
+• Provide advanced notice about the turns or upcoming in-
+structions.
+• Only provide visual information when it is needed.
+• Do not occlude the driver’s view.
+With these rules in mind, we present the current design (Fig.
+1). To keep the AR interface simple, we decided that more
+complex visuals such as an overview map, should remain on
+a secondary display. Audio instructions were not the focus of
+our design efforts, so we assumed that standard audio instruc-
+tions would be provided as well.
+In order to avoid occluding the driver’s view and avoid hav-
+ing the visuals interfere with other objects in the environment,
+we chose to keep the AR visuals in the sky domain rather than
+highlighting the road directly. The idea of providing a guid-
+ance avatar for a driver to follow was conceived to provide
+some playfulness in the design. Because the visuals appeared
+in the sky, a paper airplane was chosen as a simple, intuitive,
+model to act as the avatar. To show the driver where to turn,
+maneuver, or exit, we show a desired path in the sky with a
+series of airplanes that ﬂy out ahead of the driver (Fig. 1). If
+the driver is simply going straight or following the road, no
+AR visuals are present. Only when a maneuver is impending,
+do the AR visuals appear. A typical sequence of events is as
+follows:
+• As the driver approaches a turn, the audio instructions pro-
+vide the earliest warning (”in a quarter mile, turn right”).
+• Simultaneously, a paper airplane avatar appears in the sky,
+which represents the heading of the driver.
+• As the driver approaches the turn, approximately 200-300ft
+from the turn, a series of ”future planes” ﬂy out ahead of
+the driver to the location of the turn, providing an attention
+grabbing cue that the location of the impending maneuver
+is near.
+• As the driver continues, the future planes are more visible
+and the driver’s goal is to have their avatar match the head-
+ing of the ghost planes to complete the turn.
+We found that this sequence prepared users for an impend-
+ing maneuver and helped the driver locate where they needed
+to go. A key distinction between this AR interface and ar-
+rows that appear on conventional HUD’s is that the virtual
+airplanes are spatially co-located with the real environment.
+GPS tracking and localization of 3D geometric elements sur-
+rounding the vehicle are required to accurately place the air-
+planes at correct focal depths ahead of the driver and pro-
+vide occlusion cues. This AR can potentially help reduce
+distraction by drawing the driver’s attention further ahead
+to where they need to go, rather than having the driver fo-
+cus on an arrow projected at a focal plane close up and then
+transferring their visual attention ahead at the road. A video
+demonstrating these visuals can be found here: bender.honda-
+ri.com/personalnavi.
+INTERFACE DESIGN EVALUATION
+To characterize the effectiveness of the Personal Navi inter-
+face, we completed a short study comparing how early partic-
+ipants recognized where to turn using a traditional navigation
+system and a navigation system with our augmented visuals.
+We hypothesized that the Personal Navi would help users rec-
+ognize where to turn earlier and help keep their eyes on the
+road.
+Methods
+In order to evaluate the interface, participants viewed short
+video clips of recorded navigation scenarios. To generate the
+videos, we drove a vehicle along a pre-determined route and
+simultaneously recorded the driver’s ﬁeld of view and the in-
+vehicle navigation system audio and secondary map display
+with cameras mounted inside the cabin. The recordings were
+synchronized and split into short intervals that captured spe-
+ciﬁc navigational instructions. The clip lengths varied due to
+the different trafﬁc situations. To simulate the AR visuals, a
+graphical overlay adhering to occlusion and perspective cues
+was manually added to the video clips in post-processing. We
+chose to simulate the driving experience using video record-
+ings due to the realism of the scenarios and visuals. It was im-
+portant for this study to see how participants would respond
+to seeing AR visuals against a real-world backdrop (Fig. 4).
+Two visual conditions were tested (AR HUD and No HUD).
+The No HUD condition contained only the traditional naviga-
+tion interface which was comprised of audio instructions and
+a secondary map overview of the desired route. The AR HUD
+condition contained the same traditional instructions but also
+included simulated AR graphics (Fig. 1). The only difference
+between the two conditions was the presence or lack of AR
+visuals.
+During the experiment, participants were seated in a car seat
+positioned approximately 80 cm from a large LCD screen.
+The video clips were scaled to approximate real-life propor-
+tions as closely as possible on the screen. A separate 7 inch
+screen was placed near the bottom right corner of the larger
+LCD to display the secondary map view. Audio navigation
+3
+
+
+instructions were played over speakers. During the study, par-
+ticipants were also asked to wear a set of SMI Eye Tracking
+Glasses (ETG) to record their eye gaze. This setup can be
+seen in Fig. 2.
+eye tracking glasses
+recorded driving video
+map on secondary
+display
+Figure 2. Experiment test setup. Participants were seated in front of a
+large display with a smaller display showing the navigation maps.
+R
+Nine experienced drivers completed the study (2 females, 7
+males). Ages ranged from 27 to 45, with an average age of
+34.2 ± 7.3. Each participant was asked to view a total of
+8 different video clips. For this within subjects study, the
+video clips were split into two groups (A and B) to where each
+group contained a set of four navigation scenarios. Group A
+clips were comprised of: 2 left turns, 1 slight right, and 1
+exit off the highway (Clip Nos. 1-4 respectively). Group B
+contained: 1 right turn, 1 slight right, 1 left turn, and 1 exit off
+the highway (Clip Nos. 5-8 respectively). Participants viewed
+clips in either A or B paired with one of the visual conditions
+(AR HUD or No HUD), and then viewed the remaining group
+paired with the other condition. The conditions and pairings
+were counter-balanced to reduce biases due to presentation
+order and clip type. It total, four of the nine subjects were
+presented with the Group A-AR HUD and Group B-No HUD
+pairing and the remaining subjects were presented with the
+opposite pairings.
+Prior to the data recording, participants viewed a sample clip
+of a driving scene to help situate them with the setup and to
+explain the task. One practice clip was then shown under both
+visual conditions to demonstrate the AR interface and make
+sure the participants understood the task. After completing
+the practice, the experiment began.
+Experiment
+Because we hypothesized that the AR HUD interface would
+help drivers know where to turn earlier, we recorded the time
+at which participants recognized what the navigation system
+was instructing them to do. As the video clips played, par-
+ticipants were asked to observe the scenario, interpret the au-
+dio/visual navigational instructions, and to press a key on a
+portable keypad to pause the video when they knew where
+the navigation system was taking them. When the video was
+paused, the experimenter asked the participant to describe or
+indicate visually where the navigation instruction was refer-
+ring to. The experimenter recorded whether the response was
+correct or incorrect as well as the time at which the participant
+pushed the key. The experimenter did not inform the partici-
+pants if their answer was correct. Participants were instructed
+to continue watching the video and stop the video again if
+they changed their mind about the instructed path. It is im-
+portant to note that in each of the video clips, the vehicle did
+not complete the desired maneuver (e.g. if the instruction was
+to turn left, the vehicle in the video did not complete the left
+turn). This was done so that participants could not deduce the
+navigation instructions from the heading of the vehicle. After
+the videos in one visual condition were shown, the videos in
+the remaining condition were presented.
+Participants then completed a qualitative survey to record
+their opinions on the effectiveness of the AR HUD visual in-
+terface. The qualitative survey consisted of a series of state-
+ments listed below which were rated on a Likert scale rang-
+ing from 1 to 7, where 1= strongly disagree and 7=strongly
+agree. We also asked participants to provide their ideal com-
+bination of feedback modalities (AR HUD, secondary dis-
+play, audio) for a navigation system. General comments and
+observations were also recorded.
+• I liked the AR HUD concept.
+• The AR HUD helped me navigate better than using tradi-
+tional methods.
+• The airplanes obstructed my view in a negative way.
+• The AR HUD was distracting and would negatively impact
+my driving.
+• I think the AR HUD would increase my cognitive load
+while driving.
+• The AR HUD would make me a more cautious/safer driver.
+• The AR HUD was easy to see and understand.
+• I felt more conﬁdent about knowing where to turn with the
+AR HUD.
+• If I had an AR HUD navigation system in my car, I would
+use it.
+Results
+Results were analyzed and compared using a two-way analy-
+sis of variance (ANOVA), with two main factors (video clip,
+visual interface). We use α = 0.05 to determine signiﬁcance.
+Average values are reported with standard deviation when ap-
+propriate.
+Time to Recognize Turn
+The main variable of interest was the time at which partic-
+ipants recognized where to turn/exit. When examining the
+average recognition times for the different video clips, we
+observe that for 5 of the 8 video clips, participants recog-
+nized where to turn earlier with the AR HUD interface. Of
+these ﬁve situations, the difference in recognition time was
+3.2 ± 1.8 seconds, a considerable amount of distance and ad-
+vance warning for drivers to make decisions. A summary
+of the results is provided in Fig. 3. Statistically, visual in-
+terface was found to have a signiﬁcant main effect on the
+time at which participants recognized where to turn (p=0.001,
+F(1,56) = 11.93, η2 = 0.18). A signiﬁcant interaction between
+the clip and visual interface was also found (p<0.04, F(7,56)
+4
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+0
+10
+20
+30
+40
+50
+60
+clip number
+time (s)
+ 
+ 
+HUD
+No HUD
+Figure 3. Average time at which participants recognized where to turn
+for all driving clips. Shorter bars indicate that the participants recog-
+nized where to turn earlier. The red dots represent the time at which the
+virtual airplanes appeared for the AR HUD condition.
+(a)
+(b)
+exit/planes occluded by overpass
+traffic lights visible
+Figure 4. Sample screen shots of scenarios were the AR HUD did not
+improve recognition time: (a) highway scenario where exit is hidden be-
+hind overpass and (b) large intersection where the trafﬁc lights helped
+users recognize where to turn.
+= 2.34, η2 = 0.23), indicating that the effects of the AR HUD
+visuals varied by clip.
+Indeed, clips 4 and 8 showed little difference between the AR
+HUD and No HUD conditions. The scenario for both these
+clips was to exit off a highway. Upon further inspection, we
+noticed that the exits were located behind an overpass for both
+clips (see Fig. 4a), meaning that the exits were difﬁcult to
+see. The virtual airplanes in the AR HUD condition were also
+hidden behind the overpass because users were confused in
+earlier iterations when the planes were not properly occluded.
+Occlusion has been known to be a dominant cue for depth
+[23], but occluding the planes to reduce confusion resulted in
+participants waiting until the hidden exit was visible before
+pressing the key, negating any beneﬁts of the AR visuals. It is
+possible that a difference in recognition time would be seen
+when the exit is more visible or if the exit location was more
+easily indicated using other visual methods.
+The scenario (Clip 5) in which participants were able to rec-
+ognize where to turn earlier without the AR HUD interface
+was a right turn at a heavy intersection. Several aspects of
+this scenario likely contributed to the result. As seen in Fig. 3,
+users in the No HUD condition were able to recognize where
+the turn happened at a time before the virtual planes appeared
+(indicated by a red dot) in the AR HUD condition. Partici-
+pants in the No HUD condition described the location of the
+turn by referring to the large trafﬁc lights and cross trafﬁc that
+were visible early on (Fig. 4b). In addition, the participant
+could note that there was only one large upcoming intersec-
+1
+2
+3
+4
+5
+6
+7
+8
+0
+5
+10
+15
+clip number
+total time (s)
+ 
+ 
+HUD
+No HUD
+Figure 5. Average total time participants spent ﬁxated on the secondary
+display for the various video clips with and without the AR HUD inter-
+face.
+tion from the secondary map and deduce that the instructions
+referred to the only visible intersection. It is possible that if
+the virtual planes appeared earlier in the AR HUD interface,
+the results would have differed. In addition, it points to the
+possibility of using other artifacts in the environment, such
+as trafﬁc lights or signs, to help the driver interpret where to
+turn. The timing at which the virtual planes in the AR HUD
+interface appear is an important factor to consider in the sys-
+tem.
+Overall, the video clips in which there was a bigger difference
+between the two conditions were when no clear street signs
+were visible, or when the roadways were slightly hidden from
+normal view. Additional work to study busier and more urban
+intersections should be explored.
+Eye gaze
+Prior research has shown that one of the major beneﬁts of a
+HUD is that time drivers spend with their eyes on the road
+ahead is increased with a HUD as compared to a Head Down
+Display (HDD) [6,15,24]. Although improved eye gaze alone
+does not reduce distraction completely, [6,15,24] also demon-
+strate performance beneﬁts related to increased on road eye
+gaze. We sought to verify that our AR HUD interface resulted
+in similar gaze trends as a preliminary analysis.
+Fixation eye gaze data from 8 of the 9 subjects was analyzed.
+One subject’s data was removed because the subject forgot
+the secondary display was present but did not recall for which
+condition. Due to the uncertainty, their data was not included
+in the analysis. Overall, the number of ﬁxations on the sec-
+ondary display were reduced with the presence of the AR
+HUD interface. On average, participants ﬁxated on the sec-
+ondary display 12±10.5 more times when the AR HUD inter-
+face was not provided. The overall time spent looking at the
+secondary display was also less with the AR HUD compared
+with the No HUD condition (Fig. 5). The time spent ﬁxated
+on the secondary display was on average 3.3 ± 3.0 seconds
+more when the AR HUD was not visible. The visual condi-
+tion was found to have a signiﬁcant main effect on the num-
+ber of ﬁxations at the secondary display (p=0.002, F(1,48) =
+28.55, η2 = 0.37). A signiﬁcant interaction between the clip
+and visual interface was found (p<0.02, F(7,48) = 2.76, η2 =
+0.28). It is not clear why the AR HUD did not help reduce
+the ﬁxation durations for Clip 4 (exiting a highway).
+5
+
+
+participant’s view
+3D Volumetric 
+Head Up Display Unit
+virtual paper plane
+stanchions
+Figure 6. 2D-3D Experiment test setup. Four stanchions are placed at
+varying depths and the participant is seated behind the 3D HUD for
+viewing.
+Survey Results
+The average ratings of all nine participants was calculated.
+Overall participants rated the AR HUD display favorably
+(6.3 ± 0.70), indicating that they liked the concept. They
+thought it was effective at providing instructions (6.1±0.93),
+increased their conﬁdence in knowing where to turn (6.2 ±
+0.97), easy to see and understand (6.6 ± 0.53), and was a
+system they would use (6.3 ± 1.0). Participants were neu-
+tral (4.3 ± 1.5) on whether or not the AR HUD would make
+them more cautious and if the system would increase their
+cognitive load (3.8 ± 1.6). They disagreed slightly with the
+statements that the AR HUD obstructed their view negatively
+(2.6 ± 0.73) or was distracting (2.6 ± 1.4).
+In addition, participants were asked if they had an option
+between having audio, a secondary map display, and AR
+HUD for a navigation system, which combination of feed-
+back modalities would be preferred. All participants stated
+they would prefer to have the AR HUD. 7 preferred to have
+all three modalities, while the remaining 2 participants pre-
+ferred to have either audio and AR HUD or secondary map
+and AR HUD. The secondary display and audio cues can
+provide long-term high level planning while immediate short-
+term direct cues are provided by the AR HUD, and we spec-
+ulate that users desire both types of cuing for navigation.
+DEPTH PERCEPTION EVALUATION
+Although the previous video-based experiment demonstrated
+the utility of the Personal Navi design, it was limited to dis-
+playing a 2D visual overlay on a video recording. The Per-
+sonal Navi system is intended for use in the real world which
+requires the overlay of graphics on a 3D environment. An
+important component of the system design is the ability of
+drivers to correlate the AR visuals to spatial locations ahead
+of the driver. We hypothesize that this co-located relationship
+between the environment and visuals contribute to the intu-
+itiveness and effectiveness of the Personal Navi design. As
+a preliminary step towards implementation, we determined if
+users would be capable of perceiving the location of the vir-
+tual airplanes accurately using our see thru 3D HUD. We also
+presented the same visuals simulating a standard 2D HUD to
+determine if it could also be used to implement the Personal
+Navi system.
+Setup
+In this study, we use our stationary 3D HUD prototype to aug-
+ment the real world with a virtual paper airplane in the sky, as
+(a) Across
+(b) Flyout
+Figure 7. Sample image of the graphics viewed from the participant’s
+point of view. Paper airplane graphics are overlaid against real-world
+environment.
+would happen with the Personal Navi interface. We ask par-
+ticipants to indicate where in the real world environment they
+believe the airplane is hovering over. To generate the visu-
+als, we used a 3D combiner-HUD prototype with a dynamic
+range of focal depths (Fig. 6).
+Four stanchions (labeled 1, 2, 3, 4) were placed outdoors at
+distances of 9, 14, 18.7, and 26 meters from the user (Fig. 6).
+The stanchions were staggered so that the participants could
+easily read the numerical labels. The 3D HUD prototype was
+positioned so that the graphics would be overlaid against the
+outdoor backdrop (Fig. 6).
+Methods
+A total of four conditions were tested. Two different visual
+conditions and two different animations.
+Visual Conditions
+We tested participants’ ability to judge the location of the vir-
+tual airplanes using both a 2D and 3D HUD. To simulate the
+2D HUD system, we ﬁxed the focal plane of our 3D HUD at 9
+m, so that the images appeared over the ﬁrst stanchion. In the
+3D condition, the focal plane was allowed to move dynami-
+cally to the appropriate depths. In both visual conditions, the
+size, perspective, and lighting of the visuals were consistent
+with a simulated 3D graphical environment and the graphics
+presented in each condition were identical. The only differ-
+ence was the changing focal plane.
+Animations
+Because apparent motion of virtual objects can help provide
+depth cues, we showed each participant two types of anima-
+tions. First a simple animation in which a paper airplane ap-
+peared on the left side of the viewing area and ﬂew across
+the scene in a straight line (Across), in which case there was
+no additional apparent motion cues (Fig. 7a). A second ani-
+mation showed the plane ﬂying out into the environment and
+changing depth (Flyout) before banking right over a desired
+stanchion (Fig. 7b). The virtual plane was clearly visible
+throughout it’s trajectory, unobstructed by the stanchion or
+other objects.
+Experiment
+Participants were asked to watch the animations and indicate
+which stanchion they believed the virtual airplane was hov-
+ering closest to. The animation and visual conditions were
+paired to create four different test groups (2D-Across, 3D-
+Across, 2D-Flyout, 3D-Flyout). Within each group, partici-
+pants were shown animations of the airplane ﬂying over each
+6
+
+
+Across
+Flyout
+0
+20
+40
+60
+80
+100
+Animation Type
+Percentage of correct responses
+32%
+93%
+33%
+97%
+3D
+2D
+Figure 8. Percent of correct responses for the various conditions
+of the four stanchions, for a total of sixteen trials. The order
+in which the airplanes ﬂew over the stanchions was random-
+ized within each test group. Each subject experienced all four
+groups. The orders in which the visual conditions were pre-
+sented were counterbalanced to reduce order biases but the
+Across animations were shown prior to the Flyout anima-
+tions. After each trial, the experimenter recorded the partic-
+ipant’s response. No practice trials were conducted and par-
+ticipants were not provided any information about the anima-
+tions they would be seeing prior to the experiment. Qualita-
+tive observations and comments were also recorded. A video
+demonstrating the experiment and conditions can be found at
+bender.honda-ri.com/personalnavi.
+Results
+Data from 15 participants was collected (3 females, 12
+males). Participant ages ranged from 27 to 50 with an av-
+erage age of 35.3 ± 8.4. To analyze the participants ability to
+perceive the location of the virtual airplanes, we determined
+the percent of correct responses for the various conditions.
+Results were analyzed and compared using a repeated mea-
+sures analysis of variance (ANOVA), with two main factors
+(visual condition, animation type). We use α = 0.05 to de-
+termine signiﬁcance unless noted otherwise. Average values
+are reported with standard deviation when appropriate.
+The overall results are shown in Fig. 8, where it is clear that
+participants were able to perceive the location of the airplane
+with much greater accuracy using the 3D HUD as compared
+to the 2D HUD. The visual condition (2D vs. 3D) was found
+to have a signiﬁcant main effect (p < 7e−10, F(1,14)=218.75,
+η2 = 0.94) and the animation type (Across vs. Flyout) did
+not have a signiﬁcant effect. No signiﬁcant interactions were
+found.
+When we examine the breakdown of correct responses ac-
+cording to the different stanchions (Fig. 9), it is clear that the
+bulk of correct responses under the 2D condition occurred
+when the airplane ﬂew over Stanchion 1. This is not surpris-
+ing since the focal depth for the 2D condition was placed at
+Stanchion 1. However, this breakdown highlights the inabil-
+ity of participants to perceive depth of images in a 2D HUD.
+1
+2
+3
+4
+0
+5
+10
+15
+Correct Responses
+ 
+ 
+2D-Across
+2D-Flyout
+Stanchion #
+Figure 9. Distribution of correct responses according to Stanchion Num-
+ber (depth) for both all conditions
+For the Across, and 2D condition, several participants com-
+mented that although the size of the airplane appeared to be
+smaller, the airplane itself did not seem to be ﬂying further
+out. The Flyout animation further confounded participants.
+They stated that due to the initial outward motion of the tra-
+jectory, they anticipated that the airplane would end up hov-
+ering over one of the Stanchions further away, yet when the
+airplane ﬁnished the trajectory it somehow appeared back at
+Stanchion 1. Though the motion cues provided some cogni-
+tion of depth, the focal depth cues override size and perspec-
+tive cues at the distances tested here.
+CONCLUSIONS AND FUTURE WORK
+In the ﬁrst study, we found that the Personal Navi shows
+promise in helping drivers recognize where to turn. Although
+the results varied according to the scenarios, in general par-
+ticipants were able to pinpoint turn locations earlier with the
+AR visuals. They were able to keep their eyes up ahead for a
+greater amount of time, potentially increasing the likelihood
+of detecting other hazards while driving, and they found the
+interface intuitive and non-intrusive. The design of the in-
+terface can be improved to take advantage of environmental
+landmarks such as trafﬁc lights, signs, or overpasses. The
+second study showed preliminary steps taken to implement
+Personal Navi 3D using our see-thru volumetric 3D HUD.
+The lack of depth perception with a ﬁxed distance 2D HUD
+is clear and AR interfaces such as the Personal Navi will not
+be effective without a 3D HUD. In fact, a 2D HUD can be
+quite dangerous and these perceptual issues must be consid-
+ered in automotive AR.
+Future plans include ecological implementation and testing
+of the Personal Navi interface. The increased outdoor stimuli
+and cognitive load present during real world driving may af-
+fect a driver’s ability to use the Personal Navi. Motion cues
+from driving may actually enhance depth perception by of-
+fering strong motion parallax cues; however, latency in AR
+graphics and asynchrony between the visuals and the moving
+environment may cause perceptual issues not seen in these
+preliminary studies. Future studies can also demonstrate driv-
+ing performance beneﬁts of the HUD Furthermore, percep-
+tion of the visuals at greater depth distances will be tested.
+We will also optimize when the virtual airplanes appear, and
+enhance their saliency by varying sizes and colors. We look
+forward to testing the interface in a more realistic setting to
+fully demonstrate the effectiveness of our system.
+ACKNOWLEDGMENTS
+The authors wish to thank Tom Zamojdo and Chris
+Grabowski for their stimulating conversations, sage advice,
+and assistance in building our HUD prototypes, Nguyen-Cat
+Le for his assistance in preparing the visual materials, and
+Nuri Kim for her design insights.
+REFERENCES
+1. J. Gabbard, G. Fitch, and H. Kim, “Behind the glass:
+Driver challenges and opportunities for ar automotive
+applications,” Proc. of the IEEE, vol. 102, pp. 124–136,
+Feb 2014.
+7
+
+
+2. M. T¨onnis, Towards Automotive Augmented Reality.
+PhD thesis, Technische Universit¨at M¨unchen, 2008.
+3. S. Kim and A. K. Dey, “Simulated augmented reality
+windshield display as a cognitive mapping aid for elder
+driver navigation,” in Proc. of the SIGCHI Conference
+on Human Factors in Computing Systems, CHI ’09,
+(New York, NY, USA), pp. 133–142, ACM, 2009.
+4. P. Froehlich, R. Schatz, P. Leitner, S. Mantler, and
+M. Baldauf, “Evaluating realistic visualizations for
+safety-related in-car information systems,” in CHI ’10
+Extended Abstracts on Human Factors in Computing
+Systems, CHI EA ’10, pp. 3847–3852, ACM, 2010.
+5. Y.-C. Liu and M.-H. Wen, “Comparison of head-up
+display (hud) vs. head-down display (hdd): driving
+performance of commercial vehicle operators in taiwan,”
+International Journal of Human-Computer Studies,
+vol. 61, no. 5, pp. 679 – 697, 2004.
+6. Z. Medenica, A. L. Kun, T. Paek, and O. Palinko,
+“Augmented reality vs. street views: A driving simulator
+study comparing two emerging navigation aids,” in
+Proc. of the 13th International Conference on Human
+Computer Interaction with Mobile Devices and Services,
+MobileHCI ’11, pp. 265–274, ACM, 2011.
+7. K. Akaho, T. Nakagawa, Y. Yamaguchi, K. Kawai,
+H. Kato, and S. Nishida, “A study and evaluation on
+route guidance of a car navigation system based on
+augmented reality,” in Proc. of the 14th International
+Conference on Human-computer Interaction, HCII’11,
+pp. 357–366, Springer-Verlag, 2011.
+8. W. Narzt, G. Pomberger, A. Ferscha, D. Kolb, R. Mller,
+J. Wieghardt, H. Hrtner, and C. Lindinger, “A new
+visualization concept for navigation systems,” in
+User-Centered Interaction Paradigms for Universal
+Access in the Information Society, vol. 3196 of Lecture
+Notes in Computer Science, pp. 440–451, Springer
+Berlin Heidelberg, 2004.
+9. T. Tasaki, A. Moriya, A. Hotta, T. Sasaki, and
+H. Okumura, “Depth perception control by hiding
+displayed images based on car vibration for monocular
+head-up display,” in IEEE International Symposium on
+Mixed and Augmented Reality, pp. 323–324, Nov 2012.
+10. M. T¨onnis, L. Klein, and G. Klinker, “Perception
+thresholds for augmented reality navigation schemes in
+large distances,” in 7th IEEE and ACM International
+Symposium on Mixed and Augmented Reality,
+pp. 189–190, IEEE Computer Society, 2008.
+11. Y. Yamaguchi, T. Nakagawa, K. Akaho, M. Honda,
+H. Kato, and S. Nishida, “Ar-navi: An in-vehicle
+navigation system using video-based augmented reality
+technology,” in Human Interface and the Management of
+Information. Interacting in Information Environments,
+vol. 4558 of Lecture Notes in Computer Science,
+pp. 1139–1147, Springer Berlin Heidelberg, 2007.
+12. M. V. Solid, “Virtual cable hud.” http://www.mvs.net/,
+accessed 7.24.2014.
+13. Pioneer, “Cyber navi: Augmented reality head-up
+display.” http://pioneer.jp/carrozzeria/cybernavi/avic-
+vh0009hud avic-zh0009hud/.
+14. K. W. Gish, L. Staplin, J. Stewart, and M. Perel,
+“Sensory and cognitive factors affecting automotive
+head-up display effectiveness,” Transportation Research
+Record: Journal of the Transportation Research Board,
+vol. 1694, no. 1, pp. 10–19, 1999.
+15. M. Ablassmeier, T. Poitschke, F. Wallhoff, K. Bengler,
+and G. Rigoll, “Eye gaze studies comparing head-up and
+head-down displays in vehicles,” in Multimedia and
+Expo, 2007 IEEE International Conference on,
+pp. 2250–2252, July 2007.
+16. D. R. Tufano, “Automotive huds: The overlooked safety
+issues,” Human Factors: The Journal of the Human
+Factors and Ergonomics Society, vol. 39, no. 2,
+pp. 303–311, 1997.
+17. V. Ng-Thow-Hing, K. Bark, L. Beckwith, C. Tran,
+R. Bhandari, and S. Sridhar, “User-centered perspectives
+for automotive augmented reality,” in IEEE
+International Symposium on Mixed and Augmented
+Reality, pp. 13–22, Oct 2013.
+18. N. Ward and A. Parkes, “Head-Up Displays and their
+Automotive Application - An Overview of
+Human-Factors Issues Affecting Safety,” Accident
+Analysis and Prevention, vol. 26, pp. 703–717, Dec
+1994.
+19. D. M. Hoffman, A. R. Girshick, K. Akeley, and M. S.
+Banks, “Vergence–accommodation conﬂicts hinder
+visual performance and cause visual fatigue,” Journal of
+vision, vol. 8, no. 3, p. 33, 2008.
+20. D. Gupta, “An empirical study of the effects of
+context-switch, object distance, and focus depth on
+human performance in augmented reality.” M.S. Thesis,
+2004.
+21. M. Livingston, Z. Ai, J. Swan, and H. Smallman,
+“Indoor vs. outdoor depth perception for mobile
+augmented reality,” in Virtual Reality Conference, 2009.
+VR 2009. IEEE, pp. 55–62, March 2009.
+22. J. Lee, J. Forlizzi, and S. E. Hudson, “Iterative design of
+move: A situationally appropriate vehicle navigation
+system,” International Journal of Human-Computer
+Studies, vol. 66, no. 3, pp. 198 – 215, 2008.
+23. J. E. Cutting and P. M. Vishton, “Chapter 3 -perceiving
+layout and knowing distances: The integration, relative
+potency, and contextual use of different information
+about depth,” in Perception of Space and Motion,
+Handbook of Perception and Cognition, pp. 69 – 117,
+San Diego: Academic Press, 1995.
+24. G. Weinberg, B. Harsham, and Z. Medenica,
+“Evaluating the usability of a head-up display for
+selection from choice lists in cars,” in Proc. of the 3rd
+International Conference on Automotive User Interfaces
+and Interactive Vehicular Applications, AutomotiveUI
+’11, (New York, NY, USA), pp. 39–46, ACM, 2011.
+8
+
+

@@ -1,0 +1,1624 @@
+{
+  "meta": {
+    "original_count": 514,
+    "main_project_dois_excluded": 37,
+    "after_filter": 271,
+    "top_n": 80,
+    "score_range": [
+      16.602059991327963,
+      49.51054501020661
+    ]
+  },
+  "records": [
+    {
+      "openalex_id": "https://openalex.org/W4402412586",
+      "doi": "10.1080/10447318.2024.2400376",
+      "title": "The Effect of Dynamic Effects and Color Transparency of AR-HUD Navigation Graphics on Driving Behavior Regarding Inattentional Blindness",
+      "abstract": "In-vehicle Augmented Reality Head-Up Displays (AR-HUDs) offer drivers integrated navigation and vehicle status information, thereby improving the driving experience. Many studies explored the effects of AR-HUD navigation design and information presentation on driving performance; however, these studies neglected the occurrence of inattentional blindness, which may lead to potential safety hazards. This study used a two-factor within-subjects design to investigate how dynamic effects (pulsation, blinking, movement) and color transparency levels (T1, T0.75, T0.5, T0.35) of AR-HUD navigation graphics influence inattentional blindness and user experience. The results indicated that color transparency significantly affects the drivers’ inattentional blindness behavior and user experience. Specifically, T0.75 resulted in the lowest inattentional blindness, while T0.5 was associated with the shortest reaction time (without blindness) and highest user satisfaction. Dynamic effects did not significantly impact inattentional blindness, but blinking reduced reaction time (without blindness). This study provides design insights for vehicle AR-HUD navigation interfaces.",
+      "year": 2024,
+      "type": "article",
+      "authors": [
+        "Guanhua Hou",
+        "Qi Dong",
+        "Huiwen Wang"
+      ],
+      "venue": "International Journal of Human-Computer Interaction",
+      "cited_by_count": 17,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation+D_inattentional_blindness_AR",
+      "_score": 49.51054501020661,
+      "_matched": "A:augmented reality,A:head-up display,T:navigation,T:inattentional blindness,T:transparency,T:driving,A:driver,A:in-vehicle"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2890183875",
+      "doi": "10.1109/tvcg.2018.2868531",
+      "title": "Augmented Reality Interface Design Approaches for Goal-directed and Stimulus-driven Driving Tasks",
+      "abstract": "The automotive industry is rapidly developing new in-vehicle technologies that can provide drivers with information to aid awareness and promote quicker response times. Particularly, vehicles with augmented reality (AR) graphics delivered via head-up displays (HUDs) are nearing mainstream commercial feasibility and will be widely implemented over the next decade. Though AR graphics have been shown to provide tangible benefits to drivers in scenarios like forward collision warnings and navigation, they also create many new perceptual and sensory issues for drivers. For some time now, designers have focused on increasing the realism and quality of virtual graphics delivered via HUDs, and recently have begun testing more advanced 3D HUD systems that deliver volumetric spatial information to drivers. However, the realization of volumetric graphics adds further complexity to the design and delivery of AR cues, and moreover, parameters in this new design space must be clearly and operationally defined and explored. In this work, we present two user studies that examine how driver performance and visual attention are affected when using fixed and animated AR HUD interface design approaches in driving scenarios that require top-down and bottom-up cognitive processing. Results demonstrate that animated design approaches can produce some driving gains (e.g., in goal-directed navigation tasks) but often come at the cost of response time and distance. Our discussion yields AR HUD design ",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Coleman Merenda",
+        "Hyungil Kim",
+        "Kyle Tanous",
+        "Joseph L. Gabbard",
+        "Blake Feichtl",
+        "Teruhisa Misu",
+        "Chihiro Suga"
+      ],
+      "venue": "IEEE Transactions on Visualization and Computer Graphics",
+      "cited_by_count": 72,
+      "topic": "Augmented Reality Applications",
+      "group": "A_AR_HUD_navigation+B_attentional_capture_driving",
+      "_score": 45.72664572024091,
+      "_matched": "T:augmented reality,A:head-up display,A:navigation,T:stimulus-driven,T:driving,A:driver,A:collision warning,A:in-vehicle"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3198399773",
+      "doi": "10.1080/10447318.2021.1970434",
+      "title": "Inattentional Blindness in Augmented Reality Head-Up Display-Assisted Driving",
+      "abstract": "Augmented reality head-up display (AR HUD) is a new technology in assisted driving, which can add extra information to the driving environment in real-time to help the driver better perceive road situation. AR HUD can enhance driving safety but may also encourage inattentional blindness. Hence, this study aims to examine whether AR HUD-induces inattentional blindness and determine whether workload intensifies their relationship. In experiment 1, 60 participants were randomly assigned to three groups and watched three types of augmented reality (AR)-augmented driving videos, respectively. They were instructed to respond to any critical events, but only their responses to road-crossing pedestrians were recorded. Results show that AR HUD reduces inattentional blindness when pedestrians are augmented but encourages inattentional blindness when pedestrians are not augmented. In experiment 2, 20 participants viewed AR-augmented driving videos of high and low workloads. Pedestrians were not augmented in all videos. Result reveals that a high workload induces more inattentional blindness than low workload. The finding confirms that AR HUD induces inattentional blindness, and a high workload will intensify this relationship. The future design of the AR HUD assisted-driving system should consider the risk of inattentional blindness and come up with corresponding countermeasures.",
+      "year": 2021,
+      "type": "article",
+      "authors": [
+        "Yu-Wei Wang",
+        "Yimin A. Wu",
+        "Cheng Chen",
+        "Bohan Wu",
+        "Shu Ma",
+        "Duming Wang",
+        "Hongting Li",
+        "Zhen Yang"
+      ],
+      "venue": "International Journal of Human-Computer Interaction",
+      "cited_by_count": 55,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "D_inattentional_blindness_AR",
+      "_score": 44.4963760540124,
+      "_matched": "T:augmented reality,T:head-up display,T:inattentional blindness,T:driving,A:driver,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4327895862",
+      "doi": "10.1080/15389588.2023.2186735",
+      "title": "Inattentional blindness to unexpected hazard in augmented reality head-up display assisted driving: The impact of the relative position between stimulus and augmented graph",
+      "abstract": "OBJECTIVE: An augmented reality head-up display (AR-HUD) is a promising technology in assisted driving. It provides additional information in the driving environment. However, considering the registration problem related to the limitations of interactive technology, we suspect that an AR-HUD may not be able to recognize unpredictable stimuli in a timely manner, inducing inattentional blindness to these non-augmented stimuli. Actually, non-augmented stimuli may accidentally have a brief superimposition to AR graphics. This condition may also influence the rate of inattentional blindness accordingly. Thus, this study examined the problem of inattentional blindness in AR-HUD systems that may result from the immaturity of AR technology. METHOD: We investigated the impact of AR graphic position (peripheral AOI v.s. central AOI) and the relative position of the AR graphic on unpredictable stimuli (on-HUD hazard v.s. off-HUD hazard) on the occurrence of inattentional blindness. Thirty Participants watched an AR-augmented driving video that included four augmented conditions. Participants were instructed to respond to four critical events (speeding, running of red lights, unexpected pedestrians or motorcycles). The rate of inattentional blindness and response time were recorded. We only analyzed data on unexpected pedestrian and motorcycle incidents. RESULTS: The relative position of the AR graphic on unpredictable stimuli and AR graphic positions significantly affected the rate of i",
+      "year": 2023,
+      "type": "article",
+      "authors": [
+        "Wanting Chen",
+        "Jiaqing Song",
+        "Yu-Wei Wang",
+        "Changxu Wu",
+        "Shu Ma",
+        "Duming Wang",
+        "Zhen Yang",
+        "Hongting Li"
+      ],
+      "venue": "Traffic Injury Prevention",
+      "cited_by_count": 29,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "D_inattentional_blindness_AR",
+      "_score": 39.954242509439325,
+      "_matched": "T:augmented reality,T:head-up display,T:inattentional blindness,T:driving,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2013412165",
+      "doi": "10.1145/2799250.2799253",
+      "title": "An investigation of augmented reality presentations of landmark-based navigation using a head-up display",
+      "abstract": "Using landmark-based navigation can greatly improve drivers' route-finding performance. Previous research in this area has tended to focus on the inclusion of text or icon-based landmark information utilising dashboard-mounted displays. In contrast, we present landmark-based navigation information using a Head-Up Display (HUD). A major issue with using landmarks for navigation is their inherent variability in quality, with many 'poor' candidates that are not easily identifiable or communicable. A proposed solution to improve the usefulness and utility of such landmarks is to highlight/enhance them using augmented reality (AR). Twenty participants undertook four drives in a driving simulator utilising an AR navigation system presented on a HUD. Participants were provided navigational instructions presented as either conventional distance-to-turn information, on-road arrows or augmented landmark information (arrow highlighting or box enclosing landmark adjacent to the required turning). Participants demonstrated significant performance improvements while using the AR landmark 'box' presentations compared to conventional distance-to-turn information, with response times and success rates enhanced by 43.1% and 26.2%, respectively. Moreover, drivers reported a significant reduction in workload when using the AR landmark 'boxes'. We conclude that there are significant benefits to providing navigational information utilising AR presentations of landmark information on a HUD.",
+      "year": 2015,
+      "type": "article",
+      "authors": [
+        "A. Bolton",
+        "Gary Burnett",
+        "David R. Large"
+      ],
+      "venue": "",
+      "cited_by_count": 67,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation",
+      "_score": 37.66501782541247,
+      "_matched": "T:augmented reality,T:head-up display,T:navigation,A:driving,A:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4394689225",
+      "doi": "10.3390/electronics13081428",
+      "title": "Evaluating Driver Preferences for In-Vehicle Displays during Distracted Driving Using Driving Simulators",
+      "abstract": "Research on the impact of distracted driving on in-vehicle displays was conducted through a user preference experiment based on simulated driving. The development of automotive automation and multi-screen in-vehicle displays has improved the driving experience but also increased distracted driving. Typical scenarios and information needs were identified through user research, and a simulated driving platform was used to record user choices of different display modes and their reaction times after being distracted. Questionnaires were analyzed using the Analytic Hierarchy Process (AHP). Results showed that in the manual driving group, users preferred Head-Up Display (HUD), which had the highest efficiency in terms of reaction time. The study confirmed that as automation levels increase, distraction scenarios will change, and user focus will shift from safety to experience.",
+      "year": 2024,
+      "type": "article",
+      "authors": [
+        "Li Liang",
+        "Zijiang Yang",
+        "Jie Zeng",
+        "Chacon Quintero Juan Carlos"
+      ],
+      "venue": "Electronics",
+      "cited_by_count": 11,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 36.15836249209525,
+      "_matched": "A:head-up display,T:driving,T:driver,T:in-vehicle,T:vehicle display,T:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3025219184",
+      "doi": "10.1109/vrw50115.2020.00128",
+      "title": "Evaluating Automotive Augmented Reality Head-up Display Effects on Driver Performance and Distraction",
+      "abstract": "As the automotive industry progresses towards the car of the future, we have seen increasing interest using augmented reality (AR) head-up displays (HUD) in driving. AR HUDs provide a fundamentally new driving experience in which drivers still have to respond to both the road and the information provided by the system, creating the perfect atmosphere for potentially unsafe and distracting interfaces. As we start fielding and designing for new AR HUDs displays, the complexities of interface design and its impacts on driver performance must be further understood before AR HUDs can be broadly and safely incorporated into vehicles. Nevertheless, existing methods for assessing the usefulness of computer-based user interfaces may not be sufficiently rich to measure the overall impact of AR HUD interfaces on human performance. Therefore, in my Ph.D. research, I focus on developing and testing methods to evaluate AR HUDs' effects on driver distraction and performance. My primary goal is to assess glance allocation and visual capabilities of drivers with AR HUDs and apply this knowledge to inform new methods of AR HUD assessment that account for inattentional blindness and cognitive tunneling.",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Nayara de Oliveira Faria"
+      ],
+      "venue": "2020 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)",
+      "cited_by_count": 11,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "D_inattentional_blindness_AR",
+      "_score": 35.15836249209525,
+      "_matched": "T:augmented reality,T:head-up display,A:inattentional blindness,A:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2893586004",
+      "doi": "10.1177/1541931218621436",
+      "title": "Quantifying Distraction Potential of Augmented Reality Head-Up Displays for Vehicle Drivers",
+      "abstract": "Background: A recent National Highway Traffic &amp; Safety Administration (NHTSA) report states that 10% of fatal crashes and 18% of injury crashes were reported as distraction-affected crashes. In that same year, 3,179 people were killed and an estimated 431,000 injured in motor vehicle crashes involving distracted drivers, many of which involved secondary visual displays (NHTSA, 2016). Augmented reality (AR) head-up displays (HUD) promise to be less distractive than traditional in-vehicle displays since they do not take drivers’ eyes off the road (Gabbard, Fitch, &amp; Kim, 2014). However, empirical studies have reported possible negative consequences of AR HUDs, in part, due to AR graphics’ salience (Sharfi &amp; Shinar, 2014), frequent changes (Wolffsohn, McBrien, Edgar, &amp; Stout, 1998), and visual clutter (Burnett &amp; Donkor, 2012). Moreover, current in-vehicle display assessment methods which are based on eye-off-road time measures (NHTSA, 2012), cannot capture this unique challenge. Objective: This work aims to propose a new method for the assessment of AR HUDs by quantifying both positive (informing drivers) and negative (distracting drivers) consequences of AR HUDs which might not be captured by current in-vehicle display assessment methods. Method: We proposed a new way of quantifying the distraction potential of AR HUDs by measuring driver situation awareness with operational improvements on the situation awareness global assessment technique (Endsley, 2012) t",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Hyungil Kim",
+        "Joseph L. Gabbard"
+      ],
+      "venue": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+      "cited_by_count": 2,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 34.954242509439325,
+      "_matched": "T:augmented reality,T:head-up display,A:salience,T:driver,A:in-vehicle,A:vehicle display"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4409818294",
+      "doi": "10.3390/electronics14091745",
+      "title": "Reality Head-Up Display Navigation Design in Extreme Weather Conditions: Enhancing Driving Experience in Rain and Fog",
+      "abstract": "This study investigates the impact of extreme weather conditions (specifically heavy rain and fog) on drivers’ situational awareness by analyzing variations in illumination levels. The primary objective is to identify optimal color wavelengths for low-light environments, thereby providing a theoretical foundation for the design of augmented reality head-up display in adverse weather conditions. A within-subjects experimental design was employed with 26 participants in a simulated driving environment. Participants were exposed to different illumination levels and AR-HUD colors. Eye-tracking metrics, including fixation duration, visit duration, and fixation count, were recorded alongside situational awareness ratings to assess cognitive load and information processing efficiency. The results revealed that the yellow AR-HUD significantly enhanced situational awareness and reduced cognitive load in foggy conditions. While subjective assessments indicated no substantial effect of lighting conditions, objective measurements demonstrated the superior effectiveness of the yellow AR-HUD under foggy weather. These findings suggest that yellow AR-HUD navigation icons are more suitable for extreme weather environments, offering potential improvements in driving performance and overall road safety.",
+      "year": 2025,
+      "type": "article",
+      "authors": [
+        "Qi Zhu",
+        "Z. Liu"
+      ],
+      "venue": "Electronics",
+      "cited_by_count": 8,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation+D_inattentional_blindness_AR+E_transparency_luminance",
+      "_score": 34.90848501887865,
+      "_matched": "A:augmented reality,T:head-up display,T:navigation,T:driving,A:driver,A:cognitive load"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2990912512",
+      "doi": "10.1177/1071181319631287",
+      "title": "Augmented reality head-up displays effect on drivers’ spatial knowledge acquisition",
+      "abstract": "Background: Drivers gather most of the information they need to drive by looking at the world around them and at visual displays within the vehicle. Navigation systems automate the way drivers navigate. In using these systems, drivers offload both tactical (route following) and strategic aspects (route planning) of navigational tasks to the automated SatNav system, freeing up cognitive and attentional resources that can be used in other tasks (Burnett, 2009). Despite the potential benefits and opportunities that navigation systems provide, their use can also be problematic. For example, research suggests that drivers using SatNav do not develop as much environmental spatial knowledge as drivers using paper maps (Waters &amp; Winter, 2011; Parush, Ahuvia, &amp; Erev, 2007). With recent growth and advances of augmented reality (AR) head-up displays (HUDs), there are new opportunities to display navigation information directly within a driver’s forward field of view, allowing them to gather information needed to navigate without looking away from the road. While the technology is promising, the nuances of interface design and its impacts on drivers must be further understood before AR can be widely and safely incorporated into vehicles. Specifically, an impact that warrants investigation is the role of AR HUDS in spatial knowledge acquisition while driving. Acquiring high levels of spatial knowledge is crucial for navigation tasks because individuals who have greater levels of s",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Nayara de Oliveira Faria",
+        "Dina Kandil",
+        "Joseph L. Gabbard"
+      ],
+      "venue": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+      "cited_by_count": 10,
+      "topic": "Spatial Cognition and Navigation",
+      "group": "A_AR_HUD_navigation",
+      "_score": 34.08278537031645,
+      "_matched": "T:augmented reality,T:head-up display,A:navigation,A:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4291916518",
+      "doi": "10.3389/frvir.2022.930117",
+      "title": "How does navigating with Augmented Reality information affect drivers’ glance behaviour in terms of attention allocation?",
+      "abstract": "Drivers can benefit from Augmented Reality (AR) information especially in ambiguous navigation situations compared to conventional Head-up displays (HUD). AR information is correctly superimposed on the relevant objects in the environment and therefore directly related to the driving situation. Hence, it is assumed, that drivers no longer have to switch glances between the AR information and the environment ( Kim &amp;amp; Dey, 2009 ). It has to be investigated whether switching glances between the presented navigation information and the environment can be reduced with AR information compared to HUD information. Furthermore, the question arises whether AR information might capture drivers’ attention and therefore distract from the traffic situation compared to a HUD as AR information is presented on the driver’s primary visual axis. The aim of the driving simulator study was to examine glance behaviour in terms of attention allocation while participants navigated in an ambiguous left turn situation with an oncoming car in an urban area (N = 58). Hence, drivers were faced with the decision to turn in front of it or let it pass. A conventional HUD and an AR display presented the navigation information to the driver. The drives differed in traffic complexity (low vs. high) to provide indications whether drivers adapt glance behaviour to altered environmental conditions. Besides the navigation task, drivers performed a non-driving-related task to raise drivers’ mental load while",
+      "year": 2022,
+      "type": "article",
+      "authors": [
+        "Kassandra Bauerfeind",
+        "Julia Drüke",
+        "Lennart Bendewald",
+        "Martin Baumann"
+      ],
+      "venue": "Frontiers in Virtual Reality",
+      "cited_by_count": 15,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 32.40823996531185,
+      "_matched": "T:augmented reality,A:head-up display,A:navigation,A:driving,T:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4297891794",
+      "doi": "10.21203/rs.3.rs-2049777/v1",
+      "title": "Augmented reality HUD vs. conventional HUD to perform a navigation task in a complex driving situation",
+      "abstract": "Abstract This study aims at investigating the added value of an augmented reality head-up display (AR-HUD) in relation to a conventional head-up display (C-HUD) to perform navigation tasks in a complex road situation. The notion of complexity was defined according to two main factors: infrastructure and traffic. It was used to identify and select real road situations presenting different sources of complexity. This study focuses on one of these situations, which was reproduced on a simulator and broken down into three use cases. A total of 32 participants performed three navigation tasks, using the AR-HUD or the C-HUD. Both objective and subjective data were collected. Data analyses, using linear mixed model analyses of variance and multilevel logistic regression, indicate a slight advantage of the AR-HUD. Participants using the AR-HUD make fewer errors and drive faster on average. Moreover, the AR-HUD is assessed to be more useful and easier to understand than the C-HUD. However, this interface shows limitations, in particular because it does not enable drivers to anticipate the manoeuvre to be conducted. The study raises questions about the design of an instrument system that would help drivers not only identify, but also build a representation of a forthcoming manoeuvre to be performed.",
+      "year": 2022,
+      "type": "preprint",
+      "authors": [
+        "Christine Chauvin",
+        "Farida Saïd",
+        "Sabine Langlois"
+      ],
+      "venue": "Research Square",
+      "cited_by_count": 4,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 30.397940008672037,
+      "_matched": "T:augmented reality,A:head-up display,T:navigation,T:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4379768692",
+      "doi": "10.1177/00187208231181496",
+      "title": "Visual Complexity of Head-Up Display in Automobiles Modulates Attentional Tunneling",
+      "abstract": "OBJECTIVE: To investigate how the visual complexity of head-up displays (HUDs) influence the allocation of driver's attention in two separate visual domains (near and far domains). BACKGROUND: The types and amount of information displayed on automobile HUDs have increased. With limited human attention capacity, increased visual complexity in the near domain may lead to interference in the effective processing of information in the far domain. METHOD: Near-domain and far-domain vision were separately tested using a dual-task paradigm. In a simulated road environment, 62 participants were to control the speed of the vehicle (SMT; near domain) and manually respond to probes (PDT; far domain) simultaneously. Five HUD complexity levels including a HUD-absent condition were presented block-wise. RESULTS: Near domain performance was not modulated by the HUD complexity levels. However, the far domain detection accuracies were impaired as the HUD complexity level increased, with greater accuracy differences observed between central and peripheral probes. CONCLUSION: Increased HUD visual complexity leads to a biased deployment of driver attention toward the central visual field. Therefore, the formulation of HUD designs must be preceded by an in-depth investigation of the dynamics of human cognition. APPLICATION: To ensure driving safety, HUD designs should be rendered with minimal visual complexity by incorporating only essential information relevant to driving and removing driving-ir",
+      "year": 2023,
+      "type": "article",
+      "authors": [
+        "Jieun Lee",
+        "Na-Hyun Lee",
+        "Jangkyu Ju",
+        "Jihwan Chae",
+        "Jiyoon Park",
+        "Hoe Sung Ryu",
+        "Yang Seok Cho"
+      ],
+      "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+      "cited_by_count": 16,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "D_inattentional_blindness_AR",
+      "_score": 29.460897842756548,
+      "_matched": "T:head-up display,T:attentional tunneling,A:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4412404016",
+      "doi": "10.1109/access.2025.3588576",
+      "title": "Visual Saliency Design for AR-HUD Navigation in Extreme Weather: Reducing Inattentional Blindness",
+      "abstract": "Background: Current research on AR-HUD visual icons focuses primarily on interface, color, and motion trajectory design. However, when displayed in complex environments, AR-HUD might cause inattentional blindness, particularly during extreme weather conditions where occurrence rates increase significantly. Methods: This study employed a two-factor within-subjects design to examine how dynamic saliency and contour saliency in AR-HUD navigation graphics affect inattentional blindness and user experience. Eye-tracking metrics with total fixation time and first fixation time, driver reaction time, and user experience scores were analyzed. Results: Objective measures revealed significant interaction effects between saliency types, though user experience feedback showed no significance. Both contour and dynamic saliency effectively reduced inattentional blindness and improved information-seeking efficiency. Conclusions: The combination of dynamic and contour saliency produced the lowest inattentional blindness rates, fastest reaction times, and highest user satisfaction. We recommend: 1) adding distinct contours to prevent environmental visual fusion, 2) implementing temporary icon enlargement during critical moments to enhance attentional capture. These findings provide actionable design principles for improving AR-HUD safety in adverse weather conditions.",
+      "year": 2025,
+      "type": "article",
+      "authors": [
+        "Qi Zhu",
+        "Jordan Li",
+        "Y Liu"
+      ],
+      "venue": "IEEE Access",
+      "cited_by_count": 4,
+      "topic": "Diverse Topics in Contemporary Research",
+      "group": "A_AR_HUD_navigation",
+      "_score": 29.397940008672037,
+      "_matched": "T:navigation,A:attentional capture,T:inattentional blindness,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2564523902",
+      "doi": "10.1109/itsc.2016.7795767",
+      "title": "Augmented reality versus classical HUD to take over from automated driving: An aid to smooth reactions and to anticipate maneuvers",
+      "abstract": "The takeover phase from highly automated systems, when the transition phase is short (here 10s), is critical for the driver when he has been out of the driving loop. We conducted a simulator study on 26 drivers to compare three conditions: manual mode (MD), transition from automated driving (AD) to MD with a classical head up display (HUD), transition from (AD) to MD with an augmented reality (AR) HUD. In our scenarios, the driver has to take over to respect the navigation request for a lane change, and has to face slowing traffic in the destination lane. Compared to MD, driving behavior is altered in the transition phase up to 30s: the maximum speed on the brake pedal is higher, resulting acceleration being thus increased. AR reduces both these effects, thus improving driving comfort while facing slow traffic. AR also helps better anticipate the lane change maneuver: it increases the distance to the maneuver limit point. As such, the situational awareness seems to be improved by AR. Further analysis of eye tracking data and verbatim is needed to confirm this assumption based on driving data.",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "S. Langlois",
+        "Boussaad Soualmi"
+      ],
+      "venue": "",
+      "cited_by_count": 78,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation",
+      "_score": 28.795254182580884,
+      "_matched": "T:augmented reality,A:navigation,T:driving,A:driver,A:eye tracking"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2965580818",
+      "doi": "10.1515/icom-2018-0033",
+      "title": "Augmented Reality Windshield Displays and Their Potential to Enhance User Experience in Automated Driving",
+      "abstract": "Abstract Increasing vehicle automation presents challenges as drivers of highly automated vehicles become more disengaged from the primary driving task. However, even with fully automated driving, there will still be activities that require interfaces for vehicle-passenger interactions. Windshield displays are a technology with a promising potential for automated driving, as they are able to provide large content areas supporting drivers in non-driving related activities. However, it is still unknown how potential drivers or passengers would use these displays. This work addresses user preferences for windshield displays in automated driving. Participants of a user study ( <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\"> <m:mi mathvariant=\"italic\">N</m:mi> <m:mo>=</m:mo> <m:mn>63</m:mn> </m:math> N=63 ) were presented two levels of automation (conditional and full), and could freely choose preferred positions, content types, as well as size, transparency levels and importance levels of content windows using a simulated “ideal” windshield display. We visualized the results in form of heatmap data which show that user preferences differ with respect to the level of automation, age, gender, or environment aspects. These insights can help designers of interiors and in-vehicle applications to provide a rich user experience in highly automated vehicles.",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Andreas Riegler",
+        "Philipp Wintersberger",
+        "Andreas Riener",
+        "Clemens Holzmann"
+      ],
+      "venue": "i-com",
+      "cited_by_count": 39,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "D_inattentional_blindness_AR+E_transparency_luminance",
+      "_score": 28.204119982655925,
+      "_matched": "T:augmented reality,A:transparency,T:driving,A:driver,A:in-vehicle"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4200279965",
+      "doi": "10.1177/00187208211056200",
+      "title": "Get Ready for Take-Overs: Using Head-Up Display for Drivers to Engage in Non–Driving-Related Tasks in Automated Vehicles",
+      "abstract": "OBJECTIVE: The study aims to investigate the potential of using HUD (head-up display) as an approach for drivers to engage in non-driving-related tasks (NDRTs) during automated driving, and examine the impacts on driver state and take-over performance in comparison to the traditional mobile phone. BACKGROUND: Advances in automated vehicle technology have the potential to relieve drivers from driving tasks so that they can engage in NDRTs freely. However, drivers will still need to take-over control under certain circumstances. METHOD: A driving simulation experiment was conducted using an Advanced Driving Simulator and real-world driving videos. Forty-six participants completed three drives in three display conditions, respectively (HUD, mobile phone and baseline without NDRT). The HUD was integrated with the vehicle in displaying NDRTs while the mobile phone was not. Drivers' visual (e.g. gaze, blink) and physiological (e.g. ECG, EDA) data were collected to measure driver state. Two take-over reaction times (hand and foot) were used to measure take-over performance. RESULTS: The HUD significantly shortened the take-over reaction times compared to the mobile phone condition. Compared to the baseline condition, drivers in the HUD condition also experienced lower cognitive workload and physiological arousal. Drivers' take-over reaction times were significantly correlated with their visual and electrodermal activities during automated driving prior to the take-over request. CONC",
+      "year": 2021,
+      "type": "article",
+      "authors": [
+        "Xiaomeng Li",
+        "Ronald Schroeter",
+        "Andry Rakotonirainy",
+        "Jonny Kuo",
+        "Michael G. Lenné"
+      ],
+      "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+      "cited_by_count": 21,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving+E_transparency_luminance+F_traffic_density_complexity",
+      "_score": 27.684845361644413,
+      "_matched": "T:head-up display,T:driving,T:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4362508279",
+      "doi": "10.1007/s10111-023-00725-7",
+      "title": "Augmented reality HUD vs. conventional HUD to perform a navigation task in a complex driving situation",
+      "abstract": "",
+      "year": 2023,
+      "type": "article",
+      "authors": [
+        "Christine Chauvin",
+        "Farida Saïd",
+        "Sabine Langlois"
+      ],
+      "venue": "Cognition Technology & Work",
+      "cited_by_count": 15,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation+F_traffic_density_complexity",
+      "_score": 27.40823996531185,
+      "_matched": "T:augmented reality,T:navigation,T:driving"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2028905013",
+      "doi": "10.1145/2516540.2516569",
+      "title": "Towards augmented reality navigation using affordable technology",
+      "abstract": "Augmented reality (AR) navigation systems are likely to improve the driving experience compared to today's personal navigation devices on the dashboard, as they don't require glances away from the road ahead. As technology is not yet capable to deliver an affordable and seamless HUD AR solution, we explore an inexpensive version of augmentation, which would have a similar benefit of reduced distraction. We propose using an LED (light emitting diode) matrix in the periphery of the driver's vision to indicate turns on the road. We find that such a system produces better results in visual attention, driving performance and in subjective measures compared to standard navigation devices.",
+      "year": 2013,
+      "type": "article",
+      "authors": [
+        "Oskar Palinko",
+        "Andrew L. Kun",
+        "Zachary Cook",
+        "Adam Downey",
+        "Aaron Lecomte",
+        "Meredith Swanson",
+        "Tina Tomaszewski"
+      ],
+      "venue": "",
+      "cited_by_count": 19,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation",
+      "_score": 26.602059991327963,
+      "_matched": "T:augmented reality,T:navigation,A:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3014793521",
+      "doi": "10.3390/electronics9040611",
+      "title": "Ergonomic Guidelines of Head-Up Display User Interface during Semi-Automated Driving",
+      "abstract": "Self-driving vehicles are emerging as a result of technological advances, and the range of human behavior is expanding. The collateral information on driving is increasing, and head-up displays (HUDs) can be coupled with augmented reality displays to convey additional information to drivers in innovative ways. Interference between the actual driving environment and the displayed information can cause distractions. Research is required to find out what information should be displayed and how to properly display it considering the number of information, as well as the location and arrangement of the HUD. This study aims to examine the types of HUD information presentation that enhance the driver’s intuitive understanding. The first experiment identified which information affects drivers more in self-driving conditions in terms of error rate and importance. As a result, information that the drivers consider to be of greater importance or more relevant to their safety was selected. The level of HUD information complexity was assessed in the second experiment. The independent variables were the number of symbols, location of the HUD, and arrangement of the HUD. The results showed that the number of symbols was most affected and that fewer than six should be displayed. Besides, the arrangement of contents was more intuitive when a vertical alignment was used, and the main content should be placed in the center of the windshield area. Finally, ergonomic design guidelines of the info",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Kibum Park",
+        "Youngjae Im"
+      ],
+      "venue": "Electronics",
+      "cited_by_count": 43,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 26.286905352972376,
+      "_matched": "A:augmented reality,T:head-up display,T:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2144546006",
+      "doi": "10.1145/2037373.2037414",
+      "title": "Augmented reality vs. street views",
+      "abstract": "Prior research has shown that when drivers look away from the road to view a personal navigation device (PND), driving performance is affected. To keep visual attention on the road, an augmented reality (AR) PND using a heads-up display could overlay a navigation route. In this paper, we compare the AR PND, a technology that does not currently exist but can be simulated, with two PND technologies that are popular today: an egocentric street view PND and the standard map-based PND. Using a high-fidelity driving simulator, we examine the effect of all three PNDs on driving performance in a city traffic environment where constant, alert attention is required. Based on both objective and subjective measures, experimental results show that the AR PND exhibits the least negative impact on driving. We discuss the implications of these findings on PND design as well as methods for potential improvement.",
+      "year": 2011,
+      "type": "article",
+      "authors": [
+        "Željko Medenica",
+        "Andrew L. Kun",
+        "Tim Paek",
+        "Oskar Palinko"
+      ],
+      "venue": "",
+      "cited_by_count": 125,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation",
+      "_score": 26.200741090235127,
+      "_matched": "T:augmented reality,A:navigation,A:driving,A:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2978443836",
+      "doi": "10.18420/muc2019-ws-610",
+      "title": "A real-world driving experiment to collect expert knowledge for the design of AR HUD navigation that covers less",
+      "abstract": "Augmented reality head-up displays (AR HUD) can be seen as a promising advancement of conventional head-up displays in vehicles. Information can be displayed in a contact analogue way in the real world by projecting it onto the vehicle’s windshield. Two major challenges for concept developers are to reduce masking caused by augmented reality (AR) content and to create concepts that work with the limited field of view (FOV). To examine these two challenges, we designed two contact analogue navigation concepts. We compared them to each other in a field study with a prototype car that contained a complete AR HUD testing environment. The participants were experts in interaction design, AR, HUDs, design, and sales. The experiment showed that the application of Gestalt Principles for AR HUD concept design to reduce masking can be a promising approach. In addition, suggestions for further improvement of contact analogue navigation concepts were collected.",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Matthias Schneider",
+        "Anna Bruder",
+        "Marc Necker",
+        "Tim Schluesener",
+        "Niels Henze",
+        "Christian Wolff"
+      ],
+      "venue": "University of Regensburg Publication Server (University of Regensburg)",
+      "cited_by_count": 5,
+      "topic": "Augmented Reality Applications",
+      "group": "A_AR_HUD_navigation",
+      "_score": 25.556302500767288,
+      "_matched": "A:augmented reality,A:head-up display,T:navigation,T:driving"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3172778274",
+      "doi": "10.1111/psyp.13878",
+      "title": "P<sub>D</sub> components and distractor inhibition in visual search: New evidence for the signal suppression hypothesis",
+      "abstract": "Abstract The hypothesis that salient distractors in visual search are actively suppressed is supported by the fact that these objects elicit P D components believed to be associated with inhibition. This account was challenged by researchers who found that a P D to lateral color singleton distractors was followed by a contralateral negativity, which they interpreted as an N2pc indicative of attentional capture. As this would be at odds with successful distractor suppression, they proposed an alternative lateral‐first serial scanning hypothesis, which assumes that the P D might actually be an N2pc elicited when a lateral context item is selected. We tested this hypothesis by measuring lateralized ERP components to search displays with two lateral and two vertical midline items, including a color singleton and a shape‐defined target. Color singletons triggered P D components not only in blocks where attention was unfocused because target location was unpredictable, but critically also in blocks where targets only appeared on the midline and participants had no reason to attend to lateral items. This is inconsistent with the serial scanning hypothesis and supports the idea that the P D reflects signal suppression. P D components to singleton distractors were followed by a contralateral negativity, which we interpreted as a second P D elicited by nonsalient distractors on the opposite side. Our sequential inhibition account reconciles conflicting results of recent studies and emp",
+      "year": 2021,
+      "type": "article",
+      "authors": [
+        "Brandi Lee Drisdelle",
+        "Martin Eimer"
+      ],
+      "venue": "Psychophysiology",
+      "cited_by_count": 50,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "C_signal_suppression",
+      "_score": 25.415140352195873,
+      "_matched": "A:attentional capture,T:signal suppression,A:distractor suppression"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2569795262",
+      "doi": "10.1145/3010915.3010918",
+      "title": "A comparative study of simulated augmented reality displays for vehicle navigation",
+      "abstract": "In this paper we report on a user study in a simulated environment that compares three types of Augmented Reality (AR) displays for assisting with car navigation: Heads Up Display (HUD), Head Mounted Display (HMD) and Heads Down Display (HDD). The virtual cues shown on each of the interface were the same, but there was a significant difference in driver behaviour and preference between interfaces. Overall, users performed better and preferred the HUD over the HDD, and the HMD was ranked lowest. These results have implications for people wanting to use AR cues for car navigation.",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "Richie Jose",
+        "Gun Lee",
+        "Mark Billinghurst"
+      ],
+      "venue": "",
+      "cited_by_count": 67,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation",
+      "_score": 24.665017825412473,
+      "_matched": "T:augmented reality,T:navigation,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2042950940",
+      "doi": "10.1007/s12239-014-0034-6",
+      "title": "In-vehicle technology for self-driving cars: Advantages and challenges for aging drivers",
+      "abstract": "",
+      "year": 2014,
+      "type": "article",
+      "authors": [
+        "Ji Hyun Yang",
+        "Joseph F. Coughlin"
+      ],
+      "venue": "International Journal of Automotive Technology",
+      "cited_by_count": 143,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 24.3167249841905,
+      "_matched": "T:driving,T:driver,T:in-vehicle"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2100031847",
+      "doi": "10.17077/drivingassessment.1397",
+      "title": "Investigating HUDs for the Presentation of Choice Lists in Car Navigation Systems",
+      "abstract": "It has been established that head-down displays (HDDs), such as those commonly placed in the dashboard of commercial automobiles, can draw drivers’ attention away from the primary driving task (Bach et al., 2008). This problem can be exacerbated when screens are “busy” with graphics or rich information. In this paper, we present the results of a driving simulator-based user study where we examined two potential alternatives to HDDs for presenting textual lists. Subjects conducted a series of street name finding tasks using each of three system variants: one with a HDD, one with a head-up display (HUD), and one with only an auditory display. We found that the auditory display had the least impact on mental load, but at the expense of task completion efficiency. The HUD variant also had a low impact on mental load and scored highest in user satisfaction, and therefore appears to be the most viable target for future study.",
+      "year": 2011,
+      "type": "article",
+      "authors": [
+        "Garrett Weinberg",
+        "Bret Harsham",
+        "Željko Medenica"
+      ],
+      "venue": "",
+      "cited_by_count": 10,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 24.08278537031645,
+      "_matched": "A:head-up display,T:navigation,A:driving,A:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2731541476",
+      "doi": "10.25046/aj020381",
+      "title": "Augmented Reality Prototype HUD for Passenger Infotainment in a Vehicular Environment",
+      "abstract": "The paper presents a prototype Head Up Display interface which acts as an interactive infotainment system for rear seat younger passengers, aiming to minimize driver distraction. The interface employs an Augmented Reality medium that utilizes the external scenery as a background for two platform games explicitly designed for this system. Additionally, the system provides AR embedded information on major en route landmarks, navigational data, and local news amongst other infotainment options. The proposed design is applied in the peripheral windscreens with the use of a novel Head-Up Display system. The system evaluation by twenty users offered promising results discussed in the paper.",
+      "year": 2017,
+      "type": "article",
+      "authors": [
+        "Shu Wang",
+        "Vassilis Charissis",
+        "David K. Harisson"
+      ],
+      "venue": "Advances in Science Technology and Engineering Systems Journal",
+      "cited_by_count": 25,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 23.829946695941636,
+      "_matched": "T:augmented reality,A:head-up display,A:navigation,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4394720271",
+      "doi": "10.3390/app14083203",
+      "title": "The Impact of Transparency on Driver Trust and Reliance in Highly Automated Driving: Presenting Appropriate Transparency in Automotive HMI",
+      "abstract": "Automation transparency offers a promising way for users to understand the uncertainty of automated driving systems (ADS) and to calibrate their trust in them. However, not all levels of information may be necessary to achieve transparency. In this study, we conceptualized the transparency of the automotive human–machine interfaces (HMIs) in three levels, using driving scenarios comprised of two degrees of urgency to evaluate drivers’ trust and reliance on a highly automated driving system. The dependent measures included non-driving related task (NDRT) performance and visual attention, before and after viewing the interface, along with the drivers’ takeover performance, subjective trust, and workload. The results of the simulated experiment indicated that participants interacting with an SAT level 1 + 3 (system’s action and projection) and level 1 + 2 + 3 (system’s action, reasoning, and projection) HMI trusted and relied on the ADS more than did those using the baseline SAT level 1 (system’s action) HMI. The low-urgency scenario was associated with higher trust and reliance, and the drivers’ visual attention and NDRT performance improved after viewing the HMI, but not statistically significantly. The findings verified the positive role of the SAT model regarding human trust in the ADS, especially in regards to projection information in time-sensitive situations, and these results have implications for the design of automotive HMIs based on the SAT model to facilitate the hu",
+      "year": 2024,
+      "type": "article",
+      "authors": [
+        "Jue Li",
+        "Jiawen Liu",
+        "Xiaoshan Wang",
+        "Long Liu"
+      ],
+      "venue": "Applied Sciences",
+      "cited_by_count": 14,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "E_transparency_luminance",
+      "_score": 22.352182518111363,
+      "_matched": "T:transparency,T:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W1990301679",
+      "doi": "10.1007/s00464-012-2457-3",
+      "title": "Surgeons blinded by enhanced navigation: the effect of augmented reality on attention",
+      "abstract": "",
+      "year": 2012,
+      "type": "article",
+      "authors": [
+        "Benjamin J. Dixon",
+        "Michael J. Daly",
+        "Harley Chan",
+        "Allan Vescan",
+        "Ian Witterick",
+        "Jonathan C. Irish"
+      ],
+      "venue": "Surgical Endoscopy",
+      "cited_by_count": 140,
+      "topic": "Augmented Reality Applications",
+      "group": "D_inattentional_blindness_AR",
+      "_score": 22.29843822531076,
+      "_matched": "T:augmented reality,T:navigation"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2981932491",
+      "doi": "10.1016/j.spinee.2019.10.012",
+      "title": "Augmented reality navigation for spinal pedicle screw instrumentation using intraoperative 3D imaging",
+      "abstract": "",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Fabio Müller",
+        "Simon Roner",
+        "Florentin Liebmann",
+        "José Miguel Spirig",
+        "Philipp Fürnstahl",
+        "Mazda Farshad"
+      ],
+      "venue": "The Spine Journal",
+      "cited_by_count": 137,
+      "topic": "Augmented Reality Applications",
+      "group": "A_AR_HUD_navigation",
+      "_score": 22.279758172802474,
+      "_matched": "T:augmented reality,T:navigation"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2401197318",
+      "doi": "",
+      "title": "Towards Automotive Augmented Reality",
+      "abstract": "Projection of virtual presentation schemes into the reality via Augmented Reality (AR) has the potential to equip novel driver assistance systems with more intuitive user interfaces. Information presentation through AR reduces the number of glances towards in-car displays, thus enabling higher degrees of attention towards the environmental events. Spatial relationships between objects in the car’s environment can directly be indicated through AR without enforcing the user to switch between different frames of reference. This thesis examines issues which arise when such assistance systems with AR are developed. The common development process of such assistance systems in driving simulators is analyzed and facilitated with new solutions, which partly incorporate AR technology. A fixed-base driving simulator is extended to serve as a rapid prototyping environment for a broad spectrum of in-car systems. To analyze spatial relationships of the surrounding of the car, a subsystem for context analysis and reasoning on spatial sensor data is implemented and incorporated with the rapid prototyping environment. An additional system enables creation of realistic traffic scenarios in virtual environments using a tracked miniature car. This thesis also develops new approaches for AR presentation schemes and evaluates them in usability studies. An AR presentation scheme showing the physical behavior of the own car minimizes the need for last second collision warnings. For time-critical col",
+      "year": 2008,
+      "type": "dissertation",
+      "authors": [
+        "Marcus Tönnis"
+      ],
+      "venue": "mediaTUM – the media and publications repository of the Technical University Munich (Technical University Munich)",
+      "cited_by_count": 12,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 22.227886704613674,
+      "_matched": "T:augmented reality,A:driving,A:driver,A:collision warning,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2234152391",
+      "doi": "10.1371/journal.pone.0146996",
+      "title": "A Novel Augmented Reality Navigation System for Endoscopic Sinus and Skull Base Surgery: A Feasibility Study",
+      "abstract": "OBJECTIVE: To verify the reliability and clinical feasibility of a self-developed navigation system based on an augmented reality technique for endoscopic sinus and skull base surgery. MATERIALS AND METHODS: In this study we performed a head phantom and cadaver experiment to determine the display effect and accuracy of our navigational system. We compared cadaver head-based simulated operations, the target registration error, operation time, and National Aeronautics and Space Administration Task Load Index scores of our navigation system to conventional navigation systems. RESULTS: The navigation system developed in this study has a novel display mode capable of fusing endoscopic images to three-dimensional (3-D) virtual images. In the cadaver head experiment, the target registration error was 1.28 ± 0.45 mm, which met the accepted standards of a navigation system used for nasal endoscopic surgery. Compared with conventional navigation systems, the new system was more effective in terms of operation time and the mental workload of surgeons, which is especially important for less experienced surgeons. CONCLUSION: The self-developed augmented reality navigation system for endoscopic sinus and skull base surgery appears to have advantages that outweigh those of conventional navigation systems. We conclude that this navigational system will provide rhinologists with more intuitive and more detailed imaging information, thus reducing the judgment time and mental workload of surgeo",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "Liang Li",
+        "Jian Yang",
+        "Yakui Chu",
+        "Wenbo Wu",
+        "Jin Xue",
+        "Ping Liang",
+        "Lei Chen"
+      ],
+      "venue": "PLoS ONE",
+      "cited_by_count": 122,
+      "topic": "Sinusitis and nasal conditions",
+      "group": "A_AR_HUD_navigation",
+      "_score": 22.179810222878796,
+      "_matched": "T:augmented reality,T:navigation"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2036493924",
+      "doi": "10.1007/s12544-010-0037-y",
+      "title": "The application of in-vehicle systems for elderly drivers",
+      "abstract": "In response to the rapidly ageing global population, the purpose of this paper is to identify the problems of elderly drivers and their relation to emerging in-vehicle technologies. The method is three fold. Firstly, it reviews factors involved in the functional decline of elderly drivers. Secondly, it assesses the feedback and support capabilities of in-vehicle systems (IVSs) with the potential to assist elderly people to drive safely for longer and maintain their quality of life. Lastly, it describes a newly funded project, Social inclusion through Digital Economy (SiDE), which will demonstrate an innovative application of driving simulator technology to test and evaluate the impact of emerging invehicle systems on elderly drivers. This project intends to assess whether it makes them less vulnerable road users. The paper concludes that IVSs providing feedback and support to elderly drivers have the potential to help them recognize their weakness and vulnerability as road users and improve their driving performance through the use of advice, alerts, warnings or active interventions.",
+      "year": 2010,
+      "type": "article",
+      "authors": [
+        "Aw Guo",
+        "Jenny Brake",
+        "Simon Edwards",
+        "PT Blythe",
+        "Richard Fairchild"
+      ],
+      "venue": "European Transport Research Review",
+      "cited_by_count": 31,
+      "topic": "Older Adults Driving Studies",
+      "group": "E_transparency_luminance",
+      "_score": 22.010299956639813,
+      "_matched": "A:driving,T:driver,T:in-vehicle,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2951719962",
+      "doi": "10.4018/ijmhci.2019040101",
+      "title": "Effects of Volumetric Augmented Reality Displays on Human Depth Judgments",
+      "abstract": "Many driving scenarios involve correctly perceiving road elements in depth and manually responding as appropriate. Of late, augmented reality (AR) head-up displays (HUDs) have been explored to assist drivers in identifying road elements, by using a myriad of AR interface designs that include world-fixed graphics perceptually placed in the forward driving scene. Volumetric AR HUDs purportedly offer increased accuracy of distance perception through natural presentation of oculomotor cues as compared to traditional HUDs. In this article, the authors quantify participant performance matching virtual objects to real-world counterparts at egocentric distances of 7-12 meters while using both volumetric and fixed-focal plane AR HUDs. The authors found the volumetric HUD to be associated with faster and more accurate depth judgements at far distance, and that participants performed depth judgements more quickly as the experiment progressed. The authors observed no differences between the two displays in terms of reported simulator sickness or eye strain.",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Lee Lisle",
+        "Coleman Merenda",
+        "Kyle Tanous",
+        "Hyungil Kim",
+        "Joseph L. Gabbard",
+        "Doug A. Bowman"
+      ],
+      "venue": "International Journal of Mobile Human Computer Interaction",
+      "cited_by_count": 8,
+      "topic": "Virtual Reality Applications and Impacts",
+      "group": "F_traffic_density_complexity",
+      "_score": 21.90848501887865,
+      "_matched": "T:augmented reality,A:head-up display,A:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2047794103",
+      "doi": "10.3758/pbr.16.2.404",
+      "title": "Perceptual load modulates attentional capture by abrupt onsets",
+      "abstract": "",
+      "year": 2009,
+      "type": "article",
+      "authors": [
+        "Joshua D. Cosman",
+        "Shaun P. Vecera"
+      ],
+      "venue": "Psychonomic Bulletin & Review",
+      "cited_by_count": 50,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "B_attentional_capture_driving",
+      "_score": 21.415140352195873,
+      "_matched": "T:attentional capture,T:abrupt onset"
+    },
+    {
+      "openalex_id": "https://openalex.org/W562510058",
+      "doi": "10.17077/drivingassessment.1540",
+      "title": "Looming Auditory and Vibrotactile Collision Warning for Safe Driving",
+      "abstract": "Looming auditory warning signals (that is, signals whose intensity increases over time) have proven to be particularly effective in terms of reducing a driver’s brake reaction times (BRTs) to impending collisions, and are also associated with very low false alarm rates. We report two experiments designed to further investigate how the presentation of looming auditory warnings with increasing frequency or increasing spatial extent would compare to those with increasing intensity. A third experiment was conducted in order to evaluate the potential efficacy of presenting looming warnings to drivers in another modality, namely via vibrotactile signals. Participants’ speeded BRTs to potential collision events following the presentation of various warning signals in a simulated car following scenario were measured. While both looming frequency and spatial warnings were effective in terms of speeding the driver’s responses to critical driving events, the magnitude of the benefit resembled that of a typical nonlooming constant intensity warning. Looming intensity warnings outperformed their looming frequency counterparts in terms of facilitating drivers’ collision avoidance responses. As for vibrotactile warnings, the results revealed that looming vibrotactile stimuli did not offer any additional benefits over and above the other non-looming vibrations tested in the study. The implications of these findings for collision warning systems design are discussed.",
+      "year": 2013,
+      "type": "article",
+      "authors": [
+        "Cristy Ho",
+        "Charles Spence",
+        "Rob Gray"
+      ],
+      "venue": "",
+      "cited_by_count": 15,
+      "topic": "Safety Warnings and Signage",
+      "group": "B_attentional_capture_driving",
+      "_score": 21.40823996531185,
+      "_matched": "T:driving,A:driver,T:collision warning"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3217242025",
+      "doi": "10.1515/icom-2021-0029",
+      "title": "Augmented Reality for Future Mobility: Insights from a Literature Review and HCI Workshop",
+      "abstract": "Abstract There is a growing body of research in the field of interaction between drivers/passengers and automated vehicles using augmented reality (AR) technology. Furthering the advancements and availability of AR, the number of use cases in and around vehicles rises. Our literature review reveals that in the past, AR research focussed on increasing road safety and displaying navigational aids, however, more recent research explores the support of immersive (non-)driving related activities, and finally enhance driving and passenger experiences, as well as assist other road users through external human-machine interfaces (HMIs). AR may also be the enabling technology to increase trust and acceptance in automated vehicles through explainable artificial intelligence (AI), and therefore help on the shift from manual to automated driving. We organized a workshop addressing AR in automotive human-computer interaction (HCI) design, and identified a number of challenges including human factors issues that need to be tackled, as well as opportunities and practical usages of AR in future mobility. We believe that our status-quo literature analysis and future-oriented workshop results can serve as a research agenda for user interface designers and researchers when developing automotive AR interfaces.",
+      "year": 2021,
+      "type": "review",
+      "authors": [
+        "Andreas Riegler",
+        "Andreas Riener",
+        "Clemens Holzmann"
+      ],
+      "venue": "i-com",
+      "cited_by_count": 37,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "E_transparency_luminance",
+      "_score": 21.15956719323362,
+      "_matched": "T:augmented reality,A:navigation,A:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4392271925",
+      "doi": "10.1145/3613904.3642219",
+      "title": "An Eye Gaze Heatmap Analysis of Uncertainty Head-Up Display Designs for Conditional Automated Driving",
+      "abstract": "This paper reports results from a high-fidelity driving simulator study (N=215) about a head-up display (HUD) that conveys a conditional automated vehicle’s dynamic “uncertainty” about the current situation while fallback drivers watch entertaining videos. We compared (between-group) three design interventions: display (a bar visualisation of uncertainty close to the video), interruption (interrupting the video during uncertain situations), and combination (a combination of both), against a baseline (video-only). We visualised eye-tracking data to conduct a heatmap analysis of the four groups’ gaze behaviour over time. We found interruptions initiated a phase during which participants interleaved their attention between monitoring and entertainment. This improved monitoring behaviour was more pronounced in combination compared to interruption, suggesting pre-warning interruptions have positive effects. The same addition had negative effects without interruptions (comparing baseline & display). Intermittent interruptions may have safety benefits over placing additional peripheral displays without compromising usability.",
+      "year": 2024,
+      "type": "preprint",
+      "authors": [
+        "Michael A. Gerber",
+        "Ronald Schroeter",
+        "Daniel Johnson",
+        "Christian P. Janssen",
+        "Andry Rakotonirainy",
+        "Jonny Kuo",
+        "Michael G. Lenné"
+      ],
+      "venue": "",
+      "cited_by_count": 9,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "E_transparency_luminance",
+      "_score": 21.0,
+      "_matched": "T:head-up display,T:driving,A:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2973443471",
+      "doi": "10.1145/3349263.3351339",
+      "title": "A field study to collect expert knowledge for the development of AR HUD navigation concepts",
+      "abstract": "A promising advancement of conventional head-up displays in vehicles is the implementation of augmented reality. By projecting the content onto the vehicle's windshield, information can be displayed in a contact analogue way in the real world. Two major challenges for concept developers are to reduce masking caused by augmented reality content and to create concepts that are suitable for the limited field of view. To approach these challenges, we designed two contact analogue navigation concepts and evaluated them in a field study with a prototype car that contained a complete AR HUD testing environment. The subjects were experts in interaction design, AR, HUD and sales. First results of the experts' suggestions for improvements are given in this extended abstract.",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Matthias Schneider",
+        "Anna Bruder",
+        "Marc Necker",
+        "Tim Schluesener",
+        "Niels Henze",
+        "Christian Wolff"
+      ],
+      "venue": "",
+      "cited_by_count": 19,
+      "topic": "Augmented Reality Applications",
+      "group": "A_AR_HUD_navigation",
+      "_score": 20.602059991327963,
+      "_matched": "A:augmented reality,A:head-up display,T:navigation"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2167467494",
+      "doi": "10.1155/2015/520572",
+      "title": "An Adapted Wayfinding System for Pedestrians with Cognitive Disabilities",
+      "abstract": "This paper presents a novel wayfinding system adapted to people with cognitive disabilities. It adapts to the user in terms of route calculation, instructions delivery, and interface design. To do so, the system divides the calculated route into atomic instructions and uses street-level photographs at the decision points. To evaluate this approach, we compared it with a commercial navigation application on a field trial with a sample of users ( N = 18). From the evaluation, we concluded that our system improves users’ performance in terms of the number who reached the destination and were able to identify it correctly.",
+      "year": 2015,
+      "type": "article",
+      "authors": [
+        "Javier Gómez",
+        "Germán Montoro",
+        "Juan C. Torrado",
+        "Adalberto Plaza"
+      ],
+      "venue": "Mobile Information Systems",
+      "cited_by_count": 18,
+      "topic": "Spatial Cognition and Navigation",
+      "group": "A_AR_HUD_navigation",
+      "_score": 20.557507201905658,
+      "_matched": "A:navigation,T:wayfinding,T:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2118688099",
+      "doi": "10.1093/brain/awn250",
+      "title": "Wayfinding in the blind: larger hippocampal volume and supranormal spatial navigation",
+      "abstract": "In the absence of visual input, the question arises as to how complex spatial abilities develop and how the brain adapts to the absence of this modality. We explored navigational skills in both early and late blind individuals and structural differences in the hippocampus, a brain region well known to be involved in spatial processing. Thirty-eight participants were divided into three groups: early blind individuals (n = 12; loss of vision before 5 years of age; mean age 33.8 years), late blind individuals (n = 7; loss of vision after 14 years of age; mean age 39.9 years) and 19 sighted, blindfolded matched controls. Subjects undertook route learning and pointing tasks in a maze and a spatial layout task. Anatomical data was collected by MRI. Remarkably, we not only show that blind individuals possess superior navigational skills than controls on the route learning task, but we also show for the first time a significant volume increase of the hippocampus in blind individuals [F(1,36) = 6.314; P < or = 0.01; blind: mean = 4237.00 mm(3), SE = 107.53; sighted: mean = 3905.74 mm(3), SE = 76.27], irrespective of whether their blindness was congenital or acquired. Overall, our results shed new light not only on the construction of spatial concepts and the non-necessity of vision for its proper development, but also on the hippocampal plasticity observed in adult blind individuals who have to navigate in this space.",
+      "year": 2008,
+      "type": "article",
+      "authors": [
+        "M. Fortin",
+        "Patrice Voss",
+        "Catherine Lord",
+        "Maryse Lassonde",
+        "Jens C. Pruessner",
+        "Dave Saint‐Amour",
+        "Constant Rainville",
+        "F. Leporé"
+      ],
+      "venue": "Brain",
+      "cited_by_count": 162,
+      "topic": "Tactile and Sensory Interactions",
+      "group": "A_AR_HUD_navigation",
+      "_score": 20.424375208807916,
+      "_matched": "T:navigation,T:wayfinding"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3153518805",
+      "doi": "10.1093/cercor/bhab377",
+      "title": "Statistical Learning of Frequent Distractor Locations in Visual Search Involves Regional Signal Suppression in Early Visual Cortex",
+      "abstract": "Observers can learn locations where salient distractors appear frequently to reduce potential interference-an effect attributed to better suppression of distractors at frequent locations. But how distractor suppression is implemented in the visual cortex and within the frontoparietal attention networks remains unclear. We used fMRI and a regional distractor-location learning paradigm with two types of distractors defined in either the same (orientation) or a different (color) dimension to the target to investigate this issue. fMRI results showed that BOLD signals in early visual cortex were significantly reduced for distractors (as well as targets) occurring at the frequent versus rare locations, mirroring behavioral patterns. This reduction was more robust with same-dimension distractors. Crucially, behavioral interference was correlated with distractor-evoked visual activity only for same- (but not different-) dimension distractors. Moreover, with different- (but not same-) dimension distractors, a color-processing area within the fusiform gyrus was activated more when a distractor was present in the rare region versus being absent and more with a distractor in the rare versus frequent locations. These results support statistical learning of frequent distractor locations involving regional suppression in early visual cortex and point to differential neural mechanisms of distractor handling with different- versus same-dimension distractors.",
+      "year": 2021,
+      "type": "article",
+      "authors": [
+        "Bei Zhang",
+        "Ralph Weidner",
+        "Fredrik Allenmark",
+        "Sabine Bertleff",
+        "Gereon R. Fink",
+        "Zhuanghua Shi",
+        "Hermann J. Müller"
+      ],
+      "venue": "Cerebral Cortex",
+      "cited_by_count": 46,
+      "topic": "Visual perception and processing mechanisms",
+      "group": "C_signal_suppression",
+      "_score": 20.344195715871436,
+      "_matched": "T:signal suppression,A:distractor suppression"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2292241852",
+      "doi": "10.1111/ejn.13174",
+      "title": "Reward association facilitates distractor suppression in human visual search",
+      "abstract": "Although valuable objects are attractive in nature, people often encounter situations where they would prefer to avoid such distraction while focusing on the task goal. Contrary to the typical effect of attentional capture by a reward-associated item, we provide evidence for a facilitation effect derived from the active suppression of a high reward-associated stimulus when cuing its identity as distractor before the display of search arrays. Selection of the target is shown to be significantly faster when the distractors were in high reward-associated colour than those in low reward-associated or non-rewarded colours. This behavioural reward effect was associated with two neural signatures before the onset of the search display: the increased frontal theta oscillation and the strengthened top-down modulation from frontal to anterior temporal regions. The former suggests an enhanced working memory representation for the reward-associated stimulus and the increased need for cognitive control to override Pavlovian bias, whereas the latter indicates that the boost of inhibitory control is realized through a frontal top-down mechanism. These results suggest a mechanism in which the enhanced working memory representation of a reward-associated feature is integrated with task demands to modify attentional priority during active distractor suppression and benefit behavioural performance.",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "Mengyuan Gong",
+        "Feitong Yang",
+        "Sheng Li"
+      ],
+      "venue": "European Journal of Neuroscience",
+      "cited_by_count": 38,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "C_signal_suppression",
+      "_score": 20.182129214053,
+      "_matched": "A:attentional capture,T:distractor suppression"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3137131812",
+      "doi": "10.1016/j.apergo.2021.103398",
+      "title": "Navigating with Augmented Reality – How does it affect drivers’ mental load?",
+      "abstract": "",
+      "year": 2021,
+      "type": "article",
+      "authors": [
+        "Kassandra Bauerfeind",
+        "Julia Drüke",
+        "Jens Schneider",
+        "Adrian Haar",
+        "Lennart Bendewald",
+        "Martin Baumann"
+      ],
+      "venue": "Applied Ergonomics",
+      "cited_by_count": 33,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation",
+      "_score": 20.06295783408451,
+      "_matched": "T:augmented reality,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3030402745",
+      "doi": "10.1186/s13673-020-00222-0",
+      "title": "Indoor positioning and wayfinding systems: a survey",
+      "abstract": "Abstract Navigation systems help users access unfamiliar environments. Current technological advancements enable users to encapsulate these systems in handheld devices, which effectively increases the popularity of navigation systems and the number of users. In indoor environments, lack of Global Positioning System (GPS) signals and line of sight with orbiting satellites makes navigation more challenging compared to outdoor environments. Radio frequency (RF) signals, computer vision, and sensor-based solutions are more suitable for tracking the users in indoor environments. This article provides a comprehensive summary of evolution in indoor navigation and indoor positioning technologies. In particular, the paper reviews different computer vision-based indoor navigation and positioning systems along with indoor scene recognition methods that can aid the indoor navigation. Navigation and positioning systems that utilize pedestrian dead reckoning (PDR) methods and various communication technologies, such as Wi-Fi, Radio Frequency Identification (RFID) visible light, Bluetooth and ultra-wide band (UWB), are detailed as well. Moreover, this article investigates and contrasts the different navigation systems in each category. Various evaluation criteria for indoor navigation systems are proposed in this work. The article concludes with a brief insight into future directions in indoor positioning and navigation systems.",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Jayakanth Kunhoth",
+        "AbdelGhani Karkar",
+        "Somaya Al-Máadeed",
+        "Abdulla Al‐Ali"
+      ],
+      "venue": "Human-centric Computing and Information Sciences",
+      "cited_by_count": 258,
+      "topic": "Indoor and Outdoor Localization Technologies",
+      "group": "A_AR_HUD_navigation",
+      "_score": 19.826599528162504,
+      "_matched": "A:navigation,T:wayfinding,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4415871488",
+      "doi": "10.3390/jemr18060063",
+      "title": "Effects of Multimodal AR-HUD Navigation Prompt Mode and Timing on Driving Behavior",
+      "abstract": "Current research on multimodal AR-HUD navigation systems primarily focuses on the presentation forms of auditory and visual information, yet the effects of synchrony between auditory and visual prompts as well as prompt timing on driving behavior and attention mechanisms remain insufficiently explored. This study employed a 2 (prompt mode: synchronous vs. asynchronous) × 3 (prompt timing: -2000 m, -1000 m, -500 m) within-subject experimental design to assess the impact of multimodal prompt synchrony and prompt distance on drivers' reaction time, sustained attention, and eye movement behaviors, including average fixation duration and fixation count. Behavioral data demonstrated that both prompt mode and prompt timing significantly influenced drivers' response performance (indexed by reaction time) and attention stability, with synchronous prompts at -1000 m yielding optimal performance. Eye-tracking results further revealed that synchronous prompts significantly enhanced fixation stability and reduced visual load, indicating more efficient information integration. Therefore, prompt mode and prompt timing significantly affect drivers' perceptual processing and operational performance. Delivering synchronous auditory and visual prompts at -1000 m achieves an optimal balance between information timeliness and multimodal integration. This study recommends the following: (1) maintaining temporal consistency in multimodal prompts to facilitate perceptual integration and (2) controll",
+      "year": 2025,
+      "type": "article",
+      "authors": [
+        "Qi Zhu",
+        "Z. Liu",
+        "Youlan Li",
+        "Euitay Jung"
+      ],
+      "venue": "Journal of Eye Movement Research",
+      "cited_by_count": 1,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation+D_inattentional_blindness_AR+E_transparency_luminance+F_traffic_density_complexity",
+      "_score": 19.602059991327963,
+      "_matched": "T:navigation,T:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3112288498",
+      "doi": "10.1109/tits.2020.3032227",
+      "title": "Deep Learning for Safe Autonomous Driving: Current Challenges and Future Directions",
+      "abstract": "Advances in information and signal processing technologies have a significant impact on autonomous driving (AD), improving driving safety while minimizing the efforts of human drivers with the help of advanced artificial intelligence (AI) techniques. Recently, deep learning (DL) approaches have solved several real-world problems of complex nature. However, their strengths in terms of control processes for AD have not been deeply investigated and highlighted yet. This survey highlights the power of DL architectures in terms of reliability and efficient real-time performance and overviews state-of-the-art strategies for safe AD, with their major achievements and limitations. Furthermore, it covers major embodiments of DL along the AD pipeline including measurement, analysis, and execution, with a focus on road, lane, vehicle, pedestrian, drowsiness detection, collision avoidance, and traffic sign detection through sensing and vision-based DL methods. In addition, we discuss on the performance of several reviewed methods by using different evaluation metrics, with critics on their pros and cons. Finally, this survey highlights the current issues of safe DL-based AD with a prospect of recommendations for future research, rounding up a reference material for newcomers and researchers willing to join this vibrant area of Intelligent Transportation Systems.",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Khan Muhammad",
+        "Amin Ullah",
+        "Jaime Lloret",
+        "Javier Del Ser",
+        "Victor Hugo C. de Albuquerque"
+      ],
+      "venue": "IEEE Transactions on Intelligent Transportation Systems",
+      "cited_by_count": 622,
+      "topic": "Autonomous Vehicle Technology and Safety",
+      "group": "D_inattentional_blindness_AR+F_traffic_density_complexity",
+      "_score": 19.58897609331834,
+      "_matched": "T:driving,A:driver,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2566076267",
+      "doi": "10.1016/j.apergo.2016.12.003",
+      "title": "How much time do drivers need to obtain situation awareness? A laboratory-based study of automated driving",
+      "abstract": "",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "Zhenji Lu",
+        "Xander Coster",
+        "Joost de Winter"
+      ],
+      "venue": "Applied Ergonomics",
+      "cited_by_count": 183,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 19.529635646019074,
+      "_matched": "T:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2125032190",
+      "doi": "10.1162/jocn_a_00127",
+      "title": "Attentional Capture by Salient Distractors during Visual Search Is Determined by Temporal Task Demands",
+      "abstract": "The question whether attentional capture by salient but task-irrelevant visual stimuli is triggered in a bottom-up fashion or depends on top-down task settings is still unresolved. Strong support for bottom-up capture was obtained in the additional singleton task, in which search arrays were visible until response onset. Equally strong evidence for top-down control of attentional capture was obtained in spatial cueing experiments in which display durations were very brief. To demonstrate the critical role of temporal task demands on salience-driven attentional capture, we measured ERP indicators of capture by task-irrelevant color singletons in search arrays that could also contain a shape target. In Experiment 1, all displays were visible until response onset. In Experiment 2, display duration was limited to 200 msec. With long display durations, color singleton distractors elicited an N2pc component that was followed by a late Pd component, suggesting that they triggered attentional capture, which was later replaced by location-specific inhibition. When search arrays were visible for only 200 msec, the distractor-elicited N2pc was eliminated and was replaced by a Pd component in the same time range, indicative of rapid suppression of capture. Results show that attentional capture by salient distractors can be inhibited for short-duration search displays, in which it would interfere with target processing. They demonstrate that salience-driven capture is not a purely bottom-",
+      "year": 2011,
+      "type": "article",
+      "authors": [
+        "Mónika Kiss",
+        "Anna Grubert",
+        "Anders Petersen",
+        "Martin Eimer"
+      ],
+      "venue": "Journal of Cognitive Neuroscience",
+      "cited_by_count": 172,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "C_signal_suppression",
+      "_score": 19.47609220625759,
+      "_matched": "T:attentional capture,A:salience"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3005933620",
+      "doi": "10.1016/j.aap.2020.105748",
+      "title": "Predicting driver takeover performance in conditionally automated driving",
+      "abstract": "",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Na Du",
+        "Feng Zhou",
+        "Elizabeth Pulver",
+        "Dawn M. Tilbury",
+        "Lionel Robert",
+        "Anuj K. Pradhan",
+        "X. Jessie Yang"
+      ],
+      "venue": "Accident Analysis & Prevention",
+      "cited_by_count": 138,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 19.28602960050819,
+      "_matched": "T:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2968243155",
+      "doi": "10.1016/j.trf.2019.07.027",
+      "title": "Pedestrian road-crossing willingness as a function of vehicle automation, external appearance, and driving behaviour",
+      "abstract": "",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Debargha Dey",
+        "Marieke Martens",
+        "Berry Eggen",
+        "Jacques Terken"
+      ],
+      "venue": "Transportation Research Part F Traffic Psychology and Behaviour",
+      "cited_by_count": 110,
+      "topic": "Color perception and design",
+      "group": "B_attentional_capture_driving",
+      "_score": 19.090645957573315,
+      "_matched": "T:driving,T:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W630778629",
+      "doi": "10.1167/tvst.4.3.5",
+      "title": "Relationship Between Motor Vehicle Collisions and Results of Perimetry, Useful Field of View, and Driving Simulation in Drivers With Glaucoma",
+      "abstract": "PURPOSE: To examine the relationship between Motor Vehicle Collisions (MVCs) in drivers with glaucoma and standard automated perimetry (SAP), Useful Field of View (UFOV), and driving simulator assessment of divided attention. METHODS: A cross-sectional study of 153 drivers from the Diagnostic Innovations in Glaucoma Study. All subjects had SAP and divided attention was assessed using UFOV and driving simulation using low-, medium-, and high-contrast peripheral stimuli presented during curve negotiation and car following tasks. Self-reported history of MVCs and average mileage driven were recorded. RESULTS: Eighteen of 153 subjects (11.8%) reported a MVC. There was no difference in visual acuity but the MVC group was older, drove fewer miles, and had worse binocular SAP sensitivity, contrast sensitivity, and ability to divide attention (UFOV and driving simulation). Low contrast driving simulator tasks were the best discriminators of MVC (AUC 0.80 for curve negotiation versus 0.69 for binocular SAP and 0.59 for UFOV). Adjusting for confounding factors, longer reaction times to driving simulator divided attention tasks provided additional value compared with SAP and UFOV, with a 1 standard deviation (SD) increase in reaction time (approximately 0.75 s) associated with almost two-fold increased odds of MVC. CONCLUSIONS: Reaction times to low contrast divided attention tasks during driving simulation were significantly associated with history of MVC, performing better than conven",
+      "year": 2015,
+      "type": "article",
+      "authors": [
+        "Andrew J. Tatham",
+        "Erwin R. Boer",
+        "Carolina P. B. Gracitelli",
+        "Peter Rosen",
+        "Felipe A. Medeiros"
+      ],
+      "venue": "Translational Vision Science & Technology",
+      "cited_by_count": 28,
+      "topic": "Older Adults Driving Studies",
+      "group": "E_transparency_luminance",
+      "_score": 18.92479599579791,
+      "_matched": "T:driving,T:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W1785448272",
+      "doi": "10.1016/j.trf.2015.07.012",
+      "title": "Looking and thinking when driving: The impact of gaze and cognitive load on steering",
+      "abstract": "Driving around bends at high speeds is a task performed by many on a daily basis but the underlying mechanisms of steering control remain largely unknown. Previous research has shown that when steering, gaze direction can be a critical component of success. However, with increased use of in-vehicle information systems (IVIS), there is growing competition over the same resources that are needed to steer (gaze as well as associated attentional resources). Although it can be argued that locomotor steering is an automatic task that can be performed without recourse to conscious “cognitive” control, much simpler locomotor-related tasks, such as judging one’s heading, have been shown to be affected by concurrent attentional tasks (Wann, Swapp, & Rushton, 2000). Here we examined whether an attentional task placed at an offset fixation point influenced concurrent steering performance along a computer simulated road. The experiments either used gaze-fixation points that had similar properties to real-world road signs (i.e. moved relative to the vehicle) or were more akin to IVIS (i.e. fixed to the vehicle). Results showed that gaze fixation eccentric to future path caused systematic steering biases. The degree or type of cognitive load did not change the degree of steering bias, but there was some evidence of decreased lane variability when viewing the IVIS-type displays. No differences in steering performance were found between the different types of cognitive task. We conclude that ",
+      "year": 2015,
+      "type": "article",
+      "authors": [
+        "Georgios K. Kountouriotis",
+        "Richard M. Wilkie",
+        "Peter Gardner",
+        "Natasha Merat"
+      ],
+      "venue": "Transportation Research Part F Traffic Psychology and Behaviour",
+      "cited_by_count": 26,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 18.862727528317976,
+      "_matched": "T:driving,A:in-vehicle,T:cognitive load"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2799718158",
+      "doi": "10.3390/s18051442",
+      "title": "A BLE-Based Pedestrian Navigation System for Car Searching in Indoor Parking Garages",
+      "abstract": "The continuous global increase in the number of cars has led to an increase in parking issues, particularly with respect to the search for available parking spaces and finding cars. In this paper, we propose a navigation system for car owners to find their cars in indoor parking garages. The proposed system comprises a car-searching mobile app and a positioning-assisting subsystem. The app guides car owners to their cars based on a &ldquo;turn-by-turn&rdquo; navigation strategy, and has the ability to correct the user&rsquo;s heading orientation. The subsystem uses beacon technology for indoor positioning, supporting self-guidance of the car-searching mobile app. This study also designed a local coordinate system to support the identification of the locations of parking spaces and beacon devices. We used Android as the platform to implement the proposed car-searching mobile app, and used Bytereal HiBeacon devices to implement the proposed positioning-assisting subsystem. We also deployed the system in a parking lot in our campus for testing. The experimental results verified that the proposed system not only works well, but also provides the car owner with the correct route guidance information.",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Sheng-Shih Wang"
+      ],
+      "venue": "Sensors",
+      "cited_by_count": 24,
+      "topic": "Smart Parking Systems Research",
+      "group": "A_AR_HUD_navigation",
+      "_score": 18.795880017344075,
+      "_matched": "T:navigation,T:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4229577878",
+      "doi": "10.14236/ewic/hci2009.57",
+      "title": "Interacting with In-Vehicle Systems: Understanding, Measuring, and Evaluating Attention",
+      "abstract": "In-vehicle systems research is becoming a significant field as the market for in-vehicle systems continue to grow. As a consequence, researchers are increasingly concerned with opportunities and limitations of HCI in a moving vehicle. Especially aspects of attention constitute a challenge for in-vehicle systems development. This paper seeks to remedy this by defining and exemplifying attention understandings. 100 papers were classified in a two-fold perspective; under what settings are in-vehicle systems evaluated and how is driver attention measured in regard to in-vehicle systems HCI. A breakdown of the distribution of driving settings and measures is presented and the impact of driver attention is discussed. The classification revealed that most of the studies were conducted in driving simulators and real traffic driving, while lateral and longitudinal control and eye behaviour were the most used measures.",
+      "year": 2009,
+      "type": "article",
+      "authors": [
+        "Kenneth Majlund Bach",
+        "Mads Gregers Jæger",
+        "Mikael B. Skov",
+        "Nils Gram Thomassen"
+      ],
+      "venue": "Electronic workshops in computing",
+      "cited_by_count": 22,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving+D_inattentional_blindness_AR",
+      "_score": 18.723455672035186,
+      "_matched": "A:driving,A:driver,T:in-vehicle,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3001889565",
+      "doi": "10.1162/jocn_a_01535",
+      "title": "Capture by Context Elements, Not Attentional Suppression of Distractors, Explains the PD with Small Search Displays",
+      "abstract": "Abstract Top–down control of attention allows us to resist attentional capture by salient stimuli that are irrelevant to our current goals. Recently, it was proposed that attentional suppression of salient distractors contributes to top–down control by biasing attention away from the distractor. With small search displays, attentional suppression of salient distractors may even result in reduced RTs on distractor-present trials. In support of attentional suppression, electrophysiological measures revealed a positivity between 200 and 300 msec contralateral to the distractor, which has been referred to as distractor positivity (PD). We reexamined distractor benefits with small search displays and found that the positivity to the distractor was followed by a negativity to the distractor. The negativity, referred to as N2pc, is considered an index of attentional selection of the contralateral element. Thus, attentional suppression of the distractor (PD) preceded attentional capture (N2pc) by the distractor, which is at odds with the idea that attentional suppression avoids attentional capture by the distractor. Instead, we suggest that the initial “PD” is not a positivity to the distractor but rather a negativity (N2pc) to the contralateral context element, suggesting that, initially, the context captured attention. Subsequently, the distractor was selected because, paradoxically, participants searched all lateral target positions (even when irrelevant) before they examined the ",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Dirk Kerzel",
+        "Nicolas Burra"
+      ],
+      "venue": "Journal of Cognitive Neuroscience",
+      "cited_by_count": 63,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "C_signal_suppression",
+      "_score": 18.612359947967775,
+      "_matched": "A:attentional capture,T:attentional suppression"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2016092425",
+      "doi": "10.1007/s13721-013-0027-9",
+      "title": "Detecting signage and doors for blind navigation and wayfinding",
+      "abstract": "",
+      "year": 2013,
+      "type": "article",
+      "authors": [
+        "Shuihua Wang‎",
+        "Xiaodong Yang",
+        "Yingli Tian"
+      ],
+      "venue": "Network Modeling Analysis in Health Informatics and Bioinformatics",
+      "cited_by_count": 17,
+      "topic": "Advanced Image and Video Retrieval Techniques",
+      "group": "A_AR_HUD_navigation",
+      "_score": 18.510545010206613,
+      "_matched": "T:navigation,T:wayfinding"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2906324501",
+      "doi": "10.3389/fnhum.2018.00509",
+      "title": "EEG-Based Mental Workload Neurometric to Evaluate the Impact of Different Traffic and Road Conditions in Real Driving Settings",
+      "abstract": "Car driving is considered a very complex activity, consisting of different concomitant tasks and subtasks, thus it is crucial to understand the impact of different factors, such as road complexity, traffic, dashboard devices, and external events on the driver's behavior and performance. For this reason, in particular situations the cognitive demand experienced by the driver could be very high, inducing an excessive experienced mental workload and consequently an increasing of error commission probability. In this regard, it has been demonstrated that human error is the main cause of the 57% of road accidents and a contributing factor in most of them. In this study, 20 young subjects have been involved in a real driving experiment, performed under different traffic conditions (rush hour and not) and along different road types (main and secondary streets). Moreover, during the driving tasks different specific events, in particular a pedestrian crossing the road and a car entering the traffic flow just ahead of the experimental subject, have been acted. A Workload Index based on the Electroencephalographic (EEG), i.e., brain activity, of the drivers has been employed to investigate the impact of the different factors on the driver's workload. Eye-Tracking (ET) technology and subjective measures have also been employed in order to have a comprehensive overview of the driver's perceived workload and to investigate the different insights obtainable from the employed methodologies. ",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Gianluca Di Flumeri",
+        "Gianluca Borghini",
+        "Pietro Aricò",
+        "Nicolina Sciaraffa",
+        "Paola Lanzi",
+        "Simone Pozzi",
+        "Valeria Vignali",
+        "Claudio Lantieri"
+      ],
+      "venue": "Frontiers in Human Neuroscience",
+      "cited_by_count": 163,
+      "topic": "EEG and Brain-Computer Interfaces",
+      "group": "F_traffic_density_complexity",
+      "_score": 18.429687696095396,
+      "_matched": "T:driving,A:driver,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2799833390",
+      "doi": "10.1186/s41235-018-0098-3",
+      "title": "Spatial decision dynamics during wayfinding: intersections prompt the decision-making process",
+      "abstract": "Intersections are critical decision points for wayfinders, but it is unknown how decision dynamics unfold during pedestrian wayfinding. Some research implies that pedestrians leverage available visual cues to actively compare options while in an intersection, whereas other research suggests that people strive to make decisions long before overt responses are required. Two experiments examined these possibilities while participants navigated virtual desktop environments, assessing information-seeking behavior (Experiment 1) and movement dynamics (Experiment 2) while approaching intersections. In Experiment 1, we found that participants requested navigation guidance while in path segments approaching an intersection and the guidance facilitated choice behavior. In Experiment 2, we found that participants tended to orient themselves toward an upcoming turn direction before entering an intersection, particularly as they became more familiar with the environment. Some of these patterns were modulated by individual differences in spatial ability, sense of direction, spatial strategies, and gender. Together, we provide novel evidence that deciding whether to continue straight or turn involves a dynamic, distributed decision-making process that is prompted by upcoming intersections and modulated by individual differences and environmental experience. We discuss implications of these results for spatial decision-making theory and the development of innovative adaptive, beacon-based na",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Tad T. Brunyé",
+        "Aaron L. Gardony",
+        "Amanda Holmes",
+        "Holly A. Taylor"
+      ],
+      "venue": "Cognitive Research Principles and Implications",
+      "cited_by_count": 46,
+      "topic": "Spatial Cognition and Navigation",
+      "group": "A_AR_HUD_navigation",
+      "_score": 18.344195715871436,
+      "_matched": "A:navigation,T:wayfinding,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2527204247",
+      "doi": "10.1016/j.trf.2016.09.009",
+      "title": "Supporting the changing driver’s task: Exploration of interface designs for supervision and intervention in automated driving",
+      "abstract": "",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "Arie Paul van den Beukel",
+        "Mascha C. van der Voort",
+        "Arthur O. Eger"
+      ],
+      "venue": "Transportation Research Part F Traffic Psychology and Behaviour",
+      "cited_by_count": 43,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 18.286905352972376,
+      "_matched": "T:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2599857683",
+      "doi": "10.16910/jemr.10.2.1",
+      "title": "Mobile eye tracking during real-world night driving: A selective review of findings and recommendations for future research",
+      "abstract": "We exhaustively review the published research on eye movements during real-world night driving, which is an important field of research as fatal road traffic accidents at night out-number fatal accidents during the daytime. Eye tracking provides a unique window into the underlying cognitive processes. The studies were interpreted and evaluated against the back-ground of two descriptions of the driving task: Gibson and Crooks' description of driving as the visually guided selection of a driving path through the unobstructed field of safe travel; and Endsley's situation awareness model, highlighting the influence of drivers' interpreta-tions and mental capacities (e.g., cognitive load, memory capacity, etc.) for successful task performance. Our review unveiled that drivers show expedient looking behavior, directed to the boundaries of the field of safe travel and other road users. Thus, the results indicated that controlled (intended) eye movements supervened, but some results could have also reflected automatic gaze attraction by salient but task-irrelevant distractors. Also, it is not entirely certain whether a wider dispersion of eye fixations during daytime driving (compared to night driving) reflected controlled and beneficial strategies, or whether it was (partly) due to distraction by stimuli unrelated to driving. We concluded by proposing a more fine-grained description of the driving task, in which the contribution of eye movements to three different subtasks is detail",
+      "year": 2017,
+      "type": "review",
+      "authors": [
+        "Markus Grüner",
+        "Ulrich Ansorge"
+      ],
+      "venue": "Journal of Eye Movement Research",
+      "cited_by_count": 42,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 18.266936911159174,
+      "_matched": "T:driving,A:driver,T:eye tracking,A:cognitive load"
+    },
+    {
+      "openalex_id": "https://openalex.org/W3104747504",
+      "doi": "10.1515/itit-2020-0025",
+      "title": "Communicating the intention of an automated vehicle to pedestrians: The contributions of eHMI and vehicle behavior",
+      "abstract": "Abstract External Human-Machine Interfaces (eHMIs) are expected to bridge the communication gap between an automated vehicle (AV) and pedestrians to replace the missing driver-pedestrian interaction. However, the relative impact of movement-based implicit communication and explicit communication with the aid of eHMIs on pedestrians has not been studied and empirically evaluated. In this study, we pit messages from an eHMI against different driving behaviors of an AV that yields to a pedestrian to understand whether pedestrians tend to pay more attention to the motion dynamics of the car or the eHMI in making road-crossing decisions. Our contributions are twofold: we investigate (1) whether the presence of eHMIs has any objective effect on pedestrians’ understanding of the vehicle’s intent, and (2) how the movement dynamics of the vehicle affect the perception of the vehicle intent and interact with the impact of an eHMI. Results show that (1) eHMIs help in convincing pedestrians of the vehicle’s yielding intention, particularly when the speed of the vehicle is slow enough to not be an obvious threat, but still fast enough to raise a doubt about a vehicle’s stopping intention, and (2) pedestrians do not blindly trust the eHMI: when the eHMI message and the vehicle’s movement pattern contradict, pedestrians fall back to movement-based cues. Our results imply that when explicit communication (eHMI) and implicit communication (motion-dynamics and kinematics) are in alignment and ",
+      "year": 2020,
+      "type": "article",
+      "authors": [
+        "Debargha Dey",
+        "Andrii Matviienko",
+        "Melanie Berger",
+        "Bastian Pfleging",
+        "Marieke Martens",
+        "Jacques Terken"
+      ],
+      "venue": "it - Information Technology",
+      "cited_by_count": 124,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 18.193820026016112,
+      "_matched": "A:driving,A:driver,T:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4283012772",
+      "doi": "10.1177/00187208221093863",
+      "title": "Driver Visual Attention Before and After Take-Over Requests During Automated Driving on Public Roads",
+      "abstract": "OBJECTIVE: This study aims to understand drivers' visual attention before and after take-over requests during automated driving (AD), when the vehicle is fully responsible for the driving task on public roads. BACKGROUND: Existing research on transitions of control from AD to manual driving has mainly focused on take-over times. Despite its relevance for vehicle safety, drivers' visual attention has received little consideration. METHOD: Thirty participants took part in a Wizard of Oz study on public roads. Drivers' visual attention was analyzed before and after four take-over requests. Visual attention during manual driving was also recorded to serve as a baseline for comparison. RESULTS: During AD, the participants showed reduced visual attention to the forward road and increased duration of single off-road glances compared to manual driving. In response to take-over requests, the participants looked away from the forward road toward the instrument cluster. Levels of visual attention towards the forward road did not return to the levels observed during manual driving until after 15 s had passed. CONCLUSION: During AD, drivers may look toward non-driving related task items (e.g., mobile phone) instead of forward. Further, when a transition of control is required, drivers may take over control before they are aware of the driving environment or potential threat(s). Thus, it cannot be assumed that drivers are ready to respond to events shortly after the take-over request. APPL",
+      "year": 2022,
+      "type": "article",
+      "authors": [
+        "Linda Pipkorn",
+        "Marco Dozza",
+        "Emma Tivesten"
+      ],
+      "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+      "cited_by_count": 32,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 18.037027879755776,
+      "_matched": "T:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4394882903",
+      "doi": "10.1038/s41598-024-58953-4",
+      "title": "High visual salience of alert signals can lead to a counterintuitive increase of reaction times",
+      "abstract": "It is often assumed that rendering an alert signal more salient yields faster responses to this alert. Yet, there might be a trade-off between attracting attention and distracting from task execution. Here we tested this in four behavioral experiments with eye-tracking using an abstract alert-signal paradigm. Participants performed a visual discrimination task (primary task) while occasional alert signals occurred in the visual periphery accompanied by a congruently lateralized tone. Participants had to respond to the alert before proceeding with the primary task. When visual salience (contrast) or auditory salience (tone intensity) of the alert were increased, participants directed their gaze to the alert more quickly. This confirms that more salient alerts attract attention more efficiently. Increasing auditory salience yielded quicker responses for the alert and primary tasks, apparently confirming faster responses altogether. However, increasing visual salience did not yield similar benefits: instead, it increased the time between fixating the alert and responding, as high-salience alerts interfered with alert-task execution. Such task interference by high-salience alert-signals counteracts their more efficient attentional guidance. The design of alert signals must be adapted to a \"sweet spot\" that optimizes this stimulus-dependent trade-off between maximally rapid attentional orienting and minimal task interference.",
+      "year": 2024,
+      "type": "article",
+      "authors": [
+        "Wolfgang Einhäuser",
+        "Christiane R. Neubert",
+        "Sabine Grimm",
+        "Alexandra Bendixen"
+      ],
+      "venue": "Scientific Reports",
+      "cited_by_count": 9,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "B_attentional_capture_driving",
+      "_score": 18.0,
+      "_matched": "T:visual salience,T:salience"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2043745669",
+      "doi": "10.1515/sem-2012-0058",
+      "title": "What it means to change lanes: Actions, emotions and wayfinding in the family car",
+      "abstract": "In this paper we investigate how the sequential organization and settlement of disagreements comes to shape, and be shaped by, navigation. Using extracts of in-car interaction, we examine the gestalt of projectable aspects of road travel, car movements, and driver-navigator talk. Navigation when accomplished without maps relies on making sense of streets, landmarks, and signs, activities that are displayed through passengers and drivers giving directions to each other, alongside embodied references to passing roadside features and the movement of the vehicle. More broadly, “finding the way” is bound up with the social relationships between passengers — in particular families caring for one another and showing their epistemic and emotional stance on particular matters. To examine this we draw on existing conversation analytic work on epistemics, stance, and emotion to explore the potentially argumentative character of direction-giving and direction-receiving and how this comes to be combined with the task at hand.",
+      "year": 2012,
+      "type": "article",
+      "authors": [
+        "Éric Laurier",
+        "Barry Brown",
+        "Hayden Lorimer"
+      ],
+      "venue": "Semiotica",
+      "cited_by_count": 30,
+      "topic": "Language, Discourse, Communication Strategies",
+      "group": "A_AR_HUD_navigation",
+      "_score": 17.982723387668546,
+      "_matched": "A:navigation,T:wayfinding,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2897938845",
+      "doi": "10.1016/j.trf.2018.09.028",
+      "title": "Investigating the effect of urgency and modality of pedestrian alert warnings on driver acceptance and performance",
+      "abstract": "",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "David R. Large",
+        "Hyungil Kim",
+        "Coleman Merenda",
+        "Samantha Leong",
+        "Catherine Harvey",
+        "Gary Burnett",
+        "Joseph L. Gabbard"
+      ],
+      "venue": "Transportation Research Part F Traffic Psychology and Behaviour",
+      "cited_by_count": 30,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 17.982723387668546,
+      "_matched": "T:driver,T:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2546818989",
+      "doi": "10.3758/s13414-016-1209-1",
+      "title": "Suppression of overt attentional capture by salient-but-irrelevant color singletons",
+      "abstract": "",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "Nicholas Gaspelin",
+        "Carly J. Leonard",
+        "Steven J. Luck"
+      ],
+      "venue": "Attention Perception & Psychophysics",
+      "cited_by_count": 283,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "C_signal_suppression",
+      "_score": 17.906636680094074,
+      "_matched": "T:attentional capture"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4382809473",
+      "doi": "10.3390/app13106037",
+      "title": "Investigation of Text-Background Lightness Combination on Visual Clarity Using a Head-Up Display under Various Surround Conditions and Different Age Groups",
+      "abstract": "Up until now, head-up displays (HUDs) have been installed in front of the driver’s seat to provide drivers with auxiliary information. It may be used in various surroundings, ranging from very dark to very bright environments, such as daylight. A suitable text-background lightness combination can improve the driver’s visual clarity and efficiency when identifying displayed information to raise driving safety. Although many kinds of HUDs are designed to improve visual clarity by adjusting brightness, few studies have investigated the influence of the text-background lightness combination of a HUD on visibility, especially as the lighting level of the driving condition changes dramatically. In the study, 60 observers, comprising 20 young, 20 middle-aged, and 20 older participants, evaluated the visual clarity of 20 text-background lightness combinations on a HUD using paired comparison methods under dark and daylight surroundings (i.e., 300, 1500, and 9000 lx conditions). As a result, the combination of white text on a black background and black text on a white background presented the most significant preference and the best visual clarity under dark and daylight surroundings, respectively, improving visual safety when driving.",
+      "year": 2023,
+      "type": "article",
+      "authors": [
+        "Hsin‐Pou Huang",
+        "Hung‐Chung Li",
+        "Minchen Wei",
+        "Guanhong Li"
+      ],
+      "venue": "Applied Sciences",
+      "cited_by_count": 6,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "E_transparency_luminance+F_traffic_density_complexity",
+      "_score": 17.690196080028514,
+      "_matched": "T:head-up display,A:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2739728427",
+      "doi": "10.54941/ahfe100646",
+      "title": "The Effect of Urgency of Take-Over Requests During Highly Automated Driving Under Distraction Conditions",
+      "abstract": "Highly automated driving may improve driving comfort and safety in the near future. Due to possible system limits of highly automated driver support, the driver is expected to take over the vehicle control if a so-called take-over request is issued. One example of these system limits are missing or ending lines on motorways. This study focuses on the design of take-over requests in such situations. Using a motion-based driving simulator, N = 16 participants encountered different take-over situations in congested traffic that varied in their difficulty: ending lines on straight road (easy), temporary lines due to a work zone (moderate) and loss of lines in a situation with high curvature (difficult). The driver support consisted of a hands-off system that was taking over longitudinal and lateral control. Participants were asked to perform a secondary task while driving. Take-over requests were presented either visually or visual-auditory. Drivers’ hands-on times (i.e., time until driver puts hands back on the steering wheel) are lower if visual-auditory take-over requests are used in comparison to purely visual ones. Measures of lateral vehicle control also show an advantage of visual-auditory take-over requests. Differences between the take-over concepts are especially pronounced in difficult take-over situations.",
+      "year": 2021,
+      "type": "article",
+      "authors": [
+        "Frederik Naujoks",
+        "Christoph Mai",
+        "Alexandra Neukum"
+      ],
+      "venue": "AHFE international",
+      "cited_by_count": 186,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving",
+      "_score": 17.543683213073,
+      "_matched": "T:driving,A:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2944523811",
+      "doi": "10.20870/ijvr.2010.9.2.2767",
+      "title": "A Survey of Augmented Reality Technologies, Applications and Limitations",
+      "abstract": "A Survey of Augmented Reality Technologies, Applications and Limitations",
+      "year": 2010,
+      "type": "article",
+      "authors": [
+        "D. W. F. van Krevelen",
+        "Ronald Poelman"
+      ],
+      "venue": "International Journal of Virtual Reality",
+      "cited_by_count": 1644,
+      "topic": "Augmented Reality Applications",
+      "group": "A_AR_HUD_navigation+F_traffic_density_complexity",
+      "_score": 17.432331804571987,
+      "_matched": "T:augmented reality"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2068671308",
+      "doi": "10.1523/jneurosci.2145-09.2009",
+      "title": "Human Variation in Overriding Attentional Capture",
+      "abstract": "Attention can be directed either voluntarily based on the goals of the individual or involuntarily \"captured\" by salient stimuli in the immediate environment. Although involuntary capture is a critical means of directing attention, the completion of many common tasks requires our ability to ignore salient, but otherwise irrelevant stimuli while restricting our attention to stimuli that are related to our goals. Here, we report neurophysiological measures of spatial attention in humans that gauge an individual's ability to resist attentional capture from salient but irrelevant information. By measuring the rapid reallocation of spatial attention immediately after the onset of distractors, we observe that the ability to override attentional capture varies substantially across individuals and is strongly predicted by the specific working memory capacity of each person. High-capacity individuals were much more capable of resisting attentional capture than low-capacity individuals, who involuntarily reallocated spatial attention when distractors were present in the display. These results provide evidence that the poor attentional abilities associated with low memory capacity may stem from an inability to override attentional capture in the initial moments after the onset of distracting information.",
+      "year": 2009,
+      "type": "article",
+      "authors": [
+        "Keisuke Fukuda",
+        "Edward K. Vogel"
+      ],
+      "venue": "Journal of Neuroscience",
+      "cited_by_count": 381,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "D_inattentional_blindness_AR",
+      "_score": 17.16412672582342,
+      "_matched": "T:attentional capture"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2908242661",
+      "doi": "10.3389/fpsyg.2019.00142",
+      "title": "Wayfinding as a Social Activity",
+      "abstract": "We discuss the important, but greatly under-researched, topic of the social aspects of human wayfinding during navigation. Wayfinding represents the planning and decision-making component of navigation and is arguably among the most common, real-world domains of both individual and group-level decision making. We highlight the myriad ways that wayfinding by people is not a solitary psychological process but is influenced by the actions of other people, even by their mere presence. We also present a novel and comprehensive framework for classifying wayfinding in complex environments that incorporates the influence of other people. This classification builds upon the premises of previous wayfinding taxonomies and is further structured into four parts based upon (1) the nature of the interaction between the actors and (2) the time frame in which the interaction takes place. We highlight gaps in our current understanding of social wayfinding and outline future research opportunities.",
+      "year": 2019,
+      "type": "article",
+      "authors": [
+        "Ruth Dalton",
+        "Christoph Hölscher",
+        "Daniel R. Montello"
+      ],
+      "venue": "Frontiers in Psychology",
+      "cited_by_count": 117,
+      "topic": "Spatial Cognition and Navigation",
+      "group": "A_AR_HUD_navigation",
+      "_score": 17.143764014612252,
+      "_matched": "A:navigation,T:wayfinding"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2513567487",
+      "doi": "10.1109/tits.2017.2688352",
+      "title": "Road Scene Content Analysis for Driver Assistance and Autonomous Driving",
+      "abstract": "This paper aims to develop a vision-based driver assistance system for scene awareness using video frames obtained from a dashboard camera. A saliency image map is devised with features pertinent to the driving scene. This saliency map mimics the human contour and motion sensitive visual perception by extracting spatial, spectral, and temporal information from the input frames and applying entropy driven image-context-feature data fusion. The resultant fusion output comprises high-level descriptors for still segment boundaries and non-stationary object appearance. Following the segmentation and foreground object detection stage, an adaptive maximum likelihood classifier selects road surface regions. The proposed scene driven vision system improves the driver's situational awareness by enabling adaptive road surface classification. As experimental results demonstrate, context-aware low-level to high-level information fusion based on human vision model produces superior segmentation, tracking, and classification results that lead to high- level abstraction of driving scene.",
+      "year": 2017,
+      "type": "article",
+      "authors": [
+        "Melih Altun",
+        "Mehmet Celenk"
+      ],
+      "venue": "IEEE Transactions on Intelligent Transportation Systems",
+      "cited_by_count": 36,
+      "topic": "Visual Attention and Saliency Detection",
+      "group": "F_traffic_density_complexity",
+      "_score": 17.13640344813399,
+      "_matched": "T:driving,T:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2907283208",
+      "doi": "10.1109/thms.2018.2883862",
+      "title": "Rolling Out the Red (and Green) Carpet: Supporting Driver Decision Making in Automation-to-Manual Transitions",
+      "abstract": "This paper assessed four types of human-machine interfaces (HMIs), classified according to the stages of automation proposed by Parasuraman et al. [“A model for types and levels of human interaction with automation,” IEEE Trans. Syst. Man, Cybern. A, Syst. Humans, vol. 30, no. 3, pp. 286-297, May 2000]. We hypothesized that drivers would implement decisions (lane changing or braking) faster and more correctly when receiving support at a higher automation stage during transitions from conditionally automated driving to manual driving. In total, 25 participants with a mean age of 25.7 years (range 19-36 years) drove four trials in a driving simulator, experiencing four HMIs having the following different stages of automation: baseline (information acquisition-low), sphere (information acquisition-high), carpet (information analysis), and arrow (decision selection), presented as visual overlays on the surroundings. The HMIs provided information during two scenarios, namely a lane change and a braking scenario. Results showed that the HMIs did not significantly affect the drivers' initial reaction to the take-over request. Improvements were found, however, in the decision-making process: When drivers experienced the carpet or arrow interface, an improvement in correct decisions (i.e., to brake or change lane) occurred. It is concluded that visual HMIs can assist drivers in making a correct braking or lane change maneuver in a take-over scenario. Future research could be directed ",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Alexander Eriksson",
+        "Sebastiaan M. Petermeijer",
+        "Markus Zimmermann",
+        "Joost de Winter",
+        "Klaus Bengler",
+        "Neville A. Stanton"
+      ],
+      "venue": "IEEE Transactions on Human-Machine Systems",
+      "cited_by_count": 116,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "A_AR_HUD_navigation+F_traffic_density_complexity",
+      "_score": 17.136371723492324,
+      "_matched": "A:driving,T:driver,A:driving simulator"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4283826293",
+      "doi": "10.3390/app12146831",
+      "title": "Vision-Based Autonomous Vehicle Systems Based on Deep Learning: A Systematic Literature Review",
+      "abstract": "In the past decade, autonomous vehicle systems (AVS) have advanced at an exponential rate, particularly due to improvements in artificial intelligence, which have had a significant impact on social as well as road safety and the future of transportation systems. However, the AVS is still far away from mass production because of the high cost of sensor fusion and a lack of combination of top-tier solutions to tackle uncertainty on roads. To reduce sensor dependency and to increase manufacturing along with enhancing research, deep learning-based approaches could be the best alternative for developing practical AVS. With this vision, in this systematic review paper, we broadly discussed the literature of deep learning for AVS from the past decade for real-life implementation in core fields. The systematic review on AVS implementing deep learning is categorized into several modules that cover activities including perception analysis (vehicle detection, traffic signs and light identification, pedestrian detection, lane and curve detection, road object localization, traffic scene analysis), decision making, end-to-end controlling and prediction, path and motion planning and augmented reality-based HUD, analyzing research works from 2011 to 2021 that focus on RGB camera vision. The literature is also analyzed for final representative outcomes as visualization in augmented reality-based head-up display (AR-HUD) with categories such as early warning, road markings for improved navigat",
+      "year": 2022,
+      "type": "article",
+      "authors": [
+        "Monirul Islam Pavel",
+        "Siok Yee Tan",
+        "Azizi Abdullah"
+      ],
+      "venue": "Applied Sciences",
+      "cited_by_count": 109,
+      "topic": "Autonomous Vehicle Technology and Safety",
+      "group": "A_AR_HUD_navigation+E_transparency_luminance",
+      "_score": 17.08278537031645,
+      "_matched": "A:augmented reality,A:head-up display,A:pedestrian"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2897916980",
+      "doi": "10.3389/fpsyg.2018.02086",
+      "title": "The Past, Present, and Future of Virtual and Augmented Reality Research: A Network and Cluster Analysis of the Literature",
+      "abstract": "The recent appearance of low cost virtual reality (VR) technologies - like the Oculus Rift, the HTC Vive and the Sony PlayStation VR - and Mixed Reality Interfaces (MRITF) - like the Hololens - is attracting the attention of users and researchers suggesting it may be the next largest stepping stone in technological innovation. However, the history of VR technology is longer than it may seem: the concept of VR was formulated in the 1960s and the first commercial VR tools appeared in the late 1980s. For this reason, during the last 20 years, 100s of researchers explored the processes, effects, and applications of this technology producing 1000s of scientific papers. What is the outcome of this significant research work? This paper wants to provide an answer to this question by exploring, using advanced scientometric techniques, the existing research corpus in the field. We collected all the existent articles about VR in the Web of Science Core Collection scientific database, and the resultant dataset contained 21,667 records for VR and 9,944 for augmented reality (AR). The bibliographic record contained various fields, such as author, title, abstract, country, and all the references (needed for the citation analysis). The network and cluster analysis of the literature showed a composite panorama characterized by changes and evolutions over the time. Indeed, whether until 5 years ago, the main publication media on VR concerned both conference proceeding and journals, more recent",
+      "year": 2018,
+      "type": "article",
+      "authors": [
+        "Pietro Cipresso",
+        "Irene Alice Chicchi Giglioli",
+        "Mariano Alcañíz",
+        "Giuseppe Riva"
+      ],
+      "venue": "Frontiers in Psychology",
+      "cited_by_count": 1097,
+      "topic": "Virtual Reality Applications and Impacts",
+      "group": "A_AR_HUD_navigation",
+      "_score": 17.081204680228147,
+      "_matched": "T:augmented reality"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2990398300",
+      "doi": "10.1177/1071181319631099",
+      "title": "A Review on the Interface Design of Automotive Head-Up Displays for Communicating Safety-Related Information",
+      "abstract": "Automotive head-up displays (HUDs) have the advantage of allowing drivers to keep their eyes forward while driving by superimposing visual information on top of the drivers’ forward field of view (FoV). In order to provide the intended advantage, HUDs must be designed such that they respect the characteristics and capacities of the human information processing system and accommodate the specific contexts of information use. Poorly designed HUDs indeed can adversely affect driving safety by creating new sets of problems, including visual clutter, information overload, inattentive blindness and cognitive capture (Gish and Staplin, 1995; Pauzie, 2015; Tufano, 1997; Ward and Parkes, 1994). During the last few decades, various research studies have proposed different HUD displays that present HUD information in particular styles. However, it is not well understood what type of display would be most advantageous or adequate for effectively communicating each information type and thus best serve drivers in performing the associated driving task. Relatively little research has been conducted to evaluate the available HUD displays in the interface design. As an initial effort towards addressing the knowledge gap, the objective of the current study was to provide a review of the existing HUD displays focusing on the interface design. Among the variety of HUD information types, the current review was intended to cover different types of safety information. For each type of safety inform",
+      "year": 2019,
+      "type": "review",
+      "authors": [
+        "Juhee Park",
+        "Woojin Park"
+      ],
+      "venue": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+      "cited_by_count": 9,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "F_traffic_density_complexity",
+      "_score": 17.0,
+      "_matched": "T:head-up display,A:driving,A:driver"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2045465814",
+      "doi": "10.1145/2667317.2667329",
+      "title": "Personal Navi",
+      "abstract": "Augmented reality (AR) is an interface that can potentially provide more intuitive and immersive experiences, particularly for automotive applications. In this paper we present the Personal Navi, a vehicular AR navigational aid designed for use with a see-thru 3D volumetric Head Up Display (HUD). In one study, we found that the Personal Navi visuals helped participants recognize turn locations earlier than when provided with conventional navigation aids alone. The interface also helped keep users' eyes up and fixated on the driving environment more. In a second study, we tested participants' depth perception of AR visuals provided with our prototype 3D-HUD. We displayed the same visuals with a fixed focal depth display (2D-HUD) and found that for applications such as Personal Navi, where the spatial location of AR visuals are an important component of the interface, a dynamically adjustable focal plane (3D-HUD) is necessary for proper registration. We argue that AR-based HUD navigational aids should be implemented only with 3D-HUDs because of inferior depth perception with 2D-HUDs.",
+      "year": 2014,
+      "type": "article",
+      "authors": [
+        "Karlin Bark",
+        "Cuong Tran",
+        "Kikuo Fujimura",
+        "Victor Ng‐Thow‐Hing"
+      ],
+      "venue": "",
+      "cited_by_count": 94,
+      "topic": "Augmented Reality Applications",
+      "group": "A_AR_HUD_navigation",
+      "_score": 16.955447210577695,
+      "_matched": "A:augmented reality,A:navigation,A:driving"
+    },
+    {
+      "openalex_id": "https://openalex.org/W2255552913",
+      "doi": "10.1523/jneurosci.2133-15.2016",
+      "title": "Distinct Mechanisms for Distractor Suppression and Target Facilitation",
+      "abstract": "It is well established that preparatory attention improves processing of task-relevant stimuli. Although it is often more important to ignore task-irrelevant stimuli, comparatively little is known about preparatory attentional mechanisms for inhibiting expected distractions. Here, we establish that distractor inhibition is not under the same top-down control as target facilitation. Using a variant of the Posner paradigm, participants were cued to either the location of a target stimulus, the location of a distractor, or were provided no predictive information. In Experiment 1, we found that participants were able to use target-relevant cues to facilitate target processing in both blocked and flexible conditions, but distractor cueing was only effective in the blocked version of the task. In Experiment 2, we replicate these findings in a larger sample and leveraged the additional statistical power to perform individual differences analyses to tease apart potential underlying mechanisms. We found no evidence for a correlation between these two types of benefit, suggesting that flexible target cueing and distractor suppression depend on distinct cognitive mechanisms. In Experiment 3, we use EEG to show that preparatory distractor suppression is associated with a diminished P1, but we found no evidence to suggest that this effect was mediated by top-down control of oscillatory activity in the alpha band (8-12 Hz). We conclude that flexible top-down mechanisms of cognitive control",
+      "year": 2016,
+      "type": "article",
+      "authors": [
+        "MaryAnn P. Noonan",
+        "Nika Adamian",
+        "Alexandra C. Pike",
+        "Frida Printzlau",
+        "Ben M. Crittenden",
+        "Mark G. Stokes"
+      ],
+      "venue": "Journal of Neuroscience",
+      "cited_by_count": 221,
+      "topic": "Neural and Behavioral Psychology Studies",
+      "group": "C_signal_suppression",
+      "_score": 16.692705948901278,
+      "_matched": "T:distractor suppression"
+    },
+    {
+      "openalex_id": "https://openalex.org/W4401832762",
+      "doi": "10.1016/j.ijhcs.2024.103362",
+      "title": "Effects of various in-vehicle human–machine interfaces on drivers’ takeover performance and gaze pattern in conditionally automated vehicles",
+      "abstract": "",
+      "year": 2024,
+      "type": "article",
+      "authors": [
+        "Jinlei Shi",
+        "Chunlei Chai",
+        "Ruiyi Cai",
+        "Haoran Wei",
+        "Youcheng Zhou",
+        "Hao Fan",
+        "Wei Zhang",
+        "Natasha Merat"
+      ],
+      "venue": "International Journal of Human-Computer Studies",
+      "cited_by_count": 19,
+      "topic": "Human-Automation Interaction and Safety",
+      "group": "B_attentional_capture_driving+D_inattentional_blindness_AR+F_traffic_density_complexity",
+      "_score": 16.602059991327963,
+      "_matched": "T:driver,T:in-vehicle"
+    }
+  ]
+}

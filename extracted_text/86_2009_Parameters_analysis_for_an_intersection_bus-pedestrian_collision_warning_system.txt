@@ -1,0 +1,872 @@
+--- Page 1 ---
+Parameters Analysis for an Intersection 
+Bus-Pedestrian Collision Warning System 
+ 
+Chien-Yen Chang* and Ting-Wei Chang 
+Department of Transportation Technology and Logistics Management 
+Chung Hua University 
+Hsin Chu, Taiwan. 
+*e-mail: axle@chu.edu.tw
+ 
+ 
+Abstract—Utilizing advanced technologies to guarantee safety 
+protection for pedestrians at intersections has become an 
+important issue because intersections are the places where 
+pedestrians easily conflict with vehicles. The purpose of this 
+study is to propose a conceptual design of an intersection bus-
+pedestrian collision warning system with appropriate detection 
+and warning parameters for bus drivers approaching an 
+intersection. Based on the design concept, bus drivers’ 
+perception-reaction time, emergency deceleration rate of buses, 
+and pedestrian walking speed are defined as the basic parameters. 
+A bus driving simulation is designed and conducted to collect bus 
+drivers’ responses to the suddenly crossing pedestrians at 
+unsignalized intersections or signalized intersections with green 
+interval for parameters analysis. Finally, the warning timings for 
+auditory warnings and visual warnings, the locations for vehicle 
+detectors and pedestrian detectors, and the locations for visual 
+warning devices are developed through a further analysis of the 
+experimental results. 
+Keywords-pedestrian; intersection; bus; collision warning 
+system; parameter. 
+ I. INTRODUCTION 
+Intelligent Transportation Systems (ITS) are the systems 
+which 
+apply 
+advanced 
+information, 
+communications, 
+electronics, mechanics, and control technologies to the 
+operations of transportation and traffic systems for solving 
+such 
+problems 
+as 
+traffic 
+accidents, 
+congestion 
+and 
+environmental impacts. Due to the rapid development of 
+information and communications technologies, it has become 
+feasible to apply advanced techniques to solve traditional 
+traffic problems. Recently, the development of ITS in advanced 
+countries has focused on not only the enhancement of service 
+quality for most road users such as vehicle drivers but also the 
+achievement of transportation expectation for road vulnerable 
+individuals such as pedestrians. Thus, using ITS technologies 
+to guarantee safety protection for pedestrians at intersections 
+has become an important issue because intersections are the 
+places where pedestrians easily conflict with vehicles [1-4]. In 
+general, traffic engineers usually design a signal timing plan 
+with pedestrian phases to improve pedestrian crossing safety at 
+an intersection. However, some intersections in rural areas are 
+not available to be signalized because of installation cost and 
+vehicle delay issues. Therefore, protecting pedestrians who are 
+crossing the roads from pedestrian-vehicle collisions at 
+unsignalized intersections is a major concern for traffic 
+engineers and government authorities trying to improve road 
+intersection safety. One way to provide the crossing 
+pedestrians with the higher right of way at unsignalized 
+intersections is making traffic regulations to force drivers to 
+bring their vehicles to a stop to allow pedestrians to cross the 
+road. Another way is to develop an intersection pedestrian 
+collision warning system (IPCWS). IPCWS is one of the 
+pedestrian protection systems integrating advanced detection 
+technologies, warning devices, and collision warning rules to 
+provide timely alert messages to drivers and pedestrians for 
+collision avoidance at intersections. The system can be used to 
+prevent vehicles from colliding with not only regular road 
+crossing pedestrians at unsignalized intersections but also 
+illegal road crossing pedestrians at signalized intersections. 
+In order to improve intersection safety, much research has 
+been devoted to develop intersection collision warning systems 
+or driving decision support interfaces for collision avoidance. 
+The U.S. Federal Highway Administration (FHWA) [5] 
+developed an intersection collision warning system (ICWS) to 
+enhance driver awareness of traffic situations at intersections. 
+The system provided timely and easily understood warning 
+messages on active signs for vehicles approaching an 
+intersection. A field study showed that the ICWS had a positive 
+effect on vehicle speed reduction. Laberge et al. [6] proposed 
+an infrastructure-based intersection decision support (IDS) 
+system to help drivers make safer gap acceptance decisions at 
+rural intersections. Sign was the major interface of the system 
+for approaching drivers. In the interface design, four major 
+concepts were presented to drivers: hazard sign, countdown 
+sign, variable message sign (VMS), and icon sign. Important 
+information in the sign includes showing the presence of gaps, 
+indicating the size of available gaps, and/or judging the safety 
+of available gaps. Neale et al. [7] designed and evaluated the 
+infrastructure-based warning interfaces and the vehicle-based 
+warning interfaces for a signal-controlled and stop-controlled 
+violation warning system on the Smart Road in Virginia, USA. 
+The evaluation results indicated that vehicle-based warning 
+interfaces could provide effective warnings to the violating 
+drivers. Stubbs et al. [8] and Atev et al. [9] also presented some 
+vision systems for real-time collision warnings at intersections. 
+While most studies have focused on the discussion of collision 
+avoidance between one vehicle and another vehicle, Van 
+Houten et al. [10] evaluated the effectiveness of signs with 
+239
+978-1-4244-5336-8/09/$26.00 c⃝2009 IEEE
+
+--- Page 2 ---
+pedestrian symbol for motorists yielding to pedestrians at 
+crosswalks. They found that one sign installed 50 m in front of 
+the crosswalk would be helpful in reducing conflicts between 
+vehicles and pedestrians. Although many studies have 
+proposed innovations or conducted preliminary tests on ICWS, 
+little information is available on the development of the 
+intersection bus-pedestrian collision warning system. 
+The accident involving a bus and pedestrians often causes 
+severe injuries to pedestrians due to the high momentum of the 
+bus. Thus it is vital to develop an intersection bus-pedestrian 
+collision warning system for mitigating bus-and-pedestrian 
+collisions at intersections. This paper aims to propose a 
+conceptual design of an intersection bus-pedestrian collision 
+warning system and identify the required parameters. In 
+addition, a bus driving simulation is further conducted to 
+collect and analyze the values of the parameters. Remaining 
+sections of the paper are organized as follows. In Sec. II, a 
+conceptual design of the warning system is briefly described. 
+Then, the experimental design and the parameters analysis are 
+presented in Sec. III. Finally, conclusions are summarized in 
+Sec. IV. 
+II. CONCEPTUAL DESIGN OF AN INTERSECTION BUS-
+PEDESTRIAN COLLISION WARNING SYSTEM 
+Fig. 1 shows the design concept of the collision warning 
+system. In the figure, devices layout and warning timing are 
+determined by the distance between the detection point of the 
+pedestrian and the collision point, and the stopped sight 
+distance of the approaching bus driver. Bus drivers usually 
+drive their buses on the outer lane when they approach an 
+intersection since many bus stops are installed at the near side 
+of the intersection. The VMS for the bus drivers is installed on 
+the median to avoid being obscured by other signs and provide 
+adequate visibility and legibility. When the system initiates and 
+a crossing pedestrian is detected, the warning timing should 
+provide sufficient time for an approaching bus decelerating and 
+stopping in front of the collision point. In other words, the 
+warning timing is the timing which provides a period of time to 
+the driver for receiving the warning messages and stopping the 
+bus. Therefore, the warning timing is given by 
+ 
+          
+d
+V
+T
+T
+r
+wd
+3.6
+0
++
+=
+                                            (1) 
+where 
+Twd: warning timing (time interval before the bus is totally 
+stopped) for the bus driver (in seconds); 
+Tr: perception-reaction time of the bus driver (in seconds); 
+V0: approaching speed of the bus (in kilometers per hour); 
+d: emergency deceleration rate of the bus (in meters per 
+square second). 
+ 
+Figure 1. The layout of the conceptual intersection bus-pedestrian collision 
+warning system. 
+According to the required warning timing in (1), the 
+shortest distance between the pedestrian detector and the 
+collision point (Dp) could be given by 
+ 
+          Dp = ds + dp = (Twd + Tb1) × Vp                    (2) 
+ 
+          dp = (Twd + Tb1) × Vp – ds                              (3) 
+where 
+ds: distance between the collision point and the curb (in 
+meters) 
+dp: the shortest distance between the pedestrian detector 
+and the curb (in meters); 
+Twd: warning timing for the bus driver (in seconds); 
+Tb1: buffer time from the detection of pedestrian to the 
+warning message initiation (in seconds); 
+Vp: walking speed of the pedestrian (in meters per second). 
+In practice, ds could be set to zero, and Dp is equal to dp. 
+Equation (3) could be rewritten by 
+ 
+          dp = (Twd + Tb1) × Vp                                     (4) 
+Equation (4) means that the detection range of crossing 
+pedestrians should be at least dp for providing sufficient 
+warning timing to bus drivers. The shortest distance between 
+the vehicle speed detector and the collision point (Dc) is given 
+by 
+240
+2009 IEEE Asia-Paciﬁc Services Computing Conference (IEEE APSCC)
+
+--- Page 3 ---
+Dc = 0.278 V0Tr + Tb2) + 
+d
+V
+×
+×
+2
+2
+0
+(3.6)
+2
+ 
+         = 0.278 V0Tr + Tb2) + 
+d
+V
+×
+92
+.
+25
+2
+0
+                        (5) 
+where 
+Dc: the shortest distance between the vehicle speed 
+detector and the collision point (in meters); 
+Tr: perception-reaction time of the bus driver (in seconds); 
+Tb2: buffer time for vehicle speed calculation (in seconds); 
+V0:  approaching speed of the bus (in kilometers per hour); 
+d: emergency deceleration rate of the bus (in meters per 
+square second). 
+Sometimes the information of the oncoming bus should be 
+provided to the pedestrians if the bus does not decrease its 
+speed. The warning timing for the pedestrians is given by 
+ 
+          Twp = (3.6Dc) / V0                                          (6) 
+where 
+Twp: warning timing for the pedestrians (in seconds); 
+Dc: the shortest distance between the vehicle speed 
+detector and the collision point (in meters); 
+V0:  approaching speed of the bus (in kilometers per hour). 
+In addition to the warning timings and the detector 
+locations, the locations of variable message signs (Vdc and 
+Vdp) should be determined in Fig. 1 if the warning messages 
+are presented on variable message signs. In general, Vdc is 
+smaller than Dc and Vdp is smaller than dp. Vdc and Vdp 
+could be determined by the stopping sight distance of bus 
+drivers and the stopping sight distance of pedestrians, 
+respectively. 
+A simple flowchart of the warning logic is shown in Fig. 2. 
+When the warning system initiates, the vehicle detection 
+system is used to detect the approaching buses. The controller 
+calculates the bus speed by the detector data and computes the 
+warning timing for pedestrians by (6) if an approaching bus is 
+detected. Then the computed warning timing is displayed on a 
+VMS for pedestrians in a countdown form. If a crossing 
+pedestrian is detected by the pedestrian detector after a bus has 
+been detected, the controller will provide warning messages to 
+the bus driver for decelerating the bus. 
+ 
+Figure 2. The warning logic of the system. 
+III. EXPERIMENTAL DESIGN AND PARAMETERS 
+ANALYSIS 
+According to the conceptual design of the intersection bus-
+pedestrian collision warning system, perception-reaction time 
+of the bus driver, emergency deceleration rate of the bus, and 
+pedestrian walking speed are the basic parameters of the 
+system. This work conducts a bus driving simulation to collect 
+bus 
+drivers’ 
+perception-reaction 
+time 
+and 
+emergency 
+deceleration rate for parameters analysis. Moreover, the mean 
+walking speeds for elderly pedestrians, adult pedestrians and 
+children at intersections are 0.88, 1.29 and 1.16 m/s, and the 
+15th percentile walking speeds for elderly pedestrians, adult 
+pedestrians and children are 0.72, 1.10 and 1.00 m/s from a 
+field study. The 15th percentile walking speeds are considered 
+in the driving simulation. 
+A. Experimental Design 
+The bus driving simulator used in the experiment is the 
+CHU-DS [11]. Fig. 3 shows the designed scenario of the 
+driving experiment. This work uses the EON and 3D MAX 
+packages to create a 3-D simulated driving environment. All 
+driving vehicles except the host vehicle (bus) are small 
+passenger cars. The bus (host vehicle) is stopped in the outer 
+lane upon simulation initiation. Each roadway includes three, 
+3.75 meter-width lanes and one, 2 meter-width sidewalk. A 2 
+meter-width median separates different roadways. The road 
+geometry is level terrain (0%) and the weather is sunny and 
+daytime. The speed limit of vehicles is 50 km/h, and the traffic 
+level-of-service (LOS) in each lane (except the lane in which 
+the bus is driving) is B. 
+2009 IEEE Asia-Paciﬁc Services Computing Conference (IEEE APSCC)
+241
+
+--- Page 4 ---
+ 
+(a) 
+ 
+(b) 
+Figure 3. The driving scenario of the experiment. (a) The scene without 
+crossing pedestrians. (b) The scene with crossing pedestrians. 
+While conducting the experiment, eighteen events which 
+consist of three experimental factors with two or three levels 
+(see Table I) are initiated randomly for each subject to respond. 
+For example, an event which consists of usignalized 
+intersection, children and voice warning means that a voice 
+warning initiates when the subject is approaching to a crossing 
+child at an unsignalized intersection. Each event is initiated 
+when the subject arrives about 70 m in front of the edge of the 
+crosswalk. The VMS is installed at 60 m in front of the edge 
+of the crosswalk (see Fig. 4). Each subject should conduct the 
+whole experiment twice and face each event twice during the 
+driving simulation. 
+TABLE I. THE EXPERIMENTAL FACTORS AND LEVELS 
+Intersection Types 
+Pedestrian 
+Types 
+Warning 
+Types 
+1.Unsignalized 
+intersection 
+2.Signalized 
+intersection with 
+green interval 
+1.Children 
+2.Adult pedestrians 
+3.Elderly pedestrians 
+1.Voice warning 
+2.VMS display 
+3.No warning 
+ 
+ 
+Figure 4. The warning distance and VMS distance in the driving scenario. 
+This work recruits eighteen bus drivers working with a 
+freeway bus company in Taiwan. All are licensed male 
+drivers. Driving experiences of the subjects ranged from 3 to 
+30 years, with an average of 15 years. 
+The measures include accident happenings, perception-
+reaction time, and emergency deceleration rate. The accident 
+happenings are defined as “the number of bus-pedestrian 
+collisions in the experiment”. The perception-reaction time is 
+defined as “the time period from the warning messages 
+initiation to the deceleration initiation of the bus (for voice 
+warning type and VMS display type)” or “the time period 
+from the appearance of a pedestrian to the deceleration 
+initiation of the bus (for no warning)”. The emergency 
+deceleration rate is defined as “the average change rate of the 
+bus speed while braking”. It is the average rate defined as the 
+bus speed before braking divided by the total brake time. 
+B. Experimental Results 
+After the experiment, this work analyzes accident 
+happenings, 
+perception-reaction 
+time, 
+and 
+emergency 
+deceleration rate from the driving simulation. The analysis 
+results are described as follows. 
+1) Accident happenings 
+Two bus-pedestrian accidents happened while a pedestrian 
+was crossing an unsignalized intersection without warning 
+message devices. It indicates that providing appropriate 
+warning messages to bus drivers who are approaching to an 
+intersection can avoid bus-pedestrian collisions effectively. 
+2) Perception-reaction time 
+Table II shows the statistics of perception-reaction time for 
+the subjects responding to various events. We can find that the 
+average perception-reaction time with warning messages is 
+higher than that without warning messages. It implies that 
+warning messages provide drivers with sufficient time to stop 
+the bus before accidents happen. The shorter perception-
+reaction time without warning messages also implies that bus 
+drivers can quickly react to an emergency situation. 
+242
+2009 IEEE Asia-Paciﬁc Services Computing Conference (IEEE APSCC)
+
+--- Page 5 ---
+TABLE II. THE STATISTICS OF PERCEPTION-REACTION TIME 
+Intersection 
+Types 
+Pedestrian 
+Types 
+Warning 
+Types 
+Sample 
+Size 
+Perception-reaction 
+Time, seconds 
+Mean 
+Standard 
+Deviation 
+Unsignalized 
+intersection 
+Children 
+Voice 
+warning 
+36 
+2.23 
+0.66 
+VMS 
+display 
+34 
+2.19 
+0.70 
+No 
+warning 
+34 
+1.76 
+0.54 
+Adult 
+pedestrians 
+Voice 
+warning 
+36 
+2.07 
+0.66 
+VMS 
+display 
+35 
+2.13 
+0.56 
+No 
+warning 
+35 
+1.66 
+0.61 
+Elderly 
+pedestrians 
+Voice 
+warning 
+36 
+2.21 
+0.54 
+VMS 
+display 
+35 
+2.13 
+0.57 
+No 
+warning 
+36 
+1.72 
+0.61 
+Signalized 
+intersection 
+with green 
+interval 
+Children 
+Voice 
+warning 
+34 
+2.27 
+0.64 
+VMS 
+display 
+34 
+2.23 
+0.57 
+No 
+warning 
+35 
+1.72 
+0.88 
+Adult 
+pedestrians 
+Voice 
+warning 
+35 
+2.14 
+0.65 
+VMS 
+display 
+34 
+2.23 
+0.64 
+No 
+warning 
+36 
+1.61 
+0.69 
+Elderly 
+pedestrians 
+Voice 
+warning 
+36 
+2.19 
+0.64 
+VMS 
+display 
+35 
+2.32 
+0.70 
+No 
+warning 
+36 
+1.60 
+0.62 
+3) Emergency deceleration rate 
+The statistics of emergency deceleration rate for the 
+subjects responding to various events are summarized in Table 
+III. We can find that in most cases the average emergency 
+deceleration rates without warning messages are higher than 
+those with warning messages. It indicates that bus drivers have 
+to brake suddenly to react to an emergency situation without 
+early warnings even though they can quickly respond to it. 
+The experimental results of perception-reaction time and 
+emergency deceleration rate are further analyzed by factorial 
+analysis of variance (ANOVA) to compare the significance of 
+difference of the measures. The analysis results show that the 
+difference of the mean perception-reaction time and the 
+difference of the mean emergency deceleration rate among 
+warning types are significant, with α = 0.05. The average 
+perception-reaction 
+time 
+with 
+warning 
+messages 
+is 
+significantly higher than that without warning messages, and 
+the emergency deceleration rates without warning messages 
+are significantly higher than those with voice warnings, with α 
+= 0.05. 
+ 
+TABLE III. THE STATISTICS OF EMERGENCY DECELERATION RATE 
+Intersection 
+Types 
+Pedestrian 
+Types 
+Warning 
+Types 
+Sample 
+Size 
+Emergency 
+Deceleration Rate, 
+m/sec2 
+Mean 
+Standard 
+Deviation 
+Unsignalized 
+intersection 
+Children 
+Voice 
+warning 
+36 
+3.15 
+1.23 
+VMS 
+display 
+36 
+3.26 
+1.27 
+No 
+warning 
+35 
+3.46 
+1.29 
+Adult 
+pedestrians 
+Voice 
+warning 
+36 
+3.17 
+1.14 
+VMS 
+display 
+36 
+2.99 
+1.11 
+No 
+warning 
+35 
+3.47 
+1.09 
+Elderly 
+pedestrians 
+Voice 
+warning 
+36 
+3.18 
+1.38 
+VMS 
+display 
+36 
+2.97 
+1.09 
+No 
+warning 
+36 
+3.56 
+1.44 
+Signalized 
+intersection 
+with green 
+interval 
+Children 
+Voice 
+warning 
+34 
+3.01 
+1.19 
+VMS 
+display 
+34 
+3.35 
+1.36 
+No 
+warning 
+35 
+3.10 
+1.18 
+Adult 
+pedestrians 
+Voice 
+warning 
+35 
+2.98 
+1.02 
+VMS 
+display 
+34 
+3.41 
+1.28 
+No 
+warning 
+36 
+3.25 
+1.19 
+Elderly 
+pedestrians 
+Voice 
+warning 
+36 
+2.77 
+1.20 
+VMS 
+display 
+35 
+3.03 
+1.31 
+No 
+warning 
+36 
+3.29 
+1.39 
+ 
+C. Parameters Analysis 
+The values of parameters, including the warning timing for 
+the bus driver (Twd), the shortest distance between the 
+pedestrian detector and the curb (dp), the shortest distance 
+between the vehicle speed detector and the collision point (Dc), 
+the warning timing for the pedestrians (Twp), and the locations 
+of variable message signs (Vdc and Vdp), can be developed 
+through the further analysis of the perception-reaction time, 
+the emergency deceleration rate and other parameters from the 
+simulation experiment. The analysis results are described as 
+follows. 
+1) The warning timing for the bus driver (Twd) 
+During the experiment, the locations of the stopped buses 
+are about 11-13 m in front of the edge of the crosswalk if the 
+buses did not collide with the crossing pedestrians, thus the (1) 
+is modified by 
+ 
+          
+β
+−
++
+=
+d
+V
+T
+T
+r
+wd
+3.6
+0
+                                       (7) 
+2009 IEEE Asia-Paciﬁc Services Computing Conference (IEEE APSCC)
+243
+
+--- Page 6 ---
+The β is an adjustment factor which is computed as the 
+distance between the stopped bus and the stop line (the 
+distance between the stopped bus and the edge of the 
+crosswalk minus 5.5 m) divided by the approaching speed of 
+the bus (V0). The approaching speed of the bus is assumed as 
+50 km/h. Table IV shows the mean warning timing for bus 
+drivers avoiding colliding with various types of pedestrians at 
+different intersection types with warning devices. Because the 
+difference of the mean perception-reaction time and the 
+difference of the mean emergency deceleration rate are not 
+significant in intersection types and pedestrian types, we 
+develop generalized warning timings for the voice warning 
+and the VMS display as 6.28 s and 6.07 s, respectively. 
+TABLE IV.  THE MEAN WARNING TIMING FOR THE BUS DRIVERS 
+Intersection Types 
+Pedestrian Types 
+Twd for 
+voice 
+warning, 
+seconds 
+Twd for 
+VMS 
+display, 
+seconds 
+Unsignalized 
+intersection 
+Children 
+6.15 
+5.96 
+Adult pedestrians 
+5.96 
+6.28 
+Elderly pedestrians 
+6.11 
+6.27 
+Signalized 
+intersection with 
+green interval 
+Children 
+6.40 
+5.70 
+Adult pedestrians 
+6.35 
+5.85 
+Elderly pedestrians 
+6.77 
+6.46 
+Generalized Value 
+6.28 
+6.07 
+ 
+2) The shortest distance between the pedestrian detector and 
+the curb (dp) 
+The location of the pedestrian detector is determined by (4) 
+and the highest pedestrian speed (1.11 m/s for adult 
+pedestrians). The buffer time from the detection of pedestrian 
+to the warning message initiation (Tb1) is determined by the 
+detection technology. We assume that the value is 0.1 s, and 
+then the shortest distance between the pedestrian detector and 
+the curb is computed as 7.1 m. 
+3) The shortest distance between the vehicle speed detector 
+and the collision point (Dc) 
+Considering the locations of the stopped buses during the 
+experiment, we modify (5) by 
+          Dc = 0.278 V0Tr - β + Tb2) + 
+d
+V
+×
+92
+.
+25
+2
+0
+               (8) 
+The buffer time for the calculation of vehicle speed (Tb2) is 
+assumed as 0.1 s. The computed value for the shortest distance 
+between the vehicle speed detector and the collision point is 
+61 m. 
+4) The warning timing for the pedestrians (Twp) 
+By (6) and the computed Dc, the warning timing for 
+pedestrians is computed as 4.39 s. 
+5) The locations of variable message signs (Vdc and Vdp) 
+Based on the experimental results, we adjust the location 
+of the VMS for bus drivers and recommend that the distance 
+between the VMS and the stop line is 50 m. The distance 
+between the VMS for pedestrians and the curb (Vdp) is 
+determined by the perception-reaction distance (perception-
+reaction time × walking speed) of pedestrians. We use the 
+design value for the perception-reaction time (2.5 s) and the 
+mean walking speed for adult pedestrians (1.29 m/s) to 
+compute the distance. Finally, the suggested value is 3 m. 
+IV. CONCLUSIONS AND DISCUSSION 
+According to the traffic accident statistics in some prior 
+studies, high percentage of fatal accidents involves pedestrians 
+crossing the street at intersections. It also implies that 
+intersections are the high-risk places for pedestrians. With the 
+rapid development of information and communications 
+technologies, using advanced technologies to improve 
+pedestrian safety at intersections has become more feasible. 
+Based on the concept of the intersection collision warning 
+system (ICWS), this study has attempted to propose an 
+innovation design in the collision warning system for both bus 
+drivers and pedestrians at intersections. Understanding the 
+importance of parameters for an adequate warning system, we 
+conduct a bus driving simulation experiment and analyze 
+experimental results to develop the values for the system 
+parameters, including the warning timing for the bus driver, 
+the shortest distance between the pedestrian detector and the 
+curb, the shortest distance between the vehicle speed detector 
+and the collision point, the warning timing for the pedestrians, 
+and the locations of variable message signs. 
+The experimental results also reflect some characteristics 
+of bus driving behavior at intersections such as quickly 
+reacting to emergency situations but braking suddenly in the 
+emergency situations without early warnings. Sometimes the 
+buses might collide with pedestrians in the emergency 
+situations. Thus, it is helpful to provide appropriate warning 
+messages to bus drivers who are approaching to the 
+pedestrians crossing the street at an intersection for avoiding 
+bus-pedestrian collisions effectively. The conceptual design 
+and parameters developed in this study should provide a useful 
+base in the development of an intersection bus-pedestrian 
+collision warning system. 
+For the layout of the warning system, we believe that the 
+locations of variable message signs will cause impacts on bus 
+drivers and pedestrians. It will be necessary to conduct more 
+detailed simulations to validate the concept. Moreover, the 
+detection and telecommunication techniques should be further 
+analyzed to enhance the capabilities of the system. 
+REFERENCES 
+[1] H. Fontaine, Y. Gourlet, “Fatal Pedestrian Accidents in France: A 
+Typological Analysis,” Accident Analysis and Prevention, Vol. 29, No. 3, 
+pp. 303-312, May 1997. 
+[2] S. Sarkar, R. Van Houten, J. Moffatt, “Using License Manuals To 
+Increase Awareness About Pedestrian Hazards at Intersections,” 
+Transportation Research Record 1674, TRB, National Research Council, 
+Washington, D.C., pp. 49-56, 1999. 
+[3] W.G. Najm, J.D. Smith, D.L. Smith, Analysis of Crossing Path Crashes, 
+Final Report, DOT-VNTSC-NHTSA-01-03, National Highway Traffic 
+Safety Administration, Washington, D.C., Jul. 2001. 
+244
+2009 IEEE Asia-Paciﬁc Services Computing Conference (IEEE APSCC)
+
+--- Page 7 ---
+[4] Pedestrians: 
+Type 
+of 
+Problem 
+Being 
+Addressed, 
+http://safety.transportation.org/htmlguides/peds/types_of_probs.htm 
+[5] FHWA, Intersection Collision Warning System, FHWA-RD-99-103, Apr. 
+1999. 
+[6] J.C. Laberge, J.I. Creaser, M.E. Rakauskas, N.J. Ward, “Design of an 
+Intersection Decision Support (IDS) Interface to Reduce Crashes at Rural 
+Stop-controlled Intersections,” Transportation Research Part C, Vol. 14, 
+Issue 1, pp. 39-56, Feb. 2006. 
+[7] V.L. Neale, M.A. Perez, S.E. Lee, Z.R. Doerzaph, “Investigation of 
+Driver-Infrastructure and Driver-Vehicle Interfaces for an Intersection 
+Violation Warning System,” Journal of Intelligent Transportation 
+Systems, Vol. 11, Issue 3, pp. 133-142, Jul. 2007. 
+[8] K. Stubbs, H. Arumugam, O. Masoud, C. McMillen, H. Veeraraghavan, 
+R. Janardan, N. Papanikolopoulos, A Real-Time Collision Warning 
+System for Intersections, http://colinm.org/papers/Stubbs-2003-ITSA-
+final.pdf 
+[9] S. Atev, O. Masoud, R. Janardan, N. Papanikolopoulos, Real-Time 
+Collision Warning and Avoidance at Intersections, Final Report, Dept. of 
+Computer 
+Science 
+and 
+Engineering, 
+University 
+of 
+Minnesota, 
+http://www.lrrb.org/pdf/200445.pdf, Nov. 2004. 
+[10] R. Van Houten, K. Healey, J.E.L. Malenfant, R. Retting, “Use of Signs 
+and Symbols to Increase the Efficacy of Pedestrian-Activated Flashing 
+Beacons at Crosswalks,” Transportation Research Record 1636, TRB, 
+National Research Council, Washington, D.C., pp. 92-95, 1998. 
+[11] C.Y. Chang, Y.R. Chou, “Development of Fuzzy-Based Bus Rear-End 
+Collision Warning Thresholds Using a Driving Simulator,” IEEE 
+Transactions on Intelligent Transportation Systems, Vol. 10, No. 2, pp. 
+360-365, Jun. 2009. 
+ 
+ 
+2009 IEEE Asia-Paciﬁc Services Computing Conference (IEEE APSCC)
+245

@@ -1,0 +1,1223 @@
+--- Page 1 ---
+Published in IET Intelligent Transport Systems
+Received on 31st January 2013
+Revised on 11th October 2013
+Accepted on 26th November 2013
+doi: 10.1049/iet-its.2013.0024
+ISSN 1751-956X
+Effectiveness of forward obstacles collision warning
+system based on deceleration for collision avoidance
+Shota Takada, Toshihiro Hiraoka, Hiroshi Kawakami
+Graduate School of Informatics, Kyoto University, Yoshida Honmachi, Sakyo-ku, Kyoto 606-8501, Japan
+E-mail: takada@sys.i.kyoto-u.ac.jp
+Abstract: In the authors previous study, the authors proposed deceleration for collision avoidance (DCA) as an index to evaluate
+collision risks against forward obstacles and examined the effectiveness of their forward obstacles collision warning system
+(FOCWS) based on DCA. In the present manuscript, they improve the visual interface of the FOCWS, and conduct driving
+simulator experiments to quantitatively evaluate the effectiveness of the improved FOCWS in situations where a preceding
+vehicle decelerates abruptly. The experimental results revealed that the FOCWS based on DCA was effective in assisting
+drivers to shorten the reaction time and to avoid collisions. Moreover, in the subjective assessment questionnaire, a signiﬁcant
+number of experimental participants reported that the FOCWS based on DCA could evaluate collision risks more properly
+compared with the FOCWS based on a time-to-collision.
+1
+Introduction
+Various countermeasures have been proposed by the Japanese
+Government’s Eighth Fundamental Trafﬁc Safety Program
+[1] to reduce trafﬁc accidents, of which, advanced safety
+vehicles (ASVs) are the most well-known examples. ASV
+is deﬁned as an intelligent vehicle capable of utilising
+information-communication
+technology.
+Our
+research
+focuses on the forward obstacles collision warning system
+(FOCWS), which is a warning function of a forward
+collision damage mitigation braking system, and is one of
+the practical technologies employed in ASVs. Recently,
+there are various kinds of collision avoidance systems
+which equip the FOCWS function and an automatic braking
+function. They can detect obstacles by using stereo camera,
+laser radar sensor or milliwave radar sensor [2–5]. Many
+researches have examined effects of the systems on drivers’
+behaviour, by using driving simulator or actual vehicle
+[6–10].
+Our previous study proposed deceleration for collision
+avoidance (DCA) as an index for use when evaluating
+collision risks against forward obstacles [11], and applied it
+as
+a
+provisional
+warning
+threshold
+for
+the
+FOCWS.
+Additionally, driving simulator experiments were performed
+to evaluate the effectiveness of FOCWS based on DCA
+[12]. However, the results did not sufﬁciently clarify the
+quantitative effectiveness of FOCWS, nor did the study
+examine negative aspects of FOCWS, because they did not
+compare the case of driving with and without the FOCWS.
+Moreover, in the ﬁrst paper [11] which proposed DCA, the
+calculation process of DCA assumed that a following vehicle
+initiates a uniform motion within a driver’s constant reaction
+time, and then the assumption causes underestimation and
+overestimation of the collision risk when the following
+vehicle accelerates and decelerates, respectively. Therefore,
+in our subsequent efforts, we improved the DCA calculation
+process and performed numerical simulations [13]. The
+improved DCA is based on an expanded assumption that
+the following vehicle initiates a uniformly accelerated
+motion within the reaction time. The results indicated that,
+when compared with conventional DCA, the improved
+DCA could evaluate collision risks more effectively.
+Accordingly, in the present study, driving simulator
+experiments were performed to evaluate the quantitative
+effectiveness of the FOCWS based on the improved DCA
+in situations involving abrupt deceleration of a preceding
+vehicle, and to clarify driving behaviour variations.
+2
+Deceleration for collision avoidance
+2.1
+DCA outline
+DCA [m/s2] is a measurement that indicates the minimum
+required deceleration of a following vehicle necessary to
+avoid a collision with a forward obstacle, such as a
+preceding vehicle [11, 13]. DCA, in a situation where a
+preceding vehicle maintains its current acceleration, is
+deﬁned as overt DCA (ODCA), and the ongoing DCA that
+is based on the assumption that the preceding vehicle will
+decelerate abruptly at any moment is deﬁned as potential
+DCA (PDCA).
+2.2
+Principle symbols
+Fig. 1 shows the variables used in the present paper. This
+paper adopts the same variables deﬁned in the previous
+study [14]. It assumes that the preceding vehicle initiates
+motion
+and
+accelerates
+in
+a
+uniform
+manner,
+with
+www.ietdl.org
+570
+& The Institution of Engineering and Technology 2014
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+
+--- Page 2 ---
+acceleration ap0, and that the following vehicle initiates
+motion
+and
+accelerates
+in
+a
+uniform
+manner,
+with
+acceleration af0 within a driver’s reaction time T, and with
+acceleration afT after the reaction time T. Note that the
+relative position xr( = xf – xp) becomes negative when the
+following vehicle is behind the preceding vehicle. Therefore
+the inter-vehicular distance for the following state can be
+calculated by reversing the sign of the relative distance xr.
+2.3
+Driver reaction time
+The DCA calculation process requires knowledge of the
+reaction time T of the following vehicle driver. Note that
+the ‘reaction’ in this context refers to the process that
+begins the moment the driver decides to act and extends to
+the moment the action is complete. As mentioned above,
+DCA is deﬁned with the assumption that the following
+vehicle continues accelerating during the reaction time T.
+This indicates that the driver will be unable to avoid a
+collision in situations where the impact will occur during
+the reaction time – even if warned by the FOCWS. The
+condition for collision avoidance within the reaction time
+becomes as deﬁned in the equation below
+xr0 + vr0T + 1
+2 ar0T 2 , 0
+(1)
+Here, the driver’s reaction time T is deﬁned by
+T =
+1.2 s
+br = 0
+
+
+0.2 s
+br . 0
+
+
+
+(2)
+where br represents the degree of brake pedal depression
+(0 ≤br ≤1) [13]. In our previous paper [12], driver reaction
+time T was deﬁned as a constant value: 1.21 s, because the
+simulator experiments revealed that 90% of all recorded
+reaction times were within that value. However, reaction
+times will be signiﬁcantly less than the abovementioned
+value in situations where the driver is already depressing
+the brake pedal. Therefore, in cases when the driver is
+already depressing the brake pedal, the reaction time is
+shortened to 0.2 s.
+2.4
+Overt DCA
+ODCA, αo [m/s2], is deﬁned as the DCA occurring when the
+preceding vehicle maintains its current acceleration (see (3))
+where af1, af2 and t1 are deﬁned as follows
+a f 1 = v2
+r0 + 2a p0xr0 + (2vr0 + ar0T)a f 0T
+xr0 + 2vr0T + ar0T 2
+(4)
+a f 2 =
+v f 0 + a f 0T
+
+2
+2xr0 + 2v f 0T + a f 0T 2 + (v2
+p0/a p0)
+(5)
+t1 = −2xr0 + vr0T
+ar0T + vr0
+≤−v p0
+a p0
+(6)
+2.5
+Potential DCA
+PDCA, αp [m/s2], is deﬁned based on the assumption that the
+preceding vehicle suddenly decelerates at a constant rate of
+0.6 G ( = 5.88 m/s2). The PDCA calculation process is
+basically the same as that for the ODCA. The difference is
+that the preceding vehicle’s acceleration ap0 is set at −5.88 m/s2
+when it is moving forward (vp0 > 0), or set at 0 m/s2 when
+the vehicle stops (vp0 = 0).
+Case 1: The preceding vehicle is moving forward
+The PDCA in situations when the preceding vehicle is
+moving forward can be expressed by
+ap =
+0
+vp0 . 0,
+vp0
+5.88 , t′
+1,
+v f 0 + a f 0T ≤0
+
+
+−a′
+f 1
+vp0 . 0,
+T , t′
+1 ≤vp0
+5.88
+
+
+−a′
+f 2
+vp0 . 0,
+vp0
+5.88 , t′
+1,
+v f 0 + a f 0T . 0
+
+
+⎧
+⎪⎪⎪⎪⎪⎨
+⎪⎪⎪⎪⎪⎩
+(7)
+where a’f1, a’f2 and t’1 are obtained from (4), (5) and (6),
+respectively, by substituting −5.88 m/s2 for ap0.
+Case 2: the preceding vehicle stops
+Fig. 1
+Deﬁnition of variables
+ao =
+0
+a p0 ≥0,
+v p0 + a p0T ≥v f 0 + a f 0T or a p0 , 0,
+−v p0
+a p0
+, t1,
+v f 0 + a f 0T ≤0
+⎛
+⎝
+⎞
+⎠
+−a f 1
+a p0 ≥0,
+v p0 + a p0T , v f 0 + a f 0T or a p0 , 0,
+T , t1 , −v p0
+a p0
+⎛
+⎝
+⎞
+⎠
+−a f 2
+a p0 , 0,
+−v p0
+a p0
+, t1,
+v f 0 + a f 0T . 0
+
+
+⎧
+⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎨
+⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎩
+(3)
+www.ietdl.org
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+571
+& The Institution of Engineering and Technology 2014
+
+--- Page 3 ---
+The PDCA in cases when the preceding vehicle stops can
+be expressed by
+ap =
+0
+vp0 = 0,
+ap0 = 0,
+v f 0 + a f 0T ≤0
+
+
+−a′′
+f 1
+vp0 = 0,
+ap0 = 0,
+v f 0 + a f 0T . 0
+
+
+⎧
+⎨
+⎩
+(8)
+where a′′
+f 1 describes af1 when zero is substituted into vp0 and
+ap0. For additional details on the DCA derivation process,
+please refer to our previous study [13].
+3
+Driving simulator experiments
+3.1
+Previous DCA-FOCWS
+The experimental participants, in our previous driving
+simulator experiments [12], utilised an FOCWS based on
+the conventional DCA. It provides visual information as
+shown in Fig. 2a, and a collision warning. The visual
+interface consists of an inner yellow bar that represents the
+PDCA value αp and an outer red bar that represents the
+ODCA value αo. The bars expand and contract vertically,
+and the top and bottom of the bars indicate 6.0 and 0 m/s2,
+respectively. The colour of bars and the extension direction
+are designed to satisfy stimulas–response compatibility [15].
+The collision warning is sounded while the red bar (ODCA)
+exceeds the threshold (=4.0 m/s2), which was determined in
+our previous experiments [12].
+3.2
+Proposed DCA-FOCWS
+The previous experiments [12] also suggested that the visual
+interface might cause drivers’ confusion because of its
+complexity.
+For
+example,
+one
+of
+the
+experimental
+participants answered to the questionnaire about the interface:
+‘I did not understand whether I should watch out for the red
+or the yellow bar’. Therefore, for this study, the interface
+was modiﬁed as shown in Fig. 2b. The centre bar represents
+the ODCA value αo, whereas the top and bottom indicate 6.0
+and 0 m/s2, respectively. The bar colour is displayed in light
+blue when the deceleration is sufﬁcient to avoid collision
+(−af0 ≥αo) and changes to orange when deceleration is
+insufﬁcient to avoid collision (−af0 < αo) based on the
+following vehicle’s current deceleration af0. As for the
+PDCA, a yellow frame appears around the centre bar in
+situations where the PDCA exceeds 4.0 m/s2. Furthermore,
+the FOCWS provides an audible collision warning when the
+ODCA
+exceeds
+4.0 m/s2
+as
+same
+as
+the
+previous
+DCA-FOCWS [12], and it continues unless αo falls below
+2.0 m/s2 in order not to provide a very short-term warning.
+3.3
+FOCWS based on time-to-collision (TTC)
+(TTC-FOCWS)
+TTC is one of the most well-known indices to evaluate the
+collision risk, and it is employed as an index to determine
+the
+timing
+of
+collision
+warning
+provision
+in
+many
+FOCWSs. Consequently, in the present study, the simulator
+experiments were prepared utilising an FOCWS based on
+the TTC ( =−xr/vr), called a TTC-FOCWS (Fig. 2c), which
+was
+adopted
+to
+be
+compared
+with
+the
+proposed
+DCA-FOCWS. The TTC value is represented by the
+orange bar. The top and bottom denote a range from 0 to
+12 s in order to align the elastic direction of the bar and
+the threshold-line of collision warning to those of the
+DCA-FOCWS. A collision warning is provided while the
+TTC is < 4.0 s, which was found to be a proper threshold
+for a collision warning timing of the same driving simulator
+environment in our previous study [16].
+3.4
+Experimental conditions
+Fig. 3 shows a front view of the driving simulator, which was
+same with our previous studies [12, 14]. It is a ﬁxed-base
+handmade driving simulator which equips a digital signal
+Fig. 2
+Visual interfaces of FOCWS
+a DCA-FOCWS in the previous study
+b DCA-FOCWS in the present study
+c TTC-FOCWS in the present study
+www.ietdl.org
+572
+& The Institution of Engineering and Technology 2014
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+
+--- Page 4 ---
+processor (DSP) unit and interfaces such as a steering wheel, a
+gas pedal, a brake pedal and a meter display. CarSim
+RT-Linux, which is installed on the DSP unit, calculates
+19 degree-of-freedom vehicle dynamics in real time based
+on the drivers’ inputs. The experimental participants were
+12 males and 4 females, ranging in age from 20 to 36
+(average 26.1 years). Each participant drove a virtual vehicle
+along a course consisting of a two-lane, one-way straight
+road, the width and length of which were 7 m and 6 km,
+respectively. The following vehicle, which an experimental
+participant drove, was set to travel in the left lane along with
+two vehicles that travelled in the same direction. A preceding
+vehicle travelled in front of the following vehicle and a
+parallel-running vehicle travelled in the right lane.
+Each experimental participant drove the course three times
+for each of three driving conditions. During each simulator
+run, the preceding vehicle executed different dangerous
+deceleration patterns, as shown in Fig. 4, twice per each
+condition, in random order.
+We determined eight evaluation sections that included one
+dangerous deceleration pattern. To prevent experimental
+participants from anticipating pending events, the preceding
+vehicle randomly accelerated or decelerated within the
+range from 0.1 to 0.3 G outside the evaluation sections. The
+maximum velocity of the preceding vehicle was 80 km/h,
+and the preceding vehicle stopped 18 times during the
+course for each driving condition. The velocity of the
+parallel-running vehicle travelling in the right lane at time t
+was set to the preceding vehicle’s velocity at time t −1 s.
+3.5
+Experimental participant instructions
+The experimental participants were given the following
+instructions:
+(1) drive in the left lane and follow the preceding vehicle.
+(2) take proper avoidance behaviour when you detect danger.
+(3) follow the preceding vehicle within a distance sufﬁcient to
+prevent the parallel-running vehicle from cutting in ahead.
+(4) engage in the mental arithmetic task as long as it does not
+disturb driving ability.
+For number (3), the right edge of the meter display was set
+to turn yellow when the following vehicle was too far from
+the preceding vehicle, and we added the instruction: ‘Catch
+up with the preceding vehicle when indicated by the
+display’. For number (4), a mental arithmetic task was set
+as a sub-task that required experimental participants to
+listen to two numbers between 1 and 9 spoken every 2 s,
+add them together and then provide verbal answers. The
+purpose of the sub-task was to reproduce the driver
+workload equivalent to the real driving situation.
+3.6
+Experimental procedure
+Before the experiments began, each experimental participant
+performed practice driving to familiarise themselves with the
+driving simulator environment. Then, they drove the course
+under three types of driving conditions, as follows:
+(a) w/o-condition: driving without the FOCWS
+(b) TTC-condition: driving with the TTC-FOCWS
+(c) DCA-condition: driving with the DCA-FOCWS
+To reduce order effects, the experimental participants were
+divided into four groups, and the experimental order was
+varied for each.
+Prior to the TTC- and DCA-conditions, the experimental
+participants were provided an explanation of the system,
+after which they performed practice driving to familiarise
+themselves with the FOCWS. Note that the explanation
+provided
+by
+the
+experimenter
+regarding
+the
+FOCWS
+behaviour was limited to the following: ‘The bar extends
+upward as the possibility of collision increases, and a
+collision warning is provided when the risk exceeds the red
+line’. In other words, they were not provided background
+explanations about TTC, DCA or even the best way to use
+the FOCWS. During the practice driving sessions, they
+familiarised themselves with the behaviour of the visual
+interface and collision warning by viewing an auto-running
+demonstration.
+Each experimental
+participant
+was also
+given several opportunities to use the FOCWS when
+driving the simulated vehicle unsupervised.
+4
+Experimental results and discussion
+4.1
+Results of collision avoidance
+Fig. 5a shows the average number of collisions, in all
+evaluation sections, for each driving condition. Note that
+Fig. 3
+Front view of driving simulator
+Fig. 4
+Preceding vehicle deceleration patterns
+www.ietdl.org
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+573
+& The Institution of Engineering and Technology 2014
+
+--- Page 5 ---
+the total number of abrupt decelerations simulated rear-end
+collision was eight for each driving condition. The one-way
+analysis of variance (ANOVA) revealed that a main effect
+of the driving condition was signiﬁcant [F(2, 30) = 4.33,
+P < 0.05], and Shaffer’s multiple comparison test clariﬁed
+that the number of DCA-condition collisions (at 5%) was
+statistically smaller than that of w/o- and TTC-conditions.
+The results indicate that the DCA-FOCWS is effective at
+reducing collisions.
+Figs. 5b and c show the average brake-on TTC and
+brake-on ODCA, respectively. The brake-on TTC (ODCA)
+represents the value of TTC (ODCA) at the moment when
+the following vehicle’s driver depressed the brake pedal in
+reaction to the preceding vehicle’s abrupt deceleration.
+One-way ANOVA revealed that the main effect of the
+driving condition on each index was signiﬁcant [F(2, 30) =
+12.91, P < 0.001 and F(2, 30) = 11.50, P < 0.001]. Multiple
+comparison tests clariﬁed that the brake-on TTC of the
+DCA-condition was statistically larger than those of other
+two conditions (at 5%), and that the brake-on ODCA level
+of the DCA-condition was statistically smaller than those of
+other two conditions (at 5%). This indicates that provision
+of
+the DCA-FOCWS
+contributes to
+shortening
+driver
+reaction times, and therefore the TTC and ODCA at the
+moment when drivers take avoidance action becomes safer.
+Figs. 6a and b show the number of collisions and the
+brake-on TTC for each deceleration pattern of the preceding
+vehicle. Two-way ANOVA revealed that the interaction
+between the driving condition and the deceleration pattern
+was signiﬁcant in the number of collisions [F(6, 90) = 3.45,
+P < 0.01] and in the brake-on TTC [F(6, 90) = 3.84, P <
+0.01]. Furthermore, the main effect of the driving condition
+was signiﬁcant for Pattern 1 in the former [F(2, 30) = 11.67,
+P < 0.001], and for Patterns 1 and 3 in the latter [F(2, 30) =
+12.08, P < 0.001 and F(2, 30) = 6.20, P < 0.01]. According
+to
+the
+multiple
+comparison
+tests,
+all
+those
+of
+the
+DCA-condition were statistically small or large (at 5%)
+compared with the w/o-condition and TTC-condition.
+These results suggest that the DCA-FOCWS was very
+effective at enhancing collision avoidance, especially in
+Pattern 1. In Pattern 1, the following vehicle would
+accelerate to follow the preceding vehicle while it was
+accelerating and the preceding vehicle would abruptly
+decelerate just after it reached 80 km/h. Since the improved
+DCA
+[13]
+reﬂects
+the
+current
+following
+vehicle’s
+acceleration, the collision warning can be provided earlier
+in situations where the following vehicle is accelerating.
+This indicates that the collision warning was provided
+immediately in reaction to the preceding vehicle’s abrupt
+deceleration, and thus contributed to reducing collisions by
+shortening the following vehicle’s driver reaction time.
+4.2
+Reaction time for preceding vehicle and
+collision warning
+Fig. 7a illustrates the average reaction time Rt1 to the
+preceding vehicle’s deceleration for each driving condition.
+Rt1 is deﬁned as the time interval between the preceding
+vehicle’s deceleration and the moment when the following
+vehicle’s driver depressed the brake pedal. Rt1 in the
+DCA-condition was slightly smaller compared with other
+two conditions while there was no signiﬁcant difference.
+Fig. 7b shows the reaction time Rt2 for each deceleration
+pattern of the preceding vehicle in the TTC-condition and
+DCA-condition. Rt2 is deﬁned as the reaction time from the
+moment FOCWS provided the collision warning to the
+moment following vehicle’s driver depressed the brake
+pedal. Rt2 in the DCA-condition was obviously larger than
+the TTC-condition. It suggests that the DCA-FOCWS
+provided
+collision
+warning
+before
+the
+experimental
+participants intended to put on the brake. On the other
+hand, Rt2 of Pattern 1 in the TTC-condition was negative
+value. It means that many participants depressed the brake
+Fig. 5
+Experimental results
+a Number of collisions
+b Brake-on TTC
+c Brake-on ODCA
+Fig. 6
+Experimental results by types of deceleration pattern
+a Number of collisions
+b Brake-on TTC [s]
+www.ietdl.org
+574
+& The Institution of Engineering and Technology 2014
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+
+--- Page 6 ---
+pedal before the TTC-FOCWS provided warning. Similarly,
+in the cases of Patterns 2–4, some participants would intend
+to put on the brake before the collision warning.
+4.3
+Effect of DCA-FOCWS on driving behaviour
+Four experimental participants (Subs. #3, #8, #11 and #15)
+exhibited similar distinctive driving behaviours. Table 1(a)
+describes the total amount of time where PDCA exceeded
+4.0 m/s2 in all evaluation sections for the four participants.
+The results show that the times decreased signiﬁcantly in
+the DCA-condition. This trend was only observed in the
+four
+participants
+because
+the
+average
+time
+of
+all
+experimental
+participants
+in
+the
+w/o-,
+TTC-
+and
+DCA-conditions
+were
+207.8,
+227.9
+and
+204.5 s,
+respectively.
+Furthermore,
+Table
+1(b)
+shows
+that
+the
+number of collisions for the four participants also decreased
+in the DCA-condition.
+As mentioned above, a yellow frame is displayed by the
+DCA-FOCWS in situations where PDCA > 4.0 m/s2. The
+experimental results indicate that the four participants
+appeared to have controlled the following vehicle velocity
+in a manner that prevented the frame from appearing (not
+exceeding 4.0 m/s2 in PDCA), even though no experimental
+participants were provided instructions on how to use the
+FOCWS.
+Fig. 8, for example, shows the time series data of Sub. #8
+engaged in driving Pattern 4 of the DCA-condition. In that
+pattern, the preceding vehicle travelled at 50 km/h for more
+than 60 s before it decelerated at a rate of 0.4 G. The ﬁgure
+illustrates that Sub. #8 would have controlled velocity so as
+not to turn on the frame.
+Consequently, the results indicate that the four participants
+were able to reduce the number of collisions because they
+maintained a safer inter-vehicular distance by adjusting
+vehicle velocity in order to prevent the yellow frame from
+appearing.
+Fig. 9a illustrates the combined number of collisions for
+the
+other
+12
+participants
+(excluding
+the
+four
+abovementioned participants). The number of collisions for
+the DCA-condition [1.75 times in average, Fig. 9a] was
+larger than that recorded for the four abovementioned
+participants [0.25 times in average, Table 1(b)], but there
+was no statistical difference between them. Moreover, as
+shown in Figs. 9b and c, the brake-on TTC and the
+brake-on ODCA of these 12 participants have similar
+tendencies of those in the case of all participants (Figs. 5b
+and c).
+5
+Subjective evaluation
+5.1
+Contents of the questionnaire
+This
+section
+discusses
+results of
+the
+pencil-and-paper
+questionnaire for subjective evaluation. A questionnaire
+Q.1, which was performed after TTC/DCA conditions,
+consisted
+of
+the
+following
+three
+questions
+1-a–1-c.
+Questions 1-a and 1-b were 5-grade scale questions, and
+Question 1-c was a free-answer question:
+1-a) Was the provided information useful?
+Table 1
+Experimental results of four participants
+Conditions
+w/o
+TTC
+DCA
+(a) Total time of PDCA > 4 s
+sub. #3
+182.0
+240.2
+167.9
+sub. #8
+237.8
+192.1
+156.4
+sub. #11
+149.7
+219.8
+97.5
+sub. #15
+152.4
+194.4
+99.2
+ave.
+180.5
+211.6
+130.3
+(b) Number of collisions
+sub. #3
+3
+0
+0
+sub. #8
+5
+5
+1
+sub. #11
+1
+1
+0
+sub. #15
+1
+2
+0
+ave.
+2.50
+2.00
+0.25
+Fig. 7
+Reaction time
+a Reaction time for preceding vehicle
+b Reaction time for alarm
+Fig. 8
+Driving behaviour of Sub. #8
+www.ietdl.org
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+575
+& The Institution of Engineering and Technology 2014
+
+--- Page 7 ---
+1-b) Could you take proper driving behaviour according to the
+provided information?
+1-c) For question 1-b, how did you behave?
+Experimental participants answered questions 1-a and 1-b
+repeatedly with respect to three types of information; (i) the
+collision warning, (ii) the bar of the visual interface and
+(iii) the frame of the visual interface (DCA condition).
+A questionnaire Q.2, which was conducted at the end of
+experiment, consisted of questions 2-a–2-e on a 5-grade
+scale in order to explore comparisons and subjective
+evaluations between the TTC-FOCWS and DCA-FOCWS.
+For question 2-e-2, experimental participants were asked to
+provide a written response. The questions were as follows:
+2-a)
+Did
+you
+ﬁnd
+differences
+between
+the
+systems
+(TTC-FOCWS and DCA-FOCWS)?
+2-b) Which system is easier to understand with respect to the
+contents of visual interface?
+2-c) Which system do you think is more effective in terms of
+collision risk evaluation?
+2-d) Which system do you think is more effective in terms of
+collision warning timing?
+2-e) Which system would you want to use in an actual driving
+environment?
+2-e-2) For question 2-e, what is the reason you chose the
+answer?
+For questions 2-b–2-e, the experimental participants were
+asked to provide their answers in the following range: −2:
+TTC-FOCWS, ∼0: neither and ∼2: DCA-FOCWS.
+Moreover, experimental participants answered the driving
+style questionnaire (DSQ) [17].
+5.2
+Evaluation for the FOCWS
+5.2.1 About the usefulness of the FOCWS: Fig. 10a
+shows the average scores for questions 1-a and 1-b.
+As for question 1-a, the score for collision warning of
+the DCA-FOCWS was statistically larger than that of the
+TTC-FOCWS. The result indicates that a lot of participants
+thought the collision warning of the DCA-FOCWS was
+Fig. 9
+Experimental results of 12 participants
+a Number of collisions
+b Brake-on TTC
+c Brake-on ODCA
+Fig. 10
+Questionnaire scores
+a Questions 1-a and 1-b
+b Questions 2-b–2-e
+www.ietdl.org
+576
+& The Institution of Engineering and Technology 2014
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+
+--- Page 8 ---
+useful, and it is consistent with the quantitative results,
+mentioned in Section 4.2, that the reaction time Rt2 became
+larger
+in
+the
+DCA-condition
+compared
+with
+the
+TTC-condition.
+For question 2-a, 12 of 16 experimental participants
+answered that they felt a difference between the two
+systems. Seven participants answered ‘I felt a difference’
+and ﬁve participants answered ‘I felt a small difference’.
+Fig. 10b shows the range of scores for questions 2-b–2-e.
+It shows that for questions 2-b and 2-e, the answer was split
+down the middle, which indicates that opinions differed
+from participant to participant in terms of the visual
+interface understandability or whether they would like to
+use the system in an actual driving environment. On the
+other hand, the overall score of 2 for questions 2-c and 2-d
+is somewhat remarkable because they indicate that a
+signiﬁcant number of experimental participants believed the
+DCA-FOCWS to be superior in terms of the collision risk
+evaluation.
+5.2.2 Correlations between subjective evaluation and
+DSQ score:
+Here, the experimental participants were
+classiﬁed into the following three groups based on the
+results of question 1-a.
+Group 1: Subs. #1, #2, #8, #12 and #14
+→Participants who answered that the DCA-FOCWS’s bar
+was useful (score: 4 or 5), whereas the frame was not useful
+(score: 1–3).
+Group 2: Subs. #3, #5 and #11
+→Participants who answered that the DCA-FOCWS’s frame
+was useful (score 4 or 5), whereas the bar was not useful
+(score 1–3).
+Group 3: Subs. #4, #6, #7, #9, #10, #13, #15 and #16
+→Other participants.
+Fig. 11 shows the average scores of DSQ for each group. In
+Group 2, the score of ‘Hesitation for drive’ and ‘Anxiety
+about accident’ were higher compared with other two
+groups. Consequently, it implies that the drivers who have a
+negative attitude to driving tend to prefer the PDCA frame
+compared with the ODCA bar because they try to perform
+more careful driving. Furthermore, it can be derived from
+their driving behaviours mentioned in Section 4.3 that Subs.
+#3 and #11 of Group 2 maintained a safer inter-vehicular
+distance in order to prevent the PDCA frame from appearing.
+5.3
+Free description about the comparison of the
+FOCWS
+For question 1-b as shown in Fig. 10a, majority of the
+experimental participants reported that they could take
+proper behaviour according to the collision warning or
+visual
+information of the
+FOCWS. Some participants
+answered question 1-c of DCA-condition as follows:
+Sub. #4, #9 and #14: ‘I tried to keep the bar colour blue’.
+Sub. #3, #5, #11 and #15: ‘I tried to open the
+inter-vehicular distance to the preceding vehicle when
+the frame appeared’.
+These answers indicate that they drove their vehicles
+according to their own criteria based on the information of
+the DCA-FOCWS.
+Moreover, in TTC-condition, some participants answered
+as follows:
+Sub. #4: ‘I did not use the system, and decelerated the
+car by my feeling of distance’.
+Sub. #15: ‘The FOCWS provided the collision warning
+very frequently. I pressed the brake pedal every time it
+was provided’.
+Accordingly,
+these
+participants
+might
+think
+that
+the
+information
+provided
+by
+the
+TTC-FOCWS
+was
+not
+appropriate, and therefore they could not ﬁnd their own
+criteria how to utilise the information of the TTC-FOCWS.
+Next, we will consider the question 2-e-2 answers of those
+experimental
+participants
+that
+chose
+the
+TTC-FOCWS
+(score 1 or 2) in question 2-e:
+Sub. #5, #7 and #10: ‘The visual interface was simple
+and understandable’.
+Sub. #13: ‘I couldn’t take the time to determine the
+colour of the bar (in the case of the DCA-FOCWS)
+when driving’.
+These answers indicated the reason why the participants
+chose the TTC-FOCWS in question 2-e might be its
+simplicity.
+Furthermore,
+no
+opinions
+were
+stated
+that
+indicate the participants thought the TTC-FOCWS was
+superior in terms of the collision risk evaluation.
+Fig. 11
+DSQ score
+a Group 1
+b Group 2
+c Group 3
+www.ietdl.org
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+577
+& The Institution of Engineering and Technology 2014
+
+--- Page 9 ---
+On the other hand, the experimental participants who chose
+the DCA-FOCWS (score 1 or 2) in question 2-e answered in
+question 2-e-2 as follows:
+Sub. #1: ‘Collisions did not occur when using the
+DCA-FOCWS. Furthermore, the timing of the collision
+warning was also appropriate’.
+Sub. #4: ‘Using the system, I was able to determine
+whether the situation was safe or not and it was useful
+for improving my driving skill’.
+Sub. #9: ‘Driving became easy when using the system.
+The
+changing
+colour
+of
+the
+bar
+was
+also
+understandable’.
+Sub. #15: ‘Driving became more dangerous when using
+the TTC-FOCWS’.
+These descriptions indicated that they chose DCA-FOCWS in
+question
+2-e
+because
+they
+thought
+the
+collision
+risk
+evaluation
+provided
+by
+DCA-FOCWS
+was
+more
+appropriate.
+In
+particular,
+Sub.
+#4
+underscored
+the
+effectiveness of the system when he answered: ‘The system
+was useful for improving my driving skill’.
+5.4
+Correlations between subjective evaluation
+and collision avoidance performance
+Experimental participants were classiﬁed into the following
+two groups based on subjective evaluations of the results
+for question 2-e.
+Group A: Subs. #1, #3, #4, #6, #8, #9, #11, #15 →
+participants who chose the DCA-FOCWS
+Group B: Subs. #2, #5, #7, #10, #12, #13, #14, #16 →the
+others
+Fig. 12 shows the results of collision avoidance performance
+(number of collisions, brake-on TTC and brake-on ODCA) for
+each group. In Group A, the main effects of the driving
+condition were signiﬁcant in all three indices, and all three
+became safer in the DCA-condition. For Group B, there was
+no statistically signiﬁcant difference between indices.
+These results strengthen the implication that Group A
+participants chose the DCA-FOCWS because of their
+satisfaction
+with
+its
+collision
+risk
+evaluations.
+Those
+participants improved their collision avoidance performance
+by using the DCA-FOCWS and expressed desires to use it
+in actual driving environments. Conversely, for Group B,
+collision
+avoidance
+performance
+did
+not
+improve
+as
+signiﬁcantly under the DCA-condition when compared with
+the other conditions. Thus, it is considered likely that the
+participants of Group B would not be interested in using
+the DCA-FOCWS in actual driving environments because it
+would not improve their collision avoidance performance.
+6
+Conclusions
+In this paper, we reported the results of experiments
+performed
+using
+a
+driving
+simulator
+to
+evaluate
+the
+quantitative effect of the FOCWS, based on our improved
+DCA (DCA-FOCWS), in situations where the preceding
+vehicle
+decelerates
+abruptly.
+The
+experimental
+results
+showed that the DCA-FOCWS could be effective in
+assisting drivers to avoid collisions. In answers to the
+subjective assessment questions, a signiﬁcant number of
+experimental participants said the DCA-FOCWS properly
+evaluated collision risks, and that the timings of the
+collision warnings were appropriate.
+Some participants answered that the contents of the visual
+information was not understandable. As a future work,
+therefore, we have to discuss other presentation methods of
+the DCA in order to reduce drivers’ visual workload, for
+example, a head-up display [18, 19] and a haptic feed-back
+system.
+The
+present
+study
+performed
+the
+driving
+simulator
+experiments on the assumption that the FOCWS does not
+provide
+false
+alarms
+and
+missing
+alarms;
+however,
+conversely the system may increase collision risk in the
+case of malfunction [20]. In the next step, we would verify
+the inﬂuence of the false alarms and the missing alarms on
+the drivers’ behaviour.
+Although the experimental results showed the statistically
+signiﬁcant
+effectiveness
+of
+the
+proposed
+FOCWS
+as
+mentioned above, there is undeniable sense that the number
+Fig. 12
+Performance differences between Group A and Group B
+a Group A
+b Group B
+www.ietdl.org
+578
+& The Institution of Engineering and Technology 2014
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+
+--- Page 10 ---
+of participants was 16 which was not enough to verify the
+effectiveness completely. Accordingly, we plan to perform
+additional experiments in the future.
+7
+References
+1
+Takahashi, H.: ‘Summary of the eighth fundamental trafﬁc safety
+program’, J. Soc. Autom. Eng. Jpn., 2006, 60, (12), pp. 4–9
+2
+‘Balancing human activity with protecting the environment is what we
+seek’. 2011 CSR Report, Fuji Heavy Industries, 2011
+3
+‘SAFETY ACTIVITIES - NISSAN’S APPROACH TO SAFETY –’
+(Nissan Motor Company, August 2006)
+4
+Coelingh, E., Eidehall, A., Bengtsson, M.: ‘Collision warning with full
+auto brake and pedestrian detection – a practical example of automatic
+emergency
+braking
+–’.
+Proc.
+13th
+Int.
+IEEE
+Conf.
+Intelligent
+Transportation Systems, Madeira Island, Portugal, September 2010,
+pp. 155–160
+5
+Bogenrieder, R., Fehring, M., Bachmann, R.: ‘PRE-SAFE in rear-end
+collision situations’. Proc. 21th Int. Technical Conf. Enhanced Safety
+of Vehicles, Stuttgart, Germany, June 2009, Paper No. 09-0129
+6
+Ben-Yaacov, A., Maltz, M., Shinar, D.: ‘Effects of an in-vehicle
+collision avoidance warning system on short- and long-term driving
+performance’, Hum. Factors: J. Hum. Factors Ergon. Soc., 2002, 44,
+(2), pp. 335–342
+7
+Jamson, A.H., Lai, F.C.H., Carsten, O.M.J.: ‘Potential beneﬁts of an
+adaptive forward collision warning system’, Transp. Res. C, 2008, 16,
+(4), pp. 471–484
+8
+Chang, S.H., Lin, C.Y., Hsu, C.C., Fung, C.P., Jiun-Ren Hwang, J.R.:
+‘The effect of a collision warning system on the driving performance of
+young drivers at intersections’, Transp. Res. F, 2009, 12, (5), pp. 371–380
+9
+Adell, E.a., Várhelyi, A., Della Fontana, M.: ‘The effects of a driver
+assistance system for safe speed and safe distance – a real-life ﬁeld
+study’, Transp. Res. C: Emerg. Technol., 2011, 19, (1), pp. 145–155
+10
+Bella, F., Russo, R.: ‘A collision warning system for rear-end collision:
+a driving simulator study’, Procedia Soc. Behav. Sci., 2011, 20,
+pp. 676–686
+11
+Hiraoka, T., Tanaka, M., Kumamoto, H., Izumi, T., Hatanaka, K.:
+‘Collision risk evaluation index based on deceleration for collision
+avoidance (ﬁrst report) – proposal of a new index to evaluate collision
+risk against forward obstacles’, Rev. Autom. Eng., 2009, 30, (4),
+pp. 429–437
+12
+Hiraoka, T., Tanaka, M., Takeuchi, S., Kumamoto, H., Izumi, T.,
+Hatanaka, K.: ‘Collision risk evaluation index based on deceleration
+for collision avoidance (second report) – forward obstacle collision
+warning system based on deceleration for collision avoidance’, Rev.
+Autom. Eng., 2009, 30, (4), pp. 439–447
+13
+Hiraoka, T., Takada, S.: ‘Collision risk evaluation based on deceleration
+for collision avoidance’, Trans. Soc. Instrum. Control Eng., 2011, 47,
+(11), pp. 534–540
+14
+Kitajima, S., Marumo, Y., Hiraoka, T., Itoh, M.: ‘Comparison of
+evaluation indices concerning estimation of driver’s risk perception –
+risk perception of rear-end collision to a preceding vehicle’, Rev.
+Autom. Eng., 2009, 30, (2), pp. 191–198
+15
+Fitts, P.M., Seeger, C.M.: ‘S-R compatibility – spatial characteristics of
+stimulus and response codes’, J. Exp. Psychol., 1953, 46, pp. 199–210
+16
+Hiraoka, T., Nakata, K., Tanaka, M., Kumamoto, H.: ‘Situation-adaptive
+warning timing of a forward obstacle collision warning system’.
+Proc.
+15th
+World
+Congress
+on
+Intelligent
+Transport
+Systems,
+CD-ROM, 2008
+17
+Ishibashi, M., Okuwa, M., Akamatsu, M.: ‘Development of driving style
+questionnaire and workload sensitivity questionnaire for drivers’
+characteristic identiﬁcation’. Proc. 2002 JSAE Annual Congress, 2002,
+no. 55-02, pp. 9–12
+18
+Vassilis, C., Stylianos, P.: ‘Human-machine collaboration through
+vehicle head up display Interface’, Cogn. Technol. Work, 2010, 12,
+(1), pp. 41–50
+19
+Park, S.H., Kim, K.: ‘Driver-view based augmented-reality HUD
+system: concept and background’. Proc. 19th ITS World Congress,
+Vienna, Austria, October 2012, Paper no. AP-00162
+20
+Abe, G., Richardson, J.: ‘The inﬂuence of alarm timing on driver
+response to collision warning systems following system failure’,
+Behav. Inform. Technol., 2006, 25, (5), pp. 443–452
+www.ietdl.org
+IET Intell. Transp. Syst., 2014, Vol. 8, Iss. 6, pp. 570–579
+doi: 10.1049/iet-its.2013.0024
+579
+& The Institution of Engineering and Technology 2014

@@ -1,0 +1,1606 @@
+ARive
+
+Citation for published version (APA):
+Wang, C., Chu, D., & Martens, M. (2025). ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone
+Detection. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 9(1), Article
+20. https://doi.org/10.1145/3712270
+
+DOI:
+10.1145/3712270
+
+Document status and date:
+Published: 04/03/2025
+
+Document Version:
+Publisher’s PDF, also known as Version of Record (includes final page, issue and volume numbers)
+
+Please check the document version of this publication:
+
+• A submitted manuscript is the version of the article upon submission and before peer-review. There can be
+important differences between the submitted version and the official published version of record. People
+interested in the research are advised to contact the author for the final version of the publication, or visit the
+DOI to the publisher's website.
+• The final author version and the galley proof are versions of the publication after peer review.
+• The final published version features the final layout of the paper including the volume, issue and page
+numbers.
+Link to publication
+
+General rights
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights.
+
+            • Users may download and print one copy of any publication from the public portal for the purpose of private study or research.
+            • You may not further distribute the material or use it for any profit-making activity or commercial gain
+            • You may freely distribute the URL identifying the publication in the public portal.
+
+If the publication is distributed under the terms of Article 25fa of the Dutch Copyright Act, indicated by the “Taverne” license above, please
+follow below link for the End User Agreement:
+
+www.tue.nl/taverne
+
+Take down policy
+If you believe that this document breaches copyright please contact us at:
+
+openaccess@tue.nl
+
+providing details and we will investigate your claim.
+
+Download date: 27. Jun. 2026
+
+ ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone
+Detection
+CHAO WANG∗, Honda Research Insititue EU, Germany
+DERCK CHU∗, Eindhoven University of Technology, the Netherlands
+MARIEKE MARTENS, Eindhoven University of Technology, the Netherlands
+Human factors such as fatigue and distraction often impair drivers’ ability to gauge traffic dynamics, leading to collisions, 
+especially at unsignalized intersections. Augmented reality (AR) technology, particularly through advanced 3D projections 
+and wearable head-mounted displays (HMDs), offers a promising enhancement by integrating comprehensive environmental 
+awareness directly into the driver’s field of view. This paper presents "ARive," an innovative AR driver-assistance system 
+designed to improve road safety by projecting dynamic risk zones beneath other traffic participants, thus providing real-time 
+kinematic information to promote safer driving distances and informed decision-making. The research involved developing 
+two distinct AR designs and testing them using a fixed-base driving simulator with integrated real-time data communication. 
+A user study with 17 participants revealed that while AR projections significantly improve distance maintenance, particularly 
+in abrupt braking scenarios, they do not markedly affect brake response times or enhance safety during critical events. These 
+findings suggest the need for further optimization of AR design elements to maximize effectiveness, highlighting the potential 
+of AR in enhancing driver awareness and safety.
+
+CCS Concepts: • Human-centered computing → Mixed / augmented reality.
+
+Additional Key Words and Phrases: driving assistance system, augmented reality, driving simulator, interaction design
+
+ACM Reference Format:
+Chao Wang, Derck Chu, and Marieke Martens. 2025. ARive: Assisting Drivers with In-Car Augmented Reality for Risk 
+Zone  Detection.  Proc.  ACM  Interact.  Mob.  Wearable  Ubiquitous  Technol.  9,  1,  Article  20  (March  2025),  27  pages. 
+https: //doi.org/10.1145/3712270
+
+Introduction
+
+1 
+Human drivers may not always be proficient in accurately gauging the kinematics of surrounding traffic par-
+ticipants due to various human factors, for example fatigue, distraction, and overconfidence. This deficiency is 
+one of the leading causes of collisions related to left turn [35, 43, 48]. For example, when two drivers approach 
+an unsignalized intersection simultaneously, traffic rules apply in which one of the drivers has the right of way 
+through the intersection. The driver who does not have the right of way must decide whether the gap is large 
+enough to enter the intersection without causing disruption and forcing the other vehicle to slow down abruptly. 
+Another challenge arises when a driver is following a lead vehicle that suddenly decelerates. In this case, the
+
+∗Both authors contributed equally to this research.
+
+Authors’ Contact Information: Chao Wang, chao.wang@honda-ri.de, Honda Research Insititue EU, Offenbach am Main, Germany; Derck
+Chu, d.h.d.chu@student.tue.nl, Eindhoven University of Technology, Eindhoven, the Netherlands; Marieke Martens, m.h.martens@tue.nl,
+Eindhoven University of Technology, Eindhoven, the Netherlands.
+
+Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that 
+copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. 
+Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy 
+otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from 
+permissions@acm.org.
+© 2025 Copyright held by the owner/author(s). Publication rights licensed to ACM.
+ACM 2474-9567/2025/3-ART20
+https://doi.org/10.1145/3712270
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:2 
+
+•  Wang et al.
+
+driver has to gauge the intensity of the deceleration by the rate of the lead vehicle appearing larger, as the distance 
+becomes smaller.
+
+Augmented reality (AR) technology, which overlays digital information onto the real world, offers substantial 
+potential for delivering warnings and suggestions about hazardous objects or areas. Recently, the industry has 
+been actively exploring AR’s application as an advanced driver-assistance system (ADAS). This implementation 
+could provide drivers with additional information about their surrounding traffic environment, resulting in a 
+better overall driving experience and improved road safety [37].
+
+Contemporary applications of in-car AR-HUD (augmented reality heads-up display) have the capability to 
+provide  the  driver  with  relevant  2D  information,  for  example,  traffic si gns, sp eed li mit, cu rrent sp eed, and 
+navigation.  However,  these  windscreen  displays  suffer f rom a  l imited fi eld of  vi ew (F OV) an d ma y le ad to 
+disorientation because drivers must frequently shift their gaze from a closer objects (2D information) to the more 
+distant driving environment [28]. To address these limitations, more sophisticated AR applications utilizes 3D 
+AR projections to present images on the entire windscreen and integrate them seamlessly into the surrounding 
+road environment [20, 74]. Nevertheless, it’s important to note that these systems are still in a conceptual phase 
+due to the remaining technological limitations [22]. In recent years, there have been notable advancements in the 
+development of wearable AR devices, providing an alternative solution. AR glasses or head-mounted displays 
+(HMD) have the ability to monitor the user’s gaze and track their line of sight, leading to a considerably expanded 
+FOV compared to conventional HUD. While a few car manufacturers have explored the integration of AR HMDs 
+for in-vehicle use, these projects have largely remained in the conceptual phase. Furthermore, the majority of the 
+driving simulator studies have simulated AR by overlaying graphics on the monitor or by using virtual reality. 
+Consequently, there is a lack of empirical studies evaluating the practical use of AR HMDs for in-vehicle use.
+
+To further investigate the impact of AR head-mounted displays on safety-related applications, we designed 
+two distinct interfaces specifically tailored for augmented reality (AR) glasses; these interfaces enhance drivers’ 
+perception of other traffic participants’ kinematics by superimposing a dynamic red area (a risk zone) beneath 
+them through a holographic overlay. In order to verify our concept, we have implemented the interfaces on real 
+augmented reality glasses. Moreover, a fixed-base driving simulator has been developed that enables real-time 
+data communication with the AR device, and multiple driving scenarios were implemented. Then a user study 
+involving 17 participants showed participants were conducted to compare among two designs and non-AR 
+assistance. The quantitative driving data shows that participants behaved safer with AR visualization comparing 
+with non-AR condition. The questionnaires and interviews results show that user’s have a positive attitude 
+towards using AR glass for safety applications in vehicle, and prefer the visualizations which not only highlight 
+the risky objects but also project the potential risky area on the road.
+
+Over all, the main contributions of our research laying on the following perspectives:
+
+• We conducted the first user feedback study on a driving assistance application using a real AR headset.
+Previous research on AR for driving assistance primarily focused on AR-HUDs and windshield displays.
+Although some studies explored AR-HMDs as an alternative, they did not project content directly onto
+the surrounding environment. In contrast, our implementation with AR glasses allowed participants to
+experience high-fidelity AR content projected onto their surroundings, closely resembling a real-world
+product. This approach offers more robust insights into user acceptance of AR-HMDs for in-vehicle HMI
+applications, including user experience and mental workload.
+
+• We compared two different designs specifically tailored for real AR-HMD devices, representing distinct
+strategies for visualizing predictive risks. These designs were tested in various risky scenarios within a
+driving simulator with participant involvement. Analysis of driving behavior and subjective feedback offers
+valuable insights for researchers and practitioners to further explore the design space of AR-HMDs in
+enhancing driving safety.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:3
+
+2  Related Work
+In this chapter, we first explore how AR is employed in vehicles, focusing on recent developments in head-mounted 
+AR devices. We then review AR interface design for driving assistance, and finally examine prior research on 
+AR’s impact on driver distraction.
+
+2.1  Platforms for In-Vehicle Augmented Reality
+2.1.1  AR-HUD and Windshield Display.  AR is becoming more standardized in the automotive industry due to its 
+potential to enhance user experience and driver safety. A number of studies [6, 13, 22, 62, 70–72] have explored 
+the technology in various automotive applications, for which the most popular is the AR-HUD to provide vehicle 
+information, navigational aid, and road information.
+
+In a study by Charissis et al. [11], an AR HUD has been developed that projected incoming information onto 
+the driver’s point of view (POV). The researchers investigated it in contrast to a traditional HDD, using a gesture 
+recognition interface. In a fixed-base driving simulator study (n=30), the researchers found a 64% increase in 
+collision avoidance through the maintenance of eye gaze on the road. Medenica et al. [44] investigated the 
+upcoming AR personal navigation device (PND) in comparison to the traditional street view PND and map based 
+PND. Through a fixed-base driving simulator study, it was found that the AR PND increased the eye gaze time on 
+the road ahead, improving visual attention and driving performance. Furthermore, the subjective response from 
+the participants indicated a largely positive attitude. Another study on AR PND by Bark et al. (2014) [2] conducted 
+a fixed-base driving simulator study on a developed 3D volumetric HUD to aid the driver in navigating. The 
+evaluation by 15 users revealed an enhanced turn recognition time in comparison to traditional PND. Supporting 
+the previous study, they found that the use of an AR PND helped the driver fixating on the driving environment 
+more. Additionally, the researchers argued in a second study, comparing 2D-HUD and 3D-HUD, a necessity for 
+the implementation of a dynamically adjustable focal plane (3D-HUD) for proper registration of the AR cues.
+
+The leading manufacturers of HUD for the automotive industry, eg., Bosch, Continental, and Panasonic have 
+successfully penetrated the market by developing bright tablet-sized windscreen projectors [27]. However, These 
+windscreen  displays  have  a  limited  field o f v iew ( FOV) a nd p rojection s ize. E merging d evelopments i n AR 
+by companies such as WayRay [74] and EyeLights [20] may overcome these limitations by allowing full AR 
+windscreen projection into future vehicles for not only user experience, but also road safety. Nevertheless, a full 
+AR windscreen display is still at a conceptual stage for which the remaining technological challenges prevent the 
+implementation of this technology in near future vehicles [22].
+
+2.1.2  AR-HMD.  In recent years, there has been significant advancements in the development of wearable AR-
+HMD devices, which offer an alternative solution. AR glasses or head-mounted displays have the capability to 
+track the user’s gaze and follow their line of sight, resulting in a significantly larger field of view (FOV). In the 
+automotive domain, the technology holds the potential to project relevant information onto objects in different 
+lanes, sidewalks, or even traffic signs.
+
+Several car manufacturers, for example Volkswagen and Mercedes-Benz, have made efforts to link AR glasses 
+to in-vehicle systems to offer functionalities similar to a full AR windscreen display. BMW has built extensive 
+experience with AR/MR devices, showcased through projects like the MINI Augmented Vision 1, collaborations 
+with Meta Reality Labs 2  and BMW Motorrad’s ConnectedRide Smartglasses 3. The applications ranges from 
+gaming, navigation to parking. In the academic field, an initial study using AR-HMDs for in in-vehicle HMI was
+
+1https://www.press.bmwgroup.com/global/article/detail/T0213150EN/mini-augmented-vision-a-revolutionary-display-concept-enhances-
+safety-and-convenience
+2https://www.press.bmwgroup.com/deutschland/article/detail/T0417479DE/bmw-group-und-meta-reality-labs-stellen-gemeinsame-
+forschung-zur-vernetzung-von-extended-reality-geraeten-mit-digitalem-fahrzeug-oekosystem-vor?language=de
+3https://www.press.bmwgroup.com/global/article/detail/T0422306EN/bmw-motorrad-presents-connectedride-smartglasses
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:4 
+
+•  Wang et al.
+
+conducted by Kun et al. [33], who analyzed driver behavior during video calls with the aid of a HoloLens 1 and a 
+stationary driving simulator. More recently, He et al. [23] employed lightweight AR glasses to explore navigation 
+applications. However, if the visualized content was not properly registered at the correct location, this is by 
+definition not a real AR application.
+
+In summary, while the swift advancement of AR wearables garners significant interest from researchers and 
+industry professionals in the automotive domain, the industry’s exploration remains largely at the conceptual 
+level, and academic research is relatively scarce.
+
+2.2  AR Interface Design for Driving Assistance
+Augmented  Reality  (AR)  technology  has  been  extensively  adopted  to  enhance  driving  safety  by  projecting 
+information directly onto the surroundings. Although there are various types of display devices, interface designs 
+generally  fall  into  two  main  categories:  either  they  directly  highlight  hazardous  objects  or  they  demarcate 
+dangerous areas.
+
+2.2.1  Visualizing dangerous objects.  Directly highlighting the dangerous object can quickly indicate driver the 
+source of the danger for further measurement. For example, an AR interface proposed by FCWS by Phan et al.
+[52] was focused on marking the pedestrians which may collide with ego vehicle. The system has been developed 
+in a simulation setting to assess the effects of AR cues, in the form of a bounding box, on the driver’s awareness of 
+pedestrians (DAP). Moreover, The DAP has been described using 3 levels of variables, consisting of the perception, 
+vigilance, and anticipation. In the experiment setup, 27 participants tested the system in a fixed-base driving 
+simulator. The participants were tasked to follow a lead vehicle, encountering scenarios in which pedestrians 
+crossed the road. The dependent variables, such as visual reaction time, the accelerator pedal position, and 
+the amount of urgent braking, were analyzed for each pedestrian situation. The results of the study revealed 
+significant improvements in the dependent variables using the proposed AR cues for each level of the DAP, while 
+not producing any negative masking effects.
+
+Colley et al.[14] who compared four different modalities to indicate the object which may collide with the 
+autonomous driving vehicle, also proposed a similar visualization. Two of them are the visualization on the 
+windshield display, the rest two are HUD and lightbands on the dashboard. However, the result shows that there 
+is no significant differences regarding the acceptance by participants.
+
+2.2.2  Visualizing dangerous areas/trajectories.  Instead of merely marking the hazardous object itself, many AR 
+interfaces assist the driver in steering clear of perilous conditions by signaling that the area could be hazardous 
+to enter. For example, Tonnis et al. [63] developed two visualization schemes to display the braking distance and 
+drive-path using an AR HUD. As most car incidents occur due to longitudinal collisions or lane departure, the 
+researchers assumed that providing the drivers with this type of information could be beneficial. The concept 
+was evaluated in a fixed-base driving simulator, resulting in some interesting human factor findings, such as that 
+increasing visual aid provided an increased feeling of safety and did not affect the overall workload. Another 
+visualization shows the trajectory of other road users. For example, Colley et al. [15] proposed an AR interface 
+on the windshield display that visually displays the future trajectory predicted of other vehicles, to improve the 
+transparency of the autonomous driving system. Compared with 3 variables, color (hue), shape, and transparency, 
+in the user study, the results show that color conveys uncertainty uncertainty best.
+
+In summary, the automotive research community has extensively investigated AR interfaces for driving tasks, 
+including automated driving and driver assistance, with a particular focus on AR head-up displays and windshield 
+displays. However, it remains unclear whether these designs can be effectively extended to AR head-mounted displays 
+(AR-HMDs), as no prior research has examined interface design in this domain.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:5
+
+Impact of AR on Driver Distraction
+
+2.3 
+While the implementation of AR technology can enhance the cognitive efficiency of the driver [38], or reduce 
+the mental workload [3, 4, 7, 49], potentially leading to a higher task performance [39], studies have also shown 
+that it has its potential drawbacks, such as visual clutter or information overload [51]. For example, Horrey et al.
+[26] found that the increased clutter with the information overlay did not necessarily disrupt task performance
+more than a conventional adjacent display. It was suggested that the interference from visual clutter was not
+significant as the driving task is more reliant to the ambient vision. However, in more sophisticated AR systems
+that highlight potential hazards, it must be noted that interference can also be caused by the redirection of the
+user’s gaze from critical road elements that are not augmented by the system [31].
+
+Méndez et al. [47] conducted a review on the cognitive mechanisms of contemporary use of AR as ADAS. In 
+the automotive industry, the implementation of AR systems is expected to aid the driver in navigation and hazard 
+detection in order to reduce the amount of human factor related road accidents. However, the author suggests 
+that there is a plausible prospect that the implemented system offers little help to the driver, while adding risk of 
+cognitive and perceptual overload. It has been concluded that AR information should not be present at all times 
+to prevent occlusion of road elements and over trust of the system. Another related implication in the field is 
+inattentional blindness, which is a type of cognitive tunnelling, in which the person fails to perceive an event, as 
+their attention is focused on another stimulus. The study by Chen et al.[12] revealed that inattentional blindness 
+to unexpected hazard is enhanced by AR-HUD assisted driving. It has been found that unpredictable stimuli, 
+accidentally superimposed on the AR graphic, lead to a higher probability of the driver ignoring the accidental 
+events, and increased their response time. As can be frequently observed, fixed-base driving simulator studies on 
+AR-HUD conducting a subjective measurement of the mental workload through a validated questionnaire such 
+as the NASA-TLX or DALI, found a high standard deviation in combination with no statistical significance on 
+self-reported mental workload [18, 31, 32, 36, 63].
+
+In the research conducted by Kun et al. [33], participants were allowed to place the Skype window at a fixed 
+position of their choice. The findings indicate that AR content is less distracting compared to a traditional monitor 
+display. In another study by He et al. [23], the authors evaluated four different positions for navigation icons and 
+discovered that positioning the icons in the center, directly in front of the windshield, caused the most distraction, 
+despite being more accessible for participants.
+
+In summary, the design elements of such a system greatly determines the degree of the interference to visual 
+attention or cognitive load. Compare with extensive research investigated the distraction of AR-HUD, the study using 
+AR-HMD are rather sparse, especially there is no research using AR-HMD project holographic on the environment.
+
+3  Method
+To gain deeper insights into the shape and impact of AR-HMD projections in driving contexts, two distinct AR 
+designs were developed and tested across multiple driving scenarios. The research questions and hypotheses for 
+this study were defined as follows:
+
+• Q1 - What is the user’s level of acceptance of AR-HMD driving assistance applications?
+• Q2 - Which forms of holographic design do users prefer? How do different AR designs influence driving
+
+behavior, particularly in interactions with other road users?
+
+• Q3 - what extent do AR-designated risk areas impact the driver’s cognitive load?
+
+3.1 Participants
+
+The experiment has been conducted with 21 participants. Due to motion sickness occurring in 4 participants, the
+experiment had only been partially executed. Therefore, the data of these participants were excluded from the
+analysis. The mean age for the remaining participants (n=17) was 34.1 (SD = 6.6) and the gender distribution was
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:6 
+
+•  Wang et al.
+
+16 male and 1 female. Moreover, the mean years of driving experience was found to be 15.4 (SD = 7.3), and 14 
+participants were daily drivers. None of the participants have participated in a study of similar context before.
+
+3.2  Apparatus
+For the experiment, a fixed-base driving simulator has been developed, consisting of three 126cm diagonal LCD 
+display panels, each with a resolution of 1920x1080. The simulator also includes a set of 500W surround sound 
+speakers, a Logitech G27 steering wheel with pedals, and an adjustable driver’s seat (See Fig. 1a).
+
+(a) The components of the fixed-base driving simulator.
+
+(b) Carla simulator.
+
+Fig. 1.  The hardware and software of the fixed-base driving simulator.
+
+The simulated environment is created using Carla (0.9.12), an open-source simulator for autonomous driving 
+research (See Fig. 1b) [61]. In this project, the Python API of Carla has been modified to function as a driving 
+simulator. . Furthermore, the software is integrated with various compatible modules, including scenario runner 
+and Carla ROS bridge. These integrations enable the execution of complex, repeatable test driving scenarios with 
+real-time data communication.
+
+Using the Unity platform [65] and the open-source MRTK library (v 2.7)[45], an AR application has been built 
+to be deployed to a Hololens 2. The application receives real-time data from the driving simulator via ROS 1 [54], 
+and performs the calculations in real-time to display the risk areas (See Fig. ??).
+
+3.3  Risk Calculation Formula
+In order to find a robust method to determine the timing and behaviour of the collision risk zone, the assumption 
+has been made that the traffic objects at risk of collision are represented as points and move with a constant 
+velocity vector in 2-D space.
+
+A widely known time metric to quantify the risk of a future driving scenario is the time-to-collision (TTC). 
+While the metric is successfully used by studies to solve 1-D problems, for example, vehicle following collisions 
+or approaching stationary object collisions, the application in 2-D space is severely limited as the TTC assumes 
+scalar quantities of vehicle motion [40, 73, 73]. As two traffic objects may not always follow trajectories that 
+lead to a collision, it’s not always feasible to calculate a value for the (TTC) to use as a basis for visualization. 
+Therefore, an alternative formula has been derived that determines the time it takes for the two objects to reach 
+their closest point to each other. This metric, The time to minimum distance (TTMD) is similar to the time to 
+collision in approaching 1-D scenarios. However, does not assume scalar quantities and is therefore applicable in
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:7
+
+Fig. 2. The data infrastructure of the simulation setup.
+
+2-D for any conflicting trajectories. The formula for the TTMD can be seen in equation 1.
+
+𝑡𝑚𝑖𝑛 = −
+
+(Δ (cid:174)𝑝 · Δ(cid:174)𝑣)
+(Δ(cid:174)𝑣 · Δ(cid:174)𝑣)
+
+(1)
+
+In which p is the absolute position vector (x,y,z) in meters, and v is the velocity vector (x,y,z) in meters per second.
+If 𝑡𝑚𝑖𝑛 is less than zero, the closest point in time has already passed. On the contrary, if 𝑡𝑚𝑖𝑛 is greater than zero,
+the time and distance to the closest point of approach can be calculated for both objects in order to find the degree
+of criticality to base the conditions of visualization upon. Given that the TTMD shares similarities with the TTC
+in 1-D traffic scenarios, the critical time values were approximated based on previous studies where the TTC was
+accepted as a surrogate measure for road safety [5, 8, 19, 41, 53, 57, 66]. For indication of a safety-critical situation,
+TTC values between 1.5 and 5 seconds are frequently found, for which 4 or 5 seconds is a recommended upper
+bound of activating a collision avoidance system [19, 41], and 3 seconds for distinguishing unsafe situations
+[5, 25, 53]. However, some researchers argue 1.5 seconds or even lower to be more desirable for classifying a
+critical event as false positives in a warning system may lead to other implications such as annoyance and trust
+in the system [8, 57, 66].
+
+In this study, the threshold for visualizing a risk area is based on the concept of a near collision risk with a
+future colliding trajectory and generalized vehicle dimensions. This criterion is applied in situations where the
+minimum distance between an object and the ego vehicle is less than 5 meters, along with a TTMD value of less
+than 5 seconds. If both conditions are met, the risk area is visualized in accordance with the following cases:
+
+• case 1 - if t_min is greater than 0 AND t_min is less than / equal to 2.
+• case 2 - if t_min is greater than 2 AND if t_min is less than / equal to 5.
+
+In case 1, the risk area is represented based on the concept of a near collision, calculated as the product of the
+
+relative velocity and the TTMD, as shown in equation 2.
+
+𝐿𝑎𝑟𝑒𝑎 = Δ(cid:174)𝑣 ∗ 𝑡𝑚𝑖𝑛
+
+(2)
+
+In case 2, the multiplication of the relative velocity with a factor 2 yields the distance corresponding to a 2 seconds
+TTMD, as shown in equation 3.
+
+𝐿𝑎𝑟𝑒𝑎 = Δ(cid:174)𝑣 ∗ 2
+
+(3)
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:8 
+
+•  Wang et al.
+
+As for the TTMD value distinguishing a critical and non-critical collision risk, a value of 2 seconds has been 
+chosen, which is an approximate of the recommended TTC values from the previous studies [5, 8, 25, 53, 57, 66].
+
+3.4  AR Risk Area Designs
+It is challenging to enumerate and evaluate all design elements exhaustively. However, as discussed in Chapter 2.2, 
+AR-enhanced driving warnings can generally be categorized into two types: visualizing directly on objects and 
+highlighting hazardous areas. In this section, we present two representative designs that cover both categories 
+for an initial examination of this topic, drawn from previous research by Wang et al. [69].
+
+For implementation, the two designs are distinct to each other as they scale on a different plane in Euclidean 
+3D space. While design 1 scales strictly on the road plane (x,y), which highlighting the hazardous areas; design 2 
+scales strictly perpendicular to the road plane (z), which directly highlighting risky object. Furthermore, both 
+designs can be displayed on the front or the back of the other vehicle, depending on the relative orientation and 
+the direction of the collision risk. Finally, A medium opacity red color has been used for both designs to indicate 
+danger in traffic, while minimizing the visual clutter that blocks the vision of the driver.
+
+3.4.1  Red carpet - Design 1.  In the scenario of following a lead vehicle that suddenly decelerates, leading to a 
+TTMD of less than 2 seconds, a red transparent carpet is displayed on the road behind the lead vehicle (See Fig. 3).
+
+Fig. 3. Design 1 from a participant’s perspective.
+
+The length of the carpet is based on the difference in speed multiplied by the time to minimum distance. In
+case the TTMD is between 2 and 5 seconds, the length of the risk area starting from the back of the lead vehicle
+covers a road area corresponding to a 2 seconds TTMD. This results in a distinguishable border between the
+areas of imminent and non-imminent danger. The visualization is integrated according to the following formula:
+
+(cid:40)
+
+𝐿𝑎𝑟𝑒𝑎 =
+
+△𝑣 ∗ 𝑡𝑚𝑖𝑛_𝑑𝑖𝑠𝑡𝑎𝑛𝑐𝑒,
+△𝑣 ∗ 2,
+
+if 𝑡𝑚𝑖𝑛_𝑑𝑖𝑠𝑡𝑎𝑛𝑐𝑒 ⩽ 2
+otherwise
+
+(4)
+
+3.4.2  Virtual wall - Design 2.  In the scenario of following a lead vehicle that suddenly decelerates, a red wall 
+consisting of transparent red blocks layered on top of each other, is displayed on the back of the lead vehicle (See 
+Fig. 4).
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:9
+
+Fig. 4. Design 2 from a participant’s perspective.
+
+The length of the wall increases until the height of the car as the time to minimum distance goes to 0. Moreover,
+the transparency of the individual blocks are higher at the top layers to prevent obstructing the view of the
+vehicle. This feature is added on purpose, as the rear window could present crucial information, for example, law
+enforcement LED sign, braking light, or the road situation in front of the vehicle. The visualization is integrated
+according to the following formula:
+
+𝐻𝑤 =
+
+(cid:40)ℎ𝑜𝑏 𝑗 ∗ (𝑡𝑚𝑖𝑛_𝑑𝑖𝑠𝑡𝑎𝑛𝑐𝑒 /2),
+ℎ𝑜𝑏 𝑗,
+
+if 𝑡𝑚𝑖𝑛_𝑑𝑖𝑠𝑡𝑎𝑛𝑐𝑒 ⩽ 2
+otherwise
+
+(5)
+
+In which ℎ𝑜𝑏 𝑗 is the object’s (car or pedestrian) height.
+3.5  Experiment Design
+In this study, the experiment was setup as two separate 3 x 1 within-subjects factorial designs. The AR projections 
+(Design 1, Design 2, and Baseline) were considered as the independent variables in each of the towns (A or B)
+(See Table 1 & Fig. 5).
+
+Table 1. Experiment sessions and conditions.
+
+Session Condition Town
+Baseline
+1
+Design 1
+2
+Design 1
+3
+Design 2
+4
+Design 2
+5
+Baseline
+6
+
+A
+B
+A
+B
+A
+B
+
+Fig. 5. Experiment town layouts.
+
+The towns are maintained as distinct variables because the primary aim of the experiment does not involve
+comparing or contrasting them. However, given the different characteristics of the two towns, with Town A
+situated within an urban environment, while Town B resided within a suburban landscape, the layout of the
+towns may influence the participant’s driving behaviour and user experience.
+
+In Town A, the route included more elements, such as denser buildings and billboards, that led to a higher
+rate of optic flow and more 90-degree turns, which can increase the likelihood of simulator sickness [24] [55].
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:10 
+
+•  Wang et al.
+
+On the other hand, Town B featured a significant change in velocity, as participants transitioned from highway 
+driving to a complete standstill at a traffic light after a sharp curve, which could also induce simulator sickness. 
+To address the potential issues of these factors, participants were questioned after each drive, and the experiment 
+was halted if any symptoms of motion sickness were observed.
+
+Since the concept requires the driver to wear a HMD to view the AR projections, additional influences such as 
+physical discomfort or visual distraction may impact the driving behaviour or cognitive load. Therefore, as a 
+baseline, a no design condition has been introduced in the experiment. In this condition, the driver is still required 
+to wear the HMD which displays no AR risk areas. The only remaining visible AR projection is the speedometer, 
+which is also present in the other conditions.
+
+Over the course of a driving simulator study, participants may become more accustomed to the simulator or 
+use case scenarios through repeated exposure. Therefore, to account for this learning effect, a second baseline 
+session was introduced as the last session of the experiment to assess whether the observed changes are due to 
+learning effects or introduction of AR risk area projections. Moreover, in order to further diminish the potential 
+for learning effects, the driving sessions were alternated between towns A and B, thereby increasing the challenge 
+of memorizing the route and traffic scenarios. The order that was presented to the drivers can be seen in table 
+1. In total, 6 sets of simulator data and 6 questionnaires were collected for each combination of AR condition 
+(Design 1, Design 2, and Baseline) and Town (A or B).
+
+3.6  Procedure
+The experiment consisted of 6 driving sessions lasting a total of 65 minutes (See Appendix). Before the start 
+of the driving sessions, the participants had to read and sign an informed consent form. Then, a briefing was 
+held in which they received information regarding the procedure of the experiment and the driving task. As the 
+participants were invited in the simulator chair and equipped with the Microsoft Hololens2, the participants 
+were also given the option to adjust the seat of the driving simulator for a more comfortable driving position. 
+Afterwards, a training session was initiated for which they are instructed to follow a lead vehicle for 3 minutes in 
+a town with no other traffic participants. Here, a reminder is given that in case of nausea, the participant must 
+inform the researcher to halt the experiment. This session was intended for the participants to familiarize with 
+the operation of the driving simulator and following a lead vehicle. (See Fig. 6).
+
+Upon completion of the training session, the participants were asked on their well-being and questions left. 
+Then, for each of the driving sessions, the driving simulator and the Microsoft Hololens 2 were configured to 
+start with the corresponding AR condition and town. The participants were given the instructions to follow the 
+lead vehicle while respecting all the traffic ru les. Du ring th e dr iving se ssions, no  ra ndom tr affic participants 
+were present in the town. Only vehicles and pedestrians that were part of the scenarios were triggered to spawn 
+outside the view of ego vehicle, and moved inside the view of ego vehicle according to the scenarios. After each 
+session, the participants filled out a questionnaire. After all the driving sessions, a short interview was held in 
+which participants could provide verbal feedback about the experiment.
+
+3.7  Scenarios
+From the Carla repository, two different towns (See Fig. 5) have been chosen to implement the following traffic 
+scenarios:
+
+• Town A - Unsignalized intersection (2x), sudden deceleration, roundabout
+• Town B - Sudden deceleration, approaching slower vehicle, pedestrian crossing, cut-in
+The towns exhibit contrasting characteristics, with Town A situated within an urban environment characterized 
+by tall buildings, while Town B resides within a suburban landscape consisting of houses and a connecting 
+highway. The different layout allows the implementation of specific scenarios in which the concept could assist
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:11
+
+Fig. 6. A participant operating the system.
+
+the driver in gauging the other traffic participant’s acceleration and the risk of collision by displaying the risk
+area dynamically.
+
+The following 6 different traffic scenarios (See Fig. 7) were developed:
+
+• Unsignalized intersection (See Fig. 7a) - When the ego vehicle approaches an unsignalized intersection,
+the lead vehicle has already passed this intersection, and another vehicle simultaneously approaches from
+either the right or the left side, for which the vehicle coming from the right has priority. In case the ego
+vehicle has priority, the projected risk area can be seen decreasing in size, as the other vehicle decelerates
+to yield. In case the other vehicle has priority, the projected risk area can be seen remaining the same in
+size, indicating a constant velocity and no intention to slow down. From the size and superimposed road
+space of the risk area, the driver can now make a decision with this additional information whether it is
+safe to cross the intersection.
+
+• Roundabout (See Fig. 7b) - In the scenario of the ego vehicle approaching a common roundabout, another
+vehicle enters the roundabout from the left, for which the vehicle on the roundabout has priority. Similar to
+the intersection scenario, the superimposed road space can assist the driver in deciding whether entering
+the roundabout may lead to a near collision.
+
+• Sudden deceleration (See Fig. 7c) - A traffic light transitions to yellow, as the lead vehicle approaches. This
+causes the lead vehicle to suddenly decelerate in front of the ego vehicle, which triggers the risk area to
+quickly expand in size. This behaviour acts as a salient collision warning, and grants information regarding
+the intensity of the deceleration. Thus, assisting the driver to respond accordingly.
+
+• Pedestrian crossing (See Fig. 7d) - A pedestrian crosses the road at a stop sign when approached by ego
+vehicle. The behaviour of the risk area is similar to the intersection scenario, as traffic participants are
+treated equally. However, a pedestrian is generally harder to notice than a vehicle, for which the risk area
+enhances the visibility, and additionally assists the driver in spotting the pedestrian.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:12 
+
+•  Wang et al.
+
+• Approaching slower vehicle (See Fig. 7e) - The ego vehicle encounters a significantly slower vehicle on the
+highway. Even when both vehicles are moving with constant velocity, the significant size of the risk area
+can indicate a dangerous situation ahead.
+
+• Cut-in (See Fig. 7f) - As the ego vehicle approaches two vehicles in sequence on the highway, an overtake
+maneuver ensues, for which the vehicle trying to overtake, cuts in front of the ego vehicle. This significant
+lateral movement triggers the risk area to superimpose onto the road ahead of the ego vehicle, which assists
+the driver in noticing the maneuver, and granting information regarding the potential of a collision.
+
+(a) Unsignalized intersection
+
+(b) Roundabout
+
+(c) Sudden deceleration
+
+(d) Pedestrian crossing
+
+(e) Approaching a slower vehicle
+
+(f) Highway cut-in
+
+Fig. 7.  Scenario graphics.
+
+3.8  Data Collection and Variables
+During the experiment, raw simulator data of all vehicle positions (x,y,z) were recorded at a frequency of 40 Hz 
+to ROS bags. Following each driving session, a questionnaire was completed, and the responses were digitally 
+recorded with a unique ID and session number. By utilizing the vehicle position data, the variables related to the 
+driving behaviour and road safety, for example., velocity, acceleration, and distance between the vehicles, were 
+calculated offline using MATLAB [42].
+
+This study examines driving behaviour and road safety through several key variables, including time headway 
+
+(THW), time-to-collision (TTC), brake response time, maximum deceleration, and yield success.
+
+Time headway is defined a s t he d uration t hat p asses b etween t he m oment t he f ront o f t he l eading vehicle 
+
+crosses a specific s pot o n t he r oad a nd t he m oment t he f ront o f t he t railing v ehicle c rosses t hat s ame spot, 
+while the TTC represents the duration remaining until a collision takes place, assuming both vehicles persist
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:13
+
+on their current paths and maintain their existing speeds [67]. The time headway reflects the potential risk of a 
+collision, while the TTC indicates the actual risk of a collision. Only vehicles traveling with short headways can 
+produce low TTC values, and in situations with low TTC, avoiding a collision requires proactive intervention [67]. 
+Moreover, The TTC is further divided into the lowest value observed during a sudden braking event to assess 
+severity, and the number of instances where TTC fell below 3 seconds throughout the driving session to measure 
+the frequency of safety-critical moments [5, 25, 53]. Additionally, the study takes into account the brake response 
+time and the maximum deceleration, which are determined by the first moment the driver engages the brake 
+pedal following a sudden deceleration of the lead vehicle, to indicate the criticality [1, 21, 46]. By introducing the 
+scenario of unsignalized intersections where the driver must yield, the inclusion of the yield success served as an 
+indication of the driver’s ability to assess the speed and distance of oncoming vehicles.
+
+3.9  Analysis
+The dependent measures consisting of the driving simulator data (THW, TTC, Brake response time, and Maximum 
+deceleration), were analyzed using repeated measures ANOVA. However, when normality was violated according 
+to the Shapiro-Wilk (S-W) test, the Friedman test was employed as an alternative. As the yield success was 
+represented as a binary value (1=yield, 0=no yield), Cochran’s Q test was used to analyze the results. For all the 
+reported results, an 𝛼  level of 0.05 was used to determine the statistical significance. Post-hoc tests, adjusted with 
+the Bonferroni correction, were conducted for pairwise comparisons, for example, Baseline vs. Design 1, Baseline 
+vs. Design 2, Design 1 vs. Design 2. The 𝛼  level in this case, with Bonferroni adjustment, was .017.
+
+To evaluate the subjective responses, which were based on 7-point Likert scale ratings regarding the cognitive 
+load  and  user  experience,  pairwise  comparisons  were  conducted  using  the  Wilcoxon  signed-rank  test.  The 
+significance level (𝛼) was set at 0.017 after applying the Bonferroni adjustment.
+
+4  Results
+4.1  Time Headway
+For each driving session, the time headway was measured as indication for the degree of safe distance keeping. 
+In the US, several driver training programs [17] suggest that following a vehicle with a headway of less than 2 
+seconds is unsafe. To analyze this, the duration (in seconds) of the time headway below 2 seconds was calculated 
+for the whole driving session and during the abrupt braking scenario to assess the impact of each condition. The 
+duration of the time headway below 2 seconds is represented on the Y-axis, while each condition is plotted on 
+the X-axis in Figure 8
+
+As the assumption of normality was only violated in Town A, a Friedman’s test was performed for the data of 
+Town A, while a repeated measures ANOVA was used for Town B. The results indicated no significant differences 
+in the duration of the time headway below 2 seconds among the conditions in Town A (𝑋 2(2) = 0.57, p >0.05) and 
+in Town B (F(2,32) = 0.08, p >0.05). Similarly, during abrupt braking scenarios, no significant differences were 
+found in Town A (𝑋 2(2) = 0.35, p >0.05) and in Town B (F(2,32) = 0.43, p >0.05).
+
+Two Friedman’s tests were conducted to analyze the mean time headway (in seconds) during abrupt braking 
+scenarios. In Town B, a significant difference was found between at least two conditions (𝑋 2(2) = 7.42, p < 0.03). 
+However, in Town A, there was no significant difference (𝑋 2(2) = 0.48, p >0.05) among the conditions. An overview 
+of the box plots can be seen in 9.
+
+A post-hoc pairwise comparison revealed that the baseline differed significantly from Design 1 (p<.005) and 
+Design 2 (p<.009). Additionally, Design 1 and Design 2 showed no significant difference (p>.017). These results 
+suggest that in scenarios involving sudden braking without AR projections, drivers tended to maintain a shorter 
+following distance behind the lead vehicle compared to situations where AR projections were displayed.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:14 
+
+•  Wang et al.
+
+(a) THW <2 (whole drive)
+
+(b) THW <2 (whole drive)
+
+(c) THW <2 (abrupt braking)
+
+(d) THW <2 (abrupt braking)
+
+Fig. 8.  The duration of THW <2s for the whole driving session and abrupt braking scenario.
+
+4.2  TTC
+4.2.1  Minimum TTC.  The minimum TTC is the lowest value observed during a sudden braking event, as shown 
+in Figure 10.
+
+A repeated measures ANOVA test was conducted on the minimum TTC in town A, but no significant differences 
+were found (F(2,32) = .14, p >.05). In town B, where the assumption of normality was violated according to the 
+Shapiro-Wilk test, an alternative Friedman’s test was performed, and it also revealed no differences (𝑋 2(2) = .47, 
+p >.05). This finding indicates that AR projections did not lead to a notable impact on the minimum TTC when 
+compared to no AR projections.
+
+4.2.2  TTC below 3 seconds.  Since many ADAS systems initiate Automatic Emergency Braking (AEB) at a TTC 
+below 2 seconds and provide warnings at 3 seconds [16, 58], we also consider 3 seconds as the threshold for 
+dangerous proximity. The TTC below 3 seconds represents the number of instances where the TTC fell below 3 
+seconds during the driving session (see Fig. 11.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:15
+
+(a) Mean THW (abrupt braking)
+
+(b) Mean THW (abrupt braking)
+
+Fig. 9. The mean time headway during abrupt braking scenario.
+
+(a) Minimum TTC (abrupt braking)
+
+(b) Minimum TTC (abrupt braking)
+
+Fig. 10. The minimum TTC during abrupt braking scenario.
+
+By conducting a Friedman’s test for both towns, no differences were observed in either town (Town A:𝜒 2(2) =
+2.21, p>.05; Town B:𝜒 2(2) = 1.09, p>.05). These findings indicate that the AR projections had no significant impact
+on the number of TTC occurrences below 3 seconds in either town.
+
+4.3 Brake response time
+
+The brake response time of the driver during abrupt braking scenarios was determined by calculating the time
+difference between the lead vehicle braking and the driver pressing the brake pedal. A repeated measures ANOVA
+test was conducted on the brake response time, and the results showed no significant differences in either town
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:16 
+
+•  Wang et al.
+
+(a) TTC <3 (whole drive)
+
+(b) TTC <3 (whole drive)
+
+Fig. 11.  The occurrences of TTC <3 seconds during the driving session.
+
+(Town A:F(2, 32) = .24, p>.05; Town B:F(2, 32) = .14, p>.05). This indicates that the AR projections did not influence 
+the response time of the driver at the event of an abrupt deceleration of the lead vehicle.
+
+4.4  Maximum Deceleration
+The maximum deceleration (m/s2) is the highest value observed during a sudden braking event (See Fig. 12).
+
+(a) Maximum deceleration (abrupt braking).
+
+(b) Maximum deceleration (abrupt braking).
+
+Fig. 12.  The maximum deceleration (m/s2) during abrupt braking.
+
+Since the S-W test indicated a violation of the normality assumption, the alternative Friedman’s test was 
+conducted for both Town A and Town B. The results of the test showed no significant differences in terms of the 
+impact of AR projections on the maximum deceleration in either town(Town A:𝜒 2(2) = .82, p>.05; Town B:𝜒 2(2) =
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:17
+
+.47, p>.05). This suggests that the AR projections did not have an effect on the maximum deceleration during a 
+sudden braking event.
+
+4.5  Unsignalized Intersection Yield Success
+The yield success is a binary representation whether the driver yielded (1) or did not yield (0). As the unsignalized 
+intersection scenario, in which the driver is required to yield, appeared twice, and at different locations, the 
+appearances were treated independently, for example, appearance 1 and appearance 2. By performing a Cochran’s 
+Q test, there was a statistically significant difference in yield success between the conditions in the first appearance 
+(Q(2) = 7.40, p<.03). However, not in the second appearance (Q(2) = 1.14, p>.05).
+
+In a post-hoc pairwise comparison between the conditions, it was found that Design 2 differed significantly 
+from the baseline (p<.001), in terms of yielding behavior. However, there was no significant difference between 
+Design 2 and Design 1 (p>.017). This suggests that drivers were more likely to yield when influenced by the AR 
+projections from Design 2 compared to scenarios with no AR projections at all (baseline).
+
+4.6  Questionnaire
+The participants were prompted to rate a set of questions cited from the validated user experience questionnaire 
+(UEQ) [34] and the driving activity load index (DALI) [50] using a 7-point Likert-type scale, with 1 = "Extremely 
+low", 2 = "Very low", 3 = "Low", 4 = "Neutral", 5 = "High", 6 = "Very high", and 7 = "Extremely high", after each test 
+drive in the simulation. To statistically analyze the subjective response for significant differences, a Wilcoxon 
+signed-rank test has been performed on the questionnaire data, and a Bonferroni correction has been applied for 
+which a new alpha level (𝛼  = 0.05/3) was found to determine statistical significance. The results for which the 
+null hypothesis could be rejected (p<.0167) can be seen in table 13f.
+
+From the mean scores of the subjective response for which the participant could rate the attractiveness of 
+the system from 1 (very low) to 4 (neutral) to 7 (very high), it appears that Design 1 (𝜇_A = 4.71, 𝜇_B = 4.59) is 
+valued higher in attractiveness compared to Design 2 (𝜇_A = 4.00, 𝜇_B = 3.59), and the baseline (𝜇_A = 3.82, 𝜇_B 
+= 3.82) (See Table 13a & Fig. 13b & Fig. 13c). However, the Wilcoxon signed-rank test revealed only statistically 
+significant differences between Design 1 and Design 2 (p<.0167) (See Table 13f).
+
+When participants could rate the amount of interference caused by the AR projections from 1 (very low) to 4 
+(neutral) to 7 (very high), it has been found that Design 2 (𝜇_A = 3.76, 𝜇_B = 3.71) had a larger negative impact 
+on the driving task compared to Design 1 (𝜇_A = 3.06, 𝜇_B = 3.59) and the Baseline (𝜇_A = 2.41, 𝜇_B = 3.06)
+(See Table 13a & Fig. 13d & Fig. 13e). The Wilcoxon signed-rank test revealed statistically significant differences 
+between Design 2 and the Baseline in both towns, and between Design 2 and Design 1 only in town A (p<.0167)
+(See Table 13f). This finding indicates a difference between the two towns regarding the perceived interference.
+
+4.7  Qualitative Feedback
+At the end of the experiment, additional insights on the participant’s subjective rationale were collected through 
+semi-structured interviews. By conducting an inductive thematic analysis approach, various themes were gener-
+ated by clustering the common codes among the participants.
+
+4.7.1  Feedback on the risk visualization design elements.  As the purpose of the concept is to provide the driver 
+with additional information regarding a risk of collision, the design elements of the augmented reality visuals 
+were carefully chosen to minimize the interference on the driving task. About half of the participants mentioned 
+a mismatch in the visualization of the risk area and the urgency of the situation. As the size of the risk area was 
+directly derived from the relative orientation and speed of the vehicles, the participants could have experienced 
+heavily changing risk areas when driving with inconsistent speeds. "The change of risk area is too abrupt." "When 
+the car on the right came on the right, the risk area popped up, which startled me. I feel like braking immediately,
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:18 
+
+•  Wang et al.
+
+Interference
+𝜇 = 2.41, 𝜎 = 1.06
+𝜇 = 3.06, 𝜎 = 1.14
+𝜇 = 3.76, 𝜎 = 1.15
+𝜇 = 3.06, 𝜎 = 1.56
+𝜇 = 3.59, 𝜎 = 1.28
+𝜇 = 3.71, 𝜎 = 1.05
+
+Attractiveness
+𝜇 = 3.82, 𝜎 = 1.24
+𝜇 = 4.71, 𝜎 = 0.99
+𝜇 = 4.00, 𝜎 = 1.17
+𝜇 = 3.82, 𝜎 = 1.07
+𝜇 = 4.59, 𝜎 = 1.06
+𝜇 = 3.59, 𝜎 = 1.28
+
+B (A)
+D1 (A)
+D2 (A)
+B (B)
+D1 (B)
+D2 (B)
+
+(a) Mean and standard deviation scores of the attractiveness and interference rating,
+categorized by condition and scenario town.
+
+(b) Attractiveness score in town A.
+
+(c) Attractiveness score in town B.
+
+(d) Interference score in town A.
+
+(e) Interference score in town B.
+
+B - D1 (A)
+B - D2 (A)
+D1 - D2 (A)
+B - D1 (B)
+B - D2 (B)
+D1 - D2 (B)
+B - B (A-B)
+
+Interference
+NS
+0.0549
+0.013671875000000
+NS
+0.159179687500000
+NS
+NS
+
+Attractiveness
+NS
+NS
+0.015625000000000
+NS
+NS
+0.011230468750000
+NS
+
+(f) Pairwise comparison between the different conditions and driving scenarios.
+
+Fig. 13.  Results of the questionnaire data. (B = Baseline, D1 = Design 1, D2 = Design 2, (A) = Town A, (B) = Town B) 
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:19
+
+and that might lead to a collision from behind." Furthermore, some of these participants have also mentioned the 
+static red colour to be more fitting to imminent or urgent situations. "The red area makes me feel like stopping 
+immediately." This indicates that the chosen colour and intensity might be too strong of a message for non-critical 
+situations.
+
+4.7.2  Feedback on both designs.  When comparing Design 1 and Design 2, it’s apparent that the participants 
+generally preferred Design 1 over the baseline and Design 2. The majority of the participants (16 out of 21) 
+expressed a preference for Design 1, mainly due to its feature of the changing risk area on the horizontal plane. 
+This aspect was highly regarded as they mentioned that it aligned between the car’s movement direction and the 
+risk area’s movement direction. Participants also appreciated that Design 1 offered a spatial extension, providing 
+more informative feedback. One participant pointed out that "You don’t need to focus on the vehicle to see there is 
+a vehicle." Additionally, Design 1 was seen as beneficial for maintaining safe distances, with a participant noting, 
+"I know how much I can accelerate and brake and would not collide. It was very helpful to keep the distance."
+
+On the other hand, a smaller group of participants (3 out of 21) favored Design 2, primarily citing its advantage 
+of being visually less cluttered. Only one participant mentioned a preference for both designs, depending on the 
+specific situation. They noted that "For intersecting trajectories, the line redirects the user’s attention to the risk 
+of collision." However, for scenarios involving cut-ins or sudden deceleration, the potential collision point was 
+already apparent, and Design 2, with its less intrusive presentation, was considered more suitable.
+
+In summary, from a general standpoint, Design 1 appears to be the preferred choice due to its intuitiveness 
+and functional benefits. It eliminates the mismatch between the moving direction of the risk area and the the 
+dimensional plane, and provides more salient information regarding the other vehicle’s acceleration, which 
+resonated positively with the majority of the participants.
+
+5  Discussion
+In this section, both the qualitative and quantitative results and limitations of the user study are discussed.
+
+5.1  Effects of AR Risk Visualization on the Driving Behaviour
+The data suggests that the introduction of AR risk visualizations during driving encourages safer driving behaviour, 
+as the time headway between the ego vehicle and the lead vehicle during abrupt braking is higher than the time 
+headway in case no projections are shown. However, the analysis of the response time, TTC, and maximum 
+deceleration during abrupt braking scenarios did not reveal differences between the conditions. Therefore, the 
+results suggest that the AR projections as shown in this study may not significantly contribute to enhanced road 
+safety during critical events like abrupt braking.
+
+It’s worth noting that some previous studies, such as Calvi et al. [9] and Kim et al. [32], reported a significant 
+decrease in reaction time when AR warnings were displayed in the case of abrupt braking scenarios. The main 
+difference between these AR projections and those in this study is that in these studies, the projections were 
+only displayed when the lead vehicle starts braking, or slightly before. In contrast, the AR projections in this 
+study were triggered when the TTMD was below 5 seconds, which could lead to more frequent occurrences if the 
+participant drove more aggressively. This repeated exposure might have contributed to a diminished response to 
+the stimulus. However, further research is needed to validate this potential effect.
+
+In a manner similar to the study by Phan et al. [52], the projection of AR risk areas might indirectly highlight 
+hazardous objects, potentially leading to an increase in yield success. This increase could be linked to heightened 
+situational awareness resulting from the redirection of the driver’s attention toward potential risks. The data 
+from this study suggests that the AR design supports the driving task by highlighting a potential collision risk to 
+the driver, as shown by the increased amount of required unsignalized intersection yielding. This finding aligns 
+with several other studies using AR cues to enhance the driver awareness [10, 52, 56].
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:20 
+
+•  Wang et al.
+
+5.2  Effects of AR Risk Visualization on Distraction and Cognitive Load
+So far the results did not indicate a concern for safety related to the addition of visual clutter from AR projections 
+or its impact on cognitive load. This is in contrast to a study by Tran et al. [64], where they designed a left-turn 
+driving aid using a static red path AR projection in front of the approaching vehicle. Participants in their study 
+reported that processing the path demanded a higher level of cognitive effort. Another study by Tonnis et al.(2007)
+[63], proposed a more simplistic design of a bar projection in front of ego vehicle to aid the driver in longitudinal 
+and lateral driving. In their study, it was concluded that such a visualization did not affect overall workload. It’s 
+possible that factors such as the static length or opacity of the projection had a notable impact on the driver’s 
+cognitive load in those cases.
+
+5.3  Subjective Response
+Overall, the attractiveness of the driving system seemed to be perceived higher with the presence of Design 1 
+when compared to Design 2 or no AR projections. When comparing Design 2 to no AR projections, there was no 
+clear preference for either condition. From observing the length of the box plots (See Fig. 13b & Fig. 13c) it can be 
+suggested that the opinions were more divided in this condition. Since there was a strong preference for Design 1 
+compared to Design 2, as revealed by the differences found in the questionnaire data, the order effect (Design 2 
+after Design 1) may have lead to a contrast effect that influenced Design 2 to be rated as significantly less attractive 
+than Design 1, instead of being rated independently. Based on the qualitative data, it might be that the difference 
+in attractiveness between the two designs is associated with their functionality and intuitiveness. As from the 
+interviews, some participants reported that the change of size of the AR projection in the horizontal plane felt 
+more intuitive, as it was on the same plane as the moving direction of the vehicles. Therefore, participants’ 
+perceptions of the designs may have been influenced by how easily they could comprehend and interact with the 
+system’s features.
+
+However, the questionnaire data indicates an increase in perceived interference in both towns when comparing 
+AR projections of Design 2 to Design 1 and the baseline. This suggests that certain unique design elements of 
+Design 2, for example. scaling direction, location relative to the traffic object, or transparency, may have strongly 
+contributed to this impact. As found in a previous study by Rusch et al. [56], the AR cues in this study did not 
+reveal any negative outcomes associated to interference, for which a similarity to Design 1 is that the AR cue does 
+not obstruct the view of the traffic object. Nonetheless, additional research is necessary to thoroughly investigate 
+the specific factors that contribute to this interference.
+
+5.4  Limitations
+Although this research yields valuable insights, several factors may have influenced the findings and should be 
+considered when interpreting the results. The limitations discussed in the following sections concern both the 
+experimental methodology and the use of the driving simulator.
+
+5.4.1  Experimental.  It’s important to consider the number of critical events encountered during the simulation 
+sessions in comparison to normal driving. The increased frequency of critical events in the controlled environment 
+of the study might have influenced the participants’ behaviour and reactions. When participants encountered 
+these events sequentially, they may have been more attentive than they would be in real-world driving situations. 
+Consequently, the potential benefits of the AR projections, such as indicating significant speed differences or 
+sudden deceleration, could have been diminished. Furthermore, since all pedestrians and vehicles in the driving 
+sessions were always part of a predefined s cenario, t his e ffect co uld ha ve be en am plified, as the  dri ver can 
+anticipate a critical event.
+
+Another limitation for the sake of consistency and validity is the repetitive earth of the scenarios and the lack 
+of counterbalance or randomization in the experiment design. While alternating between the towns may have
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:21
+
+reduced habituation, the order effects were not accounted for. Therefore, in the case of yield success, Design 2
+may have performed better than the other conditions as the participant may have recognized the scenario and
+responded accordingly. Furthermore, since the effect was only found in the first appearance of the traffic scenario,
+the different characteristics of the scenario might have influenced the yield success.
+
+In the current setup, AR projections are not compared to other modalities, such as auditory and tactile. Although
+the primary purpose of projecting AR risk zones was not to warn the driver in critical events, but to inform
+the driver in advance of potential critical events, it would still be valuable to compare the effectiveness of AR
+as a warning system against other modalities in an additional control condition. In this manner, the strengths
+and weaknesses of AR projections could be assessed to validate the benefits of AR projections to other warning
+modalities.
+
+During the study, participants completed six driving sessions in two different towns, in the same conditions. To
+mitigate the potential issue of participants recognizing scenarios, various alterations were made to the vehicles
+used in each driving session, including changes in brand and color. Despite these countermeasures, it’s possible
+that some participants may have still recognized certain scenarios, such as the sudden braking event. This
+recognition could potentially affect the accuracy of the findings regarding the effects of the AR risk projections.
+However, the final driving session, which served as the second baseline session, did not reveal any significant
+results indicating participants’ anticipation of upcoming scenarios.
+
+Since the developed driving simulation environment limited the consistency of the simulation data by allowing
+the driver to freely maneuver, the dependent variables could be influenced by the difficulty of the driving task,
+leading to irregular following distance for instance. An included countermeasure for this behaviour was to include
+checkpoints in which the lead vehicle may wait at certain points until the ego vehicle is within a certain distance.
+However, between these checkpoints, there is still room for varying distance in which scenarios occur. A solution
+to this is to prevent the vehicles from drifting too far apart by controlling the acceleration of the lead vehicle,
+based on the distance ahead of the ego vehicle.
+
+5.4.2 driving simulator. Regarding the handling of the driving simulator, it was reported that the difficulty of
+operating the driving simulator differed. The participants required various amount of time to execute the driving
+tasks on the machine on an adequate level. Moreover, Participants (8/21) mentioned: "It lacked smoothness. The
+frame rate was not consistent". Also the design of the urban driving scenarios included a substantial amount
+of 90 degrees cornering, which was found to be difficult to perform, as mentioned by 5 participants. However,
+most participants found it acceptable and easier as more time has passed in the experiment. This leads to similar
+statements such as "In the beginning it was difficult, at the end it gets easier." "You had to get used to the physics,
+then it was straightforward." "After a first couple of tries it wasn’t hard." This effect over time may have influenced
+the driving behaviour as the participants that found it difficult in the beginning, may have been distracted by
+learning the driving simulator. However, comparisons between both baseline sessions (first and last session)
+revealed no differences.
+
+Furthermore, the participants’ proficiency of handling the driving simulator was divided, as their feedback
+on handling the driving task ranged from easy to difficult. The maneuver of executing a 90 degrees turn in an
+urban driving scenario was frequently mentioned to be one of the more difficult tasks, due to a lack of dynamic
+forces which would have been felt when driving a real car. However, the benefit of the chosen research method is
+an unconstrained driving scenario, leading to a more sophisticated driving experience for the participant. Thus,
+providing a better understanding of the concept in the real world. Perhaps with more training in prior of testing,
+or in case of a higher fidelity driving simulator, which includes dynamic feedback on the driver, the difficulty of
+the driving task may be diminished for more consistent results.
+
+Due to technical limitations, it was not feasible to add brake lights in the simulation. When there are no brake
+lights, the driver could mainly notice a deceleration event by the narrowing gap between the vehicles. In the case
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:22 
+
+•  Wang et al.
+
+of abrupt braking, an expanding risk area has a higher salience than a narrowing gap between the vehicles for 
+which the effects of the AR projections could be enhanced when comparing to a baseline condition with no brake 
+lights.
+
+Finally, a common side effect o f a  d riving s imulator i s s imulation s ickness o r m otion s ickness c aused by 
+
+the visuo-vestibular conflict [30], which affects physical and cognitive performance [59, 60]. In this study, the 
+fixed-base driving simulator is paired with an AR HMD to conduct the experiments, which may further increases 
+the severity of motion sickness[29]. Out of the 21 participants, 4 participants experienced severe motion sickness 
+for which the experiment was prematurely terminated. The rest of the participants mentioned to have experienced 
+no motion sickness at all, or mild symptoms of motion sickness, which was mutually consented for continuation. 
+However, in a study by Vovk et al. (2018), only negligible symptoms of simulator sickness has been found using 
+the Microsoft HoloLens [68]. Moreover, there is no evidence in contemporary research for an enhanced likelihood 
+of motion sickness in the synergistic operation of an AR HMD and a fixed-base driving simulator. Therefore, the 
+validity of the data affected by motion sickness was treated in the same circumstances as strictly a fixed-base 
+driving simulator, although more research is needed to fully account for the synergistic operation and effects on 
+motion sickness.
+
+6  Conclusions
+In this research, a concept for an AR driver-assistance system was developed. This system aims to enhance driver 
+safety by providing real-time AR projections related to collision risk.
+
+Two AR design prototypes of the concept was modelled using Unity game engine and subsequently deployed 
+onto a HMD for visual projection. Additionally, a fixed-base driving simulator has been developed using the 
+Carla platform. This enabled real-time data communication between the systems, facilitating the evaluation of 
+the impact of AR projections in a user study involving 17 participants.
+
+The concept of projecting risk areas may offer p otential r egarding s afer d riving b ehaviour b y enhancing 
+the awareness to potentially dangerous situations. Based on the results from the analysis of quantitative data 
+extracted from the driving simulator, and qualitative data from the participant interviews, it has been found 
+that the AR projections of risk areas during driving lead to a consistently safer distance keeping, as indicated 
+by the increase in mean time headway at the event of abrupt braking by the lead vehicle. From the data of the 
+questionnaire and interviews, it is concluded that AR projections from Design 1 enhances the attractiveness of a 
+driving system in comparison to no AR visualizations at all. Moreover, there was a strong preference for Design 
+1 over Design 2, for which the interview remarks suggest that it may be linked to higher functionality, as the 
+projection could redirect the user’s attention to the risk of collision. The difference in behaviour may have also 
+lead to higher intuitiveness, as the dimension of the projected risk area is consistent with the plane of vehicular 
+movement. However, further research that objectively test these variables is required to validate this claim.
+
+During the abrupt braking scenarios, no significant differences were found in brake response time, maximum 
+deceleration, and minimum TTC between the conditions. This suggests that the AR projections used in this study 
+did not lead to an improvement in road safety during such critical events. One possible reason for this lack of 
+significance in the data could be that the change in the size of the risk area at the time of a critical event may not 
+have been salient enough to elicit a significant response from the participants. Additionally, the experimental 
+design, which exposed participants to a higher frequency of critical events than they would encounter in real-life 
+driving, might have made participants more cautious and less responsive to the AR projections.
+
+One of the hypotheses was that AR projections lead to a higher amount of necessary yielding when approaching 
+unsignalized intersection scenarios when compared to no AR projections at all. The analysis revealed that only 
+Design 2 increased the yielding success compared to the baseline. However, it’s important to note that this result
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:23
+
+cannot be regarded as definitive, especially since it was not observed for Design 1. The observed effect may be a
+result of order effects due to the lack of randomization or counterbalance in the study design.
+
+Concerning the assumption of an increase in cognitive load, there was no difference in the subjective response
+between the conditions regarding the driver’s mental workload. Thus, the extent of AR risk areas as shown
+in this study affecting the cognitive load is negligible. However, the subjective data did reveal an increase in
+interference regarding the driving task when AR projections of Design 2 was projected as compared to Design 1
+and the baseline.
+
+These findings suggest that future research in AR risk visualization should explore various design elements,
+including the formula used to determine the dynamics, the location, color, and transparency of the projections.
+These design considerations are crucial to minimize potential interference and address safety implications related
+to redirecting the driver’s attention.
+
+Finally, it is advisable to explore alternative research approaches, including the comparison of AR risk visual-
+ization with auditory or tactile warning systems, to assess their effectiveness and user preferences in different
+driving scenarios. To enhance the experiment design, future studies should consider reducing the frequency of
+critical events in a short period of time to improve the reliability and credibility of the simulation data. Coupling
+this approach with a larger sample size and randomized participant assignment to mitigate order effects could
+provide stronger evidence regarding the enhancement of safer driving behavior and road safety through AR risk
+visualization.
+
+Acknowledgments
+
+We would like to appreciate Stephan Hasler to support the analytical solutions of the minimal distance/timing
+between ego vehicle and other objects.
+
+References
+[1] O. Bagdadi. 2013. Assessing safety critical braking events in naturalistic driving studies. Transportation research part F: traffic psychology
+
+and behaviour 16 (2013), 117–126.
+
+[2] Karlin Bark, Cuong Tran, Kikuo Fujimura, and Victor Ng-Thow-Hing. 2014. Personal Navi: Benefits of an Augmented Reality Navigational
+Aid Using a See-Thru 3D Volumetric HUD. In Proceedings of the 6th International Conference on Automotive User Interfaces and Interactive
+Vehicular Applications (AutomotiveUI ’14). Association for Computing Machinery, New York, NY, USA, 1–8. doi:10.1145/2667317.2667329..
+[3] K. Bauerfeind, J. Drüke, L. Bendewald, and M. Baumann. 2019. When does the driver benefit from AR-information in a navigation task
+compared to a Head-Up Display? Results of a driving simulator study. Proceedings of the Human Factors and Ergonomics Society Europe
+(2019), 219–230.
+
+[4] Kassandra Bauerfeind, Julia Drüke, Jens Schneider, Adrian Haar, Lennart Bendewald, and Martin Baumann. 2021. Navigating with
+Augmented Reality – How does it affect drivers’ mental load? Applied Ergonomics 94 (2021), 103398. doi:10.1016/j.apergo.2021.103398.
+ISSN 0003-6870.
+
+[5] F. Bella and R. Russo. 2011. A collision warning system for rear-end collision: A driving simulator study. Procedia-Social Behav. Sci. 20
+
+(January 2011), 676–686.
+
+[6] J. A. Betancur, J. Villa-Espinal, G. Osorio-Gómez, et al. 2018. Research topics and implementation trends on automotive head-up display
+
+systems. Int J Interact Des Manuf 12 (2018), 199–214. doi:10.1007/s12008-016-0350-3..
+
+[7] Adam Bolton, Gary Burnett, and David R. Large. 2015. An investigation of augmented reality presentations of landmark-based navigation
+using a head-up display. In Proceedings of the 7th International Conference on Automotive User Interfaces and Interactive Vehicular
+Applications (AutomotiveUI ’15). Association for Computing Machinery, New York, NY, USA, 56–63. doi:10.1145/2799250.2799253..
+
+[8] Gerald R. Brow. 2011. Traffic conflicts for road user safety studies. Canadian Journal of Civil Engineering 21, 1 (2011), 1–15.
+[9] A. Calvi, F. D’Amico, C. Ferrante, and L. Bianchini Ciampoli. 2020. Assessing the Effectiveness of Augmented Reality Cues in Preventing
+Rear-End Collisions: A Driving Simulator Study. In Advances in Human Aspects of Transportation. AHFE 2020. Advances in Intelligent
+Systems and Computing, vol 1212, N. Stanton (Ed.). Springer, Cham. doi:10.1007/978-3-030-50943-9_29..
+
+[10] Alessandro Calvi, Fabrizio D’Amico, Chiara Ferrante, and Luca Bianchini Ciampoli. 2020. Effectiveness of augmented reality warnings
+on driving behaviour whilst approaching pedestrian crossings: A driving simulator study. Accident Analysis & Prevention 147 (2020),
+105760. doi:10.1016/j.aap.2020.105760. ISSN 0001-4575.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:24 
+
+•  Wang et al.
+
+[11] V. Charissis, J. Falah, R. Lagoo, S. F. M. Alfalah, S. Khan, S. Wang, S. Altarteer, K. B. Larbi, and D. Drikakis. 2021.  Employing Emerging
+Technologies to Develop and Evaluate In-Vehicle Intelligent Systems for Driver Support: Infotainment AR HUD Case Study.  Appl. Sci. 11
+(2021), 1397.  doi:10.3390/app11041397. https.
+
+[12] Wanting Chen, Jiaqing Song, Yuwei Wang, Changxu Wu, Shu Ma, Duming Wang, Zhen Yang, and Hongting Li. 2023.  Inattentional 
+blindness to unexpected hazard in augmented reality head-up display assisted driving: The impact of the relative position between 
+stimulus and augmented graph.  Traffic Injury Prevention 24, 4 (2023), 344–351.  doi:10.1080/15389588.2023.2186735..
+
+[13] Yunqiang Chen, Qing Wang, Hong Chen, Xiaoyu Song, Hui Tang, and Mengxiao Tian. 2019.  An overview of augmented reality 
+
+technology.  Journal of Physics: Conference Series 1237 (2019), 022082.  doi:10.1088/1742-6596/1237/2/022082..
+
+[14] M. Colley, S. Krauss, M. Lanzer, and E. Rukzio. [n. d.]. How Should Automated Vehicles Communicate Critical Situations? A Comparative
+
+Analysis of Visualization Concepts. In Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 5 (2021, 9.  doi:10.1145/3478111..
+
+[15] M. Colley, O. Speidel, J. Strohbeck, J. Rixen, J. Belz, and E. Rukzio. [n. d.].  Effects of Uncertain Trajectory Prediction Visualization in 
+Highly Automated Vehicles on Trust, Situation Awareness, and Cognitive Load. In Proc. ACM Interact. Mob. Wearable Ubiquitous
+Technol. 7 (2024, 1.  doi:10.1145/3631408..
+
+[16] E. Dagan, O. Mano, G. Stein, and A. Shashua. 2000.  Forward collision warning with a single camera.  IEEE Intelligent Vehicles Symposium
+
+[17] Michael, P., Leeming, F. & Dwyer, W. Headway on urban streets: observational data and an intervention to rease tailgating. Transportation
+
+3 (December 2000), 37–42.  2004. (2004)
+
+Research Part F: Traffic Psychology And Behaviour55-64.
+
+[18] N. de Oliveira Faria, D. Kandil, and J. L. Gabbard. 2019.  Augmented reality head-up displays effect on drivers’ spatial knowledge
+acquisition. In Proceedings of the Human Factors and Ergonomics Society Annual Meeting (Vol. 63, No. 1, Sage CA: : SAGE Publications,
+Los Angeles, CA, 1486–1487.
+
+[19] R. Van der Horst and J. Hogema. 1993.  Time-to-collision and collision avoidance systems. In Proc. 6th ICTCT Workshop Saf. Eval. Traffic
+
+Syst. Traffic Conflicts Other Measures. 109–121.
+
+[20] EyeLights. [n. d.].  | GPS Affichage tête haute - Moto EyeRide.  n.d.). EyeLights | Affichage Tête Haute Moto.  https://eye-lights.com/.
+[21] Z. Feng, X. Ma, X. Zhu, and Z. Ma. 2018.  Analysis of Driver Brake Behavior Under Critical Cut-in Scenarios. In 2018 IEEE Intelligent 
+
+Vehicles Symposium (IV), Changshu, China. 2054–2059.  doi:10.1109/IVS.2018.8500438..
+
+[22] J. L. Gabbard, G. M. Fitch, and H. Kim. 2014.  Behind the Glass: Driver Challenges and Opportunities for AR Automotive Applications. In 
+
+Proceedings of the IEEE, vol. 102, no. 2. 124–136.  doi:10.1109/JPROC.2013.2294642..
+
+[23] Xiangyang He and Keyuan Zhou. 2024.  Display in the Air: Balancing Distraction and Workload in AR Glasses Interfaces for Driving
+
+[24] L. J. Hettinger and G. E. Riccio. 1992.  Visually induced motion sickness in virtual environments.  Presence: Teleoperators & Virtual
+
+Navigation.  arXiv preprint arXiv:2404.18357  (2024).
+
+Environments 1, 3 (1992), 306–310.
+
+[25] S. Hirst and R. Graham. 1997.  The format and presentation of collision warnings.  In Ergonomics and safety of intelligent driver interfaces. 
+
+203–219.
+
+[26] W. J. Horrey, C. D. Wickens, and A. L. Alexander. 2003.  The effects of head-up display clutter and in-vehicle display separation on 
+concurrent driving performance. In Proceedings of the Human Factors and Ergonomics Society Annual Meeting (Vol. 47, No. 16, Sage CA: :
+SAGE Publications, Los Angeles, CA, 1880–1884.
+
+[27] Automotive  Hud.  [n. d.].  Market  Share,  Size,  Trends  -  [2022-  2027]. 
+
+2973,  January  1).  ketsandMarkets  (March  [n. d.]). 
+
+https://www.marketsandmarkets.com/Market-Reports/automotive-head-up-display-market-11272971.html.
+
+[28] Richie Jose, Gun A. Lee, and Mark Billinghurst. 2016. A comparative study of simulated augmented reality displays for vehicle navigation.
+In Proceedings of the 28th Australian Conference on Computer-Human Interaction (OzCHI ’16). Association for Computing Machinery,
+New York, NY, USA, 40–48.  doi:10.1145/3010915.3010918..
+
+[29] Mara Kaufeld, Martin Mundt, Sarah Forst, and Heiko Hecht. 2022.  Optical see-through augmented reality can induce severe motion sick-
+ness.  Displays 74 (2022), 102283.  doi:10.1016/j.displa.2022.102283. https://www.sciencedirect.com/science/article/pii/S0141938222001032.
+ISSN 0141-9382.
+
+[30] R. S. Kennedy, N. E. Lane, M. C. Grizzard, K. M. Stanney, K. Kingdon, and S. Lanham. 2001.  Use of a motion history questionnaire to
+
+predict simulator sickness. In Proceedings of the Sixth Driving Simulation Conference -DSC2001, France. 79–89.
+
+[31] H. Kim and J. L. Gabbard. 2022.  Assessing distraction potential of augmented reality head-up displays for vehicle drivers.  Human factors 
+
+64, 5 (2022), 852–865.
+
+[32] Hyungil Kim, Xuefang Wu, Joseph L. Gabbard, and Nicholas F. Polys. 2013.  Exploring head-up augmented reality interfaces for crash
+warning systems. In Proceedings of the 5th International Conference on Automotive User Interfaces and Interactive Vehicular Applications 
+(AutomotiveUI ’13). Association for Computing Machinery, New York, NY, USA, 224–227.  doi:10.1145/2516540.2516566..
+
+[33] Andrew L. Kun, Hidde van der Meulen, and Christian P. Janssen. 2017.  Calling while driving: an initial experiment with hololens. 
+
+https://api.semanticscholar.org/CorpusID:22051165
+
+[34] B. Laugwitz, M. Schrepp, and T. Held. 2008.  Construction and evaluation of a user experience questionnaire.  In USAB 2008, A. Holzinger
+
+(Ed.). LNCS 5298, 63–76.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:25
+
+[35] J. D. Lee. 2008.  Fifty years of driving safety research.  Human factors 50, 3 (2008), 521–528.
+[36] Z. Li and Y. Ma. 2021.  Response and Evaluation of Vehicle AR-HUD Assistant System to Risk Cognition. In 2021 16th International 
+Conference on Computer Science & Education (ICCSE), Lancaster, United Kingdom. 153–157.  doi:10.1109/ICCSE51940.2021.9569278..
+[37] Yongshi  Liang,  Pai  Zheng,  and  Liqiao  Xia.  2023.  A  visual  reasoning-based  approach  for  driving  experience  improvement  in  the
+AR-assisted head-up displays.  Advanced Engineering Informatics 55 (2023), 101888.  doi:10.1016/j.aei.2023.101888. ISSN 1474-0346.
+[38] X. Ma, Z. Hong, J. Huang, J. He, J. Song, and M. Jia. 2021.  The impact of AR-HUD intelligent driving on the allocation of cognitive
+
+resources under the breakthrough of 5G technology.  Journal of Physics: Conference Series 1982 (2021).
+
+[39] X. Ma, Z. Hong, J. Huang, J. He, J. Song, and M. Jia. 2021.  The impact of AR-HUD intelligent driving on the allocation of cognitive
+
+resources under the breakthrough of 5G technology.  Journal of Physics: Conference Series 1982 (2021).
+
+[40] S.  M.  Sohel  Mahmud,  Luis  Ferreira,  Md.  Shamsul  Hoque,  and  Ahmad  Tavassoli.  2017.  Application  of  proximal  surrogate  in-
+IATSS  Research  41,  4  (2017),  153–163.
+
+dicators  for  safety  evaluation:  A  review  of  recent  developments  and  research  needs. 
+doi:10.1016/j.iatssr.2017.02.001. ISSN 0386-1112.
+
+[41] Maretzke and U. Jacob. 1992. Distance warning and control as a means of increasing road safety and ease of operation. In Proc. 24th
+
+Fisita Congr. Inst. Mech. Eng. 105–114.
+
+[42] MathWorks. n.d..
+
+MATLAB - Math. Graphics. Programming.
+
+MATLAB (n.d.).
+
+Retrieved November 16, 2021.
+
+https://nl.mathworks.com/products/matlab.html.
+
+[43] Frank P. McKENNA. 1982. The human factor in driving accidents An overview of approaches and problems. Ergonomics 25, 10 (1982),
+
+867–877. doi:10.1080/00140138208925047..
+
+[44] Zeljko Medenica, Andrew L. Kun, Tim Paek, and Oskar Palinko. 2011. Augmented reality vs. street views: a driving simulator study
+comparing two emerging navigation aids. In Proceedings of the 13th International Conference on Human Computer Interaction with Mobile
+Devices and Services (MobileHCI ’11). Association for Computing Machinery, New York, NY, USA, 265–274. doi:10.1145/2037373.2037414..
+[45] Microsoft. n.d.. Microsoft/MixedRealityToolkit-Unity: This repository is for the legacy mixed reality toolkit (MRTK) V2. for
+https://github.com/mixedrealitytoolkit/mixedrealitytoolkit-unity. GitHub.
+
+the latest version of the MRTK please visit. (n.d.).
+https://github.com/microsoft/MixedRealityToolkit-Unity.
+
+[46] C. Miyajima, H. Ukai, A. Naito, H. Amata, N. Kitaoka, and K. Takeda. 2011. Driver risk evaluation based on acceleration, deceleration,
+and steering behavior. In 2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Prague, Czech Republic.
+1829–1832. doi:10.1109/ICASSP.2011.5946860..
+
+[47] L. M. Méndez and E. G. Quinteiro. 2018. Augmented Reality as an Advanced Driver-Assistance System: A Cognitive Approach. In
+
+Proceedings of the 6 th Humanist Conference.
+
+[48] NHTSA. 2010. Crash Factors in Intersection-Related Crashes: An On-Scene Perspective. DOT HS 811 366. National Highway Traffic Safety
+
+Administration, Washington, DC. https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366.
+
+[49] H. Park and Kh Kim. 2013. Efficient Information Representation Method for Driver-Centered AR-HUD System. In Design, User Experience,
+and Usability. User Experience in Novel Technological Environments. DUXU 2013. Lecture Notes in Computer Science, vol 8014. , Berlin,
+A. Marcus (Ed.). Springer, Heidelberg. doi:10.1007/978-3-642-39238-2_43..
+
+[50] Annie Pauzie. 2008. A method to assess the driver mental workload: the Driving Activity Load Index (DALI). IET Intelligent Transport
+
+Systems 2 (2008), 315–322.
+
+[51] A. Pauzie. 2015. Head Up Display in Automotive: A New Reality for the Driver. In Design, User Experience, and Usability: Interactive
+Experience Design. DUXU 2015. Lecture Notes in Computer Science(), vol 9188, A. Marcus (Ed.). Springer, Cham. doi:10.1007/978-3-319-
+20889-3_47..
+
+[52] Minh Tien Phan, I. Thouvenin, and V. Frémont. 2016. Enhancing the driver awareness of pedestrian using augmented reality cues. In
+2016 IEEE 19th International Conference on Intelligent Transportation Systems (ITSC). 1298–1304. doi:10.1109/ITSC.2016.7795724..
+[53] Xiaobo Qu, Yan Kuang, Erwin Oh, and Sheng Jin. 2014. Safety Evaluation for Expressways: A Comparative Study for Macroscopic and
+
+Microscopic Indicators. Traffic injury prevention 15 (2014), 89–93.
+[54] Robot operating system. [n. d.]. ROS. n.d. https://www.ros.org/.
+[55] C. Roe, T. Brown, and G. Watson. 2007. Factors associated with simulator sickness in a high-fidelity simulator. Education 251, 5A (2007).
+[56] Michelle L. Rusch, Mark C. Schall, Patrick Gavin, John D. Lee, Jeffrey D. Dawson, Shaun Vecera, and Matthew Rizzo. 2013. Directing
+driver attention with augmented reality cues. Transportation Research Part F: Traffic Psychology and Behaviour 16 (2013), 127–137.
+doi:10.1016/j.trf.2012.08.007. ISSN 1369-8478.
+
+[57] T. Sayed, M. H. Zaki, and J. Autey. 2013. Automated safety diagnosis of vehicle–bicycle interactions using computer vision analysis.
+
+Safety science 59 (2013), 163–172.
+
+[58] S. Shalev-Shwartz, S. Shammah, and A. Shashua. 2018. Vision zero: on a provable method for eliminating roadway accidents without
+
+compromising traffic throughput. (2018). arXiv:1901.05022 ArXiv Preprint.
+
+[59] Sarah Sharples, Sue Cobb, Amanda Moody, and John R. Wilson. 2008. Virtual reality induced symptoms and effects (VRISE): Comparison
+of head mounted display (HMD), desktop and projection display systems. Displays 29, 2 (2008), 58–69. doi:10.1016/j.displa.2007.09.005.
+ISSN 0141-9382.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+20:26 
+
+•  Wang et al.
+
+[60] J. Smyth, S. Birrell, A. Mouzakitis, and P. Jennings. 2019. Motion Sickness and Human Performance – Exploring the Impact of Driving
+Simulator User Trials. In Advances in Human Aspects of Transportation. AHFE 2018. Advances in Intelligent Systems and Computing, vol
+786, N. Stanton (Ed.). Springer, Cham. doi:10.1007/978-3-319-93885-1_40..
+
+[61] C. Team. n.d.. Carla. CARLA Simulator. http://carla.org/.
+[62] Jacques Terken, Pierre Levy, Chao Wang, Juffrizal Karjanto, Nidzamuddin Md Yusof, Felix Ros, and Sergej Zwaan. 2017. Gesture-based
+and haptic interfaces for connected and autonomous driving. In Advances in Human Factors and System Interactions: Proceedings of
+the AHFE 2016 International Conference on Human Factors and System Interactions, July 27-31, 2016, Walt Disney World®, Florida, USA.
+Springer, 107–115.
+
+[63] M. Tonnis, C. Lange, and G. Klinker. 2007. Visual Longitudinal and Lateral Driving Assistance in the Head-Up Display of Cars. In 2007
+
+6th IEEE and ACM International Symposium on Mixed and Augmented Reality. 91–94. doi:10.1109/ISMAR.2007.4538831..
+
+[64] Cuong Tran, Karlin Bark, and Victor Ng-Thow-Hing. 2013. A left-turn driving aid using projected oncoming vehicle paths with
+augmented reality. In Proceedings of the 5th International Conference on Automotive User Interfaces and Interactive Vehicular Applications
+(AutomotiveUI ’13). Association for Computing Machinery, New York, NY, USA, 300–307. doi:10.1145/2516540.2516581..
+
+[65] Imaginecreategrowdo Moreimaginewith Unity. [n. d.]. Unity Real-Time Development Platform | 3D, 2D, VR &amp; AR Engine. n.d.
+
+https://unity.com/.
+
+[66] A. R. A. Van der Horst. 1991. A time-based analysis of road user behaviour in normal and critical encounters. (1991).
+[67] K. Vogel. 2003. A comparison of headway and time to collision as safety indicators. Accident analysis & prevention 35, 3 (2003), 427–433.
+[68] Alla Vovk, Fridolin Wild, Will Guest, and Timo Kuula. 2018. Simulator Sickness in Augmented Reality Training Using the Microsoft
+HoloLens. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). Association for Computing
+Machinery, New York, NY, USA, Paper 209, 1–9. doi:10.1145/3173574.3173783..
+
+[69] Chao Wang, Derck Chu, and Marieke Martens. 2023. Enhancing Perception of Risk Objects for Car Drivers Through Augmented
+Reality Glasses. In Adjunct Proceedings of the 15th International Conference on Automotive User Interfaces and Interactive Vehicular
+Applications (Ingolstadt, Germany) (AutomotiveUI ’23 Adjunct). Association for Computing Machinery, New York, NY, USA, 83–86.
+doi:10.1145/3581961.3609870
+
+[70] Chao Wang, Jing Gu, Jacques Terken, and Jun Hu. 2014. Driver-to-driver communication on the highway: What drivers want. In
+Ambient Intelligence: European Conference, AmI 2014, Eindhoven, The Netherlands, November 11-13, 2014. Revised Selected Papers 5. Springer,
+315–327.
+
+[71] Chao Wang, Zhixiong Lu, Jacques Terken, and Jun Hu. 2017. HUD - AR: Enhancing Communication between Drivers by Affordable
+Technology. In Proceedings of the 9th International Conference on Automotive User Interfaces and Interactive Vehicular Applications Adjunct
+(Oldenburg, Germany) (AutomotiveUI ’17). Association for Computing Machinery, New York, NY, USA, 249–250. doi:10.1145/3131726.
+3131875
+
+[72] Chao Wang, Jacques Terken, Jun Hu, and Matthias Rauterberg. 2016. "Likes" and "Dislikes" on the Road: A Social Feedback System
+for Improving Driving Behavior. In Proceedings of the 8th International Conference on Automotive User Interfaces and Interactive
+Vehicular Applications (Ann Arbor, MI, USA) (Automotive’UI 16). Association for Computing Machinery, New York, NY, USA, 43–50.
+doi:10.1145/3003715.3005403
+
+[73] James R. Ward, Gabriel Agamennoni, Stewart Worrall, Asher Bender, and Eduardo Nebot. 2015. Extending Time to Collision
+for probabilistic reasoning in general traffic scenarios. Transportation Research Part C: Emerging Technologies 51 (2015), 66–82.
+doi:10.1016/j.trc.2014.11.002. ISSN 0968-090X.
+[74] WayRay. n.d.. WayRay. (n.d.). https://wayray.com/.
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection 
+
+•  20:27
+
+A  Time Table of the User Study
+
+Task
+Study preparations
+Briefing (Session 1)
+Adjusting HoloLens and Simulation seat
+Familiarization session
+Break & Questions (Optional)
+Drive (A)
+Questionnaires
+Briefing (Session 2)
+Familiarization session
+Break & Questions (Optional)
+Drive (B)
+Questionnaires
+Briefing (Session 3)
+Drive (A)
+Questionnaires
+Break & Questions (Optional)
+Briefing (Session 4)
+Drive (B)
+Questionnaires
+Break & Questions (Optional)
+Briefing (Session 5)
+Drive (A)
+Questionnaires
+Break & Questions (Optional)
+Briefing (Session 6)
+Drive (B)
+Questionnaires
+Interview
+Appreciation
+Total
+
+Description
+
+Duration
+
+Informed Consent, Privacy statement, Demographics
+
+5 minutes
+
+Find comfortable fit
+Simulator/interaction test drive
+
+Baseline
+UEQ / DALI
+Design 1
+Simulator/interaction test drive
+
+Intervention
+UEQ / DALI
+Design 1
+Intervention
+UEQ / DALI
+
+Design 2
+Intervention
+UEQ / DALI
+
+Design 2
+Intervention
+UEQ / DALI
+
+Baseline
+UEQ / DALI
+Open questions for extra insights
+
+1 minutes
+3 minutes
+(5) minutes
+5 minutes
+2 minutes
+1 minutes
+3 minutes
+(5) minutes
+5 minutes
+2 minutes
+1 minutes
+5 minutes
+2 minutes
+(5) minutes
+1 minutes
+5 minutes
+2 minutes
+(5) minutes
+1 minutes
+5 minutes
+2 minutes
+(5) minutes
+1 minutes
+5 minutes
+2 minutes
+5 minutes
+1 minute
+65 + (25)
+
+Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., Vol. 9, No. 1, Article 20. Publication date: March 2025.
+
+

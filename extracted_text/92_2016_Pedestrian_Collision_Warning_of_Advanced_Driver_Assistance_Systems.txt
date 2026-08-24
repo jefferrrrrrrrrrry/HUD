@@ -1,0 +1,451 @@
+--- Page 1 ---
+Pedestrian Collision Warning of 
+Advanced Driver Assistance Systems 
+Ying-Che Kuo*, Ci-Ming Fu, Cheng-Tao Tsai, Chun-Cheng Lin, Chih-Hao Chang 
+Department of Electrical Engineering, National Chin-Yi University of Technology, Taichung, Taiwan 
+No.57, Sec. 2, Zhongshan Rd., Taiping Dist., Taichung 41170, Taiwan (R.O.C.) 
+1 kuoyc@ncut.edu.tw 
+2 ciming1024@gmail.com 
+3 cttsai@ncut.edu.tw 
+4 cclin@ncut.edu.tw 
+5 zaq1rex@yahoo.com.tw 
+Abstract— Pedestrian collision warning system is one of the 
+major functions of Advanced Driver Assistance Systems. The 
+proposal uses single camera and a cascade detection algorithm to 
+develop the pedestrian collision warning system. Harris corner 
+detection algorithm is applied for getting the features of 
+pedestrian’s contour. The modified Lucas-Kanade optical flow 
+algorithm is used to estimate motion vector of pedestrian. Grey
+theory is used to predict the future driving path of vehicle. And
+the proposed collision warning system is based on the motion 
+vector of pedestrian and the future driving path of vehicle. 
+Keywords— Collision warning, Pedestrian detection, Optical 
+flow, Grey theory
+I.
+INTRODUCTION
+In recent studies, computer vision technologies have been 
+widely used for object detection, especially in the applications 
+of Advanced Driver Assistance System (ADAS). Y.C. Lin et 
+al. [1] used the methods of image morphologies, corner 
+detection, and inverse perspective mapping to detect objects 
+for parking assistance system. These methods have the 
+properties of low computational complexities. Nevertheless, 
+these methods can only detect still objects in the parking 
+assistance application. C.G. Keller et al. [2] proposed an 
+active safety system for pedestrians, the system can validate 
+the brake automatically to avoid collision in specific driving 
+scenarios. For detecting objects and predicting the movements 
+of objects, use sequential stereo images to reconstruct 3-D
+road scenes and 3-D movement fields, which called 6-D 
+vision. This system can acquire and track the position of 
+object. But the computing of the proposed algorithm is huge 
+and hence it is hard to be implemented. C.T. Hong et al.[3]
+installed four cameras around a vehicle to set up the bird’s eye 
+view, and applied the optical flow algorithm with the inverse 
+perspective mapping method to detect objects around the 
+vehicle. This method aims to improve the non-consistent of 
+optical flows between the inner and outer sides of vehicle 
+when the vehicle makes turns. Furthermore, the proposed 
+method is restricted to applied to vehicles designed based on 
+Ackermann Steering Geometry.  
+Pedestrian detection is one of the major functions of ADAS.
+Considering the computational complexity of object detection 
+algorithm and the hardware cost of stereo vision, our proposal 
+uses only single camera and a cascade detection algorithm to 
+develop the pedestrian collision warning system. The cascade 
+detection algorithm focuses on the region of interest (ROI) to 
+measure the motion vector of the pedestrian. Since the 
+applications of cascade structure of detection algorithm and 
+ROI were adopted, the proposal eliminates the time 
+exhausting computation of stereo vision. 
+II. THE PEDESTRIAN COLLISION WARNING SYSTEM
+The proposal includes three parts, as shown in Fig. 1. The 
+first part is pedestrian detection. It finds the position of 
+pedestrian on the image. The second part is to obtain the 
+motion vector of pedestrians. And the third part is to predict 
+the future path of movement of pedestrians, calculate the 
+collision time, and to determine the possibility of a collision. 
+Fig. 1 Pedestrian collision warning system 
+A. Pedestrian Detection 
+In our previous work [4], a novel pedestrian detection 
+system that uses Harr-like extraction and a covariance matrix 
+descriptor to identify the distinctions of pedestrians has been 
+presented. The detection procedure is accelerated using a two-
+layer cascade of classifiers. The front end, constructed based 
+on Harr-like features, can select candidate regions quickly 
+wherever pedestrians may be present. Moreover, the back end, 
+constructed based on the covariance matrix descriptor, can 
+determine accurately whether pedestrians are positioned in 
+candidate regions. If a region tests positive through the two- 
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+739
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+739
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+2016 International Symposium on Computer, Consumer and Control
+978-1-5090-3071-2/16 $31.00 © 2016 IEEE
+DOI 10.1109/IS3C.2016.189
+740
+
+--- Page 2 ---
+Fig. 2   Detection results of photos of the USC pedestrian test set [5] 
+layer cascade classifiers, pedestrian images are likely 
+captured and marked by oblongs, show in Fig. 2. 
+B. Motion Vector of Pedestrian 
+After the position of pedestrian on the image has been 
+marked, the movement of pedestrian is the major judgment 
+for collision warning system.
+And for the consideration of 
+computing efficiency, the following procedures are executed 
+only in the marked oblong area which also called region of 
+interest (ROI). 
+1)
+Features of pedistrian’s contour:  For estimating the  
+motion vector of pedestrian, Harris corner detection algorithm 
+[6], as shown in equation (1), is applied for getting the 
+features of pedestrian’s contour first.  
+G(x,y) equals the squared sum of the differential errors in 
+0˚,45˚, 90˚,135˚,180˚,225˚,270˚, and 315˚ totally 8 directions; 
+(u, v) is the range of calculation, usually is a 3x3 square area; 
+∆x and ∆y are the displacement in x and y directions in the 
+range of calculation, respectively;  is a Gaussian window; I
+represents the gray level value at (x,y) coordinate on the 
+image, I and I are the differential values of I in x and y 
+directions, respectively.   
+The matrix A includes the properties of gradients in 8 
+directions. From observing the eigenvalues λi  of matrix A,
+(x,y) will be defined as an corner point if the eigenvalues of 
+matrix A have similar values. The motion vector of the corner 
+point found on the image represents the future walking path of 
+the pedestrian. 
+2)
+Estimation of motion vector:  The motion vector of  
+pedestrian represents the future walking path of pedestrian. 
+The modified Lucas-Kanade (LK) optical flow method [7] is 
+used to estimate motion vector. Based on constant brightness 
+phenomenon, two sequential image frames at time t and t+1
+have similar brightness, as shown in equation (2). 
+After taking Taylor expansion from equation (2), we have 
+equation (3), where I is the derivatives of I by time. 
+Suppose LK optical flow method has the property of 
+spatial coherence, it means that the n × n neighborhoods 
+around (x,y) will move in the same direction and same speed. 
+d = [u
+v] denoted in equation (4) represents the solution of 
+equation (3).  It represents the motion vectors in 8 different 
+directions. 
+C. Prediction of  Collision:   
+1)
+Calculate the position of pedestrian: For precisely  
+estimating the motion vector of pedestrian, the marked oblong 
+of the pedestrian detection result is divided into three regions, 
+includes head, body and feet regions, as shows in Fig. 3(a).
+When pedestrians are in moving status, the variations in hands 
+or feet are quite obvious. So it is not suitable for estimating 
+the motion vector of pedestrians. In this study, use the 
+variations of head in sequential image frames to estimate the 
+motion vector. And calculate the feet position on the image to 
+represent the position of the pedestrian (Fig. 3(b)). The 
+procedures are as follows烉(1) The marked oblong is divided 
+into three regions, includes head, body, and feet. Next, apply 
+optical flow method to calculate the motion vectors of the 
+corner points in head and feet regions; (2) Some corner points 
+are belong to pedestrian, but some are belong to background. 
+Based on the optical flows of corner points, corner points of 
+background can be distinguished and removed; (3) After 
+background is removed, the position of the pedestrian m(x,y) 
+is measured using equation (5).
+nh is the number of corner points in head region; nf is the 
+number of corner points in feet region; head	(x) is the x
+coordinate of the i-th corner point in head region, foot	(y) is
+the y coordinate of the i-th corner point in feet region. In Fig.
+d = 
+
+ II
+ II
+ II
+ II
+
+
+∙
+− II
+− II
+ 
+(4) 
+ 
+ 
+G(x, y) =   w(u, v) ∙I(u, v) I(u, v) ∆x
+∆y
+
+
+
+ 
+= [∆x
+∆y] A ∆x
+∆y, 
+where  A =   w(u, v) 
+I
+
+II
+II
+I
+ 
+
+
+ 
+ 
+(1) 
+I(x, y, t) = I(x + u, y + v, t + 1) 
+(2) 
+[I
+I] ∙[u
+v] + I = 0 
+(3) 
+ 
+m(x, y) = 
+∑
+head	(x)
+
+	
+n!
+,
+∑
+foot	(y)
+"
+	
+n#
+$ 
+(5) 
+740
+740
+741
+741
+741
+741
+741
+741
+741
+
+--- Page 3 ---
+                      
+(a)                                    (b) 
+Fig. 3  Position of pedestrian 
+Fig. 4  hazardous zone 
+3(b), the yellow-colored line indicates the pedestrian position 
+m (x, y). 
+1)
+Definition of hazardous zone: A hazardous zone is 
+defined as the travel route of vehicle will soon drive into. The 
+danger occurred in following cases (1) Pedestrian will appear 
+in the hazardous zone; (2) Pedestrian stays in the hazardous 
+zone. In this paper, with reference to general urban roads and 
+general dimensions of vehicle, the camera is mounted in the 
+center of the windshield. The hazardous zone is set in the 
+range shown in Fig. 4. The left of the 1.5-meter line is denoted
+as DL, the right of the 1.5-meter line is denoted as DR. 
+2)
+Prediction of pedestrian's walking path:  In this 
+paper, grey theory [8] was applied to predict the future 
+walking path of pedestrian. Grey theory has the priority of 
+new information and minimum message explore uncertainty,
+this property will make our work more sensitive to predict the 
+subsequent pedestrian path. Grey prediction uses the optical 
+flow calculated in previous sub-session to predict the future 
+walking path of pedestrians. It is the information for 
+determining whether a collision with the vehicle will happen 
+or not. 
+Grey prediction models are usually represented by 
+GM(h, N) , where h is the differential order and N is the 
+number of variables. Grey prediction is used to predict the 
+changes in the future by analysing the past data. The GM(1,1) 
+model of the Grey differential equation is: 
+Where a is the representative of the development function; b is 
+a control variable; x represented as a sequence of variables. 
+Grey theory uses the motion vector d = [u
+v] of pedestrian 
+estimated by optical flow algorithms to predict the next 
+location of the pedestrian. If the current location of the 
+pedestrian is (P, P), the next location of pedestrian in the 
+future time % ∙∆& can be expressed as equation (7). Where 
+∆'* and ∆-* denotes as the differences of the motion vectors 
+between time . ∙∆& and time (i-1)∙∆&
+3)
+Calculation of collision point: The collision point 
+will be estimated if the pedestrian will walk through the range 
+of hazardous zone. (P, P) is the current location of 
+pedestrian, then calculates the future location (P/#, P/#) at 
+f ∙∆T later. The last two locations can be used to establish a 
+linear equation. Cramer’s rule [9] is used to find the 
+intersections of the linear line and the hazardous zone. 
+According to the location and the motion vector of pedestrian,
+the proposal defines 6 types of the future movements as 
+shown in Fig. 5. Green point denotes the location of the 
+pedestrian, blue vector denotes the moving direction of the 
+pedestrian. Cramer formula is used to estimate the crossing 
+point (x2, y2), the results are shown in Fig. 6. 
+III. EXPERIMENT RESULTS
+The experiments were tested on the roads in urban area during 
+daytime. A camera installed in the center of the front 
+windshield of the car. The specification of the camera is 
+shown in Table 1. Figure 7 shows the detection results of 
+corner points. Figure 8 shows the detection results of motion 
+vectors. Experimental results in real test are concluded in Fig. 
+9. The estimations of our proposal are consistent with the 
+accurate measurements. 
+Fig. 5  Classifications of moving directions 
+Fig. 6  Prediction of collision point 
+dx()
+dt
++ ax() = b 
+(6) 
+(P/#, P/#) = (P + ∆u + ⋯∆u# 
+, P + ∆v + ⋯∆v#) 
+(7) 
+741
+741
+742
+742
+742
+742
+742
+742
+742
+
+--- Page 4 ---
+TABLE  1. 
+SPECIFICATIONS OF CAMERA
+SENSOR
+CMOS
+FOCAL LENGTH
+29 MM
+RESOLUTION
+640×360
+ERECTION HEIGHT
+120CM
+TILT ANGLE
+1°
+ 
+ 
+ 
+ 
+Fig. 7  Results of corner detection 
+Fig. 8  Results of motion vector 
+IV. CONCLUSION
+The proposal uses single camera and a cascade detection 
+algorithm to develop the pedestrian collision warning system. 
+Based on the image processing technologies, Collisions can be 
+predicted from using the information of motion vector and the 
+future driving route. It can remind the driver to caution 
+pedestrians and decrease the rate of traffic accidents. The 
+results 
+of 
+experiments 
+show 
+that 
+this 
+system 
+can 
+simultaneously handle multiple pedestrians and correctly 
+calculate the possibility of collision. 
+Since this system is built based on the parallel architecture,
+it is efficient to process the three functions, as shown in Fig. 1, 
+in parallel. And this will enable the system to achieve real-
+time processing application. 
+REFERENCES
+[1]
+Y.C. Lin, C.T. Lin, W.C. Liu, and L.T. Chen, “A vision-based obstacle 
+detection system for parking assistance”, Mechanical and Systems 
+Research Laboratories Industrial Technology Research Institute 
+Hsinchu, Taiwan, R.O.C. 
+[2]
+C.G. Keller and T. Dang, “Active pedestrian safety by automatic 
+braking and evasive steering,” IEEE Transactions on Intelligent 
+Transportation Systems, Vol. 12, No. 4, Dec. 2011. 
+[3]
+C.T. Hong, Ā An improved obstacle detection using optical flow 
+adjusting based on inverse perspective mapping for the vehicle safety,ā
+National Taipei University of Technology, thesis, 2012.
+[4]
+Y.C. Kuo, Z.Y. Yang, and C.H. Yen, “Fast pedestrian detection system 
+with a two layer cascade of classifiers,” Elsever Journal of Computers 
+and Mathematics with Applications, Vol. 64, Sep. 2012, pp. 1311-1323.
+[5]
+USC Pedestrian Detection Test Set :   http://iris.usc.edu/Vision-
+Users/OldUsers/bowu/DatasetWebpage/dataset.html
+[6]
+C. Harris and M. Stephens, “A combined edge and corner detector,” 
+Proceedings of the 4th Alvey Vision Conference, 1988: pp. pages 147--
+151.
+[7]
+B. D. Lucas, T. Kanade, “An Iterative Image Registration Technique 
+with an Application to Stereo Vision,” Proceedings of Imaging 
+Understanding Workshop, pp. 121-130, 1981.
+[8]
+D. Julong, “Introduction to grey system theory,” The Journal of Grey 
+System, pp. 1-24, 1989.
+[9]
+Cramer's
+rule, 
+http://zh.wikipedia.org/wiki/%E5%85%8B%E8%90%8A%E5%A7%8
+6%E6%B3%95%E5%89%87
+Fig. 9  Real test results of the proposal 
+INPUT IMAGE
+RESULTS
+ESTIMATE DISTANCE OF PEDESTRIAN
+ACTUAL DISTANCE OF PEDESTRIAN
+(1.42M,4.37M)
+(1.55M,4.52M)
+ESTIMATE DISTANCE OF POINT OF
+COLLISION
+ACTUAL DISTANCE OF POINT OF
+COLLISION
+(-1.91M,6.04M)
+(-2.03M,6.08M)
+ESTIMATE TIME THAT PEDESTRIAN 
+TO REACH THE POINT OF COLLISION
+ACTUAL TIME THAT PEDESTRIAN TO 
+REACH THE POINT OF COLLISION
+5.32(S)
+5.58(S)
+ESTIMATE TIME THAT  VEHICLE TO 
+REACH THE POINT OF COLLISION
+ACTUAL TIME THAT  VEHICLE TO 
+REACH THE POINT OF COLLISION
+0.78(S)
+0.78(S)
+742
+742
+743
+743
+743
+743
+743
+743
+743

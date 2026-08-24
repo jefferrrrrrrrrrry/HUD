@@ -1,0 +1,971 @@
+ 
+1
+A Comparative Study of Simulated Augmented Reality 
+Displays for Vehicle Navigation 
+Richie Jose†     Gun A. Lee‡†     Mark Billinghurst‡ 
+†The Human Interface Technology Laboratory New Zealand, University of Canterbury 
+‡School of Information Technology & Mathematical Sciences, University of South Australia 
+richiejk@outlook.com     gun.lee@unisa.edu.au     mark.billinghurst@unisa.edu.au 
+ 
+ 
+ABSTRACT 
+In this paper we report on a user study in a simulated 
+environment that compares three types of Augmented 
+Reality (AR) displays for assisting with car navigation: 
+Heads Up Display (HUD), Head Mounted Display 
+(HMD) and Heads Down Display (HDD). The virtual 
+cues shown on each of the interface were the same, but 
+there was a significant difference in driver behaviour and 
+preference between interfaces. Overall, users performed 
+better and preferred the HUD over the HDD, and the 
+HMD was ranked lowest. These results have implications 
+for people wanting to use AR cues for car navigation. 
+Author Keywords 
+Augmented Reality; Car Navigation, Head Up Display. 
+ACM Classification Keywords 
+H.5.2 User Interfaces; H.5.1 Multimedia Information 
+Systems - Artificial, augmented, and virtual realities. 
+INTRODUCTION 
+This paper reports on research to compare different 
+Augmented Reality (AR) displays for vehicle navigation. 
+AR technology is usually considered to be a live view of 
+the real world, onto which virtual information is 
+superimposed, and can be interacted with (Kipper & 
+Rampolla, 2012). One possible use of AR in cars is to 
+provide navigation cues, such as virtual arrows (Tonnis et 
+al., 2007), or lines on the road (Hu & Uchimura, 2004). 
+There are a number of ways to implement an in-car AR 
+navigation interface. One of the most common is by using 
+a Head Down Display (HDD) mounted on the dashboard 
+showing an AR enhanced live video view (see Figure 1 
+top). This display shows AR cues on a live camera view 
+of the real world. A common example of this is the use of 
+in-car displays for parallel parking by using AR imagery 
+with reverse cameras. The main advantage is that the 
+display will not block the driver's view of the real world. 
+However the driver does need to take his or her eyes off 
+the road to view the display. 
+ 
+ 
+ 
+ 
+ 
+Figure 1. Simulated AR views (HDD, HUD, and HMD from 
+top to bottom). 
+Another approach is to project information onto a Heads 
+Up Display (HUD) on the windscreen in the driver's line 
+of sight (see Figure 1 middle). This reduces the time the 
+driver needs to take their eyes off the road and provides a 
+large field of view. However, there are a few challenges, 
+such as the level of visibility in direct sunlight, and the 
+obstruction of real world elements with the AR cues. 
+Finally, the driver could wear a lightweight Head 
+Mounted Display (HMD), such as Google Glass 
+(http://glass.google.com), to create a personal virtual 
+display overlaying the real world (see Figure 1 bottom). 
+The main benefit of using a HMD is that the user can see 
+navigation information regardless of where they are 
+looking. However, the display may block or at least cover 
+certain portion of the driver’s real world view. 
+Since there are a number of different ways to show AR 
+navigation cues in a car, it is important to research the 
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that 
+copies bear this notice and the full citation on the first page. Copyrights 
+for components of this work owned by others than the author(s) must be 
+honored. Abstracting with credit is permitted. To copy otherwise, or 
+republish, to post on servers or to redistribute to lists, requires prior 
+specific permission and/or a fee. Request permissions from 
+Permissions@acm.org. 
+OzCHI '16, November 29-December 02, 2016, Launceston, TAS, 
+Australia 
+Copyright is held by the owner/author(s). Publication rights licensed to 
+ACM. 
+ACM 978-1-4503-4618-4/16/11…$15.00  
+DOI: http://dx.doi.org/10.1145/3010915.3010918 
+
+
+ 
+ 
+2
+effect on driver behaviour of each of these options. Some 
+of the existing research in using AR for in-car navigation 
+compares using a HUD with an in-car HDD (Charissis et 
+al., 2008; Liu & Wen, 2004). There is also research 
+comparing using AR cues instead of map navigation 
+(Yamaguchi et al., 2007). However, to the best of our 
+knowledge, we are unaware of previous research that 
+directly compares the same AR interface on a HMD, 
+HUD and HDD for in-car navigation. Thus, the main 
+contribution of this paper is to provide comparisons of 
+HMD, HUD and HDD display technologies for AR 
+navigation. 
+Testing of AR navigation interfaces in real world driving 
+conditions is a challenge due to safety concerns, technical 
+difficulties of producing bright AR images, and having 
+consistent environmental conditions for user studies. 
+Thus, like other previous research (e.g., Chu & Joseph, 
+2008; Kim & Dey, 2009; Medenica et al., 2011; Ng-
+Thow-Hing et al., 2013), we conduct our user studies in 
+an immersive driving simulation. In the future we aim to 
+conduct user studies in real driving conditions outdoors. 
+RELATED WORK 
+Using AR for car navigation is an area that has been well 
+studied. This section reviews previous related research in 
+using AR interfaces for vehicle navigation, including 
+earlier user experiments and evaluation methods.  
+Using AR Cues for Car Navigation 
+In a vehicle, the user's tasks fall into primary, secondary 
+and tertiary categories (Geiser, 1985). The primary task 
+involves the manoeuvring of the vehicle while keeping an 
+eye on the surroundings and distance to other cars and 
+objects. Secondary tasks are those that supplement the 
+primary tasks like controlling the turning indicators or 
+windshield wipers. Finally, tertiary tasks do not have any 
+relationship with driving, such as using the car radio. 
+Each of these tasks typically use different physical areas 
+in the driver's space for information display and input. 
+The primary task uses the windshield, while secondary 
+tasks use the in-car display and controls near the 
+windshield, and tertiary tasks use other controls. HUD 
+and HMD allow information to be placed in the primary 
+task area, while HHD place information on a physical 
+display in the secondary task area inside the car. 
+The first vehicle HUDs were developed in late 80’s with 
+the Oldsmobile Cutlass Supreme (Horrey et al., 2003) 
+where techniques adopted from the aviation industry were 
+used to project information onto the car windshield. The 
+first use of HMDs in cars dated back to the late 1990s 
+with Regenbrecht’s AR Training System for driver safety 
+(Regenbrecht et al., 2005). From the early 2000’s, HDD 
+based AR systems such as VICNAS (Hu & Uchimura, 
+2004) were developed that added AR navigation cues 
+onto live video shown on in-car console display.  
+Using HDD for AR Navigation 
+One of the easiest ways to provide AR navigation cues is 
+to add virtual information to a live camera view shown in 
+an in-car display. For example Narzt et al. (2003) 
+developed the INSTAR system that used an AR overlay 
+on a live video feed shown on a small display mounted on 
+the car dashboard. This system combined car GPS and 
+orientation sensors with points of interest and map 
+information from a spatial database for navigation. 
+Around this time researchers were also exploring using 
+AR overlay on a HDD to have virtual cues that aligned 
+with the real world (Siemens, 2002), rather than just 
+using screen aligned navigation cues. For example, the 
+VICNAS system (Hu & Uchimura 2004) used hybrid 
+tracking with GPS, inertial sensing and computer vision 
+combined together to align virtual navigation arrows with 
+the real terrain. In the AR-Navi HDD system (Yamaguchi 
+et al., 2007), researchers extended this by having both an 
+ego-centric AR view and a top-down map view. 
+Recently, commercial uses of HDD for in-car navigation 
+have become common. One of the earliest uses of AR in 
+production cars has been the use of reversing cameras for 
+parking 
+assistance. 
+For 
+example, 
+Ford 
+(2008) 
+implemented this in their Fiesta 2011 models with 
+forward and reverse parking assistance. There are also 
+applications available that can turn any smart phone into 
+an AR navigation aid. The 2010 Wikitude Drive 
+application, 
+(http://www.wikitude.com/wikitude-drive) 
+provides turn-by-turn navigation using AR cues on a 
+user’s smart phone attached to the car dashboard. 
+Using HUD for AR Navigation 
+There has been a lot of research on using the windshield 
+as a HUD for vehicles. A HUD provides a wider field of 
+view than the HDD, overlays graphics on a direct view of 
+the real world, and is located in the driver’s primary task 
+space, and so doesn’t require the driver to take their eyes 
+off the road. For example, the University of Minnesota's 
+driver assistance system uses AR technology, and an 
+optical HUD for collision avoidance (GPS World, 2010). 
+The system showed lane markings to assist the driver 
+with navigation during difficult driving conditions. 
+Researchers have developed HUD interfaces specifically 
+to provide car navigation cues. For example Tonnis et al. 
+(2007) created an interface that projects AR cues on the 
+windshield that align with the road surface. Narzt et al. 
+(2003) goes beyond this to not only show navigation 
+arrows, but also highlights freeway exits, points of 
+interest such as petrol stations, and alerts to potential 
+hazards. More recently, the DICE AR system showed 
+how the whole windshield of a car could be used to 
+present driver information (Jungwirth, 2012). 
+Using the windshield as a display has also been explored 
+by commercial brands in recent years. For example, 
+Jaguar's Land Rover launched a concept video showing 
+AR imagery on a windshield in a car (Jaguar, 2014). This 
+display is interactive and has features like virtual racing 
+lines that change colour to indicate optimum braking, and 
+virtual road cones to train novice drivers. Similarly, 
+Pioneer (2012) has launched their Cyber Navi line which 
+features both a HUD on the car's sun visor and a fixed 
+console on the dashboard that captures video from a 
+camera mounted near the rear view mirror. This camera 
+scans the road ahead and provides a live video feed to the 
+console, and uses object recognition to detect street signs 
+and traffic and presents this information with AR cues. 
+
+
+ 
+3
+Using HMDs for AR Navigation 
+There are far fewer examples of AR interfaces using 
+HMDs in vehicles. Ferreira et al. (2013) describes the use 
+of a video see-through HMD to enable a driver to see 
+through vehicles in front of them. In this case the wireless 
+video is sent from the lead vehicle to the one following 
+behind to show the scene ahead. Santos (2014) describes 
+an extension of this where the integrated head tracking in 
+the HMD could assist with knowing where the user was 
+looking and what virtual cues should appear in his or her 
+field of view. Regenbrecht et al. (2005) described how a 
+similar system could be used to provide driver training, in 
+this case using a video see-through HMD to present a 
+number of dangerous driving situations. However none of 
+these systems provided navigation cues to the user. 
+One of the few AR HMD systems demonstrating an in-
+car navigation aid is the work of Foxlin et al. (2014). 
+They developed a precise head tracking system for optical 
+see-through HMDs in vehicles, and showed virtual tunnel 
+navigation cues that guide the user in the direction they 
+should go. However the main focus of their work was on 
+the in-vehicle tracking system and navigation interface. 
+Previous Comparative Studies 
+There have been many studies that have compared using 
+HUDs to HDDs in driving tasks. These studies typically 
+record the driver performance, the number of errors made, 
+the driver workload, and the user preference. For example, 
+Doshi et al. (2009) conducted a study with the windshield 
+as a display and using AR elements to convey an alert 
+when the driver drove above the speed limit. They found 
+that user’s had a faster reaction time using the HUD than 
+when using a HDD. Similarly Liu and Wen (2004) found 
+that truck drivers were able to control their speed better 
+when shown speed information in a HUD rather than a 
+HDD, with a 1.0 second saving in reaction time. 
+Medenica et al. (2011) used a driving simulator to 
+measure performance with an AR HUD compared to two 
+types of HDD navigation aids. Using eye-tracking 
+technology they found that with the AR HUD drivers 
+were able to keep their eyes on the road significantly 
+longer than with a HDD and experienced significantly 
+less workload. Other experiments include the work of 
+Charissis et al. (2008) that found an AR HUD produced 
+significantly less collisions in low visibility conditions 
+than a HDD, and Kim and Dey (2009) showing fewer 
+navigation and driving errors with a novel AR HUD 
+compared to standard HDD. 
+Some research has also been conducted on comparing AR 
+to non-AR interfaces for the same display type. For 
+example, Park et al. (2007) compared driver performance 
+when using world-registered arrows to screen-registered 
+2D icons on the HUD. They found that drivers had a 
+significantly faster response time to lane changing 
+information when shown with the world-registered cues. 
+Similarly, Sawano and Okado (2006) conducted a study 
+comparing an AR HDD to a more traditional HDD with 
+non-AR map interface. Users found the AR HDD 
+interface to be more understandable, although there was 
+no significant difference in driver performance. 
+In summary, over the past 20 years researchers have 
+developed a range of different AR interfaces for driver 
+assistance, using HDD, HUD and HMD techniques. User 
+studies show the HUDs provide better performance than 
+HDDs, but further research needs to be done with HMDs. 
+It seems that there has been little or no work previously 
+published comparing the same driving AR interface in a 
+HDD, HUD and HMD under the same conditions, either 
+in a driving simulator or in real driving conditions. This is 
+the research gap that our work seeks to address. 
+PROTOTYPE DESIGN AND IMPLEMENTATION 
+To test different AR display configuration, a virtual 
+driving simulator was developed based on the Oculus Rift 
+DK1 HMD and Ferrari Thrustmaster GT steering wheel 
+(see Figure 2). The Rift is a wide field of view stereo 
+HMD (110 degree diagonally and 90 degree horizontal) 
+with 640x800 pixels per eye. The device also comes with 
+an orientation and motion sensor (sampling at 1000Hz) to 
+track the rotation of the user’s head as they look around 
+the virtual world. For audio we used a noise-cancelling 
+headset (Audio Technica ATH-ANC33iS). 
+ 
+Figure 2. HMD and steering wheel used. 
+The virtual simulation was developed using the Unity3D 
+v4.5 game engine (http://unity3d.com) and the UnityCar 
+2.2 (http://unitypackages.net/unitycar/joomla/index.php) 
+plug-in that provides a realistic vehicle simulation. The 
+car used was a left-hand drive model (see Figure 1). A 
+virtual human was added to the driver seat and the 
+behaviour of the car was connected to the steering wheel 
+and pedals. The car model was also tweaked to add 
+rendered textures with cameras to the side and central rear 
+view mirrors. A forward looking camera was added for 
+the AR view. 
+The city environment used for the driving simulator was 
+the Unity City terrain from UnityCar 2.2. This is an 
+extensive city model that has various roads and buildings. 
+The map has a set of roads that could be used to navigate 
+to a fixed position using different routes (see Figure 3). 
+AR Interface 
+Most of the development work of the prototype involved 
+building three simulated AR displays, a HUD, HDD and 
+a HMD. The implementation of each AR display was 
+done 
+using 
+the 
+NGUI 
+plug-in 
+for 
+Unity 
+(https://www.assetstore.unity3d.com/en/#!/content/2413) 
+for implementing 2D user interfaces for the displays. 
+
+
+ 
+ 
+4
+ 
+Figure 3. Virtual city in the prototype. 
+The AR interface was used to display speed, the current 
+gear, and direction information (see Figure 4). Two-
+dimensional arrows were used to show the turn 
+information. The driver’s speed was colour coded to 
+easily identify how close they were to the speed limit 
+(60km/h); Green when below the speed limit, Yellow 
+nearing the speed limit and Red when above the speed 
+limit. Finally, the display area for each AR display was 
+the same size/field of view so that there would be no bias.  
+Note that while world-registered cues could take greater 
+advantages of AR, we only used screen-registered cues to 
+make the study simpler. We plan to further investigate 
+world-registered cues in the future.  
+ 
+Figure 4. AR interface design. 
+The Windshield HUD simulation was displayed at the 
+bottom of the windshield (see Figure 1 middle). For the 
+HMD simulation, a display with a 20 degree field of view 
+was shown on the top right corner of the user's view, 
+similar to Google Glass. The display was fixed to the 
+user’s viewpoint and so always in view when they turned 
+their head (see Figure 1 bottom). The HDD display had 
+its display screen fixed into the console mounted on the 
+dashboard (see Figure 1 top). This was placed at 
+approximately 30 degrees below the eye level. 
+USER EXPERIMENT 
+We conducted a user experiment to compare between the 
+different simulated AR displays for vehicle navigation. 
+The goal was to compare the effects of using different 
+types of AR displays for navigation while driving.  
+Experiment Design 
+A within participants experiment was designed with the 
+following three conditions: HUD, HMD, and HDD. In 
+each condition, participants were asked to drive fixed 
+path in the virtual simulation following the AR navigation 
+cues to get to the destination as fast and safe as possible. 
+Participants had to fulfil three tasks: 
+1. Follow navigational instructions on the display 
+2. Keep to the speed limit of 60km/h 
+3. Look around for virtual characters in the scene 
+Virtual characters were placed on certain positions 
+throughout the city. The participant had to look around 
+for these characters as they drove and click a button on 
+the steering wheel each time they saw them. This was to 
+measure how attentive the user was to his or her 
+surroundings and to ensure that they looked around at 
+intersections and corners similar to real driving conditions. 
+The user study was conducted in a small room (3m x 5m), 
+where participants sat on a chair using the prototype. 
+Procedure 
+The whole procedure took about 40 minutes. The 
+experiment started with the participant reading the 
+information sheet and signing the consent form. The 
+procedure was then explained along with how each AR 
+display looked and the tasks. Then the researcher assisted 
+the participant in putting on the equipment. The 
+participant first drove freely for 2 minutes to familiarize 
+themselves with the system. Then they tried three 
+conditions in order defined with a balanced Latin Square 
+design to counterbalance the order effect. It took about 7 
+minutes for the participants to complete the task for each 
+condition. The task results were logged into a text file. 
+After completing the task in each condition, participants 
+were asked to fill a questionnaire on comfort, usability 
+and efficiency of each AR display. At the end of all three 
+test conditions, the participants were asked to fill in a 
+questionnaire with their demographic data including age, 
+gender, experience with driving, and previous experience 
+with the Oculus Rift and Virtual Reality (VR). They were 
+also asked to rank the three conditions based on their 
+preference. 
+There were several objective measurements that were 
+recorded. One was the number of navigational errors, 
+based on the number of wrong turns the participants made. 
+The number of correct turns that a user made was also 
+recorded. Since the length of the route changed as the 
+user made a wrong turn, we used the ratio of the number 
+of wrong turns to total number of turns made. 
+As the participant tried navigating through the virtual city, 
+they were expected to maintain a speed of 60km/hr. 
+Every time they exceeded 62km/hr, the application 
+logged the instance. It also recorded the time the user 
+spent above this speed until they went back to below the 
+speed limit. This measured the time the user took to 
+realize that they had crossed the speed limit. 
+One of the main requirements for a driver was to be 
+aware of their surroundings and identifying hazards. This 
+was tested by placing 20 virtual characters at different 
+positions. The participants were asked to look around as 
+they were driving and to click a button when they spotted 
+the character. The number of clicks was logged to help 
+understand the level of concentration each AR display 
+required from the participant while driving. When a 
+participant made a wrong turn, they were directed to get 
+
+
+ 
+5
+back to where they made the wrong turn so that the 
+number of characters to spot was kept as the same. 
+We collected subjective feedback through questionnaires 
+about the participant's view of each of the condition. The 
+questionnaire included 7-point Likert scale rating 
+questions (answered on a scale from 1 (totally disagree) 
+to 7 (totally agree)), ranking, and open questions for 
+collecting qualitative feedback.  See Table 1. 
+No. 
+Rating Question Statement 
+Q1 
+The surroundings were clearly visible while 
+using the display 
+Q2 
+The graphics on the display are clearly visible. 
+Q3 
+Using this display distracted me from driving. 
+Q4 
+It was easy to navigate using the display. 
+Q5 
+This display helps me in multitasking between 
+maintaining ideal speed, looking around, and 
+navigation. 
+Q6 
+The user interface of the display was useful in 
+helping me navigate properly. 
+Q7 
+I would feel comfortable if asked to wear this 
+AR display on a regular basis when I drive. 
+Table 1. Likert scale rating questions. 
+ 
+Participants 
+Three participants were recruited for a pilot test. The 
+results obtained from the pilot test were not included in 
+the results of the study, but were used to test the system 
+and experimental procedure before the main experiment. 
+In the main experiment, 18 participants (14 male and 4 
+female) participated in the user study aged between 20 
+and 35 years (Mean: 25.5 years). Table 2 summarises 
+demographic characteristics of the participants. Their 
+driving experience ranged from 1 to 10 years. Several 
+participants had used the Oculus Rift before, but none had 
+extensive VR experience. Around 33% of participants 
+wore glasses while driving, but they could wear their 
+glasses together with the HMD. 
+Property 
+Description 
+Age 
+20 - 35 years old (Mean: 25.5) 
+Gender 
+14 male (78%), 4 female (22%) 
+Driving 
+Experience 
+1 - 10 years (Mean: 6.8) 
+Eye sight 
+12 normal, 6 with prescription glasses 
+Table 2. Demographic characteristics of participants. 
+ 
+EXPERIMENT RESULTS 
+Overall we found that the HUD produced the least 
+navigational errors, while participants exceeded the speed 
+limit most in the HDD. In terms of subjective feedback, 
+users felt that the HUD scored the best on most of the 
+questions in the questionnaire, and users ranked the HUD 
+as their most preferred and the HMD as the least. 
+Objective Measures 
+The objective measures recorded by the system were the 
+ratio of navigational errors made, the number of times 
+exceeding the speed limit, the time spent above the speed 
+limit, and the number of character models detected. 
+Shapiro-Wilk test (α=.05) showed all three measures 
+were not normally distributed (note that counting events 
+usually follow Poison distribution), hence we used a 
+Friedman test (α=.05) to analyse the results instead of 
+ANOVA. For post hoc tests we used Wilcoxon signed 
+rank tests with Bonferroni correction (α=.0167). 
+Figure 5 shows the results of the navigational error 
+(number of wrong turns divided by all turns). The 
+medians [IQR] of the navigation error for the HDD, HMD, 
+and HUD conditions were 0.43 [0.09-0.56], 0.41 [0.13-
+0.72], and 0.10 [0.05~0.30], respectively. A Friedman test 
+found a significant difference between the conditions in 
+navigational error made (χ2(2)=15.746, p<.001). Post hoc 
+analysis with Wilcoxon signed-rank tests with Bonferroni 
+correction showed participants made significantly fewer 
+errors with the HUD condition compared to the HDD 
+(Z=-2.676, p=.007) and HMD (Z=-3.027, p=.002). There 
+was no significant difference between the HDD and 
+HMD (Z=-1.111, p=.267) conditions. 
+ 
+Figure 5. Navigational error ratio (*: mean). 
+There was a statistically significant difference between 
+the conditions in the number of times the participants 
+exceeded the speed limit (χ2(2)=10.595, p=.005) (see 
+Figure 6). A post hoc analysis found participants 
+exceeded the speed limit significantly more times in the 
+HDD condition (Median [IQR]: 0.5 [0-4.25]) compared 
+the HMD (0 [0-1], Z=-2.442, p=.015) and HUD (0 [0-1], 
+Z=-2.675, p=.007), but there was no significant difference 
+between HMD and HUD (Z=-0.333, p=.739). 
+ 
+Figure 6. Number of times exceeded speed limit (*: mean). 
+Figure 7 shows the average amount of time (in seconds) 
+the participants spent above the speed limit. There was a 
+statistically significant difference between the conditions 
+(χ2(2)=7.091, p=.029). A post hoc analysis revealed that 
+the participants exceeded the speed limit significantly 
+
+
+ 
+ 
+6
+longer in the HDD condition (45 [0-272.75]) compared to 
+the HMD (0 [0-1.75], Z=-2.432, p=.015) and HUD (0 [0-
+33.5], Z=-2.599, p=.009) conditions, while no significant 
+difference was found between the HMD and HUD 
+conditions (Z=-0.255, p=.799). 
+ 
+Figure 7. Amount of time participants spent while exceeding 
+the speed limit (in seconds; *: mean). 
+The results of the number of characters spotted by the 
+participants while driving are summarized in Figure 8. 
+There was a statistically significant difference between 
+the conditions (χ2(2)=6.971, p=.031), and the post hoc 
+analysis showed that there was a statistically significant 
+difference between the HDD (10 [7-12]) and HUD (14 
+[11.75-18]) conditions in the number of character models 
+found (Z=- 2.953, p=.003). The HMD (12.5 [9.5-7.25]) 
+condition was not significantly different from the other 
+two 
+conditions 
+(HDD: 
+Z=-2.040, 
+p=.041 
+and  
+HUD: Z=-1.357, p=.175). 
+ 
+Figure 8. Number of characters spotted (*: mean). 
+Questionnaire – Rating and Ranking 
+There were seven Likert scale rating questions on various 
+aspects of usability. Participants answered the question on 
+a scale from 1 (Totally Disagree) to 7 (Totally Agree). 
+Figure 9 summarises the results of the rating questions. 
+To assess the results of each question, we used a 
+Friedman test (α=.05) to evaluate if there were significant 
+difference in rating between the conditions. For post hoc 
+analysis we used Wilcoxon signed-rank tests with 
+Bonferroni correction (α=.0167). 
+The results showed there was no significant difference 
+between the conditions (χ2(2)=4.429, p=.109) in terms of 
+visibility of the surrounding environment (Q1). However, 
+there was a significant difference between the conditions 
+(χ2(2)=18.542, p<.001) in visibility of the displays (Q2). 
+Post hoc analysis with Bonferroni corrected Wilcoxon 
+signed-rank tests revealed the HUD was significantly 
+more visible than the other displays (HDD: Z=-3.221, 
+p=.001; HMD: Z=-3.375, p=.001). No significant 
+difference was found between the HHD and HMD  
+(Z=-.108, p=.914). 
+For the question asking how distracting the displays are 
+(Q3), participants rated each display significantly 
+differently (χ2(2)=16.097, p<.001). Post hoc analysis 
+revealed that the HUD was significantly less distracting 
+than the HDD (Z=-2.954, p=.003) or HMD (Z=-3.363, 
+p=.001), while no significant difference was found 
+between the HDD and HMD (Z=-1.390, p=.165). 
+The type of displays also significantly affected the 
+participants perception of ease of navigation (Q4: 
+χ2(2)=15.700, p<.001). Participants felt it was easiest to 
+navigate with the HUD compared to the other two 
+displays 
+(HDD: 
+Z=-3.037, 
+p=.002; 
+HMD:  
+Z=-3.347, p=.002). No significant difference was 
+perceived between HDD and HMD (Z=-.343, p=.731). 
+The HUD was rated as the best by the participants for 
+helping them to multitask (Q5: χ2(2)=12.125, p=.002; vs. 
+HDD: Z=-2.890, p=.004; vs. HMD: Z=-3.139, p=.002), 
+while no significant difference was found between the 
+HDD and HMD (Z=-.779, p=.436). 
+When asked how helpful was the interface display for 
+navigating 
+properly 
+(Q6: 
+χ2(2)=11.586, 
+p=.003), 
+participants gave significantly better rating to the HUD 
+compared to the HMD (Z=-3.220, p=0.001). However, 
+there was no significant difference between the HUD and 
+HDD conditions (Z=-2.244, p=.025) nor between the 
+HDD and HMD (Z=-1.664, p=.096). 
+Finally, when participants were asked to rate how 
+comfortable they felt using each display for driving (Q7) 
+they 
+rated 
+the 
+displays 
+significantly 
+differently 
+Figure 9. Likert scale rating results (1: Totally disagree ~ 7: Totally agree, *: mean, s: significant difference) 
+
+
+ 
+7
+(χ2(2)=8.633, p=.013). Post hoc analysis revealed that 
+participants were feeling significantly more comfortable 
+with using HUD compared to HMD (Z=-2.495, p=.013), 
+yet there was no significant difference between the HDD 
+and HMD (Z=-1.535, p=.125), nor between the HDD and 
+HUD conditions (Z=-1.551, p=.121). 
+After trying all three conditions, participants were asked 
+to rank the displays in the order of their preference, from 
+1 (the best) to 3 (the worst). Participants ranked the HUD 
+display as the best (Median [IQR] = 1 [1-1.75]), while the 
+HDD took the second place (2 [2-2.75]), and the HMD 
+was ranked as the worst (3 [2-3]). Friedman test found the 
+displays were ranked significantly different (χ2(2)=12.366, 
+p=.002). A post hoc analysis with Bonferroni corrected 
+Wilcoxon signed-rank tests revealed that participants 
+ranked the HUD as the most preferable display over the 
+other two display (HMD: Z=-2.982, p=.003 and HDD: 
+Z=-2.500, p=.012). However there was no significant 
+difference in participants’ preference between HDD and 
+HMD (Z=-1.380, p=.012). 
+Questionnaire – Qualitative Feedback 
+In order to understand more details of the participant’s 
+subjective opinion on each display, we asked participants 
+to write comments on what they liked and disliked about 
+each condition. We also asked for any suggestions to 
+modify or add to the displays. 
+Participants mentioned visibility as the main advantage of 
+HUD. They wrote it was “simple and easily visible,” and 
+“in the line of sight,” making it “easy to see the real 
+world.” Some participants saw the display fixed in the 
+space as a positive feature, saying, “It doesn't move with 
+my line of sight, I can chose to look away when I wish.” 
+But the same feature was also seen as a disadvantage to 
+others as they were not able to see the display when they 
+had to look around for the virtual characters. A 
+participant wrote, “it is a little hard to see the 
+surroundings.” 
+For HMD, participants mentioned the display following 
+the view as the main advantage. They wrote that it was 
+“easy to see even when ... not looking forward,” hence it 
+was “easy to notice warning messages,” and not requiring 
+to “look back at the road to notice directions.” The main 
+problem of the HMD was mainly about its position. 
+Participants wrote, “the position of the display is 
+annoying,” and it is “difficult to focus on the display and 
+the real world at the same time.” Participants also 
+mentioned that the screen-registered way of showing 
+directions is confusing when looking around. A 
+participant wrote, “the display moving around is 
+disorienting.” 
+The HDD was perceived as “familiar to use,” and not 
+blocking the user’s view. Participants wrote that it is 
+“fixed and doesn't follow my head,” and “out of the way 
+and easier to see the surroundings.” On the other hand, 
+not being within the primary task space was mentioned as 
+the main disadvantage. They wrote, “(it) required me to 
+look down and take eyes off the road,” and hence “I don't 
+notice the change in speed always.” 
+When asked for the reasoning behind the ratings, the 
+main reason for the HUD being rated the highest was the 
+display being in the field of view while driving so that the 
+participant did not have to move their eye and focus away 
+from the road. As the HDD was rated most commonly in 
+second place, the justification for being lower than the 
+HUD was mainly because it requires the participant to 
+look off the road. For the HMD being rated the lowest, 
+the main reason was the position of the display at the top 
+right of the user’s view forced the user to focus on and off 
+each time they had look at it and glance back on the road. 
+DISCUSSION 
+Overall, the results indicate HUD as the best in most area, 
+yet each display having their own strength and weak 
+points. In terms of navigational errors, participants 
+performed better while using HUD compared to the other 
+two displays. This may be due to the fact that the 
+windshield was always in the clear field of view of the 
+user while they were looking through it and there is no 
+requirement to glance away from the road (as in the HDD) 
+or to change focus (as in the HMD).  
+It is also interesting to note that there was a statistically 
+significant reduction in the number of errors when using 
+the HDD over the HMD, despite the HDD requiring the 
+user to look down and away from the road. This may be 
+due to having the display following the user head 
+orientation might cause them to get confused since the 
+instructions shown on the display were relative to the car, 
+not the display. This reasoning is supported by some of 
+the 
+qualitative 
+feedback 
+given 
+where 
+the 
+users 
+complained about the moving display being annoying and 
+confusing. 
+Despite being statistically better than the HMD at 
+avoiding navigational errors, the HDD falls short in both 
+the number of times it exceeded the speed limit and the 
+time spent above the speed limit. This is probably 
+because the driver has to glance off the road and look at 
+the console to notice changes. Users also mentioned how 
+hard it was to notice warnings on the HDD, which was 
+also identified as an advantage for the other two displays. 
+In order to test how much the display forces the user to 
+take his or her eyes off the road, virtual characters were 
+added at places along the map. The HUD clearly wins 
+over the HDD in this case, since with the HDD the user is 
+busy with his or her eyes off the road and does not notice 
+the models in the surroundings.  
+There are limitations with the current study that could be 
+addressed in future research. For the HMD, the 
+navigational instructions were not provided based on 
+relative position of the head orientation, making it 
+slightly more difficult to understand them. The size of the 
+display areas for each AR Display condition was 
+controlled to be the same, which could impact the results 
+for the HUD and HMD where a much larger display area 
+could be used in future setups. The interface layout for 
+each display was the same. Changing the layout of the 
+interface based on the display may affect the outcome of 
+the results. A common layout was used in order to 
+prevent bias in the results based on the layout. 
+
+
+ 
+ 
+8
+While conducting the study in VR environment gave 
+more control of the conditions, it had limitations of not 
+being able to fully replicate the real world environment 
+(e.g. sun glare, weather effect). Future studies using 
+display setups on real vehicles would need to focus on 
+further investigating such environmental characteristics. 
+Overall, the main implication of the study can be 
+summarised as the HUD displays are the most desirable 
+type of display for car navigation compared to HDD or 
+HMD given similar size of field of view. 
+CONCLUSION 
+In this paper we have presented comparative user 
+evaluations of AR HUD, HMD and HDD navigation aids 
+in a driving simulator. The HUD was found to produce 
+better driving performance, less errors, and was preferred 
+over the HDD. The HMD matched the HUD in enabling 
+the user to monitor their speed, but users thought it was 
+difficult to use and the worst of the display options.  
+Much of the criticism for the HMD in this study is based 
+on using a monocular peripheral display. With the recent 
+advancements in the field of HMDs, there are many other 
+display options that would be good to explore. In future, 
+it would be good to study how a stereo HMD would 
+compare against a HUD or HDD. Another possibility for 
+future study would be to explore if the HMD would 
+provide 
+navigational 
+instructions 
+relative 
+to 
+the 
+orientation of the head. There are other potential HMD 
+interface configurations that could be tested as well. 
+Finally, the user study was only conducted in a driving 
+simulation. It would be good to test future interfaces in a 
+real car driving outdoors to see how closely the results 
+match those from the virtual simulation. 
+REFERENCES 
+Charissis, V., Papanastasiou, S., and Vlachos, G. 
+Comparative study of prototype automotive hud vs. 
+hdd: collision avoidance simulation and results. 
+Technical report, SAE Technical Paper (2008). 
+Chu, K. and Joseph, S. Second Life Prototyping of 
+Augmented Automobile Navigation Assistance. In 
+Proc. ITS 2008, IEEE (2008), 389-394. 
+Doshi, A., Cheng, S., and Trivedi, M. A novel active 
+heads-up display for driver assistance. IEEE Trans. 
+Systems, Man, and Cybernetics, Part B: Cybernetics 
+39, 1 (2009), 85-93. 
+Ferreira, M., Gomes, P., Silveria M., and Vieira, F. 
+Augmented Reality Driving Supported by Vehicular 
+Ad Hoc Networking. In Proc. ISMAR 2013, IEEE 
+(2013), 253-254. 
+Ford. 
+park 
+assist 
+video 
+(2008): 
+https://www.youtube.com/watch?v=xW-MhoLImqg 
+Foxlin, E., Calloway, T., and Zhang, H. Improved 
+registration 
+for 
+vehicular 
+AR 
+using 
+auto- 
+harmonization. In Proc. ISMAR 2014, IEEE (2014), 
+105-112. 
+Geiser, G. Man Machine Interaction in Vehicles. ATZ 87 
+(1985), 74 - 77. 
+GPS World. Elbow Room on the Shoulder: DGPS-Based 
+Lane-Keeping Enlists Laser Scanners for Safety and 
+Efficiency 
+(2010).  
+http://gpsworld.com/transportationroadelbow-room-
+shoulder-10159 
+Horrey, W. J., Wickens, C. D., and Alexander, A.L. The 
+Effects of Head-Up Display Clutter and In-Vehicle 
+Display 
+Separation 
+on 
+Concurrent 
+Driving 
+Performance. In Proc. the Human Factors and 
+Ergonomics Society Annual Meeting 47, 16 (2003), 
+1880-1884. 
+Hu, Z. and Uchimura, K. Real-time data fusion on 
+stabilizing camera pose estimation output for vision- 
+based 
+road 
+navigation. 
+In 
+Proc. 
+SPIE 
+5291, 
+Stereoscopic Displays and Virtual Reality Systems XI 
+(2004), 480-490. 
+Jaguar. 
+Virtual 
+windscreen 
+concept 
+(2014). 
+https://www.youtube.com/watch?v=FeK9IkSD_nI 
+Jungwirth, J. The Appification of the Automobile. 
+Technicity (2012). 
+Kim, S. and Dey, A. Simulated augmented reality 
+windshield display as a cognitive mapping aid for elder 
+driver navigation. In Proc. CHI’09 (2009), 133–142. 
+Kipper, G. and Rampolla, J. Augmented Reality: an 
+emerging technologies guide to AR, Elsevier (2012). 
+Liu, Y.-C. and Wen, M.-H. Comparison of head-up 
+display (HUD) vs. head-down display (HDD): Driving 
+performance of commercial vehicle operators in 
+Taiwan. International Journal of Human-Computer 
+Studies 61, 5 (2004), 679–697. 
+Medenica, Z., Kun, A. L., Paek, T., and Palinko, O. 
+Augmented reality vs. street views: a driving simulator 
+study comparing two emerging navigation aids. In 
+Proc. MobileHCI’11, ACM (2011), 265–274. 
+Narzt, W., Pomberger, G., Ferscha, A., Kolb, D., Muller, 
+R., Wieghardt, J., Hortner, H., and Lindinger, C. 
+Pervasive information acquisition for mobile ar- 
+navigation systems. In Proc. Workshop on MCSA, 
+IEEE (2003), 13-20. 
+Ng-Thow-Hing, V., Bark, K., Beckwith, L., Tran, C., 
+Bhandari, 
+R., 
+and 
+Sridhar, 
+S. 
+User-centered 
+perspectives for automotive augmented reality. In Proc. 
+ISMAR-AMH, IEEE (2013), 13-22 
+Park, K. S., Cho, I. H., Hong, G. B., Nam, T. J., Park, J. 
+Y., Cho, S. I., and Joo, I. H. Disposition of Information 
+Entities 
+and 
+Adequate 
+Level 
+of 
+Information 
+Presentation 
+in 
+an 
+In-Car 
+Augmented 
+Reality 
+Navigation System. In Symp. on Human Interface and 
+the Management of Information, LNCS 4558, Springer 
+(2007), 1098-1108. 
+Pioneer. 
+Cyber 
+Navi 
+system 
+(2012): 
+https://www.youtube.com/watch?v=FODe8JMniX8 
+Regenbrecht, H., Baratoff, G., and Wilke, W. Augmented 
+reality projects in the automotive and aerospace 
+industries. Computer Graphics and Applications 25, 6 
+(2005), 48-56. 
+
+
+ 
+9
+Santos, M. K. S. Virtual windshields: merging reality and 
+digital content to improve the driving experience. 
+Master 
+thesis, 
+Faculdade 
+de 
+Engenharia 
+da 
+Universidade do Porto (2014). 
+Sawano, H. and Okado, M. Real-time video processing 
+by a car-mounted camera and its application to car 
+navigation systems by an augmented reality-based 
+display method. The Journal of the Society for Art and 
+Science 5, 2 (2006). 
+Siemens VDO Automotive. (2002). The Future of 
+Navigation: Siemens VDO Automotive works on 
+Augmented 
+Reality, 
+Int’l 
+Electronics 
+Conf. 
+Convergence 2002. 
+Tonnis, M., Lange, C., and Klinker, G. Visual 
+longitudinal and lateral driving assistance in the head- 
+up display of cars. In Proc. ISMAR’07 (2007), 91-94. 
+Yamaguchi, Y., T. Nakagawa, K. Akaho, M. Honda, H. 
+Kato, S. Nishida. AR-Navi: An in-vehicle navigation 
+system 
+using 
+video-based 
+augmented 
+reality 
+technology. In Symp. Human Interface and the 
+Management of Information, LNCS 4558, Springer 
+(2007), 1139-1147. 
+ 
+
+

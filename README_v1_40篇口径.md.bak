@@ -1,0 +1,199 @@
+# HUD/AR-HUD 行人碰撞预警综合研究项目 — 总索引
+
+## 项目概览
+
+本项目是关于 **HUD/AR-HUD 行人标注的时间-空间元素设计规范** 的系统文献研究，整理共 **40 篇核心文献**（2008-2025），并完成详细笔记、专题文献综述、综合表格、开题报告 PPT 等成果。
+
+---
+
+## 文件结构总览
+
+```
+HUD/
+├── papers/                          ← 40 个 PDF 全文（用户提供 + 我下载）
+├── extracted_text/                  ← 40 个文本提取（PyMuPDF/Jina）
+├── summaries/                       ← 40 篇 2000-3000 字详细中文笔记 ⭐
+├── summaries_brief_backup/          ← 老版本简略笔记（保留备份）
+├── agent_outputs/                   ← 5 个分批结构化数据（时空参数）
+│
+├── papers_metadata.json             ← 40 篇元数据
+├── jcr_quartile_data.json           ← 期刊 JCR 分区
+├── all_papers_helper.json           ← agent 输入助手文件
+│
+├── 时间元素设计参数_专题分析.md       ← 时间专题（心理学硕士论文风格，APA 7th）⭐
+├── 空间元素设计参数_专题分析.md       ← 空间专题（心理学硕士论文风格，APA 7th）⭐
+├── 数据源提供性_汇总.md              ← 39 篇按来源分类
+│
+├── HUD_AR-HUD_行人预警_时空设计_新表.{csv,md,tsv}  ← 主综合表（19列结构化）
+├── HUD_AR-HUD_行人预警_文献综合表.{csv,md,tsv}     ← 一阶段综合表（保留）
+│
+├── PPT_开题报告_HUD_AR-HUD时空设计规范.pptx        ← 38页开题报告 PPT ⭐
+├── PPT_开题报告_大纲.md                             ← PPT Markdown 大纲
+│
+├── README.md                        ← 本文件
+├── README_phase1.md                 ← 一阶段 README 备份
+├── REVIEW_REPORT.md                 ← 一阶段总结报告
+├── PHASE2_REPORT.md                 ← 二阶段总结报告
+│
+├── 周颖-开题-0830.pptx              ← 用户提供的开题PPT参考
+│
+└── [Python脚本]: build_new_table.py / build_pptx.py / extract_pdfs.py / 
+                 jina_fetch.py / scihub_download.py
+```
+
+---
+
+## 三阶段工作总结
+
+### 第一阶段：检索 + 下载 + 初稿（已完成）
+- 通过 OpenAlex API 检索 → 39 篇核心文献
+- 通过 Crossref/Unpaywall/Google Scholar 补充下载链接
+- 通过 sci-hub/Jina Reader/Cambridge Apollo 等多渠道下载 PDF
+- 提取文本 + 生成中文摘要
+- 输出综合表格（19 列）
+
+### 第二阶段：补齐 + 重组（已完成）
+- sci-hub.ren + IEEE stamp.jsp + curl_cffi 补齐 PDF
+- Jina Reader 突破 MDPI/Tandfonline Akamai/Cloudflare 拦截
+- sciopen.com 找到 paper #12 的中文姊妹篇
+- 按时间-空间双维度重新组织综合表
+- 标注每个数据点来源（PDF全文/Jina/中文版/abstract-only）
+
+### 第三阶段：详细化 + 专题 + PPT（当前）
+- 用户补齐所有 40 篇 PDF（含新增 #40 Chen et al. 2025 IJHCI）
+- 详细化 40 篇 summaries（每篇 2000-3000 字）
+- 撰写时间/空间双专题文献综述（心理学硕士论文风格，APA 7th）
+- 参照周颖开题PPT，设计 38 页开题报告 PPT（含 Markdown 大纲 + pptx）
+
+---
+
+## 关键产出 ⭐
+
+### 1. 40 篇详细 summaries（summaries/）
+
+每篇按 7 节标准结构：
+- 一、研究背景与问题
+- 二、研究方法（被试/设计/材料/流程）
+- 三、关键指标与测量
+- 四、主要结果（具体数值 M/SD/F/p/η²）
+- 五、对 AR-HUD 时空设计的启示
+- 六、本文局限性与未来工作
+- 七、与本研究主题的关联
+- > Takeaway
+
+平均 2500 CJK字符/篇。
+
+### 2. 两个专题文献综述
+
+#### 时间元素 (`时间元素设计参数_专题分析.md`)
+- 章节：引言 / 概念界定 / 国内外综述 / 综合分析 / 启示
+- 包含每个指标的来源说明：TTC (Hayward, 1972)、PIEV (Hooper, 1936)、PRT、TTFF (Rayner, 1998) 等
+
+#### 空间元素 (`空间元素设计参数_专题分析.md`)
+- 章节：引言 / 概念界定 / 国内外综述 / 综合分析 / 启示
+- 包含每个指标的来源说明：Contact-Analog (Tönnis et al., 2007)、FOV、CIE色坐标、Gaze Entropy (Shannon, 1948) 等
+- 重点：多资源理论 (Wickens, 2002) / 非注意盲视 (Mack & Rock, 1998) / Vergence-Accommodation Conflict (Hoffman et al., 2008)
+
+### 3. 开题报告 PPT（38页）
+
+**PPT_开题报告_HUD_AR-HUD时空设计规范.pptx**
+- 参照周颖-开题-0830.pptx 的 5 大 section 结构
+- Section 1: 研究背景与意义（4页）
+- Section 2: 文献综述（15页，含3个问题提出）
+- Section 3: 研究问题（3页）
+- Section 4: 研究方案（4个实验，11页）
+- Section 5: 工作计划（2页）
+- 风格：深蓝主色调 + 红/黄强调色，APA 引用
+
+### 4. 综合表格
+
+`HUD_AR-HUD_行人预警_时空设计_新表.md` (19列)
+- 基础信息：idx/数据源/作者/标题/DOI/Venue/JCR分区/场景
+- 时间维度（5列）：出现时机/持续时长/是否分级/L1→L2间隔/L2→L3间隔
+- 空间-平面（3列）：色彩/动效/形状
+- 空间-立体（3列）：空间分布/视野FOV/相对位置
+- 每个数据点附 `[来源:章节/页码]` provenance 标注
+
+---
+
+## 40 篇论文索引
+
+| idx | 年份 | 第一作者 | 标题简称 | summaries 文件 |
+|---|---|---|---|---|
+| 01 | 2018 | Kim | AR行人碰撞预警户外停车场 | 01_2018_Kim_AR行人碰撞预警户外停车场实验.md |
+| 02 | 2016 | Phan | AR提示增强行人感知 | 02_2016_Phan_AR提示增强行人感知.md |
+| 03 | 2016 | Kim | 投射阴影EID设计 | 03_2016_Kim_投射阴影EID设计.md |
+| 04 | 2016 | Kim | 虚拟阴影HFES | 04_2016_Kim_虚拟阴影HFES.md |
+| 05 | 2014 | Yoon | HUD前向碰撞系统 | 05_2014_Yoon_HUD前向碰撞系统开发.md |
+| 06 | 2024 | Ma | 生态界面AR-HUD警示 | 06_2024_Ma_生态界面AR-HUD警示设计.md |
+| 07 | 2024 | Chen | 接触类比vs边界框（新手） | 07_2024_Chen_接触类比vs边界框新手驾驶员.md |
+| 08 | 2024 | Wu | 360°AR-HUD图标对比 | 08_2024_Wu_360度AR-HUD警示图标对比.md |
+| 09 | 2025 | 叶明慧 | 空间面定位与非注意盲视 | 09_2025_叶明慧_AR-HUD图形空间面定位与无意视盲.md |
+| 10 | 2021 | Tong | AR可穿戴行人预警 | 10_2021_Tong_AR可穿戴行人预警系统.md |
+| 11 | 2020 | Bram-Larbi | 应急服务AR-HUD | 11_2020_Bram-Larbi_应急服务AR-HUD设计.md |
+| 12 | 2024 | 边扬 | 网联HUD行人过街预警 | 12_2024_边扬_网联HUD行人过街预警.md |
+| 13 | 2019 | Kim&Gabbard | AR-HUD分心评估方法 | 13_2019_Kim&Gabbard_AR-HUD分心评估方法.md |
+| 14 | 2017 | Lubbe | 分心驾驶员行人FCW | 14_2017_Lubbe_分心驾驶员行人FCW制动反应.md |
+| 15 | 2015 | Winkler | HUD预警与凝视行为 | 15_2015_Winkler_HUD预警与驾驶员注视行为.md |
+| 16 | 2015 | Kazazi | 老年青年HUD预警 | 16_2015_Kazazi_老年青年HUD预警设计.md |
+| 17 | 2023 | Roh | DL驱动行人/PM AR-HUD | 17_2023_Roh_深度学习驱动的行人与个人移动用户AR-HUD驾驶辅助.md |
+| 18 | 2013 | Park | 车载AR-HUD系统 | 18_2013_Park_车载AR-HUD系统提供驾驶安全信息.md |
+| 19 | 2025 | Winkler | AR-HUD车载综述 | 19_2025_Winkler_车载AR-HUD有效性应用与安全综述.md |
+| 20 | 2025 | Wang | ARive HoloLens2 | 20_2025_Wang_ARive_HoloLens2车内增强现实风险区域检测.md |
+| 21 | 2025 | Huo&Alla | 经验对AR依赖度影响 | 21_2025_Huo_Alla_驾驶经验对AR预警依赖度的影响.md |
+| 22 | 2018 | Zhou | ARVE车联V2E | 22_2018_Zhou_ARVE车辆到边缘网络AR应用.md |
+| 23 | 2023 | Kim | AR-HUD自动驾驶UX | 23_2023_Kim_自动驾驶AR-HUD与风险水平对用户体验的影响.md |
+| 24 | 2025 | Li | 雾天信息冗余 | 24_2025_Li_雾天AR-HUD信息冗余对驾驶行为与心理的影响.md |
+| 25 | 2019 | Gabbard | AR-DriveSim仿真平台 | 25_2019_Gabbard_AR-DriveSim沉浸式仿真平台.md |
+| 26 | 2021 | Charissis | AR-HUD信息娱乐 | 26_2021_Charissis_新兴技术AR-HUD信息娱乐.md |
+| 27 | 2021 | Ma | VR仿真AR-HUD布局 | 27_2021_Ma_VR仿真AR-HUD布局对驾驶绩效的影响.md |
+| 28 | 2008 | Doshi | 主动HUD驾驶辅助 | 28_2008_Doshi_新型主动式HUD驾驶辅助系统.md |
+| 29 | 2023 | Teng | ML认知负荷预测AR-HUD | 29_2023_Teng_机器学习认知负荷预测AR-HUD.md |
+| 30 | 2019 | Frémont | 自适应视觉辅助 | 30_2019_Frémont_自适应视觉辅助行人感知系统.md |
+| 31 | 2022 | Kettle | AR车-驾沟通综述 | 31_2022_Kettle_AR车辆驾驶员沟通系统综述.md |
+| 32 | 2022 | Skirnewskaja | 全息HUD技术 | 32_2022_Skirnewskaja_车载全息HUD技术综述.md |
+| 33 | 2022 | Cheng | AHP-GRA可用性 | 33_2022_Cheng_AHP-GRA可用性评估.md |
+| 34 | 2022 | Zhong | 颜色可见度 | 34_2022_Zhong_颜色可见度评估.md |
+| 35 | 2024 | Guan | HUD界面设计综述 | 35_2024_Guan_HUD界面设计综述.md |
+| 36 | 2023 | Strle | 生理信号认知负荷 | 36_2023_Strle_生理信号认知负荷预测.md |
+| 37 | 2016 | Jung | CNN语义分割PCW | 37_2016_Jung_CNN语义分割PCW.md |
+| 38 | 2022 | Kim | V2X 路侧 P2CWS | 38_2022_Kim_V2X路侧P2CWS.md |
+| 39 | 2021 | Banerjee | PCW仿真器实验 | 39_Banerjee_PCW模拟器实验.md |
+| 40 | 2024 | Chen | 多目标AR-HUD优先级 ⭐新增 | 40_2024_Chen_多目标AR-HUD优先级设计.md |
+
+---
+
+## 使用指南
+
+### 查找单篇论文详情
+1. 打开 `summaries/{idx}_{年份}_{作者}_{主题}.md`
+2. 7 节标准结构 + 完整数值参考
+
+### 查找时间设计参数
+1. 打开 `时间元素设计参数_专题分析.md`
+2. 检索关键词：TTC、PRT、Warning Onset、分级间隔等
+
+### 查找空间设计参数
+1. 打开 `空间元素设计参数_专题分析.md`
+2. 检索关键词：FOV、共形、Pedestrian-Conformal、颜色编码等
+
+### 制作开题报告
+1. PPT 大纲：`PPT_开题报告_大纲.md`（Markdown格式逐页内容）
+2. PPT 文件：`PPT_开题报告_HUD_AR-HUD时空设计规范.pptx`（PowerPoint）
+
+### 跨论文对比查询
+1. 综合表 Markdown：`HUD_AR-HUD_行人预警_时空设计_新表.md`
+2. Excel 友好 CSV：`HUD_AR-HUD_行人预警_时空设计_新表.csv`（UTF-8 BOM）
+
+---
+
+## 后续工作建议
+
+1. **完善实验方案**：基于专题综述与PPT大纲，详细设计 4 个实验的 IRB 申请材料
+2. **预实验**：N=10 用户测试，验证 STISIM + Tobii 平台配置
+3. **样本预登记**：建议在 OSF / AsPredicted 上预注册研究假设
+4. **本土化数据**：重点采集中国新手驾驶员样本，补充国际研究空白
+
+---
+
+*最后更新：2026年6月*

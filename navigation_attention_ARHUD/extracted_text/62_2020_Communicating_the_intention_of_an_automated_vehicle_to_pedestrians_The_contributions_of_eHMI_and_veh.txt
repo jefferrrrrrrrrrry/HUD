@@ -1,0 +1,1840 @@
+it – Information Technology 2021; 63(2): 123–141
+Debargha Dey*, Andrii Matviienko, Melanie Berger, Bastian Pfleging, Marieke Martens, and
+Jacques Terken
+Communicating the intention of an automated
+vehicle to pedestrians: The contributions of eHMI
+and vehicle behavior
+https://doi.org/10.1515/itit-2020-0025
+ReceivedJuly14, 2020; revisedOctober9, 2020; acceptedOctober 14,
+2020
+Abstract: External Human-Machine Interfaces (eHMIs) are
+expected to bridge the communication gap between an au-
+tomated vehicle (AV) and pedestrians to replace the miss-
+ing driver-pedestrian interaction. However, the relative im-
+pact of movement-based implicit communication and ex-
+plicit communication with the aid of eHMIs on pedestri-
+ans has not been studied and empirically evaluated. In this
+study, we pit messages from an eHMI against different driv-
+ing behaviors of an AV that yields to a pedestrian to un-
+derstand whether pedestrians tend to pay more attention
+to the motion dynamics of the car or the eHMI in making
+road-crossing decisions. Our contributions are twofold: we
+investigate (1) whether the presence of eHMIs has any ob-
+jective effect on pedestrians’ understanding of the vehi-
+cle’s intent, and (2) how the movement dynamics of the ve-
+hicle affect the perception of the vehicle intent and interact
+with the impact of an eHMI. Results show that (1) eHMIs
+help in convincing pedestrians of the vehicle’s yielding in-
+tention, particularly when the speed of the vehicle is slow
+enough to not be an obvious threat, but still fast enough
+to raise a doubt about a vehicle’s stopping intention, and
+(2) pedestrians do not blindly trust the eHMI: when the
+eHMI message and the vehicle’s movement pattern contra-
+dict, pedestrians fall back to movement-based cues. Our
+results imply that when explicit communication (eHMI)
+and implicit communication (motion-dynamics and kine-
+matics) are in alignment and work in tandem, communica-
+tion of the AV’s yielding intention can be facilitated most
+*Corresponding author: Debargha Dey, Eindhoven University of
+Technology, Groene Loper 3, 5612 AE Eindhoven, The Netherlands,
+e-mail: d.dey@tue.nl, ORCID:
+https://orcid.org/0000-0001-9266-0126
+Andrii Matviienko, Technical University of Darmstadt,
+Hochschulstraße 10, 64289 Darmstadt, Germany, e-mail:
+matviienko@tk.tu-darmstadt.de
+Melanie Berger, Bastian Pfleging, Marieke Martens, Jacques Terken,
+Eindhoven University of Technology, Groene Loper 3, 5612 AE
+Eindhoven, The Netherlands, e-mails: m.berger@tue.nl,
+b.pfleging@tue.nl, m.h.martens@tue.nl, j.m.b.terken@tue.nl
+effectively. This insight can be useful in designing the opti-
+mal interaction between AVs and pedestrians from a user-
+centered design perspective when driver-centric commu-
+nication is not available.
+Keywords: Automated vehicles, eHMI, Pedestrian, Vul-
+nerable road user, VRU, Explicit communication, Implicit
+communication
+ACM CCS: Human-centered computing →Interaction tech-
+niques Human-centered computing →Ubiquitous and
+mobile computing systems and tools
+1 Introduction
+There are different schools of thought when it comes to
+effectively facilitating the interactions between an auto-
+mated vehicle (AV) and Vulnerable Road Users (VRU) such
+as pedestrians. One recommends the use of eHMIs as
+the solution to mitigate the uncertainty that arises from
+a pedestrians’ inability to communicate with a ‘driver’
+inside: In negotiation situations when the paths of AVs
+and pedestrians intersect, an eHMI shows promise in re-
+solving ambiguity and increasing pedestrians’ feelings of
+trust and safety in AVs [4, 14, 16, 17, 18]. However, there
+exist other research that found no significant effect of
+an eHMI on pedestrians’ road crossing decisions [3]. The
+other school of thought posits that the motion dynamics
+of the vehicle can act as a form of ‘implicit communica-
+tion’ through movement patterns, and are enough to con-
+vey the intentions of an AV in traffic: Some works suggest
+that such forms of implicit communication is enough and
+further augmentation with eHMI is discouraged due to po-
+tential ‘griefing behavior’ (mild form of bullying) from by-
+standers [19], especially in the early stages of integration of
+automated driving technology in traffic. Given the empir-
+ical evidence supporting arguments both for eHMIs, and
+against eHMIs in favor of vehicle behavior-based commu-
+nication, it is important to understand the relative impact
+of both in order to design an effective and usable interac-
+tion experience for AV-pedestrian interaction.
+Open Access. © 2021 Dey et al., published by De Gruyter.
+This work is licensed under the Creative Commons Attribution 4.0 International
+License.
+
+
+124
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+There are contradicting reports regarding pedestri-
+ans’ perception of automated vehicles. Prior research sug-
+gests that in general there is a hesitation and mistrust
+towards automated driving technology [2, 21]. However,
+other works suggest that an ‘innocent until proven guilty’
+exists with pedestrians with regards to automated vehi-
+cles and they are not hesitant to trust automated vehicles
+in general [22] and eHMI systems in particular [15]. Al-
+though past research related to the efficacy of eHMI shows
+mostly positive results, the role of eHMIs in facilitating AV-
+pedestrian interactions is not yet well-understood. Inter-
+action between AVs and pedestrians in traffic is a complex
+problem that depends on many factors. Prior works have
+studied the efficacy of eHMIs in controlled and specific be-
+havior conditions of the vehicle. However, a vehicle can
+yield while braking in different ways, which translate to
+different perceived movement patterns. To design an effec-
+tive user experience, it is critical to know whether the effi-
+cacy of an eHMI unilaterally holds over different yielding
+behaviors.
+Additionally, previous research with manually oper-
+ated vehicles showed that pedestrians exhibit a specific
+gaze pattern when observing oncoming vehicles [11]. The
+study revealed that pedestrians’ gaze tends to shift from
+the environment and the road surface in front of the vehi-
+cle when it is far away, towards the bumper, grill, hood,
+and windshield of the vehicle as it approaches closer.
+Pedestrians particularly fixated on the windshield, which
+was seen as an indication that they sought confirmatory
+information about the driver’s intention. It is interesting to
+see if the presence of an eHMI is able to resolve this ambi-
+guity or whether pedestrians still seek additional informa-
+tion. Besides, given that most eHMI design concepts are
+light-based, emissive displays [6], it is also important to
+understand whether the presence of an eHMI causes a dis-
+tractingly high attention demand in pedestrians relative to
+when there is no eHMI present.
+To this end, we used a light-bar eHMI concept and
+evaluated the interaction behavior of pedestrians to a sim-
+ulated AVthat exhibitedthreedifferentyielding behaviors:
+(1) Gentle braking, (2) Early braking, (3) Aggressive brak-
+ing, and one non-yielding behavior: (4) Constant speed. In
+a controlled real-world study (N = 24), we compared the
+pedestrians’ gaze patterns and willingness to cross in re-
+sponse to these behaviors, with and without the eHMI.
+Our results show that an eHMI is able to resolve pedes-
+trians’ ambiguity and clarify a yielding AV’s intention, par-
+ticularly in low-speed conditions. The effect of eHMI is not
+pronounced if the speed of the vehicle is high. Addition-
+ally, if an eHMI communicates a yielding message which
+is not in concurrence with the vehicle’s behavior, pedes-
+trians do not blindly trust the eHMI, but instead fall back
+on vehicle behavior-related cues. Besides, there is no evi-
+dence that a light bar eHMI attracts excessive attention or
+causes distraction in pedestrians.
+We posit that the effects of eHMI and vehicle behav-
+ior are not straightforward and are interdependent. For an
+optimal interaction, the explicit communication from an
+eHMI must align with the implicit communication with the
+vehicle’s behavior.
+Contribution statement
+The findings from our real-world study contribute to the
+body of knowledge by showing that the effectiveness of an
+eHMI is not absolute, and depends on the speed and be-
+havior of the AV. However, if used correctly in conjunction
+with the right speed and behavior, it shows promise of im-
+proving the user experience of AV-pedestrian interaction.
+This insight provides a foundation for future work in de-
+termining the optimal interaction paradigm.
+2 eHMI concept
+The eHMI concept used in our study is an adaptation
+of prior ‘light band’ concepts [9, 13, 24]. The eHMI is a
+one-dimensional light bar fully integrated into the car
+body across the headlights and the grill as shown in Fig-
+ure 1. When the AV drives (cruises) in automated mode, it
+glows in a solid, turquoise color. When intending to yield,
+the eHMI communicates this through two small light seg-
+ments that originate from the edges and animate sideways
+towards the middle until they disappear. This animation
+repeats as the AV continues to yield. The animation pat-
+tern was inspired by Dey et al. [9] as it was thought to be an
+abstract way of mapping to a gesture of a driver’s hand mo-
+tion asking a pedestrian to cross in front of the car. When
+the car intends to start driving again, the light bar returns
+to a steady glowing state.
+Figure 1: The eHMI concept. Left: Cruising, Right: Yielding.
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+125
+Prior work by Dey et al. [6] suggests that eHMI con-
+cepts ought to be categorized based on their properties
+and attributes across 18 dimensions to aid a unified ap-
+proach towards eHMI concept proposal and evaluation.
+Consequently, the concept used in our study is coded in
+Appendix B according to the classification taxonomy.
+3 Research question & hypotheses
+We used the eHMI concept to evaluate the following re-
+search questions:
+RQ1: For the same driving behavior, does the presence of
+an eHMI on a yielding AV increase the pedestrians’
+willingness to cross?
+Although there is currently no consensus on the kind of
+eHMI that is ideally suited for AV-pedestrian communica-
+tion, prior research indicate that eHMIs can be effective in
+clarifying the intention of an AV [1, 4, 13, 14, 16]. Therefore,
+we hypothesize that an eHMI will elucidate the vehicle’s
+intention and for a yielding vehicle, pedestrians will show
+a willingness to cross more quickly than without an eHMI
+(H1).
+RQ2: When the driving behavior of the AV appears to
+contradict a yielding message from the eHMI, which
+source of information do pedestrians rely on?
+Prior work found arguments in both directions. Some
+showed that pedestrians tend to start off with a high degree
+of trust towards eHMIs, and that even if the trust is bro-
+ken, they are quick to regain it [15]. However, others found
+that the vehicle behavior plays a primary role in modulat-
+ing pedestrians’ behavior in interaction situations with ve-
+hicles [10, 8, 19, 20]. However, we believe that when the
+message from an eHMI does not correspond with a vehi-
+cle’s behavior, ‘what the AV is doing’ is a more important
+factor in determining safety than ‘what the eHMI is say-
+ing’. Therefore, we expect that if an eHMI message contra-
+dicts the behavior of the AV, pedestrians will fall back on
+the vehicle behavior based cues (H2).
+RQ3: When a light-based eHMI is active on an AV, does it
+draw more attention to the corresponding area of the
+vehicle compared to when the eHMI is inactive?
+Adding any external stimulus to an object has the poten-
+tial of attracting attention due to increased salience. When
+a light-based eHMI is on, it is possible that pedestrians
+will be drawn to look more at the headlights-and-grill area
+where the eHMI is located compared to when the eHMI is
+off, either due to its novelty or its salience. As a result, we
+hypothesize that when an eHMI is on, pedestrians will fix-
+ate on it longer than the corresponding location of the AV
+when the eHMI is off (H3).
+4 Method
+We evaluated the efficacy of the eHMI and the effects of
+different braking behaviors on pedestrians’ road-crossing
+willingness in a real-world outdoor controlled experiment.
+The experiment was reviewed and approved by the ethical
+review board of the researchers’ institution.
+4.1 Task
+In this controlled outdoor experiment, the participants
+(who assume the role of a pedestrian who wants to cross
+a road) had to stand on the edge of a pavement next to
+a road and watch an AV approach them while exhibiting
+different driving and communication behaviors. While ob-
+serving the approaching AV, the participant indicated their
+willingness to cross the road in real time. The participants
+were not asked to actually cross the road, but rather indi-
+cate their willingness to cross the road using a slider input
+device.
+4.2 Apparatus and study setup
+This experiment was conducted in collaboration with
+HELLA.1 The platform used for this experiment was the
+Hella Vision One concept vehicle, which was an Audi
+A6 C7 with the headlights and the grills modified to re-
+flect a “light bar” eHMI (see Figure 2) that glowed with a
+turquoise (bluish-green) color as explained in Section 2.
+The location of the pedestrian was at the curbside of a
+straight road that was free from any other traffic or road
+users. The interaction took place at a location where there
+was no intersection or pedestrian crossing. This was done
+to ensure that the decision whether or not to cross the road
+is a direct result of the consideration of the car’s behavior
+and/ or communication, and not of an expectation of right
+of way. The setup of the experiment is shown in Figure 2.
+We used a Ghost Driver Wizard-of-Oz setup to hide the
+driver under a ‘seat suit’ and to create an illusion of an au-
+tomated vehicle [23]. The high-fidelity nature of the eHMI
+1 https://www.hella.com/, last access 2020-07-09.
+
+
+126
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+Figure 2: Experiment setup: The pedestrian stands on the edge of
+the road on the pavement wearing a mobile eye tracker and hold-
+ing the slider input device and indicates their willingness to cross
+in real time as the AV approaches them. The blue and red arrows
+represent the path of the AV and the pedestrian respectively.
+prototype in the Hella Concept One vehicle, as well as the
+Wizard-of-Oz setup allowed us to create an experience of
+an automated vehicle for the participants with a high level
+of immersion. The experiment was carried out during day-
+time and on a clean road that was devoid of debris, pooled
+water, etc. (to avoid any confounding element that the car
+might be slowing down for any anomaly on the road).
+To determine the participants’ gaze patterns during
+the experiment, we used a mobile eye tracker (Tobii2 Pro
+Glasses 2) which was calibrated with each participant at
+the beginning of the experiment. To ensure a successful
+calibration, the experimenter asked the participant to look
+at 3 different objects in the environment at pre-determined
+distances (10 m, 30 m, and 50 m), and validated whether
+the fixation was recorded correctly.
+The focus of this study was to investigate how pedes-
+trians interact with automated vehicles that exhibit differ-
+ent braking behaviors while yielding, and the effect of ex-
+plicit communication through an eHMI. One of the goals
+of this study was to investigate how eHMI and vehicle be-
+havior interact with each other, particularly if they present
+apparently contradicting messages. In this context, the ex-
+periment included two eHMI conditions: presence or ab-
+sence of the eHMI (eHMI/ no eHMI), and four behavior
+conditions (Gentle braking, Early braking, Aggressive brak-
+ing, and Constant speed/No braking). While a car can yield
+to a pedestrian in different ways by employing different
+braking patterns and speed profiles, we investigated three
+2 https://www.tobiipro.com/product-listing/tobii-pro-glasses-2,
+last access 2020-07-09.
+Table 1: Study design – The AV exhibited 4 driving behaviors, each
+of them with or without activating the eHMI. In a within-subjects
+design, the participants experienced these 8 conditions in a coun-
+terbalanced order.
+Trial #
+eHMI
+Behavior
+Condition
+1
+No
+eHMI
+Gentle braking (50 km/h ↘0 km/h)
+2
+Early braking (50 km/h ↘20 km/h ↘0 km/h)
+3
+Aggressive braking (50 km/h ↘0 km/h)
+4
+Constant speed (50 km/h constant)
+5
+eHMI
+Gentle braking (50 km/h ↘0 km/h)
+6
+Early braking (50 km/h ↘20 km/h ↘0 km/h)
+7
+Aggressive braking (50 km/h ↘0 km/h)
+8
+Constant speed (50 km/h constant)
+distinctly different yielding behaviors to simplify the scope
+of this study. The yielding behaviors were also selected to
+specifically conform to or contrast the eHMI message. To
+avoid learning effects (that the car yielded every time), we
+added a non-yielding behavior in the study where the car
+drove by at constant speed and did not stop. The two eHMI
+conditions and the four behavior conditions led to a total
+number of 2 × 4 = 8 trials. These 8 trials were counter-
+balanced to avoid any learning effects. The study design is
+shown in table 1.
+In each condition, the car approached from a distance
+of 200 m at 50 km/h (standard city driving speed in Eu-
+rope). In the yielding conditions, it came to a full stop at
+5 m before the pedestrian. The three different yielding be-
+haviors exhibited different braking characteristics:
+Gentle braking: At a distance of 45 m away from the
+pedestrian, the car started to brake steadily, to indi-
+cate a deliberate but smooth yielding behavior, result-
+ing in a total braking distance of 40 m. This was done
+to emulate a deceleration rate of 2.4 m/s2 which was
+found as the deceleration rate for average and com-
+mon braking by previous research [5]. This condition
+was therefore treated as a representative of a ‘normal’
+braking pattern which would ideally correspond with
+a ‘yielding’ message from an eHMI.
+Early braking: At a distance of 45 m away from the pedes-
+trian, the car braked hard and slowed down quickly
+to a speed of 20 km/h within a distance of ∼16 m (de-
+celeration of 5.17 m/s2). The vehicle covered the rest of
+the distance slowly until coming to a complete stop.
+This was done to show a more ‘deliberate’ yielding be-
+havior where the vehicle showed with its movement
+patterns and ‘body language’ in advance that it was
+slowing down. This condition was chosen as a can-
+didate because it was shown in previous research to
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+127
+have a positive effect in conveying to pedestrians the
+yielding intention of the vehicle and aiding pedestri-
+ans’ decision-making process [12]. We wanted to test
+the effectiveness of this braking behavior to yield, par-
+ticularly when combined with an eHMI.
+Aggressive braking: At a distance of 24 m away from
+the pedestrian, the car braked hard. In this aggres-
+sive yielding behavior, the total braking distance was
+19 m. This was done to emulate a deceleration rate of
+5.17 m/s2 which was found as the maximum deceler-
+ation rate for hard braking by previous research [5].
+This condition was therefore treated as a representa-
+tive of behavior that would initially seem to contradict
+a ‘yielding’ message from an eHMI.
+The participants experienced each behavior with and
+without the eHMI active. When the eHMI was not active,
+the daytime running lights of the vehicle were switched
+off so as not to cause any distraction. When the eHMI was
+active, the eHMI showed the ‘cruising’ pattern at the be-
+ginning of each trial, and triggered the ‘yielding’ pattern
+at a distance of 45 m for each of the three yielding be-
+haviors. This means that for the Gentle braking and Early
+braking conditions, the eHMI showed the yielding mes-
+sage the moment the vehicle started to brake, and for the
+Aggressive braking condition, the eHMI showed that the
+vehicle intended to yield before the vehicle had actually
+started to brake. This was done to ensure that participants
+had enough time to consider the eHMI message and not
+just be influenced by the vehicle behavior. However, the
+study was designed in a way that the eHMI and the vehicle
+behavior – even if they apparently contrasted each other
+(particularly in the Aggressive braking condition) – never
+fully contradicted, and the eHMI never communicated that
+the vehicle was going to yield when it did not. This was
+done to ensure that the pedestrians would not lose trust
+in the eHMI and that their responses would stem from the
+eHMI and the vehicle behavior organically, instead of be-
+ing confounded by an element of broken trust. When the
+car came to a complete stop, the eHMI switched back to
+the ‘cruising’ pattern after a wait of 3 seconds, and started
+driving away for the subsequent trial.
+Each stimulus consisted of an approach of the car from
+when it was approximately 200 m away until either 3 sec-
+onds after having stopped for the pedestrian, or until hav-
+ing passed the pedestrian without stopping. We recorded
+the pedestrians’ willingness-to-cross to the yielding car
+from when the car was 12 seconds away from the pedes-
+trian. For a yielding vehicle, we measured the pedestrians’
+willingness-to-cross relative to the ‘Time-to-stop’ of the ve-
+hicle, which we defined as the moment when the vehicle
+comes to a complete stop in front of the pedestrian. For a
+non-yielding vehicle, we measured relative to the ‘Time-
+to-arrival’ of the vehicle, which we defined as the moment
+when the front bumper of the vehicle reached the pedes-
+trian’s location.
+To record the pedestrians’ willingness to cross as a
+function of time in terms of the vehicle’s time-to-stop or
+time-to-arrival, we used a slider device as input device as
+proposed by Walker et al. [25]. The participant could move
+the slider to indicate their willingness to cross the road.
+Thetwoends of thesliderweremapped to0and100 (corre-
+sponding to no willingness to cross, and total willingness
+to cross), and the device recorded inputs at a rate of 10 Hz.
+We also instructed the participants that the continuum of
+the slider in between the ends can be used to express am-
+biguity regarding their decision.
+4.3 Procedure
+Three days before the experiment was scheduled for each
+participant, we sent them an online tutorial to acquaint
+them with the functioning of the eHMI, and what a par-
+ticular signal by the eHMI meant regarding the intention
+of the car. This online tutorial consisted of a number of
+videos (with a total duration of approximately 1:05 min)
+that demonstrated and explained the behavior of the eHMI
+within the context of the operating cycle of the car (cruis-
+ing, yielding, beginning to drive). This step was used as a
+point of communicating the functionality of the eHMI to
+the participant and to exclude the (potential lack of) in-
+tuitiveness of the eHMI as a possible confounding factor.
+Each participant was asked to follow the online tutorial to
+familiarize themselves with the message of the eHMI be-
+fore participating in the experiment.
+On the day of the experiment, after each participant
+gave their informed consent, the experimenters verified
+that the participant had gone through the online tuto-
+rial. Subsequently, they were requested to answer several
+questions regarding their comprehension of the function-
+ality of the eHMI using a questionnaire before the start of
+the experiment process. This was done to ascertain that
+they had understood and learned the functionality of the
+eHMI. Each participant answered each question correctly
+at the first attempt, indicating an understanding of the
+concept of the eHMI. This ensured that the results of their
+responses were an accurate measure of the efficacy of the
+eHMI and not of its intuitiveness.
+Subsequently, we guided the participant to the pre-
+defined outdoor location of the experiment where the AV-
+pedestrian interaction would take place. The participant
+
+
+128
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+stood approximately 1 m from the edge of the pavement.
+We asked them to imagine that they would cross to the
+other side of the road, while they observed the AV which
+approached them from their left (see Figure 2). Once the
+participant took their position, the experimenter(s) helped
+them to put on the mobile eye tracker and calibrated it to
+ensure accuracy of fixation data. Subsequently, the exper-
+imenter(s) handed them the slider input device and asked
+them to hold it comfortably in their hand, consider the ap-
+proaching AV, and indicate their willingness to cross in
+real time.
+Before the measured trials began, the participant had
+the opportunity to experience two practice trials to famil-
+iarize themselves with the setup and the slider input de-
+vice. The two stimuli used for the practice trial were the
+Constant speed and Gentle braking behaviors with ‘No-
+eHMI’ condition, and the participants experienced each
+behavior once in a randomized order. After the practice
+trials, the participants were asked if they understood the
+task and were comfortable with continuing with the study.
+Each participant gave a positive response, and was al-
+lowed to continue with the measured trials.
+The
+experiment
+concluded
+with
+a
+short
+semi-
+structured interview/discussion with the participant re-
+garding how they perceived the crossing scenarios. The
+entire experiment took approximately 30 minutes, and
+each participant was compensated for their time with e10.
+4.4 Measures
+This study incorporated three independent variables: the
+vehicle behavior and the eHMI condition as explained in
+section 4.2, and time until the vehicle stopped or arrived
+at the pedestrian’s location (Time to Arrival – TTA; Time to
+Stop – TTS). Two different dependent variables were used
+as measures to evaluate the effect of eHMIs on pedestri-
+ans’ road crossing behaviors. Firstly, we used the Willing-
+ness to Cross data from the slider input device as an objec-
+tive surrogate measure for the pedestrians’ feeling of safety
+around the automated vehicle [25]. Secondly, we used the
+Gaze Behavior data acquired from the mobile eye tracker
+to determine how the fixation pattern of the pedestrians
+varied as the AV approached, and how it differed between
+the eHMI being triggered and the eHMI being switched off.
+4.5 Participants
+We conducted the study with university students and staff
+whom we recruited via different channels including the
+university participation database, social media, and word
+of mouth (N
+=
+26, 16 male, 10 female; mean age
+=
+26.35 years; SD
+=
+4.13 years). We only recruited users
+who had no color-blindness, no mobility issues, and had
+normal or corrected-to-normal vision. We implemented a
+within-subjects setup across the 8 conditions as shown in
+Table 1. We lost the willingness to cross data from two par-
+ticipants due to technical issues. Thus, we used a sample
+of N = 24 (15 male, 9 female; mean age = 26.21 years;
+SD = 3.74 years) for the analysis.
+Results of pedestrians’ interactions with an eHMI can-
+not be generalized across all conditions unless the evalu-
+ations of the performance of the eHMI is also conducted in
+all conditions. However, as a first step, we evaluated the
+effects of eHMI in a specific set of conditions and put for-
+ward the findings. We highlight the parameters of our eval-
+uation in congruence with the taxonomy introduced in [6]
+in Table 5.
+5 Results
+We analyzed each measure (willingness to cross, and gaze
+behavior) separately, and we report the results in the fol-
+lowing sections.
+5.1 Willingness to cross
+For each behavior condition with and without eHMI, we
+extracted the willingness-to-cross values in 0.5 s intervals.
+The pedestrians’ willingness to cross with and without the
+eHMI as a function of time (Time to stop: until the car
+comes to a complete stop, or Time to arrival: until the front
+bumper reaches the position of the pedestrian) for each of
+the 4 behaviors are shown in Figures 3 to 6.
+Subsequently, for each behavior, we conducted a
+repeated-measures ANOVA across the time (Time to Arrival
+– TTA, or Time to Stop – TTS) from 11 s until +2 s, and the
+eHMI (see Table 2).
+Results show that as expected, Time had a highly sig-
+nificant effect on pedestrians’ willingness to cross in all be-
+haviors – it varied as the vehicle came closer (TTA/ TTS
+decreased). However, the effect of eHMI was dependent
+on the vehicle behavior. For Gentle and Early braking, the
+eHMI had a statistically significant effect with a high ef-
+fect size. Conversely, the eHMI did not have a statistically
+significant effect holistically over the course of the mea-
+surement points for Aggressive braking and Constant speed
+conditions, and showed a medium and a low effect size
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+129
+Figure 3: Gentle braking.
+Figure 4: Early braking.
+respectively. Similarly, the interaction effect Time * eHMI
+varied – it was statistically significant for Gentle and Early
+Table 2: Test statistics of the effects of time, eHMI, and their interac-
+tion on pedestrians’ willingness to cross.
+Condition
+F
+Sig.
+Effect size (r)
+Time
+Gentle braking
+47.19
+<0.001
+0.82
+Early braking
+11.04
+<0.001
+0.57
+Aggressive braking
+58.29
+<0.001
+0.85
+Constant speed
+153.52
+<0.001
+0.94
+eHMI
+Gentle braking
+18.79
+<0.001
+0.67
+Early braking
+13.65
+0.001
+0.61
+Aggressive braking
+2.28
+0.146
+0.31
+Constant speed
+0.035
+0.852
+0.04
+Time * eHMI
+Gentle braking
+5.13
+<0.001
+0.43
+Early braking
+3.269
+<0.001
+0.35
+Aggressive braking
+1.247
+0.187
+0.23
+Constant speed
+0.473
+0.989
+0.15
+Figure 5: Aggressive braking.
+Figure 6: Constant speed.
+braking, and not significant for Aggressive braking and
+Constant speed.
+To investigate whether the eHMI had a significant ef-
+fect at any specific TTA/TTS points in addition to its holis-
+tic effect across the entire experience, we conducted a t-
+test on the eHMI and No-eHMI conditions for every TTA/
+TTS measurement point. The test statistics and the effect
+sizes are shown in table 3.
+Results show that for gentle and early braking behav-
+iors, the eHMI had a significant effect for a stretch of time
+as the AV approached the pedestrian. The willingness to
+cross for the eHMI condition is significantly higher than for
+the No-eHMI condition at several TTS measurement mo-
+ments. For Gentle braking, the eHMI has a statistically sig-
+nificant, medium-size effect, increasing pedestrians will-
+ing to cross, between TTS of 3.5 s and 1.5 s. For the Early
+braking condition, the eHMI had a statistically significant,
+medium to high effect, increasing pedestrians’ willingness
+to cross, between TTS of 5.5 s and 2.0 s. In Figures 3 and 4,
+it can be seen that the difference between eHMI and No
+eHMI already begins at −7 s for Gentle braking and −8 s for
+Early braking, but these differences are not significant be-
+
+
+130
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+Table 3: Main effects of the presence of eHMI for different Time-to-stop (TTS – when the vehicle stopped) or Time-to-arrival (TTA – when the
+vehicle drove by) measuring points for different driving behaviors. The corresponding effect size (Cohen’s d) are reported and the TTS/TTA
+points where the eHMI had a significant effect at a Bonferroni-corrected confidence level of 0.002 are highlighted in bold and italics.
+TTA/ TTS (s)
+Gentle braking
+Early braking
+Aggressive braking
+Constant speed
+t
+p
+d
+t
+p
+d
+t
+p
+d
+t
+p
+d
+−11.0
+−1.972
+0.061
+0.386
+0.334
+0.742
+0.080
+1.000
+0.328
+0.204
+−1.000
+0.328
+0.222
+−10.5
+−2.364
+0.027
+0.577
+0.546
+0.590
+0.137
+1.014
+0.321
+0.224
+−1.000
+0.328
+0.204
+−10.0
+−2.300
+0.031
+0.613
+0.297
+0.769
+0.070
+0.951
+0.352
+0.221
+−1.000
+0.328
+0.179
+−9.5
+−2.420
+0.024
+0.678
+0.041
+0.968
+0.010
+1.001
+0.328
+0.657
+−1.000
+0.328
+0.157
+−9.0
+−2.453
+0.022
+0.696
+−0.362
+0.720
+0.087
+0.150
+0.882
+0.022
+−1.000
+0.328
+0.116
+−8.5
+−2.177
+0.040
+0.622
+0.078
+0.938
+0.016
+−0.682
+0.502
+0.110
+−1.000
+0.328
+0.068
+−8.0
+−1.947
+0.064
+0.527
+−0.293
+0.772
+0.059
+−0.701
+0.491
+0.138
+−1.417
+0.171
+0.074
+−7.5
+−1.769
+0.09
+0.387
+−1.759
+0.092
+0.460
+−0.542
+0.593
+0.088
+−1.082
+0.291
+0.132
+−7.0
+−1.168
+0.255
+0.233
+−2.505
+0.020
+0.686
+−0.630
+0.535
+0.504
+−0.697
+0.493
+0.135
+−6.5
+−0.135
+0.894
+0.034
+−2.528
+0.019
+0.701
+−0.574
+0.572
+0.125
+−0.997
+0.330
+0.227
+−6.0
+−0.267
+0.792
+0.072
+−3.048
+0.006
+0.775
+−0.074
+0.942
+0.018
+−1.035
+0.312
+0.246
+−5.5
+−0.521
+0.608
+0.162
+−3.739
+0.001
+0.871
+0.235
+0.817
+0.055
+−0.884
+0.386
+0.192
+−5.0
+−1.714
+0.100
+0.540
+−3.903
+0.001
+0.958
+0.020
+0.984
+0.006
+−0.512
+0.614
+0.123
+−4.5
+−2.645
+0.014
+0.840
+−3.838
+0.001
+0.993
+−0.900
+0.378
+0.190
+−0.488
+0.631
+0.136
+−4.0
+−3.498
+0.002
+1.155
+−3.759
+0.001
+1.007
+−0.219
+0.829
+0.052
+0.002
+0.998
+0.001
+−3.5
+−4.268
+<0.001
+1.457
+−3.674
+0.001
+1.033
+0.129
+0.898
+0.035
+0.290
+0.775
+0.078
+−3.0
+−5.535
+<0.001
+1.702
+−3.165
+0.004
+0.913
+−0.205
+0.839
+0.061
+0.015
+0.988
+0.004
+−2.5
+−5.290
+<0.001
+1.514
+−3.095
+0.005
+0.819
+−0.492
+0.627
+0.148
+−0.851
+0.404
+0.201
+−2.0
+−4.346
+<0.001
+1.221
+−3.609
+0.001
+0.828
+−1.768
+0.091
+0.514
+−0.702
+0.490
+0.165
+−1.5
+−3.924
+0.001
+1.085
+−3.243
+0.004
+0.734
+−2.310
+0.031
+0.588
+0.085
+0.933
+0.026
+−1.0
+−3.600
+0.002
+0.929
+−2.458
+0.022
+0.621
+−2.318
+0.030
+0.506
+0.156
+0.878
+0.047
+−0.5
+−3.075
+0.005
+0.809
+−2.068
+0.050
+0.560
+−2.179
+0.040
+0.420
+−0.903
+0.376
+0.272
+0.0
+−2.017
+0.056
+0.594
+−1.210
+0.239
+0.361
+−1.648
+0.114
+0.386
+−1.000
+0.328
+0.295
++0.5
+−1.966
+0.062
+0.567
+−1.646
+0.113
+0.491
+−1.486
+0.152
+0.375
+0.623
+0.539
+0.187
++1.0
+−1.366
+0.019
+0.398
+−1.838
+0.079
+0.531
+−1.734
+0.097
+0.470
+0.606
+0.551
+0.145
++1.5
+−1.668
+0.109
+0.459
+−1.519
+0.142
+0.439
+−1.574
+0.130
+0.464
+0.459
+0.651
+0.122
++2.0
+−1.682
+0.106
+0.452
+−1.390
+0.178
+0.401
+−1.153
+0.261
+0.336
+1.151
+0.262
+0.280
+cause the Bonferroni adjustment makes the test very con-
+servative. Overall, this indicates that in these TTS mea-
+surements, the eHMI helps pedestrians to comprehend the
+vehicle’s yielding intentions more clearly. In contrast, for
+Aggressive braking and Constant speed, the effect of the
+eHMI was not statistically significant at any TTS/ TTA mea-
+suring point, and the effect sizes were small.
+5.2 Gaze behavior
+Of the 26 participants the study was conducted with, data
+from seven participants suffered from poor gaze sampling
+during the interaction moments and more than 40 % of
+the gaze samples were lost due to technical difficulties.
+We excluded these from the gaze behavior analysis. Data
+from the rest of the 19 participants recorded a gaze sam-
+pling rate of over 80 %. We coded the eye tracking data
+for the rest of the 19 participants using the Tobii Pro Lab3
+3 https://www.tobiipro.com/product-listing/tobii-pro-lab/, last ac-
+cess 2020-07-09.
+software. In order to categorize the gaze behaviors of the
+pedestrians, eight Areas of Interest (AOI) were defined on
+the car (see Figure 7). For each behavior with and without
+Figure 7: The Areas of Interest (AOIs) defined on the vehicle: (1) Road
+surface in front of the AV; (2) Bumper; (3) eHMI [when eHMI is
+present], headlights and grill [when eHMI is absent]; (4) Hood;
+(5) Windshield; (6) Side; (7) Wheels; (8) Environment.
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+131
+Figure 8: Gentle braking.
+Figure 9: Early braking.
+eHMI, the fixations were manually coded by mapping a fix-
+ation to the corresponding AOI.
+We asked participants to respond as they normally
+would in the presence of the vehicle in order to preserve
+ecological validity. They were not advised against turning
+their heads or looking around, and they were not asked to
+specifically look only in the direction of the approaching
+vehicle. In the process of the study, in some cases, partic-
+ipants turned their heads and looked around at their sur-
+roundings, which led to the car being momentarily hidden
+from view. Such data were coded as fixations on the envi-
+ronment (AOI 8). The start of the mapping of gaze behavior
+on different AOIs of the car was executed from a TTA/ TTS
+of 10 s away from the pedestrian until up to 2 s after stop-
+ping/ arrival, and gaze samples were pooled in one second
+intervals (Time of Interest, or TOI intervals were 1 s) cor-
+responding to the intervals of Time-to-Stop (TTS) or Time-
+to-Arrival (TTA), and the dependent variable analyzed was
+the fixation duration across different AOIs within these TOI
+intervals.
+The heat maps in Appendix A show the pattern of gaze
+behavior of the pedestrians in response to the approaching
+vehicle. Figures 8 to 11 show the distribution of the fixation
+durations across various AOIs at the analyzed time inter-
+vals. The data from these graphs show that for all yielding
+behaviors, pedestrians look largely at the road surface in
+front of the vehicle or the environment, until the approach-
+ing AV is relatively close to the pedestrian. Closer to the
+stopping point, pedestrians are observed to look more at
+the bumper, headlight/ grill/ eHMI, hood, and windshield
+areas. In contrast, for the non yielding condition (constant
+speed), the pedestrians do not fixate on the car until the
+very last moments leading up to its arrival at the pedestri-
+ans’ location.
+
+
+132
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+Figure 10: Aggressive braking.
+Figure 11: Constant speed.
+For each time interval in every behavior condition
+where the pedestrians were observed to fixate on the eHMI
+AOI (for the eHMI condition) and the headlight/ grill AOI
+(for the No-eHMI condition), we conducted a t-test to in-
+vestigate whether the fixations on AOI number 3 (corre-
+sponding to the eHMI or the headlights/ grill) were differ-
+ent as a result of the eHMI activating. We found no statis-
+tically significant differences in the fixation durations in
+this area as a result of the eHMI at any time interval for
+any behavior condition, and the effect sizes were small.
+5.3 Qualitative feedback
+In addition, we collected qualitative feedback through
+semi-structured interviews at the end of the experiment
+to gain subjective insights from our participants. Although
+the quantitative data was obtained from 24 participants (as
+a result of lost data from two participants), each of the 26
+participants involved in the study provided their qualita-
+tive feedback. This section outlines insights from the the-
+matic analysis applied to the qualitative data, furnished
+with selected participant quotes.
+5.3.1 Pedestrians feel more confident about their
+crossing decisions in the presence of an eHMI
+Participants commented that in general they felt more
+confident in the vehicle’s yielding intentions when the
+eHMI was present. With the eHMI, participants mentioned
+feeling more at ease, confident, and willing to cross the
+road (P4, P8, P15), more certain about the vehicle’s inten-
+tions (P11), and considered it “additional help” (P13, P16).
+Others mentioned actively looking for the light to make
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+133
+their decision (P6, P23) and reported that they trusted the
+light to an extent that they felt it missing when it was
+not there (P24). However, a participant also remarked that
+while the eHMI helped, it “wasn’t a 100 % confirmation”
+for them to be willing to cross and that they depended on
+the vehicle’s speed (P16).
+5.3.2 Preferences differ between braking behaviors
+Opinions were split regarding the pedestrians’ preference
+for the ideal braking behavior. Every participant men-
+tioned that they liked the Gentle braking behavior, and
+some clarified that this was because for them it corre-
+sponded most closely with how a human driver would re-
+spond to a pedestrian waiting to cross (P16, P20–P22).
+However, people disagreed on their perception of the
+Early braking behavior. Two participants mentioned that
+earlier braking made the vehicle’s yielding intention clear
+to them in advance and they felt more confident in their
+crossing decision (P12, P25). However, most participants
+(16/26) found this behavior confusing, and some specif-
+ically mentioned disliking this, even worse than the Ag-
+gressive braking behavior (P17, P22). For them, the fact that
+the vehicle braked and slowed down earlier, but still kept
+approaching them caused doubt and mistrust in the ve-
+hicle’s intentions. Participants generally responded with
+an intense reaction to the Early braking behavior – either
+strongly liking it or strongly disliking it.
+On the whole, based on their response to the Early
+braking behavior, participants’ response to the Aggressive
+braking behavior either came second or last among the
+three yielding behaviors, and in general, was not a pre-
+ferred behavior. Participants mentioned that even if the
+eHMI was active and showed the yielding message for
+this behavior, they felt unsafe to cross as the speed of
+the vehicle was too high (P16, P20, P23). One participant
+also mentioned that when the eHMI showed the yield-
+ing message despite the AV approaching quite fast until
+the last moment before braking aggressively, they “felt be-
+trayed” (P8).
+5.4 Evaluation of hypotheses
+From these data, we are able to determine the validity of
+our hypotheses as follows:
+H1: For a yielding vehicle, pedestrians’ willingness to
+cross will be higher when the AV is equipped with an eHMI
+than without an eHMI. Insights from our study show that
+an eHMI has the potential to mitigate ambiguity and re-
+solve confusion regarding an AV’s yielding intention when
+the speed of the AV is low. However, an eHMI does not
+unilaterally increase pedestrians’ willingness to cross for a
+yielding vehicle. Especially when the speed of the vehicle
+is high or the AV brakes aggressively, pedestrians fall back
+on the vehicle behavior as the primary source of informa-
+tion about its yielding intent. This leads us to partially ac-
+cept H1 – the eHMI had an effect on pedestrians’ crossing
+behaviors in certain conditions.
+H2: If an eHMI message contradicts the behavior of the
+AV, pedestrians will fall back on the vehicle behavior based
+cues. Results also show that when the behavior of the ve-
+hicle contradicts the eHMI’s yielding message (e. g. in the
+Aggressive braking behavior), pedestrians fall back on the
+behavioral cues and do not blindly trust the eHMI. Even
+though the eHMI showed that the AV intended to yield, the
+high speed of the vehicle did not inspire confidence in the
+eHMI’s message and the pedestrians waited until the AV
+slowed down. This leads us to accept H2 – our data and
+analyses support the prediction that pedestrians rely on
+vehicle kinematics.
+H3: when an eHMI is on, pedestrians will fixate on it
+longer than the corresponding location of the AV when the
+eHMI is off. Analysis of fixation data show that pedestrians
+did not fixate on the eHMI when it was active significantly
+more than when it was inactive, and the effect size of eHMI
+on fixation duration was small. This leads us to reject H3 –
+there is no evidence that a light-based eHMI affects pedes-
+trians’ attention significantly.
+6 Discussion
+Our results show that eHMIs can play a role in mitigat-
+ing pedestrians’ ambiguity in understanding an AV’s in-
+tentions in yielding situations, and can help pedestrians
+to make quicker decisions. However, the behavior of the
+vehicle has an impact in this. We reflect on the findings of
+our study and discuss the implications on the design of an
+effective AV-pedestrian communication paradigm.
+6.1 The effect of eHMI
+Subjective feedback from the interviews after the experi-
+ment revealed that pedestrians felt the eHMI had a posi-
+tive effect overall in their decision making process and im-
+proving the experience of interaction. Quantitative results
+show that the effect of the eHMI was significant primar-
+ily in the Gentle braking and Early braking conditions. The
+
+
+134
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+Figure 12: Pedestrians’ willingness to cross the road across different vehicle behaviors. Left: No eHMI; Right: eHMI.
+impact of the eHMI was statistically significant for only a
+small period of the TTS measures for Aggressive braking
+and none of the measures of TTA for Constant speed condi-
+tions, and for these behaviors, the effect size was not high.
+The finding that eHMI is generally effective is in line with
+previous findings [1, 4, 13, 14, 16]. However, this comes
+with the caveat – the effectiveness of the eHMI is contin-
+gent on the behavior and the speed of the vehicle. An addi-
+tional point to consider is that in this study, the functional-
+ity of the eHMI was explained to the participant. In a nat-
+uralistic setting, the actual effectiveness of an eHMI will
+also depend on the intuitiveness of the deployed concept.
+6.2 Driving behavior and eHMI
+Results show that the driving behavior of the vehicle ex-
+hibited by its movement patterns had an impact on the ef-
+ficacy of the eHMI in terms of improving pedestrians’ will-
+ingness to cross. Pedestrians did not simply take the mes-
+sage of the eHMI as the ultimate truth and verified whether
+the behavior of the vehicle corresponded with the eHMI
+communication.
+This is particularly seen in the Aggressive braking con-
+dition: even though the eHMI activated the ‘yielding’ mes-
+sage at 45 m from the pedestrian, the car was still driving at
+50 km/h at this point. The car braked hard at around 19 m
+from the pedestrian, at which point the eHMI was already
+displaying the yielding message for some time. However,
+the pedestrians’ willingness did not rise as a result of the
+message of the eHMI alone. This condition was an exam-
+ple of when the message of the eHMI and the behavior of
+the vehicle did not correspond to each other until the last
+moment of the vehicle coming to a complete stop.
+Similarly, for the early braking behavior, fig. 4 shows
+an interesting pattern. The willingness to cross drops as
+the car approaches and rises as it brakes initially and
+slows down, as expected. However, the willingness to
+cross drops again as the AV approaches closer until it
+slows – pedestrians assumed with the initial braking that
+the AV was going to yield, but could no longer be sure
+when it kept approaching, until it slowed down to a com-
+plete stop. The presence of the eHMI mitigated the ambi-
+guity to a certain extent, but did not resolve it entirely. The
+pattern of willingness to cross for the eHMI condition mir-
+rors that of the No-eHMI condition.
+Results showed that the effect of the eHMI is depen-
+dent on the vehicle’s behavior. Figure 12 shows that in gen-
+eral, the pattern of pedestrians’ willingness to cross for
+the different behaviors remains consistent across the two
+eHMI conditions. Although the eHMI can reduce the de-
+gree of ambiguity to a certain extent, the general shape of
+the graphs for the different behavior conditions remains
+consistent across the two eHMI conditions. This indicates
+that the presence of the eHMI did not unilaterally convince
+the pedestrians that the vehicle was going to yield in any
+condition, and they still based their judgment and deci-
+sion on the vehicle’s driving behavior. When the speed
+of the vehicle is high, the eHMI had little to no effect in
+modulating pedestrians’ willingness to cross. Only when
+the speed of the vehicle is low enough that it could mean
+yielding intention, but still high enough to be a threat, did
+the eHMI have an effect by elucidating the AV’s intention.
+This indicates that when the eHMI’s yielding message and
+the vehicle’s behavior contradict each other, people still
+give more priority to the vehicle’s behavior. Pedestrians do
+not blindly follow instructions from an eHMI. This finding
+contradicts previous research [15] which found that people
+tend to start out with a high degree of trust for eHMIs and
+are not hesitant to follow the message of an eHMI.
+In contrast, previous research also claimed that the ve-
+hicle’s movement patterns are enough for expressing the
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+135
+intentions of a vehicle and that further communications
+may not be necessary [10, 19, 20]. Our results show that in
+specific situations (Gentle and Early braking conditions),
+when the speed of the AV was low enough, the eHMI did
+have a positive effect on pedestrians’ willingness to cross.
+Other prior work has also investigated a situation when
+an AV slowed down without stopping [7]. It showed that
+an eHMI was able to clarify the AV’s intention to not yield
+even when the slowing behavior of the vehicle would seem
+to indicate that it would stop. We posit that while vehicle
+movement patterns may be enough for many situations, an
+eHMI may still have the potential to clarify the intention
+of the vehicle and reduce ambiguity, particularly in low-
+speed situations when the stopping intention of the AV is
+unclear.
+Besides, there is an added consideration for the
+breaching behaviors (early and aggressive breaking) when
+the message of the vehicle and its behavior appeared to
+go against each other. Although the behavior of the vehi-
+cle never entirely contradicted the eHMI (i. e. there was
+no situation where the car did not stop when the eHMI
+said it would), the apparent misalignment of the vehicle
+behavior and communication may be interpreted as un-
+safe behavior, which could damage the trust on the vehi-
+cle.
+6.3 Ideal yielding behavior
+As expected, Aggressive braking was not appreciated by
+any of the participants. However, opinion was split be-
+tween Gentle braking and Early braking. Many participants
+found the initial pitching due to the first braking moment
+in the early braking condition to be a helpful and obvi-
+ous indication that the AV was slowing down. In the Gen-
+tle braking condition, the slowing of the car was not com-
+parably obvious, and took more time. Others indicated
+discomfort with the Early braking condition since the car
+continued to approach after braking – they could not be
+certain that the AV was indeed stopping for them. Previ-
+ous research showed that a defensive deceleration with a
+stronger vehicle pitch due to hard initial braking reduces
+the time it takes pedestrians to understand an approach-
+ing vehicle’s yielding intention [12]. However, our findings
+contradict this result. Besides, defensive and hard initial
+braking may also cause disruptions to traffic flow. We posit
+that a uniform, controlled, and gentle braking behavior
+in tandem with an eHMI elucidating the AV’s intent is a
+good candidate for an effective and pleasant interaction
+between an AV and a pedestrian.
+6.4 Pedestrians’ gaze patterns
+Previous research showed that a distinct pattern exists in
+the gaze behavior of pedestrians when interacting with
+an approaching manually-driven vehicle [11] – pedestrians
+looked at the road surface in front of the car or the environ-
+ment when the car is at a distance, and progressively fix-
+ate on the bumper, headlights-and-grill, hood, and wind-
+shield areas as the car approaches closer. Our result shows
+that this pattern is also seen in interaction with an AV. The
+major difference was found in the fixation intensity on the
+windshield. Earlier research showed that pedestrians had
+a strong tendency to look at the windshield when the ve-
+hicle was close to them, and the authors speculated that
+this was likely because the pedestrians sought confirma-
+tory information about the driver’s intent. However, such
+a strong tendency to look at the windshield was not found
+with the AV, both with and without the eHMI. We conjec-
+ture that since the pedestrians believed that they were in-
+teracting with an AV with no human driver controlling the
+vehicle, the need to look inside the vehicle near the wind-
+shield area was no longer there.
+Furthermore, analysis showed that pedestrians’ fixa-
+tions on the eHMI were not significantly higher than their
+fixation on the corresponding headlights-and-grill area of
+the AV when the eHMI was switched off. An eHMI con-
+cept based on user-centered design principles of providing
+the right information and the right place and time should
+also present information where it is expected. The fixa-
+tion distribution shows that as the AV approached and
+pedestrians looked at the vehicle, most of the fixations oc-
+curred on the bumper and hood. One may argue that plac-
+ing a light-based emissive eHMI will attract attention by
+increasing the perceptual salience irrespective of where
+it is placed. However, our results indicate that the pres-
+ence of the eHMI did not significantly alter the gaze behav-
+ior – pedestrians did not look at the corresponding areas
+more when the eHMI was on. A consideration is that by
+the design of this experiment, the participants knew that
+sometimes they would be seeing the eHMI, and other times
+they would not. So it might be possible that even when the
+eHMI was off, they were looking at the headlights-and-grill
+area to see if the eHMI showed anything even if it was off.
+This could account for the lack of a significant difference
+in fixation duration on the AOI when the eHMI was on.
+However, despite a lack of increased fixations on the lo-
+cation of an eHMI, the positive effect of the eHMI was ob-
+served in Gentle and Early braking conditions in terms of
+the pedestrians’ willingness to cross. We conjecture that
+even though pedestrians did not necessarily fixate directly
+on the eHMI, the message of the eHMI was seen by them
+
+
+136
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+in their parafoveal vision, and was effective without being
+distracting.
+6.5 Limitations and future work
+In order to limit confounding factors, we conducted the ex-
+periment in a simplified scenario involving only one car
+and one pedestrian on a straight and empty road devoid
+of any other traffic. Our findings provide the first results
+regarding pedestrians’ willingness to cross in the specific
+driving behaviors explored with and without an eHMI in
+such a baseline scenario. An AV can yield in a multitude
+of ways, and with an increase in the complexity of the traf-
+fic situation, the gaze pattern may be more varied. Future
+research needs to extend this work in different traffic situ-
+ations and in more dynamic scenarios involving multiple
+cars and pedestrians.
+Additionally, in our study, we asked participants to
+merely indicate their willingness to cross using an input
+device rather than actually crossing the road. It is possible
+that due to a lack of potential physical harm, participants
+exhibited a more risk-taking behavior. However, we chose
+this setup to ensure a high level of control in the environ-
+ment, ensure the participants’ safety, and obtain contin-
+uous data on the variation in their willingness to cross as
+the vehicle approached.
+We conducted this study with 4 distinctly different
+driving behaviors and showed that the effectiveness of the
+eHMI is dependent on the behavior. However, a vehicle can
+exhibit a range of different driving behaviors that vary in
+nuanced and subtle ways. Different driving behaviors of
+a vehicle result in a complex interplay between its speed
+and distance from the pedestrian, and influence pedestri-
+ans’ decisions. Although we showed that eHMIs tend to be
+more effective for certain driving behaviors, constructing a
+model of how speed and distance impact the effectiveness
+of an eHMI was out of the scope of this study, and needs to
+be addressed in future research.
+7 Conclusion
+This paper presents a controlled outdoor experiment that
+explored the effectiveness of explicit communication of ve-
+hicle intent through an eHMI in AV-pedestrian interaction
+situations, and the impact of different braking behaviors
+when the vehicle yields. Our results show that the answer
+to the question “Does an eHMI work?” is not straightfor-
+ward, and is dependent on a complex interplay of the ve-
+hicle’s speed and distance, which is a byproduct of the
+vehicle’s driving behavior. In low-speed situations when
+the intention of the vehicle is unclear, explicit communica-
+tion through an eHMI can resolve ambiguity about an AV’s
+yielding intention and increase pedestrians’ willingness to
+cross, thereby facilitating better traffic flow. The effect of
+an eHMI is less pronounced at higher speeds, when the
+behavioral cues of the vehicle take precedence. Pedestri-
+ans do not blindly trust a yielding message from an eHMI
+when the behavior of the vehicle does not concur with the
+message. Our empirical findings provide critical insight
+into the behavior of pedestrians in interactions with auto-
+mated vehicles with eHMIs and add nuanced evidence to
+help drive the development of an effective communication
+paradigm for AV-pedestrian interaction.
+Acknowledgment: We are greatly indebted to HELLA
+GmbH & Co. KGaA, division Innovation Lighting and Marc
+Kaup for their collaboration and involvement in the design
+and execution of this study.
+Funding: This research is supported by the Dutch Domain
+Applied and Engineering Sciences, which is part of the
+Netherlands Organization for Scientific Research (NWO),
+and which is partly funded by the Ministry of Economic
+Affairs (project number 14896).
+Appendix A. Fixation heat maps
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+137
+Figure 13: Heat maps of fixation duration through the approach of the AV across eHMI and No-eHMI conditions for Gentle braking and Early
+braking. To generate these heat maps, the Tobii I-VT Attention filter was used to visualize the absolute fixation duration data in 1 s intervals.
+
+
+138
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+Figure 14: Heat maps of fixation duration through the approach of the AV across eHMI and No-eHMI conditions for Aggressive braking and
+Constant Speed. To generate these heat maps, the Tobii I-VT Attention filter was used to visualize the absolute fixation duration data in 1 s
+intervals.
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+139
+Appendix B. Concept coding and
+evaluation parameters
+Table 4: Coding of the different eHMI dimensions for the concept
+used in this study as proposed in [6].
+#
+eHMI dimension
+Property
+1
+Target road user
+Pedestrian
+2
+Vehicle type
+Passenger car
+3
+Modality of communication
+Visual – abstract
+4
+Color of eHMI
+Turquoise (bluish-green,
+cyan)
+5
+Covered states
+Cruising, Yielding,
+Beginning to drive
+6
+Message of communication
+in right-of-way negotiation
+Intention announcement
+7
+HMI placement
+Headlights, grill
+8
+Number of displays
+1 (light band spanning
+headlights and grill)
+9
+Number of messages
+3 (cruising, yielding,
+beginning to drive)
+10
+Communication strategy
+Broadcast
+11
+Communication resolution
+Low
+12
+Multiple road user
+addressing capability
+Multiple/ Unlimited
+13
+Communication dependent
+on distance/ time gap?
+No
+14
+Complexity to implement
+C1
+15
+Reliant on new vehicle
+design?
+No
+16
+Ability to show occupant
+state/ shared control?
+No
+17
+Ability to cater to VRUs with
+accessibility needs/ hearing
+impairment?
+No
+18
+Evaluation conducted?
+Yes
+References
+1.
+S. Ackermans, D. Dey, P. Ruijten, R. H. Cuijpers, and B.
+Pfleging. The Effects of Explicit Intention Communication,
+Conspicuous Sensors, and Pedestrian Attitude in Interactions
+with Automated Vehicles. In CHI Conference on Human Factors
+in Computing Systems, pages 1–14, Honolulu, 2020.
+2.
+C. G. Burns, L. Oliveira, V. Hung, P. Thomas, and S. Birrell.
+Pedestrian Attitudes to Shared-Space Interactions with
+Autonomous Vehicles – A Virtual Reality Study. In Advances
+in Intelligent Systems and Computing, volume 964,
+pages 307–316. Springer Verlag, 2020.
+3.
+M. Clamann, M. Aubert, and M. L. Cummings. Evaluation of
+Vehicle-to-Pedestrian Communication Displays for Autonomous
+Table 5: Summary of the different parameters of evaluation of the
+eHMI concept as recommended in [6].
+#
+Evaluation parameter
+Condition
+1
+Time of day
+Daytime – daylight
+conditions
+2
+Number of simultaneous
+road users
+1
+3
+Number of simultaneous
+vehicles
+1
+4
+Methodology/ medium of
+testing
+Controlled real-world
+5
+Weather conditions
+Clear skies, sunlight
+6
+Road conditions
+Clean roads
+7
+Sample size
+24
+8
+Sample age
+Mean = 26.21, SD = 3.74
+9
+Research methodology
+Mixed methods (quantitative
++ qualitative)
+Vehicles. In 96th Annual Transportation Research Board
+Meeting, 2017.
+4.
+K. de Clercq, A. Dietrich, J. P. Núñez Velasco, J. de Winter, and
+R. Happee. External Human-Machine Interfaces on Automated
+Vehicles: Effects on Pedestrian Crossing Decisions. Human
+Factors, 2019.
+5.
+S. P. Deligianni, M. Quddus, A. Morris, A. Anvuur, and S. Reed.
+Analyzing and Modeling Drivers’ Deceleration Behavior from
+Normal Driving. Transportation Research Record: Journal of the
+Transportation Research Board, 2663(1):134–141, Jan 2017.
+6.
+D. Dey, A. Habibovic, A. Löcken, P. Wintersberger, B.
+Pfleging, A. Riener, M. Martens, and J. Terken. Taming the
+eHMI jungle: A classification taxonomy to guide, compare,
+and assess the design principles of automated vehicles’
+external human-machine interfaces. Transportation Research
+Interdisciplinary Perspectives, 7, 2020.
+7.
+D. Dey, K. Holländer, M. Berger, B. Pfleging, M. Martens,
+and J. Terken. Distance-dependent eHMIs for the Interaction
+Between Automated Vehicles and Pedestrians. In AutomotiveUI
+(Accepted, 2020), pages 1–18, 2020.
+8.
+D. Dey, M. Martens, B. Eggen, and J. Terken. Pedestrian
+road-crossing willingness as a function of vehicle automation,
+external appearance, and driving behaviour. Transportation
+Research Part F: Traffic Psychology and Behaviour, 65:191–205,
+Aug 2019.
+9.
+D. Dey, M. Martens, C. Wang, F. Ros, and J. Terken. Interface
+Concepts for Intent Communication from Autonomous Vehicles
+to Vulnerable Road Users. In Adjunct Proceedings of the 10th
+International ACM Conference on Automotive User Interfaces
+and Interactive Vehicular Applications (AutomotiveUI’18),
+pages 82–86, 2018.
+10. D. Dey and J. Terken. Pedestrian Interaction with Vehicles: Roles
+of Explicit and Implicit Communication. In AutomotiveUI’17 ACM
+9th International Conference on Automotive User Interfaces and
+Interactive Vehicular Applications, Oldenburg, 2017.
+11.
+D. Dey, F. Walker, M. Martens, and J. Terken. Gaze patterns
+in pedestrian interaction with vehicles: Towards effective
+design of external human-machine interfaces for automated
+
+
+140
+|
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+vehicles. In Proceedings – 11th International ACM Conference
+on Automotive User Interfaces and Interactive Vehicular
+Applications, AutomotiveUI 2019, pages 369–378, 2019.
+12. A. Dietrich, P. Maruhn, L. Schwarze, and K. Bengler. Implicit
+Communication of Automated Vehicles in Urban Scenarios:
+Effects of Pitch and Deceleration on Pedestrian Crossing
+Behavior. In Advances in Intelligent Systems and Computing,
+volume 1026, pages 176–181. Springer Verlag, Sept 2020.
+13. A. Habibovic, V. M. Lundgren, J. Andersson, M. Klingegård, T.
+Lagström, A. Sirkka, J. Fagerlönn, C. Edgren, R. Fredriksson, S.
+Krupenia, D. Saluäär, and P. Larsson. Communicating Intent of
+Automated Vehicles to Pedestrians. Frontiers in Psychology, 9
+(August), 2018.
+14. K. Holländer, A. Colley, C. Mai, J. Häkkilä, F. Alt, and B.
+Pfleging. Investigating the influence of external car displays on
+pedestrians’ crossing behavior in virtual reality. In Proceedings
+of the 21st International Conference on Human-Computer
+Interaction with Mobile Devices and Services, MobileHCI2019,
+ACM, New York, NY, USA, 2019.
+15.
+K. Holländer, P. Wintersberger, and A. Butz. Overtrust in
+External Cues of Automated Vehicles: An Experimental
+Investigation. In 11th International Conference on Automotive
+User Interfaces and Interactive Vehicular Applications
+(AutomotiveUI’19), number April, pages 211–221, 2019.
+16. L. Kooijman, R. Happee, and J. C. de Winter. How do eHMIs
+affect pedestrians’ crossing behavior? A study using
+a head-mounted display combined with a motion suit.
+Information (Switzerland), 10(12):386, Dec 2019.
+17.
+Y. Li, M. Dikmen, T. G. Hussein, Y. Wang, and C. Burns. To cross
+or not to cross: Urgency-based external warning displays
+on autonomous vehicles to improve pedestrian crossing
+safety. In Proceedings of the 10th International Conference
+on Automotive User Interfaces and Interactive Vehicular
+Applications, pages 188–197. ACM, 2018.
+18. A. Löcken, C. Golling, and A. Riener. How should automated
+vehicles interact with pedestrians? A comparative analysis of
+interaction concepts in virtual reality. In Proceedings – 11th
+International ACM Conference on Automotive User Interfaces
+and Interactive Vehicular Applications, AutomotiveUI 2019,
+pages 262–274, 2019.
+19. D. Moore, R. Currano, M. Shanks, and D. Sirkin. Defense
+Against the Dark Cars: Design Principles for Griefing of
+Autonomous Vehicles. In Proceedings of the 2020 ACM/IEEE
+International Conference on Human-Robot Interaction,
+pages 201–209, Association for Computing Machinery (ACM),
+New York, NY, USA, Mar 2020.
+20. D. Moore, R. Currano, G. E. Strack, and D. Sirkin. The Case for
+Implicit External Human-Machine Interfaces for Autonomous
+Vehicles. In 11th International Conference on Automotive
+User Interfaces and Interactive Vehicular Applications
+(AutomotiveUI’19), pages 295–307, 2019.
+21. S. Nordhoff, J. De Winter, M. Kyriakidis, B. Van Arem, and R.
+Happee. Acceptance of Driverless Vehicles: Results from a
+Large Cross-National Questionnaire Study. Journal of Advanced
+Transportation, 2018 (April), 2018.
+22. S. Reig, S. Norman, C. G. Morales, S. Das, A. Steinfeld, and
+J. Forlizzi. A Field Study of Pedestrians and Autonomous
+Vehicles. In Proceedings of the 10th International Conference
+on Automotive User Interfaces and Interactive Vehicular
+Applications – AutomotiveUI’18, pages 198–209, Toronto,
+Canada, 2018.
+23. D. Rothenbücher, J. Li, D. Sirkin, B. Mok, and W. Ju. Ghost
+driver: A field study investigating the interaction between
+pedestrians and driverless vehicles. In 25th IEEE International
+Symposium on Robot and Human Interactive Communication,
+RO-MAN 2016, pages 795–802, 2016.
+24. L. Sorokin, N. Kauffmann, and R. Chadowitz. A change of
+perspective: Designing the automated vehicle as a new social
+actor in a public space. In CHI’19 Extended AbstractsCHI
+Conference on Human Factors in Computing Systems Extended
+Abstracts (CHI’19 Extended Abstracts), 2019.
+25. F. Walker, D. Dey, M. Martens, B. Pfleging, B. Eggen, and J.
+Terken. Feeling-of-Safety Slider : A Platform for Measuring
+Pedestrian Comfort in Field Interactions with Vehicles. In
+Proceedings of the 2019 CHI Conference on Human Factors in
+Computing Systems, pages 1–6, Glasgow, UK, May 2019.
+Bionotes
+Debargha Dey
+Eindhoven University of Technology,
+Groene Loper 3, 5612 AE Eindhoven, The
+Netherlands
+d.dey@tue.nl
+Debargha Dey is a doctoral candidate at Eindhoven University of
+Technology, Netherlands. He has a background in Human-Computer
+Interaction and his research interest lies in automotive human fac-
+tors. His current doctoral work focuses on Human-Machine Inter-
+faces for automated driving, and he is an active member of the CHI
+and AutomotiveUI communities.
+Dr. Andrii Matviienko
+Technical University of Darmstadt,
+Hochschulstraße 10, 64289 Darmstadt,
+Germany
+matviienko@tk.tu-darmstadt.de
+Andrii Matviienko is a postdoctoral researcher at Technical Univer-
+sity of Darmstadt, Germany. His research focus lies on the assisting
+and educational technology for children and people with special
+needs. His past research focused on ambient light displays for car
+navigation and tangible awareness systems for working colleagues.
+
+
+D. Dey et al., Role of eHMIs and AV behavior in intention communication
+|
+141
+Melanie Berger
+Eindhoven University of Technology,
+Groene Loper 3, 5612 AE Eindhoven, The
+Netherlands
+m.berger@tue.nl
+Melanie Berger is a doctoral candidate in the department of In-
+dustrial Design at Eindhoven University of Technology. She has a
+background in Human-Centered Computing and Informatics, and her
+current research interests lie in the domain of automotive human
+factors, particularly, novel in-car interaction concepts and the user
+experience of driving.
+Dr. Bastian Pfleging
+Eindhoven University of Technology,
+Groene Loper 3, 5612 AE Eindhoven, The
+Netherlands
+b.pfleging@tue.nl
+Bastian Pfleging is an Assistant Professor for Future Mobility at
+Eindhoven University of Technology, Netherlands. His research
+interests are user interfaces for future mobility, multimodal inter-
+action, workload, and non-driving-related activities. He is actively
+involved in organizing conferences like CHI, AutomotiveUI, UIST,
+MobileHCI and is steering committee member of AutomotiveUI.
+Prof. Dr. Marieke Martens
+Eindhoven University of Technology,
+Groene Loper 3, 5612 AE Eindhoven, The
+Netherlands
+m.h.martens@tue.nl
+Marieke Martens is a Professor of Automated Driving and Human
+Interaction at the Eindhoven University of Technology and Science
+Director Traffic & Transport at TNO, the Netherlands. She is an inter-
+national expert in the areas of Human Factors, traffic safety, vehicle
+automation and behaviour, and has been working in this field, na-
+tionally and internationally for 24 years.
+Dr. Jacques Terken
+Eindhoven University of Technology,
+Groene Loper 3, 5612 AE Eindhoven, The
+Netherlands
+j.m.b.terken@tue.nl
+Jacques Terken is an emeritus associate professor at Eindhoven Uni-
+versity of Technology, the Netherlands. He has worked in the area
+of speech technology and human-technology interaction, and his
+current research focuses on automotive human factors. His research
+interests include the user experience for autonomous vehicles, and
+methods for evaluating design concepts in the early phases of the
+design process. He is the (co-)author of over 160 scientific papers
+covering topics such as the use of speech in the interface, user-
+centred design and evaluation, and automotive human factors.
+
+

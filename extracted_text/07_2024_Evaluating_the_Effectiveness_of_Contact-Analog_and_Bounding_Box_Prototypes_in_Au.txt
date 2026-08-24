@@ -1,0 +1,1673 @@
+--- Page 1 ---
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=hihc20
+International Journal of Human–Computer Interaction
+ISSN: (Print) (Online) Journal homepage: www.tandfonline.com/journals/hihc20
+Evaluating the Effectiveness of Contact-Analog and
+Bounding Box Prototypes in Augmented Reality
+Head-Up Display Warning for Chinese Novice
+Drivers Under Various Collision Types and Traffic
+Density
+Wanting Chen, Liuqiucheng Niu, Shan Liu, Shu Ma, Hongting Li & Zhen Yang
+To cite this article: Wanting Chen, Liuqiucheng Niu, Shan Liu, Shu Ma, Hongting Li & Zhen Yang
+(18 Mar 2024): Evaluating the Effectiveness of Contact-Analog and Bounding Box Prototypes
+in Augmented Reality Head-Up Display Warning for Chinese Novice Drivers Under Various
+Collision Types and Traffic Density, International Journal of Human–Computer Interaction, DOI:
+10.1080/10447318.2024.2327197
+To link to this article:  https://doi.org/10.1080/10447318.2024.2327197
+Published online: 18 Mar 2024.
+Submit your article to this journal 
+Article views: 46
+View related articles 
+View Crossmark data
+
+--- Page 2 ---
+Evaluating the Effectiveness of Contact-Analog and Bounding Box Prototypes in 
+Augmented Reality Head-Up Display Warning for Chinese Novice Drivers Under 
+Various Collision Types and Traffic Density
+Wanting Chena, Liuqiucheng Niua, Shan Liua, Shu Maa, Hongting Lib, and Zhen Yanga 
+aDepartment of Psychology, Zhejiang Sci-Tech University, Hangzhou, China; bInstitute of Applied Psychology, College of Education, Zhejiang 
+University of Technology, Hangzhou, China 
+ABSTRACT 
+Augmented Reality Head-Up Display (AR-HUD) is a promising solution to the current warning sys­
+tem distraction problem. However, how to effectively convey warnings through AR graphics is still 
+unclear. This study examines the effectiveness of the contact-analog graphic compared to the 
+bounding box graphic in various collision types and traffic densities. Forty-eight participants 
+watched AR-augmented driving videos and were instructed to respond to critical events. Reaction 
+time, response rate, and subjective evaluations were compared for rear-end and pedestrian colli­
+sions in different traffic densities under different warnings. Both bounding box and contact-analog 
+warnings improved driving performance compared to the non-warning group. The contact-analog 
+warning performed better for rear-end collisions, while the bounding box warning had a lower 
+reaction time for pedestrian collisions, regardless of traffic density.
+KEYWORDS 
+AR-HUD; bounding box 
+warnings; contact-analog 
+warnings; world-fixed 
+graphics; conformal 
+graphics; collision type; 
+traffic density   
+1. Introduction
+Driving is a complex task (Ma et al., 2021) that requires 
+drivers to process a large amount of visual information 
+under time pressure (Rusch et al., 2013). However, drivers 
+can only process a small percentage of visual information at 
+once (Eyraud et al., 2015; Ng-Thow-Hing et al., 2013; Rusch 
+et al., 2013; Smith et al., 2021; Ward & Helton, 2022), which 
+can lead to serious road traffic collisions. To address this 
+issue, advanced driver assistance systems (ADAS) have been 
+developed to signal hazards (Brijs et al., 2022). However, 
+many of these systems lack spatial information (Kim et al., 
+2016; Kim & Gabbard, 2019) and cannot direct drivers’ 
+attention to the precise location of the hazard (Kim et al., 
+2016). Recent research suggests that these hazard warnings 
+may encourage “blind” reactions (Merenda et al., 2018). To 
+overcome this problem, augmented reality-based head-up 
+displays (AR-HUDs) are becoming a promising solution 
+(Tonnis & Klinker, 2006).
+Augmented reality (AR) is an interface metaphor that 
+allows for overlaying visual objects onto the physical world, 
+in the form of graphical augmentation (Grubert et al., 2017; 
+Kim & Hwang, 2016; Langlois & Soualmi, 2016; Ma et al., 
+2021; Ward & Helton, 2022), enabling users to interact with 
+physical and virtual objects simultaneously (Grubert et al., 
+2017; Kim et al., 2018). In-car AR applications can provide 
+visual information about driving while keeping drivers’ eyes 
+on the road (Calvi et al., 2020; Gabbard et al., 2014; Ng- 
+Thow-Hing et al., 2013; Tonnis & Klinker, 2006). AR-HUDs 
+offer the benefit of providing spatiotemporal information on 
+imminent hazards (Gabbard et al., 2014; Ng-Thow-Hing 
+et al., 2013; Schwarz & Fastenmeier, 2018). Previous studies 
+have shown that AR-HUDs effectively signal hazards (Kim 
+& Hwang, 2016), reduce drivers’ inattentional blindness 
+(Wang et al., 2021), improve intuitive cognition, and 
+decrease driver distraction (Park et al., 2016).
+The design of graphical elements in AR-HUDs greatly 
+affects their effectiveness in delivering warnings (Jing et al., 
+2022; Kim & Gabbard, 2019). The saliency of the AR 
+graphic impacts attention and driving behavior (Chen et al., 
+2023; Eyraud et al., 2015; Jing et al., 2022). Poor design can 
+lead 
+to 
+suboptimal 
+performance 
+and 
+reduced 
+trust 
+(Ariansyah et al., 2022; Ng-Thow-Hing et al., 2013). It is 
+crucial to find a balance in designing AR graphics that cap­
+ture attention without overwhelming or distracting drivers 
+(Eyraud et al., 2015; Park et al., 2016). Thorough investiga­
+tions are necessary to understand the complexities of AR 
+graphics before the widespread implementation of AR- 
+HUDs in vehicles (Faria et al., 2020).
+1.1. Conceptual designs of AR interfaces
+Two conceptual designs of AR graphics exist in the context 
+of AR technology: screen- fixed graphics, which are fixed to 
+specific areas within the windshield, and world-fixed graph­
+ics (or conformal graphics), which are directly superimposed 
+on real-world objects to blend seamlessly (Gabbard et al., 
+2014; Kim et al., 2016, 2018; Riegler et al., 2021; Smith 
+et al., 2021). Typically, the screen-fixed graphic can be used 
+CONTACT Zhen Yang 
+yangzhen@zstu.edu.cn 
+Department of Psychology, Zhejiang Sci-Tech University, Qiantang District, Hangzhou, Zhejiang, China 
+ß 2024 Taylor & Francis Group, LLC
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+https://doi.org/10.1080/10447318.2024.2327197
+
+--- Page 3 ---
+to display important driving information that is not directly 
+related to real objects, such as vehicle speed, fuel level, and 
+engine temperature, while the world-fixed graphics are suit­
+able for presenting information regarding navigation and 
+imminent hazard warnings (Gabbard et al., 2014) as they 
+provide a natural way to convey spatiotemporal information 
+aligned with the moving objects (Ng-Thow-Hing et al., 
+2013).
+There are some AR interface studies focusing on world- 
+fixed graphics (conformal graphics). In general, two major 
+prototypes are involved in the study of world-fixed graphics: 
+namely, virtual shadows (Jing et al., 2022; Kim et al., 2016, 
+2018) and contact-analog graphics (Faria et al., 2020; 
+Medenica et al., 2011; Schewe & Vollrath, 2021; Smith et al., 
+2021) (see Figure 1). Virtual shadow is a dome-shaped con­
+formal virtual object, which is commonly used in the field 
+of warning (Kim et al., 2018). Jing et al. (2022) investigated 
+the effect of visual shadows on autonomous vehicle takeover 
+efficiency and drivers’ eye movement characteristics. The 
+result demonstrated that the virtual shadow AR-HUD inter­
+face could effectively reduce the driver’s visual distraction, 
+and improve the efficiency of obtaining visual information. 
+Kim et al. (2016) also used a visual shadow to augment the 
+crossing pedestrian and the evaluation result showed that 
+the visual shadow warning was outperformed in all aspects. 
+Meanwhile, contact-analog graphics, encompassing the vis­
+ual images within the same general field of view as the crit­
+ical objects (Wickens & Long, 1994), are commonly used as 
+navigation cues. For example, Medenica et al. (2011) 
+assessed the effectiveness of AR, street view, and traditional 
+maps on personal navigation devices (PNDs). In the case of 
+the AR PND, they used a contact-analog graphic overlaid on 
+the route to provide directional indications. The results 
+revealed that the contact-analog graphic had a positive 
+impact on driving. Additionally, Faria et al. (2020) employed 
+the contact-analog graphic to enhance navigation landmarks 
+and assessed drivers’ glance behavior. The experiment result 
+revealed that the contact-analog graphic condition was 
+linked to prolonged glances. However, the aforementioned 
+studies on the contact- analog graphic focused on naviga­
+tion, and a dearth of research exists regarding the contact- 
+analog graphic in hazard warnings.
+Previous studies suggested that the potential of AR- 
+HUDs to enhance attention toward cued elements while 
+minimizing the impact on attentional resources could be 
+attributed to the conformal nature of the AR graphic (Kim 
+& Gabbard, 2019; Rusch et al., 2013). We hypothesize that 
+contact-analog graphics, similar to visual shadows, have the 
+potential to serve as effective warnings due to their con­
+formal characteristics. According to the proximity compati­
+bility interface-design principle, it is recommended that 
+driving task-related elements be processed simultaneously 
+(Peereboom et al., 2023). Visual shadows are commonly 
+used to integrate hazards and warnings for the purpose of 
+alerting drivers. However, in complex traffic scenarios, visual 
+shadow warnings may inadvertently include other irrelevant 
+objects, thereby requiring drivers to spend extra time to 
+identify the critical hazards. In contrast, contact- analog 
+graphics offer the advantage of connecting the visual warn­
+ing with the critical object by overlaying color on it without 
+covering other objects. Furthermore, the contact-analog 
+graphics, serving as analogs to the corresponding elements 
+in the distant domain (Chen et al., 2023; Naish, 1964; Rusch 
+et al., 2013), can clearly indicate the type of hazard, even 
+when the hazard is occluded by other objects. However, it is 
+also important to note that the contact-analog graphic com­
+pletely covers the entire object, which might induce visual 
+illusions due to color-induced masking and overlapping 
+(Schewe & Vollrath, 2021). An excessive presence of color 
+in contact-analog graphics is likely to occlude real-world 
+Figure 1. Examples of visual shadow graphics and traditional contact-analog graphics. Note: (a) Example of the virtual shadow in action. The virtual shadows move 
+with the movement of the pedestrian. (b) Examples of contact-analog displaying concepts that were used in navigation. Guidance advice: the graphic overlaid on 
+the route to provide directional indications. Road sign visualization: the graphic overlaid on road signs to augment sign information.
+2
+W. CHEN ET AL.
+
+--- Page 4 ---
+information (Merenda et al., 2018). Therefore, it remains to 
+be explored whether contact-analog graphics can be equally 
+applicable to the field of warnings.
+Currently, the prevailing approach for delivering warn­
+ings in AR-HUDs is through the use of bounding boxes to 
+highlight potential hazards. The bounding box is a technol­
+ogy-driven interface design since it is a common way for 
+machine-vision algorithms to convey discovered dangers 
+(Kim & Gabbard, 2019). It could provide accurate location 
+clues of objects due to their salient geometric characteristic 
+and not occlude the object. Previous studies on AR warnings 
+have predominantly employed bounding boxes to augment 
+representations of pedestrians or vehicles (e.g., Chen et al., 
+2023; Kim & Gabbard, 2019; Wang et al., 2021; Wu et al., 
+2022). However, it is worth noting that the bounding box 
+may compromise the ability to predict hazard movements 
+and distract drivers from other critical environmental ele­
+ments as they may induce attention narrowing (Kim et al., 
+2016; Kim & Gabbard, 2019). Besides, the bounding box 
+warning can inevitably encompass unrelated objects and 
+may compromise the warning effect.
+Additionally, there may be subtle differences in the 
+depth of processing required for the two AR warnings. 
+Previous studies have shown that information processing 
+is affected by variations in graphic shape. For example, 
+processing complex graphics requires more time and cog­
+nitive effort than processing simple shapes (Dai et al., 
+2021). As a result, one of the key distinctions between 
+contact-analog warnings and bounding box warnings is 
+that contact-analog warnings outline the contour of the 
+impending hazard and include more complex shape pre­
+sentations. This might necessitate the driver to allocate 
+extra time to identify and connect the type of hazard rep­
+resented by the contour. Limited research has investigated 
+the effects of graphics in the context of differences in the 
+level of perceptual processing of graphics. The potential 
+impact of this processing difference justifies further 
+exploration. Therefore, it is necessary to directly compare 
+the effectiveness of the contact-analog and bounding box 
+prototypes in warning scenarios.
+1.2. Environment factors and AR graphics
+AR-HUD warnings can be applied to two primary driving 
+collision scenarios: rear-end collisions and pedestrian colli­
+sions. The rear-end collision is one of the most frequent 
+types of crashes (Muhrer & Vollrath, 2011; Yue et al., 2021). 
+It accounted for 29% of all crashes in the United States (Yue 
+et al., 2021). Furthermore, vulnerable road users, such as 
+pedestrians, are more likely to be involved in crashes and 
+experience more severe consequences (Schubert et al., 2023; 
+Zhu et al., 2023). Several previous studies have examined 
+the impact of AR warnings in various scenarios, including 
+pedestrian crossings (e.g., Calvi et al., 2020; Rusch et al., 
+2013), crossing vehicles (e.g., Schwarz & Fastenmeier, 2018), 
+emergency U-turns by the vehicle in front, and leading 
+vehicles braking (e.g., Jing et al., 2022). However, it is 
+important to note that these studies often did not analyze 
+the effects of AR warnings in these specific scenarios in 
+depth, nor did they consider the potential influence of scen­
+ario characteristics on the effectiveness of the AR graphic 
+warning.
+Moreover, it is crucial to consider various traffic-density 
+conditions when designing AR-HUD warning interfaces. 
+Previous research indicates that increasing the number of 
+items in the central vision results in extended reaction times 
+and reduced accuracy in detection tasks (Lee et al., 2023). 
+This implies that a complex environment can induce visual 
+clutter, thereby impacting object detection (Li et al., 2019; 
+Rosenholtz et al., 2007). In driving scenarios characterized 
+by high traffic density, which can be perceived as a form of 
+dynamic “situational clutter” (Edquist & Johnston, 2008; 
+Trick et al., 2010), selective attention may be compromised 
+(Edquist & Johnston, 2008), rendering it more challenging 
+to perceive hazards and warnings (Trick et al., 2010). We 
+hypothesize that specific AR warning graphics may be suffi­
+ciently noticeable in low- traffic-density conditions but may 
+exhibit reduced effectiveness in high-traffic-density condi­
+tions. Additionally, the attention-grabbing nature of AR 
+graphics (Chen et al., 2023; Kim & Gabbard, 2019) could 
+contribute to additional visual clutter, especially caused by 
+object occlusion (Beck et al., 2010). The question of whether 
+providing additional AR warnings in high-traffic-density 
+conditions would enhance hazard detection or exacerbate 
+visual clutter remains unresolved. It is imperative to conduct 
+further investigation into these graphical effects across vary­
+ing traffic-density conditions.
+Consequently, this study aims to investigate the effects of 
+AR warnings on rear- end collisions and pedestrian colli­
+sions under varying traffic densities, to further examine their 
+applicability in diverse driving scenarios.
+1.3. The objective of the study
+Despite the potential of contact-analog graphics in hazard 
+warning, there is a lack of extensive research on their effect­
+iveness in this context, and few studies have directly com­
+pared them to bounding box graphics. Furthermore, few 
+research has systematically explored the potential impact of 
+differences in cognitive processing levels on the effectiveness 
+of warnings for the two types of graphics. Therefore, the 
+objective of this study was to examine the strengths and lim­
+itations of these two prototypes of AR warnings, specifically 
+considering collision type and traffic density as factors 
+within driving scenarios.
+This study also focuses on the effects of AR warnings on 
+novice drivers, who are generally more prone to collisions 
+(Pitt et al., 2021). Previous research suggests that novice 
+drivers tend to devote excessive attention to vehicle handling 
+routines, resulting in error-prone search patterns (Twisk, 
+1995). Consequently, they may struggle to identify road haz­
+ards in complex driving environments. AR technology offers 
+a promising solution by providing visual cues that guide the 
+attention of novice drivers toward the most critical hazards 
+(Rane et al., 2016). However, it is important to consider that 
+novice drivers lack experience, which may potentially affect 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3
+
+--- Page 5 ---
+their perception of visual warning graphics (Zhao et al., 
+2023). Thus, there is a need to investigate which AR heads- 
+up display (HUD) interfaces can effectively enhance the risk 
+perception of novice drivers.
+Furthermore, previous experiments have mainly been 
+conducted using driving simulators without a genuine AR- 
+HUD device, either relying on flat projections to display vid­
+eos (e.g., Eyraud et al., 2015; Hwang et al., 2016; Hwang & 
+Kim, 2016; Kim & Gabbard, 2019; Ng-Thow-Hing et al., 
+2013) or using virtual reality (VR) (e.g., Abdi et al., 2017; 
+Ma et al., 2021; Merenda et al., 2019). It should be noted 
+that, when using a genuine AR-HUD device, the AR graphic 
+is projected directly onto the windshield, causing our eyes to 
+converge on points beyond the windshield, which can result 
+in a distracting double image of the AR graphic (Ng-Thow- 
+Hing et al., 2013). Therefore, the varying distances between 
+the AR graphic and the real object can cause a conflict 
+between vergence and accommodation, impacting depth per­
+ception (Adams et al., 2022; Gabbard et al., 2014; Navarro 
+et al., 2017; Ng-Thow-Hing et al., 2013; Werneke & 
+Vollrath, 2013; Winkler et al., 2016). Merely relying on flat 
+projection or VR could introduce a confounding factor in 
+assessing the influence of the AR graphic.
+Above all, the main objective of this study is to assess the 
+advantages and drawbacks of various AR warnings for nov­
+ice drivers in a genuine AR-HUD context across different 
+driving scenarios.
+2. Methods
+2.1. Participants
+Due to limitations in Gpower’s capability to handle a 
+three-factor mixed design, a priori power analysis was per­
+formed using MorePower 6 (Campbell & Thompson, 2012) 
+with a significance level of 0.05, power of 0.8, and effect size 
+of 0.2. The results indicated that the total sample size should 
+exceed 42 to achieve the desired power. The study recruited 
+a convenience sample of 48 gender-balanced participants 
+from Zhejiang Sci-Tech University in Hangzhou, China. 
+Participants ages ranged from 19 to 26 years, with a mean 
+age of 22 years (M ¼ 22, SD ¼ 2.0). Additionally, all partici­
+pants held a valid Chinese driver’s license, with an average 
+driving experience of 1526 km and 2.7 years. The study 
+focused on novice drivers, and none of the participants had 
+any prior experience with the AR-HUD. All participants con­
+firmed having a normal or corrected- to-normal vision, pro­
+vided written informed consent in accordance with the 
+approved research protocol of the Institutional Review Board 
+at the Department of Psychology, Zhejiang Sci-Tech 
+University, and received compensation for their participation.
+2.2. Experimental design
+A three-factor mixed design was employed to investigate the 
+impact of AR warnings on driving performance and usabil­
+ity. The design included AR warning type (bounding box 
+warnings vs. contact-analog warnings vs. non-warning) as a 
+between-subject variable, traffic density (high traffic density 
+vs. low traffic density), and collision types (rear-end collision 
+vs. pedestrian collision) as within-subject variables.
+We adopted the definition of traffic density provided by 
+Trick et al. (2010), where high traffic density was defined as 
+one vehicle per 150 m, and low traffic density was defined as 
+one vehicle per 1500 m.
+Dependent 
+variables 
+for 
+comprehensive 
+assessment 
+included behavior performance indicators, such as reaction 
+time and response rate. Additionally, to evaluate user experi­
+ence related to the two tested AR graphics, participants 
+completed the User Experience Questionnaire (UEQ) 
+(Laugwitz et al., 2008) after the experiment.
+2.3. Experimental equipment
+The experimental equipment setup closely resembles the one 
+used in the study by Hwang et al. (2016). The experiment 
+involved several equipment components: a 180- inch screen, 
+a beam projector (CB-935W, Epson, JPN) with 3700 lumi­
+nance, a keyboard, a computer synchronizer, and two com­
+puters. One computer was used for collecting driver 
+response data, while the other computer projected the back­
+ground image. In the optical see-through augmented reality 
+display 
+condition, 
+the 
+AR-HUD 
+device 
+(DGG01, 
+Zhangjiagang Qidian Photoelectric Technology Co., Ltd., 
+CN) was used to play the videos. The AR-HUD is developed 
+with dual free-form reflective optics. Its corresponding 
+Digital Micromirror Device (DMD) resolution is 864  480, 
+the brightness is 12,000 nit, and the refresh rate is 60 Hz. 
+Presenting the physical background at a closer distance 
+beyond AR virtual images can induce the convergence adap­
+tation conflict (Huang & Menozzi, 2022). We placed an 
+LED screen projecting a picture of mountains at a vertical 
+distance of 3 m from the viewers to imitate the conver­
+gence adaptation conflict in AR application. The experiment 
+scenarios were built using a driving simulator, which 
+included driving simulator software (STISIMDRIVE M100K, 
+Systems Technology, Inc., Hawthorne, CA, USA), and an 
+operating system (Logitech MOMO, Newark, CA, USA). 
+The experimental setup is illustrated in Figure 2.
+2.4. Materials
+Due to technical limitations, it was not possible to directly 
+augment target objects in the driving simulator. Therefore, 
+driving videos generated by a medium-fidelity driving simu­
+lator were used in the study.
+The experiment consisted of two types of traffic condi­
+tions: high traffic density and low traffic density. There was 
+a total of 24 videos, with each experimental video having a 
+playback time of 1.5 min. Both traffic conditions consisted 
+of the same types of latent threats, such as rear-end colli­
+sions with preceding vehicles and collisions with pedestrians. 
+Previous research indicated that drivers had longer reaction 
+times to pedestrians appearing on the left side compared to 
+the right side (Powelleit & Vollrath, 2019). The direction of 
+4
+W. CHEN ET AL.
+
+--- Page 6 ---
+pedestrian crossings was balanced, and the order of left and 
+right crossings was randomized to reduce potential bias.
+Furthermore, color can significantly contribute to the 
+perceived meaning and visibility of graphics (Kim et al., 
+2016) and previous research demonstrated that color influ­
+ences hazard perception (Ng & Chan, 2018). Utilizing 
+appropriate color coding could enhance performance (Ng & 
+Chan, 2018). In traditional user interface design (UID), cau­
+tion indications are typically represented in yellow, while 
+warning indications are represented in red (Friedrich & 
+Vollrath, 2022). However, the presentation of red and yellow 
+is affected by hue shifts in AR projections. For example, 
+some argued that the color yellow is more prominent in AR 
+(Merenda et al., 2016), while the color red is less prominent 
+in AR (Gabbard et al., 2005). Therefore, to avoid the inter­
+ference of hue shift in AR, each participant was shown red 
+and yellow versions of the AR warning. Both colors were in 
+RGB space. Red was [255, 0, 0], and yellow was [255, 
+255, 0].
+The experiment divided the 24 videos into four blocks 
+based on the combination of traffic density and warning 
+color: high traffic density with a red warning, high traffic 
+density with a yellow warning, low traffic density with a red 
+warning, and low traffic density with a yellow warning. Each 
+video served as a trial, with six trials in each block. The pres­
+entation order of the four blocks was counterbalanced using 
+Latin squares. Since the videos were prerecorded, participants 
+were unable to control the vehicle. To closely simulate real 
+driving conditions, the videos were interspersed with other 
+unpredictable events, such as speeding, cutoff vehicles, and 
+red-light violations. Each group of videos included 15 events, 
+including two pedestrian collisions, one rear-end collision, 
+cutoff vehicles, speeding, and red-light violations.
+Two types of AR warnings were employed, namely, the 
+bounding box warning and the contact-analog warning, to 
+alert drivers about unforeseen events. The contact- analog 
+warning used in this study was integrated into the virtual 
+environment, where its shape dynamically changed in 
+response to the movement of the augmented object (Smith 
+et al., 2021), whereas the shape of the bounding box warning 
+remained unchanged. Providing a warning with a duration 
+of 3.0–4.0 s before a possible collision may be appropriate 
+(Dr€uke et al., 2018; Ma et al., 2021; Zhang et al., 2015) and 
+may significantly reduce driving speed (Hajiseyedjavadi et al., 
+2018). In this experiment, a pre-recorded video was utilized, 
+maintaining a constant speed of 54 km/h for the ego-vehicle. 
+Taking into account the driving speed in the video, we pre- 
+determined the parameters (such as distance and speed) of 
+the leading vehicle and pedestrian in each scenario. This 
+ensured that the AR warning, lasting for 3.0 s, could be pre­
+sented until the collision occurred in the various collision 
+scenarios. Figures 3 and 4 depict AR warnings in augmented 
+conditions.
+2.5. Procedure and tasks
+Informed consent was obtained from the participants before 
+their first visit. Subsequently, participants completed a 
+demographics questionnaire. They were then comfortably 
+seated in front of the AR-HUD. Participants were instructed 
+to look through the device and direct their gaze toward the 
+virtual panel in front of them. The experimenter familiarized 
+the participants with the AR warning.
+The participants were divided into three groups for the 
+experiment: a contact- analog warning group, a bounding 
+box warning group, and a control group without any warn­
+ings serving as the baseline. All participants in the three 
+groups had the same physical settings except that the pres­
+entation of the warning differed. Although we did not pro­
+vide the control group with the AR warning, the 
+participants in this group still watched the video through 
+the AR-HUD to avoid possible interference caused by the 
+difference in physical settings.
+Participants were instructed to imagine themselves as the 
+driver while watching the video. In the videos, the ego 
+vehicle is traveling on the road at a constant speed of 
+54 km/h. In each group of videos, the vehicle passes through 
+road sections, such as intersections, curves, uphill grades, 
+and straight roads. We added these road sections to increase 
+the realism of the scene as much as possible. During the 
+experiment, we asked the participant to press a button 
+promptly upon observing unpredictable events, including 
+Figure 2. Demonstration graphs for experiment laboratory.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+5
+
+--- Page 7 ---
+vehicle speeding, vehicle running a red light, vehicle lane 
+changing, preceding vehicle braking (rear-end collisions), and 
+a pedestrian crossing the road in front of the ego vehicle 
+(pedestrian collisions). Participants were required to respond 
+to all events to prevent anticipation of pedestrian crossings 
+and vehicle braking (Wang et al., 2021). Additionally, the first 
+three events were designed to enhance participants’ focus on 
+the experiment. Upon completion of all blocks, participants 
+filled out a User Experience Questionnaire (UEQ). Figure 5
+illustrates the detailed procedure.
+3. Results
+The experimental data were analyzed using IBM SPSS 
+Statistics 26. A significance level of 0.05 was used for all 
+statistical analyses. Generalized estimating equations (GEE), 
+based on the work of Nelder and Wedderburn (1972) on 
+generalized linear models, were used for the statistical analy­
+ses. GEE is a versatile statistical approach used for analyzing 
+longitudinal and clustered data by fitting a marginal model. 
+Given the repeated measures nature of this experiment data, 
+Figure 3. The bounding box warning examined in the driving simulator study. Note: We divided the videos into four groups based on traffic density and warning 
+colors. The videos in group (A) have a high traffic density, with the red warning. The videos in group (B) have a high traffic density, with the yellow waning. The vid­
+eos in group (C) have a low traffic density, with the red warning. The videos in group (D) have a low traffic density, with the yellow warning. Each group of videos 
+includes three types of critical events: (a) rear-end collision, (b) right-side pedestrian collision, and (c) left-side pedestrian collision, and left and right-side pedestrian 
+collisions occur equally.
+Figure 4. The contact-analog warning examined in the driving simulator study. Note: The videos were categorized as Figure 2.
+6
+W. CHEN ET AL.
+
+--- Page 8 ---
+there may be a correlation between the data. Liang and 
+Zeger (1986) in their study suggested with repeated observa­
+tions, the correlation among values for a given participant 
+must be taken into account, and the estimating equation 
+might be suitable to analyze the data. In addition, GEE is 
+well-suited for situations involving missing data and small 
+sample sizes. Due to participants not responding to certain 
+unpredictable events, the behavioral performance data col­
+lected in this study contained missing values. GEE was 
+employed to account for these missing data points. Last but 
+not least, we examined the distribution of the reaction time 
+and the response rate and found that the data in this experi­
+ment were skewed. GEE relaxes the data distribution 
+requirements and thus is more suitable for analyzing the 
+data in this case.
+In sum, behavioral performance data were analyzed using 
+GEE, with AR warning types, traffic density, and collision 
+types serving as the independent variables. The effects of 
+each predictor and their interactions were evaluated by 
+examining the model effects, parameter estimates, and esti­
+mated marginal means. Estimated marginal means were uti­
+lized to compare the effects of AR warnings across different 
+conditions, with the Bonferroni correction applied in the 
+GEE post-hoc test.
+3.1. Reaction time
+The collision type had a significant main effect on reaction 
+time [Wald v2 (1) ¼ 124.228, p < 0.001]. The reaction time 
+was significantly shorter in rear-end collisions compared to 
+pedestrian collisions. The AR warning type had a significant 
+main effect [Wald v2 (2) ¼ 67.034, p < 0.001], whereas traffic 
+density [Wald v2 (1) ¼ 0.073, p ¼ 0.787] did not have a sig­
+nificant effect. The results indicated that both the AR warn­
+ings could effectively decrease the reaction time but the 
+contact-analog warning was linked to a longer reaction time 
+compared to the bounding box warning (p ¼ 0.012).
+There was a significant interaction between AR warning 
+types and collision types [Wald v2 (5)¼ 391.539, p< 0.001]. In 
+the pedestrian collision condition, GEE post-hoc tests revealed 
+that both AR warning groups were accompanied by shorter 
+reaction times when compared to non-warning groups (the 
+contact-analog warning: p< 0.001; the bounding box warning: 
+p< 0.001), and the reaction time was longer under the con­
+tact-analog warning compared to the bounding box warning 
+(p< 0.001). Moreover, in the rear-end collision condition, GEE 
+post-hoc tests revealed that both AR warning groups could 
+effectively reduce the reaction time compared to the non-warn­
+ing group (the contact-analog warning: p< 0.001; the bound­
+ing box warning: p< 0.001), but no significant difference 
+between the bounding box warning and the contact-analog 
+warning (p¼ 0.293). These results suggested that the different 
+impact of the AR warning was primarily evident in the percep­
+tion of pedestrians.
+There was a significant interaction between collision types 
+and traffic density [Wald v2 (3) ¼ 156.085, p < 0.001]. In the 
+rear-end collision condition, GEE post-hoc tests indicated 
+that reaction time was longer under the low traffic density 
+compared to the high traffic density (p ¼ 0.011), whereas no 
+significant difference was found between the traffic density 
+in the pedestrian collision condition (p ¼ 0.055).
+There was a significant interaction observed between traf­
+fic density and AR warning types [Wald v2 (5) ¼ 91.171, 
+p < 0.001]. GEE post-hoc tests revealed that both AR warn­
+ing groups were significantly better than the non-warning 
+group in the high- traffic density condition (the contact-ana­
+log 
+warning: 
+p < 0.001; 
+the 
+bounding 
+box 
+warning: 
+p < 0.001) and in the low-traffic density condition (the con­
+tact-analog warning: p < 0.001; the bounding box warning: 
+p < 0.001). However, it is worth noting that the bounding 
+box warning was related to a shorter reaction time than the 
+contact-analog warning (in the high traffic density condi­
+tion: p ¼ 0.019; in the low traffic density condition: 
+p ¼ 0.015).
+Significant interactions were observed for the three-way 
+interaction effect. Our findings revealed a significant inter­
+action between collision types, traffic density, and AR warn­
+ing types [Wald v2 (11) ¼ 445.855, p < 0.001]. The effect of 
+the AR warning groups was better than the non-warning 
+group in different situations. However, the effect of the two 
+AR warning groups varied in different conditions. In the 
+pedestrian collision condition, the reaction time was lower 
+when using the bounding box warning compared to the 
+contact-analog warning for both high (p < 0.001) and low 
+(p ¼ 0.003) traffic densities. However, in the rear-end colli­
+sion condition, no significant difference between the bound­
+ing box warning and the contact-analog warning in both 
+high (p ¼ 0.613) and low (p ¼ 0.124) traffic density condi­
+tions. The results indicated that it was appropriate to con­
+sider the use of different warning graphics depending on 
+Figure 5. Stage of procedure.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+7
+
+--- Page 9 ---
+the collision types. The detailed results can be found in 
+Figure 6. Table 1 summarizes the descriptive result under 
+different conditions.
+3.2. Response rate
+As for response rate, there was no significant effects were 
+observed for collision types [Wald v2 (1) ¼ 1.345, p ¼ 0.246], 
+traffic density [Wald v2 (1) ¼ 0.024, p ¼ 0.876], and AR 
+warning types [Wald v2 (2) ¼ 0.733 p ¼ 0.693].
+Similarly, no significant interactions were found in the 
+results for the response rate. That is, collision type and traf­
+fic density [Wald v2 (3) ¼ 5.680, p ¼ 0.128], collision type 
+and AR warnings [Wald v2 (5) ¼ 4. 713, p ¼ 0.452], traffic 
+density and AR warning type [Wald v2 (5) ¼ 0.921, 
+p ¼ 0.969], and collision type, traffic density, and AR warn­
+ing type [Wald v2 (11) ¼ 9.159, p ¼ 0.607] did not have an 
+interaction. We suspected that this result might be related to 
+the fact that unexpected hazards (i.e., leading vehicles and 
+crossing pedestrians) end up very close to directly in front 
+of the driver, so drivers were able to respond to unexpected 
+hazards in most cases. Therefore, the response rate did not 
+reach significant differences among the three groups in 
+different situations. We further investigated the above results 
+by examining the GEE post-hoc results. We found that while 
+not reaching a significant difference, the response rate of the 
+non-warning group was overall lower than that of the warn­
+ing groups. Moreover, the bounding box warning group had 
+a lower response rate than the contact-analog warning group 
+in rear- end collisions, this suggested that the contact-analog 
+warning group might have a slight advantage in rear-end 
+collisions. Table 2 presents the GEE result of AR warning 
+Figure 6. Effect of AR warning types and traffic density on reaction time under rear-end collision (A) and pedestrian collision (B).
+Table 1. Corresponding mean (SD) of reaction time and response rate of AR warnings under different driving conditions.
+Dependent variable
+AR warning type
+Rear-end collisions
+Pedestrian collisions
+High traffic density
+Low traffic density
+High traffic density
+Low traffic density
+Reaction time
+CA
+686.66 (284.27)
+804.28 (350.58)
+1507.70 (435.57)
+1354.52 (433.88)
+BB
+835.28 (426.96)
+824.51 (285.61)
+1062.83 (392.85)
+1051.32 (347.90)
+Non
+1188.09 (456.07)
+1341.51 (501.15)
+2131.44 (296.16)
+1976.30 (370.91)
+Response rate
+CA
+96.87% (0.176)
+96.88% (0.176)
+87.50% (0.336)
+96.87% (0.176)
+BB
+96.87% (0.176)
+87.50% (0.336)
+93.75% (0.245)
+96.87% (0.176)
+Non
+96.88% (0.176)
+93.75% (0.245)
+81.25% (0.396)
+90.62% (0.296)
+CA: the contact-analog warning; BB: the bounding box warning; Non: non-warning.
+Table 2. GEE results for reaction time and response rate under different 
+conditions.
+Reaction time
+Response rate
+Main effects
+Wald v2
+p
+Wald v2
+p
+Collision type
+124.228
+<0.001
+1.345
+0.246
+Traffic density
+.0073
+0.787
+.024
+0.876
+AR warning type
+67.034
+<0.001
+.733
+0.693
+Two-factor interactions
+Collision typeTraffic density
+156.085
+<0.001
+5.680
+0.128
+Collision typeAR warning type
+391.539
+<0.001
+4.713
+0.452
+Traffic densityAR warning type
+91.171
+<0.001
+.921
+0.969
+Three-factor interactions
+Collision typeTraffic densityAR  
+warning type
+445.855
+<0.001
+9.159
+0.607
+Note. p < 0.001.
+8
+W. CHEN ET AL.
+
+--- Page 10 ---
+types, collision types, and traffic density on the reaction 
+time and response rate.
+3.3. UEQ score
+The UEQ provides scores on six different scales: attractive­
+ness, perspicuity, efficiency, dependability, novelty, and stimu­
+lation - each of them was examined separately. Additionally, 
+five benchmark levels (excellent, good, above average, below 
+average, and awful) can be utilized to further categorize 
+scores, facilitating comparisons across a broader range of 
+UEQ ratings (Plewan et al., 2021; Schrepp et al., 2017).
+The six subscales of the UEQ offer a more comprehensive 
+evaluation of the two AR warning types. The bounding box 
+warning received significantly higher ratings on the perspicu­
+ity scale (p ¼ 0.003) and the dependability scale (p ¼ 0.026). 
+For perspicuity and dependability scales, the bounding box 
+warning was rated as excellent, while the contact-analog 
+warning was rated as below average for both. Although there 
+were no statistically significant differences on the scales of 
+attractiveness (p ¼ 0.14), efficiency (p ¼ 0.22), and stimulation 
+(p ¼ 0.39), the bounding box warning was still correlated with 
+higher scores. Additionally, it is noteworthy that the bound­
+ing box warning received a lower score than the contact- 
+analog warning in terms of novelty (p ¼ 0.67). Overall, the 
+bounding box warning was rated as below average in stimula­
+tion only, whereas the contact-analog warning received 
+below-average ratings in the categories of attractiveness, per­
+spicuity, dependability, and stimulation. Table 3 presents the 
+detailed results of the UEQ scores.
+4. Discussion
+The results of this study demonstrate that the two AR warn­
+ings have varying effects in different collision types. For 
+instance, in the pedestrian collision scenario, the bounding 
+box warning proves to be more effective, whereas, in the 
+rear-end collision scenario, the contact-analog warning 
+appears to hold a slight advantage. In the subsequent sec­
+tion, we will initially analyze the effects of the two AR warn­
+ings in different collision types to summarize the value of 
+their application in the design of future AR-HUD warning 
+interfaces. Subsequently, considering the disparities in the 
+level of perceptual processing between the two AR warnings, 
+we will further investigate the impact of the level of graph­
+ical processing on the warning from a cognitive perspective. 
+We aim for the analysis from a cognitive processing 
+perspective to broaden future research directions in the field 
+of warning.
+4.1. Consideration of AR warnings on AR-HUD warning 
+interface design
+The findings reveal that all AR warnings exhibited a signifi­
+cant enhancement in task performance in terms of reaction 
+time when compared to the non-warning group, for both 
+high and low-traffic density conditions. Notably, the bound­
+ing box warning exhibited a significantly faster reaction time 
+in comparison to the contact-analog warning. This result 
+partially confirmed that both AR warning types were effect­
+ive in the AR-HUD warning interface, but the contact- 
+analog warning might not be as effective as we expected.
+Considering the collision types, a distinct disparity in the 
+impact of the two AR warnings was observed. The driver’s 
+reaction time did not significantly differ between the con­
+tact-analog warning and the bounding box warning in 
+rear-end collisions. However, in pedestrian collisions, the 
+bounding box warning considerably reduced the driver’s 
+reaction time compared to the contact-analog warning. This 
+result aligns with a prior study by Jing et al. (2022). They 
+compared two AR warning interfaces in various scenarios 
+and the result similarly demonstrated that AR warnings 
+showed different effects in different scenarios. Evidently, 
+scenarios could affect hazard detection (Crundall et al., 
+2012), and lead drivers to adapt their reactions accordingly 
+(Winkler et al., 2018). As such, the scenario characteristics 
+can influence the effectiveness of AR warnings (Hwang 
+et al., 2016). This scenario effect could potentially be attrib­
+uted to the disparate positions of these two scenarios within 
+the driver’s field of view.
+In the course of driving, the leading vehicle consistently 
+remains within the driver’s central vision (longitudinal inci­
+dents), whereas unpredictable pedestrians frequently enter 
+the driver’s peripheral vision (lateral incidents). Extensive 
+research has substantiated that the fidelity of representation 
+varies across the visual field (Rosenholtz, 2011). Although 
+information in the initial forward field of vision was accur­
+ately reported, details in the peripheral field were either dis­
+regarded or not registered (Rosenholtz, 2011; Thomas & 
+Wickens, 2001). Additionally, Dozza (2013) highlighted 
+significantly longer response times exhibited by drivers dur­
+ing lateral incidents compared to longitudinal incidents. 
+Consequently, the driver excels in processing information 
+within the central vision but displays relative inefficiency in 
+processing information within the peripheral vision (Chen 
+et al., 2023).
+Hence, in the case of rear-end collisions, the provision of 
+a warning, be it a contact-analog or bounding box warning, 
+proved adequate in drawing the driver’s attention and 
+enhancing their response. However, the findings also dem­
+onstrated a greater response rate of the contact-analog warn­
+ings (albeit statistically insignificant) in rear-end collisions. 
+One potential explanation could be associated with its pre­
+cise overlay on the imminent hazards through color. 
+Previous studies involving neurological patients have 
+Table 3. The mean score, standard deviation (SD), and the comparative result 
+of UEQ for AR warnings.
+UEQ
+Contact-analog warning
+Bounding box warning
+p
+Mean
+SD
+Mean
+SD
+Attractiveness
+1.15
+1.04
+1.66
+0.86
+0.14
+Perspicuity
+1.08
+1.26
+2.25
+0.52
+0.003
+Efficiency
+1.27
+0.99
+1.67
+0.85
+0.22
+Dependability
+1.13
+0.89
+1.78
+0.68
+0.026
+Stimulation
+0.63
+0.89
+0.92
+1.02
+0.39
+Novelty
+0.94
+1.03
+0.75
+1.38
+0.67
+Note. p < 0.05, p < 0.01.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+9
+
+--- Page 11 ---
+demonstrated that color discrimination can occur without 
+conscious awareness (Breitmeyer et al., 2004; Tao et al., 
+2017; Tarenskeen et al., 2015; Ward & Helton, 2022). And 
+the size of color patches has an impact on our perception 
+(Badiane et al., 2017; Johnson, 2014). Contact-analog warn­
+ings were created by using a large color-covered area on the 
+leading car, which had a more significant presence in the 
+central vision than the bounding box warning. The blending 
+of colors between the AR warning and the physical object 
+can lead to enhanced visual connectivity, which positively 
+impacts the driver’s perception (Jing et al., 2022). Thus, the 
+contact-analog warning exhibited a higher level of effective­
+ness compared to the bounding box warning, especially 
+within the central vision, resulting in a higher response rate.
+However, in the case of pedestrian collisions, the impact 
+of AR warning types displayed a noteworthy disparity. The 
+results indicated that drivers exhibited longer response times 
+under contact-analog warning while the bounding box 
+warning offered an effective cautionary measure for pedes­
+trian crossings, ensuring optimal human performance in AR 
+driving conditions. It signified that color-based searching 
+was less effective in the pedestrian collision condition. 
+Interestingly, prior studies suggested that color-based search­
+ing was more efficient than shape-based searching (Hwang 
+et al., 2016; Ng-Thow-Hing et al., 2013). This conflict dis­
+covery prompted us to re-evaluate the distinctive attributes 
+of warnings that could impact perception during the search 
+process, while also factoring in the statistically significant 
+variations in effects between the bounding box warning and 
+the contact-analog warning in pedestrian collisions.
+The differential saliency of the contact-analog and bound­
+ing box warnings in peripheral vision offers one possible 
+explanation for the contradictory findings. The contact- 
+analog warning was incorporated into the actual environ­
+ment by utilizing the pedestrian’s geolocation, causing its 
+apparent size (as measured by relative size and height in the 
+driver’s visual field) to adjust as the driver approached the 
+pedestrian in question (Kim et al., 2018). Typically, pedes­
+trians initially come into view in the peripheral vision from a 
+distance, and then gradually move toward the driver’s central 
+vision (Domeyer et al., 2022). As a result, when pedestrians 
+appeared on the peripheral roadside, the contact-analog warn­
+ing occupied a relatively small area in the driver’s field of 
+vision, thereby reducing its saliency. Additionally, the color- 
+induced masking and overlapping within the contact-analog 
+warning may create the perception of an object located fur­
+ther away, potentially leading to erroneous driver decisions 
+(Ng-Thow-Hing et al., 2013). Furthermore, the presence of 
+peripheral pedestrians did not elicit the same level of stimula­
+tion in drivers compared to the preceding vehicles in the cen­
+ter (Hwang et al., 2016). The peripheral vision generally 
+presents higher thresholds for most perceptual tasks com­
+pared to the central vision (Finlay, 1982). Thus, employing 
+color as an exogenous cue to enhance peripheral pedestrian 
+detection was effective only within the active field of view 
+(Ward & Helton, 2022). Taking all these factors into consid­
+eration, drivers exhibit slower response times to the contact- 
+analog warning. Conversely, while the bounding box warning 
+may have covered extraneous objects, it covers a larger area 
+compared to the contact-analog warning and is more salient 
+in the peripheral field of view to some extent. This suggests 
+that the positive effect of a larger area of the bounding box 
+warning may offset the negative effect of covering other 
+objects in the peripheral field of view. Earlier studies have 
+also shown that the presence of a bounding box substantially 
+enhanced driver performance in response to unpredictable 
+peripheral events (e.g., Chen et al., 2023; Wang et al., 2021). 
+Above all, in the peripheral field of view, a bounding box 
+warning may be more effective.
+The subjective attitude toward the different AR warnings 
+was assessed by obtaining ratings from the user experience 
+questionnaire (UEQ). This subjective data serves as a valu­
+able complement to behavioral data (Plewan et al., 2021). 
+The results of the subjective rating aligned with the behav­
+ioral data. The bounding box warning was generally rated 
+higher in terms of attractiveness, perspicuity, efficiency, 
+dependability, and stimulation. Particularly, the bounding 
+box warning was rated as excellent in perspicuity and 
+dependability scales, while the contact-analog warning was 
+rated as below average for both. However, it is worth noting 
+that drivers perceived the contact-analog warning as more 
+novel, although the differences were not statistically 
+significant.
+Overall, our findings indicate that future AR-HUD warn­
+ing interfaces need to consider the specific characteristics of 
+different scenarios and use appropriate AR warnings accord­
+ingly. In pedestrian collision scenarios, we advocate for the 
+use of bounding box warnings to improve the detection of 
+peripheral pedestrians. Such warnings are more likely to 
+attract attention in the peripheral vision, thus effectively 
+alerting the driver. Conversely, in rear-end collision scen­
+arios, we propose employing contact-analog warnings to 
+specifically alert the driver of the leading vehicle’s braking 
+actions. These warnings can effectively communicate a sense 
+of danger by displaying a significant color area in the driv­
+er’s central vision.
+4.2. Investigation of the impact of graphics processing 
+levels on warning
+Additionally, the perspective of perception provides an add­
+itional framework for interpreting our findings. Previous 
+studies have suggested that understanding human perception 
+of graphics can inspire shape analysis, pattern recognition, 
+and object recognition (Ullman et al., 2002). According to a 
+traditional view of visual perception, it involves low-level 
+and high-level processing stages (Lamberts & Goldstone, 
+2005). The early visual area encodes raw information in the 
+low-level processing stage, and the task is to interpret this 
+raw information to enable the perception of people or 
+objects in reality (i.e., object recognition) in the high-level 
+processing stage (Ullman, 1996). Generally, the human vis­
+ual system efficiently extracts local elements from cluttered 
+backgrounds and integrates these elements into meaningful 
+perception, which is a critical step before object recognition 
+(Li et al., 2017).
+10
+W. CHEN ET AL.
+
+--- Page 12 ---
+Given this context, we hypothesize that contact-analog 
+warnings, which provide the contour of unexpected stimuli 
+compared to bounding box warnings, involve higher levels 
+of visual processing. Bounding box warnings direct the driv­
+er’s attention to the hazard through a simple, salient geo­
+metric shape, leading to a generalized representation of the 
+visual warning in a short period (e.g., the spatial presence of 
+the imminent hazard). This process involves low-level visual 
+processing. In contrast, contact-analog warnings provide the 
+complex contour characteristics of critical hazards. Contours 
+often play an essential role in defining the types of objects 
+to be recognized (Li et al., 2017). Drivers not only sense the 
+spatial presence of the visual warning but also interpret and 
+recognize the contour of the contact-analog warning (i.e., 
+judging whether it is a pedestrian, a vehicle, or other driv­
+ing-related objects). This process involves high-level visual 
+processing. Information theory suggests that the more infor­
+mation a graphic has, the more effort is required to process 
+it (Rigau et al., 2005).
+Consequently, there are variations in the time required to 
+process responses to these warnings due to differences in 
+visual processing levels. For instance, drivers only need to 
+recognize the simple shape of the bounding box and localize 
+potential hazards by the location where the bounding box 
+warnings appear, resulting in a shorter response time. 
+Conversely, drivers have longer response times for the con­
+tact-analog warning because they not only locate potential 
+hazards through the location of the contact-analog warning 
+but also recognize the contour of the contact-analog warn­
+ing to determine the type of hazard. This result is consistent 
+with the findings of Winkler et al. (2018), who investigated 
+the effect of the degree of specificity of warnings. The results 
+showed that generic warnings allow for better results by trig­
+gering a driver response even when the type of safety-critical 
+object has not been identified. They proposed that differenti­
+ating the warning might add to drivers’ already high cogni­
+tive load. Given the dynamic nature of AR graphics, the 
+driver not only needs to interact with the dynamic environ­
+ment but also recognize the warning which affected by the 
+environment (Kim et al., 2016). Therefore, the driver’s per­
+ceptual processing process may be more difficult. It is cru­
+cial to provide warnings in a form that corresponds to the 
+drivers’ perceptual ability.
+Additionally, a notable difference in response time was 
+observed within the peripheral vision for these two AR 
+warnings. Considering the limited capacity of the peripheral 
+vision for processing detailed information (Vater et al., 
+2022), these findings suggest that graphics requiring high- 
+level processing stages may not be suitable for presentation 
+in the peripheral vision. Moreover, the peripheral field of 
+view primarily serves to detect the scene gist and direct the 
+driver’s attention to it (Larson & Loschky, 2009; Vater et al., 
+2022). Currently, due to technical limitations, the existing 
+ADASs primarily use head-down displays (HDDs), while 
+common head-up displays (HUDs) have limited presentation 
+areas, mostly within 3–5 inches (Van Krevelen & Poelman, 
+2010). Consequently, warning information is predominantly 
+presented in the driver’s peripheral vision. Investigating the 
+perceptual capabilities of graphics that the peripheral vision 
+can effectively process is crucial, as is striking a reasonable 
+balance between information provision and the processing 
+level of graphics. This finding may also encourage future 
+research on road signs to consider appropriate simplification 
+of their graphic presentations, especially considering that 
+road signs and other signage are primarily located in the 
+peripheral field of view (Costa et al., 2018).
+In summary, previous studies have already explored 
+methods for adjusting the physical parameters of the HMI 
+interface to improve the presentation of warning- related 
+information (e.g., Morita et al., 2007; Wang et al., 2022). 
+However, an intriguing aspect of warning design is consider­
+ing the perceptual level of the warning. When it comes to 
+auditory warnings, drivers face challenges in processing and 
+interpreting the information conveyed through auditory 
+icons and earcons (Amer & Johnson, 2018). The findings of 
+this experiment suggest that a similar phenomenon may also 
+apply to visual graphical warnings. Subsequent research 
+should address how to strike a balance.
+5. Limitations
+There are several limitations to consider when interpreting 
+the findings of this study. Firstly, it should be noted that 
+video clips were used as materials in accordance with previ­
+ous studies (e.g., Chen et al., 2023; Eyraud et al., 2015; 
+Hwang et al., 2016; Wang et al., 2021). As a result, the reac­
+tion tasks employed in this study, such as watching video 
+clips and pressing buttons in response to unpredictable 
+events, were relatively simple and lacked complexity. 
+Therefore, it is uncertain whether these findings can be gen­
+eralized to more complex driving conditions. Secondly, des­
+pite the use of real AR devices to provide a realistic AR 
+driving experience, issues related to depth perception and 
+focal switching distance still remain due to the overlay of 
+virtual images on physical objects. These factors could 
+potentially affect the validity of the results. Thirdly, it is 
+important to acknowledge that the real traffic environment 
+is significantly more complex than the simulated scenarios 
+used in this study. This raises concerns about the ecological 
+validity of the findings, as the actual driving conditions may 
+introduce additional variables not accounted for in the 
+experimental design. Fourth, in this study, we are concerned 
+with visible hazards, while the difference in effectiveness 
+between the contact-analog warning and the bounding box 
+warning for invisible hazards remains to be investigated. 
+Furthermore, it is important to note that the between-sub­
+jects design used in this study may result in limited data 
+being collected in each AR warning group. The rationale 
+behind the between-subjects design choice was to maintain a 
+certain level of novelty for participants in response to unex­
+pected stimuli and their AR-HUD warnings, as well as to 
+minimize subject fatigue by keeping the experiment duration 
+relatively short. However, future studies could consider 
+increasing the sample size or utilizing a within-subjects 
+design to further investigate the effectiveness of AR-HUD 
+warnings. Lastly, it should be noted that the majority of 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+11
+
+--- Page 13 ---
+participants in this experiment were Chinese novice drivers 
+without prior experience in using AR-HUD devices. 
+Considering that drivers’ familiarity with the system may 
+influence their performance (Dingus et al., 1997), future 
+studies should aim to recruit participants with more driving 
+experience or prior experience using AR-HUD devices to 
+further explore the effects of AR warnings. Given these limi­
+tations, additional research is necessary to validate and 
+broaden the current findings, to achieve a more comprehen­
+sive comprehension of the influence and efficacy of AR- 
+HUD warnings in diverse driving circumstances and among 
+various driver demographics.
+6. Conclusion
+The objective of this study was to examine the impact of 
+two types of AR warnings, namely the contact-analog warn­
+ing and the bounding box warning, in different collision 
+scenarios and traffic densities. Our findings indicate that 
+both types of AR warnings were effective in both high and 
+low-traffic-density conditions. Furthermore, we recommend 
+incorporating different AR warnings into the design of the 
+AR interface based on the specific collision types. In the 
+case of rear-end collisions, both the bounding box warning 
+and the contact-analog warning were effective. However, the 
+contact-analog warning demonstrated slightly higher suit­
+ability for rear-end collisions. Conversely, for pedestrian col­
+lisions, the bounding box warning was found to be more 
+effective compared to the contact-analog warning. These 
+findings highlight the importance of tailoring AR warnings 
+to specific collision types. By adhering to these recommen­
+dations, future AR interface designs can optimize the use of 
+different AR warnings to enhance driver safety in various 
+collision scenarios and traffic conditions. Furthermore, we 
+analyze the aforementioned two types of graphs in connec­
+tion with the cognitive processing perspective. The findings 
+also suggest that, in the future, the field of warning design 
+should consider the potential impact on warning effective­
+ness arising from the varying perceptual processing levels of 
+the graphs in individuals.
+Disclosure statement
+No potential conflict of interest was reported by the author(s).
+Funding
+The author(s) disclosed receipt of the following financial support for 
+the research, authorship, and/or publication of this article: This work 
+was supported by the National Natural Science Foundation of China 
+under Grants (72371228, T2192930, T2192931, and 31900768).
+References
+Abdi, L., Takrouni, W., & Meddeb, A. (2017). In-vehicle cooperative 
+driver information systems. In 2013 17th International Wireless 
+Communications and Mobile Computing Conference (IWCMC) (pp. 
+396–401). IEEE. https://doi.org/10.1109/iwcmc.2017.7986319
+Adams, H., Stefanucci, J. K., Creem-Regehr, S. H., & Bodenheimer, B. 
+(2022). Depth perception in augmented reality: The effects of dis­
+play, shadow, and position. In 2022 IEEE Conference on Virtual 
+Reality and 3D User Interfaces (VR) (pp. 792–801). IEEE. https://doi. 
+org/10.1109/vr51125.2022.00101
+Amer, T. S., & Johnson, T. L. (2018). Earcons versus auditory icons in 
+communicating computing events: Learning and user preference. 
+International Journal of Technology and Human Interaction, 14(4), 
+95–109. https://doi.org/10.4018/IJTHI.2018100106
+Ariansyah, D., Erkoyuncu, J. A., Eimontaite, I., Johnson, T., Oostveen, 
+A.-M., Fletcher, S., & Sharples, S. (2022). A head mounted aug­
+mented reality design practice for maintenance assembly: Toward 
+meeting perceptual and cognitive needs of AR users. Applied 
+Ergonomics, 98, 103597. https://doi.org/10.1016/j.apergo.2021.103597
+Badiane, A., Perez I de Lanuza, G., Garcıa-Custodio, M. C., Carazo, P., 
+& Font, E. (2017). Colour patch size and measurement error using 
+reflectance spectrophotometry. Methods in Ecology and Evolution, 
+8(11), 1585–1593. https://doi.org/10.1111/2041-210X.12801
+Beck, M. R., Lohrenz, M. C., & Trafton, J. G. (2010). Measuring search 
+efficiency in complex visual search tasks: Global and local clutter. 
+Journal of Experimental Psychology: Applied, 16(3), 238–250. https:// 
+doi.org/10.1037/a0019633
+Breitmeyer, B. G., Ro, T., & Singhal, N. S. (2004). Unconscious color 
+priming occurs at stimulus–Not percept-dependent levels of process­
+ing. Psychological Science, 15(3), 198–202. https://doi.org/10.1111/j. 
+0956-7976.2004.01503009.x
+Brijs, T., Mauriello, F., Montella, A., Galante, F., Brijs, K., & Ross, V. 
+(2022). Studying the effects of an advanced driver-assistance system 
+to improve safety of cyclists overtaking. Accident Analysis & 
+Prevention, 174(1), 106763. https://doi.org/10.1016/j.aap.2022.106763
+Calvi, A., D’Amico, F., Ferrante, C., & Bianchini Ciampoli, L. (2020). 
+Effectiveness of augmented reality warnings on driving behaviour 
+whilst approaching pedestrian crossings: A driving simulator study. 
+Accident Analysis & Prevention, 147, 105760. https://doi.org/10.1016/ 
+j.aap.2020.105760
+Campbell, J. I., & Thompson, V. A. (2012). MorePower 6.0 for 
+ANOVA with relational confidence intervals and Bayesian analysis. 
+Behavior Research Methods, 44(4), 1255–1265. https://doi.org/10. 
+3758/s13428-012-0186-0
+Chen, W., Song, J., Wang, Y., Wu, C., Ma, S., Wang, D., Yang, Z., & 
+Li, H. (2023). Inattentional blindness to unexpected hazard in aug­
+mented reality head-up display assisted driving: The impact of the 
+relative position between stimulus and augmented graph. Traffic 
+Injury Prevention, 24(4), 344–351. https://doi.org/10.1080/15389588. 
+2023.2186735
+Costa, M., Bonetti, L., Vignali, V., Lantieri, C., & Simone, A. (2018). 
+The role of peripheral vision in vertical road sign identification and 
+discrimination. Ergonomics, 61(12), 1619–1634. https://doi.org/10. 
+1080/00140139.2018.1508756
+Crundall, D., Chapman, P., Trawley, S., Collins, L., van Loon, E., 
+Andrews, B., & Underwood, G. (2012). Some hazards are more 
+attractive than others: Drivers of varying experience respond differ­
+ently to different types of hazard. Accident Analysis & Prevention, 
+45, 600–609. https://doi.org/10.1016/j.aap.2011.09.049
+Dai, L., Zhang, K., Zheng, X. S., Martin, R. R., Li, Y., & Yu, J. (2021). 
+Visual complexity of shapes: A hierarchical perceptual learning 
+model. The Visual Computer, 38(2), 419–432. https://doi.org/10. 
+1007/s00371-020-02023-z
+Dingus, T. A., Hulse, M. C., Mollenhauer, M. A., Fleischman, R. N., 
+McGehee, D. V., & Manakkal, N. (1997). Effects of age, system 
+experience, and navigation technique on driving with an advanced 
+traveler information system. Human Factors, 39(2), 177–199. https:// 
+doi.org/10.1518/001872097778543804
+Domeyer, J. E., Lee, J. D., Toyoda, H., Mehler, B., & Reimer, B. (2022). 
+Driver-pedestrian 
+perceptual 
+models 
+demonstrate 
+coupling: 
+Implications for vehicle automation. IEEE Transactions on Human- 
+Machine Systems, 52(4), 557–566. https://doi.org/10.1109/THMS. 
+2022.3158201
+12
+W. CHEN ET AL.
+
+--- Page 14 ---
+Dozza, M. (2013). What factors influence drivers’ response time for 
+evasive maneuvers in real traffic? Accident; Analysis and Prevention, 
+58, 299–308. https://doi.org/10.1016/j.aap.2012.06.003
+Dr€uke, J., Semmler, C., & Bendewald, L. (2018). The “HMI tool kit” as 
+a strategy for the systematic derivation of user-oriented HMI con­
+cepts of driver assistance systems in urban areas. In K. Bengler, J. 
+Dr€uke, S. Hoffmann, D. Manstetten, & A. Neukum (Eds.), Urban 
+human factors in traffic (pp. 53–74). Springer Vieweg. https://doi. 
+org/10.1007/978-3-658-15418-9_4
+Edquist, J., & Johnston, I. (2008). Visual clutter in road environments: 
+What it does, and what to do about it. In Proceeding of Australasian 
+Road Safety Research, Policing and Education Conference (pp. 733– 
+738). South Australia Department for Transport, Energy and 
+Infrastructure.
+Eyraud, R., Zibetti, E., & Baccino, T. (2015). Allocation of visual atten­
+tion while driving with simulated augmented reality. Transportation 
+Research Part F: Traffic Psychology and Behaviour, 32, 46–55. 
+https://doi.org/10.1016/j.trf.2015.04.011
+Faria, O., Gabbard, J. L., & Smith, M. (2020). Place in the world or 
+place on the screen? investigating the effects of augmented reality 
+head-up display user interfaces on drivers’ spatial knowledge acqui­
+sition and glance behavior. In 2020 IEEE Conference on Virtual 
+Reality and 3D User Interfaces Abstracts and Workshops (VRW) (pp. 
+762–763). IEEE. https://doi.org/10.1109/VRW50115.2020.00232
+Finlay, D. (1982). Motion perception in the peripheral visual field. 
+Perception, 11(4), 457–462. https://doi.org/10.1068/p110457
+Friedrich, M., & Vollrath, M. (2022). Urgency-based color coding to 
+support visual search in displays for supervisory control of multiple 
+unmanned aircraft systems. Displays, 74, 102185. https://doi.org/10. 
+1016/j.displa.2022.102185
+Gabbard, J. L., Fitch, G. M., & Kim, H. (2014). Behind the glass: 
+Driver challenges and opportunities for AR automotive applications. 
+Proceedings of the IEEE, 102(2), 124–136. https://doi.org/10.1109/ 
+JPROC.2013.2294642
+Gabbard, J. L., Swan, J. E., Hix, D., Schulman, R. S., Lucas, J., & 
+Gupta, D. (2005). An empirical user-based study of text drawing 
+styles and outdoor background textures for augmented reality. In 
+IEEE Proceedings. VR 2005. Virtual Reality, 2005 (pp. 11–317). 
+IEEE. https://doi.org/10.1109/VR.2005.1492748
+Grubert, J., Langlotz, T., Zollmann, S., & Regenbrecht, H. (2017). 
+Towards pervasive augmented reality: Context-awareness in aug­
+mented reality. IEEE Transactions on Visualization and Computer 
+Graphics, 23(6), 1706–1724. https://doi.org/10.1109/tvcg.2016.2543720
+Hajiseyedjavadi, F., Zhang, T., Agrawal, R., Knodler, M., Fisher, D., & 
+Samuel, S. (2018). Effectiveness of visual warnings on young drivers 
+hazard anticipation and hazard mitigation abilities. Accident; 
+Analysis and Prevention, 116, 41–52. https://doi.org/10.1016/j.aap. 
+2017.11.037
+Huang, Y.-Y., & Menozzi, M. (2022). Effects of viewing distance and 
+age on the performance and symptoms in a visual search task in 
+augmented reality. Applied Ergonomics, 102(3), 103746. https://doi. 
+org/10.1016/j.apergo.2022.103746
+Hwang, Y., Park, B.-J., & Kim, K.-H. (2016). The effects of augmented- 
+reality head-up display system usage on drivers risk perception and 
+psychological change. ETRI Journal, 38(4), 757–766. https://doi.org/ 
+10.4218/etrij.16.0115.0770
+Hwang, Y.-S., & Kim, K.-H. (2016). Effects of the displaying aug­
+mented-reality information on the driving behavior of the drivers 
+with specific psychological characteristics. In 2016 6th International 
+Conference on IT Convergence and Security (ICITCS) (pp. 1–2). 
+IEEE. https://doi.org/10.1109/ICITCS.2016.7740328
+Jing, C., Shang, C., Yu, D., Chen, Y., & Zhi, J.-Y. (2022). The impact 
+of different AR-HUD virtual warning interfaces on the takeover per­
+formance and visual characteristics of autonomous vehicles. Traffic 
+Injury Prevention, 23(5), 277–282. https://doi.org/10.1080/15389588. 
+2022.2055752
+Johnson, J. (2014). Our color vision is limited. In J. Johnson (Ed.), 
+Designing with the mind in mind (pp. 37–47). Morgan Kaufmann. 
+https://doi.org/10.1016/B9780124079144.00004X
+Kim, H., Gabbard, J. L., Anon, A. M., & Misu, T. (2018). Driver behav­
+ior and performance with augmented reality pedestrian collision 
+warning: An outdoor user study. IEEE Transactions on Visualization 
+and Computer Graphics, 24(4), 1515–1524. https://doi.org/10.1109/ 
+tvcg.2018.2793680
+Kim, H., & Gabbard, J. L. (2019). Assessing distraction potential of 
+augmented reality head-up displays for vehicle drivers. Human 
+Factors, 64(5), 852–865. https://doi.org/10.1177/0018720819844845
+Kim, H., Isleib, J. D., & Gabbard, J. L. (2016). Virtual shadow: Making 
+cross traffic dynamics visible through augmented reality head up 
+display. Proceedings of the Human Factors and Ergonomics Society 
+Annual 
+Meeting, 
+60(1), 
+2093–2097. 
+https://doi.org/10.1177/ 
+1541931213601474
+Kim, K., & Hwang, Y. (2016). The usefulness of augmenting reality on 
+vehicle head-up display. In N. Stanton, S. Landry, G. Di 
+Bucchianico, & A. Vallicelli (Eds.), Advances in intelligent systems 
+and computing (pp. 655–662). Springer. https://doi.org/10.1007/978- 
+3-319-41682-3_55
+Lamberts, K., & Goldstone, R. L. (2005). Handbook of cognition. SAGE 
+Publications Ltd. https://doi.org/10.4135/9781848608177
+Langlois, S., & Soualmi, B. (2016). Augmented reality versus classical 
+HUD to take over from automated driving: An aid to smooth reac­
+tions and to anticipate maneuvers. In 2016 IEEE 19th International 
+Conference on Intelligent Transportation Systems (ITSC) (pp. 1571– 
+1578). IEEE. https://doi.org/10.1109/ITSC.2016.7795767
+Larson, A. M., & Loschky, L. C. (2009). The contributions of central 
+versus peripheral vision to scene gist recognition. Journal of Vision, 
+9(10), 6. https://doi.org/10.1167/9.10.6
+Laugwitz, B., Held, T., & Schrepp, M. (2008). Construction and evalu­
+ation of a user experience questionnaire. Lecture Notes in Computer 
+Science, 5298, 63–76. https://doi.org/10.1007/978-3-540-89350-9_6
+Lee, J., Lee, N., Ju, J., Chae, J., Park, J., Ryu, Y. S., & Cho, H. S. (2023). 
+Visual complexity of head-up display in automobiles modulates 
+attentional 
+tunneling. 
+Human 
+Factors. 
+https://doi.org/10.1177/ 
+00187208231181496
+Li, Y., Wang, Y., & Li, S. (2017). Recurrent processing of contour inte­
+gration in the human visual cortex as revealed by fMRI-Guided 
+TMS. Cerebral Cortex, 29(1), 17–26. https://doi.org/10.1093/cercor/ 
+bhx296
+Li, Y., Zhang, X., Li, H., Zhou, Q., Cao, X., & Xiao, Z. (2019). Object 
+detection and tracking under complex environment using deep 
+learning-based LPM. IET Computer Vision, 13(2), 157–164. https:// 
+doi.org/10.1049/iet-cvi.2018.5129
+Liang, K. Y., & Zeger, S. L. (1986). Longitudinal data analysis using 
+generalized linear models. Biometrika, 73(1), 13–22. https://doi.org/ 
+10.1093/biomet/73.1.13
+Ma, X., Jia, M., Hong, Z., Kwok, A. P. K., & Yan, M. (2021). Does aug­
+mented-reality head-up display help? A preliminary study on driving 
+performance through a VR-simulated eye movement analysis. IEEE 
+Access, 9, 129951–129964. https://doi.org/10.1109/ACCESS.2021. 
+3112240
+Medenica, Z., Kun, A. L., Paek, T., & Palinko, O. (2011). Augmented 
+reality vs. street views: a driving simulator study comparing two 
+emerging navigation aids. In Proceedings of the 13th International 
+Conference on Human–Computer Interaction with Mobile Devices 
+and Services – MobileHCI’11 (pp. 265–274). Association for 
+Computing Machinery. https://doi.org/10.1145/2037373.2037414
+Merenda, C., Kim, H., Tanous, K., Gabbard, J. L., Feichtl, B., Misu, T., 
+& Suga, C. (2018). Augmented reality interface design approaches 
+for 
+goal-directed 
+and 
+stimulus-driven 
+driving 
+tasks. 
+IEEE 
+Transactions on Visualization and Computer Graphics, 24(11), 2875– 
+2885. https://doi.org/10.1109/TVCG.2018.2868531
+Merenda, C., Smith, M., Gabbard, J. L., Burnett, G., & Large, D. 
+(2016). Effects of real-world backgrounds on user interface color 
+naming and matching in automotive AR HUDs. In 2016 IEEE VR 
+2016 Workshop on Perceptual and Cognitive Issues in AR (PERCAR). 
+IEEE. https://doi.org/10.1109/PERCAR.2016.7562419
+Merenda, C., Suga, C., Gabbard, J. L., & Misu, T. (2019). Effects of 
+“real-world” visual fidelity on AR interface assessment: A case study 
+using AR head-up display graphics in driving. In 2019 IEEE 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+13
+
+--- Page 15 ---
+International Symposium on Mixed and Augmented Reality (ISMAR) 
+(pp. 145–156). IEEE. https://doi.org/10.1109/ISMAR.2019.00-10
+Morita, K., Sekine, M., Tsukada, Y., Okada, T., Toyofuku, Y. (2007). 
+Consideration on appropriate display area for head-up displays. In 
+Proceedings of 14th Asia Pacific Automotive Engineering Conference 
+(APAC). 
+SAE. 
+Retrieved 
+from 
+https://api.semanticscholar.org/ 
+CorpusID:61679796 https://doi.org/10.4271/2007-01-3512
+Muhrer, E., & Vollrath, M. (2011). The effect of visual and cognitive 
+distraction on driver’s anticipation in a simulated car following 
+scenario. Transportation Research Part F: Traffic Psychology and 
+Behaviour, 14(6), 555–566. https://doi.org/10.1016/j.trf.2011.06.003
+Naish, J. M. (1964). Combination of information in superimposed vis­
+ual fields. Nature, 202(4933), 641–646. https://doi.org/10.1038/ 
+202641a0
+Navarro, J., Deniel, J., Yousfi, E., Jallais, C., Bueno, M., & Fort, A. 
+(2017). Influence of lane departure warnings onset and reliability on 
+car drivers’ behaviors. Applied Ergonomics, 59(Pt A), 123–131. 
+https://doi.org/10.1016/j.apergo.2016.08.010
+Nelder, J. A., & Wedderburn, R. W. M. (1972). Generalized linear 
+models. Journal of the Royal Statistical Society. Series A (General), 
+135(3), 370. https://doi.org/10.2307/2344614
+Ng, A. W. Y., & Chan, A. H. S. (2018). Color associations among 
+designers and non-designers for common warning and operation 
+concepts. Applied Ergonomics, 70, 18–25. https://doi.org/10.1016/j. 
+apergo.2018.02.004
+Ng-Thow-Hing, V., Bark, K., Beckwith, L., Tran, C., Bhandari, R., & 
+Sridhar, S. (2013). User-centered perspectives for automotive aug­
+mented reality. In 2013 IEEE International Symposium on Mixed 
+and Augmented Reality – Arts, Media, and Humanities (ISMAR- 
+AMH) (pp. 13–22). IEEE. https://doi.org/10.1109/ISMAR-AMH. 
+2013.6671262
+Park, B.-J., Jeong Min, L., Yoon, C.-R., & Kim, K.-H. (2016). A study 
+on augmented reality of a vehicle information using head-up dis­
+play. In 2016 6th International Conference on IT Convergence and 
+Security (ICITCS) (pp. 1–2). IEEE. https://doi.org/10.1109/ICITCS. 
+2016.7740308
+Peereboom, J., Tabone, W., Dodou, D., & Winter, D. (2023). Head- 
+locked, world-locked, or conformal diminished reality? An examin­
+ation of different AR solutions for pedestrian safety in occluded 
+scenarios.
+Pitt, T. M., Howard, A., HubkaRao, T., & Hagel, B. (2021). Identifying 
+modifiable factors related to novice adolescent driver fault in motor 
+vehicle collisions. Traffic Injury Prevention, 22(6), 437–442. https:// 
+doi.org/10.1080/15389588.2021.1923700
+Plewan, T., M€attig, B., Kretschmer, V., & Rinkenauer, G. (2021). 
+Exploring the benefits and limitations of augmented reality for pal­
+letization. Applied Ergonomics, 90(23), 103250. https://doi.org/10. 
+1016/j.apergo.2020.103250
+Powelleit, M., & Vollrath, M. (2019). Situational influences on response 
+time and maneuver choice: Development of time-critical scenarios. 
+Accident; Analysis and Prevention, 122, 48–62. https://doi.org/10. 
+1016/j.aap.2018.09.021
+Rane, P., Kim, H.-I., Lopez, J. L., & Gabbard, J. L. (2016). Virtual road 
+signs: Augmented reality driving aid for novice drivers. Proceedings 
+of the Human Factors and Ergonomics Society Annual Meeting, 
+60(1), 1750–1754. https://doi.org/10.1177/1541931213601401
+Riegler, A., Riener, A., & Holzmann, C. (2021). A systematic review of 
+augmented reality applications for automated driving: 2009–2020. 
+PRESENCE: Virtual and Augmented Reality, 28(4), 87–126. https:// 
+doi.org/10.1162/pres_a_00343
+Rigau, J., Feixas, M., & Sbert, M. (2005). An information theoretic 
+framework for image complexity. In Computational Aesthetics’05: 
+Proceedings of the First Eurographics Conference on Computational 
+Aesthetics in Graphics, Visualization and Imaging (pp. 177–184). 
+https://doi.org/10.2312/COMPAESTH/COMPAESTH05/177184
+Rosenholtz, R. (2011). What your visual system sees where you are not 
+looking. Proceedings of SPIE: Human Vision and Electronic Imaging, 
+7865, 786510. https://doi.org/10.1117/12.876659
+Rosenholtz, R., Li, Y., & Nakano, L. (2007). Measuring visual clutter. 
+Journal of Vision, 7(2), 17–1722. https://doi.org/10.1167/7.2.17
+Rusch, M. L., Schall, M. C., Gavin, P., Lee, J. D., Dawson, J. D., 
+Vecera, S., & Rizzo, M. (2013). Directing driver attention with aug­
+mented reality cues. Transportation Research Part F Traffic 
+Psychology and Behaviour, 16(4), 127–137. https://doi.org/10.1016/j. 
+trf.2012.08.007
+Schewe, F., & Vollrath, M. (2021). Ecological interface design and 
+head-up displays: The contact-analog visualization tradeoff. Human 
+Factors, 65(1), 37–49. https://doi.org/10.1177/00187208211009656
+Schrepp, M., Hinderks, A., & Thomaschewski, J. (2017). Construction 
+of a benchmark for the user experience questionnaire (UEQ). 
+International Journal of Interactive Multimedia and Artificial 
+Intelligence, 4(4), 40. https://doi.org/10.9781/ijimai.2017.445
+Schubert, A., Babisch, S., Scanlon, J. M., Campolettano, E. T., Roessler, 
+R., Unger, T., & McMurry, T. L. (2023). Passenger and heavy vehicle 
+collisions with pedestrians: Assessment of injury mechanisms and 
+risk. Accident; Analysis and Prevention, 190, 107139. https://doi.org/ 
+10.1016/j.aap.2023.107139
+Schwarz, F., & Fastenmeier, W. (2018). Visual advisory warnings about 
+hidden dangers: Effects of specific symbols and spatial referencing 
+on necessary and unnecessary warnings. Applied Ergonomics, 72, 25– 
+36. https://doi.org/10.1016/j.apergo.2018.05.001
+Shakouri, M., Ikuma, L. H., Aghazadeh, F., Punniaraj, K., & Ishak, S. 
+(2014). Effects of work zone configurations and traffic density on per­
+formance variables and subjective workload. Accident; Analysis and 
+Prevention, 71, 166–176. https://doi.org/10.1016/j.aap.2014.05.016
+Smith, M., Gabbard, J. L., Burnett, G., Hare, C., Singh, H., & Skrypchuk, 
+L. (2021). Determining the impact of augmented reality graphic spa­
+tial location and motion on driver behaviors. Applied Ergonomics, 
+96(5), 103510. https://doi.org/10.1016/j.apergo.2021.103510
+Tao, J., Niu, Y., & Lei, Z. (2017). Are the warning icons more atten­
+tional? Applied Ergonomics, 65(2), 51–60. https://doi.org/10.1016/j. 
+apergo.2017.05.012
+Tarenskeen, S., Broersma, M., & Geurts, B. (2015). Overspecification of 
+color, pattern, and size: Salience, absoluteness, and consistency. Frontiers 
+in Psychology, 6, 1703. https://doi.org/10.3389/fpsyg.2015.01703
+Teh, E., Jamson, S., Carsten, O., & Jamson, H. (2014). Temporal fluctu­
+ations in driving demand: The effect of traffic complexity on sub­
+jective 
+measures 
+of 
+workload 
+and 
+driving 
+performance. 
+Transportation Research Part F: Traffic Psychology and Behaviour, 
+22, 207–217. https://doi.org/10.1016/j.trf.2013.12.005
+Thomas, L. S., & Wickens, C. D. (2001). Visual displays and cognitive 
+tunneling: Frames of reference effects on spatial judgments and 
+change detection. Proceedings of the Human Factors and Ergonomics 
+Society Annual Meeting, 45(4), 336–340. https://doi.org/10.1177/ 
+154193120104500415
+Tonnis, M., & Klinker, G. (2006, October 1). Effective control of a car 
+driver’s attention for visual and acoustic guidance towards the direc­
+tion of imminent dangers. In 2006 IEEE/ACM International 
+Symposium on Mixed and Augmented Reality (pp. 13–22). IEEE. 
+https://doi.org/10.1109/ISMAR.2006.297789
+Trick, L. M., Toxopeus, R., & Wilson, D. (2010). The effects of visibil­
+ity conditions, traffic density, and navigational challenge on speed 
+compensation and driving performance in older adults. Accident; 
+Analysis and Prevention, 42(6), 1661–1671. https://doi.org/10.1016/j. 
+aap.2010.04.005
+Twisk, D. (1995). Factors contributing to the high accident liability of 
+novice drivers and the role of driver training. SWOV Institute for 
+Road Safety Research.
+Ullman, S. (1996). High-level vision: Object recognition and visual cogni­
+tion. The MIT Press. https://doi.org/10.7551/mitpress/3496.001.0001
+Ullman, S., Vidal-Naquet, M., & Sali, E. (2002). Visual features of 
+intermediate complexity and their use in classification. Nature 
+Neuroscience, 5(7), 682–687. https://doi.org/10.1038/nn870
+Van Krevelen, D. W. F., & Poelman, R. (2010). A survey of augmented 
+reality technologies, applications and limitations. International 
+Journal of Virtual Reality, 9(2), 1–20. https://doi.org/10.20870/IJVR. 
+2010.9.2.2767
+Vater, C., Wolfe, B., & Rosenholtz, R. (2022). Peripheral vision in real- 
+world tasks: A systematic review. Psychonomic Bulletin & Review, 
+29(5), 1531–1557. https://doi.org/10.3758/s13423-022-02117-w
+14
+W. CHEN ET AL.
+
+--- Page 16 ---
+Wang, Y., Song, J., An, X., Ma, S., Li, H., Wang, D., & Yang, Z. 
+(2022). Head-up display graphic warning to support collision avoid­
+ance: Effect of graphic animation and border on driving behavior 
+and eye movement pattern. Transportation Research Record: Journal 
+of the Transportation Research Board, 2677(5), 636–652. https://doi. 
+org/10.1177/03611981221134628
+Wang, Y., Wu, Y., Chen, C., Wu, B., Ma, S., Wang, D., Li, H., & Yang, Z. 
+(2021). Inattentional blindness in augmented reality head-up display- 
+assisted driving. International Journal of Human–Computer Interaction, 
+38(9), 837–850. https://doi.org/10.1080/10447318.2021.1970434
+Ward, M., & Helton, W. S. (2022). More or less? Improving monocular 
+head-mounted display assisted visual search by reducing guidance 
+precision. Applied Ergonomics, 102(7), 103720. https://doi.org/10. 
+1016/j.apergo.2022.103720
+Werneke, J., & Vollrath, M. (2013). How to present collision warnings at 
+intersections—A comparison of different approaches. Accident; Analysis 
+and Prevention, 52, 91–99. https://doi.org/10.1016/j.aap.2012.12.001
+Wickens, C. D., & Long, J. (1994). Conformal symbology, attention 
+shifts, and the head-up display. Proceedings of the Human Factors 
+and Ergonomics Society Annual Meeting, 38(1), 6–10. https://doi.org/ 
+10.1177/154193129403800103
+Winkler, S., Kazazi, J., & Vollrath, M. (2018). How to warn drivers in 
+various safety-critical situations – Different strategies, different reac­
+tions. Accident; Analysis and Prevention, 117, 410–426. https://doi. 
+org/10.1016/j.aap.2018.01.040
+Winkler, S., Werneke, J., & Vollrath, M. (2016). Timing of early warn­
+ing stages in a multi stage collision warning system: Drivers’ evalu­
+ation depending on situational influences. Transportation Research 
+Part F: Traffic Psychology and Behaviour, 36(3), 57–68. https://doi. 
+org/10.1016/j.trf.2015.11.001
+Wu, T., Sachdeva, E., Akash, K., Wu, X., Misu, T., & Ortiz, J. (2022). 
+Toward an adaptive situational awareness support system for 
+urban driving. In 2022 IEEE Intelligent Vehicles Symposium 
+(IV) (pp. 1073–1080). IEEE. https://doi.org/10.1109/IV51971.2022. 
+9827205
+Yue, L., Abdel-Aty, M., Wu, Y., Ugan, J., & Yuan, C. (2021). Effects of 
+forward collision warning technology in different pre-crash scenarios. 
+Transportation Research Part F: Traffic Psychology and Behaviour, 76, 
+336–352. https://doi.org/10.1016/j.trf.2020.12.004
+Zhang, Y., Li, X., Yan, X., & Xue, Q. (2015). Effects of collision warn­
+ing system under different warning timing on driving speed and dis­
+tance. 
+In 
+2015 
+International 
+Conference 
+on 
+Transportation 
+Information and Safety (ICTIS) (pp. 380–385). IEEE. https://doi.org/ 
+10.1109/ictis.2015.7232174
+Zhao, W., Gong, S., Zhao, D., Liu, F., Sze, N. N., & Huang, H. (2023). 
+Effects of collision warning characteristics on driving behaviors and 
+safety in connected vehicle environments. Accident; Analysis and 
+Prevention, 186(6), 107053. https://doi.org/10.1016/j.aap.2023.107053
+Zhu, C., Brown, C. T., Bahar, D., Ye, X., Sohrabi, S., & Potts, I. (2023). 
+Investigation on the driver-victim pairs in pedestrian and bicyclist 
+crashes by latent class clustering and random forest algorithm. 
+Accident; Analysis and Prevention, 182, 106964. https://doi.org/10. 
+1016/j.aap.2023.106964
+About the authors
+Wanting Chen is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include traffic 
+safety, augmented reality, and human–computer interaction.
+Liuqiucheng Niu is a graduate student at the Department of 
+Psychology, Zhejiang Sci-Tech University. Her research interests 
+include user experience and human–computer interaction.
+Shan Liu is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include ergonom­
+ics and human–computer interaction.
+Shu Ma is a PhD researcher at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include human– 
+computer interaction, traffic safety, and automated driving.
+Hongting Li is a professor at the Department of Psychology, Zhejiang 
+University of Technology. His research interests include human–com­
+puter interaction, ergonomics, user experience, augmented reality, and 
+virtual reality.
+Zhen Yang is an assistant professor at the Department of Psychology, 
+Zhejiang Sci-Tech University. His research interests include human– 
+computer interaction, human factors, user experience, cognitive sci­
+ence, and neuroeconomics.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+15

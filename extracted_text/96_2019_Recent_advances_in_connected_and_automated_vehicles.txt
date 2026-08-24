@@ -1,0 +1,2180 @@
+--- Page 1 ---
+Accepted Manuscript
+Recent advances in connected and automated vehicles
+David Elliott, Walter Keen, Lei Miao
+PII:
+S2095-7564(18)30228-9
+DOI:
+https://doi.org/10.1016/j.jtte.2018.09.005
+Reference:
+JTTE 216
+To appear in:
+Journal of Traffic and Transportation Engineering (English
+Edition)
+Received Date: 20 May 2018
+Revised Date:
+21 September 2018
+Accepted Date: 25 September 2018
+Please cite this article as: Elliott, D., Keen, W., Miao, L., Recent advances in connected and automated
+vehicles, Journal of Traffic and Transportation Engineering (English Edition), https://doi.org/10.1016/
+j.jtte.2018.09.005.
+This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to
+our customers we are providing this early version of the manuscript. The manuscript will undergo
+copyediting, typesetting, and review of the resulting proof before it is published in its final form. Please
+note that during the production process errors may be discovered which could affect the content, and all
+legal disclaimers that apply to the journal pertain.
+
+--- Page 2 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+1 
+ 
+Reviews 
+1 
+Recent advances in connected and 
+2 
+automated vehicles 
+3 
+ 
+4 
+David Elliotta, Walter Keenb, Lei Miaob,* 
+5 
+ 
+6 
+a Mahle Filter Systems North America, Inc., Murfreesboro, TN 37127, USA 
+7 
+b Department of Engineering Technology, Middle Tennessee State University, Murfreesboro, TN 37132, USA 
+8 
+ 
+9 
+Highlights 
+10 
+• 
+This paper conducts a comprehensive review on recent advances of CAV technology. 
+11 
+• 
+Five topics: communications, security, intersection navigation, collision avoidance, and pedestrian 
+12 
+detection are included.  
+13 
+• 
+These topics are essential to the success of CAV and need to be better understood by researchers 
+14 
+and policy makers.  
+15 
+• 
+Based on the current state-of-the-art, we provide insights on future research directions. 
+16 
+ 
+17 
+Abstract 
+18 
+Connected and automated vehicle (CAV) is a transformative technology that has great 
+19 
+potential to change our daily life. Therefore, CAV related research has been advanced 
+20 
+significantly in recent years. This paper does a comprehensive review on five selected 
+21 
+subjects that lie in the heart of CAV research: (i) inter-CAV communications; (ii) security of 
+22 
+CAVs; (iii) intersection control for CAVs; (iv) collision-free navigation of CAVs; and (v) 
+23 
+pedestrian detection and protection. It is believed that these topics are essential to ensure 
+24 
+
+--- Page 3 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+2 
+ 
+the success of CAVs and need to be better understood. For inter-CAV communications, 
+25 
+this paper focuses on both Dedicated Short Range Communications (DSRC) and the 
+26 
+future 5G cellular technologies; for security of CAVs, this paper discusses both passive 
+27 
+and active attacks and the existing solutions; for intersection control, this paper 
+28 
+summarizes the pros and cons of both centralized and decentralized approaches; for 
+29 
+collision avoidance, this paper concentrates on four subareas: maneuverability, vehicle 
+30 
+networking, control confliction, and motorcycles; for pedestrian detection, this paper 
+31 
+covers sensor, radar, and computer vision based approaches. Under each topic, this 
+32 
+paper not only shows the state-of-the-art, but also unveils potential future research 
+33 
+directions. By establishing connections among these subjects, this paper shows how they 
+34 
+interact with each other and how they can be integrated into a seamless user experience. 
+35 
+It is believed that the literature covered and conclusions drawn in this paper are very 
+36 
+helpful to CAV researchers, application engineers, and policy makers. 
+37 
+ 
+38 
+Keywords: 
+39 
+Connected and automated vehicles; Autonomous vehicles; Intelligent transportation 
+40 
+systems; Driver-less cars. 
+41 
+ 
+42 
+ 
+43 
+ 
+44 
+ 
+45 
+ 
+46 
+ 
+47 
+*Corresponding author. Tel.: +1 615 898 2256. 
+E-mail addresses: dee2u@mtmail.mtsu.edu (D. Elliott), wlk2h@mtmail.mtsu.edu (W. 
+Keen), lei.miao@mtsu.edu (L. Miao). 
+
+--- Page 4 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+3 
+ 
+1 Introduction 
+Connected and automated vehicles (CAVs) (a.k.a. connected and autonomous vehicles and 
+driver-less cars) is a transformative technology that has great potential for reducing traffic accidents, 
+enhancing quality-of-life, and improving the efficiency of transportation systems. Bajpai (2016) 
+showcased the positive effects CAVs should have, compared to present experiences. For example, 
+the reduction of distance in between vehicles for increased capacity but not raising delay times ends 
+with a higher throughput. Other benefits may include declined emergency room patients, reduced car 
+insurance premiums, and smaller sizes of traffic enforcement departments. Also, Bajpai noted that 
+sharing a vehicle through third-party companies or individuals would lower the number of cars 
+owned. The number of vehicles per household may drop with the availability of driver-less cars 
+returning home to be used by other household members. Ride-sharing with autonomous vehicles 
+can have a greater impact on available properties located within densely populated areas. 
+Researchers (MRCagney, 2017) pointed out that individuals who did not have a license to drive 
+would benefit greatly from CAVs by relying less on traditional forms of public transportation. The 
+requirement for large parking areas will go away from rising use of autonomous car sharing that 
+constantly scans for potential fares to pick-up. The constant hunting for riders will drive up the actual 
+miles travel per vehicle compared to current standards. As mentioned, road incidents should be 
+lower than present figures with the removal of human error in autonomous cars. It is estimated the 
+traffic accidents will drop by 70% in 25 years (MRCagney, 2017). 
+Although the near future will be influenced by CAVs, current challenges continue to postpone 
+the public implementation of this technology. The CAV uses wireless network and sensors to obtain 
+relevant traffic and other vital information while its driving control is regulated by one of six levels of 
+automation (SAE International, 2016). The levels range from zero to five: zero requiring complete 
+human driving interaction and five being full autonomous navigation without human participation. As 
+a wonderful asset to have in driver assistance, level 5 employs technology that relieves drivers from 
+navigation responsibilities. The current level of automation found in today’s vehicles is level 2, which 
+consists of adaptive braking and acceleration, a technology that adjusts speed without driver 
+assistance. Avoiding accidents with other vehicles or pedestrians has been a high priority topic, and 
+once solutions have been determined and vetted, it will be a major hurdle conquered. Passenger and 
+
+--- Page 5 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+4 
+ 
+vehicle security remains a concern with evolving physical and cyber threat that may lead to personal 
+information stolen to compromised CAVs being controlled by an unwanted user. 
+A main focus of this paper is to highlight the opportunities to reduce the traffic incidents that 
+involve collisions especially with pedestrians or cyclists. A recent incident in Tempe, AZ, involved a 
+human monitored CAV that struck a jaywalking pedestrian (The Verge, 2018). Since the incident, 
+Uber has suspended the testing program. However, other companies like Google, Blackberry, and 
+GM continue testing. Collision and pedestrian avoidance in conjunction with intersection control are 
+extremely important to protect against injury or loss of life in the unfortunate event of an accident. 
+Along with the protection of human life, the ability to communicate to the proper authorities when an 
+incident has taken place is the next step in CAV evolution. 
+Many review articles are available in the literature for CAV related research. Bagloee et al. 
+(Bagloee et al., 2016) create excellent reviews discussing the basic vocabulary and topics pertaining 
+to CAVs in general terms, and Parkinson et al. (2017) explain topics in the cyber realm of CAVs with 
+threats and solution tactics. While some review articles focus on less technical aspects of 
+autonomous vehicles and more on comfort and personalization (Elbanhawi et al., 2015) and 
+(Hasenjager and Wersing, 2017), some other ones cover specific and technical topics. In research of 
+Deb et al. (2018), how pedestrians are willing to accept CAVs in the roadways is discussed. In 
+research of Guanetti et al. (2018), the authors review the control aspects of CAV technology, where 
+two topics are focused on: one is on-board real-time control, including subtopics such as powertrain 
+control, motion control, and real-time motion planning; the other is remote planning and routing, 
+including subtopics such as battery charge planning, eco-driving for both isolated and groups of 
+CAVs, and eco-routing. The impact of CAVs and vehicular communications to traffic control is 
+surveyed in research of Li et al. (2014). Both isolated intersection and network-wide traffic control are 
+reviewed by the paper. The authors also discuss non-cooperative and cooperative driving under 
+each category. Rios-Torres and Malikopoulos (2017) survey coordination of CAVs at intersections 
+and merging at highway on-ramps. Both centralized and decentralized approaches are discussed, 
+and within each category, the works are further classified into heuristic control and optimal control. 
+This survey paper is different from the ones above, and our contributions are two-fold. First, instead 
+of concentrating on one or two topics, we conduct a comprehensive survey, focusing on five areas 
+that lie in the heart of CAV research: inter-CAV communications, security and privacy, intersection 
+
+--- Page 6 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+5 
+ 
+navigation control, collision avoidance, and pedestrian detection. Second, we include the most 
+recent research outcomes (within the past 2-3 years) in each covered research area. We believe that 
+this survey paper provides sufficient breadth and depth, especially for researchers who are new to 
+CAV research. 
+It is important to note that although we will present the five research topics in different sections, 
+they are not isolated and independent from each other. As we will see later in the paper, these CAV 
+research areas are highly correlated and must be evaluated altogether in real-world 
+experimentations. For example, inter-CAV communications is the enabling technology for enhancing 
+efficiency and safety of CAV; without reliable inter-CAV communications, it is going to be extremely 
+hard to achieve intersection control and collision avoidance. Similarly, security plays a key role in 
+CAV research. If a CAV is compromised by hackers, then all the safety features are in jeopardy. 
+Finally, the design of collision avoidance and pedestrian detection need to involve social 
+considerations. For instance, the answer to the following question is very debatable: in case of an 
+unavoidable accident that caused by the sudden appear of a pedestrian on the street, should the CAV 
+choose to hit the pedestrian or another object on the street? The former choice would hurt the 
+pedestrian while the latter may actually injure the passengers in the CAV. Of course, such an extreme 
+scenario may not happen very often in reality, but it further indicates that in order to ensure the 
+successfulness of CAVs, it is important to raise the awareness of all related research topics and 
+understand how they interact with each other. 
+The remainder of this paper will be divided into the following parts: Section 2 discusses some of 
+the applications and technologies found in inter-CAV communications; Section 3 explores the use of 
+and prevention of security attacks susceptible to the CAV environment; Section 4 breaks down the 
+logic behind centralized and decentralized intersection navigation control; Section 5 reviews various 
+works dedicated to maneuverability, networking, and control confliction that are implemented to 
+ensure safe avoidance of traffic incidents with other vehicles; Section 6 dives into the technology and 
+methods imperative to protect pedestrians and other users of adjacent areas to roadways used by 
+CAVs; Section 7 concludes with suggestions to future opportunities. 
+2. Inter-CAV communications 
+Drivers navigate roadways and intersections by applying the information located on roadside signs, 
+
+--- Page 7 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+6 
+ 
+on radio stations, or other forms gathered before entering the vehicle for travel. The combination of all 
+that information is necessary to make the correct choice when a situation arises. CAVs require a 
+similar stream of data to institute a proper protocol for roadway events. The ways these vehicles 
+obtain that information is slightly different to the human counterpart. For example, vehicle 
+communication allows for vehicles to relay information between one another about various 
+environmental changes such as a large influx of traffic (Fang et al., 2017). The NHSTA predicts that 
+effectively applying vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) communications 
+could potentially reduce and/or eliminate up to 80% crashes of any type from non-impairment 
+(NHTSA, 2017). Fang et al. make note of two other forms of vehicle communication included in 
+intelligent transportation systems: vehicle-to-pedestrian (V2P) and vehicle-to-network (V2N). All 
+these communication mechanisms are collectively known as vehicle-to-everything (V2X). 
+V2X heavily relies on wireless technologies. Dedicated short range communications (DSRC) is 
+a type of wireless technology developed for the automotive platform, specifically for CAV usage. 
+Specifically, DSRC uses radio frequencies that lie in a range of the 5.9 GHz band, which is controlled 
+and allocated by the Federal Communications Commission (FCC). DSRC is the pathway that allows 
+CAVs to communicate with each other and the infrastructure. In terms of communication range, 
+DSRC covers a maximum of 500 feet in all weather conditions (Lee and Lim, 2013). IEEE 802.11p, 
+the IEEE standard for DSRC, has been implemented and endorsed by various automotive 
+manufacturers and the U.S. Department of Transportation. There are multiple layers, as laid out by 
+Kenney (2011), that are contained inside the DSRC platform: physical layer, data link layer, middle 
+layers, and message sublayer. 
+DSRC system is broken down into two categories of hardware: the on-board unit (OBU), a.k.a. 
+on-board equipment (OBE), and the road side unit (RSU) (Fang et al., 2017). As the name states, the 
+OBU is stationed within the vehicle and operates as a multichannel transceiver for transmitting and 
+receiving signals, while the RSU interchanges information with the OBU from elsewhere. The RSU 
+can be stationed anywhere from another vehicle to various infrastructures. An additional difference 
+between the OBU and the RSU is that the latter can only function when stationary, while the former 
+can operate either stationary or mobile. Fig. 1 shows how information is exchanged between OBUs 
+and RSUs. Due to the centralization of the data collected by OBUs, DSRC can be one of leading 
+reasons why CAVs will help the traffic congestion caused by the human facet of driving (NHTSA, 
+
+--- Page 8 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+7 
+ 
+2016). V2V networking has started to find its place in CAV accident prevention, but it will be 
+discussed further in the collision avoidance section. DSRC is one of the central reasons behind the 
+gradual increase of implementing V2V communications into collision avoidance. In research of 
+Huang and Lin (2014), vector-based cooperative collision warning system (VCCW), one component 
+of the proposed setup places the vehicle into a network of other CAVs where each vehicle 
+periodically updates its position with other vehicles using DSRC. The concept focuses on 
+intersections and curves, two of the hardest aspects for CAVs collision avoidance to overcome, but 
+they make note of DSRC related works that are more applicable to the highway facet of collision 
+avoidance (Huang and Lin, 2014; Young et al., 2008, 2009). 
+ 
+Fig. 1 DSRC architecture (United States Government Accountability Office Report to Congressional Requesters, 2015). 
+ 
+Through research and experiments, V2X can be expanded past the four primary categories to 
+include additional technologies and objects. Choi et al. (2017) design their work around 
+vehicle-to-railroad (V2R) communication and how it can be used as an additional warning system. 
+The setup can be broken down into two different formats: direct and indirect. In the direct case, the 
+warning transmission is sent directly to the vehicle. In the indirect case, the warning is sent first to the 
+RSU, which then sends the transmission to the OBU. Each case performs optimally in different 
+scenarios: the direct approach is for lower vehicle and locomotive speed and the indirect case is for 
+higher vehicle and locomotive speed. Choi et al. tested an omni-directional and bi-directional 
+
+--- Page 9 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+8 
+ 
+antenna. The bi-directional antenna proved to be advantageous in urban areas but performed 
+ineffectively in the rural environment. The counterpart was successful in the rural environment but 
+underachieved in the urban environment. Railroad crossings are often looked over when it comes to 
+both non-CAVs and CAVs. Nevertheless, they pose a larger threat to vehicle safety if taken lightly. 
+With the constant growth of populations and density in major cities, it becomes harder for DSRC to be 
+as effective in the benefits that they can provide, e.g., limits invisibility and blind spots (Biddlestone et 
+al., 2012). The Center for Automotive Research from Ohio State University developed a traffic 
+simulator called the Vehicle and Traffic Simulator (VaTSim), which they began testing in 2012 with 
+the help of Honda R&D Americas Inc. (Biddlestone et al., 2012). In this paper, Biddlestone et al. 
+reveal the overall performance of the simulator with DSRC produced accurate results and can be 
+exploited as a method to test DSRC further. 
+The Shapely-value game theory applies a concept that materials or rewards are distributed 
+based on the role a participant plays in cooperative action. Shah et al. (2018) explore the use of 
+Shapely-value for an adaptive transmit power cooperative congestion control (AC3) to reduce the 
+control channel congestion in situations with a high number of CAVs in a region. In current methods, 
+vehicles adjust the transmission power by the level of saturation of the control channel with reduction 
+in channel access; greater the saturation inversely lower the transmit power. Shah et al. offers 
+creating a “coalition” of CAVs, during times of high congestion events, to impartially reduce transmit 
+power by the contribution of each CAV, thereby reducing the overall load of the system without 
+sacrificing the coverage for all participants. 
+Lorenzen (2017) offers a modification to linear message rate integrated control (LIMERIC) to 
+assist in congestion control of the DSRC network. LIMERIC is a message rate congestion control that 
+allows for a robust stability and convergence in a noiseless environment to adjust the messaging rate 
+of each CAV (Kenney et al., 2011). However, Lorenzen offers that LIMERIC is designed to be an 
+unlimited self-regulating system, and it falls short by being too aggressive and compromising the 
+stability of the system. Self-weighted rate control (SWeRC) is the modification that allows for a fair 
+message rate of convergence. Adjusting the weighting of the convergence parameter β reduces 
+oscillating of message rates by using the previous normalized rate as the maximum achievable rate 
+(Lorenzen, 2017). The weighting calculation is shown below. 
+
+--- Page 10 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+9 
+ 
+c
+t
+max
+xtime
+(
+1)
+1
+(
+1)
+r t
+r t
+c
+K
+R
+T
+ω
+−
+=
+=
+−
+                                                   (1) 
+where  is the weighting for LIMERIC control, c(
+1)
+r t −
+ is the total channel utilization of the previous 
+iteration,  is the maximum local node capacity at the maximum rate Rmax considering the 
+transmission delay Txtime, K is the number of nodes, and rt is the group rate that converges to the 
+target utilization of resource allocations. The theory was proven in testing, but it was limited to 
+stationary nodes at close range. 
+The intention of DSRC is to be a path for V2X communication, but it has the ability to be applied 
+into another use, range estimation, which is completed by expensive LIDAR or RADAR sensors a 
+majority of the time. Niesen et al. (2017) propose the use of periodic broadcast ranging (PBR) to 
+determine the distance between two CAVs. The method is based on the fact that a wireless signal's 
+propagation delay is proportional to the distance traveled from a transmitter to the receiver. The 
+research also has assumptions that safety messages are sent intermittently in the DSRC standard 
+with an estimated time period of T = 0.1 s and the CAV internal clocks are unsynchronized. Vehicles 
+ and  transmit a safety message with a timestamp located within the message, and a timestamp is 
+created when the safety message is received. These timestamps, referred to as “departing" and 
+“arriving", permit the calculating of the true synchronized time in between the two CAVs. Once time is 
+synchronized, the range is estimated by the travel time in between the vehicles. The estimation of 
+distance is calculated by the equations below. 
+∆sA (n) = (1+δ) ∆tD (n) + (dD (n) - dD (n-1))/c+∆zA (n) 
+ 
+ 
+(2) 
+∆sD (n) = (1+δ) ∆tA (n) + (dD (n) + dA (n-1))/c+∆zD (n) 
+ 
+ 
+(3) 
+with  
+                                            ∆zA (n) ≜ zA (n) - zA (n-1) 
+ 
+ 
+         (4)  
+ ∆zD (n) ≜ zA (n) - zD (n-1) 
+ 
+ 
+             (5) 
+where  is the th message, ∆	, ∆
+, ∆	, and ∆
+ are the timestamp differences for vehicles  and 
+ in departing (D) and arriving (A) messages, respectively,  is clock drift,  is the speed of light, and 
+ is receiver noise (Niesen et al., 2017). 
+One significant drawback of DSRC powered V2X communications is its low scalability. When 
+the number of nearby vehicles is high, it is unable to provide satisfactory time-probabilistic 
+characteristics (Campolo et al., 2011; Van Eenennaam et al., 2009). In addition, DSRC is mostly 
+
+--- Page 11 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+10 
+ 
+designed for quick transmission of short-range basic safety messages and does not offer high 
+bandwidth and low latency communication channels for more advanced V2X applications such as 
+autonomous driving. 
+An alternative to DSRC is cellular based V2X (C-V2X) communications. However, 3GPP LTE, 
+a 4G V2X solution, a.k.a., release 14 C-V2X, is incapable of providing high throughput and low 
+latency for advanced applications. In study of Vinel (2012), Vinel develops analytical frameworks to 
+compare the performance of DSRC and 3GPP LTE in terms of the probability to deliver the safety 
+beacon before the expiration of the deadline. Numerical results show that when 50 vehicles are 
+present, the probability of 3GPP LTE is actually worse than that of DSRC, which is at 83% and 
+already below the requirements in typical safety application. What is really promising, and future 
+proof is the 5G C-V2X, i.e., release 15 and 16 C-V2X. Compared with DSRC and 3GPP LTE, 5G 
+C-V2X offers very higher throughput and reliability (99.999%), longer range (443 m line of sight and 
+107 m none line of sight), and very lower latency (10 ms end-to-end and 1 ms over-the-air) (5G 
+Americas, 2018). In addition, 5G C-V2X provides direct messaging services among CAVs, allowing 
+short-range communication when cellular towers are unavailable. Like other generations of cellular 
+services, 5G requires years of development and evolution. The standard of 5G C-V2X was 
+completed in March 2017, and the real products will be available after 5G becomes mature after 
+2020. The roadmap of 5G can be found in IEEE report (IEEE 5G, 2017). 
+DSRC is a vital component in the environment of CAV safety and data transfer. A constant and 
+dependable wireless signal that extends past findings of 500 feet (Lee and Lim, 2013) allows for 
+larger participation and receipt of safety messages. When the number of CAVs that are occupying an 
+area increase greatly, the demand of communication congestion control rises. Shah et al. (2018) and 
+Lorenzen (2017) are some of the examples needed to moderate the demand of wireless systems in 
+high usage events. DSRC applications will integrate more into the everyday use of CAVs and 
+passengers, while congestion control and coverage range are essential in road safety. 
+While DSRC is mostly targeted for basic safety applications, 5G C-V2X will enable more 
+advanced CAV features such as autonomous driving and highway platoon. Compared with DSRC, 
+5G C-V2X has significantly increased throughput and reliability and reduced latency. Currently, 5G 
+C-V2X products are being developed, and it is important to test, verify, and improve the performance 
+when they become available. Mathematical models are also needed to compare the performance of 
+
+--- Page 12 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+11 
+ 
+5G C-V2X and DSRC in vehicular applications. In addition, it is expected that the two wireless 
+communication technologies will co-exist in the foreseeable future. Therefore, it is mandatory that we 
+understand the pros and cons of using both signals. Real-world testbeds are needed to test 
+co-existence and backward compatibilities under not only normal conditions, but also inclement 
+weather and complex terrain. Finally, new network control methods are needed so that even if certain 
+wireless links’ quality is degraded severely due to congestion and/or interference, the overall 
+effectiveness of the inter-CAV network is not significantly reduced so as not to cause catastrophic 
+disasters. 
+3. Security of CAV 
+CAVs, along with any other computing platform, are susceptible to two forms of attack, passive and 
+active. Passive attacks read information that is being transferred between a CAV and another 
+communication point, e.g., RSU and a different CAV. This threat type has lower risk compared to 
+active attacks where the results may end fatally. Active attacks may consist of spoofing incorrect 
+data, resending a previous message to obtain validated system keys, message modification of 
+relevant data, or denying of service that prevents data transfer on an affected server where data 
+transference is vital. 
+ 
+3.1. Passive attacks 
+ 
+ 
+A CAV will broadcast a message containing verified velocity, location, a pseudonym, i.e.,  or , for 
+the car, and other information to alert other vehicles nearby for safety purposes. Attackers may 
+eavesdrop location information and car pseudonyms for initial selection of target car. Verified data, 
+similar to broadcast safety messages, is transferred to an RSU through a virtual machine (VM) (Yu et 
+al., 2013). VMs are secure cloud connections to local RSUs and the CAV. The data from the VM gives 
+the attacker a second observable data group. In Fig. 2, Kang et al. (2016) explained a method that 
+obtaining unique and precise information from a roadside location unit (RLU) about a target car can 
+observe a tie between VM and . As long as the VM is unrevised through the exchanges from one 
+RLU to another or among different locations, the attacker is allowed to collect location data 
+continually. 
+This threat could be modified to the second type of attack if the VM identity and the vehicle 
+
+--- Page 13 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+12 
+ 
+pseudonym used are not changed at the same time. An attacker can link VM identity and the 
+pseudonym, if either one has a name modification for security and the other remains the same. If an 
+attacker is monitoring a target car’s location data during the asynchronous change, the unaltered 
+parameter, for instance a vehicle pseudonym or the assigned VM, becomes a constant identifier 
+during the change, referred to as linkage mapping attack (Kang et al., 2016). 
+ 
+Fig. 2   Observation mapping attack (Kang et al., 2016). 
+ 
+Fig. 3 displays that even though the VM identity is changed at time interval, , the pseudonym 
+remains  in a separate time interval . 
+Kang et al. (2016) offers solutions in these types of attacks. Observation mapping mitigation 
+relies on applying a one-time use of VM identifiers. Vehicles register to the local network, applying for 
+randomized VM identifiers from a VM manager. Through an encrypted connection, the VM manager 
+assigns a store of VM identifiers to use for every location request attempt. Once the attribute is used 
+by that specific vehicle, it will not be reused until it has been reassigned by the VM manager in 
+another vehicle. So repeated use of an attribute cannot be tracked by simple observation. Linkage 
+mapping attack prevention employs only synchronous pseudonym and identifier changes. The main 
+part of the attack is based on asynchronous application of vehicle tags. The vehicle requests a 
+pseudonym/identifier change, the two machines determine and confirm a window for receiving and 
+application of new tag. At specified time, , the vehicle and VM manager apply the change to both 
+pseudonym and VM identifier. That synchronized change removes the traceable memory of the 
+target vehicle (Kang et al., 2016). 
+
+--- Page 14 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+13 
+ 
+ 
+Fig. 3 Linkage mapping attack (Kang et al., 2016) 
+3.2. Active attacks 
+At roadway level, GPS signals are susceptible to malicious jamming attempts because their power 
+levels are low after long distance attenuation. Using a jamming signal as an active attack, the GPS 
+can be overpowered and rendered ineffective. The danger comes in the inability to determine when 
+and where to stop without the locating signal. In an attempt to reduce the effectiveness of jamming, 
+Ozdemir and Aksoy (2017) combine adaptive null-steering with antenna arrays to determine a 
+direction of origin for unwanted multiple jamming signals. Once direction of the signals is estimated, a 
+waveform needs to be produced for counteracting the jamming. Using an orthogonal array 
+optimization method conceived by Taguchi (Ozdemir and Aksoy, 2017) the system compares an 
+incoming jamming signal to a proposed broadcast cancellation signal using a fitness function. 
+4
+1
+2
+1
+( )
+2
+(
+cos(
+)
+cos( ))
+2
+n
+n
+n
+f x
+a
+kd
+θ
+=
+−
+= ∑
+                                                              (6) 
+180
+desired
+obtained
+0
+Fitness
+| AF
+( )
+AF
+( ) | d
+θ
+θ
+θ
+= ∫
+−
+
+
+                                                 (7) 
+where AF is the array function for optimization, an is the value looking to be optimized for correct 
+radiation pattern, k is the wave number, d is the half-wavelength element spacing, AF  is the 
+side lobe level limited, null placed pattern, and AF !"#  is the radiation pattern obtained from AF 
+equation (Ozdemir and Aksoy, 2017). As the integrated number moves closer to zero, the fitness 
+function value represents a better-quality signal waveform match and thus reducing the effect of the 
+jamming signal. 
+An active attack may involve the intelligent transportation system as well as CAVs. Changing 
+the distance in between autonomous vehicles can disrupt the flow of traffic and increase chances of 
+accidents. Ghanavati et al. (2017) determined through partial differential equations and Lyapunov 
+functions that by subtly modifying velocities between malicious and normal vehicles, the spatial rules 
+
+--- Page 15 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+14 
+ 
+that control distance between the two cars will attempt to correct and lead to shock waves of traffic 
+flow, traffic jams, etc. The logic is anisotropic, meaning that CAVs weigh the actions of vehicles in 
+front significantly higher than ones located behind. This attack method does not involve connection of 
+software or hardware located on CAVs, but exclusively uses operating rules for distance control to 
+manipulate velocity and density of CAVs in a given section of roadway. Targeted vehicles are 
+manipulated into a predetermined speed and capacity profile for the attack to work effectively. Once 
+at the desired parameters, malicious vehicles subtly reduce speed to trigger the distance control 
+functions on the vehicles located behind. The smaller in velocity alteration, the greater the 
+effectiveness of the attack is due to the difficulty of detection. 
+Victim of a Global Navigation Satellite System (GNSS) spoofing attack is misled by illegitimate 
+broadcast signals mistakenly treated as trustworthy. Spoofers can jam the original GNSS signal, 
+causing the receiver to look for and acquire the incorrect signal instead of the proper signal. A more 
+effective spoof is to gradually increase the amplitude of the illegitimate signal, Aspoof, until the 
+amplitude of the real signal, AGNSS, is overpowered while attempting to maintain a Doppler-shift 
+near to the correct GNSS signal to avoid detection. The third possible spoofing attack uses a null 
+effect, in which, two spoofing signals are broadcasted: the first in a conventional spoofing method, 
+while the second signal is the negative phase (180 degrees out of the proper GNSS signal phase), in 
+effect canceling that signal out (Psiaki and Humphreys, 2016). A method of detecting spoofing 
+attempts is using the automatic gain control (AGC) located on the front-end components of the GNSS 
+receiver. Akos (2012) shows in efforts to spoof the GNSS signal, the total power levels of signals 
+coming into the GNSS receiver increases. The GNSS receiver employs an AGC to control the 
+constant power level that inputs into the analog-to-digital converter. Signal levels incoming to the 
+AGC are inverted compared with the antenna, meaning that when power levels are low at the 
+antenna, the AGC needs additional power to amplify the signal to the desired output level. When the 
+AGC power draw is dropping, that is a good indicator of a spoofing attempt due to the additional 
+signal levels added by the attack (Akos, 2012). 
+Han et al. (2017) develop a detection and mitigation method for spoofing using carrier frequency 
+information and code delays. This method works successfully when the spoofing signals are more 
+powerful than the authentic GNSS signals. When used in conjunction with other detection methods, 
+low or equal power attacks are still detected. Their method can be implemented in two modules, 
+
+--- Page 16 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+15 
+ 
+centralized and distributed spoofing-mitigation. 
+The denial of service (DoS) attack is a detrimental process that produces false messages to the 
+tipping point where the infected system appears to be unavailable or non-functioning. In the CAV 
+platform, this attack is especially dangerous. Malina et al. (2015) use group verification with seven 
+state process to remove harmful users on the communication channels. The seven stages are: 
+setup, registration, join, signing, categorized verification, trace, and revocation. 
+Biron et al. (2018) determined a real-time detection of a DoS attack on cooper active adaptive 
+cruise control (CACC) with considerations for vehicle platooning. They point out that most DoS 
+attacks are packet loss or time delays, and they focus on the delay as the marker for the intrusion. 
+They create the dynamics for the detection the time delay between the vehicles by using the following 
+equations (Biron et al., 2018). 
+$%&' = )*+ ,$' −$%'.                                                                         (8) 
+/%&' =
+01
+2 3' −456 +
+08
+2 9 $%' −456 +
+
+29 : 
++ 5
+ℎ$'< + 1
+ℎ/'< −/&'<>̂ 
++),: −/%'.                                                     (9) 
+>̂& = −
+@A
+2 /&'< ,: −/%'.                                                                 (10)
+where $%'(t) and /%'(t) are the estimated relative velocity and acceleration, respectively; 56 and 5 
+present controller gains; h is headway time; >̂ is the estimated  delay; )*, ), ) are  the constant  
+detector  gains to be designed; $'< and /'< on-board vehicle sensor measurements for 
+vehicle B −1; 3' and $' are radar measurement from vehicle B −1; : filtered version of the 
+signal )*sgn ,$'t −$%'. (Biron et al., 2018). Radar measurement noise, un-modeled dynamics, 
+and underlying delays in communications were not considered with the dynamics equations. To 
+combat this, a probability for false alarms was constructed. 
+GH	 = I
+JKLdL
+∞
+N
+ 
+ 
+ 
+ 
+(11) 
+where  is the selected threshold for DoS attack and JKL is the >̂ probability distribution under no 
+DoS attack in the dedicated short-range communications (Biron et al., 2018). 
+The management of the vehicular Ad-Hoc networks (VANETs) consists of an approved 
+authority (AA) and local general managers (GM). The AA creates pseudonyms and elliptic curve 
+digital signature algorithm (ECDSA) key pairs for use on the network. Individuals sign up for a verified 
+
+--- Page 17 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+16 
+ 
+driver profile and register each vehicle with the AA. This solution is designed for a non-autonomous 
+vehicle environment, but it also applies to CAVs because passengers of CAVs can attack and 
+manipulate the network. AA processes the individual’s name and scans the global revocation list 
+(GRL) (Malina et al., 2015) for a hit. The GRL contains all banned users and vehicles. The 
+user/vehicle has verified certificate from AA and attempts to join the VANET by a second verification 
+with the local network GM. After gaining access to the VANET, users/vehicles may broadcast 
+messages throughout the local network. Categorized verification works at the single vehicle level or 
+the group level. At the group level, verification can accommodate n messages (Malina et al., 2015) 
+use the small exponents test to check broadcasted messages, randomly. 
+∏
+PQR
+ST
+U
+QV
+=  W X∏
+4QR
+YTZℎ<YT[<YT\+
+<]T9
+ST
+U
+QV
+, +_  W X∏
+4QR
+]Tℎ<YT`<YTa9
+ST
+U
+QV
+, _                    (12) 
+and if 
+1bc = ,PQdPQ.
+<STQ
+STeTZ<STfTg,YTa<YT\.ST                                                       (13) 
+where  is time stamp, h is different component of the signature, i is component from the product of 
+the group signature bilinear map, L is element of the group secret key, $ is element of the group 
+public key, j is the hash value in the group signature, k are multiplicative cyclic group of a prime 
+order of a temporary pairing, W and  are random elements. If these two equations prove true, then 
+the signed message is valid. Invalid messages are flagged: GMs determine which users the 
+messages are originated from and added their name to the GRL with the approval of AA. 
+The layer where sensors interact with onboard computers on all vehicles is controller area 
+network (CAN), and it designates the location of data payloads. An attack could use the CAN to 
+intercept, modify, and inject compromised data for gaining control of a specific system or complete 
+car. A properly structured malicious data packet is problematic to detect because that packet consists 
+of valid messages, even though dangerous, located in proper data fields and transmitted at the 
+recognized timing interval. The assessment of a CAN attack is challenging since vehicle 
+manufacturers use different data packet protocols in brands, years, or models. It is difficult to 
+program and detect an attack designed for a protocol that only works for one-year model. Taylor et al. 
+(2018) use anomaly detection powered by efficient recurrent neural networks (RNNs) (Wang et al., 
+2017), where previous information, words, or calculations are utilized to identify the next malicious 
+activity on CAN bus. Recorded CAN transmissions of a driving session is used first to teach the RNN 
+
+--- Page 18 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+17 
+ 
+what to look for. Specifically, the group (Taylor et al.,2018) perceived word sequences on the CAN 
+bus mimicking the structure of a vector-space model. The RNN can extrapolate data packets similarly 
+to words of the vector-space model. The derived difference in predicted data and actual data creates 
+an anomaly signal by using a log loss function shown below. 
+),lmU,n, lU,n. = −4lU,nlog,lmU,n + q. + ,1 −lU,n.log,1 −lmU,n + q.9                       (14) 
+ where lU,n is the rth bit in packet JU, lmU,n  is the rth bit’s estimated value, and q is a fixed value to 
+limit the maximum loss.  
+Moore et al. (2017) work on a solution for the regular-frequency signal injection attacks, in 
+which an adversary repeatedly injects CAN bus signals with fixed process ID (PID) and at a rate 
+greater than or equal to the expected rate of signal. The solution is based on the observation that the 
+most PIDs’ signals are regularly occurring, and the inter-signal arrival time never differs more than a 
+24% from expectation. Specifically, the authors exploit the relative regularity of the signals by using 
+the percent of absolute error of an observed wait time from expectation, which is obtained from a few 
+minutes of training when there is no active attack. To verify the effectiveness of the proposed method, 
+they injected three types of attacks using an Arduino board connected to a vehicle via the OBD-II 
+port. The first two attacks manipulate the runtime lights when the engine is on/off, and the third one 
+forces the car’s engine to turn off. Experimental data obtained from real-world CAN bus signals 
+indicate that the true positive and false discovery rate of the method is 0.99998 and 0.00298, 
+respectively. 
+To prevent security attacks, Satam et al. (2017) have sought out a manner for developers to 
+use a systematic approach to include security programming during creation of entertainment or 
+information services, instead of including the security measures after producing the desired service 
+of music, destination routing, or other applications. The auto information development framework 
+(AIDF) in Fig. 4 comprises of end devices, communications, services, and applications. Information 
+that transfers throughout the system is subject to a passive or active attack. The auto security 
+development framework (ASDF) employs multi-level intrusion detection to flag suspected activity by 
+comparing it to normal system usage. A decision fusion engine combines all the flagged content for 
+authentication along with reducing unnecessary handling of false alarms. Feedback from the 
+decision fusion engine allows the ASDF to take actions on possible attack surfaces to mitigate 
+attempt. 
+
+--- Page 19 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+18 
+ 
+There have been various passive and active attacks on CAVs. Although solutions to these 
+existing security threats are available, it is important to continue to keep investigating on possible 
+new threats and improving solutions of current security systems found in CAVs. 
+One area that needs improvement is the false discover rate of security attacks on the CAN bus. 
+Although the result of 0.00298 in study of Moore et al. (2017) is quite impressive, it may still cause 
+quite some CAVs to be mistakenly classified as under attack, given the fact that many CAVs will be 
+running for an extended period. 
+5G C-V2X security is another important research area. Since 5G C-V2X products are still 
+under development, the related security attacks will not start until at least a couple of years later. The 
+good news is that the being-developed 5G security features are well defined and heavily rely on 
+authentication and encryption. Nonetheless, its effectiveness needs to be tested thoroughly before 
+and after CAVs are deployed in the field, and the security protocols may need to be updated later. 
+ 
+Fig. 4 Auto information development framework (Satam et al., 2017). 
+ 
+Regardless of the types of security threats, they can be equated to an organism: they can be 
+stopped for a period of time but may evolve into a different threat by finding a different manipulation. 
+
+--- Page 20 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+19 
+ 
+In addition, human factors of making mistakes give hackers opportunities to exploit viable 
+development frameworks in vetting malicious programs. Given the fact that CAVs will not be operated 
+by drivers, we believe that artificial intelligence and machine learning algorithms are needed to 
+automatically detect security problems with no or minimal human intervention. In addition, CAVs 
+should have basic rules built-in so that they will never cause crashes and hurt pedestrians on 
+purpose. This is extremely important in the worst and extreme case that some CAVs are fully 
+compromised. 
+4. Traffic intersection navigation 
+The requirement for traffic lights at intersection diminishes when CAVs take over the roadways. In 
+this section, we discuss both “centralized” and “de-centralized” intersection control approaches. The 
+difference between the two is that the infrastructure makes decisions in the former methods whereas 
+the CAVs make decisions in the latter. 
+ 4.1. Centralized navigation 
+Li and Wang (2006) propose a centralized cooperative driving mechanism for an isolated blind 
+crossing. Their goal is to achieve both safety and efficiency using inter-vehicle communications, 
+which is done by dividing vehicles within a virtual circle centered at the junction into groups of 
+maximize size 3. To ensure collision free driving, the authors come up with the concept of safe driving 
+patterns, which are essentially vehicle pairs that can pass the intersection simultaneously without the 
+risk of colliding into each other. A driving schedule can then be represented as an ordered series of 
+safe patterns. The authors develop the basic solution tree generation algorithm to generate the 
+possible driving schedules. By using the first-in-first-out property of traffic flow, the modified solution 
+tree generation algorithm is proposed by the authors to prune the solution tree. Furthermore, the 
+authors use the safety pair labeling algorithm to prune the unsafe driving schedules from the solution 
+tree. To come up with the best cooperative driving schedule and vehicle trajectory, the authors divide 
+the driving scenarios into four cases and derive an optimization problem for each case. Finally, the 
+best driving plan is obtained by comparing all feasible solutions and finding the one that yields the 
+least amount of time. The method proposed in the paper is verified by simulation. The authors 
+discuss several future directions in the paper, including combating the complexity of the centralized 
+approach, improving the tree-based algorithms for multiple-lane crossings cases, incorporating 
+
+--- Page 21 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+20 
+ 
+real-world driving scenarios, and relaxing some of the assumptions such as knowledge of perfect 
+vehicle speed and position. 
+Dresner and Stone (2008) suggested the control of an isolated traffic intersection via CAVs 
+communicating with an autonomous agent. A reservation-based controller is proposed to either grant 
+or reject requested reservations based on an intersection control policy. The authors show that the 
+proposed approach can dramatically reduce the average travel delay compared with a traffic signal 
+controller. They also consider some practical factors in their experimentations including 5% packet 
+loss in communications and combination with current traffic signal controllers to allow both human 
+drivers and CAVs to use the system.  
+Zohdy et al. (2012) control CAV trajectories using cooperative adaptive cruise control (CACC) 
+systems to avoid collisions and minimize delays at an isolated intersection. They assume that the 
+followings are known to the controller: physical characteristics of the CAVs, entry speed and 
+acceleration of the vehicles, weather condition (wet or dry), and intersection characteristics (number 
+of lanes, lane width, etc.). To minimize the amount of time the vehicles use the intersection, the 
+authors assume that the CAVs pass through the intersection at speed limit, i.e., the highest speed. To 
+this end, the authors propose a two-zone intersection model (shown in Fig. 5): in Zone I, vehicles 
+accelerate to maximum speed and maintain that speed until the end of the designated length; in Zone 
+II, CAVs may change their speeds, but the maximum speed should be maintained in the end of the 
+zone. Assuming that all CAVs traverse the intersection at full speed, the authors simplify the 
+optimization problem, and the only control variable is the vehicle arrival time at the intersection stop 
+bar. By defining the optimal time (OT) to be the shortest time possible to reach the stop line (i.e., no 
+deceleration in Zone II), the objective of the optimization problem is to minimize the sum of the 
+differences between the actual time (AT) and OT while the constraints include the 
+first-come-first-served rule in the same lane and no conflict among vehicles in the intersection box. 
+To make the controller as close to real-world scenarios as possible, a vehicle dynamics model and 
+the Virginia Tech Comprehensive Power-based Fuel Model (VT-CPFM) are used. The proposed 
+method is suitable for receding horizon control, and simulation results indicate that the savings in 
+delay and fuel consumption are in the range of 91 and 82 percent, respectively, relative to 
+conventional fixed-cycle signal control. In future work, the authors wish to include more types of 
+vehicles and incorporate manually driven cars, pedestrian movements, etc. into the system model. 
+
+--- Page 22 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+21 
+ 
+Lee and Park (2012) develop a centralized cooperative vehicle intersection control (CVIC) 
+algorithm for CAV only scenarios at an isolated intersection without turning movements. The goal is 
+to design the algorithm to manipulate individual vehicle’s maneuvers so that the vehicles can safely 
+cross the intersection without collisions. The paper assumes perfect inter-CAV communications, 
+level terrain, and zero friction between the tire and the ground. By studying the vehicle dynamics and 
+the trajectories, the authors derive an optimization problem in which the objective is to minimize the 
+total length of overlapped trajectories subject to three constraints: (1) maximum acceleration or 
+deceleration rate; (2) maximum and minimum speeds; and (3) minimum headways between two 
+consecutive vehicles in the same lane. 
+ 
+Fig. 5 Intersection and zone models of iCACC (Zohdy et al., 2012). 
+ 
+To maximize the chance of finding the optimal solution to the derived nonlinear constrained 
+programming problem, three different methods provided by MATLAB: active set method based on 
+sequential quadratic programming, the interior point method, and the genetic algorithm are used by 
+the authors. In case that the problem is infeasible, the system enters a rule-based recovery mode in 
+order to ensure safety. The performance of the CVIC algorithm and the controller is verified by 
+simulation using the VISSIM simulator. The results show that compared with the actuated 
+intersection control, 99% and 33% of stop delay and total travel time reductions, respectively, are 
+achieved. In addition, the authors use the VT-Micro model in the simulation to investigate the 
+environmental impacts. It turns out that the CVIC algorithm contributes to 44% reductions of CO2 
+
+--- Page 23 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+22 
+ 
+emission and 44% savings of fuel consumption. The CVIC algorithm is extended in study of Lee et al. 
+(2013) for a corridor consisting of multiple intersections. 
+Similar to what they achieve in studies of Dresner and Stone (2008), Huang et al. (2012) come 
+up with a more advanced reservation-based intersection controller for CAVs. Their contributions are 
+multi-fold. First, they develop an integrated simulation testbed with four independent layers: traffic 
+simulation, communication, infrastructure, and analyzer. The encapsulation property makes the 
+testbed very flexible. For example, the communication layer may be integrated with a network 
+simulator, such as ns-3 or NetSim, in order to simulate complex and real-world communication 
+environments. Second, the new reservation algorithm recommends a speed profile for vehicles to 
+follow until they leave the intersection and also permits assigning different priorities to incoming 
+reservation requests. Third, the integrated simulator evaluates not only mobility (e.g., average wait 
+time), but also environmental (e.g., fuel and emission) benefits. Simulation results show that the 
+proposed approach can reduce the vehicle delay by 85%, fuel consumption by 50%, and emissions 
+by 39%-50%. Note that the integrated simulation in study of Huang et al. (2012) can also be used to 
+simulate multiple interconnected intersections. 
+Wu et al. (2013) develop a sequence-based framework, known as cooperative vehicle-actuator 
+system, for isolated intersections. Both CAVs and manually driven vehicles are accommodated by 
+the system, where the goal is to find the optimal passing sequence of all the vehicles. Two different 
+control strategies are proposed. In the first approach, a receding horizon controller that assumes full 
+knowledge about the cars in a limited time window is used to solve an optimization problem, in which 
+the objective is to find the optimal sequence that minimizes the maximum exit time of the last vehicle 
+subject to safe headway constraints. It is shown by the authors that dynamic programming can 
+dramatically reduce the time complexity when the number of lanes is fixed. In the second method, a 
+petri net model is used for two-way intersections, and some simple and local rules that lead to a 
+global complex behavior are dis covered. Microscopic simulations are used to show that both control 
+strategies work equally well and can dramatically reduce average delay compared with other 
+approaches. The authors also run experiments at a physical intersection to prove the feasibility of the 
+system in real-world applications. 
+Kamal et al. (2015) study a centralized CAV coordination problem at isolated intersections 
+using model predictive control (MPC) and nonlinear programming. The scheme ensures safety by 
+
+--- Page 24 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+23 
+ 
+preventing each pair of conflicting vehicles from approaching their cross-collision point (CCP); it also 
+utilizes the intersection more efficiently because not the whole intersection is reserved at once. In the 
+MPC framework, a constrained nonlinear programming problem (NLP) is solved over a finite horizon 
+to derive the optimal control sequences of the vehicles. Specifically, the objective function of the NLP 
+is 
+t = u u v*w$' + 1 −$
+x
+'V
+y<
+zVK
++ u u v{,|'.
+
+x
+'V
+y<
+zVK
++ u u u }',Q
+x
+QV'~
+x<
+'V
+y<
+zVK
+                            15 
+where T is the length (in steps) of the prediction horizon,$ is the desired velocity, and v*w 
+and v{ are weight coefficients, which are for quite computationally demanding, and 
+heuristics are often needed to return the (near) optimal solutions quickly. 
+Zhang et al. (2015) develop a state-driven priority scheduling mechanism for CAVs passing 
+through isolated intersections. Some terminologies in computing such as critical section and priority 
+inversion are applied to intersections and CAVs. The authors first define critical sections of 
+intersections and then come up with detailed parameters of various traffic objects, including lane and 
+path, critical sections, vehicle model, and reservation-oriented vehicle action model. The authors 
+then derive the state transition diagram and several rules, using which a priority scheduling algorithm 
+known as sPriorFIFO is developed and verified by simulation. 
+Wuthishuwong and Traechtler (2017) offered a bi-level control: intersection and network 
+level for intersection safety. This control is using the autonomous agent, referred to as autonomous 
+intersection management (AIM). Intersection level transfers acceptable routes and speeds via 
+vehicle to infrastructure communication, while network level employs infrastructure to infrastructure 
+to control throughput and intersection balancing at a neighborhood level permitting the quickest and 
+most efficient routes of travel. The AIM determines the neighborhood traffic density by polling all 
+requested messages from incoming CAVs. The traffic density and optimal velocity through is 
+calculated by the intersection manager using the consensus algorithm using the incoming and 
+outgoing vehicle numbers in other networked intersections. 
+Lin et al. (2017) explain a methodology that an intersection manager, referred to as connected 
+vehicle center (CVC), controls conflict sections with buffer assignments. Buffer assignments are like 
+reservation-based control that was introduced by Dresner and Stone (2008) .Conflict sections are the 
+points where two paths through an intersection bisect each other and may be locations of traffic 
+
+--- Page 25 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+24 
+ 
+incidents. Lin et al. proposed using two separate stop lines, one for CAVs and the other for human 
+drivers, to help manage the intersection. The first stop line would regulate by visual traffic lights for 
+the human drivers, and further back would lie the second stop line that CAVs use to determine when 
+to enter the intersection. If there is a failure to calculate a crossing opportunity by the CVC, the CAV 
+will stop at the first stop line, which is closer to the intersection, and wait for a special crossing time 
+interval and a three-stage linear speed profile: accelerating, intermediate, and decelerating. 
+In a preassigned or reservation arranged bisection plan, proper vehicle spacing is required to 
+ensure safe navigation of the intersection. Chai et al. (2017) employ four safety states of the distance 
+between CAVs that are shown in Fig. 6: invalid, failure, valid, and small value. Invalid and valid are 
+straight forward descriptions with invalid not having the required distance for complete passage, and 
+valid slot finishes the crossing while maintaining the suggested velocity profile from the intersection 
+manager. A failure slot is a condition where a distance between crossing vehicles permits traveling 
+through the slot but at a velocity profile that exceeds the posted speed limits of the intersection. 
+Finally, a small value slot is a length that allows a car to cross but accelerating quickly and not 
+exceeding the posted speed limit. The intersection manager determines the category of each vehicle 
+by using the length of the car, velocity profile (which can be adjusted), and the number of vehicles 
+interacting within the intersection. They define two methods: location optimization on sequence 
+evaluation (LOOSE) and cooperative optimization method for previous allocation alternatively 
+transforming (COMPACT). LOOSE is the methodology that enforces proper vehicle spacing, and 
+COMPACT distributes velocity profiles for intersection navigation. 
+
+--- Page 26 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+25 
+ 
+ 
+Fig. 6 Chai's slot types (Chai et al., 2017). 
+ 
+Another reservation-based method is submitted by Levin et al. (2017) where the use of an 
+integer program to optimize the selection of conflict region tiles in an intersection allows for a 
+reduction in total travel time. The tile-based reservation method lends itself to smaller intersections 
+for flow rate improvements. They allow simultaneous control of an intersection tile in which two 
+vehicles are turning in conflicting movements if the time step allows. Time steps are the divisions of 
+time allocated for a vehicle to move through the intersection completely. 
+Levin and Rey (2017) offer a modification to autonomous intersection management in the 
+application of their new mixed integer linear program (MILP). The intersection manager offers a 
+reservation order placement to the incoming CAV, but that offering may be accepted or rejected. If 
+the placement is turned down, a penalty is implemented to the CAV in an additional delay by requiring 
+the new reservation request. This method emphasizes the acceptance of the initial reservation 
+placement. Levin and Rey present an objective function found in their MILP that may adjust the 
+reservations to balanced and fair state to all users of the intersection. 
+min ∑
+',''
+~ + >''
+~.
+'
+                                                                 (16) 
+where B is CAV labeled B,  is the set of vehicles, ' is the priority of each CAV, and ''
+~ + >''
+~ is 
+the time CAV B leaves the intersection. Combining the objective function and MILP, Levin and Rey 
+
+--- Page 27 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+26 
+ 
+coin the name conflict-point intersection control (CPIC), which outperforms first come, first served 
+(FCFS) policy by reducing total delay times of intersections with densities of 450 vehicles per hour 
+from over 1000 s down to just over 200 s. 
+A guaranteed hull methodology relies on the paths of all vehicles are accounted for. Colombo 
+et al. (2017) build a control mechanism using guaranteed hull principles that use clusters or platoons 
+to bisect an intersection. The intersection manager builds impromptu vehicle groups to reduce the 
+number of conflicts point reservations. This mechanism may be susceptible to reduced throughput if 
+cluster sizes are not optimized depending on roadway occupancy. Wu et al. (2017) also employ a 
+methodology that gives preference to platoons (vehicle groups) in certain situations. An instance of 
+the methodology would be an intersection having two CAVs headed eastbound with estimated 
+entrance to the intersection at 3 and 7 s. In a northbound lane, six CAVs have an intersection arrival 
+time of 4 to 6.5 s. The rolling time window algorithm offered by Wu et al. permits the platoon to be split 
+into two smaller groups while allowing most of the platoon to bisect the intersection on the second 
+step after the CAV with the arrival time of 3 s. 
+Intersection control includes the velocity profile of cars, permitting entrance into the 
+intersection, and so on. There are participants of intersections that do not directly connect with the 
+manager. Pedestrians and cyclists use intersections in similar manners to CAVs, however they are 
+considered higher priority in most cases. It is the responsibility of the manager to allow intersection 
+crossings of these groups. Sarkar et al. (2017) propose a path mapping process that uses acquired 
+data from a camera mounted on an intersection to develop cluster patterns of vehicles’ paths. 
+The process uses the camera stills to determine velocity and inferred path direction (Sarkar et 
+al., 2017). These patterns are used to create what they call an “influence network.” The network 
+applies learned patterns to incorporate pedestrian and cyclist crossing paths. 
+4.2. Decentralized navigation 
+ 
+An earlier effort of decentralized navigation can be found in study of Milanés et al. (2010), where the 
+authors use a CAV and a manually driven car to do intersection control. Both cars are 
+mass-produced vehicles, equipped with differential global positioning system (DGPS), PCs, and 
+Wi-Fi adapters. The major difference between the two vehicles is that the former’s actuators, i.e., 
+steering wheel, throttle, and brake, are modified for autonomous driving. The goal of the work is to 
+control the CAV based on the information of the other manually driven car to let the two vehicles pass 
+
+--- Page 28 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+27 
+ 
+an intersection collision free. The control system contains two parts. In the first part, the CAV uses 
+V2V communications to detect the other vehicle’s location, velocity, and direction when it is within 80 
+m; the point of intersection is then estimated based on both cars’ trajectories. In the second part, a 
+rule based fuzzy controller converts the input fuzzy variables to actuator control via a three-step 
+process: fuzzification, inference engine, and defuzzification. Experimentation results show that 
+based on the real-time V2V data, the CAV can either yield to the manually driven car or traverse the 
+crossroad before it while ensuring safety. 
+Alonso et al. (2011) proposed two methods of determining the traffic intersection queue. 
+Priority charts are the first of Alonso’s group suggestion. The CAV will connect to a database 
+inquiring about an upcoming intersection and obtain characteristics of potentially connected vehicles 
+that may alter the intersection navigation timing by causing a stop or deceleration. They suggest 
+using an occupancy vector in which the intentions of each vehicle through the intersection is logged 
+in a range of 0-3 with counter-clockwise labeling of CAVs. We created Fig. 7 to help demonstrate the 
+vector numbering from the reference vehicle as (1,3,2,0), where 0 is no vehicle, 1 is a right turn, 2 is 
+straight through, and 3 is a left turn. Yield, stop, and no entry signs are handled in a similar vector with 
+the values being: (Y) for yield, (S) for stop, (N) for no entry, and (0) for the occupied lane of the 
+reference vehicle. 
+ 
+Fig. 7 Simple intersection diagram. 
+
+--- Page 29 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+28 
+ 
+Alonso et al. (2011) theorized determining priority levels by twelve-point ordinal scale using, 
+“very low, low, normal, high” with either a negative, no sign, or positive for priority placement. The 
+ordinal scale references a look-up table for rules of setting priority, for example, a car turning right 
+would be “high”. Vehicle communications between intersection participants would not be used to 
+determine the CAVs priority level but to acquire the other vehicles’ intersection route plan. These two 
+methods are a good base level control. Nonetheless, it did not discuss how intersections with multiple 
+lanes in each direction would be handled. 
+Malikopoulos et al. (2018) offer a control solution that intends to optimize an intersection by 
+minimizing the energy efficiency of CAVs and maximizing the throughput. They employ seven cases 
+that rely on CAV’s controls, acceleration/deceleration capability, and the states relative to the 
+intersection, position, speed, and time. Each case addresses how to handle passage through the 
+intersection when neither controls or states are active, when all controls and states are active, or a 
+varying combination of the two. It designates unique identities for every CAV that enters the control 
+area of that intersection and registers the control and state cases of the vehicle. Simulations show an 
+improvement of greater than 30% on reducing travel time and fuel consumption over standard traffic 
+lights, but not all possible traffic routes were included in the simulation. There are opportunities for 
+improvement with this solution: (i) vehicles, only of one size, were only permitted on straight through 
+paths, omitting left and right turns in their proposal and (ii) a communication point monitors that 
+intersection, but it does not calculate any crossing time or speed solutions. 
+Malikopoulos et al. (2018) expanded the work to consider left and right turns within the merge 
+zone (Zhang et al., 2017). They also included a function of jerk in dealing with the comfort level of the 
+passengers. The jerk function helps constrain the speed and acceleration while executing a turn in 
+either direction. The research was built on three assumptions (Malikopoulos et al., 2018): 1) each 
+vehicle i has proximity sensors and can observe and/or estimate local information that can be shared 
+with other vehicles, 2) the decision of each vehicle i on whether a turn is to be made at the merge 
+zone is known upon its entry in the control zone, and 3) for each vehicle i, the speed remains 
+constant after the merge zone exit for at least a length  (predetermined safety distance variable). As 
+in study of Malikopoulos et al. (2018), the research also seeks to optimize the usage of fuel while 
+traveling in the intersection regardless of path chosen. The trade-off between passenger comfort and 
+fuel optimization is also considered. There are four general conditions, shown in Fig. 8, that occur at 
+
+--- Page 30 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+29 
+ 
+intersection: q, h, ), and . q has CAVs from different lanes entering the merge 
+zone converge on a single exit lane. h contains CAVs entering the merge zone on the same lane 
+but exiting in various directions. ) has vehicles entering the merge zone in multiple lanes and/or 
+directions and exits the zone with paths that intersect one or multiple paths of other vehicles.  
+consists of CAVs that enter in various lanes and directions but do not have an intersection path with 
+other vehicles in the same time period. 
+(a)                                    (b)                                    (c)                                      (d) 
+ 
+Fig.  8  Intersection conditions as used in (Zhang et al., 2017). (a) q. (b) h. (c) ). (d) . 
+Using distributed conflict resolution, Liu et al. (2018) proposed a mechanism that increases 
+throughput without the need of an intersection manager. The authors applied a cost function to give a 
+weighted sum in setting an order of intersection occupancy while observing safety constraints. When 
+a CAV calculates the intended time occupancy of the intersection, it broadcasts this data to affected 
+participants. The other vehicles adjust their interception for the crossing using the same mechanism 
+and broadcast updated data. The broadcasted information is used to determine trajectory calculation 
+and passing order subject to temporal constraints. Trajectory calculations include spatial conflicts, tie 
+breaking, and passing sequences. Temporal constraints are derived from an optimization problem 
+formulated in study of Liu et al. (2017), where speed, acceleration, and jerk supply the limits to control 
+the intersection time occupancy and passenger comfort. 
+Lots of traffic intersection control mechanisms have been developed for CAVs in recent years. 
+We summarize the survey literature in Table 1. Centralized control often incurs high computational 
+overhead, but it tends to be more reliable, especially when lots of CAVs are involved. Decentralized 
+control, on the other hand, is more flexible and should be helpful when the infrastructure is 
+unavailable. We think both types of control should be used in the field, and they may complement 
+each other in big ways. In addition, it would be interesting to see the performance of a hybrid 
+approach that combines both. 
+
+--- Page 31 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+30 
+ 
+Table 1   Summary of results for intersection navigation. 
+Category 
+References 
+Real-world testing 
+(Wu et al., 2013), (Milanés et al., 2010) 
+Optimization and control 
+(Li and Wang, 2006), (Zohdy et al., 2012), (Lee and Park, 2012), (Lee et al.,
+2013), (Wu et al., 2013), (Kamal et al., 2015), (Levin et al., 2017), (Levin and Rey, 
+2017), (Malikopoulos et al., 2018), (Zhang et al., 2017), (Liu et al., 2018) 
+ 
+Heuristic 
+(Dresner and Stone, 2008), (Huang et al., 2012), (Zhang et al., 2015), 
+(Wuthishuwong and Traechtler, 2017), (Lin et al., 2017), (Chai et al., 2017), 
+(Colombo et al., 2017), (Wu et al., 2017), (Sarkar et al., 2017), (Milanés et al., 
+2010), (Alonso et al., 2011) 
+ 
+Isolated intersections 
+(Li and Wang, 2006), (Dresner and Stone, 2008), (Zohdy et al., 2012), (Lee and
+Park, 2012), (Wu et al., 2013), (Kamal et al., 2015), (Zhang et al., 2015), (Lin et
+al., 2017), (Chai et al., 2017), (Levin et al., 2017), (Levin and Rey, 2017), 
+(Colombo et al., 2017), (Wu et al., 2017), (Sarkar et al., 2017), (Milanes et al., 
+2010), (Alonso et al., 2011), (Malikopoulos et al., 2018), (Zhang et al., 2017), (Liu 
+et al., 2018) 
+ 
+Multiple intersections 
+(Lee et al., 2013), (Huang et al., 2012), (Wuthishuwong and Traechtler, 2017) 
+Environmental impacts 
+(Zohdy et al., 2012), (Lee and Park, 2012), (Lee et al., 2013), (Huang et al., 2012)
+Human-driver consideration (Dresner and Stone, 2008), (Lin et al., 2017), (Milanés et al., 2010) 
+Prioritized vehicles 
+(Zhang et al., 2015) 
+Pedestrian consideration 
+(Levin and Rey, 2017), (Sarkar et al., 2017) 
+ 
+Although these methods we review in this section show promising future of reducing traffic jam, 
+fuel consumption, and emission, some gaps still exist, and more research efforts are needed. Most 
+works consider CAVs only and do not consider manually driven cars. Given the fact that CAVs and 
+human drivers will co-exist for some time, we need to consider how these two types of vehicles can 
+share the traffic intersections efficiently. Most works assume that the information of the CAVs is 
+readily available, but this assumption may not be always valid in real-world scenarios. Future 
+research needs to derive the performance bounds when wireless packets are lost, interference is 
+present, and transmission delay is non-trivial. This is especially important for decentralized control. 
+Most works assume that cars are the only ones that pass-through intersections, but bikers and 
+pedestrians also use intersections in reality. Future work should take bikers and pedestrians into 
+
+--- Page 32 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+31 
+ 
+consideration in the controller design. Most works assume regular intersections, and future work 
+needs to be able to adapt to irregular ones easily. Most works do not consider traffic accidents, car 
+breakdown events, power outages, inclement weather, and other factors that may suddenly happen. 
+These incidents should be considered in future work to ensure safety and efficiency. Finally, most 
+works are restricted to either isolated intersections or intersections in tandem We believe that it is 
+important to jointly optimize a network of intersections in any topology to achieve maximum 
+efficiency. 
+ 
+5. Collision avoidance 
+5.1. Maneuverability 
+One of the key aspects to the success of CAVs is the ability to avoid collisions with other vehicles. 
+The primary option for avoiding most accidents is braking. However, in some scenarios, braking is 
+not the best option or even a viable one due to high levels of traffic or the need to accelerate. A 
+secondary method that needs to be considered is steering. Whether it is steering, braking, a 
+combination of both, or some other means, a CAV needs to be able to respond to many 
+circumstances where an accident may occur with the best countermeasure. This is where vehicle 
+maneuverability can play a key role in the success of CAVs. 
+Current forms of autonomous collision avoidance have proven to increase the overall 
+effectiveness of vehicle accident prevention. The Kusano et al. dive deep into several forms of 
+autonomous collision avoidance methods to show the positive correlation between effectiveness and 
+the increase of the number of collision avoidance systems used. In particular, using pre-collision 
+system (PCS) algorithms for forward collision warning, pre-crash brake assist, and autonomous 
+pre-crash braking, the authors simulate how crash speed is progressively reduced as each system is 
+added on. Tests are run first with forward collision warning; compared with the systems without it, a 
+14% decrease in velocity change is observed (Kusano and Gabler, 2012). As pre-crash brake assist, 
+and autonomous pre-crash braking are added on, respectively, the change in velocity continues to 
+decrease by 10%, with each autonomous extension (Kusano and Gabler, 2012). The authors also 
+note that in a real-world application, outside parameters (e.g., sensor limitation and weather) can 
+affect the percentages. 
+Utilizing Sick LRS 1000, a laser scanner, Jimnez et al. (2014) designed a control system that 
+
+--- Page 33 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+32 
+ 
+consists of a single-layer infrastructure combined with time-to-collision (TTC) algorithms. The system 
+determines when and how hard a vehicle needs to brake to avoid an accident. Additionally, if braking 
+is not enough, the system takes control of (Kusano and Gabler, 2012) steering to maneuver the 
+vehicle from crashing. The control system is set up into two levels: the first accounts for the vehicle’s 
+surroundings to determine viable open safe areas and the second computes the best way to evade 
+an accident. The system functioned successfully in multiple controlled single-vehicle scenarios 
+where the velocity is just above 30 km/h. Possible future research could be dedicated to the control 
+system processing accident situations at much higher speeds and with multiple other vehicles 
+involved in the surrounding area. 
+Predictive trajectory guidance (PTG) has the potential to be used as a means of transportation 
+for semi and fully functional autonomous vehicles. By using MPC, an algorithm-based optimization 
+method that adjusts outputs based on newly gathered input variables, PTG can be applied to 
+ever-changing systems needed for successful autonomous driving (Weiskircher et al., 2017). 
+Weiskircher et al. incorporate PTG into a close loop system that starts with navigation/GPS that 
+transmits outputs to an assigner controller, which then sends a reference path as well as upper and 
+lower control limits to the PTG. The PTG also receives information from the driver (primarily in the 
+semi-autonomous case). Fig. 9 illustrates how the PTG outputs are transmitted to vehicle dynamics 
+control and actuation level system at the end loop, which relays adjustment information back to the 
+assigner through cameras, sensors, radar, etc. Weisskircher et al. are able to achieve success in 
+simulations and hope that future work can be designated to real-world scenarios. 
+Braking and steering generally are the primary and secondary approaches utilized in 
+autonomous accident avoidance research. However, a key tactic that commonly gets left out is 
+acceleration. In some instances, the optimum method to avoid a collision is for the vehicle to 
+accelerate (Brannstrom et al., 2010). Specifically, vehicles are treated as polygons whose outer 
+perimeters are used to calculate the necessary procedures to avoid an accident. Although the 
+research in this paper primarily applies to non-autonomous driving situations, the experimental 
+prediction algorithms developed can be utilized to advance other autonomous algorithms, e.g., MPC. 
+A few problems could arise with this work if applied to autonomous vehicles. First, the authors only 
+apply steering, braking, and accelerating separately, but in some scenarios the best option is to apply 
+two options. Secondly, because the research is not predominately focused on autonomous vehicles, 
+
+--- Page 34 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+33 
+ 
+it does not take in account the integration of sensors in autonomous control systems. Lastly, while the 
+authors claim that the algorithms can be applied to real-time situations, no testing besides 
+simulations has been run. 
+ 
+Fig. 9    MPC structural layout for semi-autonomous vehicles (Weiskircher et al., 2017). 
+The central focus of autonomous emergency braking generally deals with rear end collisions. 
+However, the current design of many emergency braking systems does not take in account collisions 
+involving intersections. Additionally, adaptive cruise control (ACC) capabilities are inadequate in 
+extreme braking situation (Kaempchen et al., 2009). In this work, Kaempchen et al. concentrate on 
+autonomous emergency braking (AEB) in both rear and intersection collisions with hopes of it 
+potentially being implemented into ACC systems. The system uses a laser scanner to create 
+two-layers collision prediction algorithms. The first layer is generated into simple preliminary 
+algorithms. The system then quickly calculates a more complex second layer of algorithms. The 
+two-layer algorithm setup allows the system to generate the algorithms with less complication. Fig. 10 
+is the setup of the ACC structure in study of Kaempchen et al. (2009). The system is designed to only 
+activate when steering cannot avoid collision. Therefore, it eliminates false activation of the AEB, 
+which could be instrumental in the success of autonomous vehicles. It also has the capacity to 
+increase the overall smoothness of ride, reduce traffic build up, and provide safer driving for all other 
+transportation around the vehicle. 
+
+--- Page 35 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+34 
+ 
+ 
+Fig. 10  System structure (Kaempchen et al. (2009)). 
+A critical hurdle for autonomous collision avoidance to overcome is finding a suitable balance 
+between fluidity and overall safety. Sensor range and shortcomings tend to be the major contributing 
+limitations to the overall effectiveness of collision avoidance systems (Nilsson et al., 2016), in which 
+Nilsson et al. attempt to analyze these weaknesses in autonomous collision avoidance. They focus 
+predominately on worst case scenarios to derive formulas from a brake threat number (BTN) and a 
+steer threat number (STN). By doing so, they are able to analyze various collision avoidance 
+scenarios: longitudinal, lateral, prediction error, and measurement. As verified by the simulation 
+results, the derived theoretical formulas can be used to discover possible collision avoidance 
+systems weaknesses and set sensor prerequisites. 
+ 
+5.2. Vehicle networking 
+ 
+Current forms of accident avoidance rely on the driver, sensors, and the vehicle’s collision avoidance 
+system. Nevertheless, the autonomous vehicles possess the potential to gain aid from other vehicles 
+to avoid an accident. If a vehicle has no room to avoid a collision, the accident bound vehicle could 
+potentially relay to another surrounding vehicle to adjust its speed and position. This will give more 
+leeway towards the vehicle avoiding the accident. In general, through networking and estimation, 
+autonomous vehicles can be systematized so that vehicles on the same network can assist one 
+another in preventing collisions. Present studies have successfully run simulations, which test the 
+effectiveness of networked autonomous systems with and without estimation (Moradi-Pari et al., 
+2016). 
+Networking can serve in more than one purpose for autonomous vehicle collision avoidance. If 
+
+--- Page 36 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+35 
+ 
+vehicles can communicate with one another, they can serve as a possible means to reduce single car 
+accidents or multiple car collisions. Thus, for optimum results, collision avoidance should encompass 
+individual autonomous systems and cooperative systems. Researchers have begun combining 
+autonomous control system and machine learning algorithms to elevate the effectiveness of a 
+potential dual system combining autonomous and cooperative systems (Desjardins and Chaib-Draa, 
+2011). Desjardins and Chaib-Draa direct their focus towards cooperative adaptive cruise control 
+(CACC). They successfully engineered simulations, which were able to display the promise using 
+autonomous and cooperative systems in CACC. Fig. 11 shows the structural breakdown of authors’ 
+concept of CACC. The information gathered from the environment is transmitted back to positioning 
+system, which is passed back through so that the system may make the necessary adjustments. With 
+some improvements in equipment and technology, there is a possibility that this can be applied to a 
+physical application. 
+While vehicle networking can reinforce the safety measures with accident avoidance, vehicles’ 
+collision avoidance systems must still process the ability to perform without an accident avoidance 
+network. Due to potential network failure and/or delays, collision avoidance systems should not be 
+solely dependent on networking to function. 
+ 
+Fig. 11  CACC Layout (Desjardins and Chaib-Draa, 2011). 
+ 
+
+--- Page 37 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+36 
+ 
+Nevertheless, it is beneficial that measures be put in place to booster the ability to find the root 
+cause of a network failure or delay because networking enables collision avoidance to perform 
+optimally. Elimelech et al. (2017) investigate ways to identify root cause failures in multi-agent 
+systems, where resources are shared to coordinate positions for avoiding collision. They establish 
+that methods can be incorporated into fail safe algorithms based on fault and conflict models 
+generated from the analysis. In the future, work can focus on the generation of the algorithms that 
+can locate network complications. 
+ 
+5.3. Control confliction 
+ 
+For collision avoidance to truly be successful in autonomous vehicles, it must be fully integrated with 
+the vehicle's trajectory, counter-sway, and mapping systems; in addition, it should take precedence 
+over them whenever needed. Countermeasures must be programmed in case of a potential conflict 
+between another control system and the anti-collision system. For example, model predictive control 
+(MPC) can be used to generate the essential control loop to allow the system to choose collision 
+prevention over all other factors (Funke et al., 2017). Specifically, Funke et al. utilize Erlien et al.'s 
+work (Erlien et al., 2013), involving vehicle path following and collision avoidance, to design their 
+vehicle dynamics criteria and controller. They were able to create and run tests where an 
+autonomous cart drove around a track with a designated trajectory. They then proceeded to add a 
+pop-up obstacle in the path of the vehicle, resulting in a successful change in its direction to avoid it. 
+The tests provide good scenarios to be applied to accident avoidance of autonomous vehicle and can 
+provide the framework for more complex and dynamic collision scenarios, e.g. lane changing. 
+Lin et al. (2014) dive deeper and focus on collision avoidance in lane changing scenarios. The 
+authors also add on DSRC and conflict probability to MPC, in order to further increase the vehicle's 
+chances of success. DSRC adds another protective measure between multiple autonomous vehicles  
+by allowing one vehicle to let another know that it is near before other sensors becoming active. 
+Thus, the collision avoidance system (CAS) is designed to run checks through control loops to 
+enable the vehicle to avoid a crash through lane-changing maneuvers only if there is not another 
+vehicle in the adjacent lane. Lin et al. were able to run computer simulations of two-lane road 
+scenarios successfully, but they have yet to apply it to a physical vehicle. 
+
+--- Page 38 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+37 
+ 
+As technology improves with autonomous vehicles, the major obstacle of accident avoidance 
+will inherently shift away from systematic shortcomings. Based off of data collected by Dixit et al. 
+(2016), the second leading cause of autonomous disengagement was caused by driver initiation. 
+Their research showed that the more miles traveled by a rider, the less likely they were to disengage 
+the autonomous mode. However, there was a correlated increase in reaction time with the added 
+miles. This brings up the dilemma of whether human or autonomous control should take precedence 
+in accident scenarios. As reaction time continues to increase, the safer it becomes for the 
+autonomous mode to remain in control. However, drivers might believe otherwise. The data also 
+showed that the leading cause of deactivation of the autonomous mode was systematic failure. Thus, 
+no matter how advance technology becomes, this will always pose a threat to accident avoidance, 
+even if the possibility is extremely small. Therefore, sufficient safety measures must be in place to 
+warn drivers in case of system failure. 
+Llorca et al. (2011) proposes that the CAS has complete superiority over the driver: in an 
+emergency scenario, drivers have a high tendency not to perform the most efficient maneuver. 
+According to study of Adarns and Place (1994), they are more inclined to brake over steer to avoid an 
+accident or a pedestrian due to the fear of possibly causing an additional accident. Llorca et al. 
+(2009) designed a system  that would activate when a pedestrian was detected by an on-board 
+stereo sensor. The vehicle was set up with a fuzzy control system that allowed pedestrian avoidance 
+through steering maneuverability. Braking and outer car hood air bag were used as a last measure 
+failsafe. The tests were run successfully in a traffic less scenario up to 30 mph. While more complex 
+scenarios still need to be tested, Llorca et al. establish that one major advantage that CAS has over 
+manual driving is the lack of distress, which can cause a driver to perform a non-ideal action. 
+ 
+5.4. Motorcycles 
+ 
+For autonomous vehicles to become mainstream, the accident avoidance rate must be far more 
+efficient to that of manual driving. However, because the risk is far greater when motorcyclists are 
+involved, the pressure for effective autonomous collision avoidance increases substantially. With the 
+motorcycles' smaller frame and superior maneuverability, CAV's sensors need to have a wider  range 
+so that there are no blind spots where a motorcycle may enter. 
+
+--- Page 39 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+38 
+ 
+Nevertheless, two-wheeled vehicles are making use of collision avoidance along with the 
+four-wheeled counterparts. Two investigations took place in Europe called the powered two-wheeler 
+integrated safety (PISa) and safety of powered two wheelers (CISAP). In the follow-up review 
+(Savino et al., 2013), data were analyzed to see the possible outcome of fixing driver error and 
+replacing inexperienced motorcycle riders with experienced ones in 37 past accident cases. 
+Additionally, the effects of adding autonomous braking to the situations were examined. The two 
+cross-examinations concluded that 67% of the cases would have benefited from the application of 
+autonomous braking. In a similar study of the effects of two-wheeled autonomous braking, 100 
+accidents were simulated based off of real-world parameters (Savino et al., 2016). The results did not 
+prove to be as confounding in showing the benefits of two wheeled autonomous braking as in study 
+of Savino et al. (2013), but there still was a 14% improvement over manual braking. 
+Because of the ever-growing demand of innovative automotive collision avoidance, a large 
+quantity of the research and development is being indirectly or directly dedicated to the field of CAV 
+collision avoidance. Indirect measures that require various degrees of human control will have to be 
+modified in some formats to avoid conflict between the driver and vehicle. However, with researchers 
+developing their CAS to override human control in the time of emergency, this problem can easily be 
+overcome. Even though currently developed measures of CAS prove to be more effective than 
+non-autonomous methods, any errors in CAS prove to be more catastrophic due to the damage that 
+occurs to CAV's appeal every time an incident takes place. Thus, CAS being superior to 
+nonautonomous avoidance is not enough; in addition, CAS must be virtually perfect in order for it to 
+catch on in today's automotive industry. 
+In addition, the social aspects need to be better understood and incorporated into CAS design. 
+Suppose that a collision is unavoidable, what would the CAV do to minimize the damage? Questions 
+like this need to be addressed in CAS design. 
+We also believe that CAS should be more cautious in situations such as inclement weather, 
+stop-and-go traffic, and construction zone. Machine learning algorithms should be designed to 
+provide warnings to CAS based on historical and current weather, location, and traffic data. 
+6. Pedestrian detection 
+The center for disease control and prevention discloses that over 180,000 non-fatal injuries were due 
+
+--- Page 40 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+39 
+ 
+to vehicles in 2015. Also, reports from the National Center for Statistics and Analysis reveal that there 
+was a 9.5% increase in pedestrian-vehicle fatalities from 2014 to 2015 (NHTSA, 2017). Pedestrians 
+pose the biggest hurdle to the success of CAS due to their high risk of injury and fatality when 
+involved in vehicular accidents. CAS has been proven to aid in the performance of human drivers’ 
+ability to reduce pedestrian-vehicle collisions. With the continuous advances in autonomous collision 
+avoidance and due to the limits in human capabilities, CAS can prove to be safer for pedestrians than 
+human drivers altogether. 
+As can be seen in the collision avoidance section, braking is one of the principal autonomous 
+accident prevention methods. Because AEB reacts 2 to 4  times faster than a human driver, the 
+European New Car Assessment Program (NCAP) is implementing requirements that vehicles must 
+have some form of AEB to receive high safety reviews. Currently, the primary AEB sensors being 
+utilized to detect pedestrians are cameras, with radar sensors used as auxiliary aids. Cameras and 
+short-range radars typically have the capabilities to identify pedestrians up to 60 m away, while 
+long-range radars can go up to 180 m. Therefore, AEB reacts proportionally to a vehicle's speed, 
+acceleration, and distance from a pedestrian (Park et al., 2017). Typically, AEB applies three warning 
+zones that use an additional measure in each zone as the pedestrian gets closer, from a visible and 
+audible warning to full brake activation. However, a key problem with current AEB systems is that 
+they only take into account the longitudinal movement of pedestrians. 
+Park et al. (2017) set up a prototype AEB system that implements additional lateral movement 
+aspect. Their system employs a funnel map system that takes into account of closest in-path 
+pedestrian (CIPP) by creating two zones. The zones are broken down into a no-warning and a 
+warning area: the former is 150% to 200% of the vehicle's total width, and the latter is the width of the 
+vehicle. Fig. 12 shows funnel mapping pedestrian selection (Park et al., 2017). This allows for the 
+system to recognize which pedestrian is the CIPP and react to a potential change in the CIPP if a 
+pedestrian leaves or enters the warning zone. Additionally, it provides the AEB with a prediction 
+(no-warning) zone, which gives the CAV a faster reaction time to pedestrians. Park et al. also 
+developed distance formulas that correlate to speed, time, and acceleration that correspond to 
+different zones. It was determined that for speeds above 50 km/h, steering proves to be a better 
+means of avoidance for pedestrians than braking, while braking is more efficient for speeds below 50 
+km/h (Park et al., 2017). When tests were run for their AEB system against the standard, it reduced 
+
+--- Page 41 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+40 
+ 
+braking speeds by somewhere between 7.4 and 11 km/h and increased braking distance by 
+somewhere between 1.1 and 1.5 m. Funnel mapping's warning zones can prove to be highly valuable 
+for pedestrian detection, especially because studies have shown that pedestrians are more inclined 
+to distractions than drivers (Rangesh and Trivedi, 2018), nearly 30% of crossing pedestrians 
+undertake in distracting actions. Thus, Park’s setup of funnel mapping accommodates for distracted 
+pedestrians without creating unnecessary braking for pedestrians at risk. However, even with the 
+advantages of the funnel mapping systems, many problems remain with camera sensors' visual 
+detection capabilities, which decrease in inclement weather. 
+ 
+Fig. 12 Funnel mapping diagram (Park et al., 2017). 
+With the recent influx of technological advances in machine learning and computer vision, a 
+crossover with some of these techniques into CAVs can prove to be beneficial. Dominguez-Sanchez 
+et al. demonstrate how convolutional neural networks (CNNs), a form of machine learning, can be 
+used to decide the necessary vehicular action based on pedestrian movement predictions 
+(Dominguez-Sanchez et al., 2017). CNNs initiate with an input layer based on some form of imaging, 
+and they use intertwined mathematical algorithms to generate a predictive output layer. 
+Dominguez-Sanchez et al. (2017) use a high capacity to test three different CNN architectures 
+(AlexNet, GoogleNet, and ResNet) and their motion prediction capabilities of sequencing frames. 
+Overall, the results confirmed that the ResNet has the most superior recognition performance with an 
+accuracy in the validation of 94%. Further testing will be necessary to show the effectiveness of 
+CNNs in a moving vehicle, but Dominguez-Sanchez et al. have proven that CNNs have the capacity 
+to be incorporated into CAS. 
+
+--- Page 42 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+41 
+ 
+The further ranges of obstacles or pedestrians are from vehicles, the less effectiveness of 
+sensors, radar, and detection capabilities becomes. Inclement weather and low light situations 
+amplify the deterioration of their performance. Fig. 13 shows the decline of the LIDAR cloud density 
+as the range of a pedestrian increases. Increasing the range and power of these variables is a 
+requirement for pedestrian detection in CAV applications. Li et al. (2016) design a density 
+enhancement method, which can be used to bolster pedestrian detection at further ranges. In this 
+work, a three-step density enhancement process was developed to be incorporated in between the 
+segmentation and feature extraction steps of 3D LIDAR pedestrian detection. The enhancement 
+starts with devising a local coordinate system, followed by performing RBF-based interpolation and 
+ending with resampling. The RBF-based interpolation integrates cross-validation with an error metric, 
+which allows the density enhancement to form parameters and a kernel. The resampling allows for 
+the method to take a few captured points and transfer them into a binary pedestrian format. Note that 
+the density enhancement focuses on stationary pedestrians only. With future work, the method could 
+be combined with funnel mapping to further aid in the advancement of CAV pedestrian detection. 
+ 
+Fig. 13 Cloud density decline (Li et al., 2016). 
+ 
+Pedestrian detection is one of the most intricate tasks for CAV technology to overcome. While 
+basic pedestrian motion can be depicted into simplified rudimentary dynamics, pedestrians' 
+decisions and actions can be quite erratic and unpredictable, and it poses an obstacle. Thus, CAV 
+pedestrian detection must accommodate the many possibilities of pedestrian motion. Xiao et al. 
+(2017) refer to the importance of simultaneous localization and mapping (SLAM), which customarily 
+deals with only static scenarios (Bresson et al., 2017; Engel et al., 2013; Klein and Murray, 2007; 
+Mur-Artal et al., 2015; Newcombe et al., 2011). As the name implies, SLAM is a trajectory optimizing 
+
+--- Page 43 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+42 
+ 
+navigation network, which concurrently adapts the vehicle's path based on obstacles that may 
+appear in study of Xiao et al. (2017). Xiao et al. attempt to topple the task of combining static and 
+dynamic object detection with CAVs, and an algorithm was developed to hone rough object detection 
+into a smooth output. Specifically, the system generates super-pixels from a disparity map and 
+optical flow field. From there, a two-stage conditional random field (CRF) model first establishes the 
+static objects, followed by indicating the dynamic targets; the final stage is the fine tuning of the 
+dynamic segmentation and potential motion estimation. To test the performance of the algorithms, 
+MATLAB simulation in junction with the KITTI dataset (Geiger et al., 2012, 2013) are used. 
+While inclement weather poses a hurdle for pedestrian detection to overcome, a more common 
+obstacle for pedestrian detection is nighttime identification. Choi et al. (2018) note that most 
+datasets, including KITTI (Geiger et al., 2012, 2013) and Cityscapes (Cordts et al., 2016), tend to only 
+perform efficiently in bright environments; thus, it is priority for autonomous pedestrian detection that 
+improvements need to be made to the capacity of datasets if they are going to be a primary form of 
+recognition. The KAIST multi-spectral dataset (Choi et al., 2018) has the potential to provide the 
+framework to solve the shortcomings of other datasets. KAIST is a broader 
+scale dataset designed to function during the day as well as nighttime and dim light scenarios. To 
+achieve the goals, Choi et al. use a beam splitter, an optical device that operates within the visible 
+and thermal spectrum and fuses the results of RGB and thermal imaging. With the addition of LIDAR, 
+their system eliminates various lighting complications. Sensor and camera calibration play a much 
+greater role in the work of Choi et al., due to the multi-function capabilities of KAIST and the usage of 
+beam splitter. Therefore, the system requires more frequent calibrations than other dataset systems. 
+From the statistical data, pedestrian detection poses one of the biggest challenges for both 
+non-autonomous and autonomous vehicles. Nonetheless, a wide range of technological methods 
+can be applied to CAV pedestrian detection. Thus, it provides an inlet for researchers from different 
+disciplines to work together towards the success of CAVs. The large-scale success of this CAV 
+feature will require more than one discipline to thrive in employing its developments. Researchers 
+must continue to improve on ways to connect their work through CAV pedestrian detection so that it 
+may be implemented further than just theory or prototypes. There must first be more supplemental 
+work dedicated to real-world emulation, followed by physical implementation. 
+Simply letting the CAVs detect the pedestrians may not be enough. We believe that the 
+
+--- Page 44 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+43 
+ 
+pedestrian detection systems equipped on CAVs should be smart enough to understand body 
+languages and hand gestures, which have been the primary way of communication between human 
+drivers and pedestrians at crosswalks. Artificial Intelligence needs to be developed in order to 
+understand the intention of pedestrians so as not to create unnecessary slow down and accidents. 
+In addition to identifying pedestrians, CAVs also need to be able to recognize animals such as 
+deer, dogs, and kangaroos. Animals may not create problems in cities, but they cause lots of traffic 
+incidents in rural areas. The ability of animal detection will greatly ensure the safety of CAVs and their 
+passengers. 
+7. Conclusions 
+Within the past decade, the advancement of technology that is built into or applies to CAVs is 
+improving at a significant pace. While recent studies and experiments that we have discussed show 
+success, the next step will be to integrate the components into a single platform without security or 
+operating conflicts. Combining collision and pedestrian avoidance into the intersection navigation 
+control without elevated risk will be a major hurdle for the general population's safety. The 
+opportunities for incidents reside in the urban intersection with large amounts of pedestrian and 
+cycling traffic along with human controlled vehicles and CAVs. It is imperative that each component 
+needs to work flawlessly without slowing down or restricting the overall throughput of intersections 
+and general roadways. Inter-CAV communication is the gateway that RSUs, intersection managers, 
+CAVs, and other safety devices use to alert each other and pedestrians. Of the topics that have been 
+discussed, collision and pedestrian avoidance is near the apex of importance in the need for 
+preservation of human life. 
+The future opportunities for technologies discussed in this paper include increasing the overall 
+effective range of V2X communications from the approximate 500 feet radius and further congestion 
+control in message rates to keep the delay of sent messages to a minimum. In addition, the sensor 
+resolution used in LIDAR, RADAR, and others is affected by inclement weather. Reducing the impact 
+of the weather to signal to noise ratio found in these sensors, for better distinction of vehicles or 
+pedestrians, is an important prospect; the need for higher resolution permits decreased reaction time 
+and increased overall performance for the CAV, especially in inclement weather where every 
+millisecond counts. Furthermore, the work in centralized intersection control allows for safe hand-offs 
+
+--- Page 45 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+44 
+ 
+of route parameters, but decentralized intersection control bypasses the need for exterior path 
+calculations. We believe that continuing optimization of decentralized intersection control 
+mechanisms will keep the total investment for the general population lower than compared to a 
+centralized option. 
+ 
+Conflict of interest  
+The authors do not have any conflict of interest with other entities or researchers. 
+Acknowledgments  
+The authors would like to thank the reviewers for providing constructive feedback.  
+ 
+References 
+5G Americas, 2018. Cellular V2X communications Towards 5G. Available at: https://goo.gl/i2AQhN 
+(Accessed 1 October 2018). 
+Adarns, L.D., Place, P., 1994. Review of the Literature on Obstacle Avoidance Maneuvers: Braking 
+Versus Steering. University of Michigan Transportation Research Institute, Ann Arbor. 
+Akos, D.M., 2012. Who's afraid of the spoofer? GPS/GNSS spoofing detection via automatic gain 
+control (AGC). Navigation, doi: 10.1002/navi.19. doi:10.1002/navi.19. 
+Alonso, J., Milanés, V., Perez, J., et al., 2011. Autonomous vehicle control systems for safe 
+crossroads. Transportation Research Part C: Emerging Technologies 19(6), 1095-1110. 
+Bagloee, S.A., Tavana, M., Asadi, M., et al., 2016. Autonomous vehicles: challenges, opportunities, 
+and future implications for transportation policies. Journal of Modern Transportation 24(4), 
+284-303. 
+Bajpai, J.N., 2016. Emerging vehicle technologies & the search for urban mobility solutions. Urban, 
+Planning and Transport Research 4(1), 83-100.  
+
+--- Page 46 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+45 
+ 
+Biddlestone, S., Redmill, K., Miucic, R., et al., 2012. An integrated 802.11 p WAVE DSRC and vehicle 
+traffic simulator with experimentally validated urban (LOS and NLOS) propagation models. IEEE 
+Transactions on Intelligent Transportation Systems 13(4), 1792-1802. 
+Biron, Z.A., Dey, S., Pisu, P., 2018. Real-time detection and estimation of denial of service attack in 
+connected vehicle systems. IEEE Transactions on Intelligent Transportation Systems, 
+doi:10.1109/TITS.2018.2791484. 
+Brannstrom, M., Coelingh, E., Sjoberg, J., 2010. Model-based threat assessment for avoiding 
+arbitrary vehicle collisions. IEEE Transactions on Intelligent Transportation Systems 11(3), 
+658-669. 
+Bresson, G., Alsayed, Z., Yu, L., et al., 2017. Simultaneous localization and mapping: a survey of 
+current trends in autonomous driving. IEEE Transactions on Intelligent Vehicles 2(3), 194-220. 
+Campolo, C., Vinel, A., Molinaro, A., et al., 2011. Modeling broadcasting in IEEE 802.11 p/WAVE 
+vehicular networks. IEEE Communications letters 15(2), 199-201. 
+Chai, L., Cai, B., ShangGuan, W., et al., 2017. Connected and autonomous vehicles coordinating 
+approach at intersection utilizing preassigned slots. Transportmetrica A: Transport Science 
+14(10), 929-951. 
+Choi, J., Marojevic, V., Sharma, A., et al., 2017. Measurement and configuration of DSRC radios for 
+vehicle-to-train (V2R) safety-critical communications. IEEE Wireless Communications Letters 
+7(3), 428-431. 
+Choi, Y., Kim, N., Hwang, S., et al., 2018. Kaist multi-spectral day/night data set for autonomous and 
+assisted driving. IEEE Transactions on Intelligent Transportation Systems 19(3), 934-948. 
+Colombo, A., de Campos, G.R., Rossa, F.D., et al., 2017. Control of a city road network: distributed 
+exact verification of traffic safety. IEEE Transactions on Automatic Control 62(10), 4933-4948.  
+Cordts, M., Omran, M., Ramos, S., et al., 2016. The cityscapes dataset for semantic urban scene 
+understanding. In: IEEE conference on computer vision and pattern recognition, Ithaca, 2016. 
+Deb, S., Rahman, M.M., Strawderman, L.J., et al., 2018. Pedestrians' receptivity toward fully 
+automated vehicles: research review and roadmap for future research. IEEE Transactions on 
+Human-Machine Systems 48(3), 279-290. 
+Desjardins, C., Chaib-Draa, B., 2011. Cooperative adaptive cruise control: a reinforcement learning 
+approach. IEEE Transactions on intelligent transportation systems 12(4), 1248-1260. 
+
+--- Page 47 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+46 
+ 
+Dixit, V.V., Chand, S., Nair, D.J., et al., 2016. Autonomous vehicles: disengagements, accidents and 
+reaction times. PLoS one 11, e0168054. 
+Dominguez-Sanchez, A., Cazorla, M., Orts-Escolano, S., 2017. Pedestrian movement direction 
+recognition using convolutional neural networks. IEEE Transactions on Intelligent 
+Transportation Systems 18(12), 3540-3548. 
+Dresner, K., Stone, P., 2008. A multiagent approach to autonomous intersection management. 
+Journal of Artificial Intelligence Research 31, 591-656. 
+Elbanhawi, M., Simic, M., Jazar, R., 2015. In the passenger seat: investigating ride comfort measures 
+in autonomous cars. IEEE Intelligent Transportation Systems Magazine 7(3), 4-17. 
+Elimelech, O., Stern, R., Kalech, M., et al., 2017. Diagnosing resource usage failures in multi-agent 
+systems. Expert Systems with Applications 77(1), 44-56. 
+Engel, J., Sturm, J., Cremers, D., 2013. Semi-dense visual odometry for a monocular camera. In: 
+2013 IEEE International Conference on Robotics and Automation, Karlsruhe, 2013. 
+Erlien, S.M., Fujita, S., Gerdes, J.C., 2013. Safe driving envelopes for shared control of ground 
+vehicles. IFAC Proceedings Volumes 46(21), 831-836. 
+Fang, J., Xu, R., Yang, Y., et al., 2017. Introduction and simulation of dedicated short-range 
+communication. In: 2017 IEEE 5th International Symposium on Electromagnetic Compatibility, 
+Beijing, 2017. 
+Funke, J., Brown, M., Erlien, S.M., et al., 2017. Collision avoidance and stabilization for autonomous 
+vehicles in emergency scenarios. IEEE Transactions on Control Systems Technology 25(4), 
+1204-1216. 
+Geiger, A., Lenz, P., Stiller, C., et al., 2013. Vision meets robotics: the KITTI dataset. The 
+International Journal of Robotics Research 32, 1231-1237. 
+Geiger, A., Lenz, P., Urtasun, R., 2012. Are we ready for autonomous driving? the KITTI vision 
+benchmark suite. In: 2012 IEEE Conference on Computer Vision and Pattern Recognition, 
+Hamburg, 2012. 
+Ghanavati, M., Chakravarthy, A., Menon, P.P., 2017. Analysis of automotive cyber-attacks on 
+highways using partial differential equation models. IEEE Transactions on Control of Network 
+Systems, doi:10.1109/TCNS.2017.2760865. 
+
+--- Page 48 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+47 
+ 
+Guanetti, J., Kim, Y., Borrelli, F., 2018. Control of connected and automated vehicles: state of the art 
+and future challenges. Annual Reviews in Control 45, 18-40. 
+Han, S., Chen, L., Meng, W., et al., 2017. Improve the security of GNSS receivers through spoofing 
+mitigation. IEEE Access, doi:10.1109/ACCESS.2017.2754414. 
+Hasenjager, M., Wersing, H., 2017. Personalization in advanced driver assistance systems and 
+autonomous vehicles: a review. In: 2017 IEEE 20th International Conference on Intelligent 
+Transportation Systems, Yokohama, 2017. 
+Huang, C.M., Lin, S.Y., 2014. Cooperative vehicle collision warning system using the vector-based 
+approach with dedicated short-range communication data transmission. IET Intelligent 
+Transport Systems 8(2), 124-134. 
+Huang, S., Sadek, A.W., Zhao, Y., 2012. Assessing the mobility and environmental benefits of 
+reservation-based intelligent intersections using an integrated simulator. IEEE Transactions on 
+Intelligent Transportation Systems 13(3), 1201-1214. 
+IEEE 5G, 2017. Cellular V2X communications towards 5G. IEEE 5G and Beyond Technology 
+Roadmap 
+White 
+Paper. 
+Available 
+at: 
+https://5g.ieee.org/images/files/pdf/ieee-5g-roadmap-white-paper.pdf (Accessed 5 December 
+2018). 
+Jimenez, F., Naranjo, J.E., Gomez, O., 2014. Autonomous collision avoidance system based on 
+accurate knowledge of the vehicle surroundings. IET intelligent transport systems 9(1), 105-117. 
+Kaempchen, N., Schiele, B., Dietmayer, K., 2009. Situation assessment of an autonomous 
+emergency brake for arbitrary vehicle-to-vehicle collision scenarios. IEEE Transactions on 
+Intelligent Transportation Systems 10(4), 678-1365 687. 
+Kamal, M.A.S., Imura, J.i., Hayakawa, T., et al., 2015. A vehicle-intersection coordination scheme for 
+smooth flows of traffic without using traffic lights. IEEE Transactions on Intelligent Transportation 
+Systems 16(3), 1136-1147. 
+ Kang, J., Yu, R., Huang, X., et al., 2016. Location privacy attacks and defenses in cloud-enabled 
+internet of vehicles. IEEE Wireless communications 23(5), 52-59.  
+Kenney, J., Bansal, G., Rohrs, C., 2011. Limeric: a linear message rate control algorithm for vehicular 
+dsrc systems. In: 8th International Workshop on Vehicular Ad Hoc Networks, Las Vegas, 2011. 
+
+--- Page 49 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+48 
+ 
+Kenney, J.B., 2011. Dedicated short-range communications (DSRC) standards in the United States. 
+Proceedings of the IEEE 99(7), 1162-1182.  
+Klein, G., Murray, D., 2007. Parallel tracking and mapping for small AR workspaces. In: 6th IEEE and 
+ACM International Symposium, Washington DC, 2007. 
+Kusano, K.D., Gabler, H.C., 2012. Safety benefits of forward collision warning, brake assist, and 
+autonomous braking systems in rear-end collisions. IEEE Transactions on Intelligent 
+transportation Systems 13(4), 1546-1555. 
+Lee, J., Park, B., 2012. Development and evaluation of a cooperative vehicle intersection control 
+algorithm under the connected vehicles environment. IEEE Transactions on Intelligent 
+Transportation Systems 13(1), 81-90. 
+Lee, J., Park, B.B., Malakorn, K., et al., 2013. Sustainability assessments of cooperative vehicle 
+intersection control at an urban corridor. Transportation Research Part C: Emerging 
+Technologies 32, 193-206. 
+Lee, S., Lim, A., 2013. An empirical study on Ad Hoc performance of DSRC and Wi-Fi vehicular 
+communications. International Journal of Distributed Sensor Networks, 9, 482695.  
+Levin, M.W., Fritz, H., Boyles, S.D., 2017. On optimizing reservation based intersection controls. 
+IEEE Transactions on Intelligent Transportation Systems 18(3), 505-515.  
+Levin, M.W., Rey, D., 2017. Conflict-point formulation of intersection control for autonomous 
+vehicles. Transportation Research Part C: Emerging Technologies 85, 528-547. 
+Li, K., Wang, X., Xu, Y., et al., 2016. Density enhancement-based long-range pedestrian detection 
+using 3-D range data. IEEE Transactions on Intelligent Transportation Systems 17(5), 
+1368-1380. 
+Li, L., Wang, F.Y., 2006. Cooperative driving at blind crossings using intervehicle  communication. 
+IEEE Transactions on Vehicular Technology 55(6), 1712-1724. 
+Li, L., Wen, D., Yao, D., 2014. A survey of traffic control with vehicular communications. IEEE 
+Transactions on Intelligent Transportation Systems 15(1), 425-432. 
+Lin, C.F., Juang, J.C., Li, K.R., 2014. Active collision avoidance system for steering control of 
+autonomous vehicles. IET Intelligent Transport Systems 8(6), 550-557. 
+Lin, P., Liu, J., Jin, P.J., et al., 2017. Autonomous vehicle-intersection coordination method in a 
+connected vehicle environment. IEEE Intelligent Transportation Systems Magazine 9, 37-47.  
+
+--- Page 50 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+49 
+ 
+Liu, C., Lin, C.W., Shiraishi, S., et al., 2018. Distributed conflict resolution for connected autonomous 
+vehicles. IEEE Transactions on Intelligent Vehicles 3, 18-29. 
+Liu, C., Zhan, W., Tomizuka, M., 2017. Speed profile planning in dynamic environments via temporal 
+optimization. In: 2017 IEEE Intelligent Vehicles Symposium (IV), Redondo Beach, 2017. 
+Llorca, D.F., Milanés, V., Alonso, I. P., et al., 2011. Autonomous pedestrian collision avoidance using 
+a fuzzy steering controller. IEEE Transactions on Intelligent Transportation Systems 12(2), 
+390-401. 
+Llorca, D.F., Sotelo, M., Parra, I., et al., 2009. An experimental study on pitch compensation in 
+pedestrian protection systems for collision avoidance and mitigation. IEEE Transactions on 
+Intelligent Transportation Systems 10(3), 469-474. 
+Lorenzen, T., 2017. SWeRC: Self-weighted semi-cooperative DSRC congestion control based on 
+LIMERIC. In: IEEE 86th Vehicular Technology Conference (VTC-Fall), Toronto, 2017. 
+Malikopoulos, A.A., Cassandras, C.G., Zhang, Y.J., 2018. A decentralized energy-optimal control 
+framework for connected automated vehicles at signal free intersections. Automatica 93, 
+244-256. 
+Malina, L., Vives-guasch, A., Castellà-roca, J., et al., 2015. Efficient group signatures for 
+privacy-preserving vehicular networks. Telecommunication Systems 58(4), 293-311. 
+Milanes, V., Perez, J., Onieva, E., et al., 2010. Controller for urban intersections based on wireless 
+communications and fuzzy logic. IEEE Transactions on Intelligent Transportation Systems 
+11(1), 243-248. 
+Moore, M.R., Bridges, R.A., Combs, F.L., et al., 2017. Modeling inter-signal arrival times for accurate 
+detection of can bus signal injection attacks: a data-driven approach to in-vehicle intrusion 
+detection. In: 12th Annual Conference on Cyber and Information Security Research, Oak Ridge, 
+2017. 
+Moradi-Pari, E., Tahmasbi-Sarvestani, A., Fallah, Y.P., 2016. A hybrid systems approach to 
+modeling real-time situation-awareness component of networked crash avoidance systems. 
+IEEE Systems Journal 10(1), 169-178. 
+MRCagney, 
+2017. 
+Autonomous 
+Vehicles: 
+Research 
+Report. 
+Available 
+at: 
+http://mrcagney.com/case-studies/research/autonomous-vehicles-research-report/ (Accessed 1 
+December 2018). 
+
+--- Page 51 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+50 
+ 
+Mur-Artal, R., Montiel, J.M.M., Tardos, J.D., 2015. ORB-SLAM: a versatile and accurate monocular 
+SLAM system. IEEE Transactions on Robotics 31(5), 1147-1163. 
+Newcombe, R.A., Izadi, S., Hilliges, O., et al., 2011. Kinectfusion: real-time dense surface mapping 
+and tracking. In: 10th IEEE international symposium, Lyon, 2011. 
+NHTSA, 2016. U.S. DOT Advances Deployment of Connected Vehicle Technology to Prevent 
+Hundreds of Thousands of Crashes. NHTSA, Washington DC. 
+NHTSA, 2017. Traffic Safety Facts 2015 Data-pedestrians. NHTSA, Washington DC. 
+Niesen, U., Ekambaram, V.N., Jose, J., et al., 2017. Intervehicle range estimation from periodic 
+broadcasts. IEEE Transactions on Vehicular Technology 66(12), 10637-10646.  
+Nilsson, J., Odblom, A.C., Fredriksson, J., 2016. Worst-case analysis of automotive collision 
+avoidance systems. IEEE Transactions on Vehicular Technology 65(4), 1899-1911. 
+Ozdemir, S.S., Aksoy, E., 2017. GPS jamming mitigation through taguchi's optimization method. In 
+2017 25th Telecommunication Forum (TELFOR), Belgrade, 2017. 
+Park, M.K., Lee, S.Y., Kwon, C.K., et al., 2017. Design of pedestrian target selection with funnel map 
+for pedestrian AEB system. IEEE Transactions on Vehicular Technology 66(5), 3597-3609. 
+Parkinson, S., Ward, P., Wilson, K., et al., 2017. Cyber threats facing autonomous and connected 
+vehicles: future challenges. IEEE Transactionson Intelligent Transportation Systems 18(11), 
+2898-2915. 
+Psiaki, M.L., Humphreys, T.E., 2016. GNSS Spoofng and Detection. The University of Texas at 
+Austin, Austin. 
+Rangesh, A., Trivedi, M.M., 2018. When vehicles see pedestrians with phones: a multi-cue 
+framework for recognizing phone-based activities of pedestrians. IEEE Transactions on 
+Intelligent Vehicles 3(2), 218-227. 
+Rios-Torres, J., Malikopoulos, A.A., 2017. A survey on the coordination of connected and automated 
+vehicles at intersections and merging at highway on-ramps. IEEE Transactions on Intelligent 
+Transportation Systems 18(5), 1066-1077. 
+SAE International, 2016. Taxonomy and Definitions for Terms Related to Driving Automation 
+Systems for On-Road Motor Vehicles. American National Standards Institute, Washington DC. 
+
+--- Page 52 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+51 
+ 
+Sarkar, A., Czarnecki, K., Angus, M., et al., 2017. Trajectory prediction of traffic agents at urban 
+intersections through learned interactions. In: 2017 IEEE 20th International Conference on 
+Intelligent Transportation Systems (ITSC), Yokohama, 2017. 
+Satam, P., Pacheco, J., Hariri, S., et al., 2017. Autoinfotainment security development framework 
+(ASDF) for smart cars. In: 2017 International Conference on Cloud and Autonomic Computing 
+(ICCAC), Tucson, 2017. 
+Savino, G., Mackenzie, J., Allen, T., et al., 2016. A robust estimation of the effects of motorcycle 
+autonomous emergency braking (MAEB) based on in-depth crashes in Australia. Traffic injury 
+prevention 17, 66-72. 
+Savino, G., Pierini, M., Rizzi, M., et al., 2013. Evaluation of an autonomous braking system in 
+real-world PTW crashes. Traffic injury prevention 14, 532-543. 
+Shah, S.A.A., Ahmed, E., Rodrigues, J.J.P.C., et al., 2018. Shapely value perspective on adapting 
+transmit power for periodic vehicular communications. IEEE Transactions on Intelligent 
+Transportation Systems 19, 977-986.  
+Taylor, A., Leblanc, S.P., Japkowicz, N., 2018. Probing the limits of anomaly detectors for 
+automobiles with a cyber attack framework. IEEE Intelligent Systems 33(2), 54-62. 
+The Verge, 2018. Uber Halts Self-Driving Tests after Pedestrian Killed in Arizona. Available at: 
+https://goo.gl/oXfBJG (Access 1 December 2018). 
+United States Government Accountability Office, 2015. GAO-15-775 Intelligent Transportation 
+Systems Report. Available at: URL:https://www.gao.gov/assets/680/672548.pdf (Access 1 
+December 2018). 
+Van Eenennaam, M., Wolterink, W.K., Karagiannis, G., et al., 2009. Exploring the solution space of 
+beaconing in vanets. In: Vehicular Networking Conference (VNC), Tokyo, 2009. 
+Vinel, A., 2012. 3GPP LTE Versus IEEE 802.11 p/WAVE: which technology is able to support 
+cooperative vehicular safety applications? IEEE Wireless Communications Letters 1(2), 
+125-128. 
+Wang, Z., Lin, J., Wang, Z., 2017. Accelerating recurrent neural networks: a memory-efficient 
+approach. IEEE Transactions on Very Large Scale Integration (VLSI) Systems 25(10), 
+2763-2775.  
+
+--- Page 53 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+52 
+ 
+Weiskircher, T., Wang, Q., Ayalew, B., 2017. Predictive guidance and control framework for (semi-) 
+autonomous vehicles in public traffic. IEEE Transactions on Control Systems Technology 25(6), 
+2034-2046. 
+Wu, J., Perronnet, F., Abbas-Turki, A., 2013. Cooperative vehicle-actuator system: a 
+sequence-based framework of cooperative intersections management. IET Intelligent Transport 
+Systems 8(4), 352-360. 
+Wu, W., Liu, Y., Xu, Y., et al., 2017. Traffic control models based on cellular automata for at-grade 
+intersections in autonomous vehicle environment. Journal of Sensors 2017, 9436054. 
+Wuthishuwong, C., Traechtler, A., 2017. Consensus-based local information coordination for the 
+networked control of the autonomous intersection management. Complex & Intelligent Systems 
+3(1), 17-32. 
+Xiao, Z., Dai, B., Wu, T., et al., 2017. Dense scene ow based coarse-to-fine rigid moving object 
+detection for autonomous vehicle. IEEE Access 5, 23492-23501. 
+Young, C.P., Chang, B.R., Lin, J.J., et al., 2008. Cooperative collision warning based highway 
+vehicle accident reconstruction. Intelligent Systems Design and Applications 2008, 561-565. 
+Young, C.P., Chang, B.R., Wei, T.Y., 2009. Highway vehicle accident reconstruction using 
+cooperative collision warning based motor vehicle event data recorder. In: 2009 IEEE Intelligent 
+Vehicles Symposium, Xi’an, 2009. 
+Yu, R., Zhang, Y., Gjessing, S., et al., 2013. Toward cloud based vehicular networks with efficient 
+resource management. IEEE Network 27(5), 48-55.  
+Zhang, K., Zhang, D., de La Fortelle, A., et al., 2015. State-driven priority scheduling mechanisms for 
+driverless vehicles approaching intersections. IEEE Transactions on Intelligent Transportation 
+Systems 16(5), 2487-2500. 
+Zhang, Y., Malikopoulos, A.A., Cassandras, C.G., 2017. Decentralized optimal control for connected 
+automated vehicles at intersections including left and right turns. In: 2017 IEEE 56th Annual 
+Conference on Decision and Control (CDC), Melbourne, 2017. 
+Zohdy, I.H., Kamalanathsharma, R.K., Rakha, H., 2012. Intersection management for autonomous 
+vehicles using iCACC. In: 2012 15th International IEEE Conference on Intelligent Transportation 
+1565 Systems (ITSC), Alaska, 2012. 
+ 
+
+--- Page 54 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+53 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+David Elliott received his B.S. degree in mechanical engineering from Auburn University, Auburn, 
+Alabama, USA, in 2015, and the M.S. degree in engineering technology from Middle Tennessee 
+State University, Murfreesboro, Tennessee, USA in 2018. Currently, he is an industrial engineer at 
+
+--- Page 55 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 
+54 
+ 
+Mahle Filter Systems North America, Inc., Murfreesboro, Tennessee, USA. 
+ 
+ 
+ 
+Lei Miao received the B.S. and M.S. degrees from Northeastern University, Shenyang, Liaoning, 
+China, and the PhD degree from Boston University, Boston, MA, in 1998, 2001, and 2006, 
+respectively. From 2006 to 2009, he was with Nortel Networks in Billerica, MA. From 2009 to 2011, 
+he was visiting professor at the University of Cincinnati. From 2011 to 2014, he was with NuVo 
+Technologies/Legrand North America in Hebron, KY. From 2014 to 2015, he was an assistant 
+professor at State University of New York Farmingdale. Currently, he is an assistant professor of 
+Mechatronics Engineering at Middle Tennessee State University. He has published a book and over 
+twenty-five papers in renowned journals and conference proceedings. His research interests include 
+control and optimization for discrete event systems and hybrid systems, with applications to 
+communication networks, wireless networks, and cyber-physical systems.  
+ 
+ 
+ 
+ 
+
+--- Page 56 ---
+MANUSCRIPT
+ 
+ACCEPTED
+ACCEPTED MANUSCRIPT
+ 

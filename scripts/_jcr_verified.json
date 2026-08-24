@@ -1,0 +1,216 @@
+{
+  "_source": "wos-journal.info（Web of Science / JCR 数据镜像）",
+  "_rule": "JCR 以 JIF 百分位 75 / 50 / 25 为 Q1 / Q2 / Q3 / Q4 界",
+  "_note": "由 scripts/verify_jcr_if.py 生成；verify_deliverables.py 据此离线复核",
+  "venues": {
+    "Accident Analysis": {
+      "short": "AAP",
+      "wos_title": "ACCIDENT ANALYSIS AND PREVENTION",
+      "index": "SSCI",
+      "category": "Multiple",
+      "percentile": "98.2",
+      "jif": "7.4",
+      "jif_5y": "8",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 7.4) (交通安全领域权威期刊)"
+    },
+    "Transportation Research Part F": {
+      "short": "TR Part F",
+      "wos_title": "TRANSPORTATION RESEARCH PART F-TRAFFIC PSYCHOLOGY AND BEHAVIOUR",
+      "index": "SSCI",
+      "category": "Multiple",
+      "percentile": "85.2",
+      "jif": "5",
+      "jif_5y": "5.6",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 5.0) (交通心理学与行为权威期刊)"
+    },
+    "Traffic Injury Prevention": {
+      "short": "Traffic Inj Prev",
+      "wos_title": "Traffic Injury Prevention",
+      "index": "SSCI",
+      "category": "Multiple",
+      "percentile": "47.9",
+      "jif": "2.1",
+      "jif_5y": "2.2",
+      "quartile": "Q3",
+      "recorded": "Q3 (IF 2.1) (交通伤害预防专刊)"
+    },
+    "Applied Ergonomics": {
+      "short": "Applied Ergonomics",
+      "wos_title": "APPLIED ERGONOMICS",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "70.4",
+      "jif": "3.5",
+      "jif_5y": "4.2",
+      "quartile": "Q2",
+      "recorded": "Q2 (IF 3.5) (人因工程权威期刊；百分位 70.4%，未过 Q1 线)"
+    },
+    "International Journal of Human-Computer Studies": {
+      "short": "IJHCS",
+      "wos_title": "INTERNATIONAL JOURNAL OF HUMAN-COMPUTER STUDIES",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "93.7",
+      "jif": "6",
+      "jif_5y": "8.3",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 6.0) (HCI 重要期刊)"
+    },
+    "International Journal of Human-Computer Interaction": {
+      "short": "IJHCI",
+      "wos_title": "INTERNATIONAL JOURNAL OF HUMAN-COMPUTER INTERACTION",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "91.7",
+      "jif": "6.1",
+      "jif_5y": "7",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 6.1) (HCI 重要期刊；百分位 91.7%)"
+    },
+    "IEEE Transactions on Intelligent Transportation Systems": {
+      "short": "IEEE T-ITS",
+      "wos_title": "IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "95.9",
+      "jif": "9.1",
+      "jif_5y": "10.4",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 9.1) / CCF B (智能交通顶刊；百分位 95.9%)"
+    },
+    "IET Intelligent Transport Systems": {
+      "short": "IET ITS",
+      "wos_title": "IET Intelligent Transport Systems",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "49.6",
+      "jif": "2.7",
+      "jif_5y": "3.1",
+      "quartile": "Q3",
+      "recorded": "Q3 (IF 2.7) (智能交通期刊；百分位 49.6%，未过 Q2 线)"
+    },
+    "PLoS ONE": {
+      "short": "PLoS ONE",
+      "wos_title": "PLoS One",
+      "index": "SCIE",
+      "category": "MULTIDISCIPLINARY SCIENCES",
+      "percentile": "65.7",
+      "jif": "2.8",
+      "jif_5y": "3.3",
+      "quartile": "Q2",
+      "recorded": "Q2 (IF 2.8) (综合性开放获取期刊)"
+    },
+    "Annual Review of Vision Science": {
+      "short": "Annu Rev Vis Sci",
+      "wos_title": "Annual Review of Vision Science",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "92.9",
+      "jif": "6.5",
+      "jif_5y": "8.3",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 6.5) (视觉科学年度综述)"
+    },
+    "Journal of the Society for Information Display": {
+      "short": "J SID",
+      "wos_title": "Journal of the Society for Information Display",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "44.2",
+      "jif": "2",
+      "jif_5y": "2.1",
+      "quartile": "Q3",
+      "recorded": "Q3 (IF 2.0) (显示技术专刊；百分位 44.2%)"
+    },
+    "Journal of Traffic and Transportation Engineering": {
+      "short": "JTTE (Engl. Ed.)",
+      "wos_title": "Journal of Traffic and Transportation Engineering-English Edition",
+      "index": "ESCI",
+      "category": "Multiple",
+      "percentile": "97.9",
+      "jif": "9.6",
+      "jif_5y": "9.7",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 9.6) (长安大学主办，交通工程)"
+    },
+    "Annals of the New York Academy of Sciences": {
+      "short": "Ann NY Acad Sci",
+      "wos_title": "ANNALS OF THE NEW YORK ACADEMY OF SCIENCES",
+      "index": "SCIE",
+      "category": "MULTIDISCIPLINARY SCIENCES",
+      "percentile": "82.9",
+      "jif": "4.5",
+      "jif_5y": "6.3",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 4.5) (SCIE，Multidisciplinary Sciences 百分位 82.9%)"
+    },
+    "Transportation Research Interdisciplinary Perspectives": {
+      "short": "TRIP",
+      "wos_title": "Transportation Research Interdisciplinary Perspectives",
+      "index": "ESCI",
+      "category": "TRANSPORTATION",
+      "percentile": "71.2",
+      "jif": "4.8",
+      "jif_5y": "5.2",
+      "quartile": "Q2",
+      "recorded": "Q2 (IF 4.8) (ESCI，Transportation 类百分位 71.2%，全开放获取)"
+    },
+    "IEEE Access": {
+      "short": "IEEE Access",
+      "wos_title": "IEEE Access",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "66.4",
+      "jif": "4.2",
+      "jif_5y": "4.3",
+      "quartile": "Q2",
+      "recorded": "Q2 (IF 4.2)"
+    },
+    "Sustainability": {
+      "short": "Sustainability (MDPI)",
+      "wos_title": "Sustainability",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "65.3",
+      "jif": "4.1",
+      "jif_5y": "4.2",
+      "quartile": "Q2",
+      "recorded": "Q2 (IF 4.1)"
+    },
+    "International Journal of Vehicle Design": {
+      "short": "Int J Vehicle Design",
+      "wos_title": "INTERNATIONAL JOURNAL OF VEHICLE DESIGN",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "8.2",
+      "jif": "0.7",
+      "jif_5y": "0.9",
+      "quartile": "Q4",
+      "recorded": "Q4 (IF 0.7) (Inderscience；官网公示 Clarivate 2025 JIF 0.7、JCI 0.15)"
+    },
+    "IEEE Transactions on Visualization and Computer Graphics": {
+      "short": "TVCG",
+      "wos_title": "IEEE TRANSACTIONS ON VISUALIZATION AND COMPUTER GRAPHICS",
+      "index": "SCIE",
+      "category": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
+      "percentile": "92.2",
+      "jif": "6.8",
+      "jif_5y": "6.8",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 6.8) / CCF A (可视化和计算机图形学顶刊；百分位 92.2%)"
+    },
+    "Human Factors": {
+      "short": "Human Factors",
+      "wos_title": "HUMAN FACTORS",
+      "index": "SCIE",
+      "category": "Multiple",
+      "percentile": "86",
+      "jif": "3.6",
+      "jif_5y": "5.5",
+      "quartile": "Q1",
+      "recorded": "Q1 (IF 3.6) (人因工程顶刊，百分位 86%；同研究另有 Univ. of Iowa 学位论文版，不重复计数)"
+    }
+  }
+}

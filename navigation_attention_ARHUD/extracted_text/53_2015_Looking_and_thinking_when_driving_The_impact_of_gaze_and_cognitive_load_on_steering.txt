@@ -1,0 +1,708 @@
+Looking and thinking when driving: The impact of gaze and
+cognitive load on steering
+Georgios K. Kountouriotis a,⇑, Richard M. Wilkie b, Peter H. Gardner b, Natasha Merat a
+a Institute for Transport Studies, University of Leeds, United Kingdom
+b Institute of Psychological Sciences, University of Leeds, United Kingdom
+a r t i c l e
+i n f o
+Article history:
+Received 19 December 2014
+Received in revised form 7 May 2015
+Accepted 17 July 2015
+Keywords:
+Driving
+Steering
+Locomotion
+Gaze
+Cognition
+Distraction
+a b s t r a c t
+Driving around bends at high speeds is a task performed by many on a daily basis but the
+underlying mechanisms of steering control remain largely unknown. Previous research has
+shown that when steering, gaze direction can be a critical component of success. However,
+with increased use of in-vehicle information systems (IVIS), there is growing competition
+over the same resources that are needed to steer (gaze as well as associated attentional
+resources). Although it can be argued that locomotor steering is an automatic task that
+can be performed without recourse to conscious ‘‘cognitive’’ control, much simpler
+locomotor-related tasks, such as judging one’s heading, have been shown to be affected
+by concurrent attentional tasks (Wann, Swapp, & Rushton, 2000). Here we examined
+whether an attentional task placed at an offset ﬁxation point inﬂuenced concurrent
+steering performance along a computer simulated road. The experiments either used
+gaze-ﬁxation points that had similar properties to real-world road signs (i.e. moved
+relative to the vehicle) or were more akin to IVIS (i.e. ﬁxed to the vehicle). Results showed
+that gaze ﬁxation eccentric to future path caused systematic steering biases. The degree or
+type of cognitive load did not change the degree of steering bias, but there was some
+evidence of decreased lane variability when viewing the IVIS-type displays. No differences
+in steering performance were found between the different types of cognitive task. We
+conclude that where you look is critical for safe driving, and IVIS-type displays might make
+drivers more susceptible to cognitive interference.
+ 2015 Elsevier Ltd. All rights reserved.
+1. Introduction
+Locomotion, and driving in particular, fundamentally requires the ability to control steering to negotiate bends at
+high-speeds whilst taking appropriate trajectories along curved roadways. The effect of additional attentional demands
+imposed by activities such as cell phone use and interactions with in-vehicle systems have often been studied in terms of
+reaction times to critical events, such as braking, and lane keeping (e.g., Recarte & Nunes, 2003; Salvucci & Beltowska,
+2008; Strayer & Drews, 2004). However, less is known about the effect of cognitive load on steering control, and in particular
+whether attentional demands interact with the direction of gaze and successful steering control.
+http://dx.doi.org/10.1016/j.trf.2015.07.012
+1369-8478/ 2015 Elsevier Ltd. All rights reserved.
+⇑Corresponding author at: Institute for Transport Studies, 34-40 University Road, University of Leeds, Leeds LS2 9JT, United Kingdom.
+Tel.: +44 (0)113 34 37696.
+E-mail addresses: G.Kountouriotis@leeds.ac.uk (G.K. Kountouriotis), R.M.Wilkie@leeds.ac.uk (R.M. Wilkie), P.H.Gardner@leeds.ac.uk (P.H. Gardner),
+N.Merat@its.leeds.ac.uk (N. Merat).
+Transportation Research Part F 34 (2015) 108–121
+Contents lists available at ScienceDirect
+Transportation Research Part F
+journal homepage: www.elsevier.com/locate/trf
+
+
+Direction of gaze has been shown to be critically important when steering around bends (Land & Lee, 1994; Wilkie &
+Wann, 2003). Although these studies propose two different models of locomotor control, both models require the driver
+to look towards regions of the road ahead. According to the ‘Tangent Point’ model of steering (Land & Lee, 1994), drivers
+should predominantly ﬁxate the apex of the inside road-edge. However, the ‘Active Gaze’ model of steering (Wilkie &
+Wann, 2003; Wilkie, Wann, & Allison, 2008) proposes a close link between the direction of gaze and the steering trajectory
+taken by drivers: under conditions of unrestrained gaze, drivers have been found to ﬁxate points on the road that lie on their
+future path (Wilkie, Kountouriotis, Merat, & Wann, 2010; Wilkie & Wann, 2003; Wilkie et al., 2008). The reciprocal also
+seems to be true: when gaze is forced onto points eccentric to the required curved path, drivers alter their steering trajec-
+tories to pass nearer to those ﬁxation points (Kountouriotis, Floyd, Gardner, Merat, & Wilkie, 2012). This relationship has also
+been observed when maintaining a trajectory along straight roads (Readinger, Chatziastros, Cunningham, Bülthoff, & Cutting,
+2002). At slow speeds (e.g. when walking) decoupling gaze and steering may have little effect on successful control, however,
+when driving at high speeds in rapidly changing environments decoupling gaze and steering is not advisable. Of course, in
+real world scenarios, drivers often have to look away from their future path to perform various tasks, e.g. to sample
+information from road signs or interact with an in-vehicle satellite navigation system. These tasks require drivers not only
+to look away from their future path, but to also perform some kind of cognitive task (e.g. read a sign or decipher a map).
+These concurrent tasks when driving may have an additional effect over and above eccentric ﬁxations, and therefore need
+to be better understood.
+In experimental settings, asking participants to perform a concurrent task whilst driving can result in changes in the
+natural gaze patterns due to the task itself, e.g. looking at the speedometer. However, even tasks that do not rely on vision
+and hence do not require participants to direct their gaze towards a speciﬁc location (e.g. an auditory in-vehicle information
+system or talking hands-free on a phone) have been shown to affect gaze behaviours during driving (Victor, Harbluk, &
+Engström, 2005). Such tasks can increase the duration of gaze ﬁxations to the road centre, along with a decrease in saccades
+to the periphery (Recarte & Nunes, 2003; Victor et al., 2005). Even when gaze patterns do not change, it appears that greater
+attentional load can reduce the available resources for visual processing of the scene. For example, Strayer, Drews, and
+Johnston (2003) examined driving performance when drivers talked on a hands-free phone. They observed that participants
+were less likely to remember seeing billboards in the conditions where they were conversing on the phone compared to the
+control conditions, even though there was no difference between the two conditions in the number of ﬁxations they made on
+these objects. Strayer et al. (2003) explain this ﬁnding in terms of relocating attention from driving towards the phone task.
+In addition to these changes in gaze patterns, cognitive tasks may also change steering, with the variability of lane posi-
+tion reducing under cognitive load conditions (Engström, Johansson, & Östlund, 2005; Jamson & Merat, 2005). There is a tight
+coupling between gaze and steering: not only does steering guide the direction of gaze with drivers looking where they are
+going (Wilkie & Wann, 2003, 2005; Wilkie et al., 2010) but gaze direction guides steering with drivers steering where they
+look (Kountouriotis et al., 2012; Robertshaw & Wilkie, 2008). A question that arises, therefore, is whether increased cognitive
+demand affects eye movements (which in turn lead to changes in steering patterns), or whether cognitive demand affects
+steering patterns (which then leads to changes in eye movements). For example, Engström et al. (2005) used a cognitive load
+condition which did not require drivers to look at a visual display, but they reported both greater gaze concentration around
+the road centre and reduced lane keeping variation. Increased gaze concentration has also been shown in other studies using
+non-visual distraction tasks (e.g. Reimer, 2009; Victor et al., 2005). One possible interpretation of these ﬁndings is that the
+cognitive load increased gaze concentration around the road centre, and this in turn caused steering trajectories to pass
+closer to the point of gaze (as per Wilkie & Wann, 2003; Wilkie et al., 2008, 2010).
+From this evidence it is difﬁcult to conclude deﬁnitively that cognitive load inﬂuences steering directly (rather than via
+gaze mechanisms). Cooper, Medeiros-Ward, and Strayer (2013) examined whether the reduced lateral variation in steering
+under cognitive load was due to a reduction in lateral eye-movements (gaze concentration). Cooper et al. (2013) instructed
+drivers to look at an illuminated number plate on a vehicle ahead. The illuminated plate switched between either 3 or 5 vehi-
+cles in other lanes and the temporal frequency by which drivers changed their point of gaze from one vehicle to the next was
+varied. The low frequency gaze changes were supposed to be similar to the patterns exhibited during ‘gaze concentration’.
+This study reported that increased cognitive load did indeed lower steering variability even when gaze changes were
+matched across ‘no cognitive load’ and ‘high cognitive load’ conditions. They concluded that the cognitive task caused atten-
+tion to be removed from the lane-keeping task, which due to its automaticity improved (Medeiros-Ward, Cooper, & Strayer,
+2014). Whilst it would seem this evidence indicates that the effects of cognitive load are independent of gaze direction, there
+were some limitations to this study. There were no trials where drivers looked solely towards the road ahead, but in the con-
+dition where gaze was predominantly directed to the road ahead (‘‘static predictable’’) there was no reliable effect of cog-
+nitive load. It remains unclear, therefore, whether a cognitive load inﬂuences steering when natural gaze behaviours are
+adopted and drivers ﬁxate their future path. A linked issue is that the non-visual nature of the cognitive task does not gen-
+eralise to the common situation of retrieving and processing information from the point where you are looking (i.e. there was
+no task involving information at the point of ﬁxation). Furthermore, Cooper et al. (2013) and Medeiros-Ward et al. (2014)
+only examined the task of maintaining a trajectory along straight roads. Although this can be a useful paradigm for
+answering questions related to lane-keeping, the task does not necessarily translate to the more general (and complex) case
+of steering curved trajectories, where the driver needs to take into account both feedback information from the near road
+edges as well as prospective information from the road ahead (Land & Horwood, 1995; Salvucci & Gray, 2004).
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+109
+
+
+It has to be noted though that whilst a number of studies have shown that a reduction in lane position variability often
+occurs when cognitive load increases (e.g. Engström et al., 2005; Jamson & Merat, 2005; Kubose et al., 2006; Merat, Antilla, &
+Luoma, 2005), there are also conﬂicting results – i.e. an increase in lane variability under conditions of cognitive load (e.g.
+Drews, Pasupathi, & Strayer, 2008; Salvucci & Beltowska, 2008). These contradictory ﬁndings may be because of differences
+in task difﬁculty between various experiments, as well as the speciﬁc driving task and scenarios used.1 Moreover, most of
+these studies did not speciﬁcally examine the task of bend negotiation, which requires continuous online steering control
+(as opposed to lane keeping in straight roads, where the drivers only need to correct their steering when they have drifted
+too much towards one side of the lane). Most importantly, however, not all of these studies provide information about where
+participants were looking during lane keeping, making interpretation of the ﬁndings difﬁcult.
+The evidence introduced so far suggests that secondary tasks can affect eye-movements either directly by requiring
+participants to look at an in-vehicle display (IVIS), indirectly by inducing gaze concentration at the centre of the road, or
+the secondary tasks can reduce overall the processing of the visual scene. The reason why a secondary task would affect
+the processing of the scene is not fully understood yet, but one explanation could be the narrowing of the Useful Field of
+View (UFOV: Ball, Beard, Roenker, Miller, & Griggs, 1988). The visual area where information can be sampled with one ﬁx-
+ation has been named the functional ﬁeld of view (FFoV), or the useful ﬁeld of view (Ball et al., 1988). A property of the UFOV
+is that its size is not constant but instead can decrease in the presence of a cognitive load on the central point of ﬁxation, thus
+creating artiﬁcial tunnel vision (Williams, 1982, 1985). Whilst tunnel vision has been shown in laboratory settings, it is not
+necessarily the reason for the poor peripheral detection performance during secondary tasks (e.g. Merat & Jamson, 2008). For
+example, the ‘general interference theory’ states that secondary tasks are sometimes allocated more attentional resources
+and this causes a concomitant decline in the performance of other concurrent detection tasks (Recarte & Nunes, 2003). In
+this case, therefore, an increased cognitive load would decrease detection performance in the entire visual ﬁeld, not just
+for targets presented in peripheral vision (see Victor, Engström, & Harbluk, 2008).
+The research evidence seems to indicate that in order to determine whether cognitive load inﬂuences steering, one needs
+to control gaze direction and eye movements. This can be achieved by enforcing gaze ﬁxation on speciﬁc points in the scene,
+during single task steering, as well as dual task conditions (steering plus cognitive load). When participants are asked to
+carry out a cognitive task whilst steering, predictions can be made regarding the effect that such a concurrent task will have
+on steering: (a) indirectly through affecting vision which in turn affects steering performance, and (b) directly, by affecting
+the control processes underpinning steering itself. In terms of (a) it has been shown that when the boundaries of the road (i.e.
+the road-edges) are either visually degraded (Kountouriotis et al., 2012) or moved towards peripheral vision (Robertshaw &
+Wilkie, 2008), then gaze direction has a greater inﬂuence on steering trajectories, with participants exhibiting a greater bias
+towards offset ﬁxation points. In Kountouriotis et al. (2012) when the road-edges were degraded steering bias towards the
+ﬁxation points increased (i.e. gaze direction had a greater input into steering than then degraded sources of information. The
+greater inﬂuence of gaze direction has been explained in terms of the Active Gaze model, which combines a number of ﬂex-
+ibly weighted perceptual inputs: when one of the inputs (i.e. the road-edges) becomes noisy/unreliable or unavailable, the
+weighting is increased for other inputs (i.e. gaze direction; Kountouriotis et al., 2012; Wilkie & Wann, 2002; Wilkie et al.,
+2008). An increased inﬂuence of gaze on steering could also, in theory, be induced without making any physical changes
+to road-edge luminance or road width, but by asking the drivers to carry out a cognitive or visual task, which would reduce
+the Useful Field of View (UFOV) and thus degrade the information provided by these features (Fig. 4). As such, in a steering
+task when there is a visual or cognitive load on the point of gaze ﬁxation, if visual information from peripheral vision
+becomes degraded (i.e. reduced UFOV), then greater steering bias towards the ﬁxation point should be observed.
+In terms of scenario (b) – cognitive load affecting steering directly – steering is often viewed as highly automated, without
+awareness of its procedural aspect and not relying on limited resources (Norman & Shallice, 2000; Shiffrin & Schneider,
+1977). If this is the case, steering should not be subject to interference from higher-level functions such as cognitive tasks,
+unless these tasks either affect eye-movements (which have been shown to be crucial for locomotion) or require a motor
+response (where there would be biomechanical interference with the steering task). There is evidence, however that shows
+that visual-motor tasks, such as walking (Harley, Wilkie, & Wann, 2009) and judging one’s direction of heading (Wann et al.,
+2000) can be affected by concurrent cognitive tasks. In the experiments reported here we examined whether the differences
+in steering patterns observed in the literature when drivers engage in visuospatial tasks and tasks that do not require visual
+input (‘‘cognitive’’ tasks) can be attributed to differences in eye-movements as the Active Gaze model of steering predicts. To
+this purpose, tasks similar to those used by Wann et al. (2000) that affected heading estimation were used, the rationale
+being that since these tasks can affect a low-level task such as heading perception, they should affect steering too. Wann
+et al. (2000) simulated linear self-motion and asked participants to perform one of three concurrent tasks (‘Arrow’,
+‘Number’ and ‘Colour’). They found that two tasks (‘Arrow’ and ‘Number’) had a detrimental effect on participants’ ability
+to judge the direction of simulated self-motion, with participants under-estimating the eccentricity of their heading
+direction. We used similar tasks, as well as an additional auditory task (in Experiment 2) in order to have a condition where
+attentional focus did not coincide with gaze focus.
+1 Tasks using different cognitive resources have been postulated to have different effects on steering. Engström et al. (2005) found an increase in lane keeping
+variation when using a visually demanding task compared to a more cognitive task. However, it should be noted that eye-movements rather than the task itself
+might have inﬂuenced the steering ﬁndings.
+110
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+
+
+In the ﬁrst experiment reported here visual tasks were placed at ﬁxation points at a constant angle relative to the driver
+(similar to looking at an IVIS; as used by Readinger et al., 2002) and in the second experiment the ﬁxation points were posi-
+tioned in relation to the world at a ﬁxed distance from the driver (as in Kountouriotis et al., 2012 and Robertshaw & Wilkie,
+2008). The same ﬁxation points were used in baseline conditions (without additional cognitive load) as well as in the cog-
+nitive task conditions, allowing the impact of cognitive load and gaze direction on steering to be quantiﬁed.
+2. Experiment 1: Fixations relative to the vehicle (‘IVIS’)
+In the ﬁrst experiment participants steered a series of bends whilst directing their gaze on to a ﬁxation cross displayed in
+one of four possible eccentricities. The ﬁxation point was always at a constant angle to driver, mimicking the properties of an
+in-vehicle information system. In the baseline conditions participants were asked to simply steer while ﬁxating their gaze on
+the ﬁxation point, while in the task conditions they had to perform one of two tasks (judge the direction of arrows or a num-
+ber series).
+2.1. Methods
+2.1.1. Participants
+Fourteen volunteers took part in this study, eight of them were females. The mean age was 23.93 ± 4.86 years and all had
+a driving license (one participant held a learner’s licence at the time of testing). All of the participants were naïve to the pur-
+pose of the experiment.
+2.1.2. Apparatus
+A PC with Intel i7 950 (3.07 GHz) processor generated images at 60 Hz with a resolution of 1280  1024 pixels. Images
+were created using WorldViz Vizard 3.0. Images were projected using a Sanyo Liquid Crystal Projector (PLC-XU58) onto a
+back projection screen with dimensions of 1.98  1.43 m. Participants sat 1 m away from this screen, making the total ﬁeld
+of view 89.42  71.31. A height-adjustable racing-style driving seat was used to maintain eye-height 1.20 m above the
+ground. Participants sat in a matt black booth so that the projection provided the only source of light. Steering was controlled
+using a force-feedback wheel (Logitech G27). Gaze data were recorded using a remote Applied Science Laboratories 504 gaze
+monitoring system, which uses pan-tilt tracking to follow eye movements and was calibrated on a 9-point grid.
+2.1.3. Visual stimuli
+The environment consisted of a 3 m wide bending roadway and participants were instructed to steer along the centre of
+the road. The road consisted of a 9 m long straight section and after that a single bend. The road curvature started at 60 m but
+it reduced at a constant rate of change of 25/p m. This type of bend was used over bends with a constant curvature, where
+(in theory) participants can steer by keeping the steering wheel at a constant angle. This should make the steering task more
+demanding by requiring participants to constantly monitor that the turning rate is sufﬁcient. Fig. 1 shows a top-down view
+of the bends used here, compared to a bend of constant curvature for comparison. In half the trials bends were ﬂipped across
+the long axis to make bends curve to the right or the left. The speed was kept constant in all of the conditions at 13.8 m/s to
+avoid participants negating the difﬁculty of the steering task by slowing down in the cognitive task conditions. Each trial
+lasted seven seconds.
+The ﬁxations used in this experiment were at a constant angle from the driver irrespective of the scene in order to imitate
+the properties of in-vehicle information systems, such as the position of a satellite navigation system on a windscreen.
+Four different eccentricities were used, set at 20 or 30 from the driver’s midline, either at the same direction of the bend
+(named Inside and Far Inside respectively), or opposite to the direction of the bend (named Outside and Far Outside respec-
+tively). For example, in a right bend, the ﬁxation point located at 20 to the right of the participant would be the Inside
+ﬁxation whereas the ﬁxation pointed located 20 to the left of the participant would be the Outside ﬁxation. Fig. 2 shows
+the scene with all four ﬁxation points (only one ﬁxation was visible during each trial).
+Fixations with a constant offset angle from the driver were also used by Readinger et al. (2002). In their study, partici-
+pants steered towards the ﬁxation points when driving along a straight road, with the magnitude of bias generally being
+in proportion to the magnitude of the offset of the ﬁxation point. However, bias reached a plateau on the more extreme offset
+ﬁxations (not used here). If similar results are observed in this experiment, then systematic negative biases for Far Outside
+and Outside ﬁxations are expected, and positive biases for the Inside and Far Inside ﬁxations. Furthermore, the magnitude of
+these biases should reﬂect the offset of the ﬁxations: larger (positive) values for the Far Inside compared to the Inside
+ﬁxation, and larger (absolute) values for the Far Outside compared to the Outside ﬁxations.
+2.1.4. Cognitive tasks
+Two cognitive tasks were used in this experiment, ‘Arrow’ and ‘Number’, as well as a control condition, during which the
+participants were asked to keep their gaze ﬁxating the target throughout the trial. The cognitive task conditions presented
+information on the ﬁxation target which were similar to the Arrow and Number conditions used by Wann et al. (2000). Here,
+however, instead of asking the participant to report the next arrow or number in a series, as in Wann et al. (2000), the
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+111
+
+
+participants were asked to compare either two arrows (Arrow condition) or two numbers (Number condition) presented at
+different times during the trial and make a judgement about the two stimuli. The onset of the ﬁrst stimulus was two seconds
+into the trial, and the onset of the second stimulus was six seconds into the trial. Each stimulus was visible for one second.
+When no arrow or number was present the ﬁxation point displayed a cross. At the end of the trial participants reported
+whether the numbers ascended or descended, or whether the arrows were moving clockwise or anticlockwise. The responses
+were made by pressing the right paddle of the steering wheel for ascending or clockwise and the left paddle for descending
+and anticlockwise. Participants were allowed to practice the tasks until they felt comfortable performing them whilst steer-
+ing. The insert of Fig. 2 shows the timings of an example Arrow condition.
+Since participants had to wait until the end of the trial to make a response, reaction times do not act as a useful measure
+in these experiments. In order to get an estimate of the relative difﬁculty of each task we measured separately reaction times
+and accuracy rates to respond purely to the visual stimuli (using the same display timings as in the actual experiment but
+without a concurrent steering task). Accuracy was similar across tasks, though RTs were quicker for ‘Number’ trials and slow-
+est for ‘Arrow’ trials. The full results of this pilot are reported in the methods section of Experiment 2.
+2.1.5. Experimental design and analysis
+A blocked design was used to separate the task and no task (baseline) conditions, in order to avoid situations where in a
+‘No Task’ condition participants expect a stimulus to appear on the ﬁxation point and therefore allocate more attentional
+resources than they would do otherwise. This provides us with a relatively pure measure of steering when ﬁxating the signs
+without additional cognitive load. To minimise the confounding effects of practice and fatigue the no-load condition was
+Fig. 1. Example of a spiral bend (where the radius reduces at a constant rate) compared to a bend of constant curvature.
+Fig. 2. The four possible ﬁxation points in Experiment 1 were always at the same offset angle (20 or 30 in either direction) relative to the driver’s midline.
+Only one ﬁxation was visible during each trial. The insert shows an example sequence for the ‘Arrow’ condition, where the correct response (after
+locomotion ﬁnishes) would be ‘clockwise’ (right button press). The same timings were used in all task conditions.
+112
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+
+
+repeated twice, at both the beginning and end of the testing session. Participants completed the ‘No Task 1’ block with the
+control conditions (6 trials of 4 ﬁxations, half in right bends and half in left bends). Then in the second block (‘Task’ block)
+they completed the two cognitive tasks randomly interleaved (6 trials of 4 ﬁxations  3 tasks, half of them right bends and
+half left). Finally, the ‘No Task 2’ block repeated the control condition (6 trials of 4 ﬁxations).
+2.2. Results and discussion
+2.2.1. Cognitive task performance
+In order to examine performance during the two cognitive tasks, accuracy scores (i.e. the percentage of correct responses)
+were calculated. The proportion of correct responses averaged across participants for the Arrow and Number tasks were
+91.07% and 93.15% respectively, indicating that the participants performed well in both tasks, and to a similar level as when
+performing the tasks without steering (See Table 1, Experiment 2 for a pilot experiment examining all secondary tasks without
+steering). A paired-samples t-test found no signiﬁcant difference between the Arrow and Number tasks, t(13) = 1.71, p = .110.
+2.2.2. Steering bias
+Steering bias is a directional measure of steering error, measuring the overall tendency of the driver to steer towards the
+outside road edge (negative values), or the inside road edge (positive values) relative to the centre of the road (zero bias). A 4
+(levels of Task: No Task 1, Arrow, Number and No Task 2) by 4 (levels of ﬁxations: Far Inside, Inside, Outside and Far Outside)
+repeated-measures ANOVA was carried out on the steering bias values. There was no signiﬁcant effect of Task, F(3,39) = 1.92,
+p = .143, but a signiﬁcant main effect of Fixation, F(3,39) = 3.55, p = .023, gp
+2 = .21, and a signiﬁcant interaction between Task
+and Fixation, F(9,117) = 2.41, p = .015, gp
+2 = .16, shown in Fig. 3.
+When No Task 1 is removed from the ANOVA so that Task has only three levels and Fixation four levels, the interaction
+between Fixation and Task ceases to be signiﬁcant, F(6,78) = 1.04, p = .405. It seems then that the interaction is driven by the
+behaviour of the participants in the No Task 1 condition/block where there are systematic directional steering biases caused
+by ﬁxation direction (white triangles on Fig. 3). Fixating Far Outside causes the greatest understeer (i.e. steering towards the
+outside edge) and ﬁxating Far Inside causes the greatest oversteer (steering towards the inside edge) with the intermediate
+conditions causing smaller biases in the direction of ﬁxation. This is the result that would be expected if participants steered
+in the direction of gaze (Kountouriotis et al., 2012; Readinger et al., 2002; Robertshaw & Wilkie, 2008).
+For all other conditions (Tasks and No Task 2) participants did exhibit some degree of bias caused by ﬁxation direction.
+This is shown by the direction of slopes between Far Inside and Inside ﬁxation (Fig. 3, greater oversteer in Far Inside), and
+Outside and Far Outside (greater understeer in Far Outside than Outside). However, there is a second factor inﬂuencing
+steering that causes participants to steer away from the direction of gaze – this is most obvious in the Outside and Inside
+ﬁxation conditions comparing No Task 2 with No Task 1 (Fig. 3, white squares vs. white triangles).
+We believe that this steering bias is due to a property of the static ﬁxation points used. If the driver steers in the opposite
+direction of ﬁxation then this causes a change in the scene and makes the centre of the road lie closer to the point of gaze.
+This means that the road will fall closer to central vision and so may provide more useful information to participants (Fig. 4
+illustrates this effect). The fact that this behaviour is not exhibited in the No Task 1 block (which was always presented ﬁrst)
+indicates that steering away from gaze may be a learnt response to try to reduce the biases caused by eccentric ﬁxation. It
+Fig. 3. The interaction between Fixation and Task conditions in steering bias. When participants ﬁxate on the Inside they steer towards the inside road edge
+in No Task 1 relatively to the rest of the task conditions, and they also understeer in the Outside ﬁxation condition compared to the rest of the task
+conditions.
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+113
+
+
+appears therefore that participants learnt to alter their natural steering behaviour in order to ‘move’ the road towards their
+point of gaze. This demonstrates remarkable ﬂexibility in the coordination of gaze and steering.
+It was expected that due to a narrowing of the UFOV (Ball et al., 1988; Williams, 1982, 1985) participants’ steering would
+be inﬂuenced more by gaze direction (with participants exhibiting greater biases towards the ﬁxation points) when a
+concurrent task was present compared to the No Task conditions. There were, however, no differential effects of cognitive
+task on steering bias.
+2.2.3. RMS steering error
+RMS error is calculated by taking the square of the signed steering error (bias) for every frame, averaging across frames
+and then taking the square root. It provides an overall estimate of how close the participant was to the centre of the road in a
+given trial but is unsigned (in contrast to bias which shows whether there was systematic over/understeer but underesti-
+mate large errors that are not biased). Low RMS scores indicate participants stayed near the centre of the road whereas high
+values indicate participants were away from the centre. As with steering bias, a 4 (levels of Task) by 4 (Fixations)
+repeated-measures ANOVA was carried out on the RMS values. There was a signiﬁcant main effect of Task conditions,
+F(3,39) = 14.10, p < .001, gp
+2 = .52, as well as a signiﬁcant main effect of Fixation conditions, F(3,39) = 8.31, p < .001,
+gp
+2 = .39. No signiﬁcant interaction was found between these two factors, F(4.23,55.01) = 0.47, p = .764.
+The main effect of Fixation is shown in Fig. 5a. Repeated planned contrasts indicate that RMS error in the Inside ﬁxation
+condition was signiﬁcantly lower both from the Far Inside ﬁxation, F(1,13) = 23.41, p < .001, and the Outside ﬁxation condi-
+tion, F(1,13) = 10.94, p = .006. No difference was found between the Outside and Far Outside ﬁxations, F(1,13) = 1.96,
+p = .185. The lower RMS error in the Inside ﬁxation condition is in line with the ﬁndings of Kountouriotis et al. (2012), where
+ﬁxation on the inside of the bend produced lower RMS scores than ﬁxation on the outside of the bend. It appears, however,
+that the advantage of ﬁxating on the inside of the bend is lost when the ﬁxation is moved further away from the road centre
+(Far Inside ﬁxation).
+Fig. 4. Over/under-steering and the relation of the ﬁxation point to the road. (a) Steering away from the point of gaze means that the road is closer to
+central vision (see shaded circle). (b) Steering towards the point of gaze moves the road towards peripheral vision where not only there is less visual acuity
+but the gaze angle has not been reduced. The dark grey discs demonstrate a 30 zone indicating central vision (these discs were not visible to the
+participants).
+114
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+
+
+The main effect of Task on RMS error is shown in Fig. 5b. We ﬁrst compared the two task conditions using a t-test which
+showed no difference between the two, t(13) = .62, p = .55. Therefore we collapsed these two conditions and ran a 3-way
+ANOVA comparing No Task 1, Tasks, and No Task 2 which was signiﬁcant, F(2,26) = 12.66, p < .001, gp
+2 = .49. Pairwise com-
+parisons with Sidak correction showed that No Task 1 was signiﬁcantly higher than Tasks (p < .001), No Task 2 was signif-
+icantly higher than Tasks (p = .034) but there were no differences between No Task 1 and No Task 2 (p = .276).
+An interesting phenomenon occurs here: RMS scores, usually indicative of steering error and variability in steering per-
+formance, are higher when participants do not perform a secondary task. As discussed in the Introduction, this ﬁnding can be
+explained by previous research. One measure that might help interpret the present ﬁndings is steering reversal rate (McLean
+& Hoffmann, 1975).
+2.2.4. Steering reversals
+If RMS error reﬂects reduced steering variability in the tasks conditions compared to baseline then we should see the
+same pattern when using a measure such as steering reversals. Steering reversal rate can be deﬁned as the number of times
+per minute that the direction of the steering wheel changes by a ﬁnite amount – from half a degree to 10 (Macdonald &
+Hoffmann, 1980; McLean & Hoffmann, 1975). In our experiment trials only lasted for a relatively short duration (7 s), so
+we generated a measure of steering reversals using the rate of change of the steering wheel angle and then identifying
+any peaks above 1 in the opposite direction of the required steering response. We used these criteria in order to capture
+instances where participants needed to make major adjustments to their trajectory rather than capturing overall steering
+input (though bidirectional reversals of 0.5 and 0.1 revealed similar patterns as in the reported metric). Similar to the anal-
+ysis of RMS steering error, a t-test was carried out to compare the difference in number of steering reversals (see Fig. 6)
+between Number and Arrow, which showed no signiﬁcant difference, t(13) = .56, p = .588. Therefore we collapsed across
+the tasks conditions and ran a repeated-measures ANOVA with one factor with 3 levels (No Task 1, Tasks, No Task 2).
+There was a signiﬁcant main effect, F(2,16) = 17.61, p < .001, gp
+2 = .575. Pairwise comparisons with Sidak corrections showed
+that differences were signiﬁcant between all three conditions. Participants in the No Task 1 condition made more steering
+reversals compared to the Tasks condition (p < .001), and also more steering reversals compared to No Task 2 (p = .027).
+Additionally, in No Task 2 participants made more steering reversals compared to the Tasks (p = .032).
+When participants had a cognitive load they made fewer steering reversals compared to the conditions without a cogni-
+tive load. This ﬁnding is in line with the observations of Macdonald and Hoffmann (1980) who suggested that increasing the
+demands on a steering task with a cognitive load causes a reduction in steering reversals; they argue that this happens
+because when participants have to perform a demanding concurrent task they remove their attention from the steering task
+Fig. 5. RMS steering error. (a) The main effect of Fixation. Participants perform better when they ﬁxate on the inside of the bend, but this advantage of the
+inside ﬁxation does not exist on the more extreme Far Inside ﬁxation. (b) The main effect of Task. Participants’ RMS errors are lower when they perform a
+secondary task (either Arrow or Number) compared to the conditions where there is no concurrent task.
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+115
+
+
+and therefore make fewer corrective adjustments. The alternative explanation is that steering performance is actually
+improving when attention is shifted away, because steering is such a highly-automated task (Medeiros-Ward et al.,
+2014). This argument equates reduced variability with better performance, but this relationship is commonly observed in
+experts performing a number of skilled visual-motor tasks, for example baseball (Gray, 2004), golf and football (Beilock,
+Carr, MacMahon, & Starkes, 2002) as well as typing (Tapp & Logan, 2011).
+3. Experiment 2: Fixations in relation to the world (‘Road Signs’)
+The ﬁrst experiment showed that ﬁxations on signs at a constant angle relative to the observer led to reduced steering
+corrections in the task conditions. In terms of directional errors (steering bias), participants steered in the direction of gaze
+in the ﬁrst experimental block, but in the following blocks they steered in a way that would bring relevant information closer
+to central vision. In the second experiment the ﬁxation points were positioned in the world, and their position updated every
+frame so they were always at a ﬁxed distance ahead of the observer. Additionally, being positioned in the world they created
+a gaze angle that could be reduced if the participant steered towards them (see Kountouriotis et al., 2012; Robertshaw &
+Wilkie, 2008). This means that participants could close down the angle between their midline and gaze direction. These ﬁx-
+ation points have similar properties to road signs, in that drivers can reduce their gaze angle by steering towards them
+(although unlike real signs these ﬁxation points were always kept a set distance away and were always perpendicular to
+the observer to ensure clear and consistent visibility of the sign).
+In Experiment 2 we also decided to employ an additional task: participants looked at the same ﬁxation points, but were
+asked to evaluate auditory information rather than visual information (‘Sound’ task). The form of the task was similar to the
+visual task: participants heard two sounds of different frequencies and after trials ﬁnished they had to indicate whether the
+second sound had a lower or higher frequency than the ﬁrst (using left or right button presses). The rationale for using this
+task was that the Number and Arrow tasks should draw attention to the ﬁxation point, but the Sound task should not.
+Therefore, according to the UFOV theory, no narrowing of the visual ﬁeld should be observed in the Sound task, which would
+make participants less likely to exhibit large steering biases towards the point of ﬁxation.
+In order to accommodate ﬁxations located at the centre of the road, the road width was increased by 1 m (4 m wide, com-
+pared to 3 m wide in Experiment 1). This increase in road width should allow for higher RMS/steering variability errors,
+which could differentiate between the different cognitive tasks (something Experiment 1 did not show and could have been
+due to the relatively narrow roads used).
+3.1. Methods
+3.1.1. Participants
+Twelve participants took part in this study (six females) with a mean age of 20.5 ± 0.79 years. Ten participants held a valid
+driving license at the time of testing. The two non-drivers did not perform differently from the drivers.2 All of the participants
+were naïve to the purpose of the experiment.
+3.1.2. Apparatus
+The same apparatus was used as in Experiment 1.
+Fig. 6. Number of steering wheel reversals for each Task condition. Participants perform fewer steering reversals when there is a secondary task compared
+to the conditions without a concurrent task.
+2 We re-ran all analyses excluding the participants without a driving licence, but this had no effect on the pattern of the statistical results.
+116
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+
+
+3.1.3. Visual stimuli
+The same bends as Experiment 1 were used, with the only difference being that the roads were 4 m wide (instead of 3 m
+wide in Experiment 1) in order to accommodate for the different ﬁxation points used here.
+The ﬁxations used in this experiment had different properties compared to the ﬁxations used in the previous experiment.
+Three ﬁxation points were used, one in the centre of the road approximately 16.1 m ahead of the participant, and two either
+side of the road, 2 m outside either road edge. These ﬁxation points were not ﬁxed on the ground, instead their position was
+updated on every frame so they maintained the same distance in front of the driver. However, they were also linked to the
+world so if the driver steered towards the ﬁxation point the angle of gaze would reduce.
+3.1.4. Cognitive tasks
+Three cognitive tasks were used in this experiment, the Arrow and Number tasks from Experiment 1, and an additional
+auditory task (Sound task). This task was added in order to examine whether steering control is affected by a cognitive task
+that does not require any visual processing. A simple ﬁxation cross was used to control the location of participants’ gaze
+throughout the Sound task, similar to the other tasks. Participants heard two tones presented sequentially at different fre-
+quencies (eight tones were used ranging from 240 Hz to 590 Hz in 50 Hz increments). At the end of the trial participants
+indicated if the second sound had a higher or lower frequency than the ﬁrst. Participants responded in the same way as
+in the Number task by pressing the right paddle for ‘higher’ and the left paddle for ‘lower’. The timings of the Sound task
+were identical to the Arrow and Number tasks (see Fig. 2) with each sound lasting for 1 s.
+As with Experiment 1, a blocked design was used. First participants completed the control conditions (6 trials of 3 ﬁxa-
+tions) (No Task 1 block). Then in the second block the three cognitive tasks were randomly interleaved (6 trials of 3 ﬁxa-
+tions  3 tasks). Finally, they repeated a control block with no cognitive task (6 trials of 3 ﬁxations) (No Task 2).
+Conditions within each block were always randomised and half of the 6 trials of every condition were right bends and half
+of them left bends.
+Since participants had to wait until the end of each trial to respond to the tasks, it is not useful to measure reaction times for
+these tasks. Therefore a pilot study was conducted using these tasks (with the same timings as in the actual experiments) but
+without any steering. Ten participants (mean age = 21.6 years) sat in the driving simulator and were presented with eight trials
+of each of the three cognitive tasks. Participants were asked to respond as quickly and accurately as possible at the onset of the
+second stimulus. The reaction times and percent correct results are shown in Table 1. Two repeated-measures ANOVAs were
+conducted, one for reaction times and one for accuracy. A signiﬁcant main effect was found on reaction times, F(2,18) = 4.99,
+p = .019, gp
+2 = .36, but no signiﬁcant differences were found on the accuracy scores, F(2,18) = 1.56, p = .237. Pairwise compar-
+isons with LSD adjustment showed that participants were signiﬁcantly slower in the Arrow task compared to the Number task
+(p = .026); no other differences were found. The results indicate that although participants took more time to make a judge-
+ment on the relative directions of the arrows in the Arrow task, the three tasks gave similar results in terms of accuracy.
+3.2. Results and discussion
+3.2.1. Cognitive task performance
+Performance in the three cognitive tasks during the steering study was assessed using accuracy scores (i.e. the percentage
+of correct responses). The accuracy scores were analysed using a repeated-measures ANOVA with three levels. No signiﬁcant
+difference was found between tasks in terms of accuracy, F(2,22) = 0.68, p = .516, consistent with the results obtained with-
+out steering (see Table 1). Although it appears that accuracy scores were lower in experiment 2 compared to the results with
+no steering (Number: mean = 80.09%, SD = 26.95; Arrow: mean = 73.61%, SD = 26.50; Sound: mean = 75.46%, SD = 25.34) this
+was largely driven by four participants making incorrect response in approximately half of the trials. We re-ran all of the
+following analyses without these participants and the patterns remained largely unaffected.
+3.2.2. Steering bias
+A 3 (ﬁxation points: Inside, Centre, Outside) by 5 (task conditions: No Task 1, Arrow, Sound, Number, No Task 2)
+repeated-measures ANOVA was conducted on the steering bias values. There was a signiﬁcant main effect of Fixation,
+Table 1
+Mean and standard deviation of reaction times and accuracy scores for the three cognitive tasks
+without steering.
+Reaction times (s)
+Accuracy (%)
+x
+SD
+x
+SD
+Number
+0.69
+0.14
+94.17
+10.43
+Arrow
+1.01
+0.47
+90.00
+8.61
+Sound
+0.82
+0.30
+95.00
+9.96
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+117
+
+
+F(2,22) = 11.29, p < .001, gp
+2 = .51, with participants steering towards their point of gaze (see Fig. 7a). There was also a main
+effect of Task, F(4,44) = 3.10, p = .025, gp
+2 = .22, shown in Fig. 7b with a general pattern of oversteer (i.e. steering towards the
+inside road edge). There was no signiﬁcant interaction between Fixation and Task, F(8,88) = .81, p = .593.
+The main effect of Fixation on steering bias was examined using planned contrasts. A signiﬁcant difference was found
+between the Outside and Central ﬁxations, F(1,11) = 15.54, p = .002, but no signiﬁcant difference was found between the
+Central and Inside ﬁxations, F(1,11) = 0.78, p = .397. This pattern is similar to the steering behaviour exhibited in
+Kountouriotis et al. (2012), and can be explained by the tendency of drivers to oversteer when negotiating bends (as
+observed in Wilkie et al., 2010; Raw, Kountouriotis, Mon-Williams, & Wilkie, 2012).
+The signiﬁcant main effect of Task (Fig. 7b) was analysed using pairwise comparisons with Sidak correction. The only sig-
+niﬁcant difference was between the No Task 1 and Sound conditions, p = .047. Across all ﬁxation conditions, participants
+over-steered more in the Sound condition compared to the No Task 1 condition where they stay closer to the centre of
+the road.
+The fact that no signiﬁcant interaction was found between Task and Fixation conditions indicates that gaze had a similar
+effect across the Task conditions. This does not match the predictions of attention load models of cognition. There appears to
+be no ‘tunnelling effect’ (reduced UFOV) in this experiment. However, in order to draw any ﬁrm conclusions on the effect of
+the cognitive tasks on steering these results have to be examined along with other steering metrics, namely RMS steering
+error and steering reversals.
+3.2.3. RMS steering error
+A 3 (ﬁxation points) by 5 (task conditions) repeated-measures ANOVA was conducted for the RMS steering error. There
+was no signiﬁcant main effect of Fixation, F(2,22) = 2.52, p = .103, no signiﬁcant main effect of Task, F(2.22, 24.43) = 0.926,
+p = .458, and no signiﬁcant interaction between Fixation and Task conditions, F(8,88) = 1.73, p = .103.
+These ﬁndings are in contrast to Experiment 1, where in the Arrow and Number conditions participants had lower RMS
+errors compared to the No Task conditions. The differences between the two experiments were the inclusion of an auditory
+task in Experiment 2, the wider road, and the different properties of the ﬁxation points. There is no reason to assume that
+including a third task would lower participants’ RMS errors in the other two tasks. The wider road used should in theory
+increase RMS errors overall (because road-edges are moved further into peripheral vision, see Robertshaw & Wilkie,
+2008; Kountouriotis et al., 2012), but also it should allow for more variation in RMS errors and thus accentuate any differ-
+ences between task conditions that could have been missed in narrower roads. Instead, we believe that reduced errors may
+be due to the nature of gaze ﬁxation in this task. The ﬁxations used in this experiment biased steering trajectories towards
+the direction of participants’ gaze, and that reduced the gaze angle offset. When the ﬁxations are set at a constant offset angle
+from the participants (like in Experiment 1), the gaze angle is never reduced. If participants steer in the direction of gaze the
+offset gaze angle does not close down, and the more they steer towards the ﬁxation point, the more this trajectory moves
+away from the centre of the road. Therefore, drivers seemed to develop a strategy (described in Experiment 1) to mitigate
+the adverse effects of steering indeﬁnitely towards their ﬁxation point. This strategy is potentially the reason why there
+is a difference in RMS steering error between the Task conditions in Experiment 1.
+3.2.4. Steering reversals
+Given the strong link between RMS steering error and steering wheel reversals observed in Experiment 1, no differences
+are expected in the number of reversals in the different task conditions, similar to the non-signiﬁcant ﬁndings in RMS steer-
+ing error in this experiment. Indeed, the 5-level (No Task 1, Arrow, Number, Sound, No Task 2) repeated-measures ANOVA
+used to analyse the steering reversals in this experiment showed no signiﬁcant effect of Task, F(1.90,20.99) = 0.54, p = .707.
+In fact, participants made almost no steering reversals as deﬁned in the previous experiment: the average reversals (across 3
+ﬁxations, 6 trials each) for No Task 1 was 0.02, for Number 0.03, for Arrow 0.03, for Sound 0.04, and for No Task 2 0.02. In
+Experiment 1, the lowest number of reversals was 0.30 in the Arrow condition (see Fig. 6).This lack of steering reversals is
+probably due to the different ﬁxation points used here, as discussed above.
+By using offset ﬁxations where the driver could reduce the offset of the gaze angle – by steering closer to the ﬁxation
+point – the steering task seems to have been easier compared to Experiment 1 where the offset gaze angle could never
+be reduced. This could be the reason for the lack of an effect of concurrent tasks in Experiment 2. These results indicate that
+looking on a point in the world (and not on an in-vehicle information system) may result in better steering.
+4. General discussion
+Our research examined the effects of a number of cognitive tasks on steering. Unlike previous work, we recorded steering
+along a set of bending roadways when gaze direction was controlled in task and no-task conditions. When ‘road sign’ ﬁxa-
+tions were used (ﬁxed position relative to the road) participants steered towards the direction of their gaze, a ﬁnding in line
+with the Active Gaze model of steering (Wilkie et al., 2008). When a cognitive load was added the bias towards the ﬁxation
+point did not increase; higher bias towards the point of gaze would indicate that other sources of visual information (such as
+road-edges or retinal ﬂow) are being weighted less (Kountouriotis et al., 2012; Wilkie & Wann, 2003). It appears that the
+overall processing of the scene did not alter with the addition of cognitive load since participants were largely unaffected
+118
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+
+
+by the different cognitive task conditions in terms of steering bias as well as steering variability. However, when IVIS ﬁxa-
+tions were used (ﬁxed position relative to the vehicle), participants had lower RMS steering error under the cognitive load
+conditions. This seems to indicate that the direction of gaze can interact with cognitive load and inﬂuence the resources
+available to steer. Our ﬁxation points in Experiment 1 resembled IVIS displays, but similar properties can be seen in
+head-up displays (HUDs) in terms of the constant angle to the driver regardless of the trajectory they take. One crucial dif-
+ference is that HUDs can display information in front of the driver rather than requiring them to turn their head towards an
+IVIS which is preferable since it does not take gaze away from the scene and potential hazards. One possible limitation of this
+method of displaying information is that during bend negotiation a HUD would direct gaze towards the direction of instan-
+taneous heading rather than the drivers’ future path. It is not safe to assume that such shifts in gaze are safe, and further
+experiments are needed in order to clarify any detriments/improvements in driving behaviour associated with HUDs.
+It should be highlighted that it is currently unclear why RMS error and steering reversals decrease when a cognitive load
+is added to the steering task. Macdonald and Hoffmann (1980) attempted to explain the negative relationship between con-
+current task difﬁculty and reversal rates in terms of participants removing attention from the steering task. If participants fail
+to attend the steering task then fewer corrective steering adjustments would be made (and so fewer reversals). In line with
+this, Jamson and Merat (2005) found that as the demands of a concurrent auditory task increased, lane variation (a measure
+similar to RMS error) decreased. It should be noted that lane variation actually increased during their ‘visual task’, but this
+may have simply been caused by head and eye movements sampling information from the screen presenting the visual task
+(the display was placed in the car in front of the radio control panels). Medeiros-Ward et al. (2014) argue that the reduction
+in steering variability under conditions of cognitive load is due to positive effects on performance of highly-automated tasks
+that do not require (and in fact will be impaired by) attention.
+One difﬁculty with interpreting a low reversal rate is that this measure merely reﬂects few steering adjustments. In some
+cases this could be because of a lack of response to steering errors, but it could also be because there is simply no need to
+make a steering adjustment (i.e. steering performance is not errorful in the ﬁrst place). To try to address this in our exper-
+iment reversals were deﬁned as peaks in the opposite direction of the required steering response; in the literature, however,
+reversals can be deﬁned as peaks in any direction.3 Without comparing trajectories with the optimal steering line it can be
+difﬁcult to draw ﬁrm conclusions from steering reversals. Also, our relatively short trial duration (7 s) might have made it less
+likely for large heading errors to unfold, so ﬁndings from steering reversals should be interpreted in conjunction with the other
+metrics. In the present experiments, participants were instructed to stay in the centre of the road in order to be able to extract a
+useful measure of steering error and bias. Steering bias shows that trajectories were inﬂuenced by the point of gaze. We also
+found that the steering system is sufﬁciently ﬂexible that participants can learn to steer away from the direction of ﬁxation
+in order to bring visual information about the road towards central vision.
+In Experiment 1, the effect of the two tasks on steering performance was similar. These results are in contrast to those of
+other studies (e.g. Engström et al., 2005; Jamson & Merat, 2005) where steering performance was differentially affected by
+visual and cognitive load. One explanation for this contradiction may be the differences in gaze patterns across experiments.
+In previous work the visual tasks required gaze to be directed to a separate display and away from the road. In contrast the
+present experiments controlled gaze direction and we observed no differences in steering performance between different
+task conditions. Future studies in the area should take into account that differences in eye-movements between cognitive
+and visual task conditions might mediate any differences observed in steering performance.
+Fig. 7. Steering Bias results for Experiment 2. Positive values indicate oversteer trajectories that cut closer to the inside of the bend than the middle of the
+road. (a) The main effect of ﬁxation collapsed across Task conditions, whereby participants steer more towards the inside of the bend, when the ﬁxation
+point is positioned beyond the inside edge of the road. (b) The main effect of Task collapsed across ﬁxation conditions. Participants oversteer more in the
+Sound task compared to No Task 1.
+3 When reversals are deﬁned in this way, it is very hard to distinguish between genuine reversals which adjust the steering course and variability in the
+steering response or, indeed, from simply unwanted noise.
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+119
+
+
+In Experiment 2 offset ﬁxations systematically biased steering, but the biases were not mediated by cognitive load; this
+ﬁnding suggests that there was no narrowing of the UFoV. The ﬁxations used in Experiment 2 biased participants towards
+the direction of their gaze, which in turn reduced the angle of gaze. When the ﬁxations were set at a constant eccentricity
+relative to the driver (Experiment 1), the angle could not be reduced. As such, it could be argued that the steering task in
+Experiment 1 was generally more challenging than in Experiment 2 and this could account for differences in the effect of
+cognitive tasks on steering. The differences in the ﬁxation point properties map directly to real-world examples: information
+can be presented inside vehicles (for example in in-vehicle displays), in which case the driver cannot close down gaze angle,
+or outside of vehicles, for example road-signs, where gaze angle is not constant. Our data suggest that information presented
+on road signs may interfere less with steering, particularly if positioned in the direction you wish to travel. There are addi-
+tional good reasons why looking away from your future path while driving for more than a few seconds poses increased risks
+in driver safety. For example, Liang, Lee, and Horrey (2014) in a large naturalistic driving study found that drivers looked
+away more from their future path in the seconds preceding a crash or a near miss. They argued that looking away from your
+future path for more than 1.7 s poses a risk hazard (Liang et al., 2014).
+In conclusion, we have shown that gaze direction is a critically important factor in successful steering control. Concurrent
+cognitive tasks can have an effect on steering around bends, but this is dependent on the demands placed upon gaze and
+steering. We found no differences in steering performance across different cognitive tasks, presumably because we con-
+trolled for the direction of participants’ gaze. Additionally, we have shown that gaze direction towards a point similar to
+an in-vehicle information system makes drivers more susceptible to cognitive interference as measured by reduced RMS
+error rates.
+Acknowledgments
+GK was funded by an EPSRC Doctoral Training Grant and subsequently by EPSRC EP/J002933/1 as a Research Fellow. The
+EPSRC had no involvement in the design, data collection, analysis and interpretation, in the writing of the report or in the
+decision to submit for publication. Thanks to John Wann for the loan of the eye-tracking equipment used in these
+experiments.
+References
+Ball, K. K., Beard, B. L., Roenker, D. L., Miller, R. L., & Griggs, D. S. (1988). Age and visual search: Expanding the useful ﬁeld of view. Journal of Optical Society of
+America, 5, 2210–2219.
+Beilock, S. L., Carr, T. H., MacMahon, C., & Starkes, J. L. (2002). When paying attention becomes counterproductive: Impact of divided versus skill-focused
+attention on novice and experienced performance of sensorimotor skills. Journal of Experimental Psychology: Applied, 8(1), 6–16.
+Cooper, J. M., Medeiros-Ward, N., & Strayer, D. L. (2013). The impact of eye movements and cognitive workload on lateral position variability in driving.
+Human Factors, 55(5), 1001–1014.
+Drews, F. A., Pasupathi, M., & Strayer, D. L. (2008). Passenger and cell-phone conversations in simulated driving. Journal of Experimental Psychology: Applied,
+14(4), 392–400.
+Engström, J., Johansson, E., & Östlund, J. (2005). Effects of visual and cognitive load in real and simulated motorway driving. Transportation Research Part F:
+Trafﬁc Psychology and Behaviour, 8, 97–120.
+Gray, R. (2004). Attending to the execution of a complex sensorimotor skill: Expertise differences, choking, and slumps. Journal of Experimental Psychology:
+Applied, 10(1), 42–54.
+Harley, C., Wilkie, R. M., & Wann, J. P. (2009). Stepping over obstacles: Attention demands and aging. Gait Posture, 29, 428–432.
+Jamson, A. H., & Merat, N. (2005). Surrogate in-vehicle information systems and driver behaviour: Effects of visual and cognitive load in simulated rural
+driving. Transportation Research Part F: Trafﬁc Psychology and Behaviour, 8, 79–96.
+Kountouriotis, G. K., Floyd, R. C., Gardner, P. H., Merat, N., & Wilkie, R. M. (2012). The role of gaze and road edge information during high-speed locomotion.
+Journal of Experimental Psychology: Human Perception and Performance, 38(3), 687–702.
+Kubose, T. T., Bock, K., Dell, G. S., Garnsey, S. M., Kramer, A. F., & Mayhugh, J. (2006). The effects of speech production and speech comprehension on
+simulated driving performance. Applied Cognitive Psychology, 20, 43–63.
+Land, M. F., & Horwood, J. (1995). Which parts of the road guide steering? Nature, 377, 339–340.
+Land, M. F., & Lee, D. N. (1994). Where we look when we steer. Nature, 369, 742–744.
+Liang, Y., Lee, J. D., & Horrey, W. J. (2014). A looming crisis: The distribution of off-road glance duration in moments leading up to crashes/near-crashes in
+naturalistic driving. Proceedings of the Human Factors and Ergonomics Society 58th Annual Meeting, 58(1), 2102–2106.
+Macdonald, W. A., & Hoffmann, E. R. (1980). Review of relationships between steering wheel reversals rate and driving task demand. Human Factors, 22(6),
+733–739.
+McLean, J. R., & Hoffmann, E. R. (1975). Steering reversals as a measure of driver performance and steering task difﬁculty. Human Factors, 17, 248–256.
+Medeiros-Ward, N., Cooper, J. M., & Strayer, D. L. (2014). Hierarchical control and driving. Journal of Experimental Psychology: General, 143(3), 953–958.
+Merat, N., Antilla, V., & Luoma, J. (2005). Comparing the driving performance of average and older drivers: The effect of surrogate in-vehicle information
+systems. Transportation Research Part F: Trafﬁc Psychology and Behaviour, 8, 147–166.
+Merat, N., & Jamson, A. H. (2008). The effects of stimulus modality on signal detection: Implications for assessing the safety of in-vehicle technology. Human
+Factors, 50(1), 145–158.
+Norman, D. A., & Shallice, T. (2000). Attention to action: Willed and automatic control of behavior. In M. S. Gazzaniga (Ed.), Cognitive neuroscience: A reader.
+Oxford: Blackwell Publishers Ltd..
+Raw, R. K., Kountouriotis, G. K., Mon-Williams, M., & Wilkie, R. M. (2012). Age differences in motor-control: Does old age mean middle of the road? Journal of
+Experimental Psychology: Human Perception and Performance, 38(3), 735–745.
+Readinger, W. O., Chatziastros, A., Cunningham, D. W., Bülthoff, H. H., & Cutting, J. E. (2002). Gaze-eccentricity effects on road position and steering. Journal
+of Experimental Psychology: Applied, 8(4), 247–258.
+Recarte, M. A., & Nunes, L. M. (2003). Mental workload while driving: Effects on visual search, discrimination, and decision making. Journal of Experimental
+Psychology: Applied, 9(2), 119–137.
+Reimer, B. (2009). Cognitive task complexity and the impact on drivers’ visual tunneling. Transportation Research Record, 2138, 13–19.
+Robertshaw, K. D., & Wilkie, R. M. (2008). Does gaze inﬂuence steering around a bend? Journal of Vision, 8(4). 18.1–13.
+120
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+
+
+Salvucci, D. D., & Beltowska, J. (2008). Effects of memory rehearsal on driver performance: Experiment and theoretical account. Human Factors, 50(5),
+834–844.
+Salvucci, D. D., & Gray, R. (2004). A two-point visual control model of steering. Perception, 33, 1233–1248.
+Shiffrin, R. M., & Schneider, W. (1977). Controlled and automatic human information processing: II. Perceptual learning, automatic attending, and a general
+theory. Psychological Review, 84(2), 127–190.
+Strayer, D. L., & Drews, F. A. (2004). Proﬁles in driver distraction: Effects of cell phone conversations on younger and older drivers. Human Factors, 46,
+640–649.
+Strayer, D. L., Drews, F. A., & Johnston, W. A. (2003). Cell phone-induced failures of visual attention during simulated driving. Journal of Experimental
+Psychology: Applied, 9(1), 23–32.
+Tapp, K. M., & Logan, G. D. (2011). Attention to the hands disrupts skilled typewriting: The role of vision in producing the disruption. Attention, Perception, &
+Psychophysics, 73, 2379–2383.
+Victor, T. W., Engström, J., & Harbluk, J. L. (2008). Distraction assessment methods based on visual behavior and event detection. In M. Regan, J. Lee, & K.
+Young (Eds.), Driver distraction: Theory. Effects and Mitigation: CRC Press.
+Victor, T. W., Harbluk, J. L., & Engström, J. (2005). Sensitivity of eye-movement measures to in-vehicle task difﬁculty. Transportation Research Part F: Trafﬁc
+Psychology and Behaviour, 8(2), 167–190.
+Wann, J. P., Swapp, D., & Rushton, S. K. (2000). Heading perception and the allocation of attention. Vision Research, 40(18), 2533–2543.
+Wilkie, R. M., Kountouriotis, G. K., Merat, N., & Wann, J. P. (2010). Using vision to control locomotion: Looking where you want to go. Experimental Brain
+Research, 204(4), 539–547.
+Wilkie, R. M., & Wann, J. P. (2002). Driving as night falls: The contribution of retinal ﬂow and visual direction to the control of steering. Current Biology,
+12(23), 2014–2017.
+Wilkie, R. M., & Wann, J. P. (2003). Controlling steering and judging heading: Retinal ﬂow, visual direction, and extraretinal information. Journal of
+Experimental Psychology: Human Perception and Performance, 29(2), 363–378.
+Wilkie, R. M., & Wann, J. P. (2005). The role of visual and nonvisual information in the control of locomotion. Journal of Experimental Psychology: Human
+Perception and Performance, 31(5), 901–911.
+Wilkie, R. M., Wann, J. P., & Allison, R. S. (2008). Active gaze, visual look-ahead, and locomotor control. Journal of Experimental Psychology: Human Perception
+and Performance, 34(5), 1150–1164.
+Williams, L. J. (1982). Cognitive load and the functional ﬁeld of view. Human Factors, 24(6), 683–692.
+Williams, L. J. (1985). Tunnel vision induced by a foveal load manipulation. Human Factors, 27, 221–227.
+G.K. Kountouriotis et al. / Transportation Research Part F 34 (2015) 108–121
+121
+
+

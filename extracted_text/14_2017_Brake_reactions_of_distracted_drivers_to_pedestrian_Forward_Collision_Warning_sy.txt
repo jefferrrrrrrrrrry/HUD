@@ -1,0 +1,2168 @@
+--- Page 1 ---
+UNCORRECTED PROOF
+1
+Special Report from the CDC
+2Q1 Brake reactions of distracted drivers to pedestrian forward collision
+3
+warning systems
+4Q2
+Nils Lubbe ⁎
+5
+Toyota Motor Europe NV/SA, Hoge Wei 33, B-1930, Zaventem, Belgium
+6
+Autoliv Development AB, Autoliv Research, Wallentinsvägen 22, SE-44783 Vårgårda, Sweden
+7
+a b s t r a c t
+8
+a r t i c l e
+i n f o
+9
+Article history:
+10
+Received 16 October 2015
+11
+Received in revised form 15 October 2016
+12
+Accepted 15 February 2017
+13
+Available online xxxx
+14
+15
+16
+17
+18
+19
+Introduction: Forward Collision Warning (FCW) can be effective in directing driver attention towards a conﬂict
+20
+and thereby aid in preventing or mitigating collisions. FCW systems aiming at pedestrian protection have been
+21
+introduced onto the market, yet an assessment of their safety beneﬁts depends on the accurate modeling of
+22
+driver reactions when the system is activated. This study contributes by quantifying brake reaction time and
+23
+brake behavior (deceleration levels and jerk) to compare the effectiveness of an audio-visual warning only, an
+24
+added haptic brake pulse warning, and an added Head-Up Display in reducing the frequency of collisions with
+25
+pedestrians. Further, this study provides a detailed data set suited for the design of assessment methods for
+26
+car-to-pedestrian FCW systems. Method: Brake response characteristics were measured for heavily distracted
+27
+drivers who were subjected to a single FCW event in a high-ﬁdelity driving simulator. The drivers maintained
+28
+a self-regulated speed of 30 km/h in an urban area, with gaze direction diverted from the forward roadway by
+29
+a secondary task. Results: Collision rates and brake reaction times differed signiﬁcantly across FCW settings.
+30
+Brake pulse warnings resulted in the lowest number of collisions and the shortest brake reaction times (mean
+31
+0.8 s, SD 0.29 s). Brake jerk and deceleration were independent of warning type. Ninety percent of drivers exceeded
+32
+a maximum deceleration of 3.6 m/s2 and a jerk of 5.3 m/s3. Conclusions: Brake pulse warning was the most effective
+33
+FCW interface for preventing collisions. In addition, this study presents the data required for driver modeling for
+34
+car-to-pedestrian FCW similar to Euro NCAP's 2015 car-to-car FCW assessment. Practical applications: Vehicle
+35
+manufacturers should consider the introduction of brake pulse warnings to their FCW systems. Euro NCAP could
+36
+introduce an assessment that quantiﬁes the safety beneﬁts of pedestrian FCW systems and thereby aid the prolif-
+37
+eration of effective systems.
+38
+© 2017 National Safety Council and Elsevier Ltd. All rights reserved.
+39
+Keywords:
+40
+Driver behavior
+41
+FCW
+42
+Haptic
+43
+Head-up display
+44
+Reaction time
+45
+46
+47
+48
+49
+1. Introduction
+50
+Driver distraction is a major factor in vehicle-to-pedestrian collisions.
+51
+Approximately one third of fatal pedestrian accidents in Japan are caused
+52
+by distracted drivers (ITARDA, 2012), a conclusion further supported by
+53
+recent in-depth analyses of Japanese naturalistic driving data that found
+54
+that the primary cause of vehicle-to-pedestrian collisions is the diversion
+55
+of drivers' attention to something other than the pedestrian at risk
+56
+(Habibovic, Tivesten, Uchida, Bärgman, & Ljung Aust, 2013).
+57
+In situations of potential conﬂict, Forward Collision Warning (FCW)
+58
+systems may be effective in directing driver attention towards the
+59
+conﬂict and thereby help prevent or mitigate a collision. Automated
+60
+Emergency Braking (AEB) may also prevent or mitigate collisions by
+61
+braking the car automatically without driver input in certain conditions.
+62
+FCW and AEB systems designed with the aim of protecting pedestrians
+63
+have recently been introduced on the car market (Lubbe & Davidsson,
+64
+2015).
+65
+FCW systems make use of auditory, visual, and haptic Human
+66
+Machine Interfaces (HMIs) and must balance driver acceptance with
+67
+effectiveness in terms of allowing time for a driver to brake the vehicle.
+68
+The earlier and more intrusive the warning, the more effectively a
+69
+system can prevent collisions. But at the same time, driver acceptance
+70
+of such systems decreases, and it has been suggested that drivers are
+71
+then more likely to ignore the system, turn it off, or refrain from having
+72
+such systems installed
+Q3
+(Lubbe & Davidsson, 2015). This claim is empir-
+73
+ically supported by an observational study of car owners' active safety
+74
+settings: Lane Departure Warning, which was more annoying, was
+75
+found to be switched off more often than FCW, which was less annoying
+76
+(IIHS, 2016). A FCW system might therefore act as an Imminent Crash
+77
+Warning with a rather late activation, aiming for immediate driver
+78
+reaction, or as a Cautionary Crash Warning with early activation, aiming
+79
+at directing attention and raising risk awareness, or may incorporate
+80
+both functions in a triggered approach (Campbell, Richard, Brown, &
+81
+McCallum, 2007; Naujoks, Grattenthaler, & Neukum, 2012).
+Journal of Safety Research xxx (2017) xxx–xxx
+⁎ Autoliv Development AB, Autoliv Research, Wallentinsvägen 22, SE-44783 Vårgårda,
+Sweden.
+E-mail address: nils.lubbe@autoliv.com.
+JSR-01373; No of Pages 10
+http://dx.doi.org/10.1016/j.jsr.2017.02.002
+0022-4375/© 2017 National Safety Council and Elsevier Ltd. All rights reserved.
+Contents lists available at ScienceDirect
+Journal of Safety Research
+journal homepage: www.elsevier.com/locate/jsr
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 2 ---
+UNCORRECTED PROOF
+82
+Assessment methods for evaluating the safety beneﬁt of pedestrian
+83
+active safety systems including AEB and FCW are under development
+84
+by Euro NCAP (Euro NCAP, 2015a, 2015b) and NHTSA (Yanagisawa,
+85
+Swanson, & Najm, 2014). Much attention has been focused on AEB;
+86
+the automated nature of these systems requires no driver input and
+87
+simpliﬁes the development of test and evaluation procedures. The
+88
+Euro NCAP pedestrian active safety assessment, introduced in 2016,
+89
+includes AEB and FCW evaluation. Euro NCAP has a part score related
+90
+to AEB effectiveness and a part score related to HMI evaluation. AEB is
+91
+scored for its ability to reduce vehicle speed prior to a simulated pedes-
+92
+trian impact in four different test scenarios at driving speeds gradually
+93
+increasing from 20 to 60 km/h. A maximum of 18 scoring points are
+94
+assigned to each scenario, depending on the speed reduction resulting
+95
+from testing. FCW is not tested for its ability to reduce impact speed,
+96
+but is part of the HMI evaluation. FCW is assigned a score of 1 point if
+97
+operating above 40 km/h and warning at a Time-To-Collision (TTC) of
+98
+at least 1.2 s (Euro NCAP, 2015b). Further components of the HMI eval-
+99
+uation are an assessment of the system's ease of deactivation (2 points)
+100
+and night-time operation (1 point). The overall active safety system
+101
+score is weighted 5:1 for AEB to HMI. As the FCW activation accounts
+102
+for one fourth of the HMI score, the balance between AEB and FCW is
+103
+20:1. Clearly, the relevance of FCW compared to AEB is low in Euro
+104
+NCAP's assessment. However, the extent to which this reﬂects the actual
+105
+safety beneﬁts of these systems has yet to be analyzed.
+106
+Driver models, in particular assumptions of driver reaction times
+107
+and response inputs, are essential in assessing the ability of FCW sys-
+108
+tems to reduce collisions (Brown, Lee, & McGehee, 2001; McLaughlin,
+109
+Hankey, & Dingus, 2008). Brake response is more relevant to FCW
+110
+beneﬁt assessment than steer response as drivers are more likely to
+111
+respond by braking even in situations where steering would have
+112
+been more effective in avoiding collision (Adams, 1994). Crucial to the
+113
+effectiveness of a given FCW system is driver brake reaction time
+114
+(Brown et al., 2001), brake deceleration and brake jerk. Simply, the ear-
+115
+lier and harder the brakes are applied, the higher the speed reduction.
+116
+For the Euro NCAP safety beneﬁt assessment of car-to-car FCW systems,
+117
+brakes are applied by a driving robot with brake characteristics speciﬁed
+118
+by the car manufacturer to achieve a deceleration of 4 m/s2 within 0.2 to
+119
+0.4 s (Euro NCAP, 2015c). The speciﬁcation of these characteristics
+120
+for pedestrian FCW systems needs to reﬂect true driver behavior. Such
+121
+behavior has attracted little attention thus far.
+122
+1.1. Brake response for car-to-car FCW
+123
+Braking reaction times to FCW have been studied for a variety of
+124
+FCW systems in simulated car-to-car rear-end collisions (overviews
+125
+for example in Campbell et al., 2007; Green et al., 2008; Mayer et al.,
+126
+2011). When warned, drivers must take notice of the warning, decode
+127
+and understand it, and respond (Ho & Spence, 2008).
+128
+Most FCW systems on the market use a combination of visual and
+129
+auditory warnings (ADAC, 2011). Almost all existing FCW systems in
+130
+passenger cars use visual displays in the instrument cluster (i.e. near
+131
+the speedometer) while a few use head-up displays (HUD) projecting
+132
+the warning signal onto the windscreen area (Wege, Will, & Victor,
+133
+2013). Visual displays can readily indicate distinctive threats using
+134
+icons, but may not be noticed if the driver's view is diverted (Ho,
+135
+Spence, & Tan, 2005). Head-Up Displays (HUD) can be located closer
+136
+to the natural gaze direction of the driver to the forward roadway and
+137
+may be less likely to divert driver attention from the trafﬁc scene com-
+138
+pared to displays in the instrument cluster, but it remains unclear
+139
+whether HUD improves driver reaction compared to instrument cluster
+140
+warnings (Wege et al., 2013). One aim of this study is to quantify the
+141
+potential beneﬁts of an added HUD to an audio-visual warning for
+142
+pedestrian encounters.
+143
+Haptic warnings have only been recently introduced as warning
+144
+interfaces; studies show a potential for improved driver reactions (Ho &
+145
+Spence, 2008). Some haptic warnings are always noticeable (e.g. seat
+146
+vibration, or brake pulse) and were shown to be effective in car-to-car
+147
+rear-end collision driving simulator experiments (Chun, Han, Park, Seo,
+148
+& Choi, 2012; Mohebbi, Gray, & Tan, 2009; Scott & Gray, 2008). Other
+149
+haptic warnings depend on the driver being in contact with the warning
+150
+interface (e.g. pedal vibration), which reduces their overall effectiveness
+151
+(Campbell et al., 2007).
+152
+The ﬁndings for the effectiveness of a short brake pulse, as one spe-
+153
+ciﬁc type of haptic warning, are inconclusive. In a car-to-car rear-end
+154
+collision driving simulator experiment, signiﬁcantly lower absolute
+155
+maximum brake deceleration for a brake pulse warning compared to
+156
+an audio-visual warning was reported. Further, both audio-visual and
+157
+brake pulse warnings were reported to elicit faster brake reaction than
+158
+no warning at all by trend (approximately 0.4 s reductions), but the
+159
+difference was not signiﬁcant. (Lerner et al., 2011).
+160
+Brown et al. (2005) reported a reduced number of potential collisions
+161
+due to driver braking for brake pulse warnings compared to no warnings
+162
+in an intersection car-to-car collision warning test track study; however,
+163
+brake reaction times are not signiﬁcantly shorter for the brake pulse
+164
+warning.
+165
+Kiefer et al. (1999) reported longer reaction times for brake pulse
+166
+warnings combined with other warning modalities. Brake pulse–visual
+167
+warnings lead to longer reaction times than audio-visual warnings
+168
+alone in a car-to-car forward collision warning track study. In a driving
+169
+simulator experiment of car-to-car rear-end collisions, Ljung Aust
+170
+(2014) reported belt–pretensioning–audio and brake pulse–audio warn-
+171
+ings having similar effectiveness in signiﬁcantly reducing reaction times
+172
+by approximately 0.3 s compared to an audio-visual warning. In a test
+173
+track experiment of car-to-car rear-end collisions, Kolke, Gauss, and
+174
+Silvestro (2012) reported reaction times shortened by one-third
+175
+(approximately 0.3 s, non-signiﬁcant) when a brake pulse was added
+176
+to an audio-visual warning.
+177
+No studies can be found that measured brake reaction times for brake
+178
+pulses warnings, separate or when combined with other warnings, in
+179
+car-to-pedestrian conﬂicts. Another aim of this study, therefore, is to
+180
+quantify potential beneﬁts of adding a brake pulse to an audio-visual
+181
+warning for pedestrian encounters.
+182
+1.2. Brake response for pedestrian FCW
+183
+Pedestrians are different from cars and the perceived criticality of
+184
+and driver reactions to car-to-car FCW and pedestrian FCW are not nec-
+185
+essarily the same. Pedestrians often enter the driver's ﬁeld of view from
+186
+the side (Wisch, Pastor, Zander, & Lorenz, 2012; Yanagisawa et al.,
+187
+2014), and are a threat smaller in size than a car-to-car collision threat.
+188
+Event criticality has been shown to inﬂuence driver reaction to FCW
+189
+(Ljung Aust, Engström, & Viström, 2013). Thus, one cannot necessarily
+190
+assume that the time needed to decode the warning and the driver re-
+191
+sponse is equal for car-to-car and pedestrian threats. Maag, Schneider,
+192
+Lübbeke, Weisswange, and Goerick (2015) studied drivers approaching
+193
+vehicle and non-vehicle (including pedestrian) threats and found that
+194
+driver response is stronger for vehicle threats. It seems thus necessary
+195
+to study driver behavior in pedestrian encounters in order to obtain a
+196
+driver model for pedestrian FCW assessment.
+197
+The differences observed between warning timings in car-to-car
+198
+FCW and car-to-pedestrian FCW provides another motivation to study
+199
+pedestrian FCW. For car-to-car FCW studies, typical ranges are from 2
+200
+to 5 s TTC (Jenkins, Stanton, Walker, & Yong, 2007); for example, TTC
+201
+is 5 s in Mohebbi et al. (2009), 4 s in Chun et al. (2012) and both 3
+202
+and 5 s in Scott and Gray (2008). Car-to-pedestrian FCW was measured
+203
+to activate at a TTC of 1.8 s in a production vehicle (Matsui, Han, &
+204
+Mizuno, 2011), and thus appears to warn later. Warning time is known
+205
+to inﬂuence driver reaction (e.g. Hirst & Graham, 1997; Scott & Gray,
+206
+2008).
+207
+Studies of driver reaction times to pedestrian collisions in simulated
+208
+vehicles are sparse. Straughn, Gray, and Tan (2009) reported steering
+209
+reaction times for pedestrian FCW. For a warning given at 4 s TTC, haptic
+2
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 3 ---
+UNCORRECTED PROOF
+210
+warnings led to signiﬁcantly shorter reaction times than auditory warn-
+211
+ings. Raudszus et al. (2013) established brake reaction times for mildly
+212
+distracted drivers in a Driving Simulator study with suddenly-appearing
+213
+pedestrians. The mild distraction was achieved by “a secondary task that
+214
+consisted of following the instructions of a navigation system. These
+215
+instructions were only provided in an audible manner, so that the
+216
+driver's gaze was not diverted from the street.” A pedestrian appeared
+217
+from behind an obstruction exactly at the time of the warning. Reaction
+218
+times when receiving an audio-visual warning at 1.8 s or 2.5 s TTC were
+219
+compared with receiving no warning. FCW had a signiﬁcant inﬂuence
+220
+on reaction times. Mean brake reaction times reduced from 1.2 s to
+221
+0.7 s when warned at 1.8 s TTC and from 1.2 to 1.1 s when warned at
+222
+2.5 s TTC. Further, FCW was reported not to affect maximum brake
+223
+force and the time to reach maximum force signiﬁcantly. Raudszus
+224
+et al. (2013) did not report brake jerk or maximum deceleration and
+225
+did not study the inﬂuence of different HMIs on brake response.
+226
+1.3. Objectives
+227
+This study aims to quantify brake reaction time and brake behavior
+228
+(deceleration levels and jerk) to provide a detailed data set suited for
+229
+the design of safety beneﬁt assessment methods for pedestrian FCW
+230
+systems. Of particular interest to this study were three HMIs: an
+231
+audio-visual warning, a combination of brake pulse and audio-visual
+232
+warning, and a novel HUD design highlighting the threat in combination
+233
+with an audio-visual warning.
+234
+The hypotheses for this study were as follows.
+235
+• Among FCW systems, Brake pulse and a novel HUD show higher
+236
+reductions than an audio-visual only HMI.
+237
+• Brake reaction time, brake deceleration, and brake jerk are dependent
+238
+on HMI. Among FCW systems, Brake pulse and novel HUD show shorter
+239
+reaction times as compared to audio-visual only. Familiarization with
+240
+the HUD HMI reduces reaction times compared to naive drivers.
+241
+• Familiarization with the HUD HMI reduces collision rates and reaction
+242
+times compared to naive drivers with the same HMI.
+243
+244
+Besides testing the hypotheses, driver brake reaction times, brake
+245
+deceleration and brake jerk, as well as their correlation, are collected
+246
+and reported here to provide a complete dataset for future modeling
+247
+of driver reactions to pedestrian FCWs in safety beneﬁt assessments.
+248
+2. Methods
+249
+Volunteers drove in a simulated urban environment in a moving-
+250
+base driving simulator. In a single surprise event, when drivers were
+251
+distracted by a secondary task on a screen mounted on the passenger
+252
+seat, a simulated pedestrian crossed the road in front of the vehicle on
+253
+a collision course with the vehicle. Drivers were warned of the imminent
+254
+threat using different FCW systems. Differences in driver reaction to the
+255
+FCW were analyzed in a between-subject experimental design.
+256
+2.1. Driving simulator
+257
+Experiments were conducted in the Toyota driving simulator located
+258
+at the Toyota Motor Corporation Higashifuji Technical Center in Japan
+259
+(Fig. 1). The simulator uses an actual vehicle placed on a platform
+260
+housed within a dome with a diameter of 7.1 m. A 360-degree view
+261
+is projected on the inside wall of the dome, which is mounted on a
+262
+6-degrees-of-freedom motion base. The motion base can move horizon-
+263
+tally within a 35 × 20 m range (Adachi et al., 2014).
+264
+Volunteers signed a consent form and were then instructed to main-
+265
+tain a speed of 30 km/h and react to trafﬁc as usual before completing a
+Fig. 1. Moving base driving simulator dome on motion base (left) and vehicle inside the dome (right). An explanatory video can be accessed at: http://www.youtube.com/embed/
+uo8IzClpHoA
+Fig. 2. Trafﬁc scene at audio-visual warning activation. Left: top view. Right: driver view.
+3
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 4 ---
+UNCORRECTED PROOF
+266
+practice course of 3.2 km. The practice course, like the test course,
+267
+consisted of several intersections in a simulated urban area. Crossing
+268
+trafﬁc and stationary objects were placed for volunteers to get used to
+269
+longitudinal and lateral control. After completing the practice course
+270
+and before driving on the test course, the secondary task was explained
+271
+to volunteers and demonstrated while they remained in the vehicle. The
+272
+task, adopted from Forkenbrock et al. (2011), consisted of a series of ﬁve
+273
+random numbers displayed on a screen mounted on the passenger seat
+274
+to divert the gaze from the forward roadway. The volunteers were
+275
+instructed to look at the screen, memorize numbers, and repeat them
+276
+when instructed during the drive. After driving on the test course,
+277
+volunteers were given a questionnaire asking whether they drove as
+278
+they would normally do to ﬁlter out unnatural driving responses.
+279
+The test course had had a total length of 3 km, had no intercepting
+280
+trafﬁc, and took about 6 min to complete. It ended with the test event.
+281
+The secondary task was carried out at intersections ﬁve times with no
+282
+simulated pedestrian crossing. On the sixth trial, the actual test was
+283
+carried out: the pedestrian crossed perpendicular to the vehicle while
+284
+the driver was engaged in the secondary task. The secondary task was
+285
+timed to start before pedestrian visibility and last longer than the warn-
+286
+ing time. The instruction to start the secondary task took place at 3.5 s
+287
+TTC, while the pedestrian was visible only from 2.7 s TTC. The secondary
+288
+task screen displayed numbers for 2.5 s in total starting at 3.0 s TTC. The
+289
+direction of the drivers' gaze was captured by two video cameras direct-
+290
+ed at the driver's face from the front and side. Tests were excluded if the
+291
+driver returned the gaze to the forward roadway during the secondary
+292
+task. Thus, while the driver was looking at the screen mounted on the
+293
+passenger seat, a simulated pedestrian crossing on a collision course
+294
+was shown on the dome wall, and the driver warned by one of the
+295
+three FCW HMIs.
+296
+Fig. 2 depicts the trafﬁc scene for a 30 km/h vehicle speed and a
+297
+2 m/s pedestrian speed at 1.8 s TTC. A simulated collision with the
+298
+pedestrian had no inﬂuence on vehicle dynamics, and the pedestrian
+299
+was instantaneously removed from the trafﬁc scene.
+300
+2.2. Test event and system speciﬁcations
+301
+The experiments were conducted with three different HMIs. The
+302
+same HMI as in Setting 3 was again used in Setting 4, the difference
+303
+being prior familiarization with the FCW system. A last group, Setting
+304
+5, served as control. The settings are summarized in Table 1 and
+305
+explained in detail below.
+306
+- Setting 1 “AV” replicated a Toyota Prius model year 2013 FCW HMI
+307
+for imminent rear-end car-to-car collisions and included an audio-
+308
+visual warning issued at TTC 1.8 s. The audio-visual warning HMI
+309
+consisted of a ﬂashing screen in the instrument cluster near the
+310
+speedometer displaying the word “brake!” (in Japanese) and a warn-
+311
+ing sound simultaneously issued at 64 dBA and repeated for 1.8 s
+312
+(Fig. 3, left).
+313
+- Setting 2 “BP” added a short brake pulse, also activated at TTC 1.8 s, to
+314
+Setting 1. The triangular brake pulse had a duration of approximately
+315
+0.2 s and a peak of 3 m/s2, similar to the pulse of the car-to-car FCW
+316
+systems of the Lexus LS model year 2014. This brake pulse was inten-
+317
+tionally set at a high intensity and clearly noticeable (Fig. 3, center).
+318
+- Setting 3 “HUD” issued the same warning as Setting 1 at TTC 1.8 s in a
+319
+second stage, but pedestrian information was presented in a ﬁrst
+320
+stage in the HUD at TTC 2.5 s. Along with this information a single
+321
+sound at 57 dBA was provided. The HUD showed a framing of the pe-
+322
+destrian indicating the nature and position of the threat (Fig. 3, right).
+t1:1
+Table 1
+t1:2
+Overview of FCW settings.
+t1:3
+Setting 1
+AV
+Setting 2
+BP
+Setting 3
+HUD
+Setting 4
+HUDfam
+Setting 5 Control
+t1:4
+Warning 1
+Audio-visual
+Audio-visual
+Audio-visual
+Audio-visual
+None
+t1:5
+Activation time
+1.8 s TTC
+1.8 s TTC
+1.8 s TTC
+1.8 s TTC
+N/a
+t1:6
+Warning 2
+None
+Brake pulse
+HUD
+HUD
+None
+t1:7
+Activation time
+N/a
+1.8 s TTC
+2.5 s TTC
+2.5 s TTC
+N/a
+t1:8
+Familiarization with FCW
+No
+No
+No
+Yes
+N/a
+Fig. 3. Setting speciﬁcations (from left to right): photo of the instrument cluster warning used in all settings, illustration of the motion base deceleration used to simulate a brake pulse in
+Setting 2. Photo of the windscreen with the HUD activated as used in Settings 3 and 4.
+t2:1
+Table 2
+t2:2
+Volunteer characteristics by system: mean (SD).
+t2:3
+Setting 1
+AV
+Setting 2
+BP
+Setting 3
+HUD
+Setting 4
+HUDfam
+Setting 5
+Control
+t2:4
+Age [years]
+46 (17.5)
+53 (14.8)
+48 (19.4)
+43 (16.4)
+52 (18.0)
+t2:5
+Yearly mileage [1000 km]
+10.8 (8.4)
+7.7 (5.4)
+10.0 (5.8)
+10.5 (6.4)
+5.6 (4.5)
+t2:6
+Share male [%]
+54
+46
+62
+62
+50
+t2:7
+Number of volunteers
+13
+13
+13
+13
+6
+4
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 5 ---
+UNCORRECTED PROOF
+323
+The framing moved together with the pedestrian from the left to the
+324
+vehicle center.
+325
+- Setting 4 “HUDfam” was identical to Setting 3 with respect to the HMI
+326
+used, but an explanation of system functionality and a demonstration
+327
+of the HUD, warning and info sound was carried out prior to driving
+328
+on the test course for these volunteers. Drivers were informed that
+329
+the system would issue a warning only in cases of imminent collision,
+330
+and were able to experience warnings produced by the system.
+331
+- Setting 5 “Control” included no FCW and served as control.
+332
+333
+The HMIs were activated while the drivers were engaged in the
+334
+secondary task at either 1.8 s TTC (Settings 1 and 2, replicating system
+335
+activation measured by Matsui et al., 2011) or 2.5 s TTC (Settings 3
+336
+and 4, as an earlier cautionary warning).
+337
+2.3. Volunteer characteristics
+338
+Fifty-eight volunteers approximately representing the gender and
+339
+age distribution of Japanese driving license holders (Statistics Bureau,
+340
+2016) were included in the analysis, matched across the four settings
+341
+with mean and standard deviation values as presented in Table 2.
+342
+Gender, age (range: 19 to 78 years) and annual driving distance
+343
+(range: 10 to 35,000 km) were self-reported and did not differ signiﬁ-
+344
+cantly between groups (age: ANOVA, df = 48, F = 0,73, p = 0.54;
+345
+mileage: ANOVA, df = 45, F = 0.58, p = 0.63; gender: Fisher–Irwin
+346
+exact test, p = 0.96).
+347
+Volunteers were recruited sequentially to obtain 6 controls and 13
+348
+valid tests for each of the four settings, totaling 58 valid tests. In order
+349
+to obtain these numbers, a total of 101 volunteers were recruited. Of
+350
+these, 43 were excluded for the following reasons: Tests were incom-
+351
+plete and no data were available due to motion sickness (6 cases);
+352
+volunteers reported not driving normally during the test (5 cases); volun-
+353
+teers applied the brakes prior to HMI activation (27 cases); and volun-
+354
+teers returned the gaze to the forward roadway during the secondary
+355
+task (5 cases). The control group was used to verify the distraction task;
+356
+results are not used in analyses due to its small size.
+357
+It should be noted that applying the brake prior to HMI activation
+358
+does not indicate a failure to engage volunteers in the secondary task
+359
+for two reasons: First, most volunteers who activated the brake prior
+360
+to HMI activation in the experiment also did so in the preceding ﬁve
+361
+training situations. Brake application seemed to be triggered by the
+362
+onset of the secondary task and the volunteers' desire to reduce speed
+363
+when diverting the gaze from the forward roadway. Second, brake
+364
+deceleration levels were insufﬁcient to avoid collisions, indicating that
+365
+these volunteers did not spot the pedestrian and were not trying to
+366
+avoid a collision prior to HMI activation.
+367
+2.4. Measurements
+368
+Measurements for the experiment included:
+369
+• Collision event (yes or no)
+370
+• Brake initiation prior to collision event (yes or no)
+371
+• Gaze direction
+372
+• Brake reaction time (Time from audio-visual warning at 1.8 s TTC to
+373
+brake pedal force exceeding 10 N)
+374
+• Brake deceleration and jerk (simulated vehicle deceleration)
+375
+• Vehicle speed
+376
+377
+Brake pedal force and simulated vehicle deceleration were recorded
+378
+at 120 Hz and ﬁltered using a rolling average ﬁlter with a span of 50.
+379
+2.5. Data analysis
+380
+For each setting, the number of collisions and the number of colli-
+381
+sions avoided were recorded. The Fisher–Irwin exact test (Lachin,
+382
+2011) in the SAS software version 9.3 (SAS Institute Inc., Cary, NC) de-
+383
+termined association between settings and collision rates. Similarly, the
+384
+number of brake responses prior to the collision event was compared
+385
+between settings.
+386
+Brake reaction times were measured from the time of warning issue
+387
+at 1.8 s TTC, common for all settings, until brake initiation, deﬁned as a
+388
+brake pedal force exceeding 10 N. Differences in settings were analyzed
+389
+using one-way ANOVA and the Multiple Comparisons function (Tukey's
+390
+honestly signiﬁcant difference criterion) in the MATLAB R2013a statisti-
+391
+cal toolbox. All statistical tests were carried out at a signiﬁcance level of
+392
+5%. All boxplots depict median, ﬁrst and third quartile; maximum whis-
+393
+ker length is 1.5 times the difference between ﬁrst and third quartile.
+394
+Data points beyond the whiskers are deﬁned and depicted as outliers
+395
+using a red + symbol.
+396
+Brake responses initiated after having passed the pedestrian cannot
+397
+be assigned to the FCW with complete certainty; drivers might not have
+398
+noted the FCW and simulated collision at all. Therefore, a further analy-
+399
+sis included only responses from drivers who initiated braking after the
+400
+FCW but before the simulated collision.
+401
+Gaze direction was determined from front and side view video re-
+402
+cordings independently by two analysts and averaged. The end of visual
+403
+engagement (EoVE) was determined as the time from the audio-visual
+404
+warning (at 1.8 s TTC) to the ﬁrst frame when either the head or eyes
+405
+were directed away from the secondary task screen towards the
+406
+forward roadway. Differences in mean values were analyzed using
+407
+one-way ANOVA and Multiple Comparison.
+t3:1
+Table 3
+t3:2
+Number of collision events and brake initiations prior to collision.
+t3:3
+Setting 1
+AV
+Setting 2
+BP
+Setting 3
+HUD
+Setting 4
+HUDfam
+t3:4
+Collision yes
+10
+1
+10
+8
+t3:5
+Collision no
+3
+12
+3
+5
+t3:6
+Brake initiation yes
+8
+13
+6
+8
+t3:7
+Brake initiation no
+5
+0
+7
+5
+t4:1
+Table 4
+t4:2
+Signiﬁcance levels p in pairwise comparisons using Fisher–Irwin exact test. Collisons (left)
+t4:3
+and brake initiation (right).
+t4:4
+Collisions
+Brake initiation
+t4:5
+AV
+BP
+HUD
+HUDfam
+AV
+BP
+HUD
+HUDfam
+t4:6
+AV
+b0.01
+1
+0.67
+0.04
+0.70
+1
+t4:7
+BP
+b0.01
+b0.01
+0.01
+0.04
+b0.01
+0.04
+t4:8
+HUD
+1
+b0.01
+0.67
+0.70
+b0.01
+0.70
+t4:9
+HUDfam
+0.67
+0.01
+0.67
+1
+0.04
+0.70
+1
+2
+3
+4
+Setting
+0
+2
+4
+6
+8
+10
+Brake reaction time [s]
+Fig. 4. Brake reaction times.
+5
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 6 ---
+UNCORRECTED PROOF
+408
+Maximum deceleration was calculated as the maximum of simulated
+409
+vehicle deceleration requested by the driver through pedal activation.
+410
+Brake jerk was calculated by dividing maximum deceleration by the
+411
+time needed to reach maximum deceleration from brake initiation.
+412
+Vehicle speed was measured at the onset of the audio-visual warn-
+413
+ing at 1.8 s TTC and at the time of brake initiation, that is when brake
+414
+pedal force exceeds 10 N.
+415
+3. Results
+416
+Collisions and collisions avoided per setting are presented in Table 3
+417
+and their signiﬁcance levels in pairwise comparison is reported in
+418
+Table 4. Differences in collision rates were signiﬁcant across settings
+419
+(Fisher–Irwin exact test, p b 0.01). The audio-visual plus brake pulse
+420
+warning (Setting 2) was signiﬁcantly more effective than any other set-
+421
+ting in helping drivers avoid collisions (Table 4, left). Only one collision
+422
+occurred in this setting. Audio-visual warning and HUD warning
+423
+without familiarization (Settings 1 and 3) had the highest number of
+424
+collisions.
+425
+In terms of initiated braking, differences were signiﬁcant across set-
+426
+tings (p b 0.01). Brake pulse warning (Setting 2) was again signiﬁcantly
+427
+more effective than any other setting. Brake pulse warning triggers
+428
+most brake initiations and is also most effective in preventing collisions;
+429
+because brake initiation is required for collision avoidance, a strong cor-
+430
+relation between these two measures is to be expected.
+431
+Brake reaction times (Fig. 4 and Table 5 top) were, on average,
+432
+shortest for the brake pulse warning (Setting 2, mean 0.8 s, SD 0.29 s).
+433
+Differences across settings were signiﬁcant (ANOVA, df = 48, F =
+434
+3.81, p = 0.016). Differences in two by two comparison of mean brake
+435
+reaction time were all not signiﬁcant except for Setting 2 (BP) versus
+436
+Setting 3 (HUD) (p b 0.01). These reaction times include all volunteer
+437
+responses, occurring before or after passing the pedestrian collision
+438
+point.
+439
+Considering only those cases where brake response was initiated
+440
+after the FCW but prior to collision, Setting 2 (BP) had the shortest
+441
+reaction time as shown in Fig. 5 and Table 5 bottom, which contributes
+442
+to effective collision avoidance; however, differences across settings
+443
+were not signiﬁcant (ANOVA, df = 31, F = 0.81, p = 0.50).
+444
+Similarly, for the analysis of gaze direction, only those cases where
+445
+braking was initiated before a collision were considered. Again, the
+446
+mean time from audio-visual warning (at TTC 1.8 s) to EoVE was
+447
+shortest for the BP warning (Setting 2, see Table 6 and Fig. 6), indicating
+448
+its ability to alert drivers. The mean time from EoVE to brake initiation
+449
+was shortest for Setting 4 (Table 6 and Fig. 7). However, differences
+450
+across settings were statistically not signiﬁcant (df = 31, F = 0.45,
+451
+p = 0.72 for time to EoVE; df = 31, F = 0.25, p = 0.86 for time to
+452
+brake initiation). Notably, Settings 3 and 4, utilizing the novel HUD to
+453
+indicate the nature and position of the threat, did not decrease the
+454
+time from EoVE to brake initiation signiﬁcantly.
+455
+For brake response characteristics, again only those cases where
+456
+braking was initiated before a collision were considered. Differences
+457
+were not signiﬁcantly different across settings; they appear only mar-
+458
+ginally affected by FCW type (max. deceleration with F = 0.046, p =
+459
+0.99, Fig. 7, and jerk F = 0.037, p = 0.99, Fig. 8). The mean maximum
+460
+brake deceleration after the FCW ranged from 7.2 m/s2 for Setting 1
+461
+(AV) to 6.7 m/s2 for Setting 4 (HUDfam) while brake jerk ranged from
+462
+11.3 m/s3 (Setting 1: AV) to 10.4 m/s3 (Setting 4: HUDfam) (Fig. 9
+Q4
+).
+463
+Thus, drivers reacting to a brake pulse warning did not brake harder
+464
+than drivers experiencing other settings. Brake response characteristics,
+465
+therefore, do not explain the effectiveness of brake pulse warnings for
+466
+collision avoidance.
+467
+Vehicle speed at 1.8 s TTC (Table 7 and Fig. 10, F = 0.08, p = 0.97)
+468
+and at brake initiation (Table 7 and Fig. 11, F = 0.74, p = 0.54) did
+469
+not differ signiﬁcantly across settings. Volunteers were driving at a
+470
+speed slightly below the instructed driving speed. The reduction of
+471
+driving speed for Setting 2 (brake pulse) between audio-visual warning
+472
+at 1.8 s TTC and driver brake initiation (mean 3 km/h) was due to the
+473
+mode of warning: the short brake activation, intended as a haptic warn-
+474
+ing, also reduced driving speed by about 3 km/h. Lower driving speed at
+475
+brake initiation contributes to collision avoidance.
+476
+3.1. Data for driver modeling
+477
+Brake reaction time, jerk, and maximum deceleration must be
+478
+modeled as input for a safety beneﬁt assessment of FCW systems. The
+479
+proportion of drivers reacting to the FCW prior to collision by initiating
+480
+braking was signiﬁcantly different across settings, and should thus be
+481
+modeled by FCW type. Brake response (max. deceleration and jerk)
+482
+was only minimally affected by the FCW setting, and does not seem to
+483
+require modeling by the FCW system.
+484
+Brake reaction time correlated neither with maximum brake decel-
+485
+eration (Pearson's linear correlation coefﬁcient ρ = −0.04) nor with
+486
+brake jerk (ρ = 0.18), while maximum brake deceleration and brake
+487
+jerk correlated (ρ = 0.83), see Fig. 12.
+488
+A multivariate normal distribution and a linear regression were
+489
+ﬁtted to the correlated data of maximum brake deceleration and jerk
+490
+(Fig. 13). Contour lines depict percentile values for brake response of
+491
+the normal distribution, i.e. the “0.05 line” indicates that 5% of brake de-
+492
+celeration and jerk combinations are below and left of the line, and 95%
+493
+of values lie above and right of the line. The linear regression line depicts
+494
+representative combinations of brake jerk and brake deceleration; com-
+495
+binations of brake deceleration and brake jerk for a given percentile
+t5:1
+Table 5
+t5:2
+Brake reaction times of all volunteers (top) and volunteers initiating braking prior to collision (bottom).
+t5:3
+Setting 1
+AV
+Setting 2
+BP
+Setting 3
+HUD
+Setting 4
+HUDfam
+t5:4
+Mean [s]
+2.8 (N = 13)
+0.8 (N = 13)
+4.1 (N = 13)
+2.3 (N = 13)
+t5:5
+Standard deviation [s]
+2.72
+0.29
+3.43
+2.51
+t5:6
+Mean [s]
+1.0 (N = 8)
+0.8 (N = 13)
+1.0 (N = 6)
+0.9 (N = 8)
+t5:7
+Standard deviation [s]
+0.43
+0.29
+0.59
+0.39
+1
+2
+3
+4
+Setting
+0
+0.5
+1
+1.5
+Brake reaction time when reacting prior [s]
+Fig. 5. Brake reaction times of volunteers initiating braking prior to collision.
+6
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 7 ---
+UNCORRECTED PROOF
+496
+value can be taken from Fig. 13 as the intercept of regression line and
+497
+contour line. For example, if a 10-percentile driver model is desired,
+498
+values of 3.6 m/s2 deceleration and 5.3 m/s3 jerk can be read from
+499
+Fig. 13. For a 90-percentile model, values of 10.8 m/s2 deceleration
+500
+and 17.3 m/s3 jerk can be taken.
+501
+4. Discussion
+502
+In this study, three different forward collision warning HMIs were
+503
+tested on independent groups of 13 subjects in a simulated scenario in
+504
+which a pedestrian crossed the road while the driver's attention was
+505
+distracted from the forward roadway. The effectiveness of an audio-
+506
+visual warning only, an added haptic brake pulse warning, and an
+507
+added Head-Up Display indicating the nature and position of the threat
+508
+in reducing the frequency of collisions with pedestrians, was studied. A
+509
+fourth setting comprised the HUD plus an additional familiarization
+510
+procedure conducted before the test drive. Results showed that brake
+511
+pulse warnings resulted in the lowest number of collisions and the
+512
+shortest brake reaction times (mean 0.8 s, SD 0.29 s). Brake jerk and de-
+513
+celeration were independent of warning type. Ninety percent of drivers
+514
+exceed a maximum deceleration of 3.6 m/s2 and a jerk of 5.3 m/s3.
+515
+Brake behavior was recorded to provide data needed for driver model-
+516
+ing in safety beneﬁt assessments.
+517
+The audio-visual and brake pulse warnings in this study were set to
+518
+activate at a time-to-collision of 1.8 s, matching a pedestrian FCW sys-
+519
+tem of a production car reported by Matsui et al. (2011). This warning
+520
+time is in the middle of what Helmer (2014) found to be the optimal
+521
+range of 1.5 to 2.2 s TTC based on trafﬁc simulation and balancing
+522
+false activations with injury reduction. Naujoks et al. (2012) found
+523
+that Cautionary Crash Warnings were appreciated by drivers in a volun-
+524
+teers test as early as 2 to 3 s prior to a conﬂict evolving into an unavoid-
+525
+able collision. In line with this ﬁnding, the HUD was activated at 2.5 s
+526
+TTC, as an earlier cautionary warning.
+527
+Homma, Kikuchi, Wakasugi, Tasaka, and Yoshida (2014) report that
+528
+only 73% of drivers acknowledging notice of an audio-visual FCW for an
+529
+imminent but unexpected car-to-car rear-end collision in a track test
+530
+abandoned the secondary task. The remainder did not respond to the
+531
+warning, which was attributed to misjudgment of the urgency and
+532
+warning content. These results are comparable to a reaction rate of
+533
+62% of the auditory–visual warnings in Setting 1, which may also
+534
+include cases where the warning was not noticed at all (Table 3).
+535
+The HUD in settings 3 and 4 aimed to assist drivers in locating the
+536
+threat and inferring the type of threat in line with the recommendation
+537
+from Campbell et al. (2007) that “warnings should induce an orienting
+538
+response, where appropriate, causing the driver to look in the direction
+t6:1
+Table 6
+t6:2
+Visual engagement: mean (SD).
+t6:3
+Setting 1
+AV (N = 8)
+Setting 2
+BP (N = 13)
+Setting 3
+HUD (N = 6)
+Setting 4
+HUDfam (N = 8)
+t6:4
+EoVE [s]
+0.65 (0.48)
+0.41 (0.04)
+0.43 (0.49)
+0.53 (0.64)
+t6:5
+EoVE to brake initiation [s]
+0.39 (0.5)
+0.37 (0.2)
+0.57 (0.23)
+0.36 (0.59)
+−0.5
+0
+0.5
+1
+1.5
+1
+2
+3
+4
+Setting
+Time from HMI on to EoVE [s]
+Fig. 6. Time to End of Visual Engagement (EoVE).
+−1.5
+−1
+−0.5
+0
+0.5
+1
+1
+2
+3
+4
+Setting
+Time from EoVE to brake on [s]
+Fig. 7. Time from EoVE to brake initiation’.
+2
+4
+6
+8
+10
+1
+2
+3
+4
+Setting
+Max. brake deceleration [m/s2]
+Fig. 8. Maximum vehicle deceleration.
+5
+10
+15
+1
+2
+3
+4
+Setting
+Brake jerk [m/s3]
+Fig. 9. Vehicle brake jerk.
+7
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 8 ---
+UNCORRECTED PROOF
+539
+of the Hazard.” One might expect a shorter reaction time for the HUD
+540
+compared to an audio-visual warning (Lees & Lee, 2008). In this study,
+541
+however, no such beneﬁt of the HUD was observed. There was no effect
+542
+of the HUD on time to EoVE compared to an audio-visual warning only,
+543
+and no shortening of the time needed to orient, make a decision, or
+544
+apply brakes (EoVE to brake on). One can only speculate as to the rea-
+545
+sons: The simulated imminent collision situation was simple to compre-
+546
+hend. A single pedestrian in strong contrast to the background crossed
+547
+the street at a constant speed with no other moving trafﬁc in the vicinity
+548
+(Fig. 2). It might be that the HUD did not improve an already rapid
+549
+recognition of the threat.
+550
+Familiarization with the HUD prior to the experiment did not result
+551
+in the expected reduction in collision rates and reaction times compared
+552
+to naive drivers with the same HMI. One can speculate that the explana-
+553
+tion and demonstration given was not sufﬁcient to achieve familiarity
+554
+with the system, which would imply that drivers might only be able
+555
+to respond to such warning systems after considerable experience
+556
+with them. On the other hand, it might also be the case that the warning
+557
+is so clear that no familiarization is necessary to achieve optimal interac-
+558
+tion, that optimal interaction was obtained in this study, and that there-
+559
+fore the HUD is of limited beneﬁt in this context. Further research is
+560
+necessary.
+561
+Previous ﬁndings on brake pulse warnings for imminent car-to-car
+562
+collisions are inconclusive. Some studies might have been using
+563
+“sub-optimal characteristics of haptic alerts,” that is using a haptic
+564
+warning with unsuitable intensity or timing, so that the conclusions
+565
+on effectiveness of a haptic warning as such might be inﬂuenced by its
+566
+particular design (Campbell et al., 2007). This study provides evidence
+567
+that a single triangular brake pulse warning of 0.2 s duration and
+568
+3 m/s2 maximum deceleration was the most effective of the four set-
+569
+tings evaluated in this study in alerting distracted drivers to imminent
+570
+pedestrian collisions. This speciﬁc brake pulse warning might be more
+571
+optimal as a haptic alert than some of those used in previous research.
+572
+The brake pulse warning was effective through ending distraction and
+573
+redirecting attention to the road ahead, rather than through leading to
+574
+quicker brake application once the driver was looking forward. This ef-
+575
+fect has not been previously reported for brake pulse warnings, and may
+576
+lead to the conclusion that the reduction of reaction time, in stemming
+577
+from the redirection of attention, is independent of the collision object.
+578
+Thus this study provides some evidence that the brake pulse warning
+579
+for distracted drivers is not only effective for pedestrian encounters,
+580
+but also likely to be applicable to other types of imminent collisions.
+581
+4.1. Strengths and limitations
+582
+Driving simulators offer a safe and controlled environment for test-
+583
+ing driver response and virtual pedestrian models can move more real-
+584
+istically than in test track studies (Chrysler, Ahmad, & Schwarz, 2015).
+585
+An advanced moving-base driving simulator is required to realistically
+586
+provide brake pulse warnings, of which only a few exist. Toyota's
+587
+high-ﬁdelity moving-base driving simulator was used, which has
+588
+previously been shown to be able to reproduce driver behavior when
+589
+encountering pedestrians observed in a test track study (Lubbe &
+590
+Davidsson, 2015). The use of this particular driving simulator gives
+591
+strength to the ﬁndings.
+592
+An advanced driving simulator is, however, costly to run and only a
+593
+limited number of participants comprise each group. While some
+594
+interesting ﬁndings reported here reach statistical signiﬁcance, more
+595
+conclusions could be drawn from a larger sample size.
+596
+Further, only demographic information was collected from the
+597
+participants. Personality characteristics, such as sensation seeking,
+598
+which may inﬂuence the reliability and generalizability of these ﬁnd-
+599
+ings, are not available.
+600
+The secondary task proved to be reliable in diverting the drivers'
+601
+gaze and was simple to verify from video recordings of the drivers.
+602
+However, the task is not naturalistic, and might give rise to exaggerated
+603
+distraction levels compared to those encountered in everyday driving.
+604
+Volunteers were instructed to drive at 30 km/h. This speed might
+605
+have been above or below what the volunteers would have felt to be ap-
+606
+propriate in that driving situation. The 27 excluded cases of volunteers
+607
+applying the brakes before warning (reported in Section 2.3) indicate
+608
+that, for a considerable proportion of volunteers, the driving speed
+609
+was perceived as too high for proper engagement with the secondary
+610
+task, hence brake application. Those volunteers who did not apply the
+611
+brakes prior to the warning might have been comfortable with the driv-
+612
+ing speed, an assumption supported by the post-experiment statement
+613
+of driving normally. However, it is also possible that these volunteers
+614
+also felt uncomfortable with the driving speed but avoided applying
+615
+the brakes in order to comply with instructions, and did not relate this
+616
+behavior to un-normal driving. If this were true, the validity of the
+t7:1
+Table 7
+t7:2
+Vehicle speed: mean (SD).
+t7:3
+Setting 1
+AV (N = 8)
+Setting 2
+BP (N = 13)
+Setting 3
+HUD (N = 6)
+Setting 4
+HUDfam (N = 8)
+t7:4
+At TTC 1.8 s [km/h]
+27.4 (2.9)
+27.5 (3.9)
+26.5 (4.2)
+27.4 (5.2)
+t7:5
+At brake initiation [km/h]
+26.8 (3.6)
+24.4 (3.7)
+25.8 (4.3)
+26.8 (5.5)
+20
+25
+30
+35
+1
+2
+3
+4
+Setting
+Vehicle speed  at 1.8 s TTC [km/h]
+Fig. 10. Vehicle speed at TTC 1.8 s.
+20
+25
+30
+35
+1
+2
+3
+4
+Setting
+Vehicle speed  at brake activation [km/h]
+Fig. 11. Vehicle speed at brake initiation.
+8
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 9 ---
+UNCORRECTED PROOF
+617
+results could be questioned. Future research with self-regulated and
+618
+freely-chosen driving speeds is needed to provide a deﬁnitive answer.
+619
+As brake behavior is known to depend on driving speed, such research
+620
+would require a larger number of volunteers to compensate for the
+621
+inﬂuence of speed.
+622
+Generalization to other types of distraction or to attentive drivers is
+623
+not straightforward. As mentioned in Section 1.2, Raudszus et al. (2013)
+624
+reported a mean reaction time of 0.7 s for an audio-visual alert at 1.8 s
+625
+TTC for mildly distracted drivers with quartile values of approximately
+626
+0.4 s and 1.2 s. In contrast, in this study with heavily distracted drivers
+627
+the mean reaction time was longer (1.0 s) for a similar audio-visual
+628
+warning. The difference might be explained by assuming that less
+629
+time needed to redirect attention to the road ahead in the Raudszus
+630
+et al. study as, unlike in the experiments reported here, driver gaze
+631
+was not diverted from the forward roadway. Further, Raudszus et al.
+632
+(2013) reported no cases of drivers not reacting to the warning. The
+633
+effectiveness of a brake pulse warning may therefore depend on the
+634
+level of driver distraction: for only mildly distracted drivers, brake
+635
+pulse may neither increase reaction rate nor reduce reaction time
+636
+compared to an audio-visual warning, whereas for heavily distracted
+637
+drivers, adding a brake pulse warning may do both and thus deliver
+638
+increased safety beneﬁts.
+639
+4.2. Application and future research needs
+640
+Campbell et al. (2007) noted design issues related to haptic warnings
+641
+and mentions, among other things, kinematic changes to the driver's
+642
+position and driver misperceptions and annoyance. These issues are rel-
+643
+evant, and can be major obstacles to introducing such systems to the
+644
+market. For example, false positive activations of this study's high inten-
+645
+sity pulse might be perceived as annoying and lead to deactivation of the
+646
+FCW system. Driver acceptance of brake pulse warnings therefore needs
+647
+to be studied further.
+648
+However, a few systems providing a short brake pulse to alert the
+649
+driver have been introduced to the market for car-to-car FCW (ADAC,
+650
+2011; Hayashi et al., 2013). These systems have not yet been adopted
+651
+widely and there are presumably challenges there to be addressed; nev-
+652
+ertheless, it is encouraging to think that it might be possible to introduce
+653
+this warning type, shown here to be effective for pedestrian encounters,
+654
+in the future.
+655
+Driver models are needed for assessment schemes such as Euro
+656
+NCAP's pedestrian AEB rating. In car-to-car AEB assessment, driver
+657
+reaction to an FCW is modeled by a brake reaction time of 1.2 s and a
+658
+maximum brake level of 4 m/s2 (Euro NCAP, 2015c). Such driver reac-
+659
+tion for pedestrian FCW might be modeled after data from pedestrian
+660
+FCW experiments to which this study contributes.
+661
+First, the proportion of drivers reacting at all and initiating braking
+662
+should be modeled separately for each FCW system (Table 3); brake re-
+663
+action times for these drivers are presented in Fig. 5 and Table 5. Second,
+664
+brake response in terms of jerk and maximum deceleration could be
+665
+modeled based on pooled data of volunteer response, independent of
+666
+FCW system, but correlated to each other as presented in Fig. 13. One
+667
+only needs to select the percentile value of response relevant for the as-
+668
+sessment scheme. For pedestrian FCW safety beneﬁt assessments, data
+669
+from this study seems not only more relevant than data from car-to-
+670
+car collision experiments but also enables modeling of correlations
+671
+and dependencies that could not be modeled using separate studies
+672
+for each of the model parameters required.
+673
+However, the number of subjects per FCW system setting is limited
+674
+and further studies would be beneﬁcial. Further studies on pedestrian
+675
+FCW should also quantify the differences in brake response between
+676
+attentive and distracted drivers, the brake response in more complex
+677
+scenarios in comparison to the simple one used in this study, the inﬂu-
+678
+ence of the warning time on brake response, and the driver acceptance
+679
+of warnings.
+680
+5. Conclusions
+681
+An audio-visual warning with an added brake pulse was most effec-
+682
+tive in preventing collisions, offering a signiﬁcant reduction compared
+683
+to all other FCW settings, namely a novel HUD indicating nature and
+684
+position of the threat with and without prior familiarization of the
+685
+volunteers and an audio-visual instrument cluster warning. All drivers
+686
+initiated braking prior to collision for the brake pulse warning, while
+687
+only approximately half the drivers did so for the other FCW settings.
+Brake reaction time [s]
+2
+4
+6
+8
+10
+Max. brake deceleration [m/s2]
+Brake reaction time [s]
+0
+5
+10
+15
+20
+Brake jerk [m/s3]
+0
+0.5
+1
+1.5
+0
+0.5
+1
+1.5
+2
+4
+6
+8
+10
+Max. brake deceleration [m/s2]
+0
+5
+10
+15
+20
+Brake jerk [m/s3]
+Fig. 12. Correlation between parameters for driver modeling.
+0
+2
+4
+6
+8
+10
+12
+0
+5
+10
+15
+20
+25
+0.05
+0.05
+0.05
+1
+0.1
+0.1
+0.5
+0.5
+0.9
+Brake deceleration [m/s2]
+Brake jerk [m/s3]
+Fig. 13. Brake deceleration and jerk model for FCW response. Blue circles are test values, a
+dashed line depicts the linear regression, and solid contour lines represent the cumulative
+normal distribution at the cumulative probability indicated on the line. (For interpretation
+of the references to color in this ﬁgure legend, the reader is referred to the web version of
+this article.)
+9
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002
+
+--- Page 10 ---
+UNCORRECTED PROOF
+688
+When only those drivers who reacted to the FCW system and started
+689
+to brake before the collision are considered, brake reaction time, brake
+690
+deceleration, and brake jerk did not differ signiﬁcantly across FCW Set-
+691
+tings. None of the FCW Settings had a signiﬁcantly superior performance
+692
+in ending engagement with the secondary task or in shortening time
+693
+from starting looking to the forward roadway to brake initiation. The
+694
+brake pulse warning had the fastest reaction times and lowest driving
+695
+speeds at brake response, both of which contribute to the effectiveness
+696
+of collision avoidance.
+697
+Data required for a car-to-pedestrian safety beneﬁt assessment
+698
+similar to that of Euro NCAP's car-to-car scheme is reported. Driver
+699
+reactions to FCW systems could be modeled based on the presented
+700
+data reﬂecting correlations and dependencies in the dataset. However,
+701
+as the number of subjects per group (n = 13) is relatively low, future re-
+702
+search is needed to conﬁrm these ﬁndings and expand this preliminary
+703
+dataset.
+704
+References
+705
+ADAC (2011). Comparative test of advanced emergency braking systems. Test report.
+706
+Germany: Allgemeiner Deutscher Automobil-Club (Retrieved from: http://www.
+707
+activetest.eu/pdf/adac_aebs_report_en.pdf).
+708
+Adachi, T., Yonekawa, T., Fuwamoto, Y., Ito, S., Iwazaki, K., & Nagiri, S. (2014). Simulator mo-
+709
+tion sickness evaluation based on eye mark recording during Vestibulo-ocular reﬂex.
+710
+Presented at SAE 2014 World Congress, Detroit, Michigan, USA, paper 2014-01-0441.
+711
+Adams, L. D. (1994). Review of the literature an obstacle avoidance maneuvers: braking ver-
+712
+sus steering. Report no. UMTRI-94-19 Transportation Research Inst., Univ. of Michigan.
+713
+Brown, T. L., Lee, J. D., & McGehee, D. V. (2001). Human performance models and rear-end
+714
+collision avoidance algorithms. Human Factors, 43(3), 462–482.
+715
+Brown, S. B., Lee, S. E., Perez, M. A., Doerzaph, Z. R., Neale, V. L., & Dingus, T. A. (2005).
+716
+Effects of haptic brake pulse warnings on driver behavior during an intersection ap-
+717
+proach. Proceedings of the Human Factors and Ergonomics Society 49th Annual Meeting.
+718
+Campbell, J. L., Richard, C. M., Brown, J. L., & McCallum, M. (2007). Crash warning system
+719
+interfaces: Human factors insights and lessons learned. NHTSA final report no. HS 810 697.
+720
+Chrysler,
+Q5
+S. T., Ahmad, O., & Schwarz, C. W. (2015). Creating pedestrian crash scenarios in
+721
+a driving simulator environment. Trafﬁc Injury Prevention, 16, S12–S17.
+722
+Chun, J., Han, S. H., Park, G., Seo, J., & Choi, S. (2012). Evaluation of vibrotactile feedback for
+723
+forward collision warning on the steering wheel and seatbelt. International Journal of
+724
+Industrial Ergonomics, 42(5), 443–448.
+725
+Euro NCAP (2015a). Assessment protocol — Pedestrian protection, version 8.1 Retrieved
+726
+from: http://www.euroncap.com/
+727
+Euro NCAP (2015b). Test protocol — AEB VRU systems, version 1.0.1 Retrieved from:
+728
+http://www.euroncap.com/
+729
+Euro NCAP (2015c). Test protocol — AEB systems, version 1.1 Retrieved from: http://www.
+730
+euroncap.com/
+731
+Forkenbrock, G., Snyder, A., Heitz, M., Hoover, R. L., O'Harra, B., Vasko, S., & Smith, L.
+732
+(2011). A test track protocol for assessing forward collision warning driver–vehicle inter-
+733
+face effectiveness. NHTSA final report no. HS 811 501.
+734
+Green, P., Sullivan, J., Tsimhoni, O., Oberholtzer, J., Buonarosa, M. L., Devonshire, J., ... Sayer,
+735
+J. (2008). Integrated vehicle-based safety systems (IVBSS): Human factors and driver–ve-
+736
+hicle interface (DVI). NHTSA summary report no. HS 810 905.
+737
+Habibovic, A., Tivesten, E., Uchida, N., Bärgman, J., & Ljung Aust, M. (2013). Driver behav-
+738
+ior in car-to-pedestrian incidents: an application of the driving reliability and error
+739
+analysis method (DREAM). Accident Analysis and Prevention, 50, 554–565.
+740
+Hayashi, H., Inomata, R., Fujishiro, R., Ouchi, Y., Suzuki, K., & Nanami, T. (2013). Develop-
+741
+ment of pre-crash safety system with pedestrian collision avoidance assist. Proceed-
+742
+ings of Enhanced Safety of Vehicles (ESV) conference, Seoul, South Korea, paper
+743
+number 13-0271.
+744
+Helmer, T. (2014). Development of a methodology for the evaluation of active safety using
+745
+the example of preventive pedestrian protection. (Dissertation TU Berlin). (available
+746
+at: http://dx.doi.org/10.14279/depositonce-3973).
+747
+Hirst, S., & Graham, R. (1997). The format and presentation of collision warnings. Ergo-
+748
+nomics and safety of intelligent driver interfaces (pp. 203–219).
+749
+Ho, C., & Spence, C. (2008). The multisensory driver: Implications for ergonomic car interface
+750
+design. Ashgate.
+751
+Ho, C., Spence, C., & Tan, H. (2005). Warning signals go multisensory. Proceedings of the
+752
+11th Annual Conference on Human–Computer Interaction, 22–27.
+753
+Homma, R., Kikuchi, K., Wakasugi, T., Tasaka, T., & Yoshida, S. (2014). Evaluation of for-
+754
+ward-vehicle collision-avoidance systems — How drivers respond to warnings
+755
+when a hazardous situation is not expected. Presented at 12th International Sympo-
+756
+sium on Advanced Vehicle Control, Tokyo, Japan.
+757
+IIHS (2016). IIHS status report, 51(1).
+758
+ITARDA (2012). Accidents resulting in pedestrian fatalities occur most frequently with vehi-
+759
+cles proceeding straight ahead. ITARDA information no. 94 Retrieved from: http://
+760
+www.itarda.or.jp/itardainfomation/english/info94_e.pdf
+761
+Jenkins, D. P., Stanton, N. A., Walker, G. H., & Yong, M. S. (2007). A new approach to
+762
+designing lateral collision warning systems. International Journal of Vehicle Design,
+763
+45, 379–396.
+764
+Kiefer, R., LeBlanc, D., Palmer, M.,Salinger, J., Deering, R., & Shulman, M. (1999). Development
+765
+and validation of functional deﬁnitions and evaluation procedures for collision warning/
+766
+avoidance systems. NHTSA final report HT 808 964.
+767
+Kolke, R., Gauss, C., & Silvestro, D. (2012). Reduzierung von Unfällen durch Notbremssysteme
+768
+bei Pkw. Presented at 8th ADAC/BASt-Symposium, Baden-Baden, Germany (Retrieved from:
+769
+http://www.adac.de/_mmm/pdf/fv_8adac_bast_symposium_kolke_149074.pdf).
+770
+Lachin, J. M. (2011). Biostatistical methods: The assessment of relative risk (2nd ed.). Wiley.
+771
+Lees, M. N., & Lee, J. D. (2008). Enhancing safety by augmenting information acquisition
+772
+in the driving environment. In C. Castro (Ed.), Human factors of visual and cognitive
+773
+performance in driving. Taylor & Francis (2008).
+774
+Lerner, N., Jenness, J., Robinson, E., Brown, T., Baldwin, C., & Llaneras, R. (2011). Crash
+775
+warning interface metrics: Final report. NHTSA final report no. HS 811 470a .
+776
+Ljung Aust, M. (2014). Effects of haptic versus visual modalities when combined with
+777
+sound in forward collision warnings. Proceedings of driving simulation conference
+778
+2014, Paris, France.
+779
+Ljung Aust, M., Engström, J., & Viström, M. (2013). Effects of forward collision warning
+780
+and repeated event exposure on emergency braking. Transportation Research Part F:
+781
+Trafﬁc Psychology and Behaviour, 18, 34–46.
+782
+Lubbe, N., & Davidsson, J. (2015). Drivers' comfort boundaries in pedestrian crossings: A
+783
+study in driver braking characteristics as a function of pedestrian walking speed.
+784
+Safety Science, 75, 100–106.
+785
+Maag, C., Schneider, N., Lübbeke, T., Weisswange, T. H., & Goerick, C. (2015). Car gestures
+786
+— Advisory warning using additional steering wheel angles. Accident Analysis and
+787
+Prevention, 83, 143–153.
+788
+Matsui, Y., Han, Y., & Mizuno, K. (2011). Performance of collision damage mitigation
+789
+braking systems and their effects on human injury in the event of car-to-pedestrian
+790
+accidents. Stapp Car Crash Journal, 55, 461–478.
+791
+Mayer, C., Tsuchida, J., Ranovona, M., Chin, E., McCarthy, M., Gelau, C., & Dukic, T. (2011).
+792
+Experimental design for an evaluation of behavioural aspects. ASSESS report D3.1. (Re-
+793
+trieved from: http://www.assess-project.eu/downloadables/Public%20Deliverables/
+794
+ASSESS%20D3.1-FINAL%20-%20Experimental%20Design-PUBLIC-2010.03.31.pdf).
+795
+McLaughlin, S. B., Hankey, J. M., & Dingus, T. A. (2008). A method for evaluating collision
+796
+avoidance systems using naturalistic driving data. Accident Analysis and Prevention,
+797
+40, 8–16.
+798
+Mohebbi, R., Gray, R., & Tan, H. Z. (2009). Driver reaction time to tactile and auditory
+799
+rear-end collision warnings while talking on a cell phone. Human Factors: The
+800
+Journal of the Human Factors and Ergonomics Society, 51(1), 102–110.
+801
+Naujoks, F., Grattenthaler, H., & Neukum, A. (2012). Zeitliche Gestaltung effektiver
+802
+Fahrerinformationen
+zur
+Kollisionsvermeidung
+auf
+der
+Basis
+kooperativer
+803
+Perzeption. In K. Dietmayer, K. Bengler, B. Färber, M. Maurer, C. Stiller, & H. Winner
+804
+(Eds.), 8. Workshop Fahrerassistenzsysteme — FAS 2012 (S. 107–117).
+805
+Raudszus, D., Ranovona, M., Geronimi, S., Kunert, M., Schubert, E., & Schaller, T. (2013).
+806
+Report on driver and pedestrian reaction model. AsPeCSS report D2.4. (Retrieved
+807
+from: http://www.aspecss-project.eu/userdata/ﬁle/Public%20deliverables/ASPECSS-
+808
+D2.4-FINAL-Driver%20Model-2013-06-27.pdf).
+809
+Scott, J. J., & Gray, R. (2008). Comparison of visual, auditory and tactile warnings for rear-
+810
+end collision prevention in driving. Human Factors, 50, 264–275.
+811
+Statistics Bureau, Ministry of Internal Affairs and Communications, Japan (2016i). Japan
+812
+statistical yearbook 2016.
+(Retrieved from: http://www.stat.go.jp/english/data/
+813
+nenkan/index.htm).
+814
+Straughn, S. M., Gray, R., & Tan, H. Z. (2009). To go or not to go: Stimulus–response com-
+815
+patibility for tactile and auditory pedestrian collision warnings. IEEE Transactions on
+816
+Haptics, 2(2), 111–117.
+817
+Wege, C., Will, S., & Victor, T. (2013). Eye movement and brake reactions to real-world
+818
+brake-capacity forward collision warnings — a naturalistic driving study. Accident
+819
+Analysis and Prevention, 58, 259–270.
+820
+Wisch, M., Pastor, C., Zander, O., & Lorenz, B. (2012). Reasons why passive pedestrian
+821
+protection remains an issue for the future. Presented at: Crash.Tech conference 2012,
+822
+Munich, Germany.
+823
+Yanagisawa, M., Swanson, E., & Najm, W. G. (2014). Target crashes and safety beneﬁts
+824
+estimation methodology for pedestrian crash avoidance/mitigation systems. Report no.
+825
+DOT HS 811 998.
+826
+Nils Lubbe received a PhD degree in Machine and Vehicle Systems from Chalmers University
+827
+of Technology, Gothenburg, Sweden, in 2015. Prior to his current role as research specialist
+828
+and global real-life safety analysis lead at Autoliv Research he worked in safety evaluation
+829
+and safety research at Toyota Motor Europe focusing on the reduction of road trafﬁc injuries
+830
+of pedestrians.
+831
+832
+10
+N. Lubbe Journal of Safety Research xxx (2017) xxx–xxx
+Please cite this article as: Lubbe, N., Brake reactions of distracted drivers to pedestrian forward collision warning systems, Journal of Safety Re-
+search (2017), http://dx.doi.org/10.1016/j.jsr.2017.02.002

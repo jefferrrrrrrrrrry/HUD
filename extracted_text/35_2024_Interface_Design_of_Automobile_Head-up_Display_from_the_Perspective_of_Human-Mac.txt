@@ -1,0 +1,465 @@
+Interface Design of Automobile Head-up Display from 
+the Perspective of Human-Machine Interaction 
+
+Lening Guan* 
+
+1756087502@qq.com 
+
+Nanjing University of Science and Technology, Nanjing, 210094, China 
+
+Abstract: Under the background of user-centered era, the traditional head-down display 
+(HDD)  is  gradually  being  replaced  by  head-up  display  (HUD).  As  the  carrier  of  HUD 
+information  presentation  and  the  medium  for  direct  interaction  with  drivers,  the  design 
+research  of  HUD  interface  has  become  increasingly  important  and  necessary  in  the 
+research  of  automobile  display  system.  From  the  perspective  of  human-computer 
+interaction,  this  paper  searches  and  summarizes  relevant  literature,  and  analyzes  the 
+research of HUD interface in three levels of information content, information level and 
+information style related to user visual cognition, as well as the research of HUD interface 
+in  adapting  to  the  physiological  and  psychological  cognitive  characteristics  of  different 
+people, specific scenarios and other interaction elements. Finally，this paper concludes 
+the  process  and  common  research  methods  of  HUD  interface  design  and  prospects  the 
+future research direction. 
+
+Keywords: head-up display, interface design, human-computer interaction 
+
+1 Introduction 
+
+Head-up display, or HUD, is a display technology that uses the principle of optical reflection to 
+map important information directly in front of the driver's field of vision. HUD can effectively 
+reduce the driver's head down frequency and reduce the time of eye focus, so as to improve the 
+driver's  information  acquisition  efficiency,  reduce  cognitive  load  and  ensure  driving  safety. 
+With  the  development  of  new  technologies  such  as  automobile  networking,  artificial 
+intelligence,  and  cloud  computing,  the  human-computer  interaction  mode  of  traditional 
+automotive  interiors  has  undergone  major  changes.  A  large  number  of  entertainment, 
+communication, navigation and other information began to pour into the interior space of the 
+car from external devices, and the information dimension of the car also became complicated, 
+which  made  the  car  need  more  display  devices  to  present  information.  HUD  is  one  of  the 
+information  carriers  closely  related  to  driving  behaviour,  and  its  huge  market  potential  and 
+optimistic application prospect have prompted many scholars to carry out multi-field and multi-
+dimensional  professional  research  and  technology  upgrade.  From  the  human-machine 
+perspective, this paper summarizes and discusses the human-machine interaction interface of 
+automobile  HUD,  summarizes  its  design  process  and  common  research  methods,  and  puts 
+forward  the  prospect  of  future  research  direction,  providing  a  guide  for  the  future  design  of 
+HUD.  
+
+ADDT 2024, May 24-26, Luoyang, People's Republic of China
+Copyright © 2024 EAI
+DOI 10.4108/eai.24-5-2024.2350098
+
+2 Automobile HUD interface information design 
+
+HUD display interface information is increasingly rich, if the complex information is arranged 
+on the HUD human-machine interface without rules, the interface will be easy to cause problems 
+such  as  unclear  presentation,  unclear  level,  so  that  the  driver  cannot  efficiently  obtain  key 
+information, and thus affect the driving safety. Therefore, the design arrangement of human-
+machine  interface  information  and  the  visual  effect  and  cognitive  feeling  brought  by  the 
+interface  information  to  the  driver  are  the  key  factors  affecting  the  interface  design  effect. 
+Current research on information design of automobile head-up display interface can be divided 
+into three categories: information content, information level and information form.  
+
+2.1 Information content 
+
+In  the  intelligent  era,  the  information  content  of  the  in-car  interface  is  no  longer  limited  to 
+traditional driving information such as speed, rotational speed, gear, etc., even abandoned fuel 
+automobile  information  such  as  fuel  reminder  and  fuel  consumption,  and  then  expanded 
+intelligent auxiliary information such as entertainment, communication, ADAS，and so on. In 
+this  context,  the  research  on  the  information  content  of  the  automobile  HUD  interface  has 
+become the basis for organizing information architecture and arranging information forms. This 
+paper  divides  the  existing  on-board  HUD  interface  information  into  four  categories:  basic 
+driving information, navigation information, safety assistance information, and entertainment 
+information. Each category of information contains several information modules (Table 1). 
+
+Table 1. Summary of automobile HUD interface information.  
+
+Information Classification 
+
+Basic automobile information 
+
+Navigation information 
+
+Safety assistance information 
+
+Entertainment information 
+
+energy 
+
+information, 
+
+information, 
+
+temperature,  battery  status, 
+
+Information Content 
+Speed information, gear information, rotational 
+speed information, fuel/power, headlight status, 
+steering 
+recovery 
+tire  pressure,  mileage, 
+information,  range, 
+water/oil 
+time 
+information 
+Distance  sign,  destination  information,  current 
+time 
+lane,  fork  choice, 
+turn 
+lane  change 
+indication, 
+indication,  U-turn 
+reminder, current road speed limit, special road 
+conditions,  congestion  level,  special  location 
+indication 
+ADAS  Advanced  driver  assistance  system 
+information  (ACC,  AEB,  BSD,  FCW,  LDW, 
+ISA,  PDS,  NVS,  AFL,  TSR,  etc.),  signage 
+reminders,  door  status,  seat  belt  information, 
+collision safety warning, outdoor temperature 
+Music information, radio information, bluetooth 
+speech 
+communication  messages, 
+status, 
+recognition, gesture recognition 
+
+ 
+ 
+ 
+ 
+2.2 Information hierarchy 
+
+The interface information of the automobile HUD is rich and huge, so it needs to be divided into 
+clear and logical information levels, so that the driver can easily, timely and accurately obtain 
+key information. The construction of clear information hierarchy is a key element to improve 
+the usability of HUD interfaces, and is also an important part of constituting excellent human-
+computer interaction. Beck invited subjects with HUD experience to evaluate the importance of 
+common information elements subjectively, and came up with level 1 information, namely four 
+universal characteristics of important information: the need for frequent or continuous attention, 
+the need for rapid perception and response, the need for correct information processing, and the 
+failure to obtain it from the external environment [1]. 
+
+Since there are differences among people, scenes and targets using HUD, the research on the 
+interface  information  level  should  be  based  on  these  differences  to  effectively  improve  the 
+interactive  pain  points  under  the  target  scene.  Li  Built  a  hierarchical  HUD  security  prompt 
+information  model  based  on  the  element  of  security  auxiliary  information,  determined  the 
+information  weight  accordingly,  and  completed  the  information  organization  and  system 
+interaction adaptive strategy of HUD [2]. Zeng Proposed the information organization strategy 
+division  based  on  four  functional  elements  of  navigation  information:  direction  guidance, 
+distance reminder, place name reminder and driving assistance [3]. 
+
+2.3 Information form 
+
+The  form  of  interface  information  includes  the  color,  size,  position,  transparency  and  other 
+visual information of interface elements, which is the core factor affecting the visual effect of 
+interface. Due to the rich visual characteristics of human beings, such as the sensitivity of human 
+eyes to different colors of light, the spatial resolution and grey resolution range of human eyes, 
+visual  adaptation,  visual  inertia,  visual  illusion,  etc.,  the  information  form  of  HUD  interface 
+needs to make reasonable use of many visual characteristics, and make reasonable design and 
+arrangement of information elements to meet the visual cognitive laws of most people. 
+
+Wang  studied  the  impact  of  static  and  dynamic  indication  information  in  AR-HUD  on  the 
+driver's  situational  awareness,  and  the  results  showed  that  static  information  improved  the 
+driver's  ability  to  predict  the  environment,  while  dynamic  information  enhanced  the  driver's 
+ability to perceive the environment [4]. Kandil studied the impact of AR-HUD interface design 
+based  on  the  external  environment  and  the  former  windshield  on  the  driver's  environmental 
+cognition, and clarified that the more concise and fixed screen carrier interface information has 
+a more positive impact on the driver's environmental cognition than the more novel and dynamic 
+environmental carrier interface information [5]. 
+
+Research on HUD information color is the most abundant. Liu studied the color coding method 
+of automobile HUD from the perspective of color adaptation, extracted HSV color values in 
+different environments and matched them with HUD color values in corresponding scenes, so 
+that HUD interface information could be most prominent under different environmental light 
+colors,  and  ensured  the  driver's  cognition  and  recognition  efficiency  [6].  Gabbard  studied  a 
+perceptual  matching  method  to  check  color  mixing  in  HUD  graphics,  and  verified  the  high 
+performance of visual search tasks under blue, green, and yellow graphics [7]. Guan conducted 
+a study on color classification strategy and ergonomic evaluation of HUD, and concluded that 
+HUD interface with red background color and yellow and green foreground color has the highest 
+
+ 
+ 
+ 
+ 
+search  performance,  and  information  with  higher  priority  can  be  set  to  green  and  other 
+information can be set to yellow during interface design [8]. 
+
+3 Research on human-computer interaction of HUD interface  
+
+Human-computer interaction is the process of information exchange between the machine and 
+the user in a certain interactive way to complete the determined task. The interface is the direct 
+medium and dialogue interface for the two sides to transmit and exchange information, and is 
+an  important  part  of  the  interaction  system.  Therefore,  the  interaction  research  on  the  HUD 
+interface  is  an  indispensable  part  of  the  automobile  HUD  design  research.  The  interface 
+information mentioned above is the communication form and visual presentation carrier of the 
+interface interaction system. However, in addition to the links visible to the user, an excellent 
+interaction  system  should  also  consider  the  user's  understanding  of  the  machine,  the  user's 
+behaviour characteristics, the availability of the machine, the interaction environment based on 
+time and space, and other interaction elements and the underlying interaction logic that can build 
+a complete interaction order. This paper summarizes the specific interaction flow between the 
+user  and  the  automobile  HUD  interface  (Figure  1)  and  divides  the  existing  HUD  interface 
+interaction research into the interaction research based on specific population, the interaction 
+research  based  on  specific  space-time  scene  and  the  interaction  research  based  on  other 
+interaction elements. 
+
+Fig. 1. Interaction flow between the user and the HUD interface.  
+
+3.1 Interactive studies based on specific populations 
+
+Different people have different body size parameters and physiological abilities, and also have 
+different mental models. Due to the visual interaction between automobile HUD and drivers, 
+drivers  of  different  ages,  driving  ages  and  genders  have  certain  differences  in  visual 
+performance such as information visual needs, attention allocation and distraction risk, which 
+
+ 
+ 
+ 
+ 
+ 
+are  further  related  to  drivers'  behavioural  performance  such  as  reaction  and  decision  time, 
+automobile handling and information perception. This requires that the HUD interface should 
+take  into  account  the  behavioural  and  cognitive  differences  between  different  users  at  the 
+beginning of the design, so as to achieve inclusive design. 
+
+Zhang compared the HUD information needs of beginners and experienced drivers in different 
+road environments, and concluded that beginners have different information needs for different 
+road conditions, while experienced drivers have fixed information needs, both of which have 
+higher  requirements  for  navigation  information  [9].  Aydogdu  applied  HUD  in  the  driving 
+process of different groups to explore the changes in their driving ability, and the results show 
+that HUD has a significant impact on driving ability, security and driving experience, and this 
+impact is more intense in elderly drivers, students and women. When HUD is activated, women 
+will feel safer [10]. 
+
+3.2 Interaction research based on specific scenarios 
+
+The driving task takes place in a certain scene and has the dual properties of space transfer and 
+time deduction. In a specific scenario, driving behaviour also has the dual availability attributes 
+of  scenario-driven  and  scenario-served.  Based  on  scene  recognition  and  scene  ecology,  the 
+development of specific HUD interaction strategies for specific driving tasks is conducive to 
+users' efficient completion of driving tasks. Charissis studied the spatial awareness and reaction 
+time of drivers in low-visibility environment, and designed the HUD interface prototype [11]. 
+In order to understand the speed impact of AR-HUD cues on drivers' recognition of pedestrians 
+and the acceptability of visual cues for automatic intervention, Karatas developed an AR-HUD 
+based on pedestrian reminder scenes, and proved its effectiveness for drivers' rapid recognition 
+of potential dangers in the evaluation results [12]. Du focused on unmanned taxi, based on the 
+explicit interaction theory, deeply explored the common scenes of users in taxis and the reasons 
+for the demand for explicit information, and produced the design practice scheme applied to 
+unmanned  taxi,  providing  reference  value  for  the  design  of  unmanned  taxi  human-machine 
+interaction interface [13]. 
+
+3.3 Interaction research based on other interaction elements 
+
+Although  specific  people  show  different  interaction  characteristics  in  specific  scenarios,  the 
+cognitive  characteristics  and  interaction  mechanism  behind  it  are  still  worth  exploring. 
+Therefore, many scholars build HUD design framework based on user's cognitive rule and user's 
+underlying logic drive. Nayara observed "unconscious blindness" during driving, in which the 
+visual information presented by the AR HUD may be ignored if the driver's attention is focused 
+on another activity other than the driving task. Based on this phenomenon, the authors evaluated 
+the driver's eye distribution and visual ability, and designed an interactive interface to eliminate 
+perceptual faults [14]. Kim noticed that HUD interface might cause cognitive damage to drivers' 
+perception  of  road  surface  information.  By  treating  different  types  of  objects  on  the  road  as 
+independent dynamic AOI, they summarized information elements that might cause cognitive 
+damage and provided suggestions for the design of HUD information interface [15]. 
+
+The  human-computer  interaction  discussed  above  mostly  stays  at  the  visual  level.  However, 
+multi-sensory and multi-channel interaction can achieve multi-device collaboration and cross-
+device  scene  migration  by  means  of  its  diversity,  accuracy  and  inclusiveness  in  the  face  of 
+
+ 
+ 
+ 
+ 
+different  groups  of  people,  occupying  a  place  in  the  field  of  interaction.  Wang  introduced  a 
+seamless multi-sensory interaction design space and applied it to automotive HMI through the 
+integrated view of temporal cognitive dimension and space, and provided a design case study 
+to  explain  its  practical  value  [16].  In  addition,  some  scholars  grasp  the  key  steps  in  the 
+interaction process, starting from the interaction node, to optimize the design of HUD interactive 
+interface. For example, Han starting from the key node of human operation to machine takeover, 
+studied the technical principle and system framework of AR-HUD takeover mode, designed the 
+interactive  interface,  and  demonstrated  the  feasibility  of  the  interactive  interface  from  two 
+aspects: emergency takeover and ordinary takeover [17] 
+
+4 Design process and common research methods of HUD interface 
+
+Based on the existing research results, this paper summarizes the design process of automobile 
+HUD  interface  into  three  stages:  demand  research  stage,  design  stage  and  evaluation  stage 
+(Figure 2). 
+
+Fig. 2. HUD interface design flow. 
+
+The demand research stage can be divided into user research and market research. According to 
+the positioning of the design object, researchers should have insight into the market demand, 
+analyze the existing emerging technologies and application fields, investigate and understand 
+the industry situation, determine the market positioning of the product, and strive for technical 
+advantages. Common market research methods include field trials, social media listening, desk 
+research, etc. At the same time, researchers should interview and communicate with target users, 
+listen  to  their  needs  and  motivations,  understand  their  behavior  patterns  and  psychological 
+activities, so as to quickly build user portraits and master product pain points. Commonly used 
+
+ 
+ 
+ 
+ 
+ 
+demand research methods include card classification, questionnaire survey, IPA model, etc. The 
+requirements selection process should be as comprehensive and precise as possible in order to 
+guide the next design work. 
+
+The  interface  design  stage  can  be  divided  into  two  steps:  information  clustering  and  design 
+practice.  The  designer  first  needs  to  cluster  the  collected  research  information  and  grade  it 
+according to its importance, which lays a foundation for the subsequent selection of interface 
+information content, division of levels and design of forms. Common information clustering 
+methods can be realized by cluster analysis and qualitative analysis software such as EZ-sort 
+and Nvivo, or by user emotional evaluation and user collaboration. Secondly, the designer needs 
+to process the key information elements of the interface in a form that conforms to aesthetic 
+experience according to the user cognitive law, and complete the design of the HUD interface. 
+This article provides seven general design principles for the design of  HUD for reference: 
+
+(1)  Information  priorities  need  to  be  ranked  according  to  importance,  important  information 
+should be fully displayed and in a prominent position. And information about driving safety 
+must be the highest priority. 
+
+(2) The information content is best not to be static, and dynamic information is not easy to make 
+the driver feel sleepy and tired. Urgent information needs to be displayed in an eye-catching and 
+dynamic manner. 
+
+(3) The display color of the HUD should be a high-saturation color, and the high-saturation blue, 
+green and yellow will help the driver to extract information. 
+
+(4)  The  display  color  and  brightness  of  the  HUD  should  take  into  account  changes  in  the 
+background and lighting, and it is best to make adaptive changes according to the environment 
+in order to present a high contrast state with the surrounding environment. At the same time, be 
+careful to prevent HUD information from blocking road information. 
+
+(5)  HUD  information  should  not  only  have  visual  stimuli,  it  is  best  to  combine  with  other 
+sensory stimuli such as hearing or smell to achieve multi-modal interaction. 
+
+(6)  HUD  should  be  able  to  record  the  presets  of  multiple  different  drivers,  so  that  different 
+drivers  can  quickly  set  preferences  when  using  it.  The  default  content  includes  the  physical 
+position of the HUD, display style, display content and other information. 
+
+(7) Designers should make use of aesthetic principles to ensure the simplicity and unity of the 
+interface while realizing the aesthetics of the interface. 
+
+The design evaluation of automobile HUD can be carried out through two aspects: subjective 
+evaluation and objective evaluation. After the interface prototype is designed, the designer can 
+use  the  NASA  TLX  multidimensional  evaluation  scale,  user  perceptual  evaluation,  TAM 
+technology acceptance model and other perceptual evaluation methods for users to evaluate the 
+design  results  subjectively.  Road  tests  and  eye  tracking  experiments  are  commonly  used  to 
+collect  objective  data.  Designers  can  re-examine  and  modify  the  design  results  through  the 
+evaluation results, and strive to achieve the optimal interface usability. 
+
+ 
+ 
+ 
+ 
+5 Future research prospects 
+
+5.1 Immersive interactive experience based on scene services 
+
+AR-HUD is a technology that superimposes virtual reality. If the virtual field of perception and 
+information  coexist,  the  user's  media  consciousness  will  be  relieved  and  immersed  in  the 
+augmented reality environment. To a certain extent, this media scene is separated from the real 
+time  and  space  and  reconstructs  the  spatial  pattern.  As  traditional  means  of  transportation 
+gradually transition to intelligent mobility space, drivers are more inclined to use the space in 
+the car as an independent third space in addition to home and office. On this basis, designers 
+need  to  closely  integrate  service  design  with  usage  scenarios,  and  make  full  use  of  artificial 
+intelligence  and  network  interconnection  to  enable  users  to  obtain  immersive  interactive 
+experience. Multi-screen is the design trend of interior HMI in the future. Multi-screen in-car 
+information interaction tends to be multi-modal. The design of automobile HUD should also 
+take into account the collaboration and interaction with other screens to improve the information 
+processing efficiency under multi-task flow. 
+
+5.2 In-depth exploration and development of multi-sensory channels 
+
+Current  multi-channel  studies  based  on  automobile  HUD  mostly  focus  on  audio-visual 
+combination and gesture or voice control, but there are few studies on the interaction of sensory 
+channels such as smell and touch. With the improvement of virtual algorithms, the development 
+of neuroscience and the deepening of brain machine research, the design of automobile HUD 
+with multi-sensory channels is no longer a fantasy. For example, HUD can be combined with 
+other  wearable  devices  to  share  information  and  cooperate,  and  key  information  can  be 
+transmitted to users by means of vibration, taste and sound through wearable devices such as 
+smart watches and head-mounted display devices to enable multi-sensory interaction. 
+
+5.3 Construct high simulation experiment platform 
+
+In the real road driving, the driver's perception of the target distance is longer than the actual 
+situation,  while  the  indoor  test  results  are  just  the  opposite.  It  can  be  seen  that  there  are 
+significant differences between the HUD simulation experiment and the real road test results. If 
+the  simulation  experiment  data  in  a  low-fidelity  environment  is  adopted,  the  driver  may 
+misjudge the information in the real environment, leading to potential dangers. Therefore, the 
+design, research and evaluation of automobile HUD should strive to improve the scientificity of 
+human factor  testing,  and  it  is  suggested  to  build  a  high-fidelity  test platform and  develop  a 
+simulation scene library to meet different needs. At the same time, the design evaluation system 
+should be improved to ensure the authenticity and usability of the research results. 
+
+6 Conclusions 
+
+As an important part of automobile HMI in the information age, HUD has positive significance 
+for future intelligent driving by optimizing driving experience and improving driving safety. 
+This paper reviews the current research status of automobile HUD interface design from the 
+perspective  of  human-computer  interaction,  and  discusses  interface  information  design  and 
+automobile-machine  interaction  based  on  user,  time  and  space,  cognitive  psychology,  multi-
+
+ 
+ 
+ 
+ 
+channel and other auxiliary scenarios. In view of the existing research results and shortcomings, 
+three future research directions are proposed: immersive interactive experience, multi-sensory 
+channel and the construction of high simulation experiment platform. The research in this paper 
+can  provide  a  reference  for  the  human-machine  interface  interaction  design  of  the  new 
+generation of HUD,  and  it  is  expected  that more researchers will put new perspectives, new 
+technologies and new methods into the design and research of automobile HUD. 
+
+References 
+
+[1]  D.  Beck, W.  Park,  Perceived  Importance  of Automotive  HUD  Information  Items: a  Study  With 
+Experienced HUD Users, IEEE Access. (2018) 
+[2] Li, K.-G., Research on the Design of Automobile HUD Safety Prompt Information Interface Based 
+on Context Awareness. Xuzhou: China University of Mining and Technology. (2020) 
+[3] Zeng, Q.-S., Zhao, J.-H., Information Organization and Visual Design of Car Navigation Head-up 
+Display. ZHUANGSHI Volume 15 No. 8. 66-67. (2014) 
+[4] Wang, J., Wang, W., Hansen, P., Li, Y., You, F., The Situation Awareness and Usability Research 
+of Different HUD HMI Design in Driving While Using Adaptive Cruise Control. In: HCI International 
+2020  –  Late  Breaking  Papers:  Digital  Human  Modeling  and  Ergonomics,  Mobility  and  Intelligent 
+Environments, Lecture Notes in Computer Science. pp. 236–248. (2020) 
+[5]  de  Oliveira  Faria,  N.,  Kandil,  D.,  Gabbard,  J.L.,  Augmented  reality  head-up  displays  effect  on 
+drivers’  spatial  knowledge  acquisition.  Proceedings  of  the  Human  Factors  and  Ergonomics  Society 
+Annual Meeting 63, 1486–1487. (2019) 
+[6] Liu, S., Yin, G., Research on Color Adaptation of Automobile Head-up Display Interface. In: 2021 
+IEEE 8th International Conference on Industrial Engineering and Applications (ICIEA). (2021) 
+[7]  Gabbard,  J.L.,  Smith,  M.,  Merenda,  C.,  Burnett,  G.,  Large,  D.R.,  A  Perceptual  Color-Matching 
+Method  for  Examining  Color  Blending  in  Augmented  Reality  Head-Up  Display  Graphics.  IEEE 
+Transactions on Visualization and Computer Graphics 2834–2851. (2022) 
+[8]  Guan,  C.,  HUD-oriented  color  layering  strategy  and  ergonomic  evaluation.  Nanjing:  Southeast 
+University. (2020) 
+[9] Zhang, H., Yu, Z., Zhang, C., Zhang, R., Liu, Y., Lee, S., User-Centered Information Architecture 
+of Vehicle AR-HUD Interface. (2022) 
+[10]  Aydogdu,  S.,  Luzuriaga,  M.,  Schick,  B.,  How  Can  We  Improve  the  Driving  Experience  with 
+Human-Machine-Interface for Automated Driving? In: Advances in Intelligent Systems and Computing, 
+Advances in Usability, User Experience, Wearable and Assistive Technology. pp. 218–224. (2020) 
+[11] Charissis, V., Papanastasiou, S., Human–machine collaboration through vehicle head up display 
+interface. Cognition, Technology &amp; Work 41–50. (2010) 
+[12] Karatas, N., Tanaka, T., Fujikake, K., Yoshihara, Y., Kanamori, H., Fuwamoto, Y., Yoshida, M., 
+Evaluation of AR-HUD Interface During an Automated Intervention in Manual Driving. (2020) 
+[13] Du, P.-F., Research on Human-Computer Interaction Interface Design of Unmanned Taxi Based 
+on Explicit Interaction Characteristics. Changsha: Hunan University. (2020) 
+[14]  de  Oliveira  Faria,  N.,  Evaluating  Automotive  Augmented  Reality  Head-up  Display  Effects  on 
+Driver  Performance  and  Distraction.  In:  2020  IEEE  Conference  on  Virtual  Reality  and  3D  User 
+Interfaces Abstracts and Workshops (VRW). (2020) 
+
+ 
+ 
+ 
+ 
+[15] Kim, H., Gabbard, J.L., Assessing Distraction Potential of Augmented Reality Head-Up Displays 
+for Vehicle Drivers. Human Factors: The Journal of the Human Factors and Ergonomics Society 852–
+865. (2022) 
+[16] Wang, W., Song, F., Zhu, T., SAME: The Design Space for Seamless Automotive Multimodal 
+Experience. IT Professional 24, 35–42. (2022) 
+[17] Han, Z.-H., Study on Interaction Design of AR-HUD Takeover Mode in Autonomous Driving. 
+Shijiazhuang: Heibei University of Science and Technology. (2019)  
+
+ 
+ 
+ 
+ 
+

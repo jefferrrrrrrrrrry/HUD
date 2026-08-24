@@ -1,0 +1,770 @@
+--- Page 1 ---
+Head-up Displays (HUD) in driving
+Enrique Ca˜no1, Pavel Gonz´alez2, Marcos Maroto3 and Diego Villegas4
+Abstract— Head-Up
+Displays
+(HUDs)
+were
+designed
+originally to present at the usual viewpoints of the pilot
+the
+main
+sensor
+data
+during
+aircraft
+missions,
+because
+of placing instrument information in the forward ﬁeld of
+view enhances pilots’ ability to utilize both instrument and
+environmental information simultaneously. The ﬁrst civilian
+motor vehicle had a monochrome HUD that was released
+in 1988 by General Motors as a technological improvement
+of Head-Down Display (HDD) interface, which is commonly
+used in automobile industry. The HUD reduces the number
+and duration of the drivers sight deviations from the road,
+by projecting the required information directly into the
+drivers line of vision. There are many studies about ways of
+presenting the information: standard one-earpiece presentation,
+two-earpiece three-dimensional audio presentation, visual only
+or audio-visual presentation. Results [1] have shown that
+using a 3D auditory display the time of acquiring targets is
+approximately 2.2 seconds faster than using a one-earpiece
+way. Nevertheless, a disadvantage [2] is when the driver’s
+attention unconsciously shifts away from the road and goes
+focused
+on
+processing
+the
+information
+presented
+by
+the
+HUD. By this reason, the time, the way and the channel are
+important to represent the information on a HUD. A solution
+is a context aware multimodal proactive recommended system
+[3] that features personalized content combined with the use
+of car sensors to determine when the information has to be
+presented.
+I. INTRODUCTION
+1.25 million people die approximately every year as a
+result of road trafﬁc crashes [4]. The HUD is a driver
+assistance system that reports timely the events that conceals
+a potential risk to both the driver and pedestrians The ﬁrst
+HUD was developed during World War I in order to help
+pilots to show down enemy planes, so it would no longer
+have to align the pilots head precisely with mechanical sights
+to make an accurate shot. These devices have expanded
+to include basic ﬂight information like altitude, air speed,
+compass, and artiﬁcial horizon indicators. In 1988, General
+Motors was the ﬁrst company to install a monochrome HUD
+in a civilian motor vehicle. A car HUD system is formed by
+three main parts: (1) the combiner, the surface on which
+the image is projected; (2) the projector which generates
+the image and directs it toward the combiner and (3) the
+computing unit which processes data from different sources
+and handles the projection.
+Recent models of visual information processing suggest that
+visual attention can be focused on either Head-Up Displays
+(HUD) or on the world beyond them, but not on both
+1Enrique Ca˜no
+100343797@alumnos.uc3m.es
+2Pavel Gonz´alez 100325086@alumnos.uc3m.es
+3Marcos Maroto marmarot@ing.uc3m.es
+4Diego Villegas 100336160@alumnos.uc3m.es
+Fig. 1.
+Jaguar Head-up display
+simultaneously [5]. So it is important to have a suitable
+information presenting model to avoid distractions of drivers
+attention and to manage the risk level of each indicator. This
+model has to be able to select the sensorial channel to use.
+On this paper, we discuss about the applications of a HUD on
+Fig. 2.
+How a Head-up display works
+a civilian motor vehicle and the different advantages that can
+be balanced with disadvantages on a real driving situation.
+Finally, we are talking about some commercials products,
+manufacturers of HUD and several future development and
+experimental designs using augmented reality on HUD.
+II. APPLICATIONS
+Most applications where Head Up Displays [6] are used,
+are related to professional issues, mainly in military aircraft,
+where they were used for the ﬁrst time. However, nowadays,
+it is increasing the number of ﬁelds in which HUDs are being
+used like automobile, augmented reality in video games, etc.
+As Intelligent Transport Systems case of study, we are going
+to focus on automobile applications, taking into account new
+and experimental applications of HUD and giving a brief
+introduction about HUDs installed on aircraft as a ﬁrst step.
+A. Aircraft
+First HUDs used in aircraft [7] appeared as an aid mech-
+anism for military pilots during missions. These systems
+arXiv:1803.08383v1  [cs.HC]  22 Mar 2018
+
+--- Page 2 ---
+represent powerful information to the pilot in order to allow
+them to see this information without removing the view from
+the front.
+Some of the basic information that it is represented in the
+frontal panel of the aircraft is airspeed, altitude, the horizon
+line, heading, turn/bank and slip/skid indicators. In addition,
+some HUD mounted on aircraft can include some extra
+information like bore-sight or waterline symbol, ﬂight path
+vector (FPV) or velocity vector, acceleration, etc. The main
+applications of HUDs in aircraft’s ﬁeld are:
+• Military aircraft applications: apart from the informa-
+tion represented in basic HUDs, there are some others
+speciﬁc applications related to sensor data and weapon
+systems.
+– Target designator (TD) indicator: trough the HUD
+and with the data acquired from the inertial and
+radar sensors, it is represented a cue around an
+aerial or ground target allowing the pilot to identify
+it.
+– Weapon seeker or sensor line of sight: represents
+the direction to which a weapon or a seeker sensor
+is pointing.
+– Weapon status: indicates the selected weapon,
+available weapon, arming and everything related to
+the state of the aircraft’s weapons.
+– Closing velocity with target (Vc).
+– Range to target, waypoint, etc. It shows the distance
+or range to important places or points.
+• Civil aircraft applications [8]: the most important ap-
+plication on civil aircraft is related to take-offs and
+landings with reduced visibility, as an assistant to the
+pilot.
+• Enhanced vision systems (EVS) and Synthetic vision
+systems (SVS) [9]: EVS systems are included in ad-
+vanced systems that incorporate information from air-
+craft based sensors (e.g., near-infrared cameras, mil-
+limeter wave radar) to provide vision in limited vis-
+ibility environments. SVS systems use high precision
+navigation, attitude, altitude and terrain databases to
+create realistic and intuitive views of the outside world.
+EVS and SVS are commonly used as a very important
+complement part of HUD in recent military aircraft.
+Fig. 3.
+EVS infrared image with HUD information.
+B. Automobile
+On cars, some companies like BMW, Audi, Mercedes
+Benz or Hyundai are betting for HUD technology. Although
+there are some similarities between the design parameters of
+HUDs installed on aircraft and HUDs installed on automo-
+biles, automotive HUDs differs from aircraft HUDs because
+the information represented on automobile HUDs do not
+need to provide the driver information about the location
+with respect to the road, as HUDs installed on aircraft give
+to the pilot, though, because the driving environment usually
+gives enough information to the user.
+The information represented on the windshield of cars is
+mostly related to:
+• Characteristics of the road like speed limit of the
+highway.
+• Navigation (e.g. maps displays).
+• Automobile’s operations like the speed of the car,
+distance to a goal or information about the path to a
+goal(GPS) and turns of the car.
+The current components of an automotive HUD can vary in
+several ways, but all HUDs installed on automobiles have
+the same main elements: an image source, a set of lenses
+and mirrors to reﬂect, refract, focus and magnify the HUD
+image, and a combiner surface (where the image is projected,
+typically over the windshield).
+The main applications of automobile HUDs [10] are related
+to comfortableness and safety to the driver. The main ones
+are:
+• Supply information to the driver about the main internal
+information of the vehicle (e.g. remaining fuel, adverts
+about the tires, etc.).
+• Information about non-expected events like accidents,
+state of the roads or bad weather conditions.
+• Information about the navigation of the vehicle like its
+position in a map or the way to go during a trip.
+• Information related to bad or unwanted behaviours of
+the driver during driving like sharp turns or drowsiness
+warning.
+On the other hand, several companies like Garmin or Pi-
+oneer [11], have developed new commercial displays that
+can be installed as external HUD devices and show some
+information about the car’s navigation system (GPS) on the
+windshield of the car. The difference between the HUD
+installed internally in new cars and HUD installed on an
+external way is that internal HUD can use every information
+of the car (navigation, internal sensors, cameras in new cars)
+while external devices like the ones developed by Garmin
+or Pioneer only use navigation information because it hasn’t
+got any way to access to the internal information of the car.
+In addition, new cars can include night vision information
+[12], equipping cars with an infrared camera for viewing
+roadway conditions in terms of a thermal image, and outputs
+a video signal to a head up display (HUD) which projects
+the camera view to the operator via the windshield or other
+combiner to display a virtual image in the operator’s ﬁeld
+of view. The HUD is conﬁgured to magnify the image to
+
+--- Page 3 ---
+the same size as the visual or real scene, and compensates
+for camera and windshield distortion. The virtual image is
+presented above or below the real scene or may be superim-
+posed on the real scene. A video processor allows selection
+of only the warmest objects for display. HUDs have been
+Fig. 4.
+Night vision infrared camera information as HUD
+installed successfully on aircraft with a cost of $100.000,
+while in automobiles, reducing some of their characteristics
+related to the range of view and the image source, basic
+HUDs installed on cars can have its cost reduced up to $100
+per unit.
+As an experimental development, HUDs have been also
+placed in rear-view mirrors of the car to provide drivers
+of extra information of the rear view like the distances
+while the car is being overtaked by another vehicle or when
+it is the own car provided by this HUD system which
+overtakes another car. Also, some companies are integrating
+HUDs on helmets [13] for motorcyclist that represent useful
+information like black spots in roads in order to reduce the
+number of accidents, advertising messages of speed, etc.
+Fig. 5.
+Night vision infrared camera information as HUD
+III. ADVANTAGES AND PROBLEMS
+A head-up display (HUD) is a revolutionary ADAS (Ad-
+vanced driver assistance system) that can change the way we
+drive in a smart, safe and technological way. [14]
+A. Advantages
+The use of a HUD in a car origin several advantages to
+take into account:
+• Head up display will replace the indicator cluster in
+dashboard on common car, also known as Head-Down
+Display (HDD). The data that will be shown on HUD
+is: engine speed, vehicle speed, engine temperature,
+fuel capacity, pedestrian and vehicle warning, object
+avoidance guidance.[15]
+Fig. 6.
+BMW Head-up display
+• A HUD is a device that can help to avoid several factors
+that cause accidents on the road. Those factors are
+human error, vehicle error, and the accident itself which
+cannot be avoided. The sources of accident because of
+human error are sleepy, drunk, or using mobile phone
+while driving. A HUD is the necessary device to solve
+those problems.
+• To upgrade the efﬁciency and safety, a HUD system
+must provide drivers with large amounts of information
+from many categories (e.g. route guidance/navigation,
+trafﬁc signs, cargo/road/vehicle conditions), and select
+the best way to display this information; important
+considerations include having a user-friendly system,
+since a drivers capacity to process this information is
+a key factor in its acceptance and use.[16]
+• In comparison with HDD( Head-Down Display):
+– In terms of response time to an urgent event, it was
+faster with the HUD (with a low driving loadhead-
+up vs. head-down: 1.0073 vs. 1.8684 s; with a
+high driving loadhead-up vs. head-down: 1.3235 vs.
+2.3274 s) and speed control was more consistent
+(having low speed variations) than with the HDD.
+[16]
+– In addition, using the HUD caused less mental
+stress for the drivers than the HDD.[17]
+– As head-down displays are integrated into the ve-
+hicle’s control dashboard, by using HUD the fre-
+quency and duration of glances towards the display
+are reduced by presenting information directly on
+the windshield in the driver’s ﬁeld of vision. [18]
+– In comparison to the HDD, most HUD research has
+focused on providing information on speed limit
+restrictions, the drivers reactions to accidents and
+
+--- Page 4 ---
+psychological condition. It has also been found that
+automobile speed is maintained at a more consistent
+level (120 km/h within speed limits) [19], that
+drivers were more aware of the speed of their
+vehicles and more closely adhered to the posted
+speed limit, while using an HUD. In addition, the
+speed of drivers having an HUD is, on average,
+faster than that of drivers having to look head-down
+at the dashboard.
+– The head-up display (HUD) reduces the number
+and duration of the drivers sight deviations from
+the road, by projecting the required information
+directly into the drivers line of vision. This allows
+drivers to receive information without lowering
+their gaze, thus avoiding attention gaps that result
+from them taking their eyes off the road to look
+down at the information on a HDD [20]. In this
+way, the driver can easily keep his driving under
+control and can quickly respond to information
+relating to the road environment from the in-vehicle
+communication system.
+• In addition, HUD technology has seen many improve-
+ments. For example, HUD’s are now capable of adjust-
+ing to ambient light, so the images are just as clear
+whether you are driving at day or night.[21]
+• HUDs allow taking advantage of advances in technology
+in the communication process between the driver and
+the car. Nowadays, vehicles have fuel-efﬁcient hybrid
+engines, proximately sensors, windshield wipers that
+can detect rain, built-in multimedia entertainment, and
+all-wheel drive systems that adjust power in real-time,
+but the interaction between the driver and the car has
+not changed signiﬁcantly.[22]
+• A HUD could also be used to: Mobile phone access
+(phone call, SMS, multimedia); display navigation in-
+formation, trafﬁc information, and mobile phone inter-
+action; handle the voice command for mobile phone
+interaction and passenger condition monitoring.[23]
+• Some authors pointed out that if a drivers gaze leaves
+the road for longer than 2s then trafﬁc accident risk
+is signiﬁcantly increased. This attention-away-from-the
+road situation is one of the main factors causing danger
+on the roads.[24]
+B. Problems
+• In comparison with HDD( Head-Down Display) [16]:
+– HUD was less comfortable for ﬁrst-time users to
+become familiar with; with a high driving load,
+however, the difference between the two displays
+was not signiﬁcant.
+– If a HUD is used to show different information
+apart from driving one, as for example: changing
+the music playlist, sending a restaurant reservation
+or checking the email while youre driving, the
+distraction increased in an exponential form. A
+HUD must show information related with the car
+and its environment. A HUD has to guarantee the
+safety.[25]
+– Several authors afﬁrmed that drivers felt that the
+HUD required a higher mental effort and produced
+higher mental demand workload ratings
+• However, cognitively switching between two sources
+of information, i.e., the HUD and trafﬁc, still poses
+a problem, especially in high-workload situations. The
+so-called cognitive or attention capture, i.e., when the
+driver’s attention subconsciously shifts away from the
+road and becomes focused on processing the infor-
+mation presented by the HUD, has been identiﬁed as
+one of the disadvantages of HUDs [26]. The resulting
+perceptual tunneling may lead to a delayed reaction or a
+complete absence of response to situational changes in
+the environment. Researchers have proposed to address
+this issue by utilizing auditory interfaces [27]. They
+report on the greater attention capturing properties of
+the auditory channel and the desire to keep attention
+focused longer on a complex auditory task to prevent a
+loss of information from the driver’s working memory.
+IV. AVAILABLE COMMERCIAL APPLICATIONS
+Commercial use of the HUD is already taking off since
+early 2000’s, but in the next years is going to be more
+common to see these systems in different classiﬁcation of
+uses. This chapter will describe the three main classiﬁcations
+of the available systems, the one that comes with the vehicle
+from the manufacturers, the smartphone app whose screen is
+reﬂected on the windshield and the third-party devices that
+can be installed on any car.
+A. Already installed
+The most widespread use of HUDs is being deployed in
+top of line car models, like BMW, Mercedes, and Audi.
+Nevertheless, more manufacturers include this as an option
+for safety or for comfort every year. These are HUDs that
+are already installed as a part of the car, which means they
+can pull data from everything thats actually happening from
+inside the engine in real-time, without the need for any GPS-
+assisted guesswork.
+• BMW projects relevant driving information directly
+into the drivers line of sight. Head-Up Display can
+be recognized by a small square depression on the
+dashboard. This contains a projector and a system of
+mirrors that beams an easy-to-read, high-contrast image
+onto a translucent ﬁlm on the windscreen, directly in the
+line of sight. The image is projected in such a way that
+it appears to be about two meters away, above the tip of
+the bonnet, making it particularly comfortable to read.
+The full-color BMW Head-Up Display in many newer
+BMW models makes the car even more comfortable for
+the driver. More colors mean its easier to differentiate
+between general driving information like speed limits
+and navigation directions and urgent warning signals.
+Important information like Pedestrian in the road (in
+conjunction with the optional BMW Night Vision) is
+
+--- Page 5 ---
+now even more clear and recognizable. In addition to the
+speed, which is displayed permanently, the BMW Head-
+Up Display can also show other content depending on
+model and equipment [29]. HUD can be found starting
+in the BMW Series 3.
+• Mini Cooper: The screen is installed on the dashboard
+and is positioned at the height of the steering wheel.
+All of the information is therefore in the driver’s direct
+line of vision. The Head-Up Screen has an integrated
+smartphone interface. As a result, information from
+smartphone apps can also be displayed. Garmin, as
+a navigation specialist, offers a matching navigation
+application. As a result, next to the relevant vehicle
+data, the Head-Up Screen also displays navigation in-
+formation. All of the settings can also be carried out
+via the free-of-charge Head-Up Screen app. During the
+hours of darkness, the display adjusts the brightness
+automatically. [30]. It can be adding to almost the all
+Mini series.
+• Chevrolet: HUDs already available on the Chevrolet
+Corvette, and since the 2011 Camaro, it includes: Vehi-
+cle speed, Tachometer, Compass, Outside air tempera-
+ture Manual Paddle Shift Gear Indicator (if equipped),
+OnStar Turn-by-Turn, Audio functions, Phone informa-
+tion, Selected gear, Turn signal indicators, High-beam
+indicator signal, Vehicle messages.
+• Peugeot 3008: The French manufacturer Peugeot has
+chosen a slightly different HUD system than other
+brands, instead of projecting directly onto the wind-
+shield, Peugeot does on a small panel of translucent
+polycarbonate behind the dashboard, which can be
+hidden if desired [31]. System allows to adjust the
+brightness of the projected image, either manually or
+automatically (with light sensors) to the lighting con-
+ditions outside, to see the text clearly whatever the
+circumstances. HUD Peugeot allows to set the safe
+distance from the vehicle in front of the car, so the
+indicator on the HUD ﬂashes because there is ”area
+danger.
+Other manufacturers and the model with HUD included are:
+Toyota Prius, Mazda 3, Jaguar XE, Volvo XC90, Lexus RX,
+Hyundai Genesis, Rolls Royce,Mercedes-Benz Class C and
+Class S Sedan and Coupe,Audi and General Motors SUVs,
+among others.
+B. Smartphones apps
+On the other hand, there are software developments that
+emulated HUD for smartphones users that want to try this
+kind of technology.
+Lately there have been a collection of apps popping up both
+in the iTunes and Google Play app stores which promise
+all the same functionality youd expect from a traditional
+HUD setup, except without any of the hassle of installation
+or getting all the wiring right between incompatible cars.
+The apps work by brightly displaying a reverse image on
+the windshield when the phone is mounted on top of the
+dashboard itself. Some of then are:
+•
+Navier HUD is an application available on Android
+phones. Navier HUD uses the HUD (Head-up display)
+concept to help drivers without having to take their eyes
+off the road. The driving information is projected on to
+the windshield when using Navier HUD while the phone
+lie down in front of the windshield. Navier HUD has
+a simple navigation function to hint people toward a
+selected destination just follow the routing instruction.
+For the use of HUD, driving information and instruction
+are designed as simple symbols to help drivers easy to
+recognize. [32]
+• HUDWAY is a unique application for smartphone users
+that allows drivers to focus on the road, keep their hands
+on the wheel and mind on driving. Now drivers don’t
+have to interpret audio commands or complicated maps
+and symbols. Current navigation systems are inherently
+unsafe by distracting a drivers attention away from the
+road. This is especially true when driving in low visi-
+bility conditions rain, fog, heavy snow or darkness.[32]
+• Sygic: See all navigation instructions projected directly
+into your line of sight - the windshield. This allows you
+to process instructions faster and keep your attention on
+the road. Head-up Display works without any additional
+accessories or devices. It projects all important informa-
+tion such as turn indicator arrows, distance to the next
+turn, your current speed and speed limit. Warnings for
+speed cameras and estimated time of arrival are also
+included.[32]
+Fig. 7.
+Sygic Head-up display
+All this apps can be tested but to fully use them, is about 9$
+purchase.
+C. Third-party device
+Most third-party HUDs work by linking to either your
+phones internal GPS or ﬁnding a signal of their own
+from a satellite to guesstimate how fast your car is going
+at any given time, and display the information back on
+the windshield [34].For now, HUDs made by individual
+companies for aftermarket use are only capable of displaying
+a rudimentary speedometer, often in mono-chromatic colors
+which arent all too pleasing for the eye to be staring at for
+hours on end. Below, there are some manufacturers:
+Garmin HUD+ beams navigation information onto your
+windshield for easy viewing while driving. It receives data
+
+--- Page 6 ---
+wirelessly from your compatible smartphone running the
+free Garmin HUD app. The device offers far more navigation
+detail than other portable HUD systems, displaying turn
+indicators, distance to your next turn, current speed and
+speed limit, and estimated time of arrival. HUD+ lets you
+know what lane to be in for your next maneuver as well as
+alerts you if you exceed the speed limit.[33] It costs 150.
+Other Manufacturers
+In the market we can ﬁnd several manufacturers that offer
+self-mounting devices HUD like:
+• Kshioe 5.5” Q7 Universal GPS HUD
+• Eoncore New Universal 5.5” Car A8 Hud Head Up
+Display with OBD2 Interface
+• Generic X6 3” Universal Multi-function compatible
+with OBD2 System Model Cars
+All of them start at 50, and take 1 hour of installation.
+D. Future commercial developments
+1) Wind shield display: Autoglass 2020 vision: the future
+of the car windscreen Augmented reality - intelligent car
+windscreens that provides real-time visual information to
+drivers are only a few years away, according to Autoglass.
+The UK’s leading vehicle glass repair and replacement
+specialist is predicting that the car windscreen will soon
+function as an interactive visual display for everything going
+on in and around the car.
+To demonstrate how the windscreen of the future would
+work, Autoglass has produced a video of how driving around
+London in 2020 might look.
+By 2020, the windscreen will display key information about
+speed, fuel and any issues with parts of the car. It will
+also combine visual sensors with augmented reality, online
+maps and GPS technology to provide drivers with live, visual
+information about the places and hazards around them.[35]
+2) Holograms systems: Aida 2.0 project aims at estimat-
+ing a driver’s likely destination based on collective mobility
+patterns in the city and individual proﬁle information -
+such as past riding behaviours and online calendar entries-.
+Aida proposes an unprecedented interface that allows the
+driver access this information. In an effort to bring the
+virtual augmented map closer to the actual physical city
+sean through the windshield, Aida’s interface exploits most
+unused area on the dashboard to establish a direct connection
+between the actual street and ist representation on the digital
+map.[36]
+3) Helmet: In order to provide further optimized this
+technology in the future , BMW is working on a helmet
+with an innovative feature Head- Up Display . This allows
+the projection data directly in the driver’s ﬁeld of vision so
+that you no longer have to consult the instrument panel and
+can fully concentrate on trafﬁc.
+All indicators freely programmable display to give the best
+possible support for pilot safety. The idea is that only the
+information that is useful and relevant to the situation of
+each particular time appears.
+It includes augmented reality so drivers don’t have to look
+down at their gauges. It’s like the Google Glasses 2.0 for
+motorcycle helmets.
+The technology for motorcyclists involves a color display
+about as thin as eyeglasses that ﬁts within helmets. It
+magnetically clips into the helmet in front of the riders’
+eye, avoiding any disruption to their line of sight while
+accommodating eyeglasses.
+BMW is the ﬁrst company to license the DigiLens tech-
+nology. The automaker has previously used the technology
+in its MINI augmented vision glasses, which debuted at
+the Auto Shanghai show in China on April. So exploring
+the technology for its motorcycles is a natural extension,
+according to Richter.[37]
+V. CONCLUSIONS
+HUD devices are Advanced Driver Assistance Systems
+(ADAS) whose objective is to enhance driving safety and
+efﬁciency thank to the information obtained from the envi-
+ronment and the vehicle.
+HUD provides the driver a big amount of information
+avoiding losing the attention from the road because all the
+information is shown on the windshield.
+Its use has grown in an exponential way and in the next
+years, it is expected to be installed on every car.
+Nowadays, there are too many automotive companies that
+have developed commercial HUD systems like BMW, Jaguar,
+Mercerdes or Peugeot among others.
+REFERENCES
+[1] Durand R. Begault, San Jose State University Foundation. Head-Up
+Auditory Displays for Trafﬁc Collision Avoidance System Advisories:
+A Preliminary Investigation.
+[2] Gish, K.W., Staplin, L., 1995. Human Factors Aspects of Using Head
+up Displays in Automobiles: a Review of the Literature. Report No.
+DOT HS 808 320. Department of Transportation, Washington: U.S
+[3] Jhannes Ingi rnason, Jannik Jepsen, Allan Koudal, Michael Rosendahl
+Schmidt, Stefania Seraﬁn. Aalborg University, Copenhagen, Denmark.
+Volvo intelligent news: A context aware multi modal proactive recom-
+mender system for in-vehicle use.
+[4] Despite progress, road trafﬁc deaths remain too high. [Online]. Avail-
+able: http://www.who.int/mediacentre/news/releases/2015/road-safety-
+report/en/[Last visit: : 01- Mar- 2016].
+[5] McCann, R.S., Foyle, D.C. and Johnston, J.C. (1993). In R.S. Jensen.
+Attentional limitations with head-up displays
+[6] Wood,
+R.
+B.,
+&
+Howells,
+P.
+J.
+(2006).
+Head-
+up
+displays.
+CRC
+Prss
+LLC,
+[Online].
+Available:
+http://www.davi.ws/avionics/TheAvionicsHandbook Cap 4.pdf
+[Last
+visit: : 01- Mar- 2016].
+[7] Spitzer, C. R., & Spitzer, C. (Eds.). (2000). Digital Avionics Hand-
+book. CRC Press.
+[8] Goteman, ., Smith, K., & Dekker, S. (2007). HUD with a velocity
+(ﬂight-path) vector reduces lateral error during landing in restricted
+visibility. The International journal of aviation psychology, 17(1), 91-
+108.
+[9] Arthur III, J. J., Kramer, L. J., & Bailey, R. E. (2005, May). Flight
+test comparison between enhanced vision (FLIR) and synthetic vision
+systems. In Defense and Security (pp. 25-36). International Society
+for Optics and Photonics.
+[10] Harrison, A. (1994). Head-up displays for automotive applications
+(No. UMTRI-94-10)
+[11] Alabaster, Jay,”Pioneer launches car navigation with augmented reality,
+heads-up displays”. — Computerworld — June 28, 2013.
+[12] Groves, D. J., Shogren, W. G., & Harter Jr, J. E. (1995). U.S. Patent
+No. 5,414,439. Washington, DC: U.S. Patent and Trademark Ofﬁce.
+[13] Nicholson, G. (2011, May). Head-mounted display (HMD) assessment
+for tracked vehicles. In Proc. SPIE (Vol. 8042, p. 80420I).
+
+--- Page 7 ---
+[14] Description: Main idea about HUD and several commercial examples.
+[Online]. Available: bibitem//www.howtogeek.com/227144/what-is-a-
+heads-up-display-hud-and-should-i-get-one/. [Last visit: : 26- Feb-
+2016].
+[15] Design and Implementation of Driver Main Computer and Head Up
+Display on Smart Car. Wuryandari, Gondokaryono, Widnyana. The 4th
+International Conference On Electrical Engineering and Informatics
+(ICEEI 2013). Procedia Technology, vol. 11, 2013, pp. 1041 1047.
+[16] Comparison of head-up display (HUD) vs. head-down display (HDD):
+driving performance of commercial vehicles operators in Taiwan.
+Yung-Ching Liu, Ming-Hui Wen. Int. J. Human-Computer Studies,
+vol. 61, 2004. pp. 679697
+[17] Development of human factors guidelines for advanced traveler infor-
+mation systems (ATIS) and commercial vehicle operations (CVO): an
+examination of driver performance under reduced visibility conditions
+when using an in-vehicle signing and information system (ISIS).
+Collins, D.J., Biever, J.W., Dingus, T.A., Neale, V.L., 1999. Publication
+No. FHWA-RD- 99-130, US Department of Transportation Federal
+Highway Administration.
+[18] Eye gaze studies comparing head-up and head-down displays in
+vehicles. Ablassmeier, M., Poitschke, T., Wallhoff, F., Bengler, K.,
+Rigoll, G. In: Proc. of ICME 2007, pp. 2250-2252.
+[19] The effects of a simulated head-up display speedometer on perceptual
+task performance. Sojourner, R.J., Antin, J.F., 1990. Human Factors
+32 (3), 329339.
+[20] Beneﬁts of in-car head-up displays. Kaptein, N.A., 1994. TNO Report
+TNO-TM 1994 B-20, TNO Human Factors Research Institute, The
+Netherlands.
+[21] Trafﬁc and Navigation Support through an Automobile Heads Up Dis-
+play (A-HUD). Kar-Hai Chu, Robert Brewer, Sam Joseph. Laboratory
+for Interactive Learning Technologies, Department of Information and
+Computer Sciences, University of Hawaii
+[22] The Head Up Display Concept. Ingman, Anders, Lund University
+School of Maret; 2005.
+[23] A user study of auditory, head-up and multi-modal displays in vehicles.
+Grega Jakus, Christina Dicke, Jaka Sodnik. Applied Ergonomics, vol.
+46, 2015, pp. 184-192
+[24] Safety aspects of CRT panel controls in automobiles. Zwhalen, H.T.,
+Adams Jr., C.C., DeBald, D.P., 1988.. In: Gale, A.G., Freeman, M.H.,
+Haslegrave, C.M., Smith, P., Taylor, S.P. (Eds.), Vision in Vehicles II.
+Elsevier, Amsterdam, pp. 335344.
+[25] Head-up displays and their automotive application: an overview of
+human factors issues affecting safety. Ward N., Parkes, A., 1994.
+Accident Analysis and Prevention 6, 703717.
+[26] Head-up Displays and Attention Capture. Prinzel, L.J., Risser, M.,
+2004. Tech. Rep. NASA/TM-2004-213000. NASA e Langley Research
+Center, Hampton.
+[27] A user study of auditory versus visual interfaces for use while driving.
+Sodnik, J., Dicke, C., Tomazic, S.,Billinghurst, M., 2008. Int. J. Hum.
+Comp. Stud. 66 (5), 318-332.
+[28] Intelligent vehicles technology: Theory and applications. Ljubo Vlacic,
+Michel Parent and Fumio Harashima 2001. Elsevier
+[29] www.bmw.es,
+”BMW
+Head-Up
+Display”,
+2016.
+[Online].
+Available:
+http://www.bmw.es/home/footer/1/glosario/bmw-head-
+up-display.html. [Last visit: : 01- Mar- 2016].
+[30] Bowker
+BMW
+&
+MINI
+Genuine
+Parts,
+”MINI
+Head
+Up
+Display
+screen”,
+2016.
+[Online].
+Available:
+http://www.bmwandminigenuineparts.com/products/mini-head-up-
+display-screen. [Last visit: : 01- Mar- 2016].
+[31] Autofacil.es, ”Head Up Display en los coches”, 2016. [Online].
+Available:
+http://www.autofacil.es/bmw/2016/01/15/head-up-display-
+coches-util-o-inutil/30025.html. [Last visit: : 01- Mar- 2016].
+[32] Play.google.com,
+”Navier
+HUD”,
+2016.
+[Online].
+Available:
+https://play.google.com/store/apps/details?id=idv.xunqun.navier&hl=es.
+[Last visit: : 02- Mar- 2016].
+[33] G.
+subsidiaries,
+”HUD+
+(Head-Up
+Display)
+—
+Garmin”,
+Garmin,
+2015.
+[Online].
+Available:
+https://buy.garmin.com/en-
+US/US/prod155059.html. [Last visit: : 01- Mar- 2016].
+[34] E. Viso, ”El Head-Up Display (HUD), perfecto para mantener
+la vista en la carretera - Circula Seguro”, Circula Seguro, 2014.
+[Online]. Available: http://www.circulaseguro.com/el-head-up-display-
+hud-perfecto-para-mantener-la-vista-en-la-carretera/. [Last visit: : 01-
+Mar- 2016].
+[35] ”Autoglass
+News
+-
+2020
+vision
+-
+the
+windscreen
+of
+the
+future”,Autoglassnews.co.uk,
+2016.
+[Online].
+Available:
+http://www.autoglassnews.co.uk/index.php?id=2020-vision.
+[Last
+Visit 01- Mar- 2016].
+[36] ”Audi Aida 2.0”, Senseable.mit.edu, 2015. [Online]. Available:
+http://senseable.mit.edu/aida2/. [Last Visit 01- Mar- 2016].
+[37] J.
+Gaudiosi,
+”BMW
+Debuts
+Augmented
+Reality
+Helmet
+at
+CES”,Fortune,
+2016.
+[Online].
+Available:
+http://fortune.com/2016/01/07/bmw-motorcycle-helmet-augmented-
+reality/. [Last Visit 01- Mar- 2016].

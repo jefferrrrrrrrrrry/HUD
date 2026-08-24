@@ -1,0 +1,192 @@
+# 来源: Jina @ https://doi.org/10.25046/aj020381
+
+Title: Augmented Reality Prototype HUD for Passenger Infotainment in a Vehicular Environment - Advances in Science, Technology and Engineering Systems Journal
+
+URL Source: https://doi.org/10.25046/aj020381
+
+Markdown Content:
+## 1. Introduction
+
+Head-Up Display (HUD) interfaces are currently emerging as an increasingly viable alternative to traditional Head-Down Displays (HDD). HUDs present fresh opportunities for the presentation of information using symbolic and/or alphanumeric representation. By occupying larger estate directly on the driver’s field of view, they can provide crucial information swiftly and without distracting the driver. As such they can enhance significantly a driver’s information-retrieval capacity and response times in near collision situations [1,2,3].
+
+This action could lead to hazardous driving and could potentially cause traffic collisions [7,8]. In light of the aforementioned facts and observations this project aims to collate and explore the current state of technology in infotainment car devices, as a base for launching the design and evaluation of the Human-Computer Interaction (HCI) for applications to rear-side HUD displays. The latter would enhance passenger’s entertainment in the vehicular environment and provide visual and auditory information regarding the external environment. The utilization of HUD draws from our previous experiments with collision avoidance interfaces that achieved significant results towards the reduction of the collision probability in adverse weather conditions [4,5,9].Prototype HUD design interfaces and devices have significantly mitigated this issue of the driver’s attention being diverted from his/her field of view, as shown in previous studies [3,4 & 5]. Yet, the requirements of the passengers’ user group have not been adequately explored. In particular, rear seat passengers, specifically children, can seek to attract their parents’ attention during long distance trips or whilst commuting. Such actions have a detrimental impact on the driver’s attention, and could potentially lead to an accident. A UK survey that collected 2000 British parents’ opinion about their children’s behaviour whilst they were driving reported findings of around 62% of the parents feeling more at ease without their children in the car, 43% feeling tense and irritated with their children, and about 55% admitting that they were prone to losing their temper while driving long distance [6]. Furthermore, some parents used mirrors, not to check external road conditions, but to glance at and check their children’s behaviour in the back seat.
+
+Overall, the paper is structured as follows: The paper introduces the target group and current driver distraction issues. The above form the framework requirements used for the development of the proposed HUD interface. In turn the paper presents a description of the proposed system and related design considerations. The evaluation process and results of twenty users are discussed. Finally, conclusions are summarized and a future plan of work is presented.
+
+## 2. Current In-Vehicle Distraction Issues and Solutions
+
+Previous studies have observed that long-distance journeys in a car, constrain family members in the confined vehicle space for extensive periods of time. Typically, the adult members of the family are trying to keep the younger passengers occupied through various activities such as chatting, singing songs or playing on mobile phones [7]. Adults and children, however, frequently have different expectations during travel time, with children being inclined to expect the time to be enjoyable and playful, whilst adults prefer it to be relaxing and quiet [7]. Children usually start becoming bored and losing interest after about 30 minutes of long distance driving, resulting in negative feelings of parents as noted above, with 60% of parents dealing with these situations by lying about the journey time and 70% choosing to buy food and drinks in an attempt to divert attention and thus resolve the situation [6].
+
+Despite of these, recent studies also demonstrate that an increasing number of families with dependent children choose to take their children to school by car or to travel long distances with the family [7,8].
+
+Evidently the in-vehicle interactions between the passengers, particularly the younger ones, can distract a driver’s attention and increase dramatically the collision probability. As such, the following section will present a potential solution to this issue that could be mutually beneficial for both the driver and passengers.
+
+A number of electronics and automotive manufacturers have made tentative plans and experiments in order to maintain the rear passengers occupied during long distance traveling or commuting. Early examples include “Backseat Playground” designed in 2009 by Mobility Studio in Sweden. The game aims to improve the travel experience for the passengers. The most significant feature of the game was to combine the game’s sounds with the actual travel location sounds, to enhance the experience of the game, and many participants pointed out that this feature was so vivid that it made them confuse the virtual game with the actual geographical location. Hardware including a pocket PC, microphone, magnetometer, gyroscopes, headphones, laptop, GPS and wireless LAN were used to achieve this feature [10].
+
+The game utilizes landmarks and transforms then into an imaginary land occupied by virtual creatures and treasures. The system utilizes a gaming device which operates by pointing it towards road objects as they pass by. The players can play individually or collaborate with other players in meeting road traffic. Although it has many mini stories, the whole game is more suitable for travelling for a short time, with an increase in distance travelled leading to the story becoming more unclear and potentially confusing [10].
+
+In 2011 “nICE” was designed by a German University aiming to increase the communication experience during travel time. This application was specially designed for BMW; in 2008 BMW already had some in-car entertainments devices, such as DVD, TV and music. This game uses headphones (for the driver who can decide to join in or not) and two touch pads (for front and back seat passengers or children) to play and which can link with each other with a wireless connection. The game is a picture puzzle game; there are pictures in the application album, and the passenger can randomly choose one and begin the game. Each picture has a missing part and the player needs to solve the mini puzzle game to earn these missing parts, for instance, a music quiz, drawing pictures and a labyrinth game. Passengers can choose particular mini game which they are good at, and win the game as a team [11].
+
+In 2013, “Mileys” was developed as an in-vehicle game designed particularly for families traveling long-distance journeys [7]. The aim of the game was to educationally enrich the driving time by providing geographical and location orientated information. The game employs AR technology, GPS, radar and mobile phone interaction in order for users to present and access the provided information. In the game, parents can see the location of the character Miley, which they can position de novo at a location or find Mileys already planted or dropped by other people. At the same time, children use a radar device to search different positions in order to find the exact location and in the process, talk to their parents. When the family reach the location, children can use the phones to pick up Miley and a secondary objective is to keep the character’s health high with safe and steady driving. Once/if the health runs out, the children will get their final score and the character Miley will be dropped and wait for the next player to pick it [7].
+
+## 3. Head-Up Display vs Head-Down Display
+
+The HUD systems typically comprise a projection unit embedded on the vehicle dashboard. The projected image is in turn inverted with a set of mirrors directly positioned in front of the projector, and reflected on the windshield area. The area of the windscreen that receives the projection is covered with a transparent surface, namely the combiner, which enables the correct depiction of the projected colours and shapes. Depending on the system calibration, the image can be superimposed on the environment, seemingly appearing at approximately 1.5m to 2.5m ahead of the windscreen [12, 13]. This is deemed as an ideal projection distance in order to avoid the cognitive capture effect which forces the human eye to focus between two different layers, that in turn results in degradation of human attention and performance [14,15]. Evidently, the HUD systems adhering to the aforementioned design requirements can improve significantly the driver’s response times in accident situations [1,2, 9, 13,15].
+
+In contrast the information depicted on the vehicle’s dashboard is known as Head-Down Display (HDD). The HDD by default, forces the user to take their eyes from the road, and focus momentarily on the lower section of the vehicle (dashboard) which accommodates multiple infotainment displays [15,16,17,18]. A plethora of studies have analysed the drivers’ cognitive load in different scenarios involving vehicle instrumentation, navigation systems, radio, CD and mobile phones amongst other devices [16,17,18,19]. The conclusions of such studies suggest a high collision probability whilst the driver operates any of the aforementioned in tandem to the main driving task [1,2,4,20, 21].
+
+In our case, we opted for a HUD system in order to enable the younger passengers to look out of the window and experience the route. The HUD in this case can offer an Augmented Reality gaming environment that could mix the Computer-Generated Image (CGI) game characters with the real environment and create different gameplay experience on each drive [22, 23]. Additionally, the HUD offers the capability to project succinct educational information regarding the landmarks and areas viewed during the car-travel. The software and hardware system requirements are presented analytically on the following sections.
+
+## 4. Proposed System Solution
+
+Significant attempts to enhance the rear passengers commuting experience via in vehicle game solutions have been described in section 2, however, the issue of passenger infotainment in a vehicular environment remains largely unsolved [24, 25]. Previously suggested solutions and research projects have managed to identify various interactions and patterns that could possibly occupy the rear passengers, they were, however, not offering a holistic approach that could adapt to different ages and interest groups.
+
+The proposed system aims to offer a combination of activities for the rear passengers in order to avoid in-vehicle distractions that could affect driver’s performance and concentration. The system is designed to facilitate both educational and entertainment activities with particular focus on the younger passenger age group.
+
+## 4.1. Software requirements:
+
+The HUD system is comprised of a generic interface that allows the rear-passengers to access information in real-time through the navigation GPS. The navigation type of information can vary from maps and navigation, distance covered, estimated time of arrival and highlighted on-route landmarks (i.e monuments, churches, castles etc.). The latter can be accessed in real-time, through online connectivity.
+
+The landmark related specifics can be superimposed through the side HUD to the landmarks approached en route providing succinct information. This aims to keep the rear passengers occupied throughout the travelling time whilst educating them with regards to the surrounding environment. Additionally, the system offers an overview of the vehicle functions such as speed, consumption, revs amongst other, that might be of interest to the passengers.
+
+The second arm of the interface offers the entertainment suite which entails games, movies, internet, music and audiobooks. The audio related data can be provided by individualized headsets so as to avoid further in vehicle sound distractions. On the entertainment section we have primarily targeted the younger audience with a set of onboard games that could be augmented in the external window scenery. As such we have developed (a) a platform flying game and (b) a historic Augmented Reality (AR) game.
+
+[![Image 1](https://www.astesj.com/wp-content/uploads/2021/12/1-93.png)](https://www.astesj.com/wp-content/uploads/2021/12/1-93.png)
+
+Fig. 1: Prototype HUD interface and offered activities.
+
+In the first game the user commands a superhero flying over the scenery whilst avoiding and shooting back a flying villain. As the scenery constantly changes both rival characters’ battle in different terrains and weather conditions (figure 2).
+
+The second game aims to entice the upper age limit of the passengers as it utilizes the external scenery and landmarks as temporary objects for the game. The game employs the external scenery of a real castle (i.e. Stirling Castle) for the duration that the user can see the castle through his/her window. In turn the user has to complete a set of challenges, such as assaulting the castle with the use of a 3D catapult. If the catapult shots are successful, the user gathers some points and continues to the next landmark and task.
+
+This can obviously be altered depending on the country, landmarks and activities that the user wishes to access and interact with. In this paper we examine the overall user experience in regards to the HUD interface and the first game.
+
+## 4.2. Hardware requirements:
+
+The projected interface is presented on a rear passenger side window HUD system. The selection of the particular surface was chosen as it is in close proximity to the passengers and can utilise the external environment and scenery for augmented reality and geotagged application. Also, the side windows on any vehicle offer a large area for any type of data projection without requiring additional monitors. The utilisation of this highly neglected surface within the vehicle additionally offers an interactive projection field within arm’s distance.
+
+In the Virtual Reality Driving Simulation laboratory (VRSD Lab) a dedicated High Definition (HD) mini projector was employed to project the HUD interface and context on a custom transparent film positioned on the top of the glass window. The mini projector superimposes both the external view and the HUD interface (game and generic interface) in a side window of a full scale vehicle as presented in Figure 2. This method offered a realistic projection of the HUD.
+
+Due to cost limitations and time constrains, a suitable micro projector was not a viable option at this stage. An alternative system would have been the transparent screen by Samsung [26], however for the same reasons as stated above it was not feasible to use it for this experiment.
+
+[![Image 2](https://www.astesj.com/wp-content/uploads/2021/12/2-97.png)](https://www.astesj.com/wp-content/uploads/2021/12/2-97.png)
+
+Fig. 2: The figure presents the screenshot of the HUD interface and projected Augmented Reality en route to Stirling Castle in Scotland.
+
+Prior to selecting the particular projection method alternative emerging technologies have been investigated. The Virtual Reality (VR) option was a simple and easier option yet it was isolating and depriving the user from experiencing the environment view and the route.
+
+Furthermore, the bulky Head Mounted Display (HMD) is not ideal for younger users as they might suffer significant neck injuries in an abrupt braking situation. The more advanced Augmented Reality (AR) option of Microsoft HoloLens was also excluded for the same concerns related to cost and safety of the system in a vehicular environment by younger passengers.
+
+A second side HD projector was mounted externally on the ceiling. The latter projector was projecting a video recorded footage from a 45 minutes’ drive nearby the Stirling Castle. The interface was designed to provide geospatial information related to the en route landmarks.
+
+Notably the Stirling Caste is visible on the background for the duration of each trial whilst the user can operate the interface. The interface provides related educational and historic information, local news and weather amongst other information.
+
+The overall simulation is run by a custom server PC in a Cave Automatic Virtual Environment (CAVE) which uses five HD 3D projectors that create a full surround driving environment surrounding a real-life Mercedes A Class vehicle as presented in the Figure 3 & 4 below.
+
+The vehicle has rebuilt and rewired steering wheel and pedals compatible with the Unity3D game engine. The vehicle has also a central vibration system which enhances the motion feeling. A 5.1 surround audio creates the vehicle and environment sounds. The internal mini projector provides the required audio feedback for the HUD interface and the related infotainment activities.
+
+The physical interaction with the HUD interface is either through gesture recognition software or typical game pad device. The first is utilizing a Leap Motion device and the second an XBOX controller described succinctly below.
+
+## 4.2.1 Leap Motion Interaction:
+
+Prior to the main user trials, the Leap Motion device was tested in a desktop PC environment and received positive feedback in preliminary trials. The particular device was chosen as an ideal system to interact with the provided interface as it was not involving any handheld devices [27].
+
+In the main trials the Leap Motion was positioned with an adhesive tape on the door inside plastic section, underneath the car window in close proximity to the user. Although the system performed well the users’ experienced arm fatigue as their right hand was operating the system without any support. This was in contrast to the desktop environment that offered the table as arm rest for the focus group users.
+
+[![Image 3](https://www.astesj.com/wp-content/uploads/2021/12/3-88.png)](https://www.astesj.com/wp-content/uploads/2021/12/3-88.png)
+
+Fig. 3: Explanatory design of the HUD system and the VR Driving Simulator environment.
+
+The game developed for the Leap Motion involved a cartoon style battle between a hero and a villain as depicted in Figure 2. The hero, controlled by the user was operated by pointing with one finger and moving the flying hero in four directions (up, down, forwards and backwards). The aim of the game was to fly the hero and avoid the fireball projectile shot by the villain. As the real environment background was changing en route their battle was taking place in different real locations. To activate a different app of the bottom menu the user had to point and push the button choice (without touching the window glass). The particular gestures were simple and efficient [28,29] however the duration of the actions and the position of the user within the vehicle, resulted in users’ arm fatigue.
+
+The game was developed in Unity3D game engine, exclusively for the evaluation of the proposed HUD system.
+
+## _4.2.2 XBOX controller Interaction:_
+
+The typical XBOX controller was chosen as an alternative to the Leap Motion. The handheld controller aimed to counteract the fatigue issues and offer a familiar and faster interaction medium. The controller’s drawback was mainly the handheld nature of the system. This could be a potential issue in an abrupt braking as the inertia of the device could result in injuries of the passengers.
+
+[![Image 4](https://www.astesj.com/wp-content/uploads/2021/12/4-86.png)](https://www.astesj.com/wp-content/uploads/2021/12/4-86.png)
+
+Fig. 4: Screenshot of the GCU VR Driving Simulator in action.
+
+## 5. System Considerations
+
+Adhering to the situations noted above, the proposed in-vehicle games should be able to entice the users to play for the duration of long distance runs whilst providing interesting information for the surroundings [4]. Due to the nature of these games, the in-vehicle activities should abide to a number of considerations in order to have the expected positive results according to Broy’s research [10].
+
+The preservation of driving safety, is a primary consideration, as the risk of the game distracting the driver by sound or virtual effects should be minimized.
+
+Secondly, in-car games are not like traditional games or computer games, as they require a different playing environment, and should function steadily and effectively in a vehicular environment. As such the particular games should be simple and forgiving to minor movements that might occur due to road imperfections. Additionally, by utilizing the Augmented Reality (AR) provision of a HUD they could adapt to the external environment and create interesting and memorable game experiences [10, 11, 24, 30]. Interestingly this was highlighted by numerous remarks of our users in the simulation environment. Consequently, by utilizing the external environment the games do not require a full 3D gaming background in order to operate.
+
+Additionally, motion sickness should also be taken into account, as some passengers feel uncomfortable when they read during travel, so it may be more comfortable and effective to use pictures and/or sound to present the information [9, 10]. Furthermore, Brunnberg provided evidence to suggest that, due to high speed travel, the view from the rear seat will pass by very quickly. It is therefore difficult for the device to identify and present the information, and this may be one of the most difficult technological challenges to be faced and overcome during the design process [9]. It should also be noted that passengers of different age groups (young children, teenagers, parents) have varying levels of ability in terms of reading and understanding; hence, the game’s level of difficulty needs to be carefully considered [10].
+
+Based on the aforementioned rear-passenger population differences the provided geospatial information should also be targeting the interest of the different age groups. As such we deemed essential to present local and international news as well as different educational data in different levels of detail and complexity for different ages. Additionally, the various movies or games which the HUD can project have been optimised for different age audiences. As such for the toddlers we incorporated simple platform games, popular kids’ movies and indicative, simplified information for the external environment. For primary school pupils and teenagers, we introduced games and movies adhering to their preferences and age according to current top ten lists from relevant magazines and online publications. For adult passengers, we provided a collection of different online newspapers, news channels, weather channels mind games and contemporary movies. However, these were utilized as demonstration material of the system in a simulation environment. On a real-life commercial application, we would envisage the use of online applications to feed constantly the infotainment database and a small capacity Hard Disk Drive (HDD) that could maintain a selection of favourite movies and audio playlists.
+
+Based on the aforementioned considerations, some in-car games have already been designed for short-distance drives situation as previously discussed. “Backseat Playground”, “nICE” and “Mileys” use special equipment, phones or touchpads to play the games [7]. Similar studies have been conducted, in 2011 and 2012, by Toyota and General Motors (GM) respectively, utilizing enhanced versions of their backseat entertainment systems. Notably, GM used motion and optical sensor technology to transfer the rear seat window into a gesture touch panel [11,12,24].
+
+However, there has been limited – if any at all – employment of HUD and gesture recognition technology, which could offer a more immersive and subtle way of interaction for the users. The ultimate purpose of this combination is to offer attention seeking infotainment to the passengers so as to reduce the level of distraction for the driver. All the current systems mentioned above have their own features and utilize their interfaces with multiple types of equipment, but without gesture recognition and typical console controls. Hence, the above, highlights the need for a new passenger infotainment and communication system that could alleviate the level of distraction of the driver.
+
+## 6. Evaluation & Results
+
+The evaluation process followed a threefold approach. Prior to commencing the main user trials we had to identify the nature of games that could be developed, projected and played in long duration within a vehicle environment. As mentioned above the idiosyncratic characteristics of these games offer new opportunities of Augmented Reality (AR) gameplay yet create a number of questions related with the type of games that could maintain passengers’ attention and avoid motion sickness effect due to the vehicle’s movement.
+
+## 6.1. Focus Group
+
+For this reason, a focus group of five users (3 male, 2 female) age 30 to 40 years of age was formed to test different popular games, aiming to identify the most suitable category for the vehicular environment.
+
+The categories of games tested by a focus group prior to developing our own HUD games highlighted the difficulty of playing games that move in different directions to the vehicle’s motion. The games tested were in categories of first person, action adventure, platform and table game.
+
+The platform games following the vehicle’s direction were perceived as easier to play without creating any motion sickness effect. In contrast, single person games that require from the user to move in 3D dimensions were confusing and tiring for the focus group users.
+
+## 6.2. Main User Evaluation
+
+The main evaluation was performed by 20 users varying from 4 to 13 years of age. The users tested the overall system. This paper focuses primarily on the game section of the overall interface evaluation. Two custom platform games were tested. Both games used the Leap Motion hardware in order to create gesture recognition interactions.
+
+The results of the evaluation trials in this age group were promising and yielded a great deal of positive and useful feedback as presented in Figure 5. The first AR game received consistent approval and positive reactions from the participants. Yet certain issues were also pointed out, mainly regarding the gesture recognition system which required significant stamina from the users in order to operate it. This issue arose primarily from the demanding task of maintaining the arm lifted in order to operate the game on the side window. As an alternative, the system can be operated with a console wireless controller in order to avoid arm fatigue.
+
+Notably, 90% of the participants rated the game highly. Furthermore, analyzing all the comments, gesture control is the focal point, with 80% of the participants enjoying the function of gesture control in the game, and 50% of those with no prior gesture control experience describing the gestures as hard initially, but acceptable and appropriate after a period of familiarization.
+
+[![Image 5](https://www.astesj.com/wp-content/uploads/2021/12/5-81.png)](https://www.astesj.com/wp-content/uploads/2021/12/5-81.png)
+
+Figure 5: User evaluation feedback on main four usability questions.
+
+Interestingly, despite expecting users to identify arm fatigue as the main problem caused by the hand gestures, the overwhelming response from the users was that arm fatigue did not significantly affect the participants’ enjoyment of the game. 70% of the participants did not consider arm fatigue as an influencing factor in their enjoyment of the game. This result is not only contrary to the initial expectation but is also in contrast to the result of the test with the younger age group.
+
+Although the participants did not think that arm fatigue affected their enjoyment in the game, they suggested that a pause button could be useful in extensive duration game-play. Finally, the HUD system and AR game managed to captivate the audience for the duration of the first level (10 minutes per level) and in some cases the users continued in the subsequent game-levels, achieving the 100% target for occupying the passengers for the duration of a typical long distance commute or trip [11].
+
+## 6.3. Secondary User Evaluation and Driving Patterns
+
+The aforementioned result had evidently a direct benefit to the driver’s attention throughout the simulations. An indicative driver pattern driving the simulator with a toddler at the rear seat with and without the passenger HUD can be observed in Figure 6. This secondary trial aimed to identify the emerging driving patterns of the parent drivers during a short distance commute.
+
+The simulation followed our previous work and challenged the driver to respond either by braking abruptly or performing collision avoidance maneuver, in a number of potential collision situations [1,2,4]. The simulation tested the parent/driver response times and collision occurrences with and without the use of the passenger HUD interface.
+
+The simulation environment was a 3D photorealistic representation of an existing motorway section (M8) between Glasgow and Edinburgh. This smaller user trial involved 5 parents and their children. The driving patterns emerged from the five simulations which presented distinct similarities. The most interesting was that the use of the passenger HUD prevented any collisions as the driver was not concerned with the activities of the rear passengers.
+
+In turn the children were preoccupied with the HUD interface for the duration of the simulation and were particularly interested in the custom platform games. In contrast the absence of the HUD activities on the simulation without the system, challenged the patience of the younger passengers which in turn distracted their driver/parent. However, this third part of the user trials was constrained by a number of factors.
+
+[![Image 6](https://www.astesj.com/wp-content/uploads/2021/12/6-77.png)](https://www.astesj.com/wp-content/uploads/2021/12/6-77.png)
+
+Figure 6: Indicative driving patterns recorded with and without the HUD interface. The Red vertical lines present the collisions occurred.
+
+Primarily it was a difficult task to obtain both parents and toddler participants to run the simulation. Secondly it is very difficult to recreate in a short time the effect of boredom that can frustrate the younger age passengers. Furthermore, the VR Driving Simulator itself kept the young users occupied mitigating any boredom factor for substantially longer than in a typical everyday commuting environment.
+
+Future multiple user trials will be required with the same users in order to create a familiarity with the VR Driving Simulator in order to avoid the third factor that affects the younger users’ routine behaviour.
+
+Additionally, users that are immune to motion sickness could potentially drive the simulator for longer trial times (i.e. two hours driving) for obtaining more accurate data. Acknowledging these three limitations, the HUD managed to maintain the rear seat vehicle occupants’ attention and keep the parent-driver preoccupied with the driving task.
+
+## 7. Conclusions & Future Work
+
+This paper presented the design consideration, development and evaluation of a prototype Human Computer Interaction design for automotive HUD designed to entertain and inform the young passengers in the rear seat younger passengers. To facilitate an appraisal of the system, the experiment hosted two different games that utilized gesture recognition and typical console controls.
+
+The results indicate that the participants were satisfied with the game’s performance, with 80% of the participants having enjoyed the function of gesture control in the game, and half of the players who had no gesture control experience thinking that the gestures were hard at the start, but were acceptable and enjoyable after a period of familiarization. The problem of arm fatigue caused by hand gestures was highlighted in the experiments, even if not considered severe by the participants.
+
+Yet, despite the positive outcomes of the presented work, it is apparent that the games need to be customized for the particular environment and take into consideration the duration of the trips, counteract the road-surface disturbances and adapt to the external weather conditions. Our tentative plan for future work entails the update of the games’ and HUD interface’s functionality in order to comply with the aforementioned observations and results. Consequently, further testing of the updated HUD system will be required in order to determine the optimal system parameters that will allow the system to facilitate lengthy interactions with minimal fatigue.
+
+The motion sickness experienced by some users was not evaluated in this particular trial as this was not the aim of the particular experiment. However, we are interested to identify the motion sickness triggering mechanisms of this side window HUD interface in future trials explicitly designed to quantify this issue. In turn we plan to revise our interface in order to mitigate and reduce this side effect.
+
+Additionally, we plan to introduce an interface indication for short breaks between HUD applications. This potentially will provide some time for the user’s body to recover from the tilted position.
+
+Finally, longer simulations and trials might be required in order to determine the passenger HUD’s efficiency in quantitative trial with simulations of real life scenario.
+
+### Acknowledgment
+
+The authors would like to acknowledge the contribution of Dr Warren Chan and Dr Soheeb Khan in the development of the Virtual Reality Driving Simulator.

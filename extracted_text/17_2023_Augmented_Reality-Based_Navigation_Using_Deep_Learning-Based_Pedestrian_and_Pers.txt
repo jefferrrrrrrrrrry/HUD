@@ -1,0 +1,940 @@
+Received 19 May 2023, accepted 8 June 2023, date of publication 16 June 2023, date of current version 23 June 2023.
+
+Digital Object Identifier 10.1109/ACCESS.2023.3286872
+
+Augmented Reality-Based Navigation Using Deep
+Learning-Based Pedestrian and Personal Mobility
+User Recognition—A Comparative Evaluation
+for Driving Assistance
+
+DONG HYEON ROH 1 AND JAE YEOL LEE 2, (Member, IEEE)
+1Korea Automotive Technology Institute, Dongnam-gu, Cheonan-si 31214, South Korea
+2Department of Industrial Engineering, Chonnam National University, Buk-gu, Gwangju 61186, South Korea
+
+Corresponding author: Jae Yeol Lee (jaeyeol@chonnam.ac.kr)
+
+This work was supported in part by the National Research Foundation of Korea (NRF) funded by the Korean Government [Ministry of
+Science and ICT (MSIT)] under Grant NRF-2022R1A2C1010450, and in part by the Basic Science Research Program through NRF
+funded by the Ministry of Education under Grant 2019R1I1A3A01059082.
+
+This work involved human subjects or animals in its research. Approval of all ethical and experimental procedures and protocols was
+granted by the Chonnam National University Institutional Review Board under Application No. 1040198-211014-HR-153-02.
+
+ABSTRACT Recently, research on augmented reality-based head-up displays (AR-HUDs) for driving
+assistance has been widely conducted in the automotive industry. The disadvantage of having to look away
+from the road while driving can be compensated by using AR-HUD-based visualization instead of an
+auxiliary display on the central dashboard. As the number of personal mobility users on the road increases,
+and their moving speed is considerably faster than pedestrians, personal mobility makes it more difficult
+for the driver to cope with dangerous situations. However, there is little research work for considering
+personal mobility users for driving assistance. This study aims to enhance the driver’s situational awareness
+to respond to unexpected situation by providing driver assistance information on the AR-HUD by combining
+deep learning and AR. In particular, the deep learning-based anomaly detection method can recognize
+personal mobility users effectively. This study also investigates the driver’s understanding of the relationship
+between the amount of prioritized information provided to AR-HUD and situational cognitive ability. This
+understanding can be used to adjust the amount of information displayed on the AR-HUD to maintain drivers’
+situational awareness. The proposed approach was evaluated through an online study. The results showed
+that the proposed deep learning-based AR-HUD system improved the driver’s situational awareness and
+showed advantages in driving assistance compared to the typical system.
+
+INDEX TERMS Augmented reality, head-up display, personal mobility user recognition, driving assistance.
+
+I. INTRODUCTION
+With the recent development of infotainment technologies,
+automobiles can provide drivers various functions and driv-
+ing assistance information. For this reason, behavior other
+than driving increases, reducing concentration on driving and
+increasing the probability of missing objects in front of the
+
+The associate editor coordinating the review of this manuscript and
+
+approving it for publication was Jjun Cheng
+
+.
+
+driver. As the number of personal mobility users on the road
+increases, their moving speeds are considerably faster than
+those of pedestrians, making it more difficult for drivers to
+cope with dangerous situations. Therefore, it is challenging
+to effectively assist driving by quickly providing information
+on objects and persons that the driver may miss.
+
+Previous studies were conducted to assist drivers using AR-
+based visualization. Gabbard et al. [1] presented the benefits
+of AR while driving and addressed the problems of drivers’
+
+62200
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 License.
+For more information, see https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+VOLUME 11, 2023
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+perceptual and distraction issues inherent in AR systems.
+Rusch et al. [2] conducted a study to evaluate the effects
+of AR cues designed to direct the attention of experienced
+drivers to potential roadside risks in rural roadways. Schall
+Jr. et al. [3] showed the possibility of improving the safety
+of elderly drivers by increasing the possibility of risk detec-
+tion without interfering with other driving tasks by using
+AR clues. Bauerfeind et al. [4] showed a reduced mental
+load using the AR-based display for surrounding information
+while driving in urban areas with ambiguous intersection
+conditions. Concerning previous studies, AR technology can
+support drivers in various ways.
+
+Recently, some studies were being conducted to assist
+driving by applying artificial intelligence (AI) technology.
+Colley et al. [5] visualized driving information using seman-
+tic segmentation on the AR-based windshield and tablet PC.
+It was shown that AR-assisted visualization could reduce
+cognitive load during driving while increasing situational
+awareness (SA). Currano et al. [6] conducted an online study
+to evaluate the influence of head-up display (HUD) visu-
+alizations on drivers’ situation awareness and perceptions.
+They showed that situational cognition decreased as the
+information provided to HUD increased. However, since
+the information displayed on the windshield and HUD was
+mainly the location information of the dynamic or static
+objects, such as pedestrians and cars, it is difficult for the
+driver to cope with a situation when the personal mobility user
+appears. For example, drivers can cope better with critical
+situations if they can predict the moving direction of the
+personal mobility user. In the case of the windshield, it is
+expensive to make the entire vehicle glass into a display, and
+if the position of the object on the display does not exactly
+match the real one, driving may be hindered. Concerning the
+current HUD, as the display size is small and the amount
+of information to be displayed increases, the complexity of
+understanding driving information increases. Therefore, the
+HUD should be able to provide only prioritized information
+to be visualized.
+
+This study proposes and evaluates a new approach to
+recognizing pedestrians and personal mobility users and
+their moving directions using deep learning and provid-
+ing driving assistance information in the AR-HUD. The
+proposed system consists of two main sub-systems: deep
+learning-based personal mobility user recognition and driv-
+ing information visualization in the AR-HUD. The results
+of the deep learning-based sub-system are used to present
+pedestrian and mobility user information to the AR-HUD.
+The proposed approach is evaluated through an online study
+(N = 87) to analyze the usability and situation awareness of
+drivers and the relation between the amount of prioritized
+information provided to the AR-HUD and the driver’s sit-
+uational cognitive ability is sought. A further evaluation is
+performed according to the amount of prioritized information
+displayed in the AR-HUD. The comparative evaluation shows
+the advantage of the proposed method over the previous
+approach.
+
+The contribution of this study that fuses deep learning and
+
+AR-HUD is as follows.
+
+1) We propose a new approach that can detect pedestrians
+and personal mobility users using deep learning-based
+anomaly detection and visualize the detected informa-
+tion to the AR-HUD for effective driving assistance.
+2) By incorporating a deep learning approach into the AR-
+HUD, it is more effective to identify even fast-moving
+personal mobility users.
+
+3) An online study-based evaluation shows the advantage
+of the proposed system concerning driving assistance
+and situational awareness.
+
+This paper is organized as follows. Section II explains
+related work. Section III presents the proposed method, and
+Section IV discusses the experimental design. Section V
+presents the results of the comparative experiment. Finally,
+Section VI concludes the paper with some remarks.
+
+II. RELATED WORK
+Augmented reality (AR) technologies have been applied to
+various fields, such as driving [1], [2], human-robot col-
+laboration [7], surgical navigation [8], education [9], and
+manufacturing task assistance [10]. This section focuses on
+and reviews previous studies related to providing driving
+assistance information using AR-based visualizations.
+
+Some previous studies conducted AR-based driving assis-
+tance for autonomous or conditional automation vehicles.
+Lindemann et al. [11] examined the effects of using an AR
+interface with world-registered visualization to assist drivers
+in the last moments before a takeover for conditional automa-
+tion vehicles in an AR driving simulation environment. They
+simulated an AR-based windshield display and compared it
+with a conventional head-down display. They showed that
+the AR-assisted display enabled higher lateral performance
+and reduced workload. von Sawitzky et al. [12] mentioned
+that fully autonomous driving has far more functions than
+human drivers can achieve, but the unpredictable behav-
+ior patterns of autonomous vehicles can make passengers
+uncomfortable. Since autonomous driving information is not
+visible to the driver, the biggest problem is whether the
+user trusts the system. According to their study, when route
+information of autonomous vehicles is provided using AR
+technology, trust in autonomous vehicles can be improved.
+Wintersberger et al. [13] conducted a study to find whether
+AR assistance has the potential to increase user acceptance
+and trust by communicating system decisions. By conduct-
+ing two driving simulator studies, they concluded that the
+application of AR is a good opportunity with high potential
+for automated driving. Chen et al. [14] stated that the existing
+semantic segmentation method could not be stably applied
+to the autonomous driving system because it ignores the
+importance of different grades for safe driving. For example,
+pedestrians, cars, and cyclists in the scene are much more
+important than the sky and buildings when driving a car. Thus,
+their segmentation should be as accurate as possible.
+
+VOLUME 11, 2023
+
+62201
+
+A large amount of data is currently generated in the info-
+tainment device, causing driver confusion and increasing
+the probability of collision. Therefore, Charissis et al. [15]
+conducted a study to manage related information while
+safely displaying data in AR-HUDs and providing effective
+interaction methods. As a result of comparison with typi-
+cal head-down display interface systems, accident avoidance
+capabilities are improved by 64%. Currano et al. [6] con-
+ducted an online study to evaluate the influence of HUD
+visualizations on drivers’ situation awareness and percep-
+tions. The study results showed that situational cognition
+decreased as the complexity of the driving situation increased,
+and situational cognition decreased even in the presence of
+HUD compared to the absence of HUD.
+
+Several researchers evaluated AR-based windshield dis-
+plays
+for driving assistance. Windshield displays are
+considered a promising technology for automated driv-
+ing, as they can provide various information assisting
+drivers in non-driving-related activities. However, knowing
+whether drivers can use them effectively is still challeng-
+ing. Riegler et al. [16] conducted a study to address user
+preferences for AR-based windshield displays and their
+potential to enhance user experience in automated driving.
+Colley et al. [5] compared windshield-based and tablet-based
+semantic segmentation visualization. The results showed that
+visualization with windshields increased situational aware-
+ness while maintaining a low cognitive load. However,
+in order to make the driving assistant information visible on
+the windshield, the display must be mounted on the glass
+of the existing car. This can rather cause the problem of
+increasing the price of a car. In addition, even if mounted,
+it may confuse the driver if the information displayed on
+the windshield does not exactly match the object in the real
+world. However, currently, there is no vehicle to support
+the whole windshield display, although we can expect those
+displays in the future.
+
+III. PROPOSED APPROACH
+Regarding previous studies, providing driving information
+using AR technologies can effectively assist drivers, but
+providing all the information can interfere with driving.
+Therefore, this study focuses on prioritized information such
+as personal mobility users and provides this information to
+drivers since they move faster than pedestrians. Since various
+personal mobilities come to the market, traditional object
+detection or semantic segmentation can partially recognize
+them or requires re-training whenever new models come to
+the market. However, there is little previous study on evalu-
+ating driving assistance by detecting personal mobility users
+and combining this information with the AR-HUD. We have
+conducted an online study to verify the proposed approach.
+
+A. SYSTEM OVERVIEW
+The proposed approach is composed of two main sub-
+systems: deep learning-based personal mobility user recog-
+nition and AR-HUD-based driving information visualization,
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+as shown in Fig. 1. The first sub-system is to recognize
+the locations and moving directions of pedestrians and per-
+sonal mobility users by using deep learning-based anomaly
+detection and body orientation estimation, respectively. The
+second sub-system visualizes driving assistance information
+in the AR-HUD, where pedestrians and personal mobility
+users can be highlighted and focused.
+
+B. DEEP LEARNING-BASED PERSONAL MOBILITY USER
+DETECTION AND MOVING DIRECTION ESTIMATION
+Recently, the number of personal mobility users has increased
+enormously, and various types of mobilities have come to the
+market, which causes critical car accidents since mobilities
+move very fast. Thus, it is challenging to recognize mobility
+users in addition to pedestrians effectively. In this study, the
+deep learning-based personal mobility user recognition and
+direction estimation sub-system can detect pedestrians and
+personal mobility users and estimate their moving directions.
+In particular, personality user detection comprises three mod-
+ules: human detection, cropping and dividing, and anomaly
+detection-based mobility user recognition [17], [18].
+
+As shown in Fig. 2, the human detection module uses the
+Mask R-CNN [19] of Detectron2 [20], which can effectively
+locate humans (pedestrians and mobility users) without addi-
+tional training. Mask R-CNN is an extension of the bounding
+box recognition function of Faster R-CNN [21] by adding
+the ability to predict object masks in parallel. It performed
+better in instance segmentation, bounding-box-based object
+detection, and human skeleton key-point detection [19], [20].
+The cropping and dividing module eliminates background
+information, only retains the area obtained from the human
+detection module, and further divides the detected area into
+upper and lower parts. The lower part is used to determine
+whether they are pedestrians or mobility users since the
+mobility is located in the lower part, which can overcome
+the limitations of previous anomaly detection studies that
+were dependent on fixed cameras or only capable of detecting
+anomalies in static environments [18].
+
+[18]
+
+In particular, the anomaly detection-based mobility user
+recognition module determines whether the user rides per-
+sonal mobility. This module utilizes the Dynamic Memory-
+guided Normality for Anomaly Detection (DMNAD)
+method [17],
+to differentiate between pedestrians
+and personal mobility users. DMNAD is a memory-based
+anomaly detection algorithm that trains only pedestrians and
+effectively distinguishes them from personal mobility users.
+The anomaly detection predicts the personal mobility user
+as abnormal, while the pedestrian is predicted as normal. It is
+important to note that the DMNAD method trains only normal
+patterns of general pedestrians, which allows it to effectively
+distinguish between pedestrians and personal mobility users
+in dynamic environments. As shown in Fig. 3, there is little
+difference between the input and output of the pedestrian.
+However, there is much difference for the personal mobility
+user. Red areas show the difference between the input and
+
+62202
+
+VOLUME 11, 2023
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+FIGURE 1. Overview of the proposed approach for driving assistance using deep learning and AR.
+
+reconstructed output through the anomaly detection sub-
+module.
+
+Moving direction or body orientation of pedestrians and
+mobility users can assist the driver in estimating their next
+actions. The Monocular Estimation of Body Orientation
+(MEBOW) [22] is used to estimate pedestrians’ and mobility
+users’ moving directions. The MEBOW method, designed for
+models that aim to estimate body orientation, uses images of
+human instances from the COCO [23] dataset for its training
+and testing dataset. This selection of the COCO dataset was
+made due to its comprehensive nature, which includes a wide
+range of postures, lighting conditions, occlusions, and back-
+ground information. As shown in Fig. 4, the deep learning
+model adopts HRNet [24] as a backbone and ResNet [25] as
+a head network. Firstly, intermediate feature representations
+are combined to feed into the head network. Then, the head
+network estimates 72 orientation bins or directions. Fig. 4
+shows an example of estimating the moving direction of the
+mobility user.
+
+C. AR-HUD-BASED DRIVING INFORMATION
+VISUALIZATION
+It is important to prioritize driving information to over-
+come the space limitation in the AR-HUD. Chen et al. [14]
+presented that the priority should be given to visualizing
+information related to pedestrians. This study also focuses
+on selectively visualizing pedestrians and personal mobility
+users on the AR-HUD. To effectively identify the presence
+
+of pedestrians in the AR-HUD, radial circles were used,
+as shown in Fig. 5 (Currano et al. [6]). The location of a
+pedestrian is represented by yellow radial circles, while red
+radial circles represent personal mobility users.
+
+Furthermore, the direction of the pedestrian is represented
+using a yellow arrow. In contrast, the direction of the personal
+mobility user is indicated with a red arrow, as shown in Fig. 6.
+We found that the overlap among the radial circles represent-
+ing the location and the arrows indicating the direction may
+confuse the driver. For this reason, when both pedestrians
+and personal mobility users are present at the same time
+within the AR-HUD, the location is shown using radial circles
+with red or yellow colors, and information on pedestrian and
+personal mobility users outside the AR-HUD is only shown
+as directional arrows along the boundaries of the AR-HUD,
+as shown in Fig. 6.
+
+The complexity of the display in AR-HUD can be defined
+based on the different levels of information to be visualized.
+The information levels are classified as Minimal, Normal,
+and Complex. At the Minimal level, only the location infor-
+mation of pedestrians and personal mobility users is shown
+on the AR-HUD. The Normal level expands on the Minimal
+level by incorporating the moving directions of pedestrians
+and personal mobility users. Finally, the speed and the fuel
+information are further augmented in the Complex level.
+The different levels of driving information are demonstrated
+in Fig. 7. Fig. 7(a) displays only the location information,
+Fig. 7(b) includes directional information, and Fig. 7(c) visu-
+alizes additional speed and fuel information.
+
+VOLUME 11, 2023
+
+62203
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+videos. Lu et al. [27] conducted a video-clip study measur-
+ing attention, situation awareness, and decision-making in
+the face of an impending hazard. Inspired by the previous
+studies [5], [6], [26], [27], the proposed approach was also
+evaluated through the online study and survey.
+
+To evaluate the proposed approach, participants with
+driver’s licenses and driving experience were recruited. The
+environment provided in the online study is pre-recorded
+video scenes on the real road inside and outside the university
+campus. Unlike previous studies, this study also evaluated
+information on personal mobility users riding electric kick-
+boards and motorcycles. The results of the online study were
+used to evaluate the usability and situational cognitive ability.
+They can provide valuable insights into the effectiveness of
+the proposed AR-HUD and its potential to improve situa-
+tional awareness for drivers.
+
+A. EVALUATION METRICS
+The System Usability Scale (SUS) [28] and the Situation
+Awareness Rating Technique (SART) [29], [30] were used
+to evaluate the usability and situational awareness of driv-
+ing assistance, respectively. SUS is a widely used metric
+for assessing the usability of products, including intelligent
+systems and AR/VR software [28]. The SUS questions are
+presented in Table 1.
+
+SART is a method used to evaluate an individual’s
+situational awareness, or the degree to which someone
+accurately understands what
+is happening in their envi-
+ronment [29], [30]. SART measures situational awareness
+through a self-reported questionnaire where participants rate
+their perception and comprehension of their situation. The
+scores obtained from SART can be used to determine the level
+of situational awareness and to identify areas for improve-
+ment. It consists of ten questions that assess the user’s
+recognition of the demand for their resources, supply of their
+resources, and understanding of the situation, as shown in
+Table 2. An evaluation is performed based on participants’
+survey results and combined to obtain the overall SART score
+for the system [29]. That is, the ratings of ten questions are
+then combined in order to calculate a measure of participant
+SA.
+
+A composite SA score is calculated using the following
+
+equation: SA = U – (D – S), where:
+
+U = Understanding
+D = Demand
+S = Supply
+
+B. BUILDING HYPOTHESES
+Prior to conducting the experiment, three hypotheses were
+established to evaluate the proposed approach. One hypothe-
+sis is that the proposed approach can improve the usability
+of driving assistance by providing locations and moving
+directions of pedestrians and personal mobility users. The
+second one is that it can also improve situational awareness
+while driving. It is important to note that previous studies
+
+FIGURE 2. Cropping, dividing and anomaly detection for recognizing
+mobility users.
+
+IV. EXPERIMENT: ONLINE STUDY
+This study aims to increase the driver’s situational awareness
+by presenting pedestrians and personal mobility user infor-
+mation in the AR-HUD by combining deep learning-based
+pedestrian and personal mobility user detection and AR-
+based visualization. A comprehensive experiment was also
+conducted to evaluate the usability and situational awareness
+of the proposed AR-HUD navigation system concerning the
+location and movement direction of pedestrians and personal
+mobility users.
+
+Previous research works confirmed that
+
+their studies
+could be effectively evaluated through online simulations
+with images and videos. For example, Underwood et al. [26]
+assessed the situational cognitive abilities of novice and
+skilled drivers for sudden road hazards by observing driving
+
+62204
+
+VOLUME 11, 2023
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+FIGURE 3. Memory-based anomaly detection network used for mobility user recognition [17], [18].
+
+FIGURE 4. Estimation of the mobility user direction using MEBOW [22].
+
+TABLE 1. SUS Questionnaire [28].
+
+have shown that traditional object detection and segmenta-
+tion techniques often neglected the significance of certain
+object classes, such as pedestrians, vehicles, and cyclists, in a
+
+driving scene [14], [31]. In particular, various types of per-
+sonal mobility come to the market, so it takes much time and
+effort to re-train deep learning models. On the other hand, the
+
+VOLUME 11, 2023
+
+62205
+
+TABLE 2. SART questionnaire [29], [30].
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+FIGURE 5. Different visualization of pedestrians (yellow radial circles)
+and personal mobility users (red radial circles).
+
+proposed anomaly detection-based method does not require
+re-training regardless of the different types of mobilities since
+the proposed approach only train the pedestrian dataset with-
+out personal mobilities. The third hypothesis is that adding
+prioritized information to the HUD does not reduce situa-
+tional awareness. A previous study has shown that situational
+awareness decreases as the complexity of the driving situ-
+ation increases [6]. This is due to the increased amount of
+information provided, which takes up more space in the HUD
+and interferes with the driver’s cognition. However, this study
+only adds information on pedestrians and mobility users,
+
+FIGURE 6. Visualization of pedestrian and personal mobility user
+orientations as directional arrows.
+
+ensuring that the HUD space is not significantly influenced,
+even as the amount of information somewhat increases.
+
+C. ONLINE STUDY PROCEDURE
+The online study was initiated with an introduction to the
+purpose of the study. Prior to the experiment, participants
+
+62206
+
+VOLUME 11, 2023
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+FIGURE 7. The amount of information to be displayed in the AR-HUD.
+
+TABLE 3. Provided information for each system.
+
+were requested to sign a consent form and provide personal
+and research-related information. Then, an experimental eval-
+uation was conducted to compare the proposed method
+(System B) with a conventional HUD system (System A) in
+Fig. 8 and Table 3. After watching and reviewing several
+video scenes, participants were requested to complete the
+SUS and SART surveys for each system, answering 40 ques-
+tions (10 SUS questions and 10 SART questions for each
+approach).
+
+An additional evaluation was conducted to evaluate situ-
+ation awareness (SA) concerning the amount of information
+displayed in the AR-HUD. A detailed description is shown
+in Fig. 7 for the visual complexity. A SART survey was
+conducted for each complexity according to the information
+amount. In this online experiment, participants answered
+20 questions (10 questions were asked for each type). The
+entire experiment lasted about 15 minutes.
+
+V. EXPERIMENTAL RESULTS
+A. PARTICIPANTS
+To gather data for the online simulation survey, 87 partic-
+ipants were recruited and completed the online simulation.
+The experiment was conducted through Google Forms [32].
+The demographic information of the participants includes age
+ranging from 21 to 49 years old (mean age: 29, standard
+
+deviation: 7.5) and driving experience ranging from 1 to
+29 years (mean driving experience: 6.6, standard deviation:
+6.7). Out of the 87 participants, 65 were male (74.71%),
+and 22 were female (25.29%). In addition, 24 participants
+(27.59%) mentioned prior experience with HUDs.
+
+B. COMPARATIVE EVALUATION
+The qualitative evaluation using the t-test was conducted
+for the online study results for SUS and SART question-
+naires. The t-test results of all 87 participants for the SUS
+survey showed statistical differences in 5 out of 10 ques-
+tions, as shown in Fig. 9. These questions indicated better
+usability of the proposed AR-HUD in the first (p < 0.05,
+to use the system frequently) and fifth (p < 0.01, various
+functions well integrated) questions. On the other hand, for
+the second (p < 0.01, unnecessarily complex), fourth (p <
+0.05, requires technical help), and tenth (p < 0.01, requires
+a lot of learning) questions, the results indicate that drivers
+are still unfamiliar with the AR technology and therefore,
+more experience and training are necessary. The results are
+reasonable since many participants were unfamiliar with the
+AR-HUD but showed positive opinions toward the future
+direction of driving assistance.
+
+Furthermore, we evaluated the usability of the proposed
+approach between the different levels of driving experience
+(the novice with less than two-year driving experience and the
+experienced with more than two years). The statistical analy-
+sis showed no significant difference, as shown in Fig. 10. This
+evaluation shows that most participants have shown similar
+usability for the proposed approach.
+
+Concerning the experimental results, the proposed AR-
+HUD system received an overall positive response for future
+driving assistance. Still, there is a need for further education
+and improvement in technology acceptance among the users.
+Nevertheless, we have found that the proposed AR-HUD
+system can play a crucial role in driving assistance concerning
+social issues, such as the increasing rate of accidents due to
+the surge in personal mobility users on the road.
+
+The t-test results of the SART concerning the survey of
+82 participants are as follows. The data related to the five
+participants were excluded since they did not answer specific
+
+VOLUME 11, 2023
+
+62207
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+FIGURE 8. Conventional and proposed systems.
+
+FIGURE 9. Result of evaluating SUS questions (∗: p < 0.05, ∗∗: p < 0.01).
+
+questions. Overall, the proposed approach (the composite SA
+score, p < 0.05) showed a higher score concerning the situ-
+ational awareness of the drivers, as shown in Fig. 11(a). The
+SART evaluation can be divided into three categories among
+ten questions (Attentional Demand, Attentional Supply, and
+Understanding), as shown in Table 2. Among the three
+categories, a statistical difference was observed in the Under-
+standing category (p < 0.01), as shown in Fig. 11(b). The
+Understanding category composes three questions (amount
+of information received and understood, quality of com-
+municated knowledge, familiarity with the situation). The
+statistical result implies that the proposed approach can
+
+increase the driver’s situational understanding while driving
+and provide more helpful information.
+
+SART was also evaluated concerning the level of driv-
+ing experience, similar to the SUS evaluation. As shown in
+Fig. 12, there was no statistical difference between the novice
+and the experienced driver.
+
+The visual complexity of the AR-HUD on situation
+awareness was investigated using an analysis of variance
+(ANOVA [33]) method. 77 participants (excluding 10 out
+of 87 participants who did not complete the questionnaire)
+were evaluated for their situational awareness in three differ-
+ent complexity levels: Minimal, Normal, and Complex. The
+
+62208
+
+VOLUME 11, 2023
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+FIGURE 10. Usability evaluation of the proposed approach between the novice and experienced (no statistical
+difference).
+
+FIGURE 12. SART evaluation between the novice and experienced for the
+proposed approach (no statistical difference).
+
+to each level. They completed a survey to evaluate their situa-
+tional awareness. The correlation between visual complexity
+and situational awareness was then analyzed. The results
+indicated no significant difference in situational awareness
+according to the complexity level, as shown in Fig. 13, which
+implies that even with an increase in complexity, situational
+awareness was not lowered. This outcome is attributed to the
+proposed method, which only adds pedestrian- and mobility
+user-related information in a limited dislay area. Through
+this analysis, the AR-HUD might not reduce situational
+awareness even with increased information when prioritized
+information is selectively provided.
+
+C. DISCUSSION
+After the experiment, the subjective opinions of the partici-
+pants were also collected. Out of 87 participants, 51 expressed
+their opinions. Most participants showed positive opinions
+about the location and moving direction of pedestrians and
+
+FIGURE 11. SART evaluation: (a) composite SA, (b) domain categories.
+
+information provided in each level is shown in Fig. 7. The par-
+ticipants also watched the pre-recorded scenes corresponding
+
+VOLUME 11, 2023
+
+62209
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+beneficial and necessary for driving assistance. However,
+it was also noted that a lack of experience with AR-based
+HUD systems requires further education and experience to
+promote its adoption. For future research work, an in-lab
+experiment with diverse participants in addition to the online
+study is necessary to conduct a quantitative analysis like
+measuring response time and accuracy. By conducting quan-
+titative and qualitative analyses, we aim to evaluate more
+realistic driving situations.
+
+REFERENCES
+[1] J. L. Gabbard, G. M. Fitch, and H. Kim, ‘‘Behind the glass: Driver
+challenges and opportunities for AR automotive applications,’’ Proc. IEEE,
+vol. 102, no. 2, pp. 124–136, Feb. 2014.
+
+[2] M. L. Rusch, M. C. Schall Jr., P. Gavin, J. D. Lee, J. D. Dawson, S. Vecera,
+and M. Rizzo, ‘‘Directing driver attention with augmented reality cues,’’
+Transp. Res. F, Traffic Psychol. Behaviour, vol. 16, pp. 127–137, Jan. 2013.
+[3] M. C. Schall, M. L. Rusch, J. D. Lee, J. D. Dawson, G. Thomas, N. Aksan,
+and M. Rizzo, ‘‘Augmented reality cues and elderly driver hazard percep-
+tion,’’ Human Factors, J. Human Factors Ergonom. Soc., vol. 55, no. 3,
+pp. 643–658, Jun. 2013.
+
+[4] K. Bauerfeind, J. Drüke, J. Schneider, A. Haar, L. Bendewald, and
+M. Baumann, ‘‘Navigating with augmented reality–how does it affect
+drivers’ mental load?’’ Appl. Ergonom., vol. 94, Jul. 2021, Art. no. 103398.
+[5] M. Colley, B. Eder, J. O. Rixen, and E. Rukzio, ‘‘Effects of semantic
+segmentation visualization on trust, situation awareness, and cognitive load
+in highly automated vehicles,’’ in Proc. CHI Conf. Human Factors Comput.
+Syst., May 2021, Art. no. 155.
+
+[6] R. Currano, S. Y. Park, D. J. Moore, K. Lyons, and D. Sirkin, ‘‘Little road
+driving HUD: Heads-up display complexity influences drivers’ perceptions
+of automated vehicles,’’ in Proc. CHI Conf. Human Factors Comput. Syst.,
+May 2021, Art. no. 511.
+
+[7] K. Park, S. H. Choi, J. Y. Lee, Y. Ghasemi, M. Mohammed, and
+H. Jeong, ‘‘Hands-free human–robot interaction using multimodal ges-
+tures and deep learning in wearable mixed reality,’’ IEEE Access, vol. 9,
+pp. 55448–55464, 2021.
+
+[8] F. Zhang, L. Chen, W. Miao, and L. Sun, ‘‘Research on accuracy of aug-
+mented reality surgical navigation system based on multi-view virtual and
+real registration technology,’’ IEEE Access, vol. 8, pp. 122511–122528,
+2020.
+
+[9] J. W. Lai and K. H. Cheong, ‘‘Educational opportunities and challenges
+in augmented reality: Featuring implementations in physics education,’’
+IEEE Access, vol. 10, pp. 43143–43158, 2022.
+
+[10] K.-B. Park, M. Kim, S. H. Choi, and J. Y. Lee, ‘‘Deep learning-based
+smart task assistance in wearable augmented reality,’’ Robot. Computer-
+Integrated Manuf., vol. 63, Jun. 2020, Art. no. 101887.
+
+[11] P. Lindemann, N. Müller, and G. Rigolll, ‘‘Exploring the use of augmented
+reality interfaces for driver assistance in short-notice takeovers,’’ in Proc.
+IEEE Intell. Vehicles Symp. (IV), Jun. 2019, pp. 804–809.
+
+[12] T. von Sawitzky, P. Wintersberger, A. Riener, and J. L. Gabbard, ‘‘Increas-
+ing trust in fully automated driving: Route indication on an augmented
+reality head-up display,’’ in Proc. 8th ACM Int. Symp., 2019, Art. no. 6.
+
+[13] P. Wintersberger, A. Frison, A. Riener, and T. V. Sawitzky, ‘‘Fostering
+user acceptance and trust in fully automated vehicles: Evaluating the
+potential of augmented reality,’’ Presence, vol. 27, no. 1, pp. 46–62,
+Mar. 2019.
+
+[14] B. Chen, C. Gong, and J. Yang, ‘‘Importance-aware semantic segmentation
+for autonomous vehicles,’’ IEEE Trans. Intell. Transp. Syst., vol. 20, no. 1,
+pp. 137–148, Jan. 2019.
+
+[15] V. Charissis, J. Falah, R. Lagoo, S. F. M. Alfalah, S. Khan, S. Wang,
+S. Altarteer, K. B. Larbi, and D. Drikakis, ‘‘Employing emerging technolo-
+gies to develop and evaluate in-vehicle intelligent systems for driver sup-
+port: Infotainment AR HUD case study,’’ Appl. Sci., vol. 11, no. 4, p. 1397,
+Feb. 2021.
+
+[16] A. Riegler, P. Wintersberger, A. Riener, and C. Holzmann, ‘‘Aug-
+mented reality windshield displays and their potential to enhance user
+experience in automated driving,’’ i-Com, vol. 18, no. 2, pp. 127–149,
+Aug. 2019.
+
+[17] H. Park, J. Noh, and B. Ham, ‘‘Learning memory-guided normality for
+anomaly detection,’’ in Proc. CVPR, vol. 20, 2022, pp. 14372–14381.
+
+FIGURE 13. SART evaluation for visual complexity.
+
+personal mobility users in the AR-HUD. Several participants
+mentioned that the system could be useful in anticipating
+and addressing the risk of accidents since they move quickly.
+Some participants strongly desired to use the AR-HUD nav-
+igation and believed that seeing the pedestrian’s location
+would encourage them to drive slowly. Others also indicated
+that the information regarding personal mobility on the AR-
+HUD would be helpful in alerting them to pedestrians they
+might miss while driving on narrow streets or roads where
+parked vehicles obstruct their view. The participants also
+stated that they considered the representation of pedestrian
+information using AR useful and appreciated the visual rep-
+resentation of the information by checking pedestrians and
+mobility users with colors.
+
+Negative opinions regarding the system were also men-
+tioned, with the concern that excessive information could
+hinder their driving abilities. Additionally, comments were
+made such as, ‘‘dynamic objects close to the vehicle are not
+shown in the provided video,’’ ‘‘it is difficult for experienced
+drivers to perceive the system as useful,’’ ‘‘direction informa-
+tion may not be necessary,’’ ‘‘yellow and red indicators could
+be disruptive while driving in crowded areas,’’ and ‘‘the user
+interface (UI) may not be easily adaptable for the old.’’
+
+Our future research direction will be to solve the negative
+
+aspects while maintaining and improving the positive ones.
+
+VI. CONCLUSION
+This study evaluated driving assistance by combining deep
+learning-based pedestrian and personal mobility user recog-
+nition and AR-based visualization. The proposed approach
+showed better situational awareness for driving assistance
+than the conventional HUD system that usually displays typ-
+ical information. It was found that the proposed approach
+can offer more practical support to drivers by providing
+the locations and moving directions of pedestrians and per-
+sonal mobility users, thereby enhancing the driver’s ability to
+respond to potentially dangerous situations.
+
+Concerning the experimental results, majority of exper-
+imental participants recognized the proposed approach as
+
+62210
+
+VOLUME 11, 2023
+
+D. H. Roh, J. Y. Lee: Augmented Reality-Based Navigation
+
+[18] D.-H. Roh and J. Y. Lee,
+
+‘‘Anomaly detection-based personal
+mobility user recognition and its application in driving assistance,’’
+Korean J. Comput. Design Eng., vol. 27, no. 3, pp. 280–289,
+Sep. 2022.
+
+[19] K. He, G. Gkioxari, P. Dollár, and R. Girshick, ‘‘Mask R-CNN,’’ in Proc.
+
+ICCV, Oct. 2017, pp. 2980–2988.
+Detectron2.
+
+[Online].
+
+[20] (2021).
+
+Available:
+
+https://github.com/
+
+facebookresearch/detectron2
+
+[21] S. Ren, K. He, R. Girshick, and J. Sun, ‘‘Faster R-CNN: Towards
+IEEE
+real-time object detection with region proposal networks,’’
+Trans. Pattern Anal. Mach. Intell., vol. 39, no. 6, pp. 1137–1149,
+Jun. 2017.
+
+[22] C. Wu, Y. Chen, J. Luo, C.-C. Su, A. Dawane, B. Hanzra, and C.-H. Kuo,
+‘‘MEBOW: Monocular estimation of body orientation in the wild,’’ in
+Proc. CVPR, vol. 20, 2020, pp. 3451–3461.
+
+[23] T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, and
+C. L. Zitnick, ‘‘Microsoft COCO: Common objects in context,’’ in Proc.
+ECCV, vol. 14, 2014, pp. 740–755.
+
+[24] K. Sun, B. Xiao, D. Liu, and J. Wang, ‘‘Deep high-resolution representation
+learning for human pose estimation,’’ in Proc. CVPR, vol. 19, 2019,
+pp. 5693–5703.
+
+[25] K. He, X. Zhang, S. Ren, and J. Sun, ‘‘Deep residual learning for image
+
+recognition,’’ in Proc. CVPR, vol. 16, 2016, pp. 770–778.
+
+[26] G. Underwood, A. Ngai, and J. Underwood, ‘‘Driving experience and
+situation awareness in hazard detection,’’ Saf. Sci., vol. 56, pp. 29–35,
+Jul. 2013.
+
+[27] Z. Lu, R. Happee, and J. C. F. de Winter, ‘‘Take over! A video-clip study
+measuring attention, situation awareness, and decision-making in the face
+of an impending hazard,’’ Transp. Res. F, Traffic Psychol. Behaviour,
+vol. 72, pp. 211–225, Jul. 2020.
+
+[28] A. Bangor, P. Kortum, and J. Miller, ‘‘Determining what individual SUS
+scores mean: Adding an adjective rating scale,’’ J. Usability Stud., vol. 4,
+no. 3, pp. 114–123, May 2009.
+
+[29] R. M. Taylor, ‘‘Situational awareness rating technique (SART): The devel-
+opment of a tool for aircrew systems design,’’ Situational Awareness
+Aerosp. Oper., NATO, Neuilly sur-Seine, France, Tech. Rep. NATO-
+AGARD-CP-478, 1990, Ch. 3.
+
+[30] M. R. Endsley, S. J. Selcon, T. D. Hardiman, and D. G. Croft, ‘‘A com-
+parative analysis of SAGAT and SART for evaluations of situation
+awareness,’’ Proc. Hum. Factors Ergonom. Soc. Annu. Meeting, vol. 42,
+no. 1, pp. 82–86, Oct. 1998.
+
+[31] T. Lin, P. Dollár, R. Girshick, K. He, B. Hariharan, and S. Belongie, ‘‘Fea-
+ture pyramid networks for object detection,’’ in Proc. CVPR, Jul. 2017,
+pp. 936–944.
+
+[32] (2022). Google Forms.
+
+[Online]. Available:
+
+https://www.google.
+
+com/forms/about/
+
+[33] L. St and S. Wold, ‘‘Analysis of variance (ANOVA),’’ Chemometrics Intell.
+
+Lab. Syst., vol. 6, no. 4, pp. 259–272, 1989.
+
+DONG HYEON ROH received the B.S. and M.S.
+degrees in industrial engineering from Chonnam
+National University, South Korea. He is currently
+conducting testing and certification of automobile
+parts with the Korea Automotive Technology Insti-
+tute. His research interest includes deep learning-
+based ADAS.
+
+JAE YEOL LEE (Member, IEEE) received the B.S.,
+M.S., and Ph.D. degrees in industrial engineer-
+ing from the Pohang University of Science and
+Technology (POSTECH), South Korea, in 1992,
+1994, and 1998, respectively. From 1998 to 2003,
+he was a Senior Researcher with the Electron-
+ics and Telecommunications Research Institute
+(ETRI), South Korea. Since 2003, he has been a
+Faculty Member with Chonnam National Univer-
+sity, South Korea, where he is currently a Professor
+with the Department of Industrial Engineering. His research interests include
+industrial AI, AR/MR, human–robot collaboration, and UX.
+
+VOLUME 11, 2023
+
+62211
+
+

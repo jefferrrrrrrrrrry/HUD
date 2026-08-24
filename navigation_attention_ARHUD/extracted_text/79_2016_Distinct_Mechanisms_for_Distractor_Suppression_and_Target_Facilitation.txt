@@ -1,0 +1,1516 @@
+Behavioral/Cognitive
+Distinct Mechanisms for Distractor Suppression and Target
+Facilitation
+MaryAnn P. Noonan,1 Nika Adamian,2 XAlexandra Pike,3 Frida Printzlau,3 Ben M. Crittenden,1 and Mark G. Stokes1
+1Oxford Centre for Human Brain Activity, Department of Psychiatry, University of Oxford, Oxford OX1 3UD, United Kingdom, 2Laboratoire Psychologie de
+la Perception, UMR 8242, Universite´ Paris Descartes, 75006 Paris, France, and 3Department of Experimental Psychology, University of Oxford, Oxford, OX1
+3UD, United Kingdom
+It is well established that preparatory attention improves processing of task-relevant stimuli. Although it is often more important to
+ignore task-irrelevant stimuli, comparatively little is known about preparatory attentional mechanisms for inhibiting expected distrac-
+tions. Here, we establish that distractor inhibition is not under the same top-down control as target facilitation. Using a variant of the
+Posner paradigm, participants were cued to either the location of a target stimulus, the location of a distractor, or were provided no
+predictive information. In Experiment 1, we found that participants were able to use target-relevant cues to facilitate target processing in
+both blocked and flexible conditions, but distractor cueing was only effective in the blocked version of the task. In Experiment 2, we
+replicate these findings in a larger sample and leveraged the additional statistical power to perform individual differences analyses to
+tease apart potential underlying mechanisms. We found no evidence for a correlation between these two types of benefit, suggesting that
+flexible target cueing and distractor suppression depend on distinct cognitive mechanisms. In Experiment 3, we use EEG to show that
+preparatory distractor suppression is associated with a diminished P1, but we found no evidence to suggest that this effect was mediated
+by top-down control of oscillatory activity in the alpha band (8–12 Hz). We conclude that flexible top-down mechanisms of cognitive
+control are specialized for target-related attention, whereas distractor suppression only emerges when the predictive information can be
+derived directly from experience. This is consistent with a predictive coding model of expectation suppression.
+Key words: alpha; attention; distractor inhibition; expectation suppression; prediction
+Introduction
+Our everyday view of the world is necessarily biased: we focus our
+attention on information that is most relevant to our current
+goals, and ignore behaviorally irrelevant distractions. Top-down
+mechanisms of attention could filter information processing by
+directly boosting relevant information (target facilitation),
+and/or by suppressing irrelevant information (distractor inhibi-
+tion). Here we provide evidence that target facilitation and dis-
+tractor inhibition are not simply different sides of the same coin
+but are controlled by distinct cognitive mechanisms.
+Classic behavioral studies show that foreknowledge of a likely
+target location improves processing at the cued location, relative
+Received May 27, 2015; revised Oct. 16, 2015; accepted Oct. 28, 2015.
+Authorcontributions:M.P.N.,N.A.,andM.G.S.designedresearch;M.P.N.,N.A.,A.P.,andF.P.performedresearch;
+M.P.N. and B.M.C. contributed unpublished reagents/analytic tools; M.P.N., N.A., A.P., F.P., and M.G.S. analyzed
+data; M.P.N., B.M.C., and M.G.S. wrote the paper.
+This work was supported by a Medical Research Council Career Development Award to M.G.S., Hill Foundation
+Award to N.A., and the National Institute for Health Research Oxford Biomedical Research Centre Programme. The
+views expressed are those of the authors and not necessarily those of the National Health Service, the National
+InstituteforHealthResearchortheDepartmentofHealth.WethankPhilipNoonanfortechnicalassistance;AlexVon
+Lautz for programming assistance in Experiment 2; Janina Jochim for assistance with data collection; and Nicholas
+Myers and Freek van Ede for helpful discussion.
+The authors declare no competing financial interests.
+CorrespondenceshouldbeaddressedtoDr.MaryAnnP.Noonan,DepartmentofPsychiatry,UniversityofOxford,
+Oxford, OX1 3UD, UK. E-mail: maryann.noonan@psych.ox.ac.uk.
+DOI:10.1523/JNEUROSCI.2133-15.2016
+Copyright © 2016 the authors
+0270-6474/16/361797-11$15.00/0
+Significance Statement
+If you were told to ignore a white bear, you might find it quite difficult. Holding something in working memory is thought to
+automatically facilitate feature processing, even if doing so is detrimental to the current task. Despite this paradox, it is often
+assumed that distractor suppression is controlled via similar top-down mechanisms of attention that prepare brain areas for
+target enhancement. In particular, low-frequency oscillations in visual cortex appear especially well suited for gating task-
+irrelevant information. We describe the results of a series of studies exploring distractor suppression and challenge this popular
+notion. We draw on behavioral and EEG evidence to show that selective distractor suppression operates via an alternative mech-
+anism, such as expectation suppression within a predictive coding framework.
+The Journal of Neuroscience, February 10, 2016 • 36(6):1797–1807 • 1797
+
+
+to targets presented at unexpected locations (Posner, 1980). Ex-
+tensive neuroimaging studies further suggest that a network of
+prefrontal and parietal brain areas provide preparatory top-down
+control over sensory cortex to bias processing in favor of task-
+relevant processing (Nobre et al., 2000; Corbetta and Shulman,
+2002; Gazzaley and Nobre, 2012). For example, by increasing the
+baseline activity at attended locations (Luck et al., 1997; Kastner
+et al., 1999), or precise sensory templates matching the target
+stimulus (Chelazzi et al., 2001; Stokes et al., 2009). According to
+the biased competition model of attention, the contents of work-
+ing memory (WM) are used to flexibly prioritise behaviorally
+relevant input (Desimone and Duncan, 1995).
+Behavioral evidence also suggests that prior information of
+likely distractors benefits behavior, but via distractor suppression
+(Watson and Humphreys, 1997; Ruff and Driver, 2006; Chao,
+2010). Moreover, recent neural evidence suggests neural oscilla-
+tions at 10 Hz are especially important for suppressing task
+irrelevant input (Klimesch et al., 2005; Jensen and Mazaheri,
+2010). Alpha power is inversely related to other standard mea-
+sures of neural activity (Laufs et al., 2003; Haegens et al., 2011;
+Spaak et al., 2012) and visual excitability (Hanslmayr et al., 2007;
+van Dijk et al., 2008; Romei et al., 2008; Myers et al., 2014). In
+covert spatial orienting, alpha is decreased at the cued location,
+but relatively increased at the uncued side (Worden et al., 2000).
+This raises the possibility that top-down control can also directly
+inhibit task-irrelevant neural representations (Zanto et al., 2011).
+Here, we test whether top-down preparatory attention di-
+rectly inhibits cued distractors (complementing cued target facil-
+itation) or operates via an alternative mechanism. We developed
+a 4 location variant of the classic Posner cueing task that incor-
+porates a number of key manipulations. First, the attentional cue
+could indicate the forthcoming location of the target, or distrac-
+tor, or provide no predictive information. These cueing condi-
+tions were explicitly instructed and valid for the duration of a
+block of trials. If facilitation and inhibition can be controlled via
+the same top-down mechanisms, then we would expect that cue-
+ing either the target location or distractor location should benefit
+performance by preparing target enhancement or distractor sup-
+pressions, respectively. We also included a distractor absent con-
+dition to isolate the effect of distraction (Awh et al., 2003). If
+distractor cueing benefits are specific to the distractor present
+condition, we can conclude that the benefit arises from distractor
+suppression rather than target enhancement via a refocusing
+strategy (switch attention to the uncued locations). Finally, we
+manipulated the flexibility of cueing: spatial cues were either ran-
+domized on each trial in one version of the task (Flexible Cueing),
+or fixed for a block of trials (Blocked Cueing). We provide con-
+sistent evidence for selective inhibition when the cued location
+was fixed across trials (Experiments 1–3), but we found no evi-
+dence for trialwise distractor cueing (Experiments 1 and 2).
+Moreover, the large sample size in Experiment 2 allowed us to
+dissociate individual differences in target cueing from distractor
+cueing in the blocked task, consistent with the hypothesis that
+these behavioral effects depend on distinct cognitive mecha-
+nisms. Finally, EEG confirmed that blocked distractor cueing is
+effective for suppressing task irrelevant visual stimuli via suppres-
+sion of the P1 component; however, we found no evidence that
+distractor cueing was mediated by changes in alpha power at the
+expected distractor location. Overall, we conclude that top-down
+mechanisms are ineffective for distractor suppression, but exp-
+erience-derived expectations can be used to directly suppress dis-
+tracting input.
+Materials and Methods
+Participants
+Twenty-four (15 female, 21 right handed) neurologically healthy adults
+(mean  SD age, 20.9  2.36 years) were recruited for Experiment 1.
+Eighty healthy adults were recruited for Experiment 2. From Experiment
+2, one participant did not complete the full experiment, and another
+subject completed the task with reversed response-mappings. Data from
+a total of 78 participants (45 female) were therefore used in the experi-
+ment with a mean (SD) age of 24.14 (7.26) years. A total of 67 were
+self-reported right handed and 2 were ambidextrous. Twenty neurolog-
+ically healthy right-handed adults were included in Experiment 3 (9 fe-
+male; 18–37 years of age; mean  SD age, 24.6  4.16 years). Eight
+additional participants completed the EEG experiment but were ex-
+cluded according to the following criteria: 20% of trials rejected during
+the initial visual inspection for blinks, muscle artifacts or saccades; 15%
+response errors. During analysis, an automatic criterion was also used to
+detect remaining artifacts (50 mV). If this resulted in 25 remaining
+trials in any condition, the participant was also excluded (n  1).
+All participants provided written informed consent and were tested
+following a protocol approved by the Central University Research Ethics
+Committee. All participants were monetarily compensated for their
+time.
+Design, stimuli, and procedure
+Participants in Experiments 1 and 2 completed two versions of the task
+(Flexible Cueing and Blocked Cueing). The order of presentation was
+counterbalanced across participants. Only the Blocked Cueing task was
+used in Experiment 3. In both tasks, participants were instructed to dis-
+criminate a target stimulus presented in one of the four visual quadrants,
+with a distractor presented in one of the other quadrants on 50% of trials
+(distractor presence was also blocked, and counterbalanced).
+In Experiment 1, target stimuli were a patchwork pattern created by
+superposing two orthogonal, 20% contrast Gabor patches with a phase of
+90° and 25 /SD of the Gaussian envelope. Similarly, distractor stimuli
+were randomly orientated single Gabors with the same characteristics.
+Participants were instructed to perform a two-alternative forced-choice
+task by discriminating the patch size (i.e., spatial frequency: low vs high
+spatial frequency corresponding to 0.52 and 0.42 degrees of visual angle,
+respectively) of the target stimulus. Stimuli subtended 4.0 degrees of
+visual angle and were 7.1 degrees from the fixation cross. Participants
+were provided with foreknowledge of the location of the target (Target
+Cue), distractor (Distractor Cue), or no predictive information (Neutral
+Cue) via a central cue. This cue condition was instructed to subjects at the
+beginning of each block and was valid for all trials within that block. The
+presence or absence of the distractor stimulus was also blocked, and this
+information was also provided in the instruction screen presented at the
+start of each block. These six conditions were all fixed for the duration of
+a block of trials. The crucial difference between the two tasks was the
+stability of the cued stimulus location. In the Flexible Cueing task, cued
+location varied randomly between trials, whereas in the Blocked task cues
+were the same on each trial within a block (for task schematic; Fig. 1A).
+To summarize the task design, the manipulations of distractor pres-
+ence (present or absent) for three cueing conditions (target, distractor, or
+neutral) resulted in six principal conditions: target and distractor present
+with target cue (TDt); target only with target cue (Tt); target and distrac-
+tor present with distractor cue (TDd); target only with “distractor” cue
+(Td); target and distractor present with neutral cue (TDn); target only
+with neutral cue (Tn). All were fixed and instructed before each block of
+trials. The only difference between the Blocked and Flexible tasks was the
+location of the cue (and cued stimulus, where appropriate). The cue
+varied from trial-to-trial in the Flexible task, whereas in the Blocked task
+the cue was fixed for the block of trials. In the Td condition, the “distrac-
+tor” cue indicates the location of an absent distractor. This condition
+provides an estimate of the advantage in reducing target location uncer-
+tainty with distractor cueing.
+Each trial started with a fixation period, marked by a black fixation
+cross presented for 200 ms. Cue stimuli, composed of a dot in one of the
+quadrant arms of the central fixation cross were presented for 500 ms
+before an additional 1500 ms delay. The stimulus array was presented for
+1798 • J. Neurosci., February 10, 2016 • 36(6):1797–1807
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+
+
+100 ms. In the response period, participants were instructed to discrim-
+inate the target and press the assigned response buttons “left” or “right.”
+Participants were encouraged to ignore the distractors in the distractor
+present blocks. They received auditory feedback on their response accu-
+racy via a 50 ms tone (900 Hz for correct; 500 Hz for incorrect responses).
+Participants were instructed to maintain fixation throughout the exper-
+iment and respond as quickly and accurately as possible. Participants
+were encouraged to rest, if necessary, at the end of each block and be-
+tween tasks. Each participant completed 1152 trials in 1.5 h. Subjects
+practiced 12 trials of each condition in the flexible task before beginning
+the experiment. Controlling for other parameters (balancing stimulus
+locations, target square size, and number of block repetitions) yielded a
+total of 24 blocks of 24 trials (i.e., four blocks per condition), delivered in
+a randomly permuted sequence. All stimuli were presented on a back-
+ground of uniform gray (RGB: 125, 125, 125). The tasks were performed
+on Dell laptops with a screen resolution of 1280  800 pixels. Stimuli
+were presented, and responses recorded, using MATLAB R2013b (The
+MathWorks), supplemented by the Psychophysics Toolbox (Brainard,
+1997).
+Experiment 2 followed the same basic task design as Experiment 1, but
+using simple shape stimuli: targets were either a white square or white
+triangle, distractors comprised the two target options superimposed.
+Subjects were asked to discriminate triangles and squares. Stimuli sub-
+tended 2.4 degrees of visual angle and were 7.3 degrees from the fixation
+cross. In Experiment 2, the spatial cue was not presented at the start of
+each trial in the blocked condition (for task schematic, see Fig. 2A).
+Instead the cue information, valid for the duration of the block, was
+provided in the instruction screens before the start of each block. Flexible
+neutral cues were a single cue in a random quadrant of the fixation cross.
+Each trial started with a jittered fixation period (200/400/600 ms). The
+fixation cross then turned white for 1000 ms. During this second fixation
+period in the flexible cueing task, a cue composed of a dot in one of the
+quadrant arms of the central fixation cross was presented on screen. The
+subsequent stimulus array was presented for 200 ms. Both tasks had a
+total number of 720 trials grouped into 45 blocks of 15 trials. To ensure
+fixation, a go/no-go task was included at the fixation cross. On 10% of
+trials, the fixation cross changed from a cross to a square 200 ms before
+stimulus onset, indicating that participants should withhold their re-
+sponse. Subjects were excluded from subsequent data analysis if they
+made 20% errors on this task (i.e., responded when they should have
+withheld the response). Seven participants fell into this category and were
+excluded, remaining subjects performed well (mean percentage correct
+94.65% (4.18% SD). Participants were also excluded if their accuracy in
+the main task was 85%. No additional subjects failed this criterion in
+Experiments 1 or 2. Experiment 2 was conducted in conjunction with a
+study on individual difference in personality traits for depression and
+anxiety within the normal population; therefore, subjects also comple-
+ted a number of questionnaires before the main experiment. Prerecorded
+verbal instructions were presented via headphones, and 20 practice trials
+per task were conducted before the experimental blocks.
+Experiment 3 followed a similar procedure to the previous 2 experi-
+ments blocked tasks. Stimulus timings were as follows: 2000 ms fixation,
+200 ms target. Auditory feedback was delivered immediately after sub-
+jects made a response. The following intertrial interval was 1000 ms. The
+onset of the fixation period was indicated by illuminating (light gray to
+white) the fixation cross. Targets were orientation grating tilted 11.25°
+clockwise or counterclockwise to the horizontal axis. Participants indi-
+cated the target orientation by clicking the side buttons on the horizon-
+tally aligned computer mouse (“up” and “down” buttons) using their
+right hand only. Auditory accuracy feedback was the same as Experi-
+ments 1 and 2. Distractors were superimposed target stimuli. Stimuli
+subtended 2.0 degrees of visual angle and were 7.6 degrees from the
+fixation cross. In total, each session consisted of 1440 trials in 28 blocks
+and lasted 1 h 40 min. For the first 12 subjects, stimuli were presented
+via a Dell Optiplex 780 PC with MATLAB 9, supplemented by the Psy-
+chophysics Toolbox; however, for the last 8 subjects, stimuli were pre-
+sented using Dell Optiplex 9020 PC with MATLAB 2014a, with
+Psychophysics Toolbox. Both computers projected to a Samsung Sync-
+Master 2233 monitor (60 Hz refresh rate, 1680  1060 pixel screen
+resolution). The viewing distance from screen to the participant’s head
+was 64 cm. For both computers, we estimated the offset in trigger
+stamp time and actual stimulus presentation with a photodiode. There
+was a 6 ms delay between trigger stamp and stimulus presentation for
+the first computer and 12 ms delay for the second computer. These
+respective offsets were corrected for in the subsequent preprocessing
+steps.
+EEG acquisition
+During Experiment 3, EEG data were recorded using NeuroScan Syn-
+Amps RT amplifier and Scan 4.5 software (Compumedics NeuroScan)
+from 61 scalp Ag-Ag/Cl sintered surface electrodes (EasyCap) according
+to the 10% system at 1000 Hz sampling rate. Impedances were kept 10
+k. Electro-oculograms were recorded via two bipolar channels from
+supraorbital and infraorbital right eye electrodes (vertical EOG), and
+from the electrodes placed at external canthi of the eyes (horizontal
+EOG). Data were referenced online to the right mastoid (TP10), and
+rereferenced offline to the average left/right mastoid. Anterior frontal
+midline electrode was used as a ground.
+Data sharing
+In accordance with the principles of open evaluation in science (Walther
+and van den Bosch, 2012), all data and analysis scripts from this study
+are publicly available at http://datasharedrive.blogspot.co.uk/2015/05/
+distinct-mechanisms-for-distractor.html. In accordance with the OECD
+Principles and Guidelines for Access to Research Data from Public Fund-
+ing (Pilat and Fukasaku, 2007), we have made every effort to provide all
+necessary task/condition information within a self-contained format to
+maximize the reuse potential of our data. Any further queries can be
+addressed to the corresponding author.
+Data analyses
+Reaction time (RT) and accuracy. Analyses were performed in MATLAB
+(R2012b) and SPSS (21). For the three experiments, the principal
+analyses focused on RT data. Trials with deviant latencies were re-
+moved using the Median Absolute Deviation method (Leys et al.,
+2013). Condition medians were submitted to repeated-measures
+ANOVAs. We performed two independent two-way repeated-
+measures ANOVAs for each task type, with factors Cue Type (target
+cue, distractor cue vs neutral cue) and Distractor Presence (present vs
+absent). We define four a priori comparisons (two-tailed paired t
+tests) for each version of the task: Tn-Tt, TDn-TDt, Tn-Td, and TDn-
+TDd. These capture target cueing effects with and without distrac-
+tor interference (TDn-TDt/Tn-Tt), distractor-specific suppression
+(TDn-TDd), and/or any potential advantage on target processing due
+to reduced spatial uncertainty of the target location (Tn-Td). For
+completeness, all analyses were also performed on accuracy data and
+are reported in text. Follow-up analyses are described in Results.
+Repetition effects. Exploiting the increased statistical power in Experi-
+ment 2, we performed a number of additional analyses designed to tease
+apart the effect of stimulus repetition. Neutral trials were pooled from the
+Flexible and Blocked cueing tasks to examine the stimulus-driven effect
+of target or distractor repetition. Trials in which the target or distractor
+repeated (Trep and Drep, respectively) to the same quadrant on the
+following trial were compared with trials in which no stimuli repeated
+(nrep) when the distractor was present (TDn) or absent (Tn). Statistical
+inferences were based on the following t tests: TrepTn versus nrepTn,
+TrepTDn versus nrepTDn, and DrepTDn versus nrepTDn. Subsequent
+permutation-based statistical t tests (n  10,000) accounted for the dif-
+ferent numbers of trials included in the repetition and nonrepetition
+conditions. On average, each subject contributed 44 trials to TrepTn, 187
+trials to nrepTn, 29 trials to TrepTDn, 28 trials to DrepTDn, and 38 to
+nrepTDn.
+Between-participant correlations. To test for the relationship between
+target and distractor cueing effects, we correlated individuals’ distractor
+cueing effects in the blocked task (TDnTDd) with target cueing effects in
+the flexible task (TnTt and TDnTDt). This provides a direct test of the
+relationship between the distractor cueing effect observed in the blocked
+condition, and standard target cueing effects observed during trialwise
+cueing (e.g., Posner, 1980). For completeness, we also compare distractor
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+J. Neurosci., February 10, 2016 • 36(6):1797–1807 • 1799
+
+
+and target cueing within the blocked condition. However, to avoid con-
+taminating the analysis with shared variance from the common neutral
+condition (TDn), we estimated these cueing effects using independent
+subsamples of the neutral condition (odds and evens). To estimate the
+reliability of between-participant correlation in this dataset, we also cor-
+related target cueing effects in the flexible task calculated separately for
+trials with and without a distractor (TnTt  TDnTDt). Finally, we mea-
+sured test-retest reliability in the component cueing conditions: Block-
+TDnTDd, FlexTnTt, and FlexTDnTDt. Specifically, we correlated cueing
+effects calculated on even numbered trials with cueing effects measured
+for odd trials.
+EEG analysis. Preprocessing of the raw EEG data collected in Experi-
+ment 3 used EEGLAB version 12.4.3b (Delorme and Makeig, 2004). The
+data were resampled to 250 Hz with 16-bit precision and bandpass fil-
+tered (0.05 Hz-40 Hz). Digital triggers were obtained from the onset of
+the target stimulus and two epochs were created. First, EEG data were
+epoched from 250 ms prestimulus to 400 ms poststimulus and submitted
+to ERP analyses. The second epoch contained data from 1000 ms before
+and 400 ms after target onset for time-frequency analysis. Obtained trig-
+gers from the onset of epochs were realigned to account for timing lag
+between the trigger and stimulus onset (as estimated with a photodiode).
+Trials with artifacts (e.g., blinks, eye movements, muscle artifacts and
+excessive signal drift) were removed via visual inspection for data be-
+tween 	250 and 400 ms to ensure the stimulus signal was not corrupted
+(refer to exclusion criterion outlined in Participants). Data were then
+converted to FieldTrip (Oostenveld et al., 2011) for the following
+analyses.
+First, we examined ERP waveforms for channels that were contralat-
+eral (ContraT) and ipsilateral (ipsiT) to target position. Any trial in
+which the target appeared in the right hemifield was flipped into the left
+hemifield. Upper and lower visual fields were analyzed separately as early
+components are known to differ relative to stimulus position on different
+sides of the horizontal meridian (Di Russo et al., 2002). All lateralized
+posterior and occipital electrodes were included in the analysis (P2, P4,
+P6, P8, PO4, O2, PO8, P1, P3, P5, P7, PO3, O1, PO7). In distractor
+present trials, only those trials in which both stimuli occupied either the
+upper visual field or the lower visual field were analyzed to avoid mixing
+upper and lower visual field components. The data were baseline-
+corrected with respect to the average voltage at 	250 and 0 ms. On
+average, subjects contributed 96, 94, and 94 trials to Tt, Td, and Tn and
+32, 31, and 32 trials to TDt, TDd, and TDn, respectively. Cluster-
+corrected nonparametric permutation-based tests (p  0.05) estimated
+statistical differences (1) between Cue Types (Fig. 3) and (2) between
+contralateral and ipsilateral electrodes (Fig. 4). All group statistics were
+then performed using standard cluster-based nonparametric tests (Maris
+and Oostenveld, 2007). First, we estimate the t statistic across partici-
+pants for a contrast of interest at each time point, then define observed
+clusters of consecutive above-threshold time points, and calculated the
+cluster mass (by summing all t values in an above-threshold cluster).
+Next, we randomly shuffle condition labels within participant (sign-flip
+for contrasts against zero) and extract the largest cluster mass produced
+by chance. This permutation step is performed 10,000 times to estimate
+the null distribution. The probability of the observed group-level cluster
+against chance is then derived as the rank order of the observed cluster
+relative to the null distribution (Myers et al., 2014).
+A priori time of interest analyses assessed Cue Type differences during
+3 early visual ERP components. The C1 component was defined as the
+minimal and maximal peak before 115 ms after stimulus onset averaged
+across the three conditions for each hemifield (contra and ipsi sensors),
+distractor presence and for upper and lower visual field separately. The
+P1 was also defined as the maximal peak of the waveform before the N1.
+However, for the lower hemifield, the P1 overlapped with a positive C1;
+therefore, we could only clearly identify a peak in the upper hemifield
+(Peak P1 distractor absent 148 and 160 ms for electrodes contralateral
+and ipsilateral to the target, respectively; distractor present 144 and 144
+ms for electrodes contralateral and ipsilateral to the target, respectively).
+The N1 was identified based on the global peak negativity. Voltages were
+extracted from each subject from a 20 ms window centered on the group
+average peak value and subjected to paired t tests comparing cued trials
+with neutral trials.
+Given evidence that spatial distribution of low-frequency visual oscil-
+latory activity is linked to gating irrelevant input (Jensen and Mazaheri,
+2010), we specifically tested whether alpha was modulated by top-down
+foreknowledge of the distractor location. In these analyses, we did not
+need to differentiate upper/lower hemifield; therefore, all trials were in-
+cluded in the main analysis. Electrodes were aligned relative to the spatial
+location of the cued stimulus. In the Target cueing condition, trials are
+aligned relative to the spatial location of the target; whereas in Distractor
+cueing analysis, trials are aligned relative to the spatial location of the
+distractor. We performed a time-frequency decomposition analysis on
+the data specific to the alpha band (8–12 Hz) on all trials after artifact
+rejection. We used Hanning tapers (window width 5 cycles), estimated at
+1 Hz steps (using custom MATLAB scripts and the Fieldtrip Toolbox)
+(Oostenveld et al., 2011). No baseline was applied as the block design
+meant that the cueing effects might manifest at any point within the trial.
+Power was log transformed and averaged across this alpha range. Alpha
+power across time was averaged separately for each Cue Type (target,
+distractor, neutral) and Hemifield (contraT and ipsiT; contraD and ipsiD
+for target cueing and distractor cueing, respectively). On average, sub-
+jects contributed 169 trials to each condition. Statistical differences be-
+tween ipsiT/D and contraT/D were estimated with cluster-corrected t
+tests (p  0.05) using permutation-based statistics (n  10,000).
+Results
+Experiment 1: target and distractor expectation
+RT data are presented in Figure 1, B and C. Overall, it is clear that
+the presentation of the distractor resulted in slower responses for
+both versions of the task (left vs right bars). Also, responses to
+cued targets (green) are consistently faster than the neutral con-
+dition (blue); however, there is little evidence for a distractor
+cueing effect (red vs blue), except in the blocked task with dis-
+tractors present. In the flexible task, response times actually ap-
+pear slower when the distractor is validly cued relative to the
+neutral condition.
+Two-way repeated-measures ANOVAs were performed on
+the median RTs for each task. All main effects and interactions
+were significant in both tasks. Main effects of distractor (Blocked:
+F(1,23)  59.6, p  0.001; Flexible: F(1,23)  93.7, p  0.001)
+suggest that the presence of the distractor slowed RTs in both
+tasks. The main effects of cueing condition (Blocked: F(2,46) 
+31.1, p  0.001; Flexible: F(2,46)  18.4, p  0.001) confirm an
+overall effect of cueing. The interactions between factors are in-
+terpreted with reference to planned comparisons. In the Blocked
+task, the interaction (F(2,46)  5.66, p  0.008) was associated
+with significant target cueing effects for both distractor presence
+conditions (Tn-Tt: t(23)  	5.70, p  0.001; TDn-TDt:
+t(23)  	6.54, p  0.001); however, distractor cueing in the
+Blocked task is evident only when distractors were present
+(TDn-TDd: t(23)  	3.02, p  0.006). There was no effect when
+the distractor was absent (Tn-Td: t(23)  0.47, p  0.640). A
+direct 2  2 ANOVA with factors for distractor cueing (distractor
+vs neutral cueing) and distractor presence (present vs absent)
+revealed a significant interaction term (F(1,23)  9.97, p  0.004),
+confirming the specificity of distractor cueing to the presence of
+the distractor stimulus. By contrast, the significant interaction in
+the Flexible task (F(2,46)  4.28, p  0.023) was not associated
+with any evidence for a distractor suppression effect (TDn-TDd:
+t(23)  0.14, p  0.886), but there was a performance cost when
+distractors were cued in the distractor absent conditions (Tn-Td:
+t(23)  3.12, p  0.005). Again, planned comparisons confirm
+significant target cueing effects (Tn-Tt: t(23)  	2.33, p  0.029;
+TDn-TDt: t(23)  	4.04, p  0.001) in the flexible cueing
+condition.
+1800 • J. Neurosci., February 10, 2016 • 36(6):1797–1807
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+
+
+The same analysis was performed on the error rates for each
+task. No main effects or interactions were observed for either
+task, with the exception of a main effect of cueing condition in the
+Flexible task (F(2,46)  4.08, p  0.025) with more errors made in
+the distractor cueing condition than either target cued or neutral
+conditions. Planned comparisons show no cueing effects evident
+in error rates in the Blocked task, but a significant target enhance-
+ment effect in Flexible task (TDn-TDt: t(23)  	2.12, p  0.046)
+with fewer errors made in the target cueing condition. We also
+observe more errors when the distractor is cued but not subse-
+quently presented in distractor cued trials (Tn-Td: t(23)  2.59,
+p  0.017). This is consistent with the RT results, suggesting that
+performance is impaired when the location that definitely will
+not contain the target is cued on a trialwise basis.
+Experiment 2: replication and individual differences analyses
+The main purpose of Experiment 2 was twofold. First, we aimed
+to directly replicate the effects of Experiment 1. Second, by in-
+creasing our statistical power, we also aimed to further explore
+individual differences in cueing effects to help tease apart the
+cognitive mechanisms underlying the performance benefit in
+each condition.
+Figure 2, B and C, shows the main findings from Experiment
+2. The same analysis pipeline as Experiment 1 was applied to
+directly replicate the previous results. All main effects and inter-
+actions are significant in the RT data of the Blocked cueing task
+(Distractor Presence: F(1,70)  204, p  0.001; Cue Type: F(2,140)
+ 50.6, p  0.001; Interaction: F(2,140)  8.68, p  0.001). Im-
+portantly, we were again able to isolate a target enhancement
+cueing effect (Tn-Tt: t(70)  	4.50, p  0.001; TDn-TDt: t(70) 
+	10.82, p  0.001) and a Distractor Suppression cueing effect
+(TDn-TDd: t(70)  	5.94, p  0.001) that is specific to the pres-
+ence of a competing distractor (Tn-Td: t(70)  	0.08, p  0.940).
+Again, a direct 2  2 ANOVA with factors for distractor cueing
+(distractor vs neutral cueing) and distractor presence (present vs
+absent) revealed a significant interaction term (F(1,70)  12.80,
+p  0.001), confirming the specificity of distractor cueing to the
+presence of the distractor stimulus. This firmly replicates the be-
+havioral advantage of presenting targets or distractors stimuli at a
+fixed location for a block of trials.
+A similar pattern of results is revealed upon analysis of the
+mean accuracy data. More errors were made in the presence of
+the distractor (F(1,70)  7.83, p  0.006) and errors differed ac-
+cording the Cue Type (F(2,140)  5.66, p  0.004). Planned com-
+parisons revealed that the significant interaction between
+Distractor Presence and Cue Type (F(2,140)  3.1, p  0.049) was
+driven by significant target enhancement and distractor suppres-
+sion effects in the distractor present conditions (TDn-TDt: t(70)
+ 	3.55, p  0.001; TDn-TDd: t(70)  	2.53, p  0.014). No
+accuracy benefits were observed in the distractor absent condi-
+tion (Tn-Tt: t(70)  0.18, p  0.855; Tn-Td: t(70)  	0.76,
+p  0.449).
+The same analysis on RT data from the Flexible cueing task
+again confirms the selectivity of the distractor suppression ef-
+fects. There were main effects of Distractor Presence (F(1,70) 
+236, p  0.001) and Cue Type (F(2,140)  31.8, p  0.001), but no
+significant interaction (F(2,140)  1.74, p  0.180). The planned
+comparisons revealed significant target enhancement effects
+when the distractor was present (Tn-Tt: t(70)  	4.17, p  0.001)
+and absent (TDn-TDt: t(70)  	6.52, p  0.001); however, we
+observed no effect of distractor suppression (TDn-TDd: t(70) 
+0.26, p  0.792). These results directly replicate the results of
+Experiment 1. In contrast to Experiment 1, we now do not ob-
+serve a significant effect of distractor cueing in the target only
+condition (Tn-Td: t(70)  0.26, p  0.792). Analysis of error rates
+showed that subjects made more errors in distractor present trials
+(Distractor Presence: F(1,70)  31.3, p  0.001), but no other
+statistical comparison in the ANOVA or planned comparisons
+reached significance (p  0.168).
+Effect of repetitions
+So far the evidence for distractor suppression is confined to the
+task in which distractor locations repeat over the course of the
+A
+Fixation (0.2s)
+Cue (0.5s)
+Distractor 
+absent
+Distractor 
+present
+Tn
+Tt
+TDt
+Td
+Distractor
+Absent
+Present
+RT (s)
+0.45
+0.5
+0.55
+0.6
+0.65
+0.7
+Distractor
+Absent
+Present
+RT (s)
+0.45
+0.5
+0.55
+0.6
+0.65
+0.7
+Blocked Task
+Flexible Task
+Target cueing
+Distractor cueing
+Neutral cueing
+B
+C
+Stim (0.1s)
+TDn
+TDd
+*
+*
+*
+*
+*
+Figure 1.
+Task schematic and RT results for Experiment 1. A, Each trial began with a fixation cross. In both tasks, a cue was presented in the corner of the fixation cross, which predicted the
+forthcomingcuedstimuliinTargetandDistractorblocks.InNeutralcuetrials,thecuewaspresentedrandomly.Subjectswereinstructedthepresenceorabsenceofthedistractoratthebeginning
+ofeachblock.TargetswereapatchworkpatternoftwosuperimposedGaborpatches.DistractorswererandomlyorientedGabors.Forillustrationpurposes,color-codedbordersrepresentthespatial
+information provided in each condition. Stimuli are not shown to scale. B, The mean of the individual median RTs for the Blocked (B) and Flexible (C) versions of the task for the 3 different cueing
+conditions (green represents target; red represents distractor; blue represents neutral) in the distractor present and absent conditions. Error bars indicate 1 SEM. Capital letters indicate the
+presence of stimuli (T, Target only; TD, target and distractor present). Lowercase letters indicate condition (t, Target cue; d, distractor cue; n, neutral cue). Tt, Target only, target location cued; Td,
+Target only, distractor location cued; Tn, Target only, neutral cues providing no valid spatial information for either stimulus location; TDt, Distractor present, target location cued; TDd, Distractor
+present, distractor location cued; TDn Distractor present, neutral cues providing no valid spatial information for either stimulus location. *Indicates significance paired t-test effects.
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+J. Neurosci., February 10, 2016 • 36(6):1797–1807 • 1801
+
+
+block. Therefore, previous distractor location could play a key
+role in distractor suppression.
+To help explore this potential contribution, we examined the
+effect of stimulus repetition in the neutral condition with data
+pooled from both tasks in Experiment 2. In distractor present
+trials, target repetition improved RT and accuracy (Fig. 2D, left;
+RT; TrepTDn vs nrepTDn: t(70)  3.92, p  0.001; Percentage
+correct: TrepTDn vs nrepTDn: t(70)  2.96, p  0.001; not plot-
+ted). Similarly, a single trial chance repetition of the distractor
+stimulus also improved RT performance for target processing
+(Fig. 2D, right; DrepTDn vs nrepTDn: t(70)  4.47, p  0.001).
+There is also a trend for improved accuracy on distractor repeti-
+tion trials (Percentage correct: DrepTDn vs nrepTDn: t(70) 
+0.134, p  0.091; not plotted).
+Comparisons across the two tasks
+If distractor inhibition and target enhancement were reliant on
+the same cognitive mechanisms (e.g., working memory based
+top-down control), then we would expect individual differences
+in distractor cueing during the Blocked task to correlate with
+target cueing effecting in the Flexible task. However, we find no
+evidence for such a relationship (Fig. 2E, left; BlockTDnTDd 
+FlexTnTt: r  0.07, p  0.577; and Fig. 2E, middle; Block-
+TDnTDd  FlexTDnTDt: r  0.17, p  0.168). Performing the
+equivalent analysis between distractor and target cueing within
+the blocked task also failed to identify a consistent relationship
+(not plotted: evenBlockTDnTDt  oddBlockTDnTDd: r 
+	0.08, p  0.494; oddBlockTDnTDt  evenBlockTDnTDd: r 
+0.23, p  0.056). This analysis approach yields two equivalent but
+TDn
+Tn
+No response
+Fixation 
+0.2,0.4,0.6s
+Cue Duration
+Flexible 0.1s
+Cue-target SOA 
+Flexible 0.9s
+Distractor 
+absent
+Distractor
+present
+Catch trial
+Stimulus
+0.2s
+BlockTDnTDd
+-100
+0
+100
+200
+FlexTnTt
+-60
+-40
+-20
+0
+20
+40
+60
+80
+100
+120
+BlockTDnTDd
+-100
+0
+100
+200
+FlexTDnTDt
+FlexTnTt
+-100
+0
+100
+200
+FlexTDnTDt
+evens
+-100
+0
+100
+200
+BlockTDnTDd
+evens
+-100
+0
+100
+200
+odds
+-100
+-50
+0
+50
+100
+150
+FlexTnTt
+evens
+-100
+0
+100
+200
+FlexTDnTDt
+A
+B
+C
+D
+E
+F
+Distractor
+)
+s
+( 
+T
+R
+0.4
+0.45
+0.5
+0.55
+0.6
+Distractor
+RT (s)
+0.4
+0.45
+0.5
+0.55
+0.6
+Absent
+Present
+Absent
+Present
+Blocked Task
+Flexible Task
+Target
+Distractor
+Neutral
+Condition
+Trep TDn
+Drep TDn
+RTs (s)
+0.45
+0.5
+0.55
+0.6
+rep
+nrep
+r=0.07, 
+p=0.577
+r=0.17, 
+p=0.168
+r=0.51, 
+p<0.001*
+r=0.29, 
+p=0.016*
+r=0.46, 
+p<0.001*
+r=0.23, 
+p=0.057
+TDd
+Td
+Tt
+TDt
+*
+*
+*
+*
+*
+*
+*
+Figure 2.
+Illustrative task schematic and results for Experiment 2. A, Each trial began with a fixation cross, randomly jittered in duration. The fixation cross then turned from gray to white,
+signalingtheonsetofthetrial.IntheFlexibletask,acuewaspresentedinthecornerofthefixationcross,whichpredictedtheforthcomingcuedstimuliinTargetandDistractorcuedblocks.InNeutral
+cued trials, the cue was presented randomly. In the Blocked task, no explicit cue was presented as such fixation-target stimulus-onset asynchrony (SOA) is 1000 ms. Subjects were instructed the
+presenceorabsenceofthedistractorthebeginningofeachblock.IntheBlockedtask,subjectswerealsoinstructedtothecuedstimuluslocation.Locationwasvalidforalltrialswithinablock.Targets
+wereeithertrianglesorsquares,whereasdistractorswerethetwosuperimposedshapes.B,MeanoftheindividualmedianRTs(errorbarsindicate1SEM)forBlockedversionofthetaskforthe
+3differentCueTypes(greenrepresentstarget;redrepresentsdistractor;bluerepresentsneutral)inthedistractorpresentandabsentconditions.C,ThesameasinB,butfortheFlexibleversionof
+the task. D, Mean of the individual median RTs (error bars indicate 1 SEM) for pooled Blocked and Flexible neutral cueing condition for the trials in which the target stimulus (left) or distractor
+stimulus(right)wasrepeatedinthesamelocationrelativetononrepeattrials.E,Correlationsbetweenblockeddistractorcueingeffectsandflexibletargetenhancementeffects(leftandmiddle)and
+between flexible target enhancement effects on blocks of trials with and without the distractor stimuli (right). F, Correlations between even and odd trials for each subcomponent of correlations
+showninE.TrepTDn,Targetrepeatsanddistractorpresentonneutraltrials;DrepTDn,Distractorrepeatsanddistractorpresentonneutraltrials;nrepTDn,Neithertargetnordistractorstimulirepeats;
+FlexTnTt, distractor absent target cueing RT effects in the flexible task; FlexTDnTDt, distractor present target cueing RT effects in the flexible task; BlockTDnTDd, distractor present distractor
+cueing RT effects in the Blocked task. *Indicates significance of statistical tests.
+1802 • J. Neurosci., February 10, 2016 • 36(6):1797–1807
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+
+
+independent estimates of the relationship; therefore, we interpret
+the near-threshold trend as a null effect within the context of the
+overall pattern. Similarly, in the distractor absent case, there was
+no significant correlation (data not shown; BlockTDnTDd 
+BlockTnTt: r  0.20, p  0.092). In the absence of an effect, it is
+important to show that our sample has sufficient and reliable
+participant-wise variance in both measures. To this end, we
+found a significant correlation between the different versions of
+target cueing in the flexible block (Fig. 2E, right; FlexTDnTDd 
+FlexTnTt: r  0.51, p  0.001), as well as significant (or near-
+significant) split-half reliability between the component condi-
+tions of interest (BlockTDnTDd: r  0.29, p  0.016; FlexTnTt:
+r  0.46, p  0.001; FlexTDnTDt: r  0.23, p  0.057; Fig. 2F).
+Experiment 3: EEG study
+Behavioral
+Experiment 3 adapted the methods and stimuli of Experiment 1
+for an EEG study of the Blocked task version. Given that the first
+two experiments had observed robust distractor inhibition if
+task-irrelevant stimuli are predictable, consistent, and stable, we
+examined the neural correlates inhibition under this context. Fig-
+ure 3A shows the main RT results for Experiment 3. Again, we
+found slower RTs and increased errors in the presence of the
+distractor (RT: F(1,19)  77.8, p  0.001, errors; F(1,19)  6.82, p 
+0.017), and a main effect of Cue Type (RTs: F(2,38)  57.5, p 
+0.001, errors; F(2,38)  4.61, p  0.017). However, neither the
+interaction between Distractor Presence and Cue Type for RTs
+nor error percentage was significant (RTs: F(2,52)  2.37, p 
+0.120, errors; F(2,52)  2.96, p  0.065). However, in line with the
+previous two experiments, the direct 2  2 ANOVA between
+distractor cueing and distractor presence trended to significance
+interaction term (F(1,19)  4.36, p  0.053). Planned pairwise
+comparisons for RT again showed a prominent distractor sup-
+pression effect (TDn-TDd: t(19)  	5.91, p  0.001), but also a
+trend in distractor absent trials (Tn-Td: t(19)  	1.96, p  0.065).
+As in all previous experiments, the target enhancement cueing
+effects were evident in both distractor absent and present trials
+(Tn-Tt: t(19)  	5.54, p  0.001; TDn-TDt: t(19)  	8.01, p 
+0.001). Planned comparisons in the error data only showed a
+target enhancement effect in the distractor present condition
+(TDn-TDt: t(19)  	2.60, p  0.001), no other comparison was
+significant (p  0.288).
+EEG
+The ERP waveforms of distractor absent (Fig. 3C,E) and distrac-
+tor present (Fig. 3D,F) conditions are shown. In the absence of
+the distractor, we observe robust effects of target cueing at 244–
+384 ms after stimulus at contralateral electrodes regardless of
+quadrant: cluster: p  0.013 (Fig. 3C, left), p  0.001 (Fig. 3E,
+left), and ipsilateral electrodes when the target was in the lower
+hemifield, p  0.0042 (Fig. 3E, right). However, distractor cueing
+was no different from neutral. This EEG result mirrors the behav-
+ioral effects in the distractor absent condition observed across all
+experiments: modulation by target, but not distractor expecta-
+tion. The pattern of results is more complex for the distractor
+present trials. Significant difference clusters were observed for
+target cueing in upper visual field at 260–324 ms in bilateral
+electrodes: cluster: p  0.0114 (Fig. 3D, left), p  0.008 (Fig. 3D,
+right). There was also a significant negativity for distractor cueing
+that was specific to the electrodes contralateral to the distractor
+−10
+−5
+0
+5
+10
+0
+0.2
+0.4
+−10
+−5
+0
+5
+10
+0
+0.2
+0.4
+−10
+−5
+0
+5
+10
+−10
+−5
+0
+5
+10
+Target
+Distractor
+Neutral
+0
+0.2
+0.4 0
+0.2
+0.4
+Voltage (μV)
+Voltage (μV)
+T
+D
+contra
+ipsi
+contra
+ipsi
+)
+s
+( 
+e
+m
+iT
+)
+s
+( 
+e
+m
+iT
+Distractor
+Absent
+Present
+0.45
+0.5
+0.55
+0.6
+0.65
+RT (s)
+T
+T
+T
+D
+T
+D
+T
+T
+T
+D
+T
+D
+D
+C
+A
+F
+E
+B
+0
+1
+2
+3
+4
+*
+* *
+*
+Figure3.
+BehavioralandERPresultsfromExperiment3.A,MeanoftheindividualmedianRTs(errorbarsindicate1SEM)fortheBlockedversionofthetaskforthe3differentCueTypes(green
+representstarget;redrepresentsdistractor;bluerepresentsneutral)inthedistractorpresentandabsentconditions.B,SchematicillustrationoflateralizationofstimuliandelectrodesusedinallERP
+analyses. C–F, ERP waveforms for contraT (left panels, dashed lines) and ipsiT (right panels, solid lines) for distractor absent (C, E) and distractor present (D, F) blocks, when blocked stimuli were
+presentedintheupper(C,D)orlower(E,F)visualfield.Inset,Illustrationsineachquadrantrepresentthenatureofthestimulusconfigurations(relativetoelectrodeside)thatcomposeeachanalysis
+and highlight the corresponding contraT (dashed) or ipsiT (solid) side of space. Significance bar indicates cluster-corrected (p  0.05) t tests between cueing and neutral trials (green represents
+neutralvstarget;redrepresentsneutralvsdistractor).Graypanelsrepresenta20mswindowcenteredoverthepeakoftheERPcomponentsC1,P1,andN1.P1componentswerenotreadilyidentified
+in the lower visual field because of overlap with C1. *Significance bars represent significant pairwise comparisons between cueing conditions and neutral trials (same color convention as before).
+Inset, Bar plot represents the mean P1 amplitude for 3 Cue Types for the significant TDnTDd contrast TOI (1 SEM).
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+J. Neurosci., February 10, 2016 • 36(6):1797–1807 • 1803
+
+
+from 296 to 348 ms (Fig. 3D, right; cluster: p  0.029). More
+focused analyses of specific components revealed a significant P1
+modulation for distractor cueing at distractor contralateral elec-
+trodes (t(19)  	2.28, p  0.035). Although there was no signif-
+icant P1 modulation for distractor cueing at distractor ipsilateral
+electrodes (t(19)  	1.61, p  0.125), there was also no significant
+difference between the two cueing differences (TDnTDd contra
+vs ipsi: t(19)  	0.98, p  0.340). We therefore are not able to rule
+out a bilateral effect. Finally, although there was only a trend for
+an equivalent P1 enhancement for target cueing in electrodes
+contralateral to the target (t(19)  1.38, p  0.183), we did observe
+a significant P1 laterality in the target cued condition (greater
+contralateral P1 relative to ipsilateral electrodes, t(19)  3.77, p 
+0.001). This difference is not observed in the equivalent neutral
+condition (contralateral vs ipsilateral: t(19)  	0.17, p  0.869).
+To better explore lateralized markers of selection, we also ex-
+amined the difference in the N2pc associated with each condition
+(Fig. 4). The N2pc is a well-characterized index of the covert
+deployment of visual attention and distractor filtering (Luck and
+Hillyard, 1994; Luck, 2012). Interestingly, this marker of target
+selection/distractor inhibition is most evident in target cueing
+and the neutral condition. In the presence of the distractor,
+cluster-corrected differences were observed between contralat-
+eral and ipsilateral waveforms for target and neutral cueing con-
+ditions (from 240 to 396 ms, p  0.001 for target cueing; 252–396
+ms, p  0.001 for neutral cueing) with a negative deflection con-
+tralateral to the target. The N2pc for distractor cueing did not
+survive cluster correction (376–396 ms, p  0.140). However,
+direct statistical comparison between the difference wave
+(contraT-IpsiT) did not reveal significant effect of Cue Type
+(one-way repeated measures ANVOA; F(2,38)  1.93, p  0.159).
+In the distractor absence trials, cluster-corrected differences were
+observed between contralateral and ipsilateral waveforms in the
+time window that corresponds to the N2pc for all three Cue
+Types (target cueing 140–208 ms, p  0.001 and 238–396 ms,
+p  0.002; distractor cueing 136–208 ms, p  0.001 and 272–316
+ms, p  0.038; neutral cueing 136–212 ms, p  0.001 and 260–
+312 ms, p  0.041). Importantly, we also observe a robust differ-
+ence in the laterality effect between target and neutral cueing in
+the N2pc time range (p  0.001, 228–396 ms; Fig. 4A, thin green
+significance bar).
+Finally, we examined preparatory lateralized alpha power
+(8–12 Hz) with respect to the cued location (target or distractor).
+Figure 5 plots averaged alpha power across time as a function
+distractor presence, laterality (with respect to the relevant cued
+location), and cue condition. Analysis of preparatory alpha
+power indicated significantly less alpha contralaterally to the ex-
+pected target (Fig. 5B; distractor absent 	264 to 	80 ms and
+cluster p  0.006; distractor present 	344 to 	80 ms cluster p 
+0.010). However, there was no reliable evidence of an effect of
+distractor expectation (Fig. 5C; distractor absent uncorrected p 
+0.054, 	556 to 	404 ms; and p  0.071, 	360 to 	212 ms;
+distractor present no uncorrected p  0.05).
+Although the EEG experiment was designed as a factorial ma-
+nipulation, we also explored post hoc the residual relationships
+between neural and behavioral effects. First, we median split the
+data, separating the distractor and neutral cueing P1 voltage am-
+plitudes by whether the subject showed a strong or a weak
+distractor suppression RT effect. P1 amplitude was defined indi-
+vidually for each participant. We extracted the signal from a 20
+ms time window around the peak voltage identified between 100
+and 200 ms, averaged across trials in which the target was in the
+upper hemifield in all three conditions. The distractor suppres-
+sion effect was calculated as the mean log transformed RT from
+the same trials included in the EEG analysis. There was a signifi-
+cant reduction in P1 amplitude in distractor cued trials compared
+with neutral trials for strong cueing subjects (t(9)  	2.58, p 
+0.030), but no such difference for the weak cueing subjects (t(9) 
+0.09, p  0.931). However, there was only a trend for the corre-
+sponding relationship based on subject-wise correlation (r 
+0.32, p  0.17); therefore, we must remain cautious interpreting
+this post hoc result. The equivalent post hoc analysis for target cued
+alpha power also suggested that there was significantly more al-
+pha power contralateral to distractor relative to neutral trials in
+subjects who showed a strong target cueing RT effect (t(9)  3.14,
+p  0.012). Subjects who only showed a weak target enhance-
+ment RT effect showed no differentiation of alpha power across
+target and neutral conditions (t(9)  0.96, p  0.364). Yet, again,
+the correlation across subjects failed to reach significance (r 
+	0.33, p  0.149), preventing us from drawing firm conclusions.
+Within-condition coupling between brain and behavior would
+be best explored in future studies with optimized task design
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+−1.5
+−1
+−0.5
+0
+0.5
+1
+ 
+T
+D
+T
+D
+plus
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+−3.5
+−3
+−2.5
+−2
+−1.5
+−1
+−0.5
+0
+0.5
+1
+1.5
+ 
+T
+T
+plus
+Time (secs)
+B
+A
+Figure4.
+Lateralizedwaveformsasafunctionofconditionfordistractorabsent(A)anddistractorpresent(B)blocks.ERPswereaveragedacrossupperandlowervisualfieldsforthedifference
+between contralateral to target and ipislateral to target as a function of cue condition: target (green), distractor (red), and neutral (blue). Significance bars indicate cluster-corrected (p  0.05) t
+testsbetweencontraTandipsiTperCueType.Lightgreensignificancebarindicatesasignificantdifferencebetweentargetcueingandneutralcueing.Inset,Illustrationsrepresentthenatureofthe
+stimulus configurations (after right-sided targets are flipped into the left hemifield) that compose each analysis and highlight the contraT (dashed) or ipsiT (solid) spatial relationship.
+1804 • J. Neurosci., February 10, 2016 • 36(6):1797–1807
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+
+
+(either increasing trial numbers for exploring trialwise within-
+condition variance, or subject numbers for exploring subjectwise
+within-condition variance).
+Discussion
+It is well established that foreknowledge of a likely target location
+improves performance (Posner, 1980). The aim of the current
+series of experiments was to determine whether and/or how par-
+ticipants also use foreknowledge of a distractor location to selec-
+tively inhibit task-irrelevant input. Using a novel variant of the
+Posner cueing paradigm, we found that distractor foreknowledge
+only benefits behavior when the location was blocked over a
+number of trials. We found no evidence that trialwise distractor
+cueing can be used to inhibit predicted distractors (Experiments
+1 and 2). Moreover, analysis of individual differences in cueing
+effects in Experiment 2 suggests that distractor suppression in the
+blocked task depends on qualitatively distinct cognitive mecha-
+nisms. Analyses of the EEG data provide crucial neural evidence
+in support of this interpretation. Blocked distractor location sig-
+nificantly reduced the P1 component, presumably reducing the
+effect of distractor competition; however, there was no evidence
+that distractor inhibition is mediated alpha-band visual activity
+associated with target cueing.
+Distractor inhibition in the blocked task is consistent with the
+previous literature (Watson and Humphreys, 1997; Awh et al.,
+2003; Folk and Remington, 2006). For example, Watson and
+Humphreys (1997) found that performance in a search task im-
+proved if participants are first shown a preview screen containing
+a subset of the distractor stimuli. Evidently, participants can pre-
+pare in advance to suppress processing of the previewed distrac-
+tors. However, as in our blocked version of the task, this effect
+could depend on prior presentation of the task-irrelevant input.
+Similarly, Awh et al. (2003) found reduced distractor interference
+when distractors were more likely than when distraction was rel-
+atively unexpected. Importantly, the benefit of distractor expec-
+tation was only evident for validly cued trials and not on
+distractor-absent trials. Such a selective improvement suggests
+the benefit of distractor foreknowledge was not due to target
+facilitation or heightened vigilance on high competition trials.
+While this could suggest that people can exert a certain amount of
+top-down control over the distracting effect of competition, it is
+also important to note that increased probability of distractor
+presence equates to a higher proportion of trials that were pre-
+ceded by distractors. Therefore, distractor repetition could also
+account for the selective reduction in distractor processing.
+Our findings indicate that preparatory distractor suppression
+is not as flexible as top-down control mechanisms for target en-
+hancement but critically depends on stable predictions and/or
+presentation history. This boundary condition initially appears
+to contrast with behavioral evidence from Ruff and Driver (2006)
+who report a benefit associated with flexible cueing of distractor
+preparation. However, in this study, participants were cued to the
+presence of a competing distractor in the contralateral hemifield
+to the target stimulus. Distractor cueing could have motivated an
+increase in the focus of attention to the target location in this
+binary design with subjects able to sharpen the focus of their
+attention to the target hemifield on distractor present trials.
+Mechanistically, inhibition could arise in this context from facil-
+itating processing target relevant information, which in turn in-
+hibits cortical areas associated with processing target-irrelevant
+information (e.g., Sylvester et al., 2008) via competitive interac-
+tions, such as lateral inhibition (Carandini and Heeger, 2012).
+Within this framework, top-down control is inherently facilita-
+tive; selective suppression emerges via competitive inhibition as a
+consequence of top-down excitation. However, in our task, the
+use of four possible locations discouraged refocusing to the im-
+plied target location, as the distractor cue only provided unique
+information about the distractor (target uncertainty remained
+relatively high: 3 of 4 locations). The distractor absent condition
+confirmed that reducing target uncertainty to three locations did
+not confer a substantial benefit in target processing (i.e., Td vs
+Tn). More recently, Chao (2010) reported evidence for a benefit
+of distractor cueing among 4 possible locations; however, in the
+majority of experiments (1–3, 5–7), cue direction was con-
+founded with response type, complicating interpretation. More-
+over, in Experiment 4, the distractor was highly similar to the
+target. Under these more ambiguous conditions, facilitating dis-
+-1
+-0.5
+0
+0.3
+0.4
+0.5
+contraT
+ipsiT
+0.3
+0.4
+0.5
+Time from stimulus onset (s)
+Distractor Absent
+B
+A
+0
+5
+10
+15
+20
+25
+30
+35
+Log Power (muV^2/Hz)
+Frequency (Hz)
+C
+0
+2
+4
+6
+8
+10
+12
+Log Alpha Power (muV^2/Hz)
+Flipped to distractor
+-1
+-0.5
+0
+Distractor Present
+Flipped to target
+T
+D
+T
+T
+0
+-1
+5
+30
+5
+30
+5
+30
+5
+30
+D
+D
+D
+T
+T
+T
+plus
+T
+T
+T
+D
+D
+D
+D
+T
+T
+T
+plus
+plus
+plus
+-0.5
+0
+-1
+-0.5
+0
+-1
+-0.5
+0
+-1
+-0.5
+T
+T
+T
+T
+stimulus onset
+Figure 5.
+Lateralization alpha (8–12 Hz) power. A, Power spectrum averaged over all trials, time-points, and subjects. A peak at 10 Hz is clearly visible. Gray shading represents the frequency
+range used in all alpha-band analyses. Time frequencies are plotted for each Cue Type separately (target, B; distractor, C), for distractor absent (top) and distractor present (bottom) blocks for all
+trials.InTargetcueinganalysis,trialsarealignedrelativetothespatiallocationofthetarget.Dashedlinesindicateelectrodescontralateraltothetargetlocation.InDistractorcueinganalysis,trials
+arealignedrelativetothespatiallocationofthedistractor.Solidlinesindicateelectrodescontralateraltodistractorlocation.Significancebarsindicatecluster-corrected(p0.05)differences.Top
+right insets, Corresponding stimulus configurations. Bold black letters indicate blocked stimulus location. Gray letters indicate that trials in which the location-variable stimuli occupied one of the
+other quadrants were included in the analysis. Bottom left insets, Time-frequency spectrogram representing raw power values for contralateral minus ipsilateral electrodes. Time scale is between
+	800 and 200 ms for frequencies between 1 and 30 Hz. Red square represents the analyzed alpha band. Black vertical line indicates stimulus onset.
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+J. Neurosci., February 10, 2016 • 36(6):1797–1807 • 1805
+
+
+tractor processing could directly benefit performance by helping
+to localize the imperative stimulus (Navalpakkam and Itti, 2007).
+Similarly, Arita et al. (2012) find that a precue indicating which
+class of stimuli are irrelevant for a search task (coded by color)
+reduces search times. It is not clear that this effect depends on
+inhibition per se, or just facilitating rejection of nontarget items.
+Distractor suppression observed in the current experiment is
+not readily explained by flexible top-down inhibitory mecha-
+nisms. It is possible that this limit is related to WM mechanisms
+for top-down control. Indeed, trialwise explicit manipulations of
+cueing depend on WM (Carlisle et al., 2011; Olivers et al., 2011),
+which could explain the apparent functional limit for control of
+attention biases. Arguably, such a capacity limited system should
+be optimized for target processing. If WM represents only the
+target of behavior, by default all else could be suppressed, espe-
+cially if it has already passed through the system (i.e., repeated).
+Extensive behavioral evidence suggests that the contents of WM
+automatically boosts processing of matching sensory input (Soto
+et al., 2005), even if WM-based facilitation is detrimental to the
+task (Soto and Humphreys, 2009). The issue is directly analogous
+to the classic ”white bear problem” (Wegner, 1989): deliberately
+trying to suppress a specific thought actually has the opposite
+effect. However, the contents of WM do not always guide atten-
+tion (Peters et al., 2009; Olivers et al., 2011). The attentional
+capture effect can be attenuated if the item predicts distractor
+stimuli (Kiyonaga et al., 2012) and that the strategic control over
+WM biases is associated with increased BOLD signal in a parieto-
+medial network (Soto et al., 2012). Interestingly, there is evidence
+that WM costs and WM benefits do not correlate within subjects,
+leading Soto et al. (2014) to propose, as we have in this manu-
+script, that they rely on different mechanisms. However, the ex-
+tent this strategic control of attentional capture relates to the
+inhibition of predictable distractor input remains unexplored.
+Moreover, even preview search is influenced by WM under some
+circumstances (Al-Aidroos et al., 2012). Further research is
+needed to clarify the relationship between WM-based control
+and more automatic effects of repetition.
+The EEG results of Experiment 3 provided crucial comple-
+mentary evidence for distinct mechanisms underlying top-down
+control for target cueing and distractor suppression. The ERP
+analyses confirm that distractors presented at expected locations
+elicit a reduced P1. Presumably, the diminished P1 resulted in a
+downstream reduction in the subsequent demand on target se-
+lection (i.e., reduced N2pc). The N2pc is a well-characterized
+index of the covert deployment of visual attention and distractor
+filtering (Luck and Hillyard, 1994; Luck, 2012). These results
+could suggest that, if the distractor location is fully predictable
+and stable across trials, early suppression negates the need for
+distractor filtering, thereby reducing the N2pc component. Im-
+portantly, we also found no evidence for a distractor-expectation
+effect in the distractor absent condition, providing further com-
+plementary evidence that the distractor expectation benefit is
+specific to distractor suppression, and not attributable to the re-
+duced spatial uncertainty of the target location.
+The pattern of current results is in line with a predictive cod-
+ing account of perceptual processing. Predictive coding posits
+that top-down mechanisms attenuate neural responses for ex-
+pected inputs relative to unexpected inputs (Summerfield et al.,
+2008; Summerfield and de Lange, 2014). Computationally, pre-
+dictive coding provides an elegant strategy for reducing informa-
+tional redundancy (Rao and Ballard, 1999). Expected input is
+“explained away” by the higher-level brain structures based on
+the prior information about what is probable in the given visual
+context. The residual activation represents “prediction error”
+that is then used to update the internal model (Friston, 2010). As
+expectation for the distractor location increases with repetition,
+prediction error would decrease and could thus suppress process-
+ing of the expected distractor. Although in pure information
+terms the distractor location could be similarly anticipated in the
+flexible cueing task (Kok et al., 2012), our results suggest that
+symbolic cueing is not sufficient for generating expectations suit-
+able for inhibition within the visual system.
+Finally, the results of the time-frequency analysis provide
+novel evidence that attention-related changes in the spatial dis-
+tribution of alpha power do not mediate the distractor suppres-
+sion observed here. Although we find robust task-relevant
+changes in alpha power for target expectation, we find no evi-
+dence for a complementary signature for distractor inhibition.
+This is important because alpha-band oscillations have been
+closely related to neural inhibition (Klimesch et al., 2007; Jensen
+and Mazaheri, 2010), potentially serving as a general gating
+mechanism. Bonnefond and Jensen (2012) recently report in-
+creased alpha power before the onset of an expected distractor in
+the delay period of a WM task. While this suggests a link between
+alpha power and strategic distractor inhibition, it is worth noting
+that the distractor condition was blocked. This could suggest that
+control over alpha relied on less flexible learning mechanisms.
+Moreover, competition was between task-irrelevant sensory in-
+put and the current contents of WM. Therefore, it is possible that
+participants were able to redirect their attention to the contents of
+WM (e.g., verbal rehearsal) during the delay period when they
+expected highly distracting input. Withdrawal of attention could
+result in an increase in visual alpha power, which in turn could
+help inhibit new input. In the absence of an obvious redirection
+strategy in our experimental paradigm, we find no evidence for
+attention-related changes in alpha power. Instead, we suggest
+that experience-dependent suppression of task-irrelevant infor-
+mation resembles repetition suppression within a predictive cod-
+ing framework.
+References
+Al-Aidroos N, Emrich SM, Ferber S, Pratt J (2012) Visual working memory sup-
+portstheinhibitionofpreviouslyprocessedinformation:evidencefrompreview
+search. J Exp Psychol Human 38:643–663. CrossRef Medline
+Arita JT, Carlisle NB, Woodman GF (2012) Templates for rejection: config-
+uring attention to ignore task-irrelevant features. J Exp Psychol Hum
+Percept Perform 38:580–584. CrossRef Medline
+Awh E, Matsukura M, Serences JT (2003) Top-down control over biased
+competition during covert spatial orienting. J Exp Psychol Hum Percept
+Perform 29:52–63. CrossRef Medline
+Bonnefond M, Jensen O (2012) Alpha oscillations serve to protect working
+memory maintenance against anticipated distracters. Curr Biol 22:
+1969–1974. CrossRef Medline
+Brainard DH (1997) The psychophysics toolbox. Spat Vis 10:433–436.
+CrossRef Medline
+Carandini M, Heeger DJ (2012) Normalization as a canonical neural com-
+putation. Nat Rev Neurosci 13:51–62. CrossRef Medline
+Carlisle NB, Arita JT, Pardo D, Woodman GF (2011) Attentional templates
+in visual working memory. J Neurosci 31:9315–9322. CrossRef Medline
+Chao HF (2010) Top-down attentional control for distractor locations: the
+benefit of precuing distractor locations on target localization and discrim-
+ination. J Exp Psychol Human 36:303–316. CrossRef Medline
+Chelazzi L, Miller EK, Duncan J, Desimone R (2001) Responses of neurons
+in macaque area V4 during memory-guided visual search. Cereb Cortex
+11:761–772. CrossRef Medline
+Corbetta M, Shulman GL (2002) Control of goal-directed and stimulus-driven at-
+tention in the brain. Nat Rev Neurosci 3:201–215. CrossRef Medline
+Delorme A, Makeig S (2004) EEGLAB: an open source toolbox for analysis
+of single-trial EEG dynamics including independent component analysis.
+J Neurosci Methods 134:9–21. CrossRef Medline
+1806 • J. Neurosci., February 10, 2016 • 36(6):1797–1807
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+
+
+Desimone R, Duncan J (1995) Neural mechanisms of selective visual atten-
+tion. Annu Rev Neurosci 18:193–222. CrossRef Medline
+Di Russo F, Martínez A, Sereno MI, Pitzalis S, Hillyard SA (2002) Cortical
+sources of the early components of the visual evoked potential. Hum
+Brain Mapp 15:95–111. CrossRef Medline
+Folk CL, Remington R (2006) Top-down modulation of preattentive pro-
+cessing: testing the recovery account of contingent capture. Vis Cogn
+14:445–465. CrossRef
+Friston K (2010) The free-energy principle: a unified brain theory? Nat Rev
+Neurosci 11:127–138. CrossRef Medline
+Gazzaley A, Nobre AC (2012) Top-down modulation: bridging selective attention
+and working memory. Trends Cogn Sci 16:129–135. CrossRef Medline
+Haegens S, Na´cher V, Luna R, Romo R, Jensen O (2011) alpha-Oscillations
+in the monkey sensorimotor network influence discrimination perfor-
+mance by rhythmical inhibition of neuronal spiking. Proc Natl Acad Sci
+U S A 108:19377–19382. CrossRef Medline
+Hanslmayr S, Aslan A, Staudigl T, Klimesch W, Herrmann CS, Ba¨uml KH (2007)
+Prestimulus oscillations predict visual perception performance between and
+within subjects. Neuroimage 37:1465–1473. CrossRef Medline
+Jensen O, Mazaheri A (2010) Shaping functional architecture by oscillatory alpha
+activity: gating by inhibition. Front Hum Neurosci 4:186. CrossRef Medline
+Kastner S, Pinsk MA, De Weerd P, Desimone R, Ungerleider LG (1999)
+Increased activity in human visual cortex during directed attention in the
+absence of visual stimulation. Neuron 22:751–761. CrossRef Medline
+Kiyonaga A, Egner T, Soto D (2012) Cognitive control over working mem-
+ory biases of selection. Psychon Bull Rev 19:639–646. CrossRef Medline
+Klimesch W, Schack B, Sauseng P (2005) The functional significance of theta and
+upper alpha oscillations. Exp Psychol 52:99–108. CrossRef Medline
+Klimesch W, Sauseng P, Hanslmayr S (2007) EEG alpha oscillations: the
+inhibition-timing hypothesis. Brain Res Rev 53:63–88. CrossRef Medline
+KokP,JeheeJF,deLangeFP (2012) Lessismore:expectationsharpensrepresenta-
+tions in the primary visual cortex. Neuron 75:265–270. CrossRef Medline
+Laufs H, Kleinschmidt A, Beyerle A, Eger E, Salek-Haddadi A, Preibisch C,
+Krakow K (2003) EEG-correlated fMRI of human alpha activity. Neu-
+roimage 19:1463–1476. CrossRef Medline
+Leys C, Ley C, Klein O, Bernard P, Licata L (2013) Detecting outliers: do not
+use standard deviation around the mean, use absolute deviation around
+the median. J Exp Soc Psychol 49:764–766. CrossRef
+Luck SJ (2012) Electrophysiological correlates of the focusing of attention
+within complex visual scenes: N2pc and related ERP components. In:
+Oxford handbook of ERP components (Luck SJ, Kappenman ES, eds).
+New York: Oxford UP.
+Luck SJ, Hillyard SA (1994) Spatial-filtering during visual-search: evidence
+from human electrophysiology. J Exp Psychol Hum Percept Perform 20:
+1000–1014. CrossRef Medline
+Luck SJ, Chelazzi L, Hillyard SA, Desimone R (1997) Neural mechanisms of
+spatial selective attention in areas V1, V2, and V4 of macaque visual
+cortex. J Neurophysiol 77:24–42. Medline
+Maris E, Oostenveld R (2007) Nonparametric statistical testing of EEG- and
+MEG-data. J Neurosci Methods 164:177–190. CrossRef Medline
+Myers NE, Stokes MG, Walther L, Nobre AC (2014) Oscillatory brain state
+predicts variability in working memory. J Neurosci 34:7735–7743.
+CrossRef Medline
+Navalpakkam V, Itti L (2007) Search goal tunes visual features optimally.
+Neuron 53:605–617. CrossRef Medline
+Nobre AC, Gitelman DR, Dias EC, Mesulam MM (2000) Covert visual spa-
+tial orienting and saccades: overlapping neural systems. Neuroimage 11:
+210–216. CrossRef Medline
+Olivers CN, Peters J, Houtkamp R, Roelfsema PR (2011) Different states in
+visual working memory: when it guides attention and when it does not.
+Trends Cogn Sci 15:327–334. CrossRef Medline
+Oostenveld R, Fries P, Maris E, Schoffelen JM (2011) FieldTrip: open source
+software for advanced analysis of MEG, EEG, and invasive electrophysi-
+ological data. Comput Intell Neurosci 2011:156869. CrossRef Medline
+Peters JC, Goebel R, Roelfsema PR (2009) Remembered but unused: the
+accessory items in working memory that do not guide attention. J Cogn
+Neurosci 21:1081–1091. CrossRef Medline
+Pilat D, Fukasaku Y (2007) OECD principles and guidelines for access to
+research data from public funding. Data Sci J 6:4–11.
+Posner MI (1980) Orienting of attention. Q J Exp Psychol 32:3–25. CrossRef
+Medline
+Rao RP, Ballard DH (1999) Predictive coding in the visual cortex: a func-
+tional interpretation of some extra-classical receptive-field effects. Nat
+Neurosci 2:79–87. CrossRef Medline
+Romei V, Rihs T, Brodbeck V, Thut G (2008) Resting electroencephalogram
+alpha-power over posterior sites indexes baseline visual cortex excitabil-
+ity. Neuroreport 19:203–208. CrossRef Medline
+Ruff CC, Driver J (2006) Attentional preparation for a lateralized visual
+distractor: behavioral and fMRI evidence. J Cogn Neurosci 18:522–538.
+CrossRef Medline
+Soto D, Humphreys GW (2009) Automatic selection of irrelevant object
+features through working memory: evidence for top-down attentional
+capture. Exp Psychol 56:165–172. CrossRef Medline
+Soto D, Heinke D, Humphreys GW, Blanco MJ (2005) Early, involuntary
+top-down guidance of attention from working memory. J Exp Psychol
+Hum Percept Perform 31:248–261. CrossRef Medline
+Soto D, Greene CM, Kiyonaga A, Rosenthal CR, Egner T (2012) A parieto-medial
+temporal pathway for the strategic control over working memory biases in hu-
+man visual attention. J Neurosci 32:17563–17571. CrossRef Medline
+Soto D, Rotshtein P, Kanai R (2014) Parietal structure and function explain
+human variation in working memory biases of visual attention. Neuro-
+image 89:289–296. CrossRef Medline
+Spaak E, Bonnefond M, Maier A, Leopold DA, Jensen O (2012) Layer-
+specific entrainment of gamma-band neural activity by the alpha rhythm
+in monkey visual cortex. Curr Biol 22:2313–2318. CrossRef Medline
+Stokes M, Thompson R, Nobre AC, Duncan J (2009) Shape-specific prepa-
+ratory activity mediates attention to targets in human visual cortex. Proc
+Natl Acad Sci U S A 106:19569–19574. CrossRef Medline
+Summerfield C, de Lange FP (2014) Expectation in perceptual decision
+making: neural and computational mechanisms. Nat Rev Neurosci 15:
+745–756. CrossRef Medline
+Summerfield C, Trittschuh EH, Monti JM, Mesulam MM, Egner T (2008)
+Neural repetition suppression reflects fulfilled perceptual expectations.
+Nat Neurosci 11:1004–1006. CrossRef Medline
+Sylvester CM, Jack AI, Corbetta M, Shulman GL (2008) Anticipatory sup-
+pression of nonattended locations in visual cortex marks target location
+and predicts perception. J Neurosci 28:6549–6556. CrossRef Medline
+van Dijk H, Schoffelen JM, Oostenveld R, Jensen O (2008) Prestimulus os-
+cillatory activity in the alpha band predicts visual discrimination ability.
+J Neurosci 28:1816–1823. CrossRef Medline
+Walther A, van den Bosch JJ (2012) FOSE: a framework for open science
+evaluation. Front Comp Neurosci 6:32. CrossRef Medline
+Watson DG, Humphreys GW (1997) Visual marking: prioritizing selection
+for new objects by top-down attentional inhibition of old objects. Psychol
+Rev 104:90–122. CrossRef Medline
+Wegner DM (1989) Try not to think of a white bear. Psychol Today 23:64–66.
+Worden MS, Foxe JJ, Wang N, Simpson GV (2000) Anticipatory biasing of
+visuospatial attention indexed by retinotopically specific alpha-band elec-
+troencephalography increases over occipital cortex. J Neurosci 20:RC63.
+Medline
+Zanto TP, Rubens MT, Thangavel A, Gazzaley A (2011) Causal role of the
+prefrontal cortex in top-down modulation of visual processing and work-
+ing memory. Nat Neurosci 14:656–661. CrossRef Medline
+Noonan et al. • Mechanisms for Distractor Suppression/Target Facilitation
+J. Neurosci., February 10, 2016 • 36(6):1797–1807 • 1807
+
+

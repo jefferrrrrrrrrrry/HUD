@@ -1,0 +1,1123 @@
+Color Visibility Evaluation of In-Vehicle AR-HUD 
+Under Different Illuminance 
+
+Xia Zhong 1a, Yunuo Cheng *1b, Liwei Tian 2c 
+
+aXia Zhong: 873426189@qq.com 
+
+b*Corresponding author: 17788376920@163.com 
+
+cLiwei Tian: 673328509@qq.com 
+
+1China University of Mining and Technology, Xuzhou, Jiangsu, China, 221116; 
+
+2Intelligent Research Institute, Changan Automobile Group Co., Ltd., Chongqing China, 401133 
+
+Abstract. Drivers’ visual distraction serves as the main cause of traffic accidents, different 
+ambient  illuminance  can  also  exert  a  considerable  impact  on  the  drivers’  cognition 
+efficiency. It is therefore very important to study the color visibility of AR-HUD interface 
+under different illuminance. In this study, an evaluation experiment of digital character was 
+carried out through an in-vehicle AR-HUD based on three variables: seven colors (R, G, 
+B,  Y,P,  YR,  W)  of  character,  the  outlines(white,  grey,  none)  of  character  and  ambient 
+illuminance(daytime, night). A total of 19 stimuli were displayed to evaluate color visibility, 
+visual fatigue, color preference and visual intrusion. The experimental results showed that 
+(1): Y (4.12) and G (3.92) had apparent visibility in daytime, while R (3.88) and Y (3.80) 
+were significantly obvious in night. (2): For the outlined character, the visibility with white 
+outline  is  higher  than  that  of  grey  outline,  and  visibility  is  affected  by  the  luminance 
+contrast  between  character  and  outline.  (3):  For  the  non-outlined  character,  windshield 
+turns  into  the  display  background,  the  luminance  contrast  of  character  reaches  greater 
+visibility.   
+
+Keywords: AR-HUD, color visibility, luminance contrast, driving information, cognition 
+efficiency 
+
+1 
+
+Introduction 
+
+According to data released by the Ministry of Public Security of China in 2016, the main cause 
+of traffic accidents is the driver's inattention and distraction while driving1, bringing about a 
+large number of traffic crashes and vehicle collisions2. With the increasing use of smartphones, 
+central control displays and navigation systems, the severity of distraction is further deepened3. 
+Mimura4 found that if the driver 's sight deviates more than 2 seconds from the driveway, the 
+threat of traffic accidents increases. In order to acquire suitable driving assistance, the driver 
+perceives driving information through various internal and external displays. Particularly, 80% 
+of  information  is  visually  perceived5,  6.  However,  since  the  driver's  FOV  (field  of  view)  is 
+
+ICIDC 2022, June 17-19, Qingdao, People's Republic of China
+Copyright © 2022 EAI
+DOI 10.4108/eai.17-6-2022.2322686
+
+ 
+ 
+ 
+ 
+ 
+downward, the forward gaze rate has greatly been reduced. The driver ' s visual distraction is 
+due to lack of attention to the front FOV, visual distraction refers to the driver ' s head and eye 
+out of the front FOV. 
+
+Therefore, providing necessary information during driving with maintaining driver's FOV on 
+the  road,  can  be  an  effective  way  to  decrease  the  threat  of  traffic  accidents7.  Much  of  the 
+information  needed  by  the  driver  relies  on  the  display  screen.  In  recent  years,  first-tier 
+automobile  enterprises  have  begun  to  implement  AR-HUD  (Augmented  Reality  Head-Up 
+Display), i.e. A "virtual display" that the driver can watch with his head up, projecting real-time 
+driving information, such as speed, navigation and warning signals et al. The driver can obtain 
+driving information while looking ahead, which could reduce the risk of traffic accidents that 
+may occur due to the driver's visual distraction8. The optical breakthrough of AR-HUD provides 
+a  more  natural  image  processing  method.  This  technology  has  also  become  the  main 
+development trend of automobile human-machine interface (HMI)9. Using the whole windshield 
+as  the  display  medium,  the  display  image  and  other  information  are  fused  with  the  real 
+environment10. The AR-HUD system is a device that can not only reduce the driver ' s cognitive 
+load, but also reduce the danger of accidents caused by line-of-sight deviation11. AR-HUD is 
+developed to overcome the visual restrictions required in the aviation field12. AR graphics can 
+increase drivers’ forward situational awareness and cognition while minimizing distraction13-15. 
+It helps to assure the visual clearness and prevent the occurrence of hazardous situations in a 
+few seconds when the driver observes the dashboard16. 
+
+However, there is still much work needed to better understand how AR interface design affects 
+user’s perception of AR interface elements. In terms of color, under ordinary circumstances, the 
+greater  the  difference  in  color,  luminance,  and  chromaticity  between  the  background  color, 
+character, icons and other information objects, the higher the visibility. In addition, visibility 
+varies from light intensity. i.e. In strong light, white objects on a black background are most 
+evident, and in weak light, black objects on a white background are the clearest17. 
+
+At  present,  due  to  the  different  sizes  of  AR-HUD  system  FOV  installed  by  automobile 
+manufacturers, the colors used are different as well, the research on the colors relevant to AR-
+HUD  has  not  yet  reached  the  results.  AR-HUD  is  optically  projected  to  the  front  of  the 
+windshield of the vehicle, so it will be affected by external light such as sunlight and artificial 
+lighting when recognizing driving information. When driving, the driver's FOV is focused on 
+the road, so the road color may become its background color. In fact, the color of the road is 
+almost the same, but it may look different according to the external light intensity. Therefore, 
+from  the  macroscopic  point  of  view,  it  is  necessary  to  divide  the  experiment  into  two  parts: 
+daytime and night. In this paper, we present an experiment approach to assess color visibility, 
+and the evaluation scale was used as an important indicator for statistical analysis. 
+
+2  Method 
+
+In  this  study,  the  sample  vehicle  equipped  with  an AR-HUD  system  was  used  as  carrier  to 
+execute an experimental study on the color visibility evaluation of AR-HUD driving information. 
+In the experiment, we evaluated the visibility, fatigue, preference and visual intrusion of color 
+by  issuing  questionnaires.  Rebhan  et  al.18  believed  that  more  than  90%  of  driving-related 
+information was gathered through visual activities. Therefore, this study used stimuli obtained 
+
+ 
+ 
+through visual activities, in which stimuli for visual information other than color were excluded, 
+and the color-centric study was conducted. 
+
+The  augmented  reality  information  projected  in  the  experiment  is  the  most  core  and  most 
+concerned  information  during  driving—speed19.  According  to  the  changes  of  the  driving 
+environment, whether the recognition of the driving information projected by AR-HUD will be 
+affected by the color is explored through experiments. 
+
+2.1  Environment 
+
+Vehicle environment 
+
+This experiment uses a smart car prototype, which is equipped with an AR-HUD system, and 
+its FOV is 12˚ × 5˚. As shown in Figure 1, the driving road environment is simulated through a 
+large  curved  projection  screen,  which  maximizes  the  realization  of  a  vehicle  simulation 
+environment similar to the driving environment. 
+
+Figure 1. Vehicle simulation environment. 
+
+Luminance environment 
+
+In order to carry out the experiments, it is first stated that the ambient illumination has a great 
+influence on the luminance of the driving information. Choi 20 assessed the most important basic 
+variables—luminance and chromaticity for analyzing the visibility of LED road electro-optical 
+signage systems. In this study, since luminance is affected by ambient illumination, considering 
+the illuminance conditions for each time period, basically it is necessary to proceed with low 
+character luminance at night and high character luminance during daytime so that the driver 
+does not feel uncomfortable in reading driving information. Table 1 shows the road illuminance 
+standard  endorsed  by  the  China  Illuminating  Engineering  Society  (CIES),  which  is  the 
+illuminance standard currently applied in China21. We choose the main road as the driving area, 
+and 30lx as the illumination standard for the night driving environment. 
+
+Table 1. Standard value of motor vehicle lane illuminance(nigh). 
+
+Road type 
+Fast road, main road 
+Secondary trunk road 
+Branch road 
+
+Area 
+Downtown, commercial area 
+Cargo area 
+Residential area 
+
+Average illuminance(lx) 
+20~30 
+15~20 
+8~10 
+
+ 
+ 
+ 
+ 
+ 
+Table 2. illumination simulated in a laboratory environment. 
+
+Illuminance(lx) 
+
+Simulation conditions 
+
+Experimental 
+Environment 
+Daytime 
+
+100,000 
+
+Night 
+
+30 
+
+Turn on all the lights (converging lights and ceiling 
+lightings), turn up the screen luminance. 
+Turn off all the lights, only screen video. 
+
+Table 2 shows the illumination simulated in a real road environment in a laboratory environment, 
+and  Figure  2  shows  the  simulated  daytime  driving  environment  (left)  and  night  driving 
+environment (right). Turn off all the lights in the laboratory, only output images of night driving 
+from the projection screen, and replicate the night driving with an ambient illumination of 30lx. 
+When all the fluorescent lamps in the laboratory are turned on, and in this state, the image of 
+the  daytime  driving  is  output  through  the  projector,  and  the  bright  sunlight  during  the  day 
+(midday) can be reproduced. 
+
+Figure 2. Laboratory simulated driving conditions: daytime(left) and night(right). 
+
+2.2  Experiment materials 
+
+Variables 
+
+The colors of the driving information were selected from a total of 7 colors: Red, Orange (YR), 
+Yellow, Green, Blue, Purple, White (hereinafter referred to as R, YR, Y, G, B, P, W). In addition 
+to the basic 5 colors R, Y, G, B, P in the Munsell Color System22, YR and W were also used as 
+the colors of traffic lights. 
+
+As shown in Table 3, the measurement of luminance and color value of driving information for 
+each color was performed using a spectrophotometer. Since the luminance is affected by the 
+ambient illuminance, the environmental illuminance during daytime driving and the ambient 
+illuminance during night driving were measured separately. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 3. Luminance value of each color of driving information. 
+
+Driving 
+information 
+None 
+(Environment) 
+R 
+YR 
+Y 
+G 
+B 
+P 
+White 
+Grey 
+
+Stimuli 
+
+Lv (cd/m2), x, y 
+
+Night(30lx) 
+
+Daytime(100000lx) 
+x 
+- 
+0.271 
+0.275 
+0.275 
+0.264 
+0.256 
+0.259 
+0.27 
+- 
+
+Lv 
+92.66 
+98.71 
+106.1 
+115.3 
+110.4 
+96.35 
+91.89 
+117.2 
+95.35 
+
+y 
+- 
+0.28 
+0.289 
+0.301 
+0.299 
+0.273 
+0.277 
+0.294 
+- 
+
+Lv 
+15.8 
+16.92 
+19.23 
+34.38 
+31.21 
+13.95 
+14.06 
+34.85 
+16.23 
+
+x 
+- 
+0.366 
+0.365 
+0.35 
+0.298 
+0.251 
+0.256 
+0.317 
+- 
+
+y 
+- 
+0.314 
+0.336 
+0.407 
+0.422 
+0.261 
+0.263 
+0.359 
+- 
+
+Kim17conducted a questionnaire survey on 100 drivers who use the most instrument types in the 
+instrument panel. The results of the questionnaire survey showed that 82% of the respondents 
+believed  that  they  looked  at  the  speedometer  most  often.  Referring  to  this  result,  this  study 
+recommended speed  information  as  the driving  information,  taking 45km/h  out  of  the  speed 
+limit of 30km/h~60km/h on the city's general arterial roads as the information form, and its color 
+visibility, fatigue, preference, visual reference was assessed. 
+
+Table 4. Form of experimental driving information. 
+
+Information Form 
+
+Font Size 
+Font Style 
+Character Outline ratio 
+
+W: 242mm        H: 142mm 
+Helvetica 
+20% 
+
+As shown in Table 4, the font of driving information is based on the purpose of concentrating 
+on color evaluation, and the Helvetica font with large area and good readability was used. To 
+avoid other design elements from intrusion with the experiments, only character and navigation 
+assistance closely associated to the driving task were presented in the AR-HUD interface. Since 
+the  speed  information  is  the  driver's  highest  concern  and  is  usually  placed  in  a  prominent 
+position, the font size was 242mm in width and 142mm in height, the vertical FOV is 10°, and 
+the horizontal FOV is 17°. The outline of the character of the driving information accounts for 
+20% of the entire character. 
+
+In the experiments, a vehicle simulation environment similar to the driving environment was 
+constructed to the maximal extent, and the driving information used as the experimental stimuli 
+
+ 
+ 
+ 
+ 
+had  7  monochrome  characters  (R,  YR,  Y,  G,  B,  P,  W)  and  among  the  7  monochromatic 
+characters,  6  characters  except  W  have  white  outline  and  grey  outline  respectively.  Twelve 
+characters with outlines were made. All experiment materials are shown in Figure 3. 
+
+Figure 3. Experimental Visual Stimulus Materials. 
+
+2.3  Procedures 
+
+A  total  of  25  drivers  were  recruited  in  the  experiment.  Participants  were  aged  between 
+20~40(Mean=28.4,  SD=4.33),  with  at  least  two  years  of  driving  experience.  They  are  all 
+automotive company R&D staff who had the experience of using AR-HUD. All subjects had 
+normal visual acuity and no achromatopsia. They were informed to do ocular gymnastic before 
+the experiment.   
+
+In the formal experiment, the subjects need to sit in the driver's seat and adjust the seat to make 
+it conform to their own driving habits, and then verbally inform the experimenter that they are 
+ready.  The  simulated  driving  program  in  the  experiment  was  controlled  by  the  SCANeR 
+automatically, i.e. the subjects did not need to operate the steering wheel, and only needed to 
+evaluate  the  color  visibility,  visual  fatigue,  color  preference  and  visual  disturbance  of  each 
+stimulus material in the simulated driving environment during the daytime and night. The upper 
+limit of the presentation time of each stimulus is 10 seconds, and the driving will automatically 
+stop at that time. The subjects are required to observe the stimulus carefully within 10 seconds, 
+and evaluate each question on a 5-point Likert scale (very poor-poor-average-good-very good), 
+and Table 5 shows the list of questionnaires for each evaluation item. After the evaluation, the 
+experimenter was told to continue the experiment and presented the next stimulus at the same 
+time  until  all  stimuli  were  evaluated. The  overall  experimental  process  for  each  subject  was 
+about 15 minutes. 
+
+ 
+ 
+ 
+ 
+ 
+Table 5. Evaluation Project Questionnaire Checklist. 
+
+Driving information 
+Each color (R, YR, Y, G, B, 
+P, W) 
+
+AR-HUD 
+
+Evaluation items 
+visibility 
+fatigue 
+preference 
+Driver distraction 
+
+Question list 
+Can you read character clearly? 
+Are your eyes fatigued? 
+Do you like this color? 
+Does character obstruct vision? 
+
+If the simulated driving experiment in the daytime is carried out first, due to the large ambient 
+illumination demanded during the day, the laboratory lights are too bright, which may leave a 
+residual image in FOV, affecting subsequent experiments. In order to rule out this problem, the 
+experiment was firstly carried out under the illumination environment of driving at night, and 
+then the experiment was carried out under the illumination environment of daytime driving. The 
+subjects proceeded the dark adaptation and then performed the night driving experiment. Figure 
+4 shows the experimental state under the night driving illumination environment. Figure 5 shows 
+the experimental images in the illumination environment during daytime driving. 
+
+Figure 4. Night driving simulation. 
+
+Figure 5. Daytime driving simulation. 
+
+3  RESULT 
+
+In  order  to  evaluate  the  visibility  of AR-HUD  driving  information  perceived  by  drivers  in 
+simulated driving environment, the color of information (R, YR, Y, G, B, P) was selected as the 
+visibility evaluation factor. As an analysis method, each color, the luminance with or without 
+outline were paired to determine whether the visibility difference between the two variables is 
+statistically significant, the confidence interval is set at 95%. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3.1  Outline of character 
+
+Fig. 6 and Fig. 7 show the visibility evaluation results of whether the character has an outline in 
+the  daytime  and  night  driving  environment.  (e.g.  R  means  no  outline,  R1  means  with  white 
+outline, and R2 means with grey outline) 
+
+Figure 6. Color Visibility (daytime). 
+
+Figure 7. Color Visibility (night). 
+
+In daytime mode, the visibility of white outline is higher than that of grey outline in stimuli 
+other than Y (R2 < R1, YR2 < YR1, G2 < G1, B2 < B1, P2 < P1). The average visibility of night 
+mode shows that the visibility of white outline is the highest among all colors. 
+
+As shown in Table 6 and Table 7, the corresponding sample t-tests of the three visibility of the 
+color of the driving information were carried out, including the non-outlined (R, YR, Y, G, B, 
+P), the white outline (R1, YR1, Y1, G1, B1, P1), and the grey outline (R2, YR2, G2, B2, P2). 
+
+Table 6 Visibility assessment for character outline (daytime) 
+
+Stimuli 
+R 
+R1 
+R2 
+YR 
+YR1 
+YR2 
+Y 
+
+Visibility 
+3.08 
+4.35 
+3.39 
+2.83 
+3.65 
+2.60 
+4.15 
+
+Matching 
+R-R1 
+R1-R2 
+R2-R 
+YR-YR1 
+YR1-YR2 
+YR2-YR 
+Y-Y1 
+
+p-Value 
+.000 
+.000 
+.215 
+.000 
+.000 
+.341 
+.857 
+
+Result 
+R<R1 
+R2<R1 
+
+YR<YR1 
+YR2<YR1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Y1 
+Y2 
+G 
+G1 
+G2 
+B 
+B1 
+B2 
+P 
+P1 
+P2 
+
+4.10 
+3.65 
+3.90 
+3.86 
+3.25 
+1.15 
+3.18 
+1.95 
+1.15 
+2.80 
+1.55 
+
+Y1-Y2 
+Y2-Y 
+G-G1 
+G1-G2 
+G2-G 
+B-B1 
+B1-B2 
+B2-B 
+P-P1 
+P1-P2 
+P2-P 
+
+.067 
+.102 
+.802 
+.002 
+.001 
+.000 
+.000 
+.002 
+.000 
+.000 
+.088 
+
+G2<G1 
+G2<G 
+B<B1 
+B2<B1 
+B<B2 
+P<P1 
+P2<P1 
+
+Table 7: Visibility assessment for character outline (night) 
+
+Stimuli 
+
+Visibility 
+
+Matching 
+
+p-Value 
+
+Result 
+
+R 
+
+R1 
+
+R2 
+
+YR 
+
+YR1 
+
+YR2 
+
+Y 
+
+Y1 
+
+Y2 
+
+G 
+
+G1 
+
+G2 
+
+B 
+
+B1 
+
+B2 
+
+P 
+
+P1 
+
+P2 
+
+3.89 
+
+4.05 
+
+3.51 
+
+2.85 
+
+3.37 
+
+2.85 
+
+3.80 
+
+3.89 
+
+3.45 
+
+3.55 
+
+3.68 
+
+3.36 
+
+1.68 
+
+3.20 
+
+2.53 
+
+1.40 
+
+3.00 
+
+2.20 
+
+R-R1 
+
+R1-R2 
+
+R2-R 
+
+YR-YR1 
+
+YR1-YR2 
+
+YR2-YR 
+
+Y-Y1 
+
+Y1-Y2 
+
+Y2-Y 
+
+G-G1 
+
+G1-G2 
+
+G2-G 
+
+B-B1 
+
+B1-B2 
+
+B2-B 
+
+P-P1 
+
+P1-P2 
+
+P2-P 
+
+.045 
+
+.012 
+
+.095 
+
+.034 
+
+.045 
+
+1.000 
+
+.647 
+
+.045 
+
+.047 
+
+.600 
+
+.148 
+
+.284 
+
+.000 
+
+.003 
+
+.001 
+
+.000 
+
+.001 
+
+.006 
+
+R2<R1 
+
+YR<YR1 
+
+YR2<YR1 
+
+Y<Y1 
+
+Y2<Y1 
+
+B<B1 
+
+B2<B1 
+
+B<B2 
+
+P<P1 
+
+P2<P1 
+
+P<P2 
+
+In daytime mode, the visibility of white outline was higher than that of grey outline in stimuli 
+other than Y (R2 < R1, YR2 < YR1, G2 < G1, B2 < B1, P2 < P1). In the night mode, the visibility 
+of white outline was higher than that of grey outline under other color stimuli except G (R2 < 
+R1, YR2 < YR1, Y2 < Y1, B2 < B1, P2 < P1). Wang24 pointed out that luminance contrast has 
+a greater impact on readability in color contrast and luminance contrast, so it can be ascribed to 
+the luminance contrast between high luminance white outline and non-outline character. 
+
+Therefore,  due  to  the  comparatively  low  color  luminance  (R, YR,  B,  P)  and  the  luminance 
+contrast  between  the  white  outline  is  larger,  it  can  be  seen  that  the  visibility  of  driving 
+information  with  white  outline  is  higher  than  that  of  grey  outline.  Lin25  conducted  a  visual 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+performance test of the difference between the luminance of each color of character and the 
+luminance  of  a  grey  background.  The  study  found  that  the  greater  the  contrast  between  the 
+background  and  the  character,  the  better  the  visual  performance.  Under  a  certain  contrast 
+circumstance, the color of the character has no significant effect on the visual performance. 
+
+When the stimulus material used in this experiment was projected on the windshield, the outlines 
+of the character acted as the background. Therefore, as shown in Fig. 8 and Fig. 9, since the 
+contrast between the luminance of the character color and the luminance of the outline is greater 
+in the case of the white outline, the visibility of the driving information of the white outline is 
+deemed to be higher than that of the grey outline. (e.g. the Ratio of R1=Lv(White)/Lv(R), the 
+Ratio of R2=Lv(Grey)/Lv(R)) 
+
+Figure 8: Contrast Ratio for Outline-Character color (daytime) 
+
+Figure 9: Contrast Ratio for Outline-Character color (night) 
+
+In the daytime mode, the luminance of the white outline (117.2) and the luminance of the Y 
+character (115.3) were not significantly different, and the t-test of the corresponding samples 
+showed that the difference in the visibility of Y and Y1 is not significant. This may be because, 
+as with simultaneous contrast, human visual perception is more sensitive to the contrast of light 
+intensity than to the intensity of pure light26. Due to the low luminance contrast of Y1 with white 
+outline, it can be seen that subjects did not detect a significant difference in visibility between 
+Y and Y1. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In addition, the luminance of B (96.35) and P (91.89) is significantly lower than that of other 
+colors, and the visibility evaluation results of character information (B1, B2, P1, P2) with white 
+and grey outlines were different from those without outlines. The visibility evaluation results of 
+(B, P) were significantly different, which can also be seen as the effect of luminance contrast. 
+
+3.2  Color visibility of character 
+
+Test whether the difference in visibility of different colors without outline character information 
+on AR-HUD is statistically significant, as shown in Table 8 and Table 9, during the daytime Y, 
+G>R, YR>B=P, R, Y, G > YR > B, visibility was found to be significant in order of p-Value. 
+
+Table 8: Color visibility assessment (daytime) 
+
+Color 
+
+Y 
+
+G 
+
+R 
+
+YR 
+
+B 
+
+P 
+
+Visibility 
+
+4.12 
+
+3.92 
+
+3.08 
+
+2.84 
+
+1.16 
+
+1.16 
+
+Y, G＞R, YR＞B=P 
+
+Y 
+
+G 
+
+R 
+
+Significant 
+
+R > B, P 
+
+YR > B, P 
+
+YR 
+
+B 
+
+P 
+
+Table 9: Color visibility assessment (night) 
+
+Color 
+
+R 
+
+Y 
+
+G 
+
+YR 
+
+B 
+
+P 
+
+Visibility 
+
+3.88 
+
+3.80 
+
+3.56 
+
+2.84 
+
+1.68 
+
+1.40 
+
+R, Y, G  ＞  R, YR＞B, P 
+
+R 
+
+Significant 
+
+Y 
+
+G 
+
+R > YR, B, P 
+
+Y > YR, B, P 
+
+G > YR, B, P 
+
+YR 
+
+R, Y, G > YR  ＞  B, P 
+
+B 
+
+R, Y, G > YR  ＞  B, P 
+
+P 
+
+Reviewing prior studies on visibility in VDTs (Visual Display Terminals) environments, it was 
+found that differences in color visibility were attributed to the differences in luminance between 
+the attributes of the colors themselves27. Therefore, the reason for the high visibility of the Y 
+and G during the day can be recognized as the high luminance of the color itself. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In night mode, as shown in Figure 10, the luminance of R (16.92) was at 4th place behind Y 
+(34.38),  G  (31.21),  and YR  (19.23),  but  R  has  the  highest  average  score  for  color  visibility. 
+Statistically, Y and G were evaluated at the same level. This is thought to be due to the luminance 
+of the windshield with no driving information displayed, i.e. The luminance contrasts between 
+the background and color itself. 
+
+Figure 10: Contrast Ratio for Outline-Character color (night) 
+
+Figure  11  showed  the  luminance  contrast  of  the  background  and  color  in  daytime  and  night 
+mode. At night, the luminance contrast between the background and R is relatively higher than 
+the  luminance  contrast  between  the  background  and Y  and  G. As  a  consequence,  the  higher 
+luminance  resulting  in  higher  visibility.  Although  the  luminance  of  color  itself  affects  the 
+visibility of AR-HUD driving information, it can be seen that the luminance contrast with the 
+background also acts as an important factor. 
+
+Figure 11: Contrast ratio of Background character color 
+
+3.3  Discussion 
+
+Through  the  simulation  of  daytime  and  night  driving  in  this  study,  the  experimental  results 
+showed that in the color visibility evaluation of the AR-HUD interface, the color luminance of 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+characters and outlines have a significant impact on the visibility. The experimental data showed 
+that when the color is B or P, the visibility is the lowest, so it should be avoided when designing 
+the vehicle AR-HUD interface, so as not to reduce the driver's cognitive efficiency. 
+
+By analyzing the luminance of different colors of characters and outlines, it can be seen that the 
+white outline has a significant impact on the visibility, and the grey outline has no significant 
+impact on the visibility. Luminance contrast also affects visibility, indicating that luminance and 
+luminance  contrast  are  very  important  design  factors  when  designing  augmented  reality 
+interface colors such as AR-HUD. Suitable luminance and luminance contrast can effectively 
+increase  the  driver's  cognitive  efficiency.  Reduce  visual  fatigue  and  improve  the  interface 
+performance of in-vehicle systems. 
+
+This  study  only  explored  the  luminance  and  outline  of  speed  characters,  and  did  not  further 
+analyze  the  elements  of  color  (hue,  color  value,  chromaticity).  When  more  necessary 
+information  is  presented  in  the AR-HUD  interface,  further  research  is  required  to  determine 
+whether  the  color,  luminance  and  contrast  of  each  information  is  appropriate.  In  addition, 
+another limitation of this paper is that the study was conducted in a laboratory, not a real driving 
+environment, and the psychological impact of road accidents was ignored in the experiment. 
+The conclusions can be used as a reference for the color design of vehicle AR-HUD interface 
+characters. 
+
+4  Conclusion 
+
+(1)  In  daytime  mode,  when  the  luminance  of  color  itself  is  high,  the  visibility  is  high 
+accordingly. In night mode, R was found to have higher visibility than Y and G (both have high 
+luminance).  This  was  because  visibility  is  enhanced  by  the  luminance  contrast  from  the 
+background rather than the luminance of the character itself. B or P (low visibility) should be 
+avoided in design process. 
+
+(2)  With an outline, the outline acts as a background color to provide luminance contrast with 
+the character, thus affecting visibility. The visibility of characters with white outlines is greater 
+than that of gray outlines, and it is also greater than that of non-outlined characters (except for 
+daytime Y), so white outer outlines should be considered in the design to improve visibility. 
+
+(3)  Without  outline,  the  luminance  of  the vehicle  windshield  as  the  that  of the background 
+color,  when  the  luminance  contrast  of  the  character  is  huge,  the  visibility  is  high.  The  main 
+factor  that  affects  visibility  when  there  is  no  outline  is  the  luminance  of  the  color,  but  the 
+luminance contrast between the background and the color can also affect visibility. 
+
+References 
+
+[1]  Han  Tianyuan,  Tian  Shun,  Lv  Kaiguang,  et  al.  "Network Analysis  of  Causes  of  Major  Traffic 
+Accidents Based on Text Mining". Chinese Journal of Safety Science, 31(9): 150-156 (2021). 
+[2]  Ge  Huimin,  Zheng  Mingqiang,  Lv  Nengchao,  et  al.  "Review  of  Driving  Distraction".  Chinese 
+Journal of Transportation Engineering, 21(2): 38-55 (2021).  
+[3]  Li Wanli, Huang Jing, Xie Guoqi, et al. “A survey on vision-based driver distraction analysis”. 
+Journal of Systems Architecture, 121: 102319. (2001). 
+
+ 
+ 
+[4]  Mimura Yasuhiro.  “Effects  of  Information  Provision Activities  in  Streets  on  Driving  Speeds”. 
+Transportation Research Procedia, 3: 13-20(2014). 
+[5]  José ricardo gabriel Kuniyoshi Alex, et al. “Driver’s visual perception as a function of age. Using 
+a  driving  simulator  to  explore  driver’s  eye  movements  in  vertical  signs”.  Transportation  Research 
+Interdisciplinary Perspectives, 11: 100460(2021).   
+[6]  F. schewe M.-Vollrath. Ecological interface design effectively reduces cognitive workload – The 
+example of HMIs for speed control. Transportation Research Part F: Traffic Psychology and Behaviour, 
+72: 155-170(2020). 
+[7]  K. Tangmanee and S. Teeravarunyou, "Effects of guided arrows on head-up display towards the 
+vehicle windshield," 2012 Southeast Asian Network of Ergonomics Societies Conference (SEANES), 
+2012, pp. 1-6, doi: 10.1109/SEANES.2012.6299572. 
+[8]  Wang  William,  Zhu  Xiuling,  Chan  Kenny,  et  al.  “Digital  Holographic  System  for Automotive 
+Augmented Reality Head-Up-Display”. IEEE 27th International Symposium on Industrial Electronics 
+(ISIE), 30-1327(2018). 
+[9]  Ma Xiangdong, Jia Mengting, Hong Zhicong, et al. “Does Augmented Reality Head Up Display 
+Help A Preliminary Study on Driving Performance Through a VR Simulated Eye Movement Analysis”. 
+IEEE Access, 9. 
+[10] Li Xiaofan. “Conceptual design of human-machine interface for fully automatic driverless cars”. 
+Southeast University, (2018). 
+[11] K. Bengler, M. Götze, L. Pfannmüller and A. Zaindl, "To See or not to See – Innovative Display 
+Technologies as Enablers for Ergonomic Cockpit Concepts Ergonomic requirements future mobility 
+future functionality", Proceedings of the electronic displays Conference, 2015. 
+[12] Simran Kumari, Susenjit Ghosh, Desham Mitra, et al. “Collision Risk Assessment based on Line 
+of Sight”, IFAC-Papers Online, 53(2), Pages 14972-77(2020). 
+[13] H.  Kim,  J.  L.  Gabbard,  A.  M.  Anon  and  T.  Misu,  "Driver  Behavior  and  Performance  with 
+Augmented Reality Pedestrian Collision Warning: An Outdoor User Study," in IEEE Transactions on 
+Visualization  and  Computer  Graphics,  vol.  24,  no.  4,  pp.  1515-1524,  April  2018,  doi: 
+10.1109/TVCG.2018.2793680. 
+[14] B. Park, C. Yoon, J. Lee and K. Kim, "Augmented reality based on driving situation awareness in 
+vehicle," 2015 17th International Conference on Advanced Communication Technology (ICACT), pp. 
+593-595 (2015). 
+[15] J. Lee, C. Yoon, J. Kang, B. Park and K. Kim, "Development of lane-level guidance service in 
+vehicle augmented reality system," 2015 17th International Conference on Advanced Communication 
+Technology (ICACT), pp. 263-266(2015). 
+[16] S.H.  Lee,  J.  Choi,  and  J.  Park,  “Interactive  e-Learning  System  Using  Pattern  Recognition  and 
+Augmented Reality,” IEEE Trans. Consum. Electron., 55(2), pp. 883–890(2009). 
+[17] Kim Sang-Hoon. “A Study on Essential Elements for Visibility Enhancement of Vehicle Cluster 
+Gauge: Focused on South Korean Sedans”. Journal of the Society of Korea illusart, 10(3), 81-88(2007). 
+[18] Rebhan, S., Richter, A., Eggert, J.. Demand-Driven Visual Information Acquisition. In: Fritz, M., 
+Schiele,  B.,  Piater,  J.H.  (eds)  Computer  Vision  Systems.  ICVS  2009.  Lecture  Notes  in  Computer 
+Science, vol 5815. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-04667-4_13 (2009). 
+[19] N. J. Ward and A. Parkes, ‘‘Head-up displays and their automotive application: An overview of 
+human factors issues affecting safety,’’ Accident Anal. Prevention, 26(6), pp. 703–717(1994). 
+[20] Choi, S. Y. Kim, M.Y. Jeo H.I. “A Study on the Performance Index and visibility for LED Variable 
+Message Sign”. Journal of the Korean Institute of Electrical and Engineers Summer Conference, 10-12, 
+2002. 
+
+ 
+ 
+[21] Zhang Yubao, Dong Li, Zhang Guoying. "Research on LED Street Lights and Road Lighting Based 
+on Taguchi Method". Laser Journal, 40(05):94-98. DOI:10.14016/j.cnki.jgzz.2019.05.094(2019). 
+[22] Sally  Cochrane,  “The  Munsell  Color  System: A  scientific  compromise  from  the  world  of  art”, 
+Studies in History and Philosophy of Science Part A, 47, pp. 26-41(2014). 
+[23] N. Clayton Silver, Curt C. Braun, “Perceived readability of warning labels with varied font sizes 
+and styles”, Safety Science, Volume 16, Issues 5–6, 615-625(1993). 
+[24] Wang ZS, Li J, Feng CK et al. “A New Method to Evaluate the Readability of Head up Display”. 
+2016 2ND IEEE INTERNATIONAL CONFERENCE ON COMPUTER AND COMMUNICATIONS. 
+pp. 1019-23(2016). 
+[25] Chin  Chiuan  Lin,  “Effects  of  screen  luminance  combination  and  character  color  on  visual 
+performance with TFT-LCD”, International Journal of Industrial Ergonomics, 35(3), pp. 229-235(2005). 
+[26] Alice Bellazzi, Laura Bellia, Giorgia Chinazzo, et al. “Virtual reality for assessing visual quality 
+and lighting perception: A systematic review”, Building and Environment, 209(2022). 
+[27] Zhangfan  Shen,  Linghao  Zhang,  Rui  Li,  et  al.  “The  effects  of  color  combinations,  luminance 
+contrast, and area ratio on icon visual search performance”, Displays, 67(2021). 
+
+ 
+ 
+

@@ -1,0 +1,360 @@
+6
+1
+0
+2
+c
+e
+D
+0
+2
+
+]
+
+V
+C
+.
+s
+c
+[
+
+1
+v
+8
+5
+5
+6
+0
+.
+2
+1
+6
+1
+:
+v
+i
+X
+r
+a
+
+End-to-End Pedestrian Collision Warning System
+based on a Convolutional Neural Network
+with Semantic Segmentation
+
+Heechul Jung
+DGIST
+Daegu, Republic of Korea
+heechul@dgist.ac.kr
+
+Min-Kook Choi
+DGIST
+Daegu, Republic of Korea
+mkchoi@dgist.ac.kr
+
+Kwon Soon
+DGIST
+Daegu, Republic of Korea
+soonyk@dgist.ac.kr
+
+Woo Young Jung
+DGIST
+Daegu, Republic of Korea
+wyjung@dgist.ac.kr
+
+Abstract
+
+Traditional pedestrian collision warning systems sometimes raise alarms even when
+there is no danger (e.g., when all pedestrians are walking on the sidewalk). These
+false alarms can make it difﬁcult for drivers to concentrate on their driving. In
+this paper, we propose a novel framework for an end-to-end pedestrian collision
+warning system based on a convolutional neural network. Semantic segmentation
+information is used to train the convolutional neural network and two loss functions,
+such as cross entropy and Euclidean losses, are minimized. Finally, we demonstrate
+the effectiveness of our method in reducing false alarms and increasing warning
+accuracy compared to a traditional histogram of oriented gradients (HoG)-based
+system.
+
+1
+
+Introduction
+
+Advanced driver assistance systems (ADAS) are important for the prevention of vehicle accidents.
+ADAS contain several components, such as forward collision warning (FCW), lane departure warning
+(LDW), and pedestrian collision warning (PCW) systems. The PCW system is especially helpful
+for preventing serious damage and casualties, and as a result, many researchers and developers have
+tried to improve this system [7]. PCW systems usually rely on pedestrian detection and have an
+unfortunate tendency to produce false alarms in safe situations.
+
+For example, as shown in the image on the right side of Fig. 1, if pedestrians are walking on the
+sidewalk, then an alarm is not necessary. However, traditional pedestrian detection-based PCW
+systems produce alerts in this situation.
+It is not trivial to develop a system only using hand-
+crafted features because it requires several complex steps, including pedestrian detection and scene
+recognition. In this study, using an end-to-end framework based on a convolutional neural network
+(CNN), we build a system that solves this problem.
+
+Our contributions in this paper are summarized as follows:
+
+• We propose a novel framework for a PCW system composed of an end-to-end CNN-based
+
+learning algorithm.
+
+• We show performance improvements of the proposed PCW system, which are achieved
+
+using semantic information from images.
+
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1: Limitations of traditional PCW systems. The image on the left shows a dangerous
+situation, in which drivers must be warned. The image on the right shows a safe situation for which a
+warning is not required.
+
+There are two main advantages to our CNN-based PCW system. First, our system is effective in
+reducing false alarms compared to traditional pedestrian-detection-based PCW systems. Second,
+unlike traditional methods, our system can give warning alarms in response to cyclists as well as to
+pedestrians.
+
+2 End-to-End PCW System
+
+Fig. 2 shows the proposed architecture of the CNN for our PCW system. We use ﬁve convolutional
+layers (CONV1 ∼ CONV5) and four fully connected layers (FC1 ∼ FC4). Unlike traditional
+approaches, which have distinct pedestrian detection and warning decision stages, as shown in Fig. 3,
+our PCW system does not include a pedestrian detection stage. In other words, our system predicts
+whether the situation is dangerous directly from the M × N raw input image. This makes our
+system more accurate than traditional systems, since the varying appearance of pedestrians causes
+the pedestrian detection stage to be imperfect.
+
+Our network is a combination of two networks, one responsible for prediction and the other for
+semantic segmentation, as shown in Fig. 2. The prediction network determines whether the input
+image shows a warning situation, which is a binary classiﬁcation problem. The semantic segmentation
+network segments the input image and extracts useful semantic information to feed into prediction
+network. These two networks are simultaneously trained by minimizing the loss function as follows:
+
+Lt = Lc + λLe,
+
+(1)
+
+where Lt, Lc, and Le are the total, cross-entropy, and Euclidean loss functions, respectively. λ is a
+tuning parameter, which we set to 10−3 in order to adjust the scale between the two loss values. The
+cross-entropy loss Lc is deﬁned as follows:
+
+Lc = −
+
+1
+B
+
+B
+(cid:88)
+
+C
+(cid:88)
+
+i=1
+
+j=1
+
+tij log(o(p)
+
+ij ),
+
+(2)
+
+where B is the total number of data samples in a batch. tij is the j-th value of the ground truth label
+for the i-th data sample of the current training batch, and o(p)
+is the j-th softmax output value of the
+ij
+prediction network for the i-th data sample. C is the total number of classes; in this case, C = 2.
+This loss function helps the network to predict the situation correctly. The Euclidean loss function Le
+for the semantic segmentation network is deﬁned as follows:
+
+Le =
+
+1
+2B
+
+B
+(cid:88)
+
+i=1
+
+||o(s)
+
+i − si||2
+2,
+
+(3)
+
+where o(s)
+i ∈ IRM×N is an output vector of the last FC layer (FC4) of the semantic segmentation
+network for the i-th data sample of a batch. si ∈ IRM×N is a vectorized form of the ground truth
+segmentation image for the i-th data sample of a batch. Using this loss function, the semantic
+segmentation network learns how to segment input image semantically.
+
+These two networks share their two low level layers, CONV1 and CONV2, as shown in Fig. 2. This
+design is efﬁcient, since these lower layers produce common features such as edges or blobs, allowing
+
+2
+
+Figure 2: Proposed CNN architecture for the PCW system. The network in the box with dotted
+lines is a prediction network and the network in the gray-ﬁlled box represents a semantic segmentation
+network.
+
+us to reduce the total number of learnable parameters. The output of the two networks is integrated at
+the FC2 layer. The high level features of FC1 and FC3 are concatenated, and the features are used
+as an input to the FC2 layer. Unlike the features extracted by FC1, the features extracted by FC3
+represent semantic features of the input image. The semantic features can detect and classify objects
+implicitly, so we expect that the semantic features will be helpful for inferring dangerous situations.
+We do not use the output extracted by the FC4 layer because the dimensionality of FC4 features is
+too large: 2048 for FC3 compared to 131,072 for FC4. This huge number of dimensions requires
+many weight connections at the FC2 layer that can cause over-ﬁtting.
+
+3 Balancing Training Data
+
+It is difﬁcult to train deep neural networks if the training data are imbalanced; that is, if the amount of
+data varies signiﬁcantly between classes [4]. This results in imbalanced loss values between classes
+and failure in training the CNN. In our case, the number of images with no warning case is ﬁve times
+greater than the number of images showing a warning case. To resolve this problem, we copy the
+warning case training images in order to generate the same number of images as the non-warning
+case.
+
+4 Experimental Results
+
+4.1 CNN Parameter Details
+
+The detailed parameter settings for our network, which is similar to AlexNet [2], are as follows: The
+input image size is 512 × 256, with three channels representing RGB values. For the prediction
+network, we use CONV(11, 96, 4) - ReLU - MaxPool(3, 2) - CONV(5, 256, 1) - ReLU - MaxPool(3,
+2) - CONV(3, 384, 1) - ReLU - CONV(3, 256, 1) - ReLU - MaxPool(3, 2) - FC(256) - ReLU -
+FC(256) - ReLU - Softmax(2), where each value in brackets means CONV(kernel size, the number of
+channels, stride), MaxPool(kernel size, stride), and FC(the number of output node). For the semantic
+
+Figure 3: Structure of a traditional HoG-based PCW system. The baseline method has two stages:
+pedestrian detection and warning decision.
+
+3
+
+segmentation network, we use CONV(11, 96, 4) - ReLU - MaxPool(3, 2) - CONV(5, 256, 1) - ReLU
+- MaxPool(3, 2) - FC(2048) - FC(131072).
+
+The size of mini-batch is of 128, and the value of learning rate is of 0.001. Further, we set the value
+of weight decay to 0.0001, and the total iteration number is of 2000. For the weight initialization of
+whole weight layers, we used the method as described in [5].
+
+4.2 Dataset
+
+We use a cityscape dataset taken from urban environments to evaluate our method [3]. The dataset
+includes various objects, such as vehicles, pedestrians, and cyclists. Furthermore, each image is
+densely or sparsely annotated for semantic segmentation tasks. In our experiments, we use densely
+annotated data consisting of 2975 training images and 1525 test images. Unfortunately, the dataset
+does not provide the ground truth data for PCW, so we have annotated each image manually (0: no
+alarm, 1: warning).
+
+4.3 Comparison to an HoG-based PCW System
+
+We built a baseline algorithm, shown in Fig. 3, that includes an HoG-based pedestrian detection
+method, for comparison with our method [1]. The rule for making a determination about the danger
+of a situation was: If pedestrians exist in a dangerous region, determined manually by setting a region
+of interest from (128, 0) to (383, 255) in the input image, then a warning alarm should be provided to
+the driver. (The size of the input image is 512 × 256.). This assumption is natural since sidewalk
+regions can be signiﬁcantly reduced in these images.
+
+4.4 Results
+
+Fig. 4 shows the receiver operating characteristic (ROC) curves for each method, showing the rates of
+both true and false positives. The blue line represents the HoG-based algorithm and the red and green
+lines denote our proposed method with and without a semantic segmentation network, respectively.
+The true positive rate of the HoG-based algorithm is better than that of the other methods when
+the false positive rate is under 0.05; however, our proposed methods are superior to the HoG-based
+algorithm in other cases. In particular, our proposed method with a semantic segmentation network
+shows the best performance among the three approaches.
+
+Table 1 shows the accuracy (true positive rate) of each method at a 15% false positive rate. Our
+proposed method without the semantic segmentation network shows about a 19% improvement
+compared to the HoG-based algorithm. Furthermore, with the semantic segmentation network,
+performance was signiﬁcantly improved, by 26%.
+
+Figure 4: ROC curves for each method. The graph on the left shows the original ROC curve; the
+graph on the right shows a magniﬁed version of the ROC curve at false positive rates in the range of
+[0, 0.35].
+
+4
+
+Table 1: Warning accuracies at a 15% false positive rate.
+
+Baseline
+(HoG-based)
+
+Proposed
+(without semantic
+segmentation)
+
+Proposed
+(with semantic
+segmentation)
+
+Accuracy
+
+45%
+
+63.94%
+
+71%
+
+Fig. 5 shows qualitative results extracted from our proposed PCW system with a semantic segmenta-
+tion network. Surprisingly, our system was aware of both pedestrians and cyclists. Additionally, our
+system did not raise an alarm when there was no risk of collision with pedestrians or cyclists. This is
+a signiﬁcant beneﬁt of the use of our PCW system.
+
+Figure 5: Qualitative results. The ﬁrst row shows two result images for warning cases produced by
+the proposed method. The second row shows safe cases predicted by the proposed method.
+
+5 Conclusion
+
+We have proposed an end-to-end PCW system based on a CNN. The usefulness of traditional systems,
+based on pedestrian detection, is limited by their false alarm rate. Our system, however, is effective
+in reducing false alarms and improves system accuracy. Our model combines two networks that
+individually perform prediction and semantic segmentation tasks, and it was helpful in improving
+our proposed PCW system. One of the main contributions of this paper is a demonstration of the
+feasibility of an end-to-end PCW system. Our system could potentially be improved by replacing the
+deep neural network architecture to a more recent architecture, for example, a deep residual network
+[6]. Additionally, we believe that our proposed framework can be applied to other ADAS, such as
+LDW and FCW systems.
+
+6 Acknowledgement
+
+This work was supported by the DGIST R&D Program of the Ministry of Science of Korea (16-FA-
+07).
+
+References
+
+[1] Dalal, N. and Bill T. ‘Histograms of oriented gradients for human detection’ CVPR’05. Vol. 1.
+IEEE, 2005.
+
+[2] Krizhevsky, A., Sutskever, I., and Hinton, G. E. ‘Imagenet classiﬁcation with deep convolutional
+neural networks’ NIPS (pp. 1097-1105), 2012.
+
+5
+
+[3] Cordts, M., Omran, M., Ramos, S., Rehfeld, T., Enzweiler, M., Benenson, R., and Schiele, B.
+‘The cityscapes dataset for semantic urban scene understanding’ arXiv preprint arXiv:1604.01685,
+2016.
+
+[4] Masko, D., and Hensman, P. ‘The impact of imbalanced training data for convolutional neural
+networks’ 2015.
+
+[5] He, K., Zhang, X., Ren, S., and Sun, J. ‘Delving deep into rectiﬁers: Surpassing human-level
+performance on imagenet classiﬁcation’ ICCV (pp. 1026-1034), 2015.
+
+[6] He, K., Zhang, X., Ren, S., and Sun, J. ‘Deep residual learning for image recognition’ arXiv
+preprint arXiv:1512.03385, 2015.
+
+[7] Geronimo, D., Lopez, A. M., Sappa, A. D., and Graf, T. ‘Survey of pedestrian detection for
+advanced driver assistance systems’ IEEE transactions on pattern analysis and machine intelligence,
+32(7), 1239-1258, 2010.
+
+6
+
+

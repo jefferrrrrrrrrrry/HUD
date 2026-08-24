@@ -1,0 +1,1631 @@
+--- Page 1 ---
+Objective: The aim of this study was to evaluate the 
+effectiveness of augmented reality (AR) cues in improving 
+driving safety among elderly drivers who are at increased 
+crash risk because of cognitive impairments.
+Background: Cognitively challenging driving environ-
+ments pose a particular crash risk for elderly drivers. AR 
+cuing is a promising technology to mitigate risk by directing 
+driver attention to roadway hazards. We investigate wheth-
+er AR cues improve or interfere with hazard perception in 
+elderly drivers with age-related cognitive decline.
+Method: A total of 20 elderly (M = 73 years, SD = 5) 
+licensed drivers with a range of cognitive abilities measured 
+by a speed-of-processing (SOP) composite participated in 
+a 1-hr drive in an interactive, fixed-base driving simulator. 
+Each participant drove through six straight, 6-mile-long, 
+rural roadway scenarios following a lead vehicle. AR cues 
+directed attention to potential roadside hazards in three of 
+the scenarios, and the other three were uncued (baseline) 
+drives. Effects of AR cuing were evaluated with respect to 
+(a) detection of hazardous target objects, (b) interference 
+with detecting nonhazardous secondary objects, and (c) 
+impairment in maintaining safe distance behind a lead 
+vehicle.
+Results: AR cuing improved the detection of hazardous 
+target objects of low visibility. AR cues did not interfere 
+with detection of nonhazardous secondary objects and did 
+not impair ability to maintain safe distance behind a lead 
+vehicle. SOP capacity did not moderate those effects.
+Conclusion: AR cues show promise for improving 
+elderly driver safety by increasing hazard detection 
+likelihood without interfering with other driving tasks, 
+such as maintaining safe headway.
+Keywords: driver behavior, simulation and virtual reality, 
+sensory and perceptual processes, psychomotor processes, 
+aging and individual differences, displays and controls
+INTRODUCTION
+Elderly drivers are at particular risk for 
+motor vehicle crashes in challenging driving 
+environments (Cerelli, 1995; Chandraratna & 
+Stamatiadis, 2003; Mayhew, Simpson, & 
+Ferguson, 2006) due to age-related visual, cog-
+nitive, and physical impairments (Ball et al., 
+1998; Ball, Owsley, Sloane, Roenker, & Bruni, 
+1993). Driving tasks that require attention to 
+be divided between two assignments are 
+especially difficult (Brouwer, Waterink, van 
+Wolffelaar, & Rothengatter, 1991; Ponds, 
+Brouwer, & van Wolffelaar, 1988). For exam-
+ple, elderly drivers have been observed to have 
+trouble navigating with in-vehicle information 
+displays and driving concurrently (Dingus et 
+al., 1997). Elderly drivers also have more dif-
+ficulty compared with middle-aged drivers 
+perceiving hazards, such as pedestrians in the 
+visual periphery, likely because of limitations 
+of their useful field of view (UFOV; Bromberg, 
+Oron-Gilad, Ronen, Borowsky, & Parmet, 
+2012).
+Many elderly drivers attempt to compensate 
+for their difficulties by avoiding certain situa-
+tions, such as driving during rush hours and 
+in difficult weather conditions (Hakamies-
+Blomqvist & Wahlström, 1998). Cognitively 
+impaired elderly drivers who are aware of their 
+limitations report more avoidance behaviors 
+compared with those without impairment (Ball et 
+al., 1998). However, reliance on compensatory 
+strategies, such as avoidance, can be inadequate, 
+and some drivers may underestimate their 
+impairments, emphasizing the need for further 
+research in the relationships of cognitive aging 
+and innovative driver assistance technologies.
+Neuropsychological tests can measure func-
+tional impairments that affect elderly driver 
+safety (Dawson, Anderson, Uc, Dastrup, & 
+Rizzo, 2009; Dawson, Uc, Anderson, Johnson, & 
+Rizzo, 2010; Uc et al., 2009; Uc, Rizzo, 
+Anderson, Shi, & Dawson, 2005). In particular, 
+speed of processing (SOP), or the speed with 
+Address correspondence to Mark C. Schall Jr., MS, 
+University of Iowa, Department of Mechanical and Industrial 
+Engineering, Department of Neurology, 200 Hawkins Dr., 
+Iowa City, IA 52242; e-mail: mark-schall@uiowa.edu.
+Author(s) Note: The author(s) of this article are U.S. gov-
+ernment employees and created the article within the scope 
+of their employment. As a work of the U.S. federal govern-
+ment, the content of the article is in the public domain.
+HUMAN FACTORS
+Vol. 55, No. 3, June 2013, pp. 643-658
+DOI:10.1177/0018720812462029
+Augmented Reality Cues and Elderly Driver 
+Hazard Perception
+Mark C. Schall Jr., Michelle L. Rusch, University of Iowa, Iowa City, John D. Lee, 
+University of Wisconsin–Madison, and Jeffrey D. Dawson, Geb Thomas,  
+Nazan Aksan, and Matthew Rizzo, University of Iowa, Iowa City
+
+--- Page 2 ---
+644		
+June 2013 - Human Factors
+TABLE 1: Neuropsychological Tests That Measure Declines in Speed of Processing
+Exam
+Resource
+Description
+Trail Making Test 
+Part A (TMT-A)
+Reitan (1955, 1958)
+A visual search and visuomotor speed task that assesses 
+attention, sequencing, mental flexibility, and motor 
+function. This task requires a participant to “connect 
+the dots” of 25 consecutive targets on a sheet of 
+paper. In Version A, the targets are all numbers (1, 2, 
+3, etc.). The participant’s goal is to finish the test as 
+quickly as possible, and the time taken to complete 
+the test is used as the primary performance metric.
+Grooved 
+Pegboard Test 
+(Pegs)
+Matthews & Klove 
+(1964)
+A visuomotor coordination task that assesses 
+manipulative dexterity and coordination important for 
+driving. This task consists of placing 25 pegs, which 
+have a key along one side, into 25 randomly oriented 
+slots on a board. The pegs must be rotated to match 
+the hole before they can be inserted.
+Useful Field 
+of View Task 
+(UFOV)
+Ball & Owsley (1993); 
+Edwards et al. 
+(2005)
+A sequential test of speed of processing for visual 
+attention that relies on subtests of processing speed, 
+divided attention, and selective attention.
+which an individual performs a cognitive activ-
+ity, is one of the best indicators of cognitive 
+aging (Salthouse, 1996). A recent confirmatory 
+factor analysis of 345 elderly drivers evaluated 
+a select battery of neuropsychological tests for 
+their relevance to driving performance (Anderson 
+et al., in press). The results showed that it was 
+possible to isolate an SOP latent factor on the 
+basis of the Trail Making Test Part A (TMT-A), 
+Grooved Pegboard Test (Pegs), and the UFOV 
+task, which itself has been reported to be sensi-
+tive to crash involvement (Ball, Edwards, & 
+Ross, 2007; Ball & Owsley, 1993; Horswill et al., 
+2008; Owsley et al., 1998). Table 1 describes the 
+neuropsychological tests that composed the SOP 
+factor. The current study used this SOP factor to 
+characterize cognitive functions relevant to driv-
+ing among elderly drivers using prototype assis-
+tance technologies.
+In-vehicle driver assistance technologies, 
+such as augmented reality (AR) cuing, may help 
+direct driver attention to roadway hazards (Ho, 
+Reed, & Spence, 2007; Ho & Spence, 2005; 
+Scott & Gray, 2008), improve target detection 
+(Yeh & Wickens, 2001), and reduce collision 
+involvement (Kramer, Cassavaugh, Horrey, 
+Becic, & Mayhugh, 2007; Lee, McGehee, 
+Brown, & Reyes, 2002). AR combines natural 
+and artificial stimuli by projecting computer 
+graphics on a transparent plane (Azuma, 1997; 
+Azuma et al., 2001). The graphical augmenta-
+tion can highlight important roadway objects or 
+regions or provide informative annotations. 
+However, adding these graphical cues may also 
+interfere with driver perception of secondary 
+objects and tasks, thereby decreasing driver 
+accuracy and increasing response time for 
+detecting roadway hazards (Schall, Rusch, Lee, 
+Vecera, & Rizzo, 2010) because of masking, 
+crowding, interposition, and divided attention. 
+Furthermore, poor system reliability can affect 
+user trust (Bliss, 1997; Sorkin, 1988). High 
+false alarm (FA) rates caused by hypersensitive 
+systems have the potential to irritate a driver, 
+leading to a decline in driver responsiveness 
+and overall task performance (Bliss & Acton, 
+2003; Lees & Lee, 2007; Maltz & Shinar, 2004).
+Although some research has been performed 
+to evaluate methods for directing driver attention 
+with the use of AR cues (Kim, & Dey, 2009; 
+Tonnis, Sandor, Lange, Klinker, & Bubb, 2005), 
+limited research has been conducted on the effec-
+tiveness of AR cuing for elderly drivers with age-
+related cognitive impairments. This study 
+
+--- Page 3 ---
+Visual Cuing and Driver Hazard Perception	
+645
+assessed the utility of AR cues in alerting elderly 
+drivers with age-related cognitive impairments 
+to potential roadside hazards, such as pedestri-
+ans. The question was whether cognitively 
+impaired elderly drivers benefited from, or were 
+distracted by, additional information intended to 
+alert or warn them. We tested whether AR cues 
+improve or degrade driver response rates and 
+response times to potential hazards.
+METHOD
+Participants
+Participants were 20 elderly drivers (between 
+65 and 85 years; M = 73 years, SD = 5; males = 
+13, females = 7) recruited from the general popu-
+lation. Telephone screening prior to enrollment 
+excluded drivers with confounding medical con-
+ditions (e.g., neurodegenerative disease, anxiety, 
+depression) and those taking specific medica-
+tions (e.g., stimulants, narcotics, hypnotics) that 
+could influence performance. Consent was 
+obtained in accord with institutional guidelines. 
+All participants possessed a valid U.S. driver’s 
+license and had normal or corrected-to-normal 
+vision (determined through near and far visual 
+acuity and contrast sensitivity).
+Participants self-reported their driving his-
+tory and frequencies on the Mobility Question­
+naire (Stalvey, Owsley, Sloane, & Ball, 1999). 
+They reported an average of 56 years (SD = 6) 
+of driving experience. Weekly mileage was 1 to 
+50 miles (4/20 = 20%), 51 to 100 miles (8/20 = 
+40%), 101 to 150 miles (2/20 = 10%), or more 
+than 150 miles per week (6/20 = 30%). Of the 
+20 participants, 4 (20%) drove 2 to 4 days per 
+week, 5 (25%) drove 5 to 6 days per week, and 
+11 (55%) drove 7 days a week.
+Pearson’s correlation for the relationship 
+between weekly mileage and number of 
+days driven was 0.41 (p = .073). Spearman’s 
+correlation was almost identical (0.40, p = 
+.078), suggesting that there were no influential 
+outliers.
+Cognitive Assessment
+All participants were tested with a set of stan-
+dardized neuropsychological tools administered 
+by a trained technician during a single session. 
+An SOP composite was calculated through a 
+principal component analysis combining the 
+UFOV task, TMT-A, and Pegs (Anderson et al., 
+in press).
+Participants were screened for UFOV impair-
+ments with the Visual Attention Analyzer, 
+Model 3000 (Vision Resources, Chicago, IL; 
+Ball & Owsley, 1993; Edwards et al., 2005). 
+The UFOV task involves four subtests designed 
+to assess (a) processing speed, (b) divided atten-
+tion, (c) selective attention, and (d) selective 
+attention with a simultaneous same–different 
+discrimination at fixation. We calculated a total 
+UFOV score by summing the four subtest mea-
+sure scores as in previous studies (e.g., Anderson 
+et al., in press; Dawson et al., 2009, 2010). 
+Scores of at least 350 on Subtest (c) or 500 on 
+Subtest (d) defined UFOV impairment. These 
+selective attention subtests measure SOP when 
+distracting stimuli are present (Ball et al., 1993).
+Apparatus
+The simulator used in this study, SIREN, has 
+a four-channel display, 150° forward view, and 
+50° rear view (Lees, Cosman, Fricke, Lee, & 
+Rizzo, 2010). The screen was located in front of 
+a 1994 GM Saturn simulator cab. Two flat-
+panel speakers (8.5 × 4.5 in.) mounted on the 
+far left and right of the vehicle dashboard were 
+used to present verbal instructions from the 
+researchers. Instructions and scenario questions 
+were presented from the speakers at 83 dBA. 
+All participants were instructed on how to drive 
+in the simulator and allowed to make seat, 
+steering wheel, and mirror adjustments to 
+accommodate individual comfort preferences.
+AR Cue
+The AR cue used in this study comprised 
+broken yellow lines that gradually elongated 
+and converged in a series of eight phases to 
+form a complete rhombus (Figure 1). This 
+rhombus was not filled to convey information 
+to the driver without obstructing roadway 
+objects. The size, length, and direction of tilt of 
+the rhombus elements signaled the position and 
+distance of the object being highlighted. The 
+converging lines conveyed motion mapped to 
+the relative speed of the driver’s vehicle. Motion 
+onset can attract attention to objects (Abrams & 
+Christ, 2003) and was included in the AR cue 
+design to help direct older drivers’ attention to 
+
+--- Page 4 ---
+646		
+June 2013 - Human Factors
+Figure 1. The augmented reality (AR) cue gradually converged in eight 
+phases to form a complete rhombus. The illustration presents the cue at 
+(A) Phase 3, (B) Phase 5, and (C) Phase 7.
+targets they have trouble noticing (e.g., pedes-
+trians). The color yellow was chosen to convey 
+a warning rather than an immediate threat 
+(Chapanis, 1994; Gelasca, Tomasic, & 
+Ebrahimi, 2005). The continuously enlarging 
+rhombus subtended 0.7° of visual angle at onset 
+and 16.7° when the vehicle passed. The AR cue 
+was always centered on the object it was high-
+lighting with the base positioned below the 
+object being highlighted.
+Experimental Design and 
+Procedure
+A factorial design was used to assess the 
+effect of AR cuing as a within-subject variable. 
+The experiment consisted of six driving sce-
+narios that were separated into three unique 
+pairs. Each pair contained one driving scenario 
+conditioned with AR cues (referred to as “cued” 
+scenarios) and one scenario that was not condi-
+tioned with AR cues (referred to as “uncued” 
+scenarios) (Figure 2). The term instance con-
+veys the order of presentation of each pair.
+In each instance, the uncued roadway sce-
+nario always preceded the cued roadway sce-
+nario. The 
+uncued 
+scenarios 
+were 
+not 
+counterbalanced across instances to test for 
+potential practice or learning effects. Each of 
+the three cued scenarios included a different 
+level of cue reliability implemented as a 
+
+--- Page 5 ---
+Visual Cuing and Driver Hazard Perception	
+647
+within-subject variable. The three reliability 
+levels were (a) 0% FAs and 0% misses (no cue), 
+(b) 15% FAs and 0% misses, and (c) 0% FAs 
+and 15% misses. The FAs and misses in the sec-
+ond and third reliability levels were predeter-
+mined by the experimenters and were the same 
+for each participant. For example, in the second 
+reliability case (15% FAs, 0% misses), the AR 
+cue was presented at two separate roadside 
+locations with no object highlighted for all par-
+ticipants. Participants were always warned that 
+the AR cue may not be 100% reliable. The cued 
+scenarios were counterbalanced across instances 
+to avoid bias related to reliability of the AR cue.
+All roadway scenarios were two-lane rural 
+highways, roughly 6 miles in length, with simi-
+lar road characteristics (i.e., landscape, road 
+width). In each of the six scenarios, participants 
+approached six roadside object types, as listed 
+in Table 2. Of these object types, three were 
+labeled target objects and represented roadside 
+hazards, including pedestrians and vehicles 
+(that might enter the road ahead of the driver) 
+and warning signs (that announced crossings by 
+pedestrians or deer). The other three object 
+types were labeled secondary objects because 
+they were nonhazardous, stationary objects that 
+would not, in normal conditions, be expected to 
+move in the real world (commercial objects, 
+construction objects, recreational signs). Each 
+object type had two classifications attributed 
+with it, with each having the same target or sec-
+ondary object connotation. For example, the 
+pedestrian object type could be either a male or 
+a female, with both classifications considered 
+target objects because they might enter the road 
+ahead of the driver in the real world and thus 
+present a hazard.
+Target objects were presented roughly every 
+half mile (12 per scenario) and could be seen on 
+either side of the roadway unless the object pre-
+sented was a warning sign. Warning signs were 
+placed only on the driver (right) side of the 
+roadway, as typical in the real world. Secondary 
+objects (presented with 9 of the 12 target objects 
+in each scenario) were always located on the 
+other side of the roadway directly opposite the 
+target objects. The presence of a secondary 
+object was randomized to prevent anticipation 
+in all scenarios regardless of cuing.
+The AR cue highlighted only target objects. 
+Highlighting occurred when the participant was 
+within 350 m of a target object and was visible 
+for 11 to 13 s while the participant approached 
+at speeds between 60 and 70 mph. The AR cue 
+was updated eight times, every 43.75 m, to 
+enclose the target as the participant approached 
+it. Because secondary objects were classified as 
+nonhazardous, they were never cued. Target and 
+secondary objects were always visible from a 
+distance and were never obscured (e.g., by 
+objects in the foreground). All participants were 
+shown the target and secondary objects prior to 
+the experiment to familiarize them with the 
+objects and their classifications. Participants 
+were informed that only target objects would be 
+cued.
+In all scenarios, participants were asked to 
+flash the high beams as soon as they could clas-
+sify an upcoming target object (i.e., gender of 
+pedestrian, type of vehicle, type of warning 
+sign). Participants were not asked to respond to 
+the secondary objects using the high beams or 
+any other manual control. As soon as a partici-
+pant flashed the high beams, a white box 
+occluded both target and secondary objects to 
+prevent participants from “cheating” by looking 
+back at the objects when asked a question about 
+them. Immediately after passing a target object 
+in all scenarios, participants were asked a 
+recorded question about the target (six possi-
+bilities) or secondary objects (six possibilities) 
+that he or she may have passed in the preceding 
+200 m. Half of the questions were about target 
+objects, and half were about secondary objects, 
+in random order.
+Figure 2. Flow diagram of instances.
+
+--- Page 6 ---
+648		
+June 2013 - Human Factors
+A car-following task was added to all sce-
+narios to make the experiment more representa-
+tive of actual road demands whereby assistive 
+cues might provide a benefit (Schall et al., 
+2010). The lead vehicle’s speed fluctuated 
+between 60 and 70 mph. Participants were 
+instructed to maintain a 3- to 5-s headway from 
+the lead vehicle at all times. A message appeared 
+in all scenarios at the bottom of the screen that 
+read “Too Close” if the participant adopted 
+headway of 3 s or less. A message also appeared 
+that read “Not Close Enough” and a tailing 
+vehicle honked if the participant fell more than 
+5 s behind.
+Dependent and Independent 
+Variables
+To evaluate the effectiveness of AR cuing, two 
+outcome measures were used to assess ability to 
+direct attention, and two outcome measures were 
+used to assess interference. Cuing may draw 
+attention to cued objects, causing other objects to 
+be neglected (Yeh & Wickens, 2001). Interference 
+associated with neglect of uncued objects could 
+undermine AR systems because many important 
+hazards that drivers will need to respond to may 
+not be cued. To assess this possibility, we mea-
+sure driver response accuracy regarding uncued 
+objects. Cuing could also interfere with drivers’ 
+attention to vehicle control. To assess this possi-
+bility, we measure drivers’ ability to maintain the 
+specified headway. Table 3 defines each out-
+come measure associated with directing atten-
+tion and interference.
+Differences 
+in 
+the 
+outcome 
+measures 
+described in Table 3 were examined as a function 
+of the following independent variables: cuing 
+(cued, uncued), instance (order of scenario pre-
+sentation), age, gender, and SOP composite.
+Analysis
+Linear mixed models were fit to the data with 
+the use of likelihood-based methods. These 
+models included the main effects of age (con-
+tinuous), gender, SOP composite (continuous), 
+cuing (cued vs. uncued), instance (Instances 1 
+through 3), and cuing reliability. Contrary to 
+expectations, cuing reliability showed no effects 
+on any of the outcome measures in preliminary 
+analysis and was dropped from subsequent 
+analyses. Preliminary analyses also showed that 
+the effects of some predictors of interest (e.g., 
+cuing) vary across target type. For that reason, 
+different mixed models were completed for 
+each type of target: pedestrians, vehicles, and 
+warning signs.
+The following two-way interactions were 
+tested: (a) cuing by instance, (b) instance by 
+SOP, and (c) cuing by SOP. Collectively, these 
+systematic effects allowed us to distinguish 
+between cuing-related and non-cuing-related 
+effects. Main and interaction effects of cuing 
+TABLE 2: Description of Targets and Secondary Objects and their Classification
+Object Type
+Classification
+Target Object
+Secondary Object
+Pedestrian
+Male
+X
+ 
+Pedestrian
+Female
+X
+ 
+Vehicle
+Car
+X
+ 
+Vehicle
+Truck
+X
+ 
+Warning sign
+Pedestrian
+X
+ 
+Warning sign
+Deer
+X
+ 
+Commercial
+Phone booth
+X
+Commercial
+Dumpster
+X
+Recreational sign
+Rest area
+X
+Recreational sign
+Recreational activity
+X
+Construction
+Stationary trailer
+X
+Construction
+Barrel
+X
+
+--- Page 7 ---
+Visual Cuing and Driver Hazard Perception	
+649
+would suggest AR cue effects. A main effect of 
+instance in a beneficial direction (e.g., improv-
+ing response rates) may suggest a general learn-
+ing effect, whereas a main effect of instance in a 
+detrimental direction (e.g., declining response 
+rates) may suggest a potential fatigue effect.
+When interactions between covariates (e.g., 
+SOP) and factors were significant, slopes and 
+standard errors were estimated. Predicted esti-
+mates for the lowest quartile (≤–1.35) and high-
+est quartile (≥1.17) SOP indices were plotted to 
+illustrate two-way interactions between SOP 
+and cuing levels for headway variation.
+Higher-order effects (i.e., three-way interac-
+tions) were examined, found to be not signifi-
+cant, and dropped from subsequent analyses. 
+The model that included the three-way interac-
+tions did not show a better fit based on Akaike 
+information criterion compared with models 
+that included only two-way interactions.
+We performed formal tests of the model 
+assumptions in the analysis of the count data. 
+We found that despite the fact that counts are 
+discrete and have a lower bound of zero, the 
+residuals from the pedestrian counts and the 
+warning sign counts showed no significant 
+departure from normality, on the basis of the 
+Kolmogorov-Smirnov test, the Cramer-von 
+Mises test, and the Anderson-Darling test. We 
+also found no significant correlation between 
+the predicted values and the magnitude of the 
+residuals, suggesting that the assumption of 
+homoscedasticity was reasonable. For vehicle 
+counts, our tests suggested some violations of 
+the normality assumption, because of some 
+skewness in the data, and some heteroscedastic-
+ity, as well. To address this finding, we repeated 
+our analyses of vehicle counts on the log scale 
+and found, again, that the only significant pre-
+dictor was age.
+RESULTS
+Neuropsychological Test Summary 
+Statistics
+A principal component analysis of UFOV, 
+TMT-A, and Pegs scores showed only one 
+eigenvalue greater than 1 (1.98), and it explained 
+66% of the variability. The first principal com-
+ponent was used as the SOP composite in all 
+analyses. Table 4 shows the descriptive statis-
+tics on all three tests as well as the SOP com-
+posites for those who were UFOV impaired and 
+unimpaired.
+Outcomes Associated With 
+Directing Attention With AR 
+Cuing
+Response rate (count). Table 5 shows the 
+effect of AR cuing on response rates (counts) for 
+target objects. A main effect of cuing was 
+observed for pedestrian and warning sign target 
+objects. Participants responded to approximately 
+TABLE 3: Outcome Measures to Assess Effectiveness of Augmented Reality Cues
+Outcome Measure
+Definition
+Directing attention
+ 
+  Response rate (count)
+The number of times a participant accurately used the high beams to 
+identify target objects.
+  Time to collision at  
+    response (TCR)
+The time in seconds before potential collision with the target object 
+when the participant activated the high beams. Larger TCR values 
+indicate faster response times.
+Interference
+ 
+  Question response accuracy 
+  (QA)
+The number of times a participant correctly identified target and 
+secondary objects in response to questions during the scenarios.
+  Headway variation (HV)
+The variance in a participant’s headway from the lead vehicle in those 
+segments of the scenarios when he or she was within 400 m of a 
+target object.
+
+--- Page 8 ---
+650		
+June 2013 - Human Factors
+TABLE 5: Augmented Reality Effects on Pedestrian Count, Vehicle Count, and Warning Sign Count
+Numerator  
+Degrees of  
+Freedom
+Denominator 
+Degrees of 
+Freedom
+Pedestrian 
+Count
+Vehicle Count
+Warning Sign 
+Count
+Effect
+F
+p
+F
+p
+F
+p
+Cuing
+1
+89
+21.77
+<.01
+0.86
+.36
+25.64
+<.01
+Instance
+2
+89
+9.73
+<.01
+0.90
+.41
+0.91
+.40
+Cuing × Instance
+2
+89
+1.42
+.25
+0.15
+.86
+1.59
+.21
+Age
+1
+15
+1.72
+.21
+6.52
+.02
+1.89
+.19
+Gender
+1
+15
+0.32
+.58
+0.15
+.71
+6.98
+.02
+SOPa
+1
+15
+1.59
+.23
+1.40
+.25
+4.85
+.04
+SOP × Cuing
+1
+89
+0.92
+.34
+0.73
+.40
+1.03
+.31
+SOP × Instance
+2
+89
+1.37
+.26
+0.46
+.63
+1.58
+.21
+Note. SOP = speed of processing.
+aIn contrast, for overall count (includes all targets), the 95% confidence interval for SOP was [–0.55, 0.42].
+25% more pedestrians (difference calculated 
+as cued mean response percentage of 91.13% 
+minus uncued mean response percentage of 
+66.10%) and 5% more warning signs (cued 
+mean response percentage of 96.10% minus 
+uncued mean response percentage of 91.10%) 
+throughout the study when cued (Figure 3). A 
+main effect of cuing was not found for vehicle 
+target objects.
+A main effect of instance was observed 
+for detecting pedestrian targets. Participants 
+responded more frequently to pedestrians as the 
+instance number increased (Table 6). A main 
+effect of gender was observed for warning sign 
+targets in which male participants (least square 
+mean [LSM] = 3.99, SE = 0.05) responded to 
+more warning signs than females (LSM = 3.76, 
+SE = 0.07, p = .02). As age increased, partici-
+pants had more difficulty responding to vehicle 
+targets (slope = –0.041, SE = 0.016). Similarly, 
+as SOP composite increased, participants 
+responded to fewer warning signs (slope = 
+–0.086, SE = 0.039).
+Time to collision at response (TCR). Table 7 
+shows the effect of AR cuing on TCR for target 
+objects. Figure 4A presents LSMs and standard 
+errors of each condition of cuing. There was a 
+main effect of cuing for warning sign TCR. Par-
+ticipants responded 0.35 s sooner on average in 
+cued conditions than in uncued conditions (p = 
+.02). There was also a main effect of instance 
+for both pedestrian and warning sign TCR. Par-
+ticipants responded to pedestrians fastest during 
+the final instance (Table 6). In contrast, for 
+warning signs, participants responded faster in 
+earlier instances (Table 6).
+A main effect of gender was observed for all 
+target categories. Figure 4B presents LSMs and 
+standard errors of each target category for dif-
+ferences in gender. On average, females 
+TABLE 4: Mean SOP Scores
+Group
+UFOV
+Pegs
+TMT-A
+SOP
+UFOV unimpaired (n = 13)
+547.46 (162.73)
+  85.23 (15.55)
+29.16 (9.86)
+–0.74 (1.07)
+UFOV impaired (n = 7)
+978.57 (300.07)
+111.86 (25.93)
+39.58 (5.38)
+  1.43 (1.29)
+Note. Higher scores and composites correspond with poorer abilities. Standard deviations appear in parentheses. 
+SOP = speed of processing; UFOV = Useful Field of View Test; Pegs = Grooved Pegboard Test; TMT-A = Trail Mak-
+ing Test Part A.
+
+--- Page 9 ---
+Visual Cuing and Driver Hazard Perception	
+651
+responded 1.37 s faster than males (p < .01) to 
+target objects. Finally, a main effect of SOP was 
+observed for both pedestrian TCR (slope = 
+–0.381, SE = 0.185) and warning sign TCR 
+(slope = –0.451, SE = 0.202). Overall, as the 
+SOP composite increased, participants responded 
+more slowly to pedestrian and warning sign tar-
+get objects.
+Outcomes Associated With Interference
+Accuracy of responses to questions. Table 8 
+shows the effect of AR cuing on accuracy in 
+identifying target and secondary objects. There 
+was no main effect of cuing, small confidence 
+intervals, and similar mean values for both tar-
+gets, F(1, 90) = 0.00, p > .05, uncued 95% con-
+fidence interval (CI) [5.28, 5.47], cued 95% CI 
+[5.28, 5.47]; and secondary objects, F(1, 90) = 
+0.20, p > .05, uncued 95% CI [5.05, 5.29], cued 
+95% CI [5.11, 5.35].
+A Cuing × Instance interaction was observed 
+for target objects in which participants responded 
+less accurately in cued conditions as instance 
+number increased (Instance 1, mean number cor-
+rect = 5.58, SE = 0.15; Instance 2, mean number 
+correct = 5.40, SE = 0.15; Instance 3, mean num-
+ber correct = 5.12, SE = 0.15). A main effect of 
+gender was observed for target objects, as male 
+participants (LSM = 5.64, SE = 0.10) responded 
+more accurately to targets than did females 
+(LSM = 5.10, SE = 0.13), p < .01. As age 
+increased, participants (slope = –0.059, SE = 
+0.019) had more difficulty identifying target 
+objects correctly.
+A main effect of instance was observed for 
+secondary objects, as participants responded 
+Figure 3. Response rate (count) percentage for targets by cuing.
+TABLE 6: Least Square Means (LSM) for the Instance Main Effect
+Instance  
+Number 
+       Pedestrian Count                        Pedestrian TCR
+  Warning Sign TCR
+LSM
+p
+LSM
+p
+LSM
+p
+1
+2.82 (0.16)
+<.01
+2.60 (0.22)
+<.01
+3.98 (0.23)
+<.01
+2
+3.14 (0.16)
+<.01
+2.15 (0.22)
+<.01
+3.54 (0.23)
+<.01
+3
+3.76 (0.17)
+<.01
+2.77 (0.22)
+<.01
+3.44 (0.23)
+<.01
+2 – 1a
+0.32
+.14
+-0.45
+.08
+-0.44
+.02
+3 – 1a
+0.94
+<.01
+0.17
+.50
+-0.54
+<.01
+3 – 2a
+0.62
+.01
+0.62
+.02
+-0.10
+.58
+Note. TCR = time to collision at response. The p values were derived from follow-up Tukey pairwise comparisons.
+aDifference between LSMs of specific instances (e.g., Instance 2 – Instance 1 = 3.14 – 2.82 = 0.32).
+
+--- Page 10 ---
+652		
+June 2013 - Human Factors
+Figure 4. Time to collision at response (TCR) for (A) targets and (B) gender 
+across all target categories.
+TABLE 7: Augmented Reality Effects on Pedestrian TCR, Vehicle TCR, Warning Sign TCR
+Effect 
+Numerator 
+Degrees of 
+Freedom
+Denominator 
+Degrees of 
+Freedom
+Pedestrian TCR
+Vehicle TCR
+Warning Sign TCR
+F
+p
+F
+p
+F
+p
+Cuing
+1
+90
+2.70
+.10
+2.61
+.11
+5.24
+.02
+Instance
+2
+90
+3.28
+.04
+0.32
+.73
+4.90
+<.01
+Cuing × Instance
+2
+90
+0.11
+.90
+1.14
+.32
+0.30
+.74
+Age
+1
+16
+0.07
+.79
+0.00
+.95
+0.30
+.59
+Gender
+1
+16
+9.92
+<.01
+6.73
+.02
+6.47
+.02
+SOPa
+1
+16
+4.35
+.05
+2.66
+.12
+6.77
+.02
+SOP × Cuing
+1
+90
+0.41
+.52
+0.52
+.47
+0.00
+.99
+SOP × Instance
+2
+90
+1.01
+.37
+0.29
+.75
+0.15
+.86
+Note. TCR = time to collision at response; SOP = speed of processing.
+aThe 95% confidence interval for SOP on overall TCR was [–0.94, –0.03].
+
+--- Page 11 ---
+Visual Cuing and Driver Hazard Perception	
+653
+more accurately on average to the six questions 
+asked in each scenario as instance number 
+increased (Instance 1, mean number correct = 
+4.72, SE = 0.14; Instance 2, mean number cor-
+rect = 5.42, SE = 0.14; Instance 3, mean number 
+correct = 5.45, SE = 0.14). As SOP composites 
+increased, participants became less accurate in 
+identifying secondary objects correctly (slope = 
+–0.253, SE = 0.084).
+Headway variation. Table 9 shows the effects 
+of AR cuing on headway variation. There was no 
+main effect of cuing, F(1, 90) = 0.91, p > .05, 
+uncued 95% CI [0.04, 0.10], cued 95% CI [0.05, 
+0.11]. A main effect of instance was observed 
+when participants approached pedestrian targets 
+such that participants improved their ability to 
+maintain headway distance better in all later 
+instances (Instance 1, M = 0.10, SE = 0.16; 
+Instance 2, M = 0.06, SE = 0.16; Instance 3, M = 
+0.04, SE = 0.17). There was a main effect of SOP 
+when participants approached pedestrians (slope 
+= 0.018, SE = 0.014) such that participants with 
+higher SOP composites maintained headway dis-
+tance more precisely. There was also an interac-
+tion between SOP and cuing for headway 
+variation when participants were approaching 
+TABLE 8: Augmented Reality Effects on Accuracy in Identifying Target and Secondary Objects
+Numerator  
+Degrees of  
+Freedom
+Denominator 
+Degrees of 
+Freedom
+Target Object QA
+Secondary Object QA
+Effect
+F
+p
+F
+p
+Cuing
+1
+90
+0.00
+.95
+0.20
+.66
+Instance
+2
+90
+0.46
+.64
+11.82
+<.01
+Cuing × Instance
+2
+90
+9.08
+<.01
+2.58
+.08
+Age
+1
+16
+9.56
+<.01
+1.71
+.21
+Gender
+1
+16
+11.57
+<.01
+0.30
+.59
+SOP
+1
+16
+0.02
+.90
+9.06
+<.01
+SOP × Cuing
+1
+90
+1.97
+.16
+0.49
+.48
+SOP × Instance
+2
+90
+0.21
+.81
+1.94
+.15
+Note. QA = question response accuracy; SOP = speed of processing.
+TABLE 9: Augmented Reality Effects on Pedestrian HV, Vehicle HV, and Warning Sign HV
+Effect
+Numerator 
+Degrees of 
+Freedom
+Denominator 
+Degrees of 
+Freedom
+Pedestrian HV
+Vehicle HV
+Warning Sign HV
+F
+p
+F
+p
+F
+p
+Cuing
+1
+90
+0.17
+.68
+0.04
+.84
+3.11
+.08
+Instance
+2
+90
+4.67
+.01
+1.63
+.20
+1.10
+.34
+Cuing × Instance
+2
+90
+0.02
+.98
+1.03
+.36
+1.09
+.34
+Age
+1
+16
+0.01
+.91
+0.00
+.95
+0.09
+.77
+Gender
+1
+16
+2.50
+.13
+2.13
+.16
+1.75
+.20
+SOP
+1
+16
+5.99
+.03
+1.69
+.21
+3.04
+.10
+SOP × Cuing
+1
+90
+0.06
+.81
+7.94
+<.01
+0.02
+.89
+SOP × Instance
+2
+90
+0.45
+.64
+2.22
+.11
+0.52
+.59
+Note. HV = headway variation; SOP = speed of processing.
+
+--- Page 12 ---
+654		
+June 2013 - Human Factors
+TABLE 10: Estimated Slopes, Slope Comparisons, Standard Errors, and Comparison Results for SOP × 
+Cuinga for Vehicle Headway Variation (HV)
+Effect
+ 
+           Vehicle HV
+Slope
+SE
+p
+SOP
+0.017
+.013
+.212
+SOP × Cuing (cued)
+0.002
+.014
+.867
+SOP × Cuing (uncued)
+0.031
+.014
+.036
+SOP × Cuing (cued-uncued)
+–0.029
+.010
+.006
+Note. SOP = speed of processing.
+aEffects of SOP, stratified by cuing, with pairwise comparisons of slopes across condition.
+vehicles. Table 10 presents estimated slopes, 
+slope comparisons, standard errors, and selected 
+comparisons for this interaction. As SOP com-
+posites increased, participants had a harder time 
+maintaining headway in the uncued scenarios 
+(while approaching vehicles) relative to cued 
+scenarios.
+In summary, the most important results 
+observed relating to the potential benefits of AR 
+cuing included effects of cuing for detection of 
+pedestrians and warning signs and an effect of 
+cuing for response time (TCR) for warning 
+signs. Concerning interference, there was no 
+statistically significant effect of cuing, small 
+confidence intervals, and similar mean values 
+for both target and secondary objects on ques-
+tion response accuracy and no effect on head-
+way variation. A Cuing × Instance interaction 
+was observed on question response accuracy for 
+target objects: Participants responded less accu-
+rately in cued conditions as instance number 
+increased.
+DISCUSSION
+In this study, we investigated the potential 
+costs and benefits of using AR cues to alert 
+elderly drivers with varying SOP capacity to 
+potential roadside hazards. AR cues improved 
+participant response rates and response times 
+relative to uncued conditions, as predicted. 
+Importantly, the results showed limited evi-
+dence that AR cues interfered with perfor-
+mance. Those findings were not moderated by 
+SOP capacity and thus generally held true for 
+those with low and high SOP.
+Outcomes Associated With 
+Directing Attention
+To the extent that response likelihood, accu-
+racy, and response time to hazards contribute to 
+crash likelihood, then improvement on these 
+measures represents a benefit, and decreased 
+performance represents a cost. We interpret 
+response to potential in this experiment as haz-
+ards that have a potential safety consequence, 
+and so the degree to which cuing enhances or 
+degrades response to targets represents a safety 
+benefit or cost. In this study, no main effect of 
+AR cuing was observed for objects (vehicles) 
+of high visibility. Vehicles were generally visi-
+ble from a greater distance than pedestrian and 
+warning sign targets because of their larger size 
+and color contrast against the rural driving 
+scene. Participants responded to 25% more 
+pedestrians and 5% more warning signs in cued 
+conditions than in uncued conditions, consis-
+tent with reports of Yeh and Wickens (2001) 
+and Rusch et al. (in press) in which benefits 
+of cueing were greatest for objects of low 
+visibility.
+In addition, AR cues improved participant 
+response time (TCR) to warning signs. 
+Participants responded to these targets 0.35 s 
+faster in cued conditions than in uncued condi-
+tions. In this vein, early warnings have been 
+observed to help drivers react more quickly, 
+particularly compared with when no warning is 
+given (Lee et al., 2002). A response initiated 
+0.35 s sooner could meaningfully reduce brak-
+ing time, especially since age-related decre-
+ments to braking performance have been 
+
+--- Page 13 ---
+Visual Cuing and Driver Hazard Perception	
+655
+attributed to longer response times rather than 
+poor response execution (Martin et al., 2010).
+The observed benefits of AR cuing are also 
+consistent with findings of Kramer et al. (2007). 
+They showed that collision avoidance systems 
+can effectively alert elderly drivers even when 
+driving is affected by wind gusts or distractions, 
+such as a number-reading task. This study 
+showed benefits of AR cuing when task diffi-
+culty was increased with other driving-relevant 
+demands, such as maintaining safe headway 
+and identification of secondary objects.
+Outcomes Associated With 
+Interference
+In this study, no evidence was observed that 
+AR cues interfered with driver perception of 
+secondary objects, even for participants with 
+cognitive impairment. This finding is important 
+as the goal of the AR cuing in this application 
+was to aid the detection of critical objects, such 
+as pedestrians, without adversely affecting per-
+ception of other potential hazards. However, 
+since all drivers were familiarized with both 
+target and secondary objects prior to driving, 
+drivers may have become hypersensitive to the 
+objects and more likely to identify the objects 
+regardless of cue presence. Unexpected or 
+unfamiliar secondary hazards may have led to a 
+different result.
+Few results suggest interference of AR cuing 
+with perception of target objects. There was a 
+lone effect (of a Cuing × Instance interaction on 
+question response accuracy for target objects) 
+in which participants responded less accurately 
+in cued conditions with successive instances. 
+However, the least square means of this effect 
+showed that participants responded, on average, 
+only less than half a question worse from begin-
+ning of the testing to the end when discriminat-
+ing target objects. This difference may have 
+reflected increasing emphasis on response rate 
+and response time than on accuracy of percep-
+tion of target objects.
+Driving performance decrements, such as 
+increased headway variation, is another potential 
+adverse outcome of AR cuing. Participants’ 
+headway maintenance was not degraded in this 
+study. In fact, as SOP composites increased 
+(worsened), participants displayed superior 
+headway maintenance in the cued scenarios rela-
+tive to the uncued scenarios. Although it is pos-
+sible that this effect was not present for those 
+participants with the lowest (best) SOP compos-
+ites because there may not have been substantial 
+room for improvement, these effects suggest that 
+AR aided rather than harmed elderly drivers with 
+impairments in maintaining safer headway 
+distance. These findings of AR cuing differ 
+from those of in-vehicle displays, which have 
+been reported to impair driver performance in 
+closing headway situations (Lamble, Laakso, & 
+Summala, 1999).
+Limitations, Implications, and 
+Future Research
+This study showed similar effects of AR 
+cuing in drivers with lower and higher SOP 
+abilities. In three out of four outcome measures, 
+the interaction effect between SOP and cuing 
+was not significant. These findings may reflect 
+a limited range on SOP abilities in this sample 
+or small sample size. Also, benefits of AR cues 
+for impaired elderly drivers may be specific to 
+a subset of performance measures. In the future, 
+researchers should investigate benefits of AR 
+cuing in drivers with a range of SOP abilities as 
+measured by various performance metrics.
+System reliability has the potential to affect 
+user trust (Bliss, 1997; Sorkin, 1988). Our AR 
+system included FAs and misses to represent 
+possible errors of a real-world application. The 
+system had an overall reliability of at least 85% 
+in all driving scenarios and was greater than the 
+estimated 70% “crossover point” below which 
+unreliable automation appears to be worse than 
+no automation at all (Wickens & Dixon, 2007). 
+Further research is needed to more accurately 
+estimate this crossover point and to determine 
+how AR system reliability and alert context (e.g., 
+frequency or severity of the events being high-
+lighted, familiarity with the system) affects user 
+trust, performance, and resource allocation.
+This study simulated an austere rural envi-
+ronment where benefits of AR cuing may be 
+positively or negatively influenced by the low 
+level of distraction inherent to the setting. For 
+example, drivers may have been more likely 
+to detect a hazard in the scenarios because of 
+the small number of buildings and oncoming 
+
+--- Page 14 ---
+656		
+June 2013 - Human Factors
+vehicles present. Other driving environments 
+with more commotion, such as an urban scene, 
+may contain many driving hazards that accentu-
+ate the benefits of AR cuing. However, such a 
+setting may also make deployment of AR cues 
+unsafe, as a driver may place too much attention 
+on the warning stimuli. Researchers should 
+assess a multitude of contexts for deploying AR 
+cues in response to expected and unexpected 
+hazards in simulated and real-world settings. In 
+addition, further research should be conducted 
+to investigate the feasibility of implementing 
+AR cues into real-world motor vehicles. Studies 
+are also needed to determine whether AR cuing 
+may assist other at-risk drivers, such as younger, 
+inexperienced drivers whose neglect of hazards 
+places them at risk (Pollatsek, Fisher, & 
+Pradhan, 2006; Pradhan et al., 2005).
+ACKNOWLEDGMENTS
+This study was supported by NIH R01AG026027 
+and from support provided by the Iowa Injury 
+Prevention Research Center, the Heartland Center 
+for Occupational Health and Safety, and the Iowa 
+Center for Research by Undergraduates.
+KEY POINTS
+••
+Augmented reality (AR) cuing aided in the detec-
+tion of targets of low visibility (e.g., pedestrians, 
+warning signs).
+••
+Response times improved for targets of low vis-
+ibility (e.g., warning signs) with cuing.
+••
+AR cuing did not impair discrimination of sec-
+ondary objects.
+••
+AR cuing did not impair driver ability to maintain 
+consistent distance behind a lead vehicle.
+REFERENCES
+Abrams, R. A., & Christ, S. E. (2003). Motion onset captures atten-
+tion. Psychological Science, 14, 427–432.
+Anderson, S. W., Aksan, N., Dawson, J. D., Uc, E. Y., Johnson, A. 
+M., & Rizzo, M. (in press). Neuropsychological assessment of 
+driving safety risk in older adults with and without neurologic 
+disease. Journal of Clinical and Experimental Neuropsychology.
+Azuma, R. (1997). A survey of augmented reality. Teleoperators 
+and Virtual Environments, 6, 355–385.
+Azuma, R., Baillot, Y., Behringer, R., Feiner, S., Julier, S., & 
+MacIntyre, B. (2001). Recent advances in augmented reality. 
+IEEE Computer Graphics and Applications, 21(6), 34–47.
+Ball, K., Edwards, J. D., & Ross, L. A. (2007). The impact of speed 
+of processing training on cognitive and everyday functions. 
+Journal of Gerontology: Psychological Sciences, 62(Special 
+Issue 1), 19–31.
+Ball, K., & Owsley, C. (1993). The useful field of view test: A 
+new technique for evaluating age-related declines in visual 
+function. Journal of the American Optometric Association, 64, 
+71–79.
+Ball, K., Owsley, C., Sloane, M. E., Roenker, D. L., & Bruni, J. 
+R. (1993). Visual attention problems as a predictor of vehicle 
+crashes in older drivers. Investigative Ophthalmology and 
+Visual Science, 34, 3110–3123.
+Ball, K., Owsley, C., Stalvey, B., Roenker, D. L., Sloane, M. E., & 
+Graves, M. (1998). Driving avoidance and functional impair-
+ment in older drivers. Accident Analysis & Prevention, 30, 
+313–322.
+Bliss, J. (1997). Alarm reaction patterns by pilots as a function of 
+reaction modality. International Journal of Aviation Psychol-
+ogy, 7, 1–14.
+Bliss, J., & Acton, S. A. (2003). Alarm mistrust in automobiles: 
+How collision alarm reliability affects driving. Applied Ergo-
+nomics, 34, 499–509.
+Bromberg, S., Oron-Gilad, T., Ronen, A., Borowsky, A., & Parmet, 
+Y. (2012). The perception of pedestrians from the perspective 
+of elderly experienced and experienced drivers. Accident Anal-
+ysis & Prevention, 44, 48–55.
+Brouwer, W. H., Waterink, W., Van Wolffelaar, P. C., & Rothengat-
+ter, J. A. (1991). Divided attention in experienced young and 
+older drivers: Lane tracking and visual analysis in a dynamic 
+driving simulator. Human Factors, 33, 573–582.
+Cerelli, E. C. (1995). Crash data and rates for age-sex groups 
+of drivers, 1994. Washington, DC: National Highway Traffic 
+Safety Administration, National Center for Statistics and Anal-
+ysis, Research and Development.
+Chandraratna, S. K., & Stamatiadis, N. (2003). Problem driving 
+maneuvers of elderly drivers. Transportation Research Record, 
+1843, 89–95.
+Chapanis, A. (1994). Hazards associated with three signal words 
+and four colors on warning signs. Ergonomics, 37, 265–275.
+Dawson, J. D., Anderson, S. W., Uc, E. Y., Dastrup, E., & Rizzo, 
+M. (2009). Predictors of driving safety in early Alzheimer’s 
+disease. Neurology, 72, 521–527.
+Dawson, J. D., Uc, E. Y., Anderson, S. W., Johnson, A. M., & 
+Rizzo, M. (2010). Neuropsychological predictors of driving 
+errors in older adults. Journal of the American Geriatrics Soci-
+ety, 58, 1090–1096.
+Dingus, T. A., Hulse, M. C., Mollenhauer, M. A., Fleischman, R. 
+N., Mcgehee, D. V., & Manakkal, N. (1997). Effects of age, 
+system experience, and navigation technique on driving with 
+an advanced traveler information system. Human Factors, 39, 
+177–199.
+Edwards, J. D., Vance, D. E., Wadley, V. G., Cissell, G. M., Roen-
+ker, D. L., & Ball, K. K. (2005). Reliability and validity of 
+useful field of view test scores as administered by personal 
+computer. Journal of Clinical and Experimental Neuropsy-
+chology, 27, 529–543.
+Gelasca, E. D., Tomasic, D., & Ebrahimi, T. (2005, January). 
+Which colors best catch your eyes: A subjective study of color 
+saliency. Paper presented at the First International Workshop 
+on Video Processing and Quality Metrics for Consumer Elec-
+tronics, Scottsdale, AZ.
+Hakamies-Blomqvist, L., & Wahlström, B. (1998). Why do older 
+drivers give up driving? Accident Analysis & Prevention, 30, 
+305–312.
+Ho, C., Reed, N., & Spence, C. (2007). Multisensory in-car 
+warning signals for collision avoidance. Human Factors, 49, 
+1107–1114.
+
+--- Page 15 ---
+Visual Cuing and Driver Hazard Perception	
+657
+Ho, C., & Spence, C. (2005). Assessing the effectiveness of various 
+auditory cues in capturing a driver's visual attention. Journal of 
+Experimental Psychology–Applied, 11, 157–174.
+Horswill, M. S., Marrington, S. A., McCullough, C. M., Wood, J., 
+Pachana, N. A., McWilliam, J., & Raikos, M. K. (2008). The 
+hazard perception ability of older drivers. Journal of Gerontol-
+ogy: Psychological Sciences, 63, 212–218.
+Kim, S., & Dey, A. K. (2009). Simulated augmented reality wind-
+shield display as a cognitive mapping aid for elder driver naviga-
+tion. In Proceedings of the 27th International SIGCHI conference 
+on human factors in computing systems (pp. 133–142). New 
+York, NY: Association for Computing Machinery.
+Kramer, A. F., Cassavaugh, N., Horrey, W. J., Becic, E., & May-
+hugh, J. L. (2007). Influence of age and proximity warning 
+devices on collision avoidance in simulated driving. Human 
+Factors, 49, 935–949.
+Lamble, D., Laakso, M., & Summala, H. (1999). Detection thresh-
+olds in car following situations and peripheral vision: Impli-
+cations for positioning of visually demanding in-car displays. 
+Ergonomics, 42, 807–815.
+Lee, J. D., McGehee, D. V., Brown, T. L., & Reyes, M. L. (2002). 
+Collision warning timing, driver distraction, and driver 
+response to imminent rear-end collisions in a high-fidelity 
+driving simulator. Human Factors, 44, 314–334.
+Lees, M. N., Cosman, J. D., Fricke, N., Lee, J. D., & Rizzo, M. 
+(2010). Translating cognitive neuroscience to the driver's oper-
+ational environment: A neuroergonomics approach. American 
+Journal of Psychology, 123, 391–411.
+Lees, N., & Lee, J. D. (2007). The influence of distraction and driv-
+ing context on driver response to imperfect collision warning 
+systems. Ergonomics, 30, 1264–1286.
+Maltz, M., & Shinar, D. (2004). Imperfect in-vehicle collision 
+avoidance warning systems can aid drivers. Human Factors, 
+46, 357–366.
+Martin, P., Audet, T., Corriveau, H., Hamel, M., D’Amours, M., & 
+Smeesters, C. (2010). Comparison between younger and older 
+drivers of the effect of obstacle direction on the minimum 
+obstacle distance to brake and avoid a motor vehicle accident. 
+Accident Analysis & Prevention, 42, 1144–1150.
+Matthews, C. G., & Klove, K. (1964). Instruction manual for the 
+Adult Neuropsychology Test Battery. Madison: University of 
+Wisconsin Medical School.
+Mayhew, D. R., Simpson, H. M., & Ferguson, S. A. (2006). Colli-
+sions involving senior drivers: High-risk conditions and loca-
+tions. Traffic Injury Prevention, 7, 117–124.
+Owsley, C., Ball, K., McGwin, G., Jr., Sloane, M. E., Roenker, D. 
+L., White, M. F., & Overley, E. T. (1998). Visual processing 
+impairment and risk of motor vehicle crash among older adults. 
+JAMA: The Journal of the American Medical Association, 279, 
+1083–1088.
+Pollatsek, A., Fisher, D. L., & Pradhan, A. (2006). Identifying and 
+remedying failures of selective attention in younger drivers. 
+Current Directions in Psychological Science, 15, 255–259.
+Ponds, W., Brouwer, W., & van Wolffelaar, P. (1988). Age differ-
+ences in divided attention in a simulated driving task. Journal 
+of Gerontology, 6, 151–156.
+Pradhan, A. K., Hammel, K. R., DeRamus, R., Pollatsek, A., 
+Noyce, D. A., & Fisher, D. L. (2005). Using eye movements 
+to evaluate effects of driver age on risk perception in a driving 
+simulator. Human Factors, 47, 840–852.
+Reitan, R. M. (1955). The relation of the trail making test as an 
+indicator of organic brain damage. Journal of Consulting Psy-
+chology, 19, 393–394.
+Reitan, R. M. (1958). Validity of the trail making test as an indica-
+tor of organic brain damage. Perceptual and Motor Skills, 8, 
+271–276.
+Rusch, M., Schall, M., Jr., Gavin, P., Lee, J. D., Vecera, S., & 
+Rizzo, M. (in press). Directing driver attention with augmented 
+reality cues. Transportation Research Part F: Traffic Psychol-
+ogy and Behaviour.
+Salthouse, T. A. (1996). The processing-speed theory of adult 
+age differences in cognition. Psychological Review, 103, 
+403–428.
+Schall, M., Jr., Rusch, M., Lee, J., Vecera, S., & Rizzo, M. (2010). 
+Attraction without distraction: Effects of augmented reality 
+cues on driver hazard perception. Journal of Vision, 10, 236.
+Scott, J. J., & Gray, R. (2008). A comparison of tactile, visual, and 
+auditory warnings for rear-end collision prevention in simu-
+lated driving. Human Factors, 50, 264–275.
+Sorkin, R. D. (1988). Why are people turning off our alarms? Jour-
+nal of the Acoustical Society of America, 84, 1107–1108.
+Stalvey, B. T., Owsley, C., Sloane, M. E., & Ball, K. K. (1999). The 
+Life Space Questionnaire: A measure of the extent of mobility 
+of older adults. Journal of Applied Gerontology, 18, 460–478.
+Tonnis, M., Sandor, C., Lange, C., Klinker, G., & Bubb, H. (2005). 
+Experimental evaluation of an augmented reality visualization 
+for directing a car driver’s attention. In Proceedings of Sym-
+posium on Mixed and Augmented Reality (ISMAR ’05) (pp. 
+56–59). Washington, DC: IEEE Computer Society.
+Uc, E. Y., Rizzo, M., Anderson, S. W., Shi, Q., & Dawson, J. D. 
+(2005). Driver landmark and traffic sign identification in early 
+Alzheimer’s disease. Journal of Neurology, Neurosurgery & 
+Psychiatry, 76, 764–768.
+Uc, E. Y., Rizzo, M., Johnson, A. M., Dastrup, E., Anderson, S. W., 
+& Dawson, J. D. (2009). Road safety in drivers with Parkinson 
+disease. Neurology, 73, 2112–2119.
+Wickens, C. D., & Dixon, S. R. (2007). The benefits of imperfect 
+diagnostic automation: A 517 synthesis of the literature. Theo-
+retical Issues in Ergonomics Science, 8, 201–212.
+Yeh, M., & Wickens, C. D. (2001). Display signaling in aug-
+mented reality: Effects of cue reliability and image realism on 
+attention allocation and trust calibration. Human Factors, 43, 
+355–365.
+Mark C. Schall Jr. is a PhD student in the Mechanical 
+and Industrial Engineering Department at the 
+University of Iowa. He received his MS in industrial 
+engineering from the University of Iowa in 2011.
+Michelle L. Rusch is a postdoctoral fellow in the 
+Departments of Neurology and Mechanical and 
+Industrial Engineering at the University of Iowa. She 
+received her PhD in human computer interaction 
+from Iowa State University in 2008.
+John D. Lee is a professor of industrial and systems 
+engineering and the director of the Cognitive 
+Systems Laboratory at the University of Wisconsin–
+Madison. He received his PhD in mechanical engi-
+neering in 1992 from the University of Illinois at 
+Urbana-Champaign.
+
+--- Page 16 ---
+658		
+June 2013 - Human Factors
+Jeffrey D. Dawson is a professor, the associate dean 
+for faculty affairs, and the director of graduate stud-
+ies in the Department of Biostatistics at the University 
+of Iowa. He received his ScD in biostatistics from 
+Harvard University in 1991.
+Geb Thomas is an associate professor of industrial 
+engineering and the director of the Graphical 
+Representation of Knowledge Laboratory at the 
+University of Iowa. He received his PhD in indus-
+trial engineering in 1996 from Pennsylvania State 
+University.
+Nazan Aksan is a research scientist in the department 
+of neurology at the University of Iowa. She received 
+her PhD in psychology from the University of 
+Wisconsin–Madison in 2001.
+Matthew Rizzo is a professor of neurology, engi-
+neering, and public policy at the University of Iowa, 
+where he directs the Division of Neuroergonomics. 
+He received his MD in 1979 from Johns Hopkins 
+University School of Medicine.
+Date received: September 28, 2011
+Date accepted: August 24, 2012

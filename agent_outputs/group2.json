@@ -1,0 +1,314 @@
+[
+  {
+    "idx": 9,
+    "data_source": "jina_full",
+    "scenario_brief": "城市道路驾驶模拟视频（Unity3D生成+AE叠加），考察AR-HUD导航/碰撞预警图形的水平/垂直/混合空间面定位对非注意盲视的影响；碰撞预警实验包含行人横穿与前车制动两类事件。",
+    "T_onset": {
+      "value": "未明确TTC阈值；警告与触发对象同步出现（行人冲出/前车刹车点附近）",
+      "source": "原文Section 3.1.2/未明确报告具体TTC"
+    },
+    "T_duration": {
+      "value": "3 s（碰撞预警图形持续3秒，'a duration proven appropriate' 引用Ma et al. 2021）",
+      "source": "原文Section 3.1.2 'the warning graphic persists for 3 s'"
+    },
+    "T_graded": "No",
+    "T_L1_to_L2_interval": "不分级",
+    "T_L2_to_L3_interval": "不分级",
+    "S_planar_color": {
+      "value": "导航图形：蓝色（基于Gabbard 2020 robust）；碰撞预警图形：红色（增强警示，引用Kim/Friedrich/Chapanis）；两者透明度均为0.75",
+      "source": "原文Section 2.1.2 与 3.1.2"
+    },
+    "S_planar_dynamics": {
+      "value": "动态-闪烁（blinking效果，'dynamic effect of the navigation graphics was set to blinking'）",
+      "source": "原文Section 2.1.2"
+    },
+    "S_planar_shape": {
+      "value": "导航：箭头/方向指示图形；碰撞预警：图形与警示对象位置对齐（pedestrian/前车），具体几何未给出（见Table 1 & Table 5）",
+      "source": "原文Table 1/Table 5"
+    },
+    "S_3d_layout": {
+      "value": "三种条件对比：水平面（horizontal/near-ground）、垂直面（vertical/perpendicular to ground）、混合面（mixed-plane，二者结合）",
+      "source": "原文Section 2.1.2/3.1.2"
+    },
+    "S_3d_fov": {
+      "value": "屏幕尺寸约143.9 cm宽 × 81.0 cm高（模拟前风挡比例），未给HUD视场角度数",
+      "source": "原文Section 2.1.1"
+    },
+    "S_3d_relpos": "三种条件分别为路面锁定(road-conformal水平面)/屏幕固定+世界锁定混合(垂直面approximating windshield-fixed)/混合面(mixed)；碰撞预警条件下'warning graphic's position aligns with the warning object'即行人锁定/前车锁定",
+    "key_findings_oneline": "AR-HUD碰撞预警图形的空间面位置不显著影响非注意盲视频次；但垂直面在工作负荷与实用性UX上最佳，混合面在前车碰撞反应时与享乐性UX上最佳；水平面不适合行人碰撞预警。",
+    "needs_review": "T_onset未明确报告具体TTC阈值（仅说与对象同步出现）；S_3d_fov为屏幕尺寸而非HUD视场角；研究为视频呈现而非真实HUD投影"
+  },
+  {
+    "idx": 10,
+    "data_source": "pdf_full",
+    "scenario_brief": "AR可穿戴设备(HoloLens)给行人本人提供视觉碰撞预警：当行人视线被建筑/卡车遮挡或情景感知低时，通过头戴AR眼镜投影来车方向、路径、冲突点与TTC文字。",
+    "T_onset": {
+      "value": "实时触发（系统在检测到潜在冲突后激活）；评估示例中显示TTC=16 s（来车距冲突点16秒）",
+      "source": "原文P5 Fig.3 '16 s' 与 P3 '当冲突检测到'"
+    },
+    "T_duration": {
+      "value": "持续显示直至冲突解除；sidebar在冲突车辆进入warning window后消失；GPS/IMU实时更新（采样率1 Hz降采样自600 Hz）",
+      "source": "原文P5/P9"
+    },
+    "T_graded": "No",
+    "T_L1_to_L2_interval": "不分级（提供单一警告界面+sidebar指向）",
+    "T_L2_to_L3_interval": "不分级",
+    "S_planar_color": {
+      "value": "未给出具体RGB；遵循'general warning information design rules, such as color code'（红色路径箭头，红点表示冲突点，见Fig.11 红色为projected/绿色为ideal仅用作可视化）",
+      "source": "原文P4/P10 Fig.11"
+    },
+    "S_planar_dynamics": {
+      "value": "动态：基于行人/车辆GPS+IMU实时投影更新；arrow位置与TTC实时刷新；sidebar在车辆进入FOV后消失",
+      "source": "原文P5/P9"
+    },
+    "S_planar_shape": {
+      "value": "六类组件：vehicle location点 + expected vehicle path（线段/曲线箭头）+ expected conflict point（红点）+ collision time（数字文字'16 s'）+ warning symbol + sidebar+arrow吸引注意（见Fig.2）",
+      "source": "原文Fig.2 P4"
+    },
+    "S_3d_layout": {
+      "value": "垂直虚像面（HoloLens头戴AR投影到2 m前方虚拟投影平面）；行人头部局部坐标系（透视投影）",
+      "source": "原文P4 'optimal projected distance was 2 m'"
+    },
+    "S_3d_fov": {
+      "value": "Warning window设计为60°×30°矩形区域（在2 m投影距离下为2.31 m × 1.16 m）；HoloLens实际FOV仅35°×17°，无法完整呈现设计窗口（局限性）",
+      "source": "原文P4/P12"
+    },
+    "S_3d_relpos": "行人头部固定(头戴HMD屏幕固定) + 内部信息为世界锁定（通过透视投影把世界坐标映射至2 m虚像面）；箭头/conflict点跟随车辆-行人相对位置实时锁定",
+    "key_findings_oneline": "提出基于HoloLens的行人侧AR预警系统与透视投影算法；vehicle path斜率平均误差0.074、点位平均距离0.253（warning窗口2.31×1.16），算法可实时正确呈现来车信息。",
+    "needs_review": "颜色字段未给具体RGB（仅遵循通用color code）；未做正式人因被试评估；HoloLens实际FOV不足设计要求"
+  },
+  {
+    "idx": 11,
+    "data_source": "pdf_full",
+    "scenario_brief": "应急服务车辆（救护/消防/警察）在拥堵或缓行交通中接近事故现场场景；通过50名普通驾驶员调查分析其在缓行交通中的注意力分散，提出ES车辆全风挡AR-HUD原型设计框架。",
+    "T_onset": {
+      "value": "未明确报告TTC阈值（论文为设计框架/需求调研，无实验数据）",
+      "source": "未报告"
+    },
+    "T_duration": {
+      "value": "未报告",
+      "source": "未报告"
+    },
+    "T_graded": "未报告",
+    "T_L1_to_L2_interval": "未报告",
+    "T_L2_to_L3_interval": "未报告",
+    "S_planar_color": {
+      "value": "未报告（论文仅展示HUD原型截图Fig.5但未给出色值）",
+      "source": "未报告"
+    },
+    "S_planar_dynamics": {
+      "value": "未报告（论文提及AR实时叠加但无动效具体参数）",
+      "source": "未报告"
+    },
+    "S_planar_shape": {
+      "value": "未明确给出具体几何形状；提出全风挡AR投影显示navigation与manoeuvring选项（Fig.5原型）",
+      "source": "原文Fig.5/未报告具体几何"
+    },
+    "S_3d_layout": {
+      "value": "Full-windshield HUD全风挡投影（vs HDD仪表盘对比），AR图形superimposed on real-life scene",
+      "source": "原文Section VI.C"
+    },
+    "S_3d_fov": {
+      "value": "Full-windshield设计（全风挡覆盖），未给出具体视场角度数",
+      "source": "未报告"
+    },
+    "S_3d_relpos": "世界锁定（world-conformal，AR路线叠加在外部环境上real-life scene）",
+    "key_findings_oneline": "通过50名驾驶员问卷揭示拥堵中常见分心行为（音乐90%、读短信60%、通话75%-80%等）；提出EV→CV信息中断+AI路径建议+全风挡AR-HUD的设计框架。",
+    "needs_review": "全篇为需求调研+设计框架，无具体警示时空参数（颜色/形状/TTC/FOV均未量化）；多数字段需标记为未报告"
+  },
+  {
+    "idx": 12,
+    "data_source": "pdf_full_chinese_companion",
+    "scenario_brief": "驾驶模拟平台V2I网联场景：城市双向四车道（车道宽3.5m，限速60km/h），主车右车道行驶，遇被路边公交车遮挡的横穿行人事件；3种预警系统(Baseline/HDD/HUD) × 2天气(晴/雾)；N=34",
+    "T_onset": {
+      "value": "100m处发出预警（语音'注意前方行人'+HUD/HDD视觉预警）；60m处行人被激活以1m/s开始过马路。提前预警距离=100m（约6s @60km/h）",
+      "source": "中文版P3-4 §1.2 + Fig.4(b)"
+    },
+    "T_duration": {
+      "value": "HUD/HDD界面安全预警模块持续显示行人过街图形符号，直到车辆经过行人位置后才消失",
+      "source": "中文版P3-4 §1.2"
+    },
+    "T_graded": "No",
+    "T_L1_to_L2_interval": "不分级（两级语音/视觉同时呈现，无紧急度分级）",
+    "T_L2_to_L3_interval": "不分级",
+    "S_planar_color": {
+      "value": "未明确报告RGB（HUD/HDD界面包含①导航 ②车速/限速/异常车辆 ③安全辅助/前车间距 ④娱乐通信 4模块；行人过街图形符号在③安全辅助模块中显示）",
+      "source": "中文版P3 Fig.2/Fig.4(c)"
+    },
+    "S_planar_dynamics": {
+      "value": "静态视觉符号 + 同时听觉语音提示（一次'注意前方行人'）；视觉信号在100m触发后保持静态，直到通过行人位置消失",
+      "source": "中文版P3-4 §1.2"
+    },
+    "S_planar_shape": {
+      "value": "行人过街图形符号（具体几何样式见Fig.4(c)，但论文未给出尺寸/SVG规格）",
+      "source": "中文版Fig.4(c)"
+    },
+    "S_3d_layout": {
+      "value": "HUD投影至挡风玻璃驾驶人前方道路视野内（HUD界面位置见Fig.3(b)）；HDD置于仪表盘控制面板中间（位置见Fig.3(a)）",
+      "source": "中文版Fig.3"
+    },
+    "S_3d_fov": {
+      "value": "未明确报告HUD视场角",
+      "source": "中文版未报告"
+    },
+    "S_3d_relpos": "屏幕固定(screen-fixed)——HUD界面分模块布局，行人警示在固定的'安全辅助'区，非随行人位置动态贴合",
+    "key_findings_oneline": "网联HUD预警显著优于HDD与Baseline：首次制动距离(db)增加(HUD最早=27.3m vs Baseline=64.5m，△=37m)、最小冲突距离更大(HUD=20.96m vs Baseline=10.75m)、最大减速度更小(HUD=5.03 vs Baseline=8.30 m/s²)；雾天条件下HUD优势更明显（避险/恢复阶段安全水平改善p<0.001）",
+    "needs_review": "数据已通过中文版PDF(华南理工大学学报 2024)补全；Tandfonline英文版仅abstract可读但中文companion paper(同一研究组Yang Bian/Yu Zhang)提供了完整时空设计与定量结果。HUD视场角参数未在两版中报告"
+  },
+  {
+    "idx": 13,
+    "data_source": "pdf_full",
+    "scenario_brief": "VR Doctoral Consortium方法论提案：使用Cogent Lab中保真模拟器（94°曲面投影）+ Pioneer Cyber Navi真实AR-HUD（780×260 px, FOV 15°, 虚像~3m），评估单次注视时长对认知隧道与无意视盲的影响。",
+    "T_onset": {
+      "value": "实验性操控的单次注视时长（2/5/10/15/20/30/40/50 s共8级），非真实TTC触发",
+      "source": "原文Phase 1"
+    },
+    "T_duration": {
+      "value": "等同于操控的注视时长（2 s至50 s共8等级）；当前NHTSA上限标准为20 s，论文质疑该阈值是否适用于AR-HUD",
+      "source": "原文Phase 1"
+    },
+    "T_graded": "No",
+    "T_L1_to_L2_interval": "不分级（关注注视时长阈值操控）",
+    "T_L2_to_L3_interval": "不分级",
+    "S_planar_color": {
+      "value": "未报告（论文聚焦评估方法，未指定具体颜色研究）",
+      "source": "未报告"
+    },
+    "S_planar_dynamics": {
+      "value": "AR HUD可显示screen-relative和conformal两类图形（'AR HUD can display graphics that are both screen-relative and conformal to the simulated world'）；具体动效未指定",
+      "source": "原文Fig.1 caption"
+    },
+    "S_planar_shape": {
+      "value": "未报告具体几何（方法论提案，使用random letter reveal技术作为生成性psychophysical刺激；具体次任务包括incoming text messaging和picking from a list）",
+      "source": "原文Phase 1"
+    },
+    "S_3d_layout": {
+      "value": "Pioneer Cyber Navi AR HUD（screen-relative + conformal混合能力）；虚像距离~3 m；与perceptually overlaid into dynamic CG-generated driving scene",
+      "source": "原文Section 3"
+    },
+    "S_3d_fov": {
+      "value": "HUD显示区域780×260 px，FOV 15°，虚像距离~3 m",
+      "source": "原文Section 3"
+    },
+    "S_3d_relpos": "Conformal AR graphics能力（既支持screen-relative屏幕固定，也支持world-conformal世界锁定）；具体研究阶段使用何种relpos未指定",
+    "key_findings_oneline": "提出AR-HUD干扰潜势的双指标评估方法（CDT中央检测+PDT周边检测）；建议探索更长单次注视时长（5-50s）对认知隧道与无意视盲的影响，为博士开题方法论。",
+    "needs_review": "方法论提案/博士开题阶段，无定量结果与具体颜色/形状/动效参数；S_3d_relpos字段未指定研究具体使用类型"
+  },
+  {
+    "idx": 14,
+    "data_source": "pdf_full",
+    "scenario_brief": "Toyota高保真moving-base驾驶模拟器（7.1 m穹顶+360°投影+6-DOF运动平台），城市场景中行人从右向左横穿；驾驶员维持30 km/h并执行5位数字记忆次任务（注视分心至副驾屏幕）；单次surprise event触发FCW。",
+    "T_onset": {
+      "value": "TTC=1.8 s触发audio-visual警示（对应Setting 1/2/3/4）；Setting 3/4 HUD额外在TTC=2.5 s作为'cautionary'第一阶段触发",
+      "source": "原文Section 2.2/Table 1"
+    },
+    "T_duration": {
+      "value": "Audio-visual警告持续1.8 s（重复至到达冲突点）；HUD框架随行人从左移动至车辆中心持续显示；brake pulse持续约0.2 s（峰值减速度3 m/s²）",
+      "source": "原文Section 2.2/Fig.3"
+    },
+    "T_graded": "Yes（Settings 3/4分两阶段：TTC=2.5 s第一阶段HUD+单次57 dBA提示音 → TTC=1.8 s第二阶段audio-visual警告64 dBA）",
+    "T_L1_to_L2_interval": "0.7 s（TTC 2.5 s → TTC 1.8 s之间间隔）",
+    "T_L2_to_L3_interval": "不适用（仅二级分级）",
+    "S_planar_color": {
+      "value": "未报告具体RGB；instrument cluster中flashing'brake!'文字（日文）+ HUD中将行人framing高亮（参见Fig.3右图）",
+      "source": "原文Fig.3"
+    },
+    "S_planar_dynamics": {
+      "value": "动态：HUD框架随行人从左侧移动至车辆中心（'framing moved together with the pedestrian from the left to the vehicle center'）；instrument cluster中文字闪烁（flashing screen）",
+      "source": "原文Section 2.2"
+    },
+    "S_planar_shape": {
+      "value": "HUD警示形状为pedestrian framing（围绕行人的方框，指示威胁的nature和position）；instrument cluster为闪烁文字'brake!'",
+      "source": "原文Fig.3"
+    },
+    "S_3d_layout": {
+      "value": "HUD投影至windscreen挡风玻璃；instrument cluster在仪表盘speedometer附近（HDD对照）",
+      "source": "原文Section 2.2"
+    },
+    "S_3d_fov": {
+      "value": "未报告HUD视场角；360°模拟器穹顶（7.1 m直径）作为视场环境",
+      "source": "未报告"
+    },
+    "S_3d_relpos": "行人锁定(pedestrian-conformal)，HUD框架围绕行人并随其移动；instrument cluster警告为screen-fixed",
+    "key_findings_oneline": "Audio-visual + brake pulse触觉警告显著降低碰撞数（仅1次vs其他10/10/8）与最短反应时（M=0.8 s，SD=0.29 s）；HUD与基线audio-visual无显著反应时差异；90%驾驶员制动峰值超3.6 m/s²、jerk超5.3 m/s³。",
+    "needs_review": "颜色/HUD FOV参数未给出（论文聚焦HMI比较而非HUD几何参数）；其余字段已较完整"
+  },
+  {
+    "idx": 15,
+    "data_source": "pdf_full",
+    "scenario_brief": "UR:BAN项目TU Braunschweig固定基座中保真驾驶模拟器（180° 3屏，2.1 m距离）；50 km/h城市单行道，行人从右侧小货车后方突然出现以2 m/s横穿（距碰撞点23 m处触发），需立即急刹或转向避让。",
+    "T_onset": {
+      "value": "行人开始移动时触发（约碰撞点前1.66 s，'around 1.66 s before its crossing point'）",
+      "source": "原文Section II.A"
+    },
+    "T_duration": {
+      "value": "未明确给出秒数；警告随scenario事件持续呈现",
+      "source": "未报告"
+    },
+    "T_graded": "No（单一警告呈现，无紧急程度分级；4种警告类型为不同设计变体）",
+    "T_L1_to_L2_interval": "不分级",
+    "T_L2_to_L3_interval": "不分级",
+    "S_planar_color": {
+      "value": "Multicolor HUD；4种警告以彩色显示（具体RGB未报告；stop sign为红/八角形交通标志，caution sign为黄/三角形交通标志，遵循欧洲交通标志色彩规范）",
+      "source": "原文Section II.A/Table I"
+    },
+    "S_planar_dynamics": {
+      "value": "静态显示（traffic sign类静态符号）",
+      "source": "原文Table I"
+    },
+    "S_planar_shape": {
+      "value": "4种交通标志类警告：(1) RG=stop sign八角形；(2) RS=stop sign/swerving sign（转向）；(3) AG=caution sign三角形（通用）；(4) AS=caution sign三角形（内含具体危险对象如行人剪影）",
+      "source": "原文Table I"
+    },
+    "S_3d_layout": {
+      "value": "HUD垂直虚像面（投影至挡风玻璃，driver-centered，right above the engine hood）；最大21×21 cm，6°视角",
+      "source": "原文Section II.A"
+    },
+    "S_3d_fov": {
+      "value": "警告图形最大21×21 cm，约6°视角（visual angle）",
+      "source": "原文Section II.A"
+    },
+    "S_3d_relpos": "屏幕固定(screen-fixed) HUD（driver-centered，固定在engine hood上方），非世界锁定",
+    "key_findings_oneline": "所有警告整体改善制动反应时（faster brake reaction）与最大制动量；约45.8%驾驶员注视HUD，注视HUD反而削弱反应时收益；难理解的RS swerving警告效果最差，'不需注视即可被感知'的警告最具潜力。",
+    "needs_review": "T_duration未明确报告秒数；颜色未给具体RGB（按欧洲交通标志规范红色stop/黄色caution可推断）"
+  },
+  {
+    "idx": 16,
+    "data_source": "pdf_full",
+    "scenario_brief": "UR:BAN项目TU Braunschweig静态驾驶模拟器（180° 3屏自动变速）4种城市场景：Pedestrian 1（左转时行人横穿，very critical）、Pedestrian 2（停泊车后行人突现，critical）、Vehicle（前车骤停，less critical）、Obstacle（坡后干草捆，less critical）。",
+    "T_onset": {
+      "value": "基于固定flow points触发（与车速相关，非TTC基础）；老年组中Pedestrian 2比年轻组提前7 m触发",
+      "source": "原文Section II.C/Table I"
+    },
+    "T_duration": {
+      "value": "Individual持续（取决于驾驶员速度）：警告onset与offset在固定flow points之间；若驾驶员中途完全停车，警告显示时间更长",
+      "source": "原文Section II.B"
+    },
+    "T_graded": "No（每名驾驶员被试间分配单一警告类型；但讨论中建议未来'warning cascade'分级——CW作L1预警→若驾驶员无反应则升级SW作L2紧急）",
+    "T_L1_to_L2_interval": "不分级（本研究内）；讨论展望warning cascade但未实施",
+    "T_L2_to_L3_interval": "不分级",
+    "S_planar_color": {
+      "value": "未给具体RGB；SW=stop sign（标准红色八角形德国Vorfahrt achten/Stop标志推断红色）；CW=caution sign（标准黄色/三角形德国Gefahr/Achtung标志推断黄/红边白底）",
+      "source": "原文Section II.B/Table I"
+    },
+    "S_planar_dynamics": {
+      "value": "静态符号（traffic sign类）",
+      "source": "原文Table I"
+    },
+    "S_planar_shape": {
+      "value": "两种视觉符号：(1) Stop sign warning（SW）八角形19.9×17.7 cm；(2) Caution sign warning（CW）三角形21×19 cm",
+      "source": "原文Section II.B"
+    },
+    "S_3d_layout": {
+      "value": "HUD垂直虚像面（located above the roadway, where it would not obscure the view of the driver - traffic lights or signs）",
+      "source": "原文Section II.B"
+    },
+    "S_3d_fov": {
+      "value": "SW=19.9×17.7 cm；CW=21×19 cm（未给视场角度数，仅给图形物理尺寸）",
+      "source": "原文Section II.B"
+    },
+    "S_3d_relpos": "屏幕固定(screen-fixed) HUD（位于道路上方固定位置不遮挡视线）",
+    "key_findings_oneline": "高危急场景下预警显著降低碰撞数（尤其年轻驾驶员）；老年驾驶员偏好SW（更快更强制动）；年轻驾驶员在CW下反应最快最强；建议低危急用CW、高危急用SW，未来研究warning cascade分级方案。",
+    "needs_review": "T_onset未基于TTC而基于车速相关flow points（论文讨论中建议未来研究应使用TTC）；颜色未给具体RGB；老年组与年轻组Pedestrian 2触发时机不同导致组间比较受限"
+  }
+]

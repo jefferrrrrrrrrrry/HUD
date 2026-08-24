@@ -1,0 +1,1624 @@
+i-com 2019; 18(2): 127–149
+Research Article
+Andreas Riegler*, Philipp Wintersberger, Andreas Riener, and Clemens Holzmann
+Augmented Reality Windshield Displays and Their
+Potential to Enhance User Experience in
+Automated Driving
+https://doi.org/10.1515/icom-2018-0033
+Abstract: Increasing vehicle automation presents chal-
+lenges as drivers of highly automated vehicles become
+more disengaged from the primary driving task. However,
+even with fully automated driving, there will still be activ-
+ities that require interfaces for vehicle-passenger interac-
+tions. Windshield displays are a technology with a promis-
+ing potential for automated driving, as they are able to pro-
+vide large content areas supporting drivers in non-driving
+related activities. However, it is still unknown how poten-
+tial drivers or passengers would use these displays. This
+work addresses user preferences for windshield displays
+in automated driving. Participants of a user study (N = 63)
+were presented two levels of automation (conditional and
+full), and could freely choose preferred positions, con-
+tent types, as well as size, transparency levels and impor-
+tance levels of content windows using a simulated “ideal”
+windshield display. We visualized the results in form of
+heatmap data which show that user preferences differ with
+respect to the level of automation, age, gender, or environ-
+ment aspects. These insights can help designers of interi-
+ors and in-vehicle applications to provide a rich user expe-
+rience in highly automated vehicles.
+Keywords: windshield displays, head-up displays, user
+preferences, automated driving, heatmaps
+1 Introduction
+The provision of automated driving systems promises ad-
+vantages for societies and individuals, such as increased
+*Corresponding author: Andreas Riegler, University of Applied
+Sciences Upper Austria, Department of Energy and Mobility,
+Hagenberg, Austria, e-mail: andreas.riegler@fh-hagenberg.at
+Philipp Wintersberger, Andreas Riener, Technische Hochschule
+Ingolstadt, Ingolstadt, Germany, e-mails:
+philipp.wintersberger@carissma.eu, andreas.riener@thi.de
+Clemens Holzmann, University of Applied Sciences Upper Austria,
+Department of Energy and Mobility, Hagenberg, Austria, e-mail:
+clemens.holzmann@fh-ooe.at
+safety, improved traffic efficiency, or mobility for the im-
+paired [33, 8]. Still, the potentially most promising benefit
+for consumers is the possibility to engage in non-driving
+related tasks (NDRTs). Many desired activities are web-
+browsing, texting, or media consumption [19]. Since tech-
+nological advances could soon lead to display technolo-
+gies, such as windshield displays (WSDs, augmented real-
+ity head up displays that cover the whole windshield [9]),
+new opportunities will arise to convert vehicles into info-
+tainment platforms [24]. However, when thinking about vi-
+sionary vehicle interiors, one must consider the different
+levels of automation [2], that pose different requirements
+on driver-vehicle cooperation. For example, in SAE level 5,
+the vehicle is able to perform the entire dynamic driving
+task without any need of a human operator, while in level
+3, drivers must be prepared to resume control any time,
+and on short notice. This issues a number of challenges
+to automotive user interfaces, such as increased workload
+or stress resulting from frequent task switching [34]. Ad-
+ditionally, future vehicle concepts (such as the VW I.D.,
+the Audi Aicon, or the Mercedes F105) often show chrome-
+less designs and allow driver-passengers to freely rotate
+seats, which highlights the need for new visualization and
+interaction concepts. WSDs could thereby become a valu-
+able technology in the gradual transformation from semi-
+to fully automated vehicles ([12], [26]), as they provide var-
+ious benefits: They eliminate physical and visual clutter
+in the center console and thereby enable gesture-based
+interaction [23]. Instead of having various functionalities
+spread around the driver’s seat, WSDs can provide a sin-
+gle interface for all in-vehicle infotainment systems [4].
+Potential dangers can be visualized directly in the field
+of view, what enhances safety for vulnerable road users
+or drivers with cognitive impairments [15]. Also, context-
+aware information such as displaying messages or aug-
+menting points of interest [7], advertisements [3] or nav-
+igational aids [6] can be presented. Additionally, WSDs
+could allow world-fixed augmented reality visualizations
+that support users in the perception of the outside environ-
+ment. The large interaction space of WSDs could further
+be utilized in side activities, and vehicles could transform
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+128
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+into mobile cinemas or extended office environments [28].
+However, little research has been conducted on how po-
+tential users would use these displays, which information
+they desire, or where content should be located. We don’t
+know whether users accept that they have no direct per-
+ception of the outside environment (especially what is in
+front of the vehicle), and if semi-transparent content could
+help to increase acceptance in vehicle automation. We hy-
+pothesize that the answers to these questions are highly
+sensitive to the level of automation and/or user character-
+istics. To shine light on the matter, we aimed at revealing
+user preferences in this novel display technology and eval-
+uate its applicability in the context of automated driving.
+This paper is structured as follows: in section two we
+present recent research on WSDs and augmented reality in
+driving applications. We present our experimental design
+and the addressed research questions in sections three
+and four. Results are reported with respect to different lev-
+els of automation, content types, transparency levels, as
+well as age, gender and environment aspects in section
+five. After a rigorous discussion of the implications of our
+experiment (section six), we discuss potential limitations
+and conclude with an outlook on future work in sections
+seven and eight.
+2 Augmented Reality Windshield
+Displays
+In the context of manual driving, the potential of aug-
+mented reality (AR) applications has already been shown.
+For example, Smith et a. [30] could demonstrate that pre-
+senting information directly in a driver’s line of sight can
+increase driving performance and diminish distraction.
+Approaches utilizing head-up displays (HUDs) thus of-
+ten aim to increase safety. Park, Lee and Kim [18] used
+radar sensor information to generate enhanced forward
+collision warnings. A similar concept was shown by Hu
+et al. [10], who directly provided night-vision systems for
+drivers. Tangmanee and Teeravanrunyou [32] augmented
+the brake way of the ego vehicle to prevent crashes. Lorenz
+et al. [16] supported the driver with augmented reality sce-
+nario information during the transition from automated
+to manual driving to increase their situation awareness.
+In the future, WSDs could support cooperative, intelligent
+transportation systems (C-ITS), that dynamically adjust
+road configurations to maximize throughput, by provid-
+ing dynamic, real-time visualizations of traffic signs, lane
+markings, etc. [25].
+Applications using WSDs are expected to improve in-
+vehicle experiences and ease the implementation of auto-
+mated vehicles in the transition phase [12]. However, be-
+cause of technical but also cost issues, WSDs have not
+yet been developed. According to Gabbard et al. [4], this
+could become the greatest hurdle preventing their utiliza-
+tion in the near future. Currently, AR-HUDs face problems
+like change blindness [20], or limited interaction space
+and field of view. Future technologies, such as optical
+see through light-field displays [14] could eliminate these
+problems and finally allow WSDs that cover the entire
+windshield.
+The drivers’ preferences when it comes to automated
+driving have already been explored, however, mostly re-
+garding trust and acceptance of the technology in general.
+For example, users would use the time spent on NDRTs
+on working, reading, and playing games [17]. We intend
+to go a step further by letting the potential users choose
+what content should be placed at the WSD and how it
+should behave in terms of transparency, size etc. In the
+meantime, the potential of WSDs can be demonstrated
+and evaluated using software simulation. Häuslschmid
+et al. [7] developed a generalizable view management for
+manual vehicles that considers drivers’ tasks, context, re-
+sources, and abilities for efficient information recognition
+and comprehension. They proposed zones and areas for
+specific information types, ranging from pre-attentive and
+safety-critical messages, to attentive, less critical informa-
+tion such as personal email. The presented view manage-
+ment proposes certain areas for specific information, such
+as personal information, vehicle information, warnings
+etc. [7] We chose to eliminate all potential restrictions of
+such settings, and designed an experiment aiming to re-
+veal driver-passengers’ requirements and preferences in
+WSDs, and thereby distinguished between different con-
+tent types and levels of automation.
+3 User Study
+3.1 Method and Research Questions
+To evaluate how AR WSDs can be utilized in highly auto-
+mated vehicles, as well as by whom and in what situation
+content should be displayed on the WSD, we performed
+a user study. We wanted to investigate the following re-
+search questions:
+–
+RQ1: Which, and how many areas on WSDs do drivers
+of automated vehicles prefer for displaying informa-
+tion?
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+129
+–
+RQ2: How does the level of automation (conditional,
+full) influence drivers’ preferences?
+–
+RQ3: Which size and format (widescreen, portrait) of
+content areas is desired?
+–
+RQ4: Is there a hidden agreement on the display
+location of types of in-vehicle information (vehicle-
+related, trip-related, entertainment, etc.)?
+–
+RQ5: Which level of background transparency of con-
+tent areas is desired?
+–
+RQ6: Are certain content types perceived as more im-
+portant than others?
+–
+RQ7: Does gender influence drivers’ preferences?
+–
+RQ8: Does age influence drivers’ preferences?
+–
+RQ9: Does the driving environment (highway, urban)
+influence drivers’ preferences?
+Our study setting enables users to freely set the position,
+size, transparency and importance of multiple content
+windows (represented as rectangles) on a WSD. We choose
+to conduct our evaluation on a two-dimensional display,
+since mixed display distances can have a negative impact
+on performance [31], and we wanted to design the study
+setting as simple as possible. With assistance of our exper-
+imenters, participants were asked to draw multiple rectan-
+gles on the WSD (see Figure 1) according to their personal
+Figure 1: The study setting, a 55” flat screen monitor and a computer
+mouse for drawing and placing the content windows.
+preferences, and afterwards associate each content area
+with different types of information (e. g. warnings, vehicle-
+related information, entertainment, social media, etc.) as
+well as the background transparency and importance. We
+decided to use rectangles as content windows only as this
+shape is most commonly used in applications in many
+domains, such as desktop computers, tablets, or smart-
+phones. Further, demographic data and survey questions
+related to WSDs and automated driving were obtained.
+Both the demographic questionnaire and the survey were
+presented to the participants on a tablet computer. In ad-
+dition, our experimenters were constantly observing the
+participants’ remarks and, using the laddering technique,
+tried to ascertain further information about participants’
+motives and notions.
+3.2 Experimental Design
+For conducting the experiment we created two three di-
+mensional scenes in Unity3D, that show the interior of a
+right-hand driven BMW i8 from the driver’s perspective.
+For the level 5 scenario we modified the cockpit by remov-
+ing the steering wheel as well as the gear shift to empha-
+size that the driver cannot take over the vehicle, as op-
+posed to the level 3 scenario. Either model was then placed
+on a highway road and on a city crossing surrounded by
+skyscrapers (see Figures 2a and 2b). We set the scene as
+background image and used a drawing application (with
+a custom view consisting of only necessary tools, such as
+the possibility to draw rectangles) as interface for the ex-
+periment. While this static setup is technically simple, the
+solution has multiple benefits. First, the drawing applica-
+tion is well known and widely used, thus we did not have
+to explain the process of drawing to our participants, and
+second, it easily allowed to group the different rectangles,
+what eased evaluation and subsequent heatmap genera-
+tion. The application was then displayed to participants
+(a) City scene.
+(b) Highway scene.
+Figure 2: 3D environments for situational analysis (vehicle interior not displayed).
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+130
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+in fullscreen/borderless mode on a 55” flat screen monitor
+with a resolution of 3840x2160px (see Figure 1).
+3.3 Procedure
+First, participants had to complete a short demographic
+questionnaire, including age, gender, highest level of ed-
+ucation, if they possess a valid driving license, and the
+approximate covered annual vehicle volume (driven by
+them). We explained conditional and fully automated driv-
+ing. For the conditional driving scenario we told partici-
+pants that situations where the driver has to actively take
+control of the vehicle can arise at any time. For the fully au-
+tomated driving scenario, we noted that the vehicle cannot
+be controlled by the driver in any way, which was under-
+lined by the lack of a steering wheel and gear shift in the
+visualization of the vehicle’s cockpit. We further explained
+the concept of a windshield display and emphasized the
+precedence of a safe but also comfortable drive. Addition-
+ally, we told participants to imagine sitting alone in the
+vehicle, and that the vehicle is their own (i. e., no public
+transport vehicle with strangers). Then, participants were
+presented the drawing application, and we asked them
+to draw multiple rectangles within the boundaries of the
+WSD according to their preferences. For each window, par-
+ticipants had to specify the desired content type (by drag
+and drop). According to a study conducted by McKinsey
+[17], drivers have certain preferences for activities in auto-
+mated vehicles. Therefore, we offered a list containing po-
+tential content types:
+–
+Warnings (W), such as a potentially short headway,
+mechanical failures, etc.
+–
+Vehicle information (V), such as the current speed, or
+distance/time to destination
+–
+Work/office related information (O), such as emails or
+calendar
+–
+Entertainment (E), such as music playlists, videos, etc.
+–
+Social Media (S), such as Facebook, Twitter, etc.
+–
+Custom/Other (C), such as weather information,
+smarthome control, etc.
+It was allowed to overlap windows and there was no re-
+quirement to use all content types, and a single content
+type could be assigned multiple times if desired. In case
+a participant wanted to display multiple content types in-
+side a single rectangle, we counted this as two different
+windows in our evaluation. For example, if a participant
+wanted to see both social media, as well as work-related
+content, in one and the same rectangle (“content win-
+dow”), we regarded this as two windows with one being
+dedicated to social media, and the other to office/work.
+For each content window, participants were asked to set
+its background transparency using a slider. Additionally,
+participants had to specify which content windows they
+perceived as more important than others, by dragging their
+layers in the desired order (top was higher importance/pri-
+ority). This procedure was performed twice, for both con-
+ditions level 3 and level 5 driving (in randomized order).
+Therefore, each participant was exposed to a total of two
+conditions, e. g. the level 3 city scenario and the level 5
+highway scenario. Before each condition we explained the
+corresponding level of automation to participants. After
+both conditions, participants had to complete a short post-
+questionnaire on a tablet. This survey aimed to get insights
+about participants’ attitude towards WSDs and AR in driv-
+ing automation. The experiment lasted approximately 30
+minutes for each participant.
+4 Results
+In total, 63 people (44 male, 19 female) between 17 and
+81 (37 + / −19.7) years participated in the experiment (all
+possessing a valid driver’s license). In our university, we
+recruited students, researchers, and teaching assistants.
+Additionally, we invited external people to take part in
+our study while attending information days about the uni-
+versity. For recruiting elderly participants, we organized a
+“senior citizen day” at our university, where we also ex-
+plained the concept of automated vehicles, as well as fu-
+ture interaction possibilities with vehicles. All participants
+were from Central Europe. Because of the age heterogene-
+ity, we created a simple study setup that all participants
+could use with ease.
+Statistical results presented were conducted using
+IBM SPSS Version 24 with a significance level of p < .05.
+Not all of our data was normally distributed, and since the
+sample size of the different content types was not equal,
+we conducted pairwise comparisons utilizing Wilcoxon
+signed rank tests for within-subjects effects, and Mann-
+Whitney U tests for between subjects evaluations, both
+with Bonferroni correction for alpha-adjusted significance
+levels.
+In the following, we present a detailed investigation
+of the obtained results. In section 4.1, we describe general
+findings in WSD preferences between level 3 and level 5 au-
+tomation, and visualize them with heatmaps. We further
+take an in-depth look at the different content types and
+their usage in section 4.2. Additionally, we look at window
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+131
+parameters, such as transparency (section 4.3) and impor-
+tance (section 4.4). Moreover, we investigate user prefer-
+ences depending on participants’ age (section 4.5), gen-
+der (section 4.6) and the environment (section 4.7). Finally,
+we reveal insights into the qualitative feedback from our
+participants (section 4.8) and their survey responses (sec-
+tion 4.9).
+4.1 Window Characteristics and Heatmaps
+On average, participants utilized 3.59 (Std = 1.41) content
+windows in level 3, and 4.29 (Std = 1.68) content windows
+in level 5 driving. The difference is statistically significant
+at p = .001. The window format (based on divergence to a
+square) was strongly in favor of landscape (L3 = 197, L5 =
+230 counts) compared to portrait (total numbers: L3 = 29,
+L5 = 40 counts).
+Figures 3a and 3b show the heatmaps generated from
+the aggregated data. Based on the drawn windows, we
+generated heatmaps. Overlapping windows are displayed
+by color gradients from green to red (red means more over-
+lapping windows at the respective location), blue areas in-
+dicate that no window was placed at the respective loca-
+tion. Using this visual technique, it is instantly possible to
+see the main difference between level 3 and level 5 automa-
+tion: The requirement to be able to take control of the driv-
+ing task in conditionally automated vehicles made many
+(a) Level 3 heatmap.
+(b) Level 5 heatmap.
+Figure 3: Resulting heatmaps based on the aggregation of the indi-
+vidual content windows for level 3 and 5 automated driving scenar-
+ios.
+participants avoid to place information in the direct line
+of sight (with one exception: warnings). Also, content was
+often placed in the imagined extension of the middle con-
+sole or on the top left corner of the WSD (Figure 3a). In con-
+trast, in the level 5 driving scenario, participants placed
+content windows all over the WSD, mostly in the driver’s
+foveal area. Considering the window dimensions as speci-
+fied by participants shows, that in level 5 the average size
+(Mean = 249937, Std = 324671 square pixels) was nearly
+twice as high than in level 3 (Mean = 131403, Std = 160796
+square pixels) driving and showed also greater variance
+(see Figure 3b). We further take an in-depth look at the dif-
+ferent content types in section 4.2.
+4.2 Content Types
+Additionally, we created different heatmaps for the indi-
+vidual content types and also counted their occurrences in
+different areas of the WSD. Each window was assigned to
+one out of 9 different locations, i. e. top, center, bottom and
+driver (left), middle and passenger (right) side, based on
+its center point belonging to the corresponding location,
+distorted to fit the camera projection. Figures 3a and 3b
+show the grid ranging over the entire WSD. Table 1 displays
+the number/share of windows for each content type. We
+further calculated the share (percentage) of the windows
+belonging to a corresponding content type in relation to
+the total size of all windows used. In level 3 driving, warn-
+ings (W) and vehicle-related dashboards (V) were not only
+the most-used content types, they also received the (rela-
+tively) largest space (around 30 %).
+Considering the average total size of the different con-
+tent types’ drawn windows (see Table 2 for descriptive
+statistics), pairwise comparisons with an alpha-adjusted
+significance level of .003 show only one significant effect
+for level 3 driving: warnings (W) were significantly larger
+than vehicle-related dashboards (V, p < .001).
+Level 5 automation shows a clear distinction: in this
+case, warnings were used less. Although, for example, the
+total number of vehicle-related dashboards V was similar
+to level 3 driving, the size of their windows was smaller.
+Contrarily, entertainment (E), work-related (O), and social
+media (S) content was desired more by the participants
+with more than 80 % of the total interaction space used
+(see Table 1). In level 5 driving, various differences could
+be evaluated. Not only warnings (W, p < .001), also work-
+related (O, p < .001), entertainment (E, p < .001), and so-
+cial media windows (S, p < .001) were significantly larger
+than vehicle-related dashboards (V). Overall, the share of
+the total size roughly corresponds to the percentage of the
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+132
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+Table 1: Comparison of the different content types and their counts specified by participants.
+Content Type
+W
+V
+O
+E
+S
+C
+Level 3
+N = 226
+Counts /
+Percentage
+64
+28,32 %
+59
+26.11 %
+38
+16.81 %
+38
+16.81 %
+23
+10.18 %
+4
+1.77 %
+Share of
+total size
+29.09 %
+16.08 %
+17.21 %
+24.34 %
+11.82 %
+1.46 %
+Level 5
+N = 270
+Counts /
+Percentage
+43
+15.93 %
+61
+22.59 %
+53
+19.63 %
+56
+20.74 %
+49
+18.15 %
+8
+2.96
+Share of
+total size
+10.96 %
+7.62 %
+23.37 %
+34.94 %
+20.83 %
+2.28 %
+Table 2: Comparison of the different content types and their sizes specified by participants.
+Content Type
+W
+V
+O
+E
+S
+C
+Level 3
+N = 226
+Mean Size
+(Sq pixels)
+134975
+80959
+134487
+190199
+152612
+108470
+Std
+(Sq pixels)
+124131
+79074
+135354
+282150
+157715
+67730
+Level 5
+N = 270
+Mean Size
+(Sq pixels)
+172019
+84308
+297575
+421026
+286852
+192357
+Std
+(Sq pixels)
+249429
+61885
+307664
+456418
+324182
+194140
+window counts. In the following, we give further insights
+into the different content types.
+Warnings (W) have been utilized more often in level
+3, compared to level 5 driving (L3 = 64, L5 = 43). In both
+levels, they were prominently placed in the field of view of
+the driver (see Figures 4a, 4b).
+Vehicle-related dashboards (V) have been placed just
+above the steering wheel in level 3, a location already uti-
+lized by available head-up displays (Figure 4c). Addition-
+ally, the top driver side of the WSD is a location often uti-
+lized for this content type. This also applies to level 5 driv-
+ing (Figure 4d). Although the number of windows for this
+content type is nearly equal in both conditions (L3 = 59,
+L5 = 61), the importance drastically differs between the
+autonomy levels. In level 3, (V) accounts for about 16 % of
+the total area used, while in level 5 less than 8 % of the
+space was reserved for this content type (see Table 1).
+Larger differences between the levels of automation
+become visible when considering windows for non-driving
+related tasks. The three content types office/work O, en-
+tertainment E, and social media S were not placed promi-
+nently in the drivers field of view in level 3 driving, but
+more in the peripheral areas from the driver’s point of
+view (see Figures 4e, 4g, 4i). Participants have put them
+mainly in the center (vertical extension of center con-
+sole) and partly on the passenger’s side. Also the size of
+the windows for these content types was relatively small
+compared to level 5. In level 5, office/work and entertain-
+ment content was placed directly on the driver’s side in
+large windows – entertainment content even larger, rang-
+ing nearly across the whole WSD (see Figure 4h). Windows
+displaying social-media feeds/activities (S) were utilized
+more often in level 5 driving (L3 = 23, L5 = 49). In con-
+trast to entertainment and office/work windows, partici-
+pants chose various locations on the drivers, center, and
+passenger side for social media related information (see
+Figure 4j). Custom content (C) has been scarcely utilized
+(L3 = 4, L5 = 8), therefore we do not present heat maps
+for this content type. Regarding differences between the
+number of windows placed for conditional and full au-
+tomation, we found that in full automation, significantly
+more windows were drawn. Since there is no take-over re-
+quirement for fully automated vehicles, and “drivers” can
+take advantage of not having to pay attention to the pri-
+mary driving task, this result seems legitimate. Addition-
+ally, we looked at inter-level differences between the av-
+erage total size of content windows. We found significant
+differences between the window size of work-related, and
+entertainment windows (O: p < .001, E: p < .001) using
+Wilcoxon signed rank tests; larger windows in level 5 au-
+tomation. However, there are no statistical differences in
+window sizes for the other content types (however social
+media content S, p = 0.13 was just slightly above the ad-
+justed significance level of .0083). In other cases, the win-
+dows are similarly dimensioned for both levels of automa-
+tion.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+133
+(a) Level 3 heatmap displaying warning windows (W).
+(b) Level 5 heatmap displaying warning windows (W).
+(c) Level 3 heatmap displaying vehicle-related windows (V).
+(d) Level 5 heatmap displaying vehicle-related windows (V).
+(e) Level 3 heatmap displaying work-related windows (O).
+(f) Level 5 heatmap displaying work-related windows (O).
+(g) Level 3 heatmap displaying entertainment windows (E).
+(h) Level 5 heatmap displaying entertainment windows (E).
+(i) Level 3 heatmap displaying social media windows (S).
+(j) Level 5 heatmap displaying social media windows (S).
+Figure 4: Heatmaps for level 3 (left) and level 5 (right) automation.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+134
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+4.3 Transparency
+Using a slider, participants were able to set their preferred
+opacity level for each drawn window. Minimum was an
+opacity of 0 % (transparency = 100 %), maximum was an
+opacity of 100 % (transparency = 0 %). The default opac-
+ity value was 100 % in order for the participants to fully
+see the window(s) they are drawing.
+Figure 5: Transparency preferences for each content type for level 3
+(blue) and level 5 (orange) automation.
+Figure 5 shows the transparency results for level 3 and
+level 5 automation for each content type. In both levels,
+warning windows (W) received the highest opacity. Since
+there was an unequal number of data points (not each par-
+ticipant utilized each content type), we performed only
+pairwise comparisons using Wilcoxon signed rank tests
+with an alpha adjusted significance level of .003. In level
+3 driving only two comparisons yielded to significant ef-
+fects: warnings W had higher opacity than vehicle-related
+dashboards V (p = .002) and work-related content win-
+dows O (p = .002). For level 5 driving, no such difference
+could be evaluated.
+When comparing inter-level differences in windows
+transparency using Wilcoxon signed rank tests, we found
+that level 5 work-related content (O), entertainment (E)
+and social media content (S) received a statistically signif-
+icant higher opacity than their counterparts in level 3 (O:
+p = 002, E: p < .001, S: p = .003). We believe that since
+take-over requests are not needed or even possible in fully
+automated driving, “drivers” tend to focus on in-vehicle ac-
+tivities such as reading emails, watching movies etc. which
+require less transparent windows.
+Furthermore, we wanted to find out if there is a cor-
+relation between the parameters area and transparency.
+We did not find relevant area-transparency correlations
+for level 3 automation. However, for the level 5 scenario,
+we found weak positive correlations for the content types
+work-related content, entertainment and social media
+content (O: ρ = 27.9 %, E: ρ = 30.8 %, S: ρ = 27.1 %). In
+these cases, larger windows were attributed with a higher
+opacity by the participants.
+4.4 Importance
+We further investigated the importance resp. priority for
+each drawn window. Participants were able to subjectively
+rate their drawn windows. The highest priority was 1, the
+maximum priority was determined by the number of win-
+dows and it was possible to rate windows as equal. This
+procedure was done by the participant or experimenter by
+dragging the window layers on the right side of the screen
+into the desired order.
+Figure 6: Importance preferences for each content type for level
+3 (blue) and level 5 (orange) automation (lower values represent
+higher priority).
+Figure 6 shows the subjectively given importance re-
+sults for level 3 and level 5 for each content type. Lower
+scores are better/indicate a higher subjective priority. One
+can instantly see that warnings received the highest im-
+portance for both level 3 and level 5 driving. Since also
+here the number of data points for each content type varies
+we again conducted pairwise comparisons using Wilcoxon
+signed rank tests with an alpha-adjusted significance level
+of .003. Warnings W were rated to be significantly more
+important than vehicle-related dashboards V (p < .001),
+work-related content O (p < .001), entertainment win-
+dows E (p < .001), and social media content S (p < .001).
+Vehicle-related dashboards V were significantly more im-
+portant than work-related content O (p < .001), entertain-
+ment E (p < .001), and social media windows S (p < .001),
+and finally work-related content O was more important
+than social media S (p = .002).
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+135
+In level 5 driving we obtained a similar result: warn-
+ings W were more important than vehicle-related dash-
+boards V p < .001, entertainment E (p = .001), and so-
+cial media windows S (p < .001); work-related content
+O was rated to be more important than social media S
+(p = .002). Regarding the inter-level difference between
+the content types and their perceived importance (based
+on an alpha adjusted significance level of .0083), warnings
+(W, p = .003) and vehicle-related dashboards (V, p = .002)
+received a significantly higher priority in level 3 than in
+level 5. No other differences between the level of automa-
+tion could be evaluated.
+Furthermore, we wanted to find out if there is a cor-
+relation between the parameters transparency and im-
+portance. For level 3 automation, we found a weak pos-
+itive correlation between the transparency of social me-
+dia windows and their subjectively rated importance (ρ =
+30.0 %), i. e. the more opaque the window, the higher its
+importance as stated by the participants. We did not find
+any other relevant transparency-importance correlations
+for level 3 automation. However, for the level 5 scenario,
+we calculated weak positive correlations for the content
+types work-related content, entertainment and social me-
+dia content (O: ρ = 26.7 %, E: ρ = 29.3 %, S: ρ = 27.0 %).
+Additionally, we wanted to find out if there is a corre-
+lation between the parameters area and importance. For
+warnings, there is a weak positive correlation between
+their area and subjective importance (ρ
+=
+22.3 %) in
+level 3 automation. This means that larger windows are
+seen as more important. This is similar to vehicle-related
+dashboards (ρ = 24.5 %). In contrast, the areas of work-
+related content, entertainment and social media content
+were moderately negatively correlated with their perceived
+importance (O: ρ = −43.5 %, E: ρ = −30.6 %, S: ρ =
+−19.4 %). This may be because these content types are not
+well suited for conditional automation because of poten-
+tial take-over tasks at any point in time. For level 5 automa-
+tion, the parameters area and importance are very weakly
+correlated (|ρ| < 20 %).
+4.5 Age Specific Differences
+We further separated the participants in two groups, 47
+younger drivers (Mean = 27, Std = 6.1) and 16 elderly
+drivers (Mean = 69, Std = 8.9) to investigate potential
+differences in their WSD preferences. Figure 7 displays the
+overall results for level 3 and level 5 driving, differentiated
+by young and elderly drivers, respectively.
+While in level 3 driving, young drivers prefer content
+windows to be positioned all over the windshield, most
+prominently in the driver’s direct field of view, elderly
+drivers tend to place their content windows mostly in the
+direct field of view and the top part of the windshield dis-
+play. In level 5 driving, young participants chose the en-
+tire windshield display for their content windows, while
+elderly participants utilized the windshield display more
+sparingly.
+(a) Level 3 heatmap generated from young drivers’ preferences.
+(b) Level 3 heatmap generated from elderly drivers’ preferences.
+(c) Level 5 heatmap generated from young drivers’ preferences.
+(d) Level 5 heatmap generated from elderly drivers’ preferences.
+Figure 7: Heatmaps for level 3 (top) and level 5 (bottom) automation; differentiated by young (left) vs. elderly (right) drivers.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+136
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+(a) Heatmap displaying warning windows (W) according to young
+drivers.
+(b) Heatmap displaying warning windows (W) according to elderly
+drivers.
+(c) Heatmap displaying vehicle-related windows (V) according to
+young drivers.
+(d) Heatmap displaying vehicle-related windows (V) according to
+elderly drivers.
+(e) Heatmap displaying work-related windows (O) according to
+young drivers.
+(f) Heatmap displaying work-related windows (O) according to el-
+derly drivers.
+(g) Heatmap displaying entertainment windows (E) according to
+young drivers.
+(h) Heatmap displaying entertainment windows (E) according to
+elderly drivers.
+(i) Heatmap displaying social media windows (S) according to young
+drivers.
+(j) Heatmap displaying social media windows (S) according to el-
+derly drivers.
+Figure 8: Level 3 heatmaps displaying the WSD preferences for young (left) and elderly (right) drivers.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+137
+(a) Heatmap displaying warning windows (W) according to young
+drivers.
+(b) Heatmap displaying warning windows (W) according to elderly
+drivers.
+(c) Heatmap displaying vehicle-related windows (V) according to
+young drivers.
+(d) Heatmap displaying vehicle-related windows (V) according to
+elderly drivers.
+(e) Heatmap displaying work-related windows (O) according to
+young drivers.
+(f) Heatmap displaying work-related windows (O) according to el-
+derly drivers.
+(g) Heatmap displaying entertainment windows (E) according to
+young drivers.
+(h) Heatmap displaying entertainment windows (E) according to
+elderly drivers.
+(i) Heatmap displaying social media windows (S) according to young
+drivers.
+(j) Heatmap displaying social media windows (S) according to el-
+derly drivers.
+Figure 9: Level 5 heatmaps displaying the WSD preferences for young (left) and elderly (right) drivers.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+138
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+In level 3 driving, young participants utilized 3.9 con-
+tent windows on average (Std = 1.40), while elderly drivers
+only placed 2.7 content windows (Std = 1.01). The differ-
+ence is statistically significant (p = .002). In level 5 driv-
+ing, young participants averaged 4.8 windows (Std = 1.45),
+and elderly participants used 2.9 windows (Std = 1.54).
+In the level 5 scenario, this difference is also significant
+(p < 0.001).
+Regarding the area of content windows in level 3 driv-
+ing, young participants used larger areas for all content
+types. In contrast, in level 5 driving, elderly participants
+choose larger content windows for vehicle-related dash-
+boards (V). However, we did not find any significant dif-
+ferences in both scenarios utilizing Mann-Whitney U tests.
+Even though elderly drivers preferred all their content
+windows to be less transparent than their younger coun-
+terparts, the use of transparency did not show any signif-
+icant differences in the level 3 driving scenario. In con-
+trast, elderly participants chose less transparent windows
+for various content types (V: p = 0.023, O: p = 0.029,
+E: p = 0.02, S: p = 0.017) in level 5 driving. However,
+these differences are only tendencies and do not match the
+alpha-adjusted significance level of .0083.
+Furthermore, in level 3 driving, we found that elderly
+participants prioritized work-related content (O) signifi-
+cantly higher than younger drivers (p = .006), while in
+the level 5 scenario, elderly participants rated both work-
+related (O, p = .005) and vehicle-related content (V, p =
+.007) to be more important. Other significant differences
+could not be assessed.
+Figures 8 and 9 show the level 3 and level 5 heatmaps
+for each content type, with the distinction for the age of
+the drivers, i. e., younger vs. elderly drivers.
+4.6 Gender Specific Differences
+We additionally investigated the role of gender in auto-
+mated driving and their differences in WSD preferences.
+Figure 10 displays the overall results for level 3 and level 5
+driving, differentiated by male and female drivers, respec-
+tively.
+For level 3 driving, one can instantly see differences
+in male and female preferences for window placements.
+While male participants prominently placed content in the
+driver’s field of view, and additionally utilizing large parts
+of the WSD (see heatmap 10a), female participants focused
+their content windows in the bottom as well as the top (left
+and center) areas of the WSD (see heatmap 10b). Regarding
+level 5 driving, both male and female participants utilized
+almost the entire WSD (see Figures 10d and 10c).
+In level 3 driving, male participants utilized 3.8 con-
+tent windows on average (Std = 1.47), while females only
+placed 3.1 content windows (Std = 1.13). The difference is
+significant (p = 0.045) considering a Mann-Whitney U test.
+In level 5 driving, male participants averaged 4.4 windows
+(Std = 1.46), and female participants used 4.1 windows
+(a) Level 3 heatmap generated from the male drivers’ preferences.
+(b) Level 3 heatmap generated from the female drivers’ preferences.
+(c) Level 5 heatmap generated from the male drivers’ preferences.
+(d) Level 5 heatmap generated from the female drivers’ preferences.
+Figure 10: Heatmaps for level 3 (top) and level 5 (bottom) automation; differentiated by male (left) vs. female (right) drivers.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+139
+(Std = 2.13). In the level 5 scenario, this difference is not
+statistically significant.
+Regarding the area of content windows in level 3 driv-
+ing, male participants used slightly larger areas for the
+content types except for social media content (S), however,
+no statistically significant differences could be evaluated.
+In contrast, in level 5 driving, female participants choose
+larger content windows for work-related content (O) and
+social media content (S). However, we did not find any sig-
+nificant differences in this scenario using Mann-Whitney
+U tests considering the significance level of .083.
+Also the use of transparency or importance did not
+show any significant differences for the proposed content
+types for male and female participants in both levels of au-
+tomation.
+Figures 11 and 12 show the level 3 and level 5 heatmaps
+for each content type, with the distinction for the gender,
+i. e., male vs. female preferences.
+4.7 Environment Related Differences
+We further looked into differences that might arise from
+driving in changing environments. Therefore, we created
+a city and a highway scene. Figure 13 displays the over-
+all results for level 3 and level 5 driving in the city scene
+and the highway scene, respectively. While both level 5
+heatmaps do not show clear distinctions (see Figures 13c
+and 13d), it is evident that drivers had different WSD pref-
+erences in the city and on the highway in level 3 driving.
+While heatmap 13a (city scene) shows that drivers do not
+prefer to occlude the direct field of view by placing content
+windows in the peripheral areas, heatmap 13b (highway
+scene) shows that participants prominently placed con-
+tent windows on the driver’s side of the WSD.
+In level 3 driving, participants utilized 3.5 content win-
+dows on average (Std = 1.52) in the city environment, while
+they placed 3.7 content windows (Std = 1.32) in the high-
+way scene. In level 5 driving, participants averaged 4.4
+windows (Std = 1.62), and female participants used 4.1
+windows (Std = 1.76). In both levels of automation, the
+difference is not statistically significant.
+Regarding the area of content windows in level 3 driv-
+ing, participants utilized similar-sized areas for all content
+types in both the city and the highway scene. This is also
+the case for the level 5 driving scenario.
+The use of transparency did not show any significant
+differences for the proposed content types in both environ-
+ments in the level 3 driving scenario. However, the cho-
+sen transparency was in all cases larger in the highway
+scene as opposed to the city environment. Similarly to the
+level 3 scenario, participants chose less transparency for
+all content windows on average for the highway environ-
+ment in level 5 driving. Also here the difference is not sta-
+tistically significant considering the alpha-adjusted signif-
+icance level of .0083. However, there is some tendency,
+that participants chose less transparent windows for the
+content types warnings (W, p = .039), entertainment (E,
+p = .067) and social media (S, p = .057).
+Furthermore, in level 5 driving, descriptive statistics
+indicate, that participants perceived warnings as more im-
+portant in the city than in the highway scenario. Further,
+content windows were rated as generally more important
+in the city than in the highways scene. However, consider-
+ing the statistical evaluation, these assumptions are not
+supported by the results of conducted Mann-Whitney U
+tests.
+Figures 14 and 15 show the level 3 and level 5 heatmaps
+for each content type, with the distinction for the scenery,
+i. e., city vs. highway preferences.
+4.8 Qualitative Feedback
+During the experiments, our experimenters were con-
+stantly taking notes about the participants opinion and
+verbal statements. Whenever participants would make re-
+marks about drawing, placing windows or assigning con-
+tent types, experimenters would use the laddering tech-
+nique to extract further and more detailed information
+to gain a more comprehensive insight into the use of AR
+WSDs. We analyzed the qualitative data by categorizing
+the experimenters’ observations of the participants’ re-
+marks by looking for patterns or common themes emerg-
+ing around the concept of AR WSDs and automated driv-
+ing. Based on these observations, we extracted the follow-
+ing key points:
+4.8.1 View Management
+Approximately one third of participants wanted to utilize
+the same space on the WSD for multiple different con-
+tents. For example, entertainment and work-related win-
+dows were often grouped together, and, based on the sit-
+uation, should either show entertainment content (e. g., a
+movie) or work-related content (e. g., a task list, emails).
+Additionally, participants also stated that a separate sec-
+tion of the WSD for the front passenger would make sense
+(e. g., passenger watching a movie on the passenger WSD
+side, while the driver observes vehicle-related information
+on his side). Therefore, a dynamic window management
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+140
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+(a) Heatmap displaying warning windows (W) according to male
+drivers.
+(b) Heatmap displaying warning windows (W) according to female
+drivers.
+(c) Heatmap displaying vehicle-related windows (V) according to
+male drivers.
+(d) Heatmap displaying vehicle-related windows (V) according to
+female drivers.
+(e) Heatmap displaying work-related windows (O) according to male
+drivers.
+(f) Heatmap displaying work-related windows (O) according to fe-
+male drivers.
+(g) Heatmap displaying entertainment windows (E) according to
+male drivers.
+(h) Heatmap displaying entertainment windows (E) according to
+female drivers.
+(i) Heatmap displaying social media windows (S) according to male
+drivers.
+(j) Heatmap displaying social media windows (S) according to fe-
+male drivers.
+Figure 11: Level 3 heatmaps displaying the WSD preferences for male (left) and female (right) drivers.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+141
+(a) Heatmap displaying warning windows (W) according to male
+drivers.
+(b) Heatmap displaying warning windows (W) according to female
+drivers.
+(c) Heatmap displaying vehicle-related windows (V) according to
+male drivers.
+(d) Heatmap displaying vehicle-related windows (V) according to
+female drivers.
+(e) Heatmap displaying work-related windows (O) according to male
+drivers.
+(f) Heatmap displaying work-related windows (O) according to fe-
+male drivers.
+(g) Heatmap displaying entertainment windows (E) according to
+male drivers.
+(h) Heatmap displaying entertainment windows (E) according to
+female drivers.
+(i) Heatmap displaying social media windows (S) according to male
+drivers.
+(j) Heatmap displaying social media windows (S) according to fe-
+male drivers.
+Figure 12: Level 5 heatmaps displaying the WSD preferences for male (left) and female (right) drivers.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+142
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+(a) Level 3 heatmap generated from drivers’ preferences in the city
+scene.
+(b) Level 3 heatmap generated from drivers’ preferences in the high-
+way scene.
+(c) Level 5 heatmap generated from drivers’ preferences in the city
+scene.
+(d) Level 5 heatmap generated from drivers’ preferences in the high-
+way scene.
+Figure 13: Heatmaps for level 3 (top) and level 5 (bottom) automation; differentiated by city (left) vs. highway (right) environment.
+is highly preferred as opposed to a static one where each
+space on the WSD is assigned a content type. An exam-
+ple is a large “main” window in the driver’s field of view,
+surrounded by smaller “notification” windows. The con-
+tent the driver focuses on would be displayed in the main
+window, and as notifications (e. g., incoming email) arrive,
+the driver can swap content types. Few participants men-
+tioned that they would like to utilize the side window in
+addition to the windshield for customizable content. An-
+other interesting aspect is comfort. Participants strongly
+preferred to place content on the driver side, in order not
+having to rotate or tilt the head to see the content. Addi-
+tionally, for the level 3 scenario, participants stated that
+content displayed on the passenger side would be too dis-
+tracting. Furthermore, windows utilized in portrait mode
+were strongly associated with lists, such as song, email, or
+to-do lists. Detailed content, however, such as a concrete
+email, should be visualized in landscape mode.
+4.8.2 Interaction Management
+We also asked participants wondered, how they could
+imagine to interact with the WSD. The most common an-
+swer was gestural interaction. For example, one could
+perform a swipe gesture to change window contents or
+dismiss notifications appearing on the WSD. Another an-
+swer was interaction using voice commands. Since gain-
+ing more and more popularity in home automation sys-
+tems, natural language processors could be a potential in-
+teraction concept in highly automated vehicles. Further
+answers included already existing hardware interfaces,
+such as rotary knobs and buttons/switches on the steering
+wheel.
+4.8.3 Trust in Automated Driving
+We recognized that most participants, being informed that
+they cannot take over the vehicle in level 5 driving, still
+placed warning windows on the WSD. When asked about
+this oddity, the vast majority of them stated that they
+wanted to know “what the system thinks”, “be kept up to
+date with the driving situation”, and therefore being able
+to prepare should a dangerous circumstance arise. This is
+consistent with state of the art in trust research on highly
+automated vehicles [35]. Those who did not place warning
+windows, stated that they would only drive in a fully auto-
+mated vehicle if it is completely safe and they can trust it
+completely, thereby rendering warnings needless.
+4.8.4 Privacy
+An obvious issue that arises with large displays is privacy
+[11, 29]. Many participants stated that they would not want
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+143
+(a) Heatmap displaying warning windows (W) in the city scene.
+(b) Heatmap displaying warning windows (W) in the highway scene.
+(c) Heatmap displaying vehicle-related windows (V) in the city
+scene.
+(d) Heatmap displaying vehicle-related windows (V) in the highway
+scene.
+(e) Heatmap displaying work-related windows (O) in the city scene.
+(f) Heatmap displaying work-related windows (O) in the highway
+scene.
+(g) Heatmap displaying entertainment windows (E) in the city scene.
+(h) Heatmap displaying entertainment windows (E) in the highway
+scene.
+(i) Heatmap displaying social media windows (S) in the city scene.
+(j) Heatmap displaying social media windows (S) in the highway
+scene.
+Figure 14: Level 3 heatmaps displaying the WSD preferences for the city (left) and highway (right) scene.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+144
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+(a) Heatmap displaying warning windows (W) in the city scene.
+(b) Heatmap displaying warning windows (W) in the highway scene.
+(c) Heatmap displaying vehicle-related windows (V) in the city
+scene.
+(d) Heatmap displaying vehicle-related windows (V) in the highway
+scene.
+(e) Heatmap displaying work-related windows (O) in the city scene.
+(f) Heatmap displaying work-related windows (O) in the highway
+scene.
+(g) Heatmap displaying entertainment windows (E) in the city scene.
+(h) Heatmap displaying entertainment windows (E) in the highway
+scene.
+(i) Heatmap displaying social media windows (S) in the city scene.
+(j) Heatmap displaying social media windows (S) in the highway
+scene.
+Figure 15: Level 5 heatmaps displaying the WSD preferences for the city (left) and highway (right) scene.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+145
+to share sensitive and/or personal information with other
+vehicle passengers. While participants noted that for some
+content types privacy may not be an issue (e. g., watching
+a movie), work-related or social media content would be
+preferred to “invisible” to other passengers.
+4.8.5 Context Awareness
+It was further noted by some participants, when asked why
+they placed non-warning windows in the driver’s field of
+view in level 3 driving, that they expect all windows to
+disappear when a dangerous situation occurs that would
+require the attention of the driver, and a large warning
+window should pop up notifying the driver what to do.
+Additionally, some participants stressed that on a work
+day, they would like to have work-related content on the
+WSD, while on weekends, entertainment and social media
+content are favored. For daily commutes, few participants
+added that they would like to see entertainment content,
+especially, when stuck in a traffic jam. Context aware sys-
+tems could include users’ daily routines and adapt WSD
+contents according to their preferences.
+4.9 Survey Responses
+In a post questionnaire we asked the participants gen-
+eral questions relevant for the use of AR-WSDs in vehi-
+cles. Participants had to rate their agreement on a 7-point
+Likert scale (7 = fully agree, 4 = neutral, 1 = fully dis-
+agree, see Figure 16). The results reveal some interesting
+insights. The majority of our experiments were students
+and staff of a technical university, a circumstance which
+is reflected in the answers. The majority considers them-
+selves as tech-savvy (Mdn = 6). They stated that they
+would use automated vehicle technology extensively if
+available (Mdn = 5), what indicates a relatively high accep-
+tance among study participants (compared to other sur-
+veys, such as [13] or [27]). Only few can imagine to wear AR
+glasses while driving (Mdn = 3) to get additional informa-
+tion overlays, suggesting that complex AR concepts cannot
+be implemented until sophisticated WSDs are available.
+An interesting economical possibility may emerge for mo-
+bility/transport providers [3]. Few respondents (Mdn = 2)
+stated to allow advertisements on WSDs if this would re-
+duce or even omit the costs of individual mobility. How-
+ever, the younger participants were strongly in favor of dis-
+playing ads for the benefit of cheaper mobility (Mdn = 5).
+Additionally, many participants (Mdn = 5) can imagine a
+WSD to become the only display in a vehicle. To our sur-
+prise, elderly participants were more likely to accept WSDs
+as only in-vehicle display (Mdn = 6), while younger drivers
+stated they would still have demand for center consoles or
+other display locations (Mdn = 4).
+5 Discussion
+Considering the individual research questions, WSDs are
+an interesting concept in combination with automated ve-
+hicles. Our results show that potential users might use
+them extensively (RQ1). Drivers prefer WSDs to display
+data from various information sources, and thereby con-
+sider the safety-related limitations of different levels of
+automation. In conditional automation (level 3), it is im-
+portant for most drivers to be able to see what is in front
+of the vehicle, and thus they did not utilize content in
+their direct line of sight. Furthermore, drivers emphasized
+vehicle-related data such as warnings or dashboards, and
+rated them as very important. In fully automated driving
+Figure 16: Likert plots showing the results of the survey questions conducted after the experiment. The medians are highlighted in green.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+146
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+however, they shifted their preference more to non-driving
+related tasks and used much larger areas for entertain-
+ment, work or social media related applications (RQ2).
+Although users nowadays are familiar with portrait for-
+mats (such as used by many smartphone applications),
+most windows were characterized with a landscape format
+(RQ3). Regarding RQ4, there is some general agreement
+on the locations of vehicle-related information or warn-
+ings, that could partly emerge from their existing driv-
+ing experiences (i. e., vehicle dashboards located directly
+above the steering wheel). Additionally, the center per-
+spective was commonly used in fully automated driving
+to engage in non-vehicle related activities, such as media
+consumption or work activities. Answering RQ5, drivers
+wanted warning windows to be the least transparent in
+both automation scenarios. In level 5, however, content as-
+sociated with work, entertainment and social media was
+drawn with less transparency than in level 3, in order to
+focus more on these tasks as opposed to the outside envi-
+ronment. In both conditional and full automation, warn-
+ings and vehicle-related dashboards were perceived as the
+most important content types. In full automation, how-
+ever, work-, entertainment- and social media-related con-
+tent gain (relative) importance (RQ6). When grouping our
+participants by age and gender, we also found interest-
+ing differences. Male participants strongly favored con-
+tent in the driver’s field of view in conditional vehicle
+automation, and they used more windows, while female
+drivers preferred to observe the outside environment and
+therefore placed content windows in the peripheral ar-
+eas of the WSD. In full automation, both male and fe-
+male drivers utilized the entire WSD. Generally, women
+used less transparency for their content windows (RQ7).
+When considering age, elderly drivers tend to place fewer
+content windows on the WSD, and made them smaller
+and more opaque than their young counterparts (RQ8).
+The driving environment, which we separated into urban
+(city) and highway, also had some influence on partici-
+pants’ WSD preferences. Especially work-related content
+windows were more commonly utilized in the city scene.
+Additionally, drivers generally preferred less transparent
+windows in the city scene (RQ9).
+6 Conclusion
+In this work we have evaluated user preferences for wind-
+shield displays by allowing participants of a lab study (N =
+63) to freely choose position, size, transparency and im-
+portance of different content windows. We have further in-
+vestigated the impact of different levels of automation (L3:
+conditional automation, and L5: full automation). Our re-
+sults indicate the most important and most prominently
+used areas of windshield displays as desired by potential
+users, as well as the use of different content types (such as
+vehicle-related information, warnings, or entertainment)
+with respect to the level of automation. Drivers seem to be
+well aware of the implications of different autonomy lev-
+els and vehicle capabilities. For example, in level 3 driv-
+ing, where drivers need to quickly assume vehicle con-
+trol in case of take-over situations, warnings or vehicle-
+related information received higher importance and were
+used most often, while content relevant for non-driving re-
+lated tasks was placed in comparably small windows in
+more peripheral areas of the WSD, thereby avoiding oc-
+clusion of the outside environment. In contrast, in fully
+automated driving, entertainment, work-related, or social
+media content received more importance and commonly
+span over large areas of the windshield display. Addition-
+ally, we highlighted differences in user preferences accord-
+ing to age, gender and the environment. Our results show
+that designers should take our findings regarding the use
+of different content types and their position, size, trans-
+parency and priority on the WSD into consideration when
+designing WSD applications.
+6.1 Limitations
+We are aware that our setting has some limitations. First,
+it was designed as lab experiment in a static environment.
+Preferences might slightly differ if a real driving scene
+would show participants that some areas used for display-
+ing information could occlude important parts of the sur-
+rounding environment (and not only the center perspec-
+tive, i. e., pedestrians entering a crosswalk from the left,
+passing cyclists from the right at a crossing). While the
+static user study setup appears technically simple, it pro-
+vides us with essential and initial information about the
+basic usage of windshield displays for a multitude of dif-
+ferent drivers. Further, we did not include any kind of view
+or interaction management – if users could switch applica-
+tions, the chance could increase that similar content types
+(such as videos, office, or web applications) are displayed
+within the same window.
+Another limitation that needs to be addressed is the
+extent at which WSDs would be used in a real-world sce-
+nario. Many people have smartphones and wearables such
+as smartwatches. When they are presented with auto-
+mated vehicles and WSDs, how likely will they transition
+content, and what specific content, from their personal
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+147
+devices to either private shielded or semi-public WSDs?
+While we specifically told participants to imagine being
+alone in the vehicle, with no other passengers, the issue of
+shared vehicles (e. g., public transport) was not addressed
+in this research.
+6.2 Future Work
+In future studies we also want to investigate the shape of
+content windows. Although TVs, smartphones and com-
+puter monitors usually display their content in a rectangu-
+lar shape, WSDs could differ. [5].
+Large displays, especially when used in a public con-
+text, would also raise some privacy concerns, both in-
+vehicle and outside [1], that should be addressed in the fu-
+ture. We further want to use the collected heatmap data,
+i. e., the core content area to show concrete information
+such as media playlists or a video conference in order to al-
+low the drivers to interact with the WSD application, and
+investigate the visual complexity of WSD applications in
+general, regarding multiple factors (such as layout, color
+coding, typography, etc. – similarly as Riegler et al. did in
+the mobile domain [21], [22]), including eye trackers. An-
+other important aspect for investigation is, if changing en-
+vironments and scene complexity (i. e., traffic jams, com-
+muting) as well as the travel purpose (i. e., business vs
+leisure trip) would have an impact on user preferences. Fi-
+nally, we want to conduct a driving simulator study to find
+out how participants react to content presented on WSDs
+during (simulated) drives. For such a dynamic scenario, we
+will use the gathered data from this study as default values
+and we will further investigate how drivers would or would
+not alter them in these varying context situations.
+Funding: The research presented is conducted within
+the project LEEFF (Low Emission Electric Freight Fleets)
+funded by the Austrian Research Promotion Agency (FFG)
+under contract number 853768 as well as the FH-Impuls
+program of the German Federal Ministry of Education and
+Research (BMBF) under Grant No. 13FH7I01IA (SAFIR).
+References
+[1]
+Ashley Colley, Jonna Häkkilä, Meri-Tuulia Forsman, Bastian
+Pfleging, and Florian Alt. 2018. Car Exterior Surface Displays.
+In the 7th ACM International Symposium. ACM Press, New York,
+New York, USA, 1–8.
+[2]
+SAE On-Road Automated Vehicle Standards Committee. 2014.
+Taxonomy and definitions for terms related to on-road motor
+vehicle automated driving systems. (2014).
+[3]
+Peter Fröhlich and Jürgen Rehak. 2014. Context-aware in-car
+advertising. In the 6th International Conference. ACM Press,
+New York, New York, USA, 1–6.
+[4]
+Joseph L Gabbard, Gregory M Fitch, and Hyungil Kim. 2014.
+Behind the Glass: Driver Challenges and Opportunities for AR
+Automotive Applications. Proc. IEEE 102, 2, 124–136.
+[5]
+Renate Haeuslschmid, Susanne Forster, Katharina Vierheilig,
+Daniel Buschek, and Andreas Butz. 2017. Recognition of Text
+and Shapes on a Large-Sized Head-Up Display. In the 2017
+Conference. ACM Press, New York, New York, USA, 821–831.
+[6]
+Renate Haeuslschmid, Bastian Pfleging, and Florian
+Alt. 2016a. A Design Space to Support the Development
+of Windshield Applications for the Car. In the 2016 CHI
+Conference. ACM Press, New York, New York, USA, 5076–5091.
+[7]
+Renate Haeuslschmid, Yixin Shou, John O’Donovan, Gary
+Burnett, and Andreas Butz. 2016b. First Steps towards a View
+Management Concept for Large-sized Head-up Displays with
+Continuous Depth. In the 8th International Conference. ACM
+Press, New York, New York, USA, 1–8.
+[8]
+Corey D Harper, Chris T Hendrickson, Sonia Mangones, and
+Constantine Samaras. 2016. Estimating potential increases
+in travel with autonomous vehicles for the non-driving,
+elderly and people with travel-restrictive medical conditions.
+Transportation Research Part C: Emerging Technologies 72
+1–9.
+[9]
+Renate Häuslschmid, Sven Osterwald, Marcus Lang, and
+Andreas Butz. 2015. Augmenting the Driver’s View with
+Peripheral Information on a Windshield Display. ACM, New
+York, New York, USA.
+[10] Chunjia Hu, Guangtao Zhai, and Duo Li. 2015. An
+Augmented-Reality night vision enhancement application for
+see-through glasses. In 2015 IEEE International Conference on
+Multimedia & Expo Workshops (ICMEW). IEEE, 1–6.
+[11]
+Shahram Izadi, Harry Brignull, Tom Rodden, Yvonne Rogers,
+and Mia Underwood. 2003. Dynamo: A Public Interactive
+Surface Supporting the Cooperative Sharing and Exchange
+of Media. In Proceedings of the 16th Annual ACM Symposium
+on User Interface Software and Technology (UIST ’03). ACM,
+New York, NY, USA, 159–168.
+[12] Andrew L. Kun, Manfred Tscheligi, Andreas Riener, and Hidde
+van der Meulen. 2017. ARV 2017: Workshop on Augmented
+Reality for Intelligent Vehicles. In Proceedings of the 9th
+International Conference on Automotive User Interfaces and
+Interactive Vehicular Applications Adjunct (AutomotiveUI ’17).
+ACM, New York, NY, USA, 47–51.
+[13] M Kyriakidis, R Happee, and J C F de Winter. July 2015. Public
+opinion on automated driving: Results of an international
+questionnaire among 5000 respondents. Transportation
+Research Part F: Traffic Psychology and Behaviour 32,
+127–140.
+[14] Seungjae Lee, Changwon Jang, Seokil Moon, Byounghyo Lee,
+Jaebum Cho, and Byoungho Lee. 2016. See-through light field
+displays for augmented reality. In SIGGRAPH ASIA 2016 Virtual
+Reality meets Physical Reality: Modelling and Simulating
+Virtual Humans and Environments. ACM Press, New York, New
+York, USA, 1–2.
+[15]
+Hao Li and Fawzi Nashashibi. 2011. Multi-vehicle cooperative
+perception and augmented reality for driver assistance:
+A possibility to ’see’ through front vehicle. In 2011 14th
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+148
+|
+A. Riegler et al., Augmented Reality Windshield Displays
+International IEEE Conference on Intelligent Transportation
+Systems - (ITSC 2011). IEEE, 242–247.
+[16] Lutz Lorenz, Philipp Kerschbaum, and Josef Schumann. Oct.
+2014. Designing take over scenarios for automated driving.
+Proceedings of the Human Factors and Ergonomics Society
+Annual Meeting 58, 1, 1681–1685.
+[17]
+Detlev Mohr, Hans-Werner Kaas, Paul Gao, Andreas Zielke,
+Andreas Tschiesner, Dominik Wee, and Matthias Kässer. 2015.
+Competing for the connected customer – perspectives on the
+opportunities created by car connectivity and automation.
+https://www.mckinsey.com/~/media/mckinsey/industries/
+automotive%20and%20assembly/our%20insights/
+how%20carmakers%20can%20compete%20for%20the%
+20connected%20consumer/competing_for_the_connected_
+customer.ashx. Accessed: 2019-01-07.
+[18] Byoung-Jun Park, Jeong-Woo Lee, Changrak Yoon, and Kyong
+Ho Kim. 2015. Augmented reality and representation in vehicle
+for safe driving at night. In 2015 International Conference on
+Information and Communication Technology Convergence
+(ICTC). IEEE, 1261–1263.
+[19] Bastian Pfleging, Maurice Rang, and Nora Broy. 2016.
+Investigating user needs for non-driving-related activities
+during automated driving. In Proceedings of the 15th
+international conference on mobile and ubiquitous
+multimedia. ACM, 91–99.
+[20] Ronald A Rensink, J Kevin O’Regan, and James J Clark. May
+2016. To See or not to See: The Need for Attention to Perceive
+Changes in Scenes. Psychological Science 8, 5, 368–373.
+[21] Andreas Riegler and Clemens Holzmann. 2015. UI-CAT:
+Calculating User Interface Complexity Metrics for Mobile
+Applications. In Proceedings of the 14th International
+Conference on Mobile and Ubiquitous Multimedia. ACM, New
+York, NY, USA, 390–394.
+[22] Andreas Riegler and Clemens Holzmann. 2018. Measuring
+Visual User Interface Complexity of Mobile Applications With
+Metrics. Interacting with Computers.
+[23] Andreas Riener. 2012. Gestural Interaction in Vehicular
+Applications. Computer 45, 4, 42–47.
+[24] Andreas Riener, Susanne Boll, and Andrew L. Kun. 2016.
+Automotive User Interfaces in the Age of Automation (Dagstuhl
+Seminar 16262). Dagstuhl Reports 6, 6 111–159.
+[25] Andreas Riener and Alois Ferscha. 2013. Enhancing future
+mass ICT with social capabilities. In Co-evolution of intelligent
+socio-technical systems. Springer, 141–184.
+[26] Andreas Riener, Andrew L Kun, Joe Gabbard, Stephen
+Brewster, and Andreas Riegler. 2018. ARV 2018. In the 10th
+International Conference. ACM Press, New York, New York,
+USA, 30–36.
+[27] Christina Rödel, Susanne Stadler, Alexander
+Meschtscherjakov, and Manfred Tscheligi. 2014. Towards
+Autonomous Cars. In the 6th International Conference. ACM
+Press, New York, New York, USA, 1–8.
+[28] Clemens Schartmüller, Andreas Riener, Philipp Wintersberger,
+and Anna-Katharina Frison. 2018. Workaholistic :
+On Balancing Typing- and Handover-Performance in
+Automated Driving. In 20th International Conference on
+Human-Computer Interaction with Mobile Devices and
+Services, MobileHCI 2018. ACM Press, Barcelona, Spain. DOI:
+http://dx.doi.org/10.1145/3229434.3229459.
+[29] Garth B. D. Shoemaker and Kori M. Inkpen. 2001. Single
+Display Privacyware: Augmenting Public Displays with Private
+Information. In Proceedings of the SIGCHI Conference on
+Human Factors in Computing Systems (CHI ’01). ACM, New
+York, NY, USA, 522–529.
+[30] Missie Smith, Jillian Streeter, Gary Burnett, and Joseph L
+Gabbard. 2015. Visual search tasks. In the 7th International
+Conference. ACM Press, New York, New York, USA, 80–87.
+[31] Desney S Tan and Mary Czerwinski. 2003. Effects of visual
+separation and physical discontinuities when distributing
+information across multiple displays. In Proc. Interact, Vol. 3.
+252–255.
+[32] K Tangmanee and S Teeravarunyou. 2012. Effects of guided
+arrows on head-up display towards the vehicle windshield.
+In 2012 Southeast Asian Network of Ergonomics Societies
+Conference (SEANES). IEEE, 1–6.
+[33] Bart van Arem, Cornelie J G van Driel, and Ruben Visser.
+2006. The Impact of Cooperative Adaptive Cruise Control on
+Traffic-Flow Characteristics. IEEE Transactions on Intelligent
+Transportation Systems 7, 4, 429–436.
+[34] Philipp Wintersberger, Andreas Riener, Clemens Schartmüller,
+Anna-Katharina Frison, and Clemens Weigl. 2018. Let Me Finish
+before I Take Over: Towards Attention Aware Device Integration
+in Highly Automated Vehicles. In Proceedings of the 10th
+International Conference on Automotive User Interfaces and
+Interactive Vehicular Applications. ACM, 51–58.
+[35] Philipp Wintersberger, Tamara von Sawitzky, Anna-Katharina
+Frison, and Andreas Riener. 2017. Traffic Augmentation as a
+Means to Increase Trust in Automated Driving Systems. In the
+12th Biannual Conference. ACM Press, New York, New York,
+USA, 1–7.
+Bionotes
+Research Associate and PhD
+Candidate Andreas Riegler
+University of Applied Sciences Upper
+Austria, Department of Energy and Mobility,
+Hagenberg, Austria
+andreas.riegler@fh-hagenberg.at
+Andreas Riegler is a researcher at the research group Mobile Inter-
+active Systems of the University of Applied Sciences Upper Austria.
+His research interests include Automotive Computing, Mobile Com-
+puting and Human-Computer Interaction. He is currently investigat-
+ing the use of Augmented and Virtual Reality for Intelligent Vehicles.
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+
+A. Riegler et al., Augmented Reality Windshield Displays
+|
+149
+Research Associate and PhD
+Candidate Philipp Wintersberger
+Technische Hochschule Ingolstadt,
+Ingolstadt, Germany
+philipp.wintersberger@carissma.eu
+Philipp Wintersberger is a researcher at the research center
+CARISSMA/THI and obtained his diploma in Computer Science from
+Johannes Kepler University Linz specializing in Human-Computer-
+Interaction and Computer Vision. He worked 10 years as a software
+engineer/architect and was invited speaker about mobile comput-
+ing and software development at several conferences/events. In
+January 2016, he joined the Human-Computer Interaction Group at
+CARISSMA/THI to conduct research in the area of Human Factors
+and Driving Ergonomics.
+Prof. for Human-Machine Interface and
+Virtual Reality Andreas Riener
+Technische Hochschule Ingolstadt,
+Ingolstadt, Germany
+andreas.riener@thi.de
+Andreas Riener is a professor for Human-Machine Interaction and
+Virtual Reality at Technische Hochschule Ingolstadt (THI), Germany
+with co-appointment at CARISSMA (Center of Automotive Research
+on Integrated Safety Systems and Measurement Area). He is further
+leading the human-computer interaction group (HCIG) at THI. His re-
+search interests include driving ergonomics, driver state estimation
+from physiological measures, human factors in driver-vehicle inter-
+faces as well as topics related to (over)trust, acceptance, and ethical
+issues in automated driving.
+Prof. for Interactive
+Technologies Clemens Holzmann
+University of Applied Sciences Upper
+Austria, Department of Energy and Mobility,
+Hagenberg, Austria
+clemens.holzmann@fh-ooe.at
+Clemens Holzmann is a full professor at the School of Informatics,
+Communications and Media of the University of Applied Sciences
+Upper Austria. Since 2018, he is also vice president for IT of the
+University of Applied Sciences Upper Austria. His research interests
+include Mobile Computing and Human-Computer Interaction. For
+more information about R&D projects and publications, please visit
+the website of his research group Mobile Interactive Systems (https:
+//mint.fh-hagenberg.at/).
+Unauthenticated
+Download Date | 9/19/19 8:35 AM
+
+

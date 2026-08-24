@@ -1,0 +1,1486 @@
+--- Page 1 ---
+sustainability
+Review
+Negotiation and Decision-Making for a Pedestrian
+Roadway Crossing: A Literature Review
+Roja Ezzati Amini 1,*
+, Christos Katrakazas 2 and Constantinos Antoniou 1
+1
+Chair of Transportation Systems Engineering, Department of Civil, Geo and Environmental Engineering,
+Technical University of Munich, 85748 Munich, Germany; c.antoniou@tum.de
+2
+Department of Transportation Planning and Engineering, National Technical University of Athens,
+15773 Athens, Greece; ckatrakazas@mail.ntua.gr
+*
+Correspondence: roja.ezzati@tum.de
+Received: 2 October 2019; Accepted: 20 November 2019; Published: 27 November 2019
+
+
+Abstract: The interaction among pedestrians and human drivers is a complicated process, in which
+road users have to communicate their intentions, as well as understand and anticipate the actions of
+users in their vicinity. However, road users still ought to have a proper interpretation of each others’
+behaviors, when approaching and crossing the road. Pedestrians, as one of the interactive agents,
+demonstrate different behaviors at road crossings, which do not follow a consistent pattern and may
+vary from one situation to another. The presented inconsistency and unpredictability of pedestrian
+road crossing behaviors may thus become a challenge for the design of emerging technologies in
+the near future, such as automated driving system (ADS). As a result, the current paper aims at
+understanding the effectual communication techniques, as well as the factors inﬂuencing pedestrian
+negotiation and decision-making process. After reviewing the state-of-the-art and identifying research
+gaps with regards to vehicle–pedestrian crossing encounters, a holistic approach for road crossing
+interaction modeling is presented and discussed. It is envisioned that the presented holistic approach
+will result in enhanced safety, sustainability, and effectiveness of pedestrian road crossings.
+Keywords: pedestrian behavior; vehicle–pedestrian interactions; road crossing; decision-making
+process
+1. Introduction
+Participating in trafﬁc requires road users to continuously interact with one another [1]. During the
+time spent for transport, trafﬁc participants have to face a great amount of information and react
+efﬁciently to it [1–3]. In such a system, it is essential for road participants to manage their own
+moves, while taking into account the presence of other users, as all of the participants usually share
+a pre-deﬁned space [1]. These mobile encounters entail a continual monitoring and communicating of
+users’ positions with regards to one another, along with suitable reactions to the features associated
+with the surroundings [4]. Furthermore, trafﬁc safety in urban settings heavily depends on successful
+interactions among trafﬁc participants [5]. For this reason, fundamental trafﬁc rules have been
+established to manage trafﬁc, especially in vehicle–pedestrian encounters. The trafﬁc management and
+control systems can diminish the conﬂicts and uncertainty by specifying the right of way for different
+road users (e.g., trafﬁc rules imposed by different phases of trafﬁc signals at signalized intersections).
+Road trafﬁc, however, involves many circumstances for which it may not be possible to specify explicit
+rules [6], such as a sudden change of direction by pedestrian, while crossing the road. Hence, trafﬁc
+participants and particularly pedestrians extensively rely on communication methods, elaborated
+over the course of time amongst them, to avoid conﬂict and solve ambiguous trafﬁc situations [7].
+For instance, hand gestures by drivers to convey the message “it is safe to cross” to pedestrians,
+Sustainability 2019, 11, 6713; doi:10.3390/su11236713
+www.mdpi.com/journal/sustainability
+
+--- Page 2 ---
+Sustainability 2019, 11, 6713
+2 of 24
+while there is no trafﬁc control systems on the road segment. The role of these communication cues
+is dominant in situations in which the right of way is not clearly deﬁned [8], or road users expose
+unexpected trafﬁc behaviors [9]. In these circumstances, road users employ explicit and implicit
+signals to communicate their intention regarding either gaining or giving the priority in the crossing
+scenarios. However, sometimes pedestrians are engaged in multi-tasking (such as mobile-phone
+conversation, texting, listening to music, reading), and are therefore not able to communicate their
+movements/intentions with the interacting party. Such behaviors have not been captured in this paper,
+as the focus is on trafﬁc interactions as a bilateral process among involved road users. In addition to
+communicating intended movements, trafﬁc interactions require road users to properly interpret and
+predict the actions of their interactive party. However, this may become problematic in some situations
+since trafﬁc participants demonstrate different behaviors on approaching the crossing sites. Previous
+studies have investigated a broad range of factors that may affect the behaviors of road users, namely
+drivers and pedestrians, on approaching the crossing sites, such as pedestrian walking speed and
+characteristics, speed of approaching vehicle, road characteristics, etc. [10–14].
+Moreover, mobility technologies have been constantly changing in the recent years, as more and
+more vehicles will have automation functions in the imminent future [15]. The changes of transportation
+means have inevitably led to an adjustment of road designs, and a new set of rules and social norms
+emerging to manage the mobility of traffic participants [16]. Since fully automated vehicles will be
+integrated into the existing transportation system, the interaction with pedestrians becomes challenging
+in cooperative situations (e.g., when road users require sharing their intentions to communicate the
+right of way, or to coordinate their reactions) [5,17–21]. This is primarily related to the absence of
+a human driver in vehicles and thereby an absence of driver cues in vehicle–pedestrian communications,
+which may decline the trust and confidence of pedestrians [22–25]. To overcome these limitations,
+the intentions of such vehicles need to be clearly transmitted to other traffic participants [24]. In addition,
+ADS must have a proper understanding of pedestrians’ behaviors and their decision-making strategies
+to execute appropriate driving maneuvers [8]. The complexity of crossing strategies performed by
+pedestrians, and difficulty to thoroughly analyze their decision-making process, have also engendered
+challenges in designing ADS [5,8], insomuch that human road users may act differently from the
+system’s presumptions [16].
+The main focus of this paper, therefore, is to review the previous findings of crossing behavior
+studies in order to investigate how pedestrians negotiate the road crossing with motorized vehicles
+and make decisions at crossing sites, in which the right of way is not determined by formal traffic rules
+or road designs. A proper understanding of these matters can provide useful recommendations for
+designing the ADS, and ensuring a safe, smooth, and efficacious interaction process amongst pedestrians
+and vehicles [5]. The paper is intended to provide in-depth insights into the following issues:
+1.
+The efﬁciency of different communication techniques and their impact on behavior of road users
+have been investigated thoroughly in this paper by reviewing previous studies. How road users
+react to various communication signals, how a signal is interpreted by receiver, which methods
+road users choose to communicate their intentions, and how they send the signal are substantial
+components of trafﬁc communications. An in-depth examination of these elements can assist
+ADS in forming efﬁcient communication methods with pedestrians.
+2.
+Factors inﬂuencing crossing behaviors of pedestrians have been reviewed in order to understand
+why pedestrians behave differently from one situation to another while crossing the roadway.
+Since understanding of pedestrians’ behaviors is not intuitive [7], a comprehensive analysis of
+decision-making procedure and factors inﬂuencing them is required for the design of ADS [17].
+3.
+The vehicle–pedestrian interaction process includes movements/intentions communications, as
+well as decision-making processes of interactive parties which are reﬂected in their crossing
+behaviors.
+A vast number of studies have been performed to assess different aspects of
+vehicle–pedestrian interactions; however, the focus on the entire process has been mostly
+disregarded due to the complexity of the subject. This is crucial as ADS requires an appropriate
+
+--- Page 3 ---
+Sustainability 2019, 11, 6713
+3 of 24
+interaction concept for driving safely in urban environments [5]. Therefore, formulating the
+whole interaction process in the existing trafﬁc context, by considering the role of different
+communication methods and users’ crossing strategies, is vital for designing efﬁcient ADS and
+external human–machine interfaces (eHMIs).
+The paper is structured as follows: Section 2 includes the fundamental deﬁnitions, while Section 3
+provides an overview of the potential conﬂict points of pedestrians with vehicular trafﬁc.
+The interactive parties in various crossing scenarios, presently only human road users, interact
+with one another by a variety of verbal and nonverbal communication means.
+These trafﬁc
+communication methods used by road users on approaching the crossing sites are reviewed in Section 4.
+The employment of different cues and their impact on the yielding behaviors were also investigated
+in this section. In what follows, previous studies of crossing behaviors at unmarked/unsignalized
+crossing sites are reviewed. For this purpose, the behavior of drivers and pedestrians on approaching
+different uncontrolled pedestrian crossing facilities has been explored in Section 5, to identify factors
+inﬂuencing their crossing-decision strategies.
+2. Deﬁnitions
+Trafﬁc Conﬂict is deﬁned as an event between trafﬁc participants, in which an evasive maneuver
+needs to be taken by one of them to avoid a collision [26].
+Jaywalking is a term used to describe the action of crossing a road with no regard to the
+pedestrians’ trafﬁc regulations [27].
+Trafﬁc Interaction is deﬁned as situations in which the trafﬁc participants adapt their behaviors
+according to one another [28], as well as interpreting the environmental context, surrounding trafﬁc,
+and responses to one’s own behavior [29,30].
+Pedestrian Gap Acceptance (GA) refers to the time or space gap between vehicle and
+pedestrians [31], and can be determined based on the speed of oncoming vehicles, as well as its
+distance from the pedestrian crossing [11].
+Post-Encroachment-Time (PET) value can be used to describe the time gap, from the moment
+that one of the interacting road users leaves the potential collision point to the moment another user
+arrives at it [32].
+Time-To-Collision (TTC) value is the time between approaching road users and the potential
+collision point [33], and can be used to describe the severity of conﬂict events [32].
+Time-To-Arrival (TTA) estimation can be used to evaluate the time gap perception between
+approaching vehicles and the own position/a person/speciﬁc place [10,34].
+Time Advantage (TAdv) as an indicator describes the expected PET value for each moment,
+considering an unchanged speed and paths of road users [35].
+3. Vehicle-Pedestrian Safety Considerations
+Most vehicle–pedestrian collisions occur when pedestrians cross the roadway illegally at locations
+out of crosswalks, or at pedestrian crossing facilities particularly with lower protection [36–39].
+Trafﬁc participants may not comply with formal trafﬁc laws for reasons, such as lack of sufﬁcient
+knowledge about the rules in speciﬁc situations or the ambiguity of rules, which may be understood
+differently by users [40,41]. Some of the trafﬁc rules may also not perfectly correspond to the road
+design or the natural human behavior patterns [40]. Dey and Terken [42] claimed that the lack of strict
+enforcement like trafﬁc lights at uncontrolled pedestrian crossings may result in disregarding users’
+right of way by drivers. In a similar manner, in the absence of crossing facilities in a road segment,
+pedestrians may adapt mid-block crossing and jaywalking, in order to avoid detour and shorten the
+travel time (instead of walking an additional distance to a crosswalk) [42–45]. Such unpredictable
+crossing behaviors by pedestrians create a potential critical conﬂict with approaching vehicles, as well
+as interrupting the normal trafﬁc ﬂow [46]. However, the majority of road users interact without
+
+--- Page 4 ---
+Sustainability 2019, 11, 6713
+4 of 24
+any serious conﬂict and are therefore of little/no interest from a trafﬁc safety point of view [16].
+The interactions may be important from the user experience perspective, which may result in
+unpleasant interaction experience, and therefore encouraging/discouraging speciﬁc behaviors or road
+designs [16]. In addition, pedestrians are notiﬁed of the spots to cross the road by marked crosswalks
+and signs, but there is still no standard agreement for them to indicate their crossing decision intention
+in advance of drivers, besides standing in/at the crosswalk [47]. However, pedestrians stepping into the
+roadway, or signs and markings may induce drivers to give way to pedestrians at crossings, but there
+is still no effectual and certain prompt that a pedestrian, who has commenced crossing, can use to
+enhance the possibility of a driver yielding [47–49], since there are still some situations in which drivers
+do not give way to pedestrians who stepped into the street. For instance, an observation study on zebra
+crossings showed that about 30% of pedestrians continued walking when the vehicle was approaching,
+and the vehicle took the evasive action to avoid collision [13], whereas, in 4% of the situations,
+the pedestrians either retreated or ran from the path of the vehicle to avoid collision [13]. Occurrence
+of the aforementioned scenarios signiﬁes the necessity for utilizing some additional techniques by
+road users to communicate their movement intentions in advance of the interacting party. Therefore,
+a variety of communication methods, which are mostly based on the human communication principles,
+have been developed between human road users in order to avoid conﬂict and resolve ambiguity
+regarding the right of way.
+4. Communication between Trafﬁc Participants
+Communication is an essential element of trafﬁc interactions, as it assists human users with
+resolving ambiguous circumstances on the road [50]. Trafﬁc participants communicate a range of
+actions regarding their intended movement, such as going straight, stopping, and going ahead
+of someone [51]. For an efﬁcient communication, the interacting parties need to understand the
+intentions of one another, as well as the situation in which the communication is occurring [52]. Since
+it varies from one situation to another and it always depends on the circumstances [21], this also
+requires communicators to anticipate each other’s future actions [7,21,52]. However, anticipations
+and expectations concerning the other’s behavior may not always be correct [53]. The situation may
+also become problematic when trafﬁc participants behave according to contradictory formal and
+informal trafﬁc rules, in which the trafﬁc participant’s ability to rightly anticipate another user’s
+behavior declines [53,54]. Trafﬁc interactions are also relatively short, which limits the opportunities
+to communicate among trafﬁc participants [37]. This may oftentimes lead to misunderstanding and
+misinterpretations and thus annoyance amongst participants [37]. Furthermore, the need for social
+interaction among drivers, cyclists, and pedestrians is more substantial in urban trafﬁc [50], and mostly
+occurs in the front and the side of the car [25]. The actions employed by interactive parties to convey
+their movement intentions can be classiﬁed as different communication methods, as discussed in the
+following subsections.
+4.1. Anticipatory Behaviors of Trafﬁc Participants
+Anticipatory behaviors are minor activities performed by road users that make others able
+to predict their intentions [6]. Examples of such behaviors include changes in walking speed or
+placing a foot on the road, which in general helps drivers to anticipate a potential crossing intention
+for a pedestrian [6,10]. These behaviors are classiﬁed as one of the informal and non-regulated
+communication methods among road users to anticipate what action another user may possibly do [10].
+Another anticipation of trafﬁc participant’s behavior is associated with the physical characteristics
+of communicators. This communication signal is the same as what is named “schema formation”
+by Merten [55] in grouping different communication choices.
+For instance, the physical traits
+of pedestrians can give drivers clues about their age and their mobility behaviors, while elderly
+pedestrians may walk slower than younger ones [6], or children may have more unpredictable
+behaviors than adults. Pedestrians can also utilize the same available information on the road about
+
+--- Page 5 ---
+Sustainability 2019, 11, 6713
+5 of 24
+the vehicle’s model/category, e.g., the driver of an ambulance may behave differently from a van
+driver [6].
+4.2. Human Driver Communication Methods in Interaction with Pedestrians
+Drivers anticipate the intentions of other road users by interpreting various nonverbal
+communication cues. This is mostly presented among drivers and pedestrians, while negotiating right
+of way [20]. Although the decisions of drivers are affected by the trafﬁc regulations on the road, there
+is still some uncertainty in circumstances, where the trafﬁc laws are not sufﬁcient [56]. These situations
+can occur at uncontrolled intersections, transition of trafﬁc signals, merging/changing lane, multi-lane
+roundabouts, etc. [56]. From the vehicle’s point of view, communication style can be classiﬁed as
+implicit and explicit [12,21]. These terms are deﬁned below:
+•
+Implicit Communication (also referred as informal communication): In general, when the content
+of a message is indirectly included in that instead of clearly being stated, then the message is
+conveyed implicitly [21]. In terms of trafﬁc, implicit communication refers to using non-regulated
+communication cues to negotiate the driver’s intention, or to help communicators to anticipate
+future actions of them, e.g., deceleration to encourage the pedestrian to cross [10,21,57].
+•
+Explicit Communication (also referred as formal communication): A message is transmitted
+explicitly, if the sender transfers intention directly to the receiver by using clear cues [21].
+In trafﬁc situations, explicit communication usually refers to using light and sound signals to
+communicate the intention of vehicles [21]. Explicit communication includes deﬁned/regulated
+communication means. Horn, turn indicator, emergency lights, warning lights, brake lights,
+and even labelling a car (as an ambulance, automated vehicle, police, etc.) are examples of
+this type of communication [6,21,53]. Nonverbal behaviors are usually used to transfer implicit
+messages; however, in trafﬁc, nonverbal communication methods are used for sending explicit
+messages [58,59]. Hand gestures executed by drivers to signal pedestrians that they can cross in
+front of the car safely, or expression of gratitude to a fellow driver by waving a hand are examples
+of explicit cues performed by drivers in trafﬁc encounter [6].
+4.3. Pedestrians Communication Methods in Interaction with Drivers
+Pedestrians mainly interact with other road users by using nonverbal communication signals.
+However, in some situations, the message transferred via nonverbal cues is missed, ignored, or not
+correctly comprehended by the interacting party [60]. The main nonverbal communication signals
+used by pedestrians are:
+•
+Gaze Direction: The most signiﬁcant message that is essential to be transferred to pedestrians
+is whether they have been seen [6]. Therefore, in the crossing scenes, they mostly establish eye
+contact with drivers or wait to receive an explicit cue from them to conﬁrm that they have been
+detected, and the driver will yield if they start crossing [6,61,62]. If the driver who receives the
+signal returns the eye contact, then pedestrians presume that they have been seen [63]. Moreover,
+head orientation, which occurs with the purpose of looking or glancing at the approaching trafﬁc,
+can be a robust sign of crossing intentions by pedestrians [64]. However, trafﬁc participants
+behave differently in the various trafﬁc settings [64]. For example, pedestrians intending to
+cross a road are more likely to cross without looking at the oncoming trafﬁc in the presence of
+trafﬁc signals and stop signs, since they expect drivers to obey the trafﬁc rules [64], whereas,
+in the absence of trafﬁc regulations, they frequently monitor the approaching trafﬁc and mostly
+establish eye contact with the driver to assess the environment and whether the driver may give
+way [64,65].
+•
+Hand Gesturing: Gestures are described as efﬁcient nonverbal signals amongst road users, which
+are mostly interpretable and explicit [6,66]. However, the concept of the message transferred
+by using this kind of signals can vary from situation to situation. For example, hand gesturing
+
+--- Page 6 ---
+Sustainability 2019, 11, 6713
+6 of 24
+can show thankfulness, giving priority, or requesting the right of way, while the responses are
+in the form of changes in pedestrian behavior like deceleration, acceleration, or stop [64,67,68].
+According to previous studies of driver’s interaction with the environment, three fundamental
+dimensions have been deﬁned to evaluate a signal: visibility, clarity, and motive power [66,69].
+From the visibility point of view, gesturing a dynamic signal is found to stand out more than
+trafﬁc signs and road markings, since driver’s attention is more easily caught by moving rather
+than static objects [70]. Clarity, on the other hand, varies across gestures, as some are more
+effective than others. Finally, driver compliance may vary according to the concept of the gestures,
+i.e., whether they are commanding or polite [66]. This can reﬂect compliance obtaining strategies
+through “assertion” and “direct request” [66,71].
+4.4. The Impact of Communication between Road Users on Trafﬁc Behaviors
+Road users communicate with each other through various unregulated methods, which include
+their movements and positioning, as well as establishing eye contact. According to previous studies,
+these interactions have a vital role in forming a smooth and efﬁcient trafﬁc ﬂow, as well as improving
+safety [7,21,25,50,72,73]. Road trafﬁc is fundamentally directed by a range of ofﬁcial regulations,
+which deﬁne the right of way for trafﬁc participants in various road designs and facilitate social
+interaction [37]. Furthermore, in many countries, drivers give way to pedestrians to protect them
+at pedestrian crossings or unregulated crosswalks [66]. However, drivers may be more likely to
+conform with the ofﬁcial trafﬁc control regulations rather than gesturing or gazing cues displayed by
+pedestrians [74]. Road users, particularly drivers, may also receive informal communication signals
+from authorized trafﬁc directors, which is mostly by means of hand gesturing [75]. On the other
+hand, pedestrians may employ nonverbal communication indicators only when an expected driving
+behavior of an oncoming vehicle has been contravened [42]. In these situations, pedestrians are
+looking for a conﬁrmation of intent from the drivers before carrying out their crossing decisions [42],
+while most drivers give way to pedestrians who have already stepped into the street, but there are
+still some drivers who ignore the pedestrian’s right of way, and speed up or swerve to pass them
+at crossings sites [76]. For example, an observation on Columbus, Ohio showed that the majority of
+drivers never came to a complete stop, and 43% of them did not stop with pedestrians walking in
+the crosswalk [76]. Another study revealed that more than a third of drivers (36%) failed to yield to
+pedestrians at uncontrolled marked crossings [53].
+In the process of negotiating priority in driver–pedestrian interactions, either pedestrian or driver
+has to give way. Pedestrians give way to drivers by making the roadway clear for them to cross
+by, for example, waiting at the curb or stepping out of the road. On the other hand, a driver yields
+by; (1) a reasonable complete stop (hard yield), (2) delaying vehicle arrival at the crosswalk enough
+to create a crossing opportunity for the pedestrian (rolling/soft yield), and (3) slowing down and
+eventually stopping for an extended duration before restarting movement (hard yield and stop) [46,48].
+In hard-yield conditions, the driver is usually too close to the crosswalk during a crossing activity
+and must stop momentarily, while soft-yield is a condition based on the driver’s observations and
+anticipations of pedestrian action [46]. On the other hand, pedestrians cross the roadway ﬁrst in
+three circumstances: (1) before the arrival of the vehicle and without inﬂuencing its speed, (2) when
+the oncoming car is motivated to stop by a pedestrian who does not stop before crossing, and (3)
+when the approaching vehicle brakes on the driver’s own initiative to yield to pedestrian (ideal
+situations) [32]. Such [37] classiﬁed eye contact as a means of communication for both drivers and
+pedestrians at crosswalks considered by pedestrians when deciding to wait/go, and by drivers as a way
+to force pedestrians to stop. A study to assess the inﬂuence of pedestrian’s gaze on driver’s yielding
+behavior at pedestrian crosswalk showed that gazing increased the number of drivers who gave way
+to pedestrians [77,78]. In contrast, another research paper indicated that nonverbal communication
+signals, such as eye contact and gestures, do not play a signiﬁcant role in crossing negotiation [42].
+Another experimental study criticized the possibility of performing mutual eye contact between
+
+--- Page 7 ---
+Sustainability 2019, 11, 6713
+7 of 24
+pedestrians and drivers [79]. The results showed that over 90% of the participants cannot determine
+the gaze of the driver at 15 m and see the driver at all at 30 m. The authors then argued that, considering
+the speed limit of 25 mph in urban settings, more than 99% of pedestrians would have begun crossing,
+before being able to see either the driver or the driver’s gaze. An experimental study performed in
+Beijing, China evaluated the impact of various pedestrian hand gesturing on driver yielding rate at
+non-signalized crossings, which showed a slight increase in the overall yielding rate among drivers
+when pedestrians performed hand gestures [66]. The same study in the US also showed greater yielding
+rates at uncontrolled marked crossings when pedestrians displayed hand gestures, compared with
+not using hand movements [47]. Most of these informal trafﬁc rules and communication methods are
+developed through trafﬁc participants’ interactions, and based on expectations about other participants’
+behavior, mostly when formal trafﬁc rules do not correspond with the road design [40]. The expectation
+about the behaviors of other interacting agents can be formed due to the chosen strategies or transferred
+communication signals. However, the interaction strategies executed by road users may be inﬂuenced
+by various factors, such as interaction environment or road users’ characteristics, and need to be
+correctly interpreted.
+5. Crossing Behaviors of Trafﬁc Participants
+Trafﬁc participants manifest varied behaviors on approaching a crossing site. Drivers, as a party
+in the interaction with pedestrians, have several strategies to decide whether or not to give way
+to pedestrians.
+These strategies are subject to several factors, such as speed of the vehicle on
+approach, or its distance to the common spatial zone with pedestrians. Zaidel [80] discussed that
+every driver is inﬂuenced by social environment factors, including other trafﬁc participants, general
+social norms, and formal trafﬁc rules. Every trafﬁc participant is also a part of other participants’ social
+environments [80]. Social environment can inﬂuence drivers in four different ways: (1) communication
+with other participants, (2) behaviors of other participants as a source of information, (3) other
+participants as a reference group, and (4) emulation of others. Another common strategy utilized by
+drivers to coordinate their behavior is “movement pattern”, showing how road users communicate
+their intentions through their movements [81]. For example, on approaching crosswalks, drivers
+stop before where they legally must, signaling their intent to wait for others to take the right of way.
+Then, they move forward slowly to indicate that they will take the right of way next [81]. In addition,
+the meaning of road users’ actions can only be comprehended in the context of their occurrence [81,82].
+Therefore, the meaning of the actions of a single road user cannot be understood by looking at the
+actions alone, and must be interpreted by considering the whole road system, containing road users,
+road geometry, etc. [81,82].
+On the other hand, it is important to understand under which circumstances pedestrians feel
+safe to cross, and which factors inﬂuence their crossing-decision strategies. Pedestrian crossing
+behaviors are oftentimes accompanied by some sort of signals and information to indicate their
+crossing intentions to the approaching vehicle, such as forward movement, stepping into the road,
+leaning forward, putting one foot on the road, looking at oncoming vehicle, informal signals, etc. [81].
+Distance between agents, as a result of movement, also inﬂuences pedestrians’ expectations regarding
+the other trafﬁc participants’ behavior [83]. In addition, pedestrians cross the roadway in different
+ways, based on the speed of oncoming vehicles, available gaps, and number of lanes: (1) single
+stage, (2) two stage, (3) and rolling [43]. Pedestrian crossing behavior can also be classiﬁed into three
+phases: (1) approaching (without changing the walking speed), (2) appraising (decelerating due to the
+speed and distance of approaching vehicles), (3) and crossing (acceleration) [84]. It is also possible
+for a pedestrian to step backwards or run to avoid collision with vehicles, when the gap is not long
+enough to complete the crossing [36]. However, the majority of pedestrians waits before crossing,
+until the vehicles come to a complete stop, instead of relying on their own perception of whether it is
+safe to cross [53]. The factors, identiﬁed in the literature, inﬂuencing the crossing behaviors of users
+are presented next:
+
+--- Page 8 ---
+Sustainability 2019, 11, 6713
+8 of 24
+5.1. Pedestrian-Associated Factors Inﬂuencing Crossing Behaviors
+5.1.1. Pedestrian Characteristics
+Age is one of the factors inﬂuencing pedestrian behavior, meaning that people of different age
+groups may have various crossing behaviors. Road crossing is a challenging cognitive task, which
+makes safe trafﬁc judgements difﬁcult for children younger than 9 years old. It may even take until the
+age of 11 or 12 for children to fully develop all required abilities and gain an adequate understanding
+of the concept of trafﬁc rules [85,86]. In addition, the lack of experience among young children in
+crossing roads can make them incapable of making safe decisions, and therefore is a concern for
+roadway designers. This is along with unpredictable behaviors, inattentiveness, and problematic risk
+perception, which have been found to be the leading reasons for child pedestrian accidents [85–87].
+On the other hand, older pedestrians demonstrate more conservative behaviors in comparison with
+younger people [10]. For example, the percentage of pedestrians 65 years and older crossing on
+red phase is notably lower than the percentage of younger pedestrians [88]. However, physical
+conditions of elderly pedestrians restrict their abilities to precisely judge the trafﬁc situation and speed
+of approaching vehicles, and lead to difﬁculty negotiating curbs, and excessive start–up time before
+leaving the curb [86,89]. Bennett et al. [90] observed different average of start time loss of 2.68 s and
+1.3 s for all groups of pedestrians at signalized intersections and controlled mid–block crossing sites,
+respectively. The start–up time to initiate the crossing is also higher among distracted pedestrians than
+non-distracted pedestrians [91]. On the other hand, middle-aged adults are found to be more aware
+of the trafﬁc environment by looking at oncoming trafﬁc more frequently before crossing the road,
+having a larger safety margin, and better perspective skills [36]. Alcohol impaired pedestrians (in the
+1980s, around 44% of killed/injured pedestrians had BACs (Blood Alcohol Concentration) of 10% or
+greater) and pedestrians with physical disabilities also have different behaviors due to the mobility
+impairment [92].
+Pedestrians’ behaviors can be also different because of their gender. For example, females seem
+to wait longer during the red phase of signalized crossings before attempting illegal crossing than
+males [93]. Female pedestrians may also demonstrate less risk-taking behaviors at crossings, compared
+with males [13,94]. In contrast, another observation of pedestrian behavior at crosswalks exposed no
+difference between female and male risk-taking behaviors while crossing [95].
+5.1.2. Pedestrian Walking Speed
+One of the most fundamental elements of human movement behavior in urban spaces is walking
+speed, as it is a dominant parameter of most microscopic simulation models, and which can be
+affected by individual pedestrian behavior and habit [14,96]. Walking rates vary among different
+studies [14,86,92,97]. In accordance with Manual on Uniform Trafﬁc Control Devices (MUTCD),
+the average walking speed for typical groups of pedestrians is 1.22 m/s, suggested as a basis to
+evaluate the sufﬁciency of the pedestrian clearance interval at trafﬁc signals with the possibility to
+extend the phase for slower pedestrians by pressing a push-button [92,96,98]. The recommendation
+for the design of trafﬁc signal timing without an actuator is lower—0.91 to 0.99 m/s [99]. However,
+pedestrian crossing speed may also vary for different countries, for instance a study showed 1.53 m/s
+for the average of crossing speed at intersections and mid-block crossings in Melbourne, Australia [90],
+the average of 1.34 m/s in Jordan [100], 1.39 m/s at non-signalized crosswalk in Malaysia [101],
+and 1.4 m/s as the design speed by the Turkish Standards Institution [102].
+Walking speed declines by increasing age, as a study showed an average walking speed 1.53 m/s
+for pedestrians younger than 16 years old, while 1.16 m/s for those older than 64 years old [14,103]. In
+addition, the elderly, pedestrians with disabilities, and those pushing baby prams or walking along
+with younger children tend to walk at slower speeds [14]. Different walking speed can be also related
+to the gender, as some studies showed that, on average, males walk faster than females [96,104].
+The group size can be another factor inﬂuencing the walking speed, since people in a group of two or
+
+--- Page 9 ---
+Sustainability 2019, 11, 6713
+9 of 24
+more walk slower than individuals and take longer to complete the crossing process [14,46,104,105].
+It is also found that environmental factors, such as weather, time of day (slightly higher during
+the morning and evening peak period), type of facility, and the overall function of pedestrian area
+(e.g., shopping, school, business) also affect the walking speed of pedestrians [14,106]. For example,
+pedestrians walk faster at signalized intersections than the mid-block locations [90], when crossing
+roadways than walking in a footpath [14,107], or when the trafﬁc volume is high [104,108]. This might
+even turn to running in some circumstances: at signalized crosswalks to use the limited green-light
+phase left to traverse the roadway, or at uncontrolled unmarked crossings or illegal sites to traverse the
+road from the start of the lane to its end before arrival of approaching vehicles [36,109]. The latter one
+may cause a new independent crossing task for pedestrians at each lane requiring a new evaluation of
+the trafﬁc situation and possibly adjustment of the crossing manner, which may again change their
+walking speed.
+5.1.3. Pedestrian Group Size
+The size of pedestrian platoons is associated with both pedestrian crossing behavior and driver
+yielding behaviors. As the number of pedestrians waiting at crosswalks increases, the likelihood
+of drivers’ yield increases. The probability of yielding is two times greater, when the number of
+pedestrians waiting increases from three to six persons, since a big group captures more attention of
+drivers for yielding than smaller groups [11,53,110]. It has also been found that the possibility of a group
+of four pedestrians continuing to traverse crosswalk is 70% higher than individual pedestrian [13].
+This also enhances safety of pedestrians, as pedestrians in groups are more detectable [36]. Due to
+the frequency of crossing, smaller pedestrians’ platoons cause more trafﬁc interruptions and higher
+cumulative delay, and consequently driver inconvenience compared to bigger platoons, which cross at
+once [46]. Analyzing the impact of pedestrian platoons on yielding rate at illegal mid-block crossings
+also revealed that the rate of “hard-yield and stop” increases signiﬁcantly by increasing the size
+of groups. This shows that pedestrians in groups require longer crossing time, which might not be
+provided by rolling/soft yield. Hence, drivers have to stop approaching the crossing points, which may
+trigger a trafﬁc wave and last until pedestrians cross. As a result, drivers may slow down proactively
+on approaching a crossing point in anticipation of a pedestrian crossing maneuvers, particularly if there
+is a pedestrian platoon waiting by the roadside [46,111]. Moreover, it is observed that the waiting time
+of pedestrians at zebra crossings reduces by increasing the number of pedestrians at crosswalks [94].
+5.1.4. Pedestrian Presence at the Curb
+The only possible way for pedestrians to indicate their crossing intention is to stand at the curb
+side [47]. However, studies showed that the presence of pedestrians at the curb side does not necessarily
+lead to changes of driver behavior in terms of sufﬁciently adapting the speed on approaching the zebra
+crossings [32]. Pedestrians waiting at curb sides, without any attempt to cross, may even increase
+driver tendency to not give way to pedestrians [37]. An observation at a zebra crossing showed
+that almost none of the drivers yield to pedestrians who were waiting at the curb and looking at the
+oncoming trafﬁc/drivers [112]. However, pedestrian distance to the curb is found to be one of the
+most signiﬁcant explanatory variables inﬂuencing the behavior of drivers, and is utilized to model
+the probability of a driver braking [13,48]. A study on users’ behaviors at crosswalks showed that
+drivers are less likely to yield if a pedestrian was waiting more than half a meter away from the
+curb [53]. Furthermore, when the pedestrian is already on the crossing, the probability of driver
+reaction increases as the pedestrian’s distance from the curb/refuge increases [13]. At uncontrolled
+mid-block crossing, higher risk-taking behaviors of pedestrians at central refuge islands is found to be
+associated with longer waiting time at the ﬁrst curb (30 s waiting time or more [113]) as pedestrians
+become impatient to cross the roadway [94].
+
+--- Page 10 ---
+Sustainability 2019, 11, 6713
+10 of 24
+5.2. Environmental and Dynamic Factors Inﬂuencing Crossing Behaviors
+5.2.1. Gap Acceptance
+From pedestrian perspective, time, or distance gap with the closest oncoming vehicle must be
+long enough for safely crossing the road [48,114]. The required time for pedestrians to cross can be
+described as “critical safe gap”, and it is computed based on the crossing length and pedestrian crossing
+speed [115]. Sun et al. [11] stated that there is a remarkable difference between the pedestrian GA
+behavior and driver GA, due to the higher speed of motorized vehicles compared to the pedestrian’s
+speed. Pedestrians need larger gaps for a safe crossing maneuvers, which may result in longer
+waiting time and thus increased risk-taking behavior to accept shorter gaps [11]. The likelihood of
+pedestrians accepting shorter gaps also declines, when they are in a group than individual pedestrians.
+Moreover, the minimum gap accepted by younger pedestrians is smaller than the minimum gap
+accepted by elderly pedestrians [10,11]. It is also observed that pedestrians accept a shorter gap,
+while waiting on central refuge islands, compared to the curb side [94], or in narrow streets rather
+than wide environments [63,115]. A study in the UK showed that all pedestrians accepted 10.5 s
+gaps between approaching vehicle, while no one accepted gaps less than 1.5 s [116]. Accordingly,
+“pedestrian critical gap” reﬂects the minimum time interval, in which no pedestrian commences
+crossing [96]. Estimation of critical gap is based on the greatest and smallest accepted gap for a given
+intersection [96], and can vary among road users depending on road geometry, vehicle features,
+and pedestrian characteristics [10,11,48,63]. For instance, heavy vehicles accept larger gaps and have
+greater courtesy towards pedestrians to compare with passenger cars [11,96]. Pedestrians also accept
+available shorter and riskier gaps, when they wait too long for the critical gap [117]. A study at
+unsignalized crossings found that pedestrians sought rolling gaps in high trafﬁc volume, meaning that
+pedestrians do not wait for all lanes to be clear; instead, they predict where a gap will be available in
+the next lane [118].
+5.2.2. Speed of Approaching Vehicle
+The speed of a vehicle approaching a pedestrian crossing is one of the most important factors
+that pedestrians consider, when making the crossing decision [12,37]. However, pedestrians may
+have some difﬁculties in estimating the speed of approaching vehicles [13]. Vehicle speed is also
+identiﬁed as a factor inﬂuencing yielding behavior [114,119], where lower speeds are associated
+with increased yielding behavior [13,53,120]. A study in Helsinki, Finland, found that the reacting
+probability of drivers traveling at the speed of 50 km/h is nearly zero, when individual pedestrians
+are just waiting at the curb, without stepping on the street [13]. Driver’s acceleration strategy (or no
+deceleration) on approaching pedestrian crossings is interpreted as an implicit signal to show their
+tendency to maintain priority, and not giving way to the pedestrians (see Section 4.2) [37]. However,
+speed adaptation prior to reaching pedestrian crossings is a signiﬁcant factor to ensure pedestrian
+safety [121]. For this reason, a sufﬁcient distance between oncoming vehicle and crosswalk is required
+for drivers to react submissively to an unexpected emerging pedestrian [32]. Drivers may also be
+forced to slow down (anticipatory avoidance response) or stop (delayed avoidance response) in some
+risky circumstances [32]. For example, when pedestrians who commence crossing: do not look at the
+oncoming trafﬁc, are distracted and running/stepping into the roadway, show sudden/unexpected
+pedestrian‘s movement, or are jaywalkers [37,110].
+5.2.3. Road Characteristics
+Road environmental factors, such as road width to be crossed by the pedestrian, total road
+width, number of lanes, and various pedestrian engineering and crossing treatments, may inﬂuence
+the pedestrian–driver interactions in terms of the perceived safety of crossing and the road users’
+anticipation of different types of behaviors [12,48,122]. For example, a study by Turner et al. [119]
+showed that the number of lanes crossed was a signiﬁcant predictor of motorized vehicles yielding
+
+--- Page 11 ---
+Sustainability 2019, 11, 6713
+11 of 24
+rates. The drivers’ yielding rate may also vary among different types of pedestrian crossing facilities
+with various levels of control. Previous studies showed noteworthy difference in the number of
+drivers who adhere to the trafﬁc rules by yielding to pedestrians at different crossings: 4–45% at
+marked unsignalized crossings [123–126] vs. 17–94% at marking crossings with one type of trafﬁc
+management and treatment, or written social assistance [48,76,119]. The yielding rate also varies at
+marked uncontrolled crossings at entry (higher) and exit (lower) legs of roundabouts [48]. On the other
+hand, pedestrians may feel safer, when the width of the crossing is shorter [53,127,128]. Pedestrian
+refuge islands and high visibility markings can also produce better compliance rates on roads with
+lower speed limit [119].
+However, Himanen and Kulmala [13] found that road width and the
+existence of refuge had no signiﬁcant effects in modeling the driver and pedestrian behaviors at
+pedestrian crossings.
+5.2.4. Size of Approaching Vehicle
+The size of vehicles can inﬂuence the behavior of both pedestrian and driver, and is an important
+factor for modeling of road users’ behaviors [11]. For instance, the possibility of pedestrians continuing
+to walk is lower by 20%, when the oncoming vehicle is a lorry or bus instead of a passenger car.
+The number of attempts by pedestrians to cross also declines if the oncoming vehicle is a heavy vehicle,
+like a bus or a coach [94]. The probability of drivers reacting is also 30% lower amongst heavy vehicle
+drivers than car drivers [13].
+5.2.5. Trafﬁc Volume
+Trafﬁc density is a factor that pedestrians consider, when making the crossing decision; high
+trafﬁc density is considered as a risky situation [12,37]. Pedestrians also make more attempts to cross
+the roadway in heavy trafﬁc volume and may be more likely to accept shorter gaps from individual
+vehicles than platoons [48,94]. On the other hand, the driver’s tendency to give priority to pedestrians
+declines in high trafﬁc volume [13,48,53,129]. Moreover, the possibility of the lead driver reacting
+decreases by increasing number of approaching vehicles. In a group of ﬁve vehicles, the probability of
+reacting can decrease by almost 40% more than with only one vehicle [13].
+5.2.6. Trafﬁc Behaviors and Situations
+Trafﬁc behaviors and situations like the presence of a downstream queue after the crossing [48],
+yielding event in the opposite direction or adjacent travel lane [48], the gap between the car in front
+and the one following behind it [12,46], distance of the oncoming vehicle [12,46], or driver’s direction
+of approach towards the pedestrian [13], may have some impact on the amount of risk perceived by
+road users, and thus their crossing-decision strategies.
+5.3. Other Contributing Factors
+In addition to the aforementioned factors, there are some other elements and circumstances
+surrounding the interaction, which may inﬂuence the decision-making process at crosswalks. Such
+factors include:
+•
+User familiarity of the place (frequent use of a particular crossing point) can be linked with
+the higher risk taking behaviors of pedestrians and lower waiting time at crossing [37,94].
+It also affects drivers’ behaviors on approaching a road segment with no pedestrian facilities.
+For example, drivers who are familiar with a road segment are likely to drive cautiously in
+anticipation of pedestrians’ unexpected crossing attempt [111], whilst the pedestrian behavior
+may be surprising for those who are not familiar and can lead to conﬂict [46].
+•
+Size of the city [13].
+•
+Cultural differences, which can inﬂuence the crossing behaviors and the interpretation of informal
+trafﬁc rules [81,130]. Social norms, cultures, and faith in different countries may inﬂuence the
+
+--- Page 12 ---
+Sustainability 2019, 11, 6713
+12 of 24
+risk perception of users in crossing scenarios, and therefore their crossing behaviors [131,132].
+As Western cultures are found to be more risk-prone in road crossing than Asian cultures [132–135].
+Pedestrian crossing speed, and gap acceptance are also some of the factors that might be
+effected by road users’ cultures [90,99]. Communication signals employed by road users and
+their implications may also being interpreted differently in varied cultures [136]. For instance,
+the meaning of hand gestures, or honking a horn in India may differ with the translation of such
+behaviors in Germany.
+•
+Visibility, light and weather conditions [10,114,137,138].
+5.4. The Correlation of Crossing Behaviors with Surrogate Safety Measures
+Surrogate safety measures, as the name implies, are proposed as alternative or complementary
+methods to identify safety issues [139].
+The studies reviewed in this paper have shown some
+correlations between these indicators and various pedestrian crossing behaviors and factors
+inﬂuencing them:
+•
+The probability of pedestrians crossing the road increases by higher TTC values [63]. A study
+by Schroeder [48] showed that the TTC threshold is satisﬁed, if the TTA at the crosswalk is
+less than 3 s (similar ﬁnding as [63]), and everyone crossed the road, when TTC was above
+7 s. He, then, analyzed the effect of different treatments at uncontrolled mid-block crossings on
+yielding behavior. According to this study, TTC declined after treatments’ installation. It is also
+necessary to mention that the expected value of TTC is correlated with the dependent variable
+yield, in which TTC is lower at non-yielding events compared with yielding ones [48].
+•
+With respect to TTA indicator, an acceptable gap to execute a safe crossing maneuvers may
+be determined by factors like the level of users’ risk acceptance, or pedestrian’s perception of
+how long the gap is [43,137]. However, the perception may not be always correct and might
+be much longer/shorter than the person’s perception [10]. Hence, a pedestrian is required to
+make a comparison between two microscopic parameters to decide whether it is safe to cross or
+not [10,12].
+•
+Road users with larger TAdv are most likely to be the ﬁrst ones who pass the common zone.
+However, if the TAdv is small, the second user may accelerate with the aim of passing ﬁrst instead.
+This is mainly observed when one of the users is “stronger” than the other e.g., private car vs.
+pedestrian [32,35].
+6. Synthesis
+Walking is the most widely used mode of transportation and is subject to a considerable risk of
+injury or fatality on the road, which is mainly caused by motorized vehicles. The majority of these
+trafﬁc fatalities and injuries occur at pedestrian road crossing scenarios in urban settings at either
+pedestrian crossings or illegal locations out of crosswalks. However, many road users interact with one
+another without any serious conﬂict and are not of interest from a trafﬁc safety perspective, but vital in
+terms of road users’ experience. Trafﬁc interaction, therefore, has been expanded to involve less critical
+conﬂicts. Drivers may neglect the pedestrians’ right of way at some pedestrian crossing facilities
+with less strict trafﬁc enforcement, and pedestrians may attempt mid-block crossing or jaywalking
+in the absence of crossing facilities or just to shorten the travel time. In such situations and more
+ambiguous circumstances, human road users are required to communicate their movement intentions
+with another interacting party to resolve the ambiguity regarding the right of way. For an efﬁcacious
+vehicle–pedestrian interaction process, users ought to indicate their own intentions, understand the
+other’s intentions, and anticipate their next actions.
+This cooperative procedure complies with the human interaction fundamentals in which the
+interacting agents form a mutual behavioral compliance, while responding to each others actions.
+Furthermore, the situation in which the communication is happening needs to be correctly understood
+by trafﬁc communicators. Finally, with respect to all prerequisite input information in such trafﬁc
+
+--- Page 13 ---
+Sustainability 2019, 11, 6713
+13 of 24
+scenes, road users utilize a broad range of implicit and explicit communication methods to coordinate
+their actions with interaction partners. These signals are mostly transferred to acknowledge that
+interacting parties are seen by another one, conﬁrm their intents, or to inﬂuence each other’s
+yield/not-yield decision strategies. A signiﬁcant number of the reviewed studies in this paper
+(approximately 29%) found that pedestrians use some form of nonverbal cues such as hand gesture,
+gaze, or head movement to indicate their crossing intentions to the oncoming vehicles (see Figure 1).
+In addition, 25% of the reviewed papers revealed that drivers utilize various explicit signals, such as
+light indicators, horn, or hand gesture, to communicate with pedestrians on approaching crossing
+sites. In addition, the majority of reviewed studies (39.3%) emphasize the importance of eye contact
+establishment between drivers and pedestrians, while communicating their movement at conﬂict
+points. However, pedestrians may not always receive a response from drivers by returning eye
+contact, and instead may receive signals, such as hand gesture or light indicators. A smaller number of
+reviewed studies (7%) indicated that using communication signals among trafﬁc participants has no
+impact on yielding and trafﬁc behaviors of users.
+39.3 %
+Gazing or mutual eye-contact
+28.6 %
+Pedestrian’s nonverbal cues
+25 %
+Driver’s explicit cues
+7.1 %
+No Impact
+Figure 1. Share of reviewed literature emphasizing the impact of nonverbal cues on trafﬁc behaviors.
+Source: own elaboration, based on the reviewed references in this research.
+On the other hand, the driver’s willingness to yield to pedestrians varies among different studies.
+Figure 2 illustrates the driver’s yielding rate at various uncontrolled crossing facilities reviewed in this
+paper. In Figure 2a, the crossing facilities have no treatment interventions, while Figure 2b shows the
+rate at crossing sites with at least one treatment implementation, such as warning signs, or pedestrian
+actuator signals. It is necessary to mention that, in Figure 2b, uncontrolled marked crossing category
+includes some mid-block crossings’ rates, which were considered as uncontrolled marked for the ease
+of use (e.g., the average of yielding rate for each treatment is representing all type of studied crossings
+in the study performed by Turner et al. [119]).
+In addition, in the priority negotiation process, drivers have some strategies to decide whether or
+not to give way to pedestrians. A number of factors also inﬂuence the crossing-decision strategies of
+pedestrians at crosswalks to decide whether or not cross the roadway. Figure 3 indicates a summary of
+all inﬂuencing factors in the decision-making process of road users identiﬁed in the reviewed literature.
+The ﬁgure illustrates how many times the inﬂuencing factors are found to be relevant in the reviewed
+studies in relation to the total number of reviewed studies. As demonstrated in the ﬁgure, the impact
+of road characteristics, pedestrian age, walking speed, group size, and the speed of oncoming vehicle
+on behavior of trafﬁc interacting parties have been highlighted in previous studies reviewed in this
+paper, while the environmental and dynamic factors have presented a higher effect. Some of these
+factors also inﬂuence one another in the crossing scenarios, meaning that the presence or the quantity
+of one can affect another. Figure 4 illustrates the interrelationship between factors according to the
+reviewed literature.
+
+--- Page 14 ---
+Sustainability 2019, 11, 6713
+14 of 24
+0%
+25%
+50%
+75%
+100%
+Uncontrolled marked crossing
+Uncontrolled midblock
+Type of pedestrian crossing facility
+Driver's yielding rate
+(a)
+0%
+25%
+50%
+75%
+100%
+Uncontrolled marked crossing
+Uncontrolled midblock
+Type of pedestrian crossing facility
+Driver's yielding rate
+(b)
+Figure 2.
+Driver’s yielding rate at uncontrolled crossings in the reviewed literature: (a) with
+no treatment interventions; (b) with treatment interventions.
+Source: own elaboration, based
+on [13,32,48,53,76,112,119,123–127,140].
+Category
+Inﬂuencing Factor
+0%
+5%
+10%
+15%
+20%
+25%
+30%
+35%
+40%
+45%
+50%
+55%
+The percentage of reviewed studies highlighted the role of inﬂuencing factor in decision-making process
+Environmental
+and Dynamic
+Factors
+Road characteristics
+Speed of vehicle
+Gap acceptance
+Traﬃc volume
+Traﬃc behaviours  and situations
+Weather
+Size of vehicle
+Pedestrian-
+Associated
+Facors
+Age
+Walking speed
+Group size
+Presence at/Distance to the kerb
+Gender
+Other
+Contributing
+Factors
+Culture diﬀerences
+User's familiarity
+Size of the city
+12.0%
+10.6%
+8.5%
+6.3%
+4.9%
+3.5%
+2.8%
+11.3%
+10.6%
+9.9%
+5.6%
+4.9%
+5.6%
+2.8%
+0.7%
+48.6%
+42.3%
+9.2%
+Figure 3. Inﬂuencing factors in decision-making process of road users at crosswalks, and the percentage
+of studies highlighted their impacts with respect to the total number of reviewed studies. Source: own
+elaboration, based on the reviewed references in this research.
+
+--- Page 15 ---
+Sustainability 2019, 11, 6713
+15 of 24
+Figure 4. Interrelationship between factors inﬂuencing crossing-decision strategies of pedestrians.
+The direction of arrows shows inﬂuence direction from one factor to another. The size of the circles
+changes based on the number of factors inﬂuencing them or being inﬂuenced by them. Source: own
+elaboration, based on the reviewed references in this research.
+7. Discussion
+The state-of-the-art in negotiation and decision-making for pedestrian road crossings has achieved
+signiﬁcant progress on identifying the prominent behaviors of vehicles and pedestrians, the interactions
+between such trafﬁc users and the factors that inﬂuence the most, synergies between pedestrians and
+motorized vehicles. It is evident from the reviewed literature that studies are so far mostly focused
+on a limited number of factors inﬂuencing driver–pedestrian interactions (e.g., speed of vehicle,
+road geometry) and investigate their impact on behaviors and decision-making processes of both
+pedestrians and drivers. Furthermore, the effect of communication methods and intention propagation
+are usually studied by focusing on speciﬁc strategies (yielding behaviors or non-yielding behaviors)
+without taking into account the decision-making process of road users and investigating the factors
+that may inﬂuence the process. However, the reviewed literature showed that road users adopt their
+crossing strategies by considering a broad range of factors knowingly (such as estimation of time
+and distance gap) or unknowingly (such as inﬂuence of age or gender), while they employ different
+communication techniques to ease the interaction when it is needed. This shows the complexity of
+the vehicle–pedestrian interaction, in which solely consideration of some factors or communication
+methods may not provide a consummate understanding of the process. This becomes crucial for the
+design of emerging technologies such as ADS, requiring an accurate comprehension of human road
+users’ behaviors in a trafﬁc interaction to correctly predict their reactions and fulﬁll their expectations.
+With the purpose of advances in vehicle–pedestrian safety, the consideration of those interactions from
+ADS and the enhancement of existing infrastructure, a holistic approach is oddly yet to be considered by
+researchers with regards to modeling interactions of pedestrians with vehicles. However, for example,
+the authors in [141] have introduced a novel data-set to analyze the pedestrian behavior in interaction
+with vehicles by taking into account a wide range of behavioral, contextual, and dynamic factors,
+as from the authors’ point of view sole consideration of dynamic variables (such as speed or trajectory)
+is not sufﬁcient enough for prediction of pedestrians behaviors. Such an approach emphasizes even
+more the necessity of a vehicle–pedestrian interaction framework for a better perception of users’
+behaviors. Based on the ﬁndings of the reviewed literature, Figure 5 presents an example of how
+a holistic approach for vehicle–pedestrian interactions could be shaped.
+
+--- Page 16 ---
+Sustainability 2019, 11, 6713
+16 of 24
+pedestrian
+Pedestrian
+Vehicle
+Is it safe to
+cross?
+Evaluation/monitoring of
+potential conﬂict zone
+No
+Yes
+Indication of initial 
+crossing intention
+Interaction Starts
+Schema formation
+Assessment of the environment
+Presence at/distance to
+the kerb
+Mobility ability of pedestrian:
+- Children
+- Pedestrian with
+pram/wheelchair/cane
+- Spatial: road characteristics,
+trafﬁc volume, geography, direction
+of approach
+- Temporal: time and distance gap
+- Social: group size
+Communication environment 
+vehicle
+Communication methods
+Gaze direction/head
+orientation 
+Drivers' explicit
+cues
+Drivers' implicit
+cues
+Hand gestures 
+Communicating 
+intentions?
+Yes
+No
+pedestrian
+vehicle
+Strategies
+-Hard yield
+-Soft yield
+-Hard yield and stop
+-Appraising
+-Stop/step back
+-Approaching
+-Crossing
+Yes
+Interaction Ends:
+one of the
+interacting parties
+has to yield
+Driver point of view
+Adjustment to the
+road requirements
+- Type/size of vehicle
+- Speed of vehicle
+Pedestrian point of view
+Choosing strategy
+No
+Final
+ strategies?
+Detection
+of
+ interactive
+parties
+Start
+End
+Figure 5. The simpliﬁed vehicle–pedestrian interaction process for the road crossing scenarios. Source:
+own elaboration, based on the reviewed references in this research.
+According to Figure 5, the vehicle–pedestrian interaction can be divided into ﬁve different phases
+in order to simplify their decision-making process. Before forming any interaction among road users,
+interacting parties superﬁcially evaluate the road characteristics on approaching the potential conﬂict
+zone. In this pre-interaction phase, a pedestrian selects the crossing point, while the drivers, on the
+other hand, continuously monitor the road and ideally adjust their behaviors in accordance with the
+road/trafﬁc requirements. This phase is not directly involved in the vehicle–pedestrian interactions;
+rather, it can prepare the vehicle for an anticipatory avoidance response, rather than a delayed one on
+approaching a potential encountering zone. Pedestrians, then, indicate their initial crossing intentions
+to the users approaching the common zone, which is generally achieved through presence at or walking
+towards the curb. When interaction starts (the moment interacting parties detect each other), involved
+road users have their very ﬁrst assessment about the communication environment, where they can
+select their strategies according to the received information and their assessment. Trafﬁc participants
+can utilize communication cues to indicate their intentions or directly perform their selected crossing
+strategies. The interaction ends when at least one of the agents leaves the conﬂict zone, and can be
+repeated with a replaced approaching road user for the one who has not obtained the right of way.
+However, during the interaction, interactive agents can change their strategies or execute more than
+one strategy, while negotiating the right of way. Such situations generally require agents to reassess
+the communication environment, and communicate their new movement intentions with one another.
+This holistic interaction process can provide recommendations for designing the decision-making
+systems of automated driving technology in confronting pedestrians. It aims at simplifying the
+complex decision-making procedure of pedestrians by considering the most signiﬁcant factors and
+communication methods inﬂuencing the process. Furthermore, it could become part of the maneuvers’
+planning module of ADS ensuring safe maneuvering among populated spaces [142]. Finally, according
+to such a holistic approach, effective communication protocols and devices could be designed for
+faster, more comprehensive and efﬁcient negotiations of road crossings. For example, smart-phone
+notiﬁcations [143], sound and optical signals [62,144], or illuminating signs [25] could provide
+signiﬁcant help in the future for pedestrians and their corresponding actions, while on the road.
+Understanding the sequence of events in the vehicle–pedestrian interactions may help ADS to perform
+more effective communication strategies than always coming to a complete stop for pedestrians
+detected in their path [145]. The communication cues employed by ADS can also vary based on the
+environment evaluation, such as indicating visually designed eHMI instead of audible one, when the
+
+--- Page 17 ---
+Sustainability 2019, 11, 6713
+17 of 24
+pedestrian’s head is oriented towards the vehicle, or utilizing messages with the command concept
+rather than requesting when the pedestrian hesitates to cross.
+In the present state-of-the-art, various methods have been employed to investigate the
+pedestrian crossing behaviors and their interaction with ADS, such as virtual reality (VR)-based
+simulations [146,147], the Wizard-of-Oz technique, in which the driver is hidden in the driver
+seat [148,149], and using the real-life exposure of automated bus shuttles [150,151].
+Keferböck
+and Riener [152] evaluated various signs and gestures of pedestrians to explore the importance
+of vehicle–pedestrian interaction, and the necessity for implementation of them in the communication
+systems of ADS. Other studies raised relevant questions concerning the design of external
+communication cues, the content of communication, and the impact of different environmental factors
+on crossing behaviors [141,146,149,150]. Future research can potentially address pedestrian crossing
+behaviors and their decision-making process with respect to ADS, as a new interacting party on the
+road. A thorough insight into the possible changes of pedestrians’ crossing-decisions while interacting
+with fully automated vehicles, the communication signals that pedestrians expect to receive, and the
+applicability of the current communication methods can be crucial for the design of ADS and thus
+successful deployment of such technologies. Moreover, the ubiquity of smart devices like mobile-phone,
+and their prevailing role in today’s life of people may alter the trafﬁc interaction concept. As distracted
+pedestrians are no longer an active party in the interaction process, and vehicles have to ﬁrst detect
+such users and then react appropriately to avoid conﬂict. Such imperfect trafﬁc interactions could be
+investigated in the future work.
+Author Contributions: The authors conﬁrm contributions to the paper as follows: study conception and design,
+investigation, resources, and writing—original draft preparation: R.E.A.; writing—review and editing, supervision:
+C.K. and C.A.
+Funding: This work was supported by the German Research Foundation (DFG) and the Technical University of
+Munich within the Open Access Publishing Funding Program.
+Conﬂicts of Interest: The authors declare no conﬂict of interest. The funders had no role in the design of the
+study; in the collection, analyzes, or interpretation of data; in the writing of the manuscript, or in the decision to
+publish the results.
+Abbreviations
+The following abbreviations are used in this manuscript:
+GA
+Gap Acceptance
+PET
+Post-Encroachment-Time
+TTC
+Time-To-Collision
+TTA
+Time-To-Arrival
+TAdv
+Time Advantage
+ADS
+Automated Driving System
+MUTCD
+Manual on Uniform Trafﬁc Control Devices
+eHMI
+External Human–Machine Interface
+VR
+Virtual Reality
+References
+1.
+Svensson, A. A Method for Analysing the Trafﬁc Process in a Safety Perspective; Lund Institute of Technology
+Sweden: Lund, Sweden, 1998.
+2.
+Holmberg, B.; Hydén, C. Traﬁken i Samhallet: Grunder för Planering och Utformning; Studentlitteratur: Lund,
+Sweden, 1996.
+3.
+Häkkinen, S.; Luoma, J. Liikennepsykologia (Trafﬁc Psychology); Otatieto: Hämeenlinna, Finland, 1991; p. 38.
+4.
+Nevile, M. Seeing on the move: Mobile collaboration on the battleﬁeld. In Interaction and Mobility: Language
+and the Body in Motion; Walter de Gruyter: Berlin, Germany, 2013; pp. 152–176.
+5.
+Schneemann, F.; Gohl, I.
+Analyzing driver-pedestrian interaction at crosswalks: A contribution to
+autonomous driving in urban environments. IEEE Intell. Veh. Symp. Proc. 2016, 38–43. [CrossRef]
+
+--- Page 18 ---
+Sustainability 2019, 11, 6713
+18 of 24
+6.
+Färber, B. Communication and communication problems between autonomous vehicles and human drivers.
+In Autonomous Driving; Springer: Berlin, Germany, 2016; pp. 125–144.
+7.
+Rasouli, A.; Tsotsos, J.K. Joint attention in driver-pedestrian interaction: From theory to practice. arXiv 2018,
+arXiv:1802.02522.
+8.
+Camara, F.; Giles, O.; Madigan, R.; Rothmüller, M.; Rasmussen, P.H.; Vendelbo-larsen, S.A.; Markkula, G.;
+Lee, Y.M.; Garach-morcillo, L.; Merat, N.; et al. Filtration analysis of pedestrian-vehicle interactions for
+autonomous vehicle control. In Proceedings of the IAS-15, Baden-Baden, Germany, 11–15 June 2018.
+9.
+Nuñez Velasco, J.; Farah, H.; van Arem, B.; Hagenzieker, M.; Nuñez Velasco, P.; Farah, H.; van Arem, B.;
+Hagenzieker, M. Interactions between vulnerable road users and automated vehicles: A synthesis of
+literature and framework for future research. In Proceedings of the Road Safety and Simulation International
+Conference, Hague, The Netherlands, 17–19 October 2017; Volume 2017, pp. 16–19.
+10.
+Beggiato, M.; Witzlack, C.; Krems, J.F. Gap acceptance and time-to-arrival estimates as basis for informal
+communication between pedestrians and vehicles. In Proceedings of the 9th International Conference on
+Automotive User Interfaces and Interactive Vehicular Applications, Oldenburg, Germany, 24–27 September
+2017; pp. 50–57.
+11.
+Sun, D.; Ukkusuri, S.; Benekohal, R.F.; Waller, S.T.
+Modelling of motorist-pedestrian interaction at
+uncontrolled mid-block crosswalks. In Proceedings of the 82nd Annual Meeting of the Transportation
+Research Board, Washington, DC, USA, 12–16 January 2003.
+12.
+Pawar, D.; Patil, G. Pedestrian temporal and spatial gap acceptance at mid-block street crossing in developing
+world. J. Saf. Res. 2015, 52, 39–46. [CrossRef]
+13.
+Himanen, V.; Kulmala, R. An application of logit models in analysing the behavior of pedestrians and car
+drivers on pedestrian crossings. Accid. Anal. Prev. 1988, 20, 187–197. [CrossRef]
+14.
+Willis, A.; Gjersoe, N.; Havard, C.; Kerridge, J.; Kukla, R. Human movement behavior in urban spaces:
+Implications for the design and modeling of effective pedestrian environments. Environ. Plan. B Plan. Des.
+2004, 31, 805–828. [CrossRef]
+15.
+Ackermann, C.; Beggiato, M.; Schubert, S.; Krems, J.F. An experimental study to investigate design and
+assessment criteria: What is important for communication between pedestrians and automated vehicles?
+Appl. Ergon. 2019, 75, 272–282. [CrossRef] [PubMed]
+16.
+Parkin, J.; Clark, B.; Clayton, W.; Ricci, M.; Parkhurst, G. Understanding Interactions between Autonomous
+Vehicles and Other Road Users: A Literature Review; University of the West of England: Bristol, UK, 2016.
+17.
+Camara, F.; Romano, R.; Markkula, G.; Madigan, R.; Merat, N.; Fox, C. Empirical game theory of pedestrian
+interaction for autonomous vehicles. In Proceedings of the Measuring Behavior 2018, Manchester, UK,
+14 March 2018.
+18.
+Litman, T. Autonomous Vehicle Implementation Predictions: Implications for Transport Planning; Victoria Transport
+Policy Institute: Victoria, BC, Canada, 2017.
+19.
+Rama, P.; Koskinen, H.
+Three driver and operator behavior models in the context of automated
+driving–identiﬁcation of issues from human actor perspective. In Proceedings of the International Conference
+on Applied Human Factors and Ergonomics, Los Angeles, CA, USA, 17–21 July 2017; Springer: Cham,
+Switzerland, 2017; pp. 1059–1071.
+20.
+Vinkhuyzen, E.; Cefkin, M. Developing socially acceptable autonomous vehicles.
+In Proceedings of
+the Ethnographic Praxis in Industry Conference, Minneapolis, MN, USA, 29 August–1 September 2016;
+pp. 522–534.
+21.
+Fuest, T.; Sorokin, L.; Bellem, H.; Bengler, K. Taxonomy of trafﬁc situations for the interaction between
+automated vehicles and human road users. In Proceedings of the International Conference on Applied
+Human Factors and Ergonomics, Los Angeles, CA, USA, 17–21 July 2017; pp. 708–719.
+22.
+Matthews, M.; Chowdhary, G.; Kieson, E.
+Intent communication between autonomous vehicles and
+pedestrians. arXiv 2017, arXiv:1708.07123.
+23.
+Lundgren, V.; Habibovic, A.; Andersson, J.; Lagstrom, T.; Nilsson, M.; Sirkka, A.; Saluaar, D. Will there
+be new communication needs when introducing automated vehicles to the urban context? In Advances in
+Human Aspects of Transportation; Springer: Cham, Switzerland, 2017; pp. 485–497.
+24.
+Merat, N.; Louw, T.; Madigan, R.; Wilbrink, M.; Schieben, A. What externally presented information do
+VRUs require when interacting with fully Automated Road Transport Systems in shared space? Accid. Anal.
+Prev. 2018, 118, 244–252. [CrossRef]
+
+--- Page 19 ---
+Sustainability 2019, 11, 6713
+19 of 24
+25.
+Zhang, J.; Vinkhuyzen, E.; Cefkin, M. Evaluation of an autonomous vehicle external communication system
+concept: A survey study. In Proceedings of the International Conference on Applied Human Factors and
+Ergonomics, Los Angeles, CA, USA, 17–21 July 2017; pp. 650–661.
+26.
+Parker Jr, M.; Zegeer, C. Trafﬁc Conﬂict Techniques for Safety and Operations: Observers Manual; Technical
+Report; United States Federal Highway Administration: Washington, DC, USA, 1989.
+27.
+Thompson, C. When pedestrians ruled the streets. Smithsonian Magazine, 14 December 2014.
+28.
+Cloutier, M.; Lachapelle, U.; Amours-Quellet, A.; Bergeron, J.; Lord, S.; Torres, J. “Outta my way!” Individual
+and environmental correlates for interactions between pedestrians and vehicles during street crossings.
+Accid. Anal. Prev. 2017, 104, 36–45. [CrossRef]
+29.
+Juhlin, O. Trafﬁc behavior as social interaction-implications for the design of artiﬁcial drivers. In Proceedings
+of the 6th World Congress on Intelligent Transport Systems (ITS), Toronto, ON, Canada, 8–12 November 1999.
+30.
+Lehsing, C.; Feldstein, I.T.
+Urban interaction—Geting vulnerable road users into driving simulation.
+In UR:BAN Human Factors in Trafﬁc; Springer: Berlin/Heidelberg, Germany, 2017; pp. 347–362.
+31.
+Nor, S.; Daniel, B.; Hamidun, R.; Al Bargi, W.; Rohani, M.; Prasetijo, J.; Aman, M.; Ambak, K. Analysis of
+pedestrian gap acceptance and crossing decision in Kuala Lumpur. In Proceedings of the MATEC Web
+of Conferences, Wuhan, China, 20–21 December 2017; EDP Science: Les Ulis, France, 2017; Volume 103,
+p. 08014.
+32.
+Várhelyi, A. Drivers’ speed behavior at a zebra crossing: A case study. Accid. Anal. Prev. 1998, 30, 731–743.
+[CrossRef]
+33.
+Kaparias, I.; Bell, M.; Dong, W.; Sastrawinata, A.; Singh, A.; Wang, X.; Mount, B.
+Analysis of
+pedestrian-vehicle trafﬁc conﬂicts in street designs with elements of shared space.
+Transp. Res. Rec.
+2013, 2393, 21–30. [CrossRef]
+34.
+Tresilian, J. Perceptual and cognitive processes in time-to-contact estimation: Analysis of prediction-motion
+and relative judgment tasks. Percept. Psychophys. 1995, 57, 231–245. [CrossRef]
+35.
+Laureshyn, A.; Svensson, A.; Hydén, C. Evaluation of trafﬁc safety, based on micro-level behavioral data:
+theoretical framework and ﬁrst implementation. Accid. Anal. Prev. 2010, 42, 1637–1646. [CrossRef]
+36.
+Zhuang, X.; Wu, C. Pedestrians’ crossing behaviors and safety at unmarked roadway in China. Accid. Anal.
+Prev. 2011, 43, 1927–1936. [CrossRef]
+37.
+Sucha, M. Road users’ strategies and communication: Driver-pedestrian interaction. In Proceedings of the
+Transport Research Arena (TRA) 5th Conference, Paris, France, 14–17 April 2014.
+38.
+Organisation for Economic Co-Operation and Development.
+OECD Anual Report;
+Technical Report;
+Organisation for Economic Co-Operation and Development: Paris, France, 2009.
+39.
+Hunter, W.; Stutts, J.; Pein, W.; Cox, C. Pedestrian and Bicycle Crash Types of the Early 1990’s; Technical Report;
+Turner-Fairbank Highway Research Center: McLean, VA, USA, 1996.
+40.
+Helmers, G.; Åberg, L. Driver Behaviour in Intersections as Related to Priority Rules and Road Design. An
+Exploratory Study; Technical Report; VTI: Linköping, Sweden, 1978.
+41.
+Ibrahim, N.; Kidwai, F.; Karim, M. Motorists and pedestrian interaction at unsignalized pedestrian crossing.
+In Proceedings of the Eastern Asia Society for Transportation Studies, Association for Planning Transportation
+Studies, Tokyo, Japan, 2005; Volume 5, pp. 120–125.
+42.
+Dey, D.; Terken, J. Pedestrian interaction with vehicles: Roles of explicit and implicit communication.
+In Proceedings of the 9th International Conference on Automotive User Interfaces and Interactive Vehicular
+Applications, Oldenburg, Germany, 24–27 September 2017; pp. 109–113.
+43.
+Chandra, S.; Rastogi, R.; Das, V. Descriptive and parametric analysis of pedestrian gap acceptance in mixed
+trafﬁc conditions. KSCE J. Civ. Eng. 2014, 18, 284–293. [CrossRef]
+44.
+FHWA Course on Bicycle and Pedestrian Transportation;
+Mid-Block Crossings, Lesson 16;
+Technical
+Report. FHWA-RD-99-198; United States, Federal Highway Administration, Ofﬁce of Safety Research
+and Development: Washington, DC, USA, 1999
+45.
+Maryland S.H.A. Bicycle and Pedestrian Design Guidelines; Chapter 10: Roadway Crossing Design; Technical
+Report; Maryland Department of Transportation, State Highway Administration: Baltimore, MD, USA, 2013.
+46.
+Malenje, J.O.; Zhao, J.; Li, P.; Han, Y. An extended car-following model with the consideration of the illegal
+pedestrian crossing. Phys. A Stat. Mech. Its Appl. 2018, 508, 650–661. [CrossRef]
+47.
+Crowley-Koch, B.J.; Van Houten, R.; Lim, E. Effects of pedestrian prompts on motorist yielding At crosswalks.
+J. Appl. Behav. Anal. 2011, 44, 121–126. [CrossRef]
+
+--- Page 20 ---
+Sustainability 2019, 11, 6713
+20 of 24
+48.
+Schroeder, B. A Behaviour-Based Methodology for Evaluating Pedestrian-Vehicle Interaction at Crosswalks.
+Ph.D. Thesis, North Carolina State University, Raleigh, NC, USA, 2008.
+49.
+Harrel, W. The impact of pedestrian visibility and assertiveness on motorist yielding. J. Soc. Psychol. 1993,
+133, 353–360. [CrossRef]
+50.
+Lehsing, C.; Fleischer, M.; Bengler, K. On the track of social interaction—A non-linear quantiﬁcation
+approach in trafﬁc conﬂict research. In Proceedings of the IEEE 19th International Conference on Intelligent
+Transportation Systems, ITSC, Rio de Janeiro, Brazil, 1–4 November 2016; pp. 2046–2051.
+51.
+Emmenegger, C.; Risto, M.; Bergen, B.; Norman, D.; Hollan, J. The critical importance of standards for
+the communication between autonomous vehicles and humans.
+Presented at the Automated Vehicles
+Symposium 2016, San Francisco, CA, USA, 19–21 July 2016.
+52.
+Bliersbach, G.; Culp, W.; Geiler, M.; Hess, M.; Schlag, B.; Schuh, K. Gefuhlswelten im Strassenverkehr. Emotionen,
+Motive, Einstellungen, Verhalten; German Trafﬁc Safety Council: Bonn, Germany, 2002.
+53.
+Sucha, M.; Dostal, D.; Risser, R. Pedestrian-Driver communication and decision strategies at marked
+crossings. Accid. Anal. Prev. 2017, 102, 41–50. [CrossRef]
+54.
+Wilde, G.J.S. Social interaction patterns in driver behavior: An introductory review. Hum. Factors 1976,
+18, 477–492. [CrossRef]
+55.
+Merten, K. Kommunikationsprozesse im Straßenverkehr. In Symposion 77; Bundesanstalt fur Straßenwesen,
+Ed.; Bundesanstalt fur Strassenwesen: Koln, Germany, 1977.
+56.
+Kitazaki, S.; Myrhe, N. Effects of non-verbal communication cues on decisions and conﬁdence of drivers at
+an uncontrolled intersection. In Proceedings of the Eighth International Driving Symposium on Human
+Factors in Driver Assessment, Training and Vehicle Design, Iowa City, IA, USA, 22–25 June 2015; pp. 113–119.
+57.
+Lagstrom, T.; Lundgren, M. AVIP-Autonomous Vehicles Interaction with Pedestrians. Master’s Thesis,
+Chalmers University of Technology, Gothenburg, Sweden, 2015.
+58.
+Zimmermann, M.; Bauer, S.; Lutteken, N.; Rothkirch, I.; Bengler, K. Acting together by mutual control:
+Evaluation of a multimodal interaction concept for cooperative driving. In Proceedings of the Collaboration
+Technologies and Systems (CTS), Minneapolis, MN, USA, 19–23 May 2014; pp. 227–235.
+59.
+Jiang, X.; Wang, W.; Mao, Y.; Bengler, K.; Bubb, H. Situational factors of inﬂuencing drivers to give precedence
+to jaywalking pedestrians at signalized crosswalk. Int. J. Comput. Intell. Syst. 2011, 4, 1407–1414. [CrossRef]
+60.
+Knapp, M.; Hall, J.; Horgan, T. Nonverbal Communication in Human Interaction; Cengage Learning: Boston,
+MA, USA, 2013.
+61.
+Gough, M.
+Machine smarts: How will pedestrians negotiate with driverless cars?
+The Guardian,
+8 September 2016.
+62.
+Song, Y.E.; Lehsing, C.; Fuest, T.; Bengler, K. External HMIs and their effect on the interaction between
+pedestrians and automated vehicles. Adv. Intell. Syst. Comput. 2018, 722, 13–18.
+63.
+Schmidt, S.; Färber, B. Pedestrians at the curb–Recognising the action intentions of humans. Transp. Res.
+Part Trafﬁc Psychol. Behav. 2009, 12, 300–310. [CrossRef]
+64.
+Rasouli, A.; Kotseruba, I.; Tsotsos, J.K. Understanding pedestrian behavior in complex trafﬁc scenes.
+IEEE Trans. Intell. Veh. 2018, 3, 61–70. [CrossRef]
+65.
+Wilde, G. Immediate and delayed social interaction in road user behavior. J. Appl. Psychol. 1980, 29, 439–460.
+[CrossRef]
+66.
+Zhuang, X.; Wu, C. Pedestrian gestures increase driver yielding at uncontrolled mid-block road crossings.
+Accid. Anal. Prev. 2014, 70, 235–244. [CrossRef]
+67.
+Rasouli, A.; Kotseruba, I.; Tsotsos, J.K. Agreeing to cross: How drivers and pedestrians communicate.
+In Proceedings of the 2017 IEEE Intelligent Vehicles Symposium (IV), Redondo Beach, CA, USA, 11–14 June
+2017; pp. 264–269.
+68.
+Blommaert, J.; Huang, A. Historical bodies and historical space. J. Appl. Linguist. 2009, 6, 267–282.
+69.
+Sansone, C.; Morf, C.; Panter, A. The sage handbook of methods. In Social Psychology; Sage: Thousand Oaks,
+CA, USA, 2004.
+70.
+Underwood, G.; Chapman, P.; Berger, Z.; Crundall, D. Driving experience attentional focusing, and the recall
+of recently inspected events. Transp. Res. Part F Trafﬁc Psychol. Behav. 2003, 6, 289–304. [CrossRef]
+71.
+Kellermann, K.; Cole, T. Classifying compliance gaining messages: Taxonomic disorder and strategic
+confusion. Commun. Theory 1994, 4, 3–60. [CrossRef]
+
+--- Page 21 ---
+Sustainability 2019, 11, 6713
+21 of 24
+72.
+Haddington, P.; Rauniomaa, M. Interaction between road users: Offering space in trafﬁc. Space Cult. 2014,
+17, 176–190. [CrossRef]
+73.
+Jensen, O. Negotiation in motion: Unpacking a geography of mobility.
+Space Cult. 2010, 13, 389–402.
+[CrossRef]
+74.
+Cialdini, R.B.; Goldstein, N.J. Social inﬂuence: Compliance and conformity. Annu. Rev. Psychol. 2004,
+55, 591–621. [CrossRef] [PubMed]
+75.
+Ministry of Transport Public Works and Water Management.
+Road Trafﬁc Signs and Regulations in The
+Netherlands;
+Technical Report; Ministry of Transport Public Works and Water Management: Hague,
+The Netherlands, 2010.
+76.
+Nasar, J.L. Prompting drivers to stop for crossing pedestrians. Transp. Res. Part F Trafﬁc Psychol. Behav. 2003,
+6, 175–182. [CrossRef]
+77.
+Gueguen, N.; Meineri, S.; Eyssartier, C. A pedestrian’s stare and drivers’ stopping behavior: A ﬁeld
+experiment at the pedestrian crossing. Saf. Sci. 2015, 75, 87–89. [CrossRef]
+78.
+Ren, Z.; Jiang, X.; Wang, W. Analysis of the inﬂuence of pedestrians’ eye contact on drivers’ comfort
+boundary during the crossing conﬂict. Procedia Eng. 2016, 137, 399–406. [CrossRef]
+79.
+AlAdawy, D.; Glazer, M.; Terwilliger, J.; Schmidt, H.; Domeyer, J.; Mehler, B.; Reimer, B.; Fridman, L. Eye
+Contact between pedestrians and drivers. arXiv 2019, arXiv:1904.04188.
+80.
+Zaidel, D.M. A modeling perspective on the culture of driving.
+Accid. Anal. Prev. 1992, 24, 585–597.
+[CrossRef]
+81.
+Risto, M.; Emmenegger, C.; Vinkhuyzen, E.; Cefkin, M.; Hollan, J. Human-Vehicle interfaces: The power
+of vehicle movement gestures in human road user coordination. In Proceedings of the 9th International
+Driving Symposium on Human Factors in Driver Assessment, Training and Vehicle Design, Iowa City, IA,
+USA, 26–29 June 2017.
+82.
+Hutchins, E.; Weibel, N.; Emmenegger, C.; Fouse, A.; Holder, B. An integrative approach to understanding
+ﬂight crew activity. J. Cogn. Eng. Decis. Mak. 2013, 7, 353–376. [CrossRef]
+83.
+Hall, E.T. The Hidden Dimension; Doubleday: Garden City, NY, USA, 1969; Volume 609.
+84.
+Gorrini, A.; Vizzari, G.; Bandini, S. Towards modeling pedestrian- vehicle interactions: Empirical study on
+urban unsignalized intersection. arXiv 2016, arXiv:1610.07892.
+85.
+Johansson, C.; Gårder, P.; Leden, L. The effect of change of code on safety and mobility for children and
+elderly as pedestrians at marked crosswalks: A case study Comparing Sweden to Finland. In Proceedings of
+the Annual TRB Meeting, Washington, DC, USA, 11–15 January 2004; pp. 1–20.
+86.
+FHWA. Federal Highway Administration University Course on Bicycle And Pedestrian Transportation, Lesson 8
+Pedestrian Characteristics; FHWA: Washington, DC, USA, 2006; p. 452.
+87.
+Rosenbloom, T.; Ben-Eliyahu, A.; Nemrodov, D. Children’s crossing behavior with an accompanying adult.
+Saf. Sci. 2008, 46, 1248–1254. [CrossRef]
+88.
+Chandrapp, A.; Bhattacharyya, K.; Maitra, B. Estimation of post-encroachment time and threshold wait time
+for pedestrians on a busy urban corridor in a heterogeneous trafﬁc environment: An experience in Kolkata.
+Asian Transp. Stud. 2016, 4, 421–429.
+89.
+Staplin, L.; Lococo, K.; Byington, S.; Harkey, D. Guidelines and Recommendations to Accommodate Older Driver
+and Pedestrians; No. FHWA-RD-01-051; Turner-Fairbank Highway Research Center: McLean, VA, USA, 2001.
+90.
+Bennett, S.; Felton, A.; Akçelik, R.
+Pedestrian movement characteristics at signalized intersections.
+In Proceedings of the 23rd Conference of Australian Institutes of Transport Research (CAITR), Clayton, VIC,
+Australia, 10–12 December 2001.
+91.
+Neider, M.B.; McCarley, J.S.; Crowell, J.A.; Kaczmarski, H.; Kramer, A.F. Pedestrians, vehicles, and cell
+phones. Accid. Anal. Prev. 2010, 42, 589–594. [CrossRef] [PubMed]
+92.
+Zegeer, C. Design and Safety of Pedestrian Facilities—A Recommended Practice; Trafﬁc Engineering Council
+Committe TENC-5A-5; Institute of Transportation Engineers: Washington, DC, USA, 1988.
+93.
+Tiwari, G.; Bangdiwala, S.; Saraswat, A.; Gaurav, S. Survival analysis: pedestrian risk exposure at signalized
+intersections. Transp. Res. Part F Trafﬁc Psychol. Behav. 2007, 10, 77–89. [CrossRef]
+94.
+Hamed, M. Analysis of pedestrians’ behavior at pedestrian crossings. Saf. Sci. 2001, 38, 63–82. [CrossRef]
+95.
+Papadimitriou, E.; Lassarre, S.; Yannis, G. Pedestrian risk taking while road crossing: A comparison of
+observed and declared behavior. Transp. Res. Procedia. Transp. Res. Arena 2016, 14, 4354–4363. [CrossRef]
+
+--- Page 22 ---
+Sustainability 2019, 11, 6713
+22 of 24
+96.
+Transportation Research Board. Highway Capacity Manual; Transportation Research Board: Washington, DC,
+USA, 2000; p. 1207. [CrossRef]
+97.
+US Department of Transportation, Federal Highway Administration. Older Pedestrians Characteristics for Use
+in Highway Design; Technical Report; US Department of Transportation, Federal Highway Administration:
+Washington, DC, USA, 1993.
+98.
+US Department of Transportation Federal Highway Administration.
+Manual on Uniform Trafﬁc Control
+Devices for Streets and Highways; Technical Report May; US Department of Transportation Federal Highway
+Administration: Washington, DC, USA, 2009.
+99.
+Dewar, R.
+Driver and pedestrian characteristics.
+In Trafﬁc Engineering Handbook;
+Prentice Hall:
+Upper Saddle River, NJ, USA, 1992; Chapter 1.
+100. Tarawneh, M.S. Evaluation of pedestrian speed in Jordan with investigation of some contributing factors.
+J. Saf. Res. 2001, 32, 229–236. [CrossRef]
+101. Goh, B.H.; Subramaniam, K.; Wai, Y.T.; Mohamed, A.A.; Ali, A. Pedestrian crossing speed: The case of
+Malaysia. Int. J. Trafﬁc Transp. Eng. 2012, 2, 323–332. [CrossRef]
+102. Turkish Standards Institute.
+Urban Roads—Design Criteria on Sidewalks and Pedestrian Areas (TS12174);
+Technical Report; Turkish Standards Institute: Ankara, Turkey, 2012.
+103. Dahlstedt, S. Walking speeds and walking habits of elderly people. In Proceedings of the International
+Conference on Transport for the Elderly and Handicapped, Loughborough University of Technology,
+Cambridge, UK, 4–7 April 1978.
+104. Knoblauch, R.; Pietrucha, M.; Nitzburg, M. Field studies of pedestrian walking speed and start-up time.
+Transp. Res. Rec. 1996, 1538, 27–38. [CrossRef]
+105. Vanumu, L.D.; Rao, K.R.; Tiwari, G.
+Analysis of Pedestrian Group Behaviour.
+In Proceedings of
+the Transportation Research Board 96th Annual Meeting, No. 17-04866, Washington, DC, USA, 8–12
+January 2017.
+106. Rotton, J.; Shatts, M.; Standers, R.
+Temperature and pedestrian tempo: Walking without awareness.
+Environ. Behav. 1990, 22, 650–674. [CrossRef]
+107. Lam, W.; Morrall, J.; Ho, H. Pedestrian ﬂow characteristics in Hong Kong. Transp. Res. Rec. 1995, 1487, 56–62.
+108. Fugger, T.; Randles, B.; Stein, A.; Whiting, W.; Gallagher, B.
+Analysis of pedestrian gait and
+perception-reaction at signal-controlled crosswalk intersections.
+Transp. Res. Rec. 2000, 1705, 20–25.
+[CrossRef]
+109. Yang, J.; Deng, W.; Wang, J.; Li, Q.; Wang, Z. Modelling pedestrians’ road crossing behavior in trafﬁc system
+micro-simulation in China. Transp. Res. Part A Policy Pract. 2006, 40, 280–290. [CrossRef]
+110. Katz, A.; Zaidel, D.; Elgrishi, A. An experimental study of driver and pedestrian interaction during the
+crossing conﬂict. Hum. Factors 1975, 17, 514–527. [CrossRef]
+111. Yi-Rong, K.; Di-Hua, S.; Shu-Hong, Y.
+A new car-following model considering driver’s individual
+anticipation behavior. Nonlinear Dyn. 2015, 82, 1293–1302. [CrossRef]
+112. Persson, H. Communication between Pedestrians and Car Drivers; Lund University: Lund, Sweden, 1988.
+113. Dunn, R.; Pretty, R. Mid-Block pedestrian crossings—An examination of delay. In Proceedings of the 12th
+Annual Australian Road Research Board Conference, Hobart, Tasmania, Australia, 27–31 August 1984.
+114. Schleinitz, K.;
+Petzoldt, T.;
+Krems, J.
+Geschwindigkeitswahrnehmung von einspurigen Fahrzeugen;
+Forschungsbericht 33; Gesamtverband der Deutschen Versicherungswirtschaft: Berlin, Germany, 2015.
+115. Department of Main Roads. Intersections at Grade Chapter 13; Technical Report October; Department of Main
+Roads, Road Planning and Design Manual: Queensland, Australia, 2006.
+116. Cohen, J.; Dearnaley, E.; C, H. The risk taken in crossing a road. J. Oper. Res. Soc. 1955, 6, 120–128. [CrossRef]
+117. Antic, B.; Pesic, D.; Milutinovic, N.; Maslac, M. Pedestrian behaviors: Validation of the Serbian version of
+the pedestrian behavior scale. Transp. Res. Part F Trafﬁc Psychol. Behav. 2016, 41, 170–178. [CrossRef]
+118. Brewer, M.; Fitzpatrick, K.; Whitacre, J.; Lord, D. Exploration of pedestrian gap acceptance behavior at
+selected locations. Transp. Res. Rec. 2006, 1982, 132–140. [CrossRef]
+119. Turner, S.; Fitzpatrick, K.; Brewer, M.; Park, E. Motorist yielding to pedestrians at unsignalized intersections:
+Findings from a national study on improving pedestrian safety. Transp. Res. Rec. 2006, 1982, 1–12. [CrossRef]
+120. Geruschat, D.; Hassan, S. Driver behavior in yielding to sighted and blind pedestrians at roundabouts. J. Vis.
+Impair. Blind. 2005, 99, 286–302. [CrossRef]
+121. Risser, R. behavior in trafﬁc conﬂict situations. Accid. Anal. Prev. 1985, 2, 179–197. [CrossRef]
+
+--- Page 23 ---
+Sustainability 2019, 11, 6713
+23 of 24
+122. Lin, P.S.; Kourtellis, A.; Wang, Z.; Guo, R. Understanding Interactions between Drivers and Pedestrian Features at
+Signalized Intersections; Technical Report; Florida. Dept. of Transportation: Gainesville, FL, USA, 2015.
+123. Traﬁkkontoret. Do Car Drivers Give Priority to Pedestrians at Unsignalized Zebra Crossings? A Study on Safety
+and Behaviour; (Rapport No. 10); Träﬁknamnden: Göteborg, Sweden, 1994.
+124. Hydén, C.; Odelid, K.; Varhelyi, A. Effekten av Generell Hastighetsdämpning i Tätort. Resultat av ett Storskaligt
+Försök i Växjö; Bulletin 131; Lund University: Lund, Sweden, 1995.
+125. Danielsson, S.; Gustafsson, S.; Hageback, C.; Johansson, U.; Olsson, C. Korsningen Radhusgatan-Storgatan;
+Seminarieuppgift i Traﬁkanalys, Tekniska Hogskolan i Lulea: Lulea, Sweden, 1993.
+126. Lehka, E. Bezpecnost Chodcu na Prechodech v Ceske Republice a Dansku. In Pedestrian-Driver Communication
+and Decision Strategies at Marked Crossings. Accident Analysis and Prevention; Sucha, M., Dostal, R., Risser, R.,
+Eds.; CVUT: Prague, Czech Republic, 2015.
+127. Fitzpatrick, K.; Turner, S.; Brewer, M.; Carlson, P.; Ullman, B.; Trout, N.; Park, E.S.; Whitacre, J.; Lalani, N.;
+Lord, D. Improving Pedestrian Safety at Unsignalized Crossings; Technical Report; Transportation Research
+Board of the National Academies: Washington, DC, USA, 2006.
+128. Zegeer, C.V.; Carter, D.L.; Hunter, W.W.; Stewart, J.R.; Huang, H.; Do, A.; Sandt, L. Index for assessing
+pedestrian safety at intersections. Transp. Res. Rec. 2006, 1982, 76–83. [CrossRef]
+129. Schroeder, B.; Rouphail, N. Event-Based modeling of driver yielding behavior at unsignalized crosswalks. J.
+Transp. Eng. 2011, 137, 455–465. [CrossRef]
+130. Lijuan, L. Eye contact and cross-cultural communication. Sci. Technol. Inf. 2016, 6, 443–444.
+131. Lee, S.M.; Lim, S.b.; Pathak, R.D. Culture and entrepreneurial orientation: A multi-country study. Int. Entrep.
+Manag. J. 2011, 7, 1–15. [CrossRef]
+132. Rosenbloom, T. Crossing at a red light: Behaviour of individuals and groups. Transp. Res. Part F Trafﬁc
+Psychol. Behav. 2009, 12, 389–394. [CrossRef]
+133. Sueur, C.; Class, B.; Hamm, C.; Meyer, X.; Pelé, M. Different risk thresholds in pedestrian road crossing
+behavior: a comparison of French and Japanese approaches. Accid. Anal. Prev. 2013, 58, 59–63. [CrossRef]
+134. Mihet, R. Effects of culture on ﬁrm risk-taking: A cross-country and cross-industry analysis. J. Cult. Econ.
+2013, 37, 109–151. [CrossRef]
+135. Faria, J.J.; Krause, S.; Krause, J. Collective behavior in road crossing pedestrians: the role of social information.
+Behav. Ecol. 2010, 21, 1236–1242. [CrossRef]
+136. Archer, D. Unspoken diversity: Cultural differences in gestures. Qual. Sociol. 1997, 20, 79–105. [CrossRef]
+137. Petzoldt, T. On the relationship between pedestrian gap acceptance and time to arrival estimates. Accid. Anal.
+Prev. 2014, 72, 127–133. [CrossRef]
+138. Sun, R.; Zhuang, X.; Wu, C.; Zhao, G.; Zhang, K. The estimation of vehicle speed and stopping distance by
+pedestrians crossing streets in a naturalistic trafﬁc environment. Transp. Res. Part F Psychol. Behav. 2015,
+30, 97–106. [CrossRef]
+139. Johnsson, C.; Laureshyn, A.; De Ceunynck, T. In search of surrogate safety indicators for vulnerable road
+users: A review of surrogate safety indicators. Transp. Rev. 2018, 38, 765–785. [CrossRef]
+140. Dahlstedt, S. The SARTRE-Tables. Opinions about Trafﬁc and Trafﬁc Safety of Some European Drivers; VTI Report;
+VTI: Linköping, Sweden, 1994.
+141. Rasouli, A.; Kotseruba, I.; Tsotsos, J.K. Are they going to cross? A benchmark dataset and baseline for
+pedestrian crosswalk behavior. In Proceedings of the IEEE International Conference on Computer Vision
+Workshop, Venice, Italy, 22–29 October 2017; pp. 206–213.
+142. Katrakazas, C.; Quddus, M.; Chen, W.H.; Deka, L. Real-time motion planning methods for autonomous
+on-road driving: state-of-the-art and future research directions. Transp. Res. Part C Emerg. Technol. 2015,
+60, 416–442. [CrossRef]
+143. Mahadevan, K.; Somanath, S.; Sharlin, E.
+Communicating awareness and Intent in autonomous
+vehicle–pedestrian interaction. In Proceedings of the 2018 CHI Conference on Human Factors in Computing
+Systems, Montreal, QC, Canada, 21–26 April 2018; p. 429.
+144. Urmson, C. Progress in self-driving vehicles. In Frontiers of Engineering: Reports on Leading-Edge Engineering
+from the 2014 Symposium; National Academy of Engineering: Washington, DC, USA, 2015.
+
+--- Page 24 ---
+Sustainability 2019, 11, 6713
+24 of 24
+145. Fox, C.; Camara, F.; Markkula, G.; Romano, R.; Madigan, R.; Merat, N. When should the chicken cross the
+road?: Game theory for autonomous vehicle–human interactions. In Proceedings of the 4th International
+Conference on Vehicle Technology and Intelligent Transport Systems, Funchal, Madeira, Portugal, 27 March
+2018; Volume 1, pp. 431–439.
+146. Doric, I.; Frison, A.K.; Wintersberger, P.; Riener, A.; Wittmann, S.; Zimmermann, M.; Brandmeier, T. A novel
+approach for researching crossing behavior and risk acceptance: The pedestrian simulator. In Proceedings
+of the Adjunct 8th International Conference on Automotive User Interfaces and Interactive Vehicular
+Applications, Ann Arbor, MI, USA, 24–26 October 2016; pp. 39–44.
+147. Feldstein, I.; Dietrich, A.; Milinkovic, S.; Bengler, K. A Pedestrian Simulator for Urban Crossing Scenarios.
+IFAC-PapersOnLine 2016, 49, 239–244. [CrossRef]
+148. Palmeiro, A.R.; van der Kint, S.; Vissers, L.; Farah, H.; de Winter, J.C.; Hagenzieker, M. Interaction between
+pedestrians and automated vehicles: A Wizard of Oz experiment. Transp. Res. Part F Trafﬁc Psychol. Behav.
+2018, 58, 1005–1020. [CrossRef]
+149. Rothenbücher, D.; Li, J.; Sirkin, D.; Mok, B.; Ju, W. Ghost driver: A ﬁeld study investigating the interaction
+between pedestrians and driverless vehicles. In Proceedings of the 25th IEEE international symposium
+on robot and human interactive communication (RO-MAN), New York, NY, USA, 22–27 August 2016;
+pp. 795–802.
+150. Löcken, A.; Wintersberger, P.; Frison, A.K.; Riener, A. Investigating User Requirements for Communication
+Between Automated Vehicles and Vulnerable Road Users. In Proceedings of the 2019 IEEE Intelligent
+Vehicles Symposium (IV), Paris, France, 9–12 June 2019; pp. 879–884.
+151. Madigan, R.; Nordhoff, S.; Fox, C.; Ezzati Amini, R.; Louw, T.; Wilbrink, M.; Schieben, A.; Merat., N.
+Understanding interactions between automated road transport systems and other road users. Transp. Res.
+Part F Trafﬁc Psychol. Behav. 2019, 66, 196–213. [CrossRef]
+152. Keferböck, F.; Riener, A. Strategies for negotiation between autonomous vehicles and pedestrians. In Mensch
+und Computer 2015–Workshopband; De Gruyter Oldenbourg: Stuttgart, Germany, 2015.
+c⃝2019 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

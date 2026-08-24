@@ -1,0 +1,693 @@
+--- Page 1 ---
+Drivers’ recognition of pedestrian road-crossing intentions:
+Performance and process
+Wenxiang Chen, Xiangling Zhuang ⇑, Zixin Cui, Guojie Ma ⇑
+Shaanxi Key Laboratory of Behavior and Cognitive Neuroscience, School of Psychology, Shaanxi Normal University, Xi’an, China
+a r t i c l e
+i n f o
+Article history:
+Received 9 January 2019
+Received in revised form 6 July 2019
+Accepted 7 July 2019
+Keywords:
+Pedestrian safety
+Driver-pedestrian interaction
+Intention recognition
+Eye movements
+a b s t r a c t
+Drivers’ recognition of pedestrian road crossing intentions is an essential process during
+driver-pedestrian interaction. However, compared with the rich observational ﬁndings
+on interaction behavior, little is known on drivers’ performance in recognizing pedestrian
+intentions, as well as the underlying cognitive processes. To ﬁll in the gap, this study eval-
+uated drivers’ performance in making judgments of pedestrians’ road crossing intentions in
+recorded natural driving scenes. Experienced and novice drivers identiﬁed pedestrians as
+‘‘will cross” or ‘‘will not cross” at some time-to-arrival while their eye movements were
+recorded. The results showed that experienced drivers were more conservative in discrim-
+inating whether a pedestrian would cross or not (preferred a ‘‘pedestrian will cross” judg-
+ment) and took a higher level of information processing of pedestrian intention. Regardless
+of driving experience, drivers had a higher detection rate, earlier detection, higher level of
+information processing and quicker response over pedestrians who intended to cross than
+those did not intend to cross. A quicker response was also achieved when the time-to-
+arrival was smaller. Analysis of eye movements showed attentional bias to the upper body
+of pedestrians when recognizing intention. These ﬁndings offer an initial understanding of
+the intention recognition process during driver-pedestrian interaction and inform direc-
+tions for autonomous driving research when interacting with pedestrians.
+ 2019 Elsevier Ltd. All rights reserved.
+1. Introduction
+Pedestrians are the most vulnerable road users that accounting for 22% of the total fatalities in trafﬁc accidents (World
+Health Organization, 2013). The issue of pedestrian safety is more serious in low- and middle-income countries (Naci,
+Chisholm, & Baker, 2009). Since pedestrian accidents usually occur as a result of unsafe interaction with vehicles, it is critical
+to ensure safe interaction to increase pedestrian safety. To that end, researchers have applied several methods including acci-
+dent analysis (Jacobsen, 2003; Murphy, Levinson, & Owen, 2017), conﬂicts identiﬁcation and categorization (Ni, Wang, Sun, &
+Li, 2016), and behavioral observation (Kaparias, Bell, Biagioli, Bellezza, & Mount, 2015) to gain a deeper understanding of the
+nature of the driver-pedestrian interaction.
+Among these approaches, behavioral observation targets at the microscopic interaction behaviors instead of only analyz-
+ing the ﬁnal consequences of interaction (e.g., accidents or conﬂicts). For example, it may concern whether a driver will yield
+to pedestrians and how to promote the yielding behavior (Zhuang & Wu, 2014). However, the observed behaviors of both
+drivers and pedestrians are by no means the fundamental causes of accidents, as at an upper level of analysis, the behaviors
+https://doi.org/10.1016/j.trf.2019.07.004
+1369-8478/ 2019 Elsevier Ltd. All rights reserved.
+⇑Corresponding author.
+E-mail addresses: zhuangxl@snnu.edu.cn (X. Zhuang), magj@snnu.edu.cn (G. Ma).
+Transportation Research Part F 64 (2019) 552–564
+Contents lists available at ScienceDirect
+Transportation Research Part F
+journal homepage: www.elsevier.com/locate/trf
+
+--- Page 2 ---
+themselves are the consequence of information processing during the interaction. According to the theory of situation aware-
+ness which comprises three levels (Endsley, 1995; Gugerty, 2011), drivers must detect pedestrians, recognize the intentions
+of pedestrians, and predict the future state of pedestrians before making a behavioral response. Therefore, ensuring safe
+interactions requires a full understanding of information processing at all three levels. Nevertheless, our review shows that
+although evidence on the ﬁrst level of situation awareness (i.e., how drivers detect pedestrians) has accumulated for decades
+(for a review, see Langham & Moberly, 2003; Tyrrell, Wood, Owens, Whetsel Borzendowski, & Stafford Sewall, 2016), studies
+on the second level of situation awareness (i.e., how drivers recognize pedestrian intention) are still rare. Therefore, in the
+following section, we ﬁrst inferred the role of intention recognition in the driver-pedestrian interaction through drivers’
+responses to pedestrians’ communication behaviors. After that, we reviewed a few scarce studies on driver’s intention recog-
+nition process in Section 1.2 and proposed our research question in Section 1.3.
+1.1. The role of intention recognition in driver response to pedestrians
+We have mentioned that driver responses to pedestrians are only the consequence of information processing during the
+driver-pedestrian interaction. That said, behavioral responses still offer some clues on how drivers process information about
+pedestrian intentions. Previous studies showed that drivers were more likely to yield to pedestrians if pedestrians actively
+took some actions like displaying hand gestures (Crowley-Koch, Van Houten, & Lim, 2011; Zhuang & Wu, 2014) to convey
+their intentions to drivers. Guéguen, Eyssartier, and Meineri (2016) examined the effect of the pedestrians’ face expressions
+on drivers’ yielding behavior and found increased yielding behavior for pedestrians who smiled at the approaching vehicle.
+Similar to the effect of the smile, even simple eye contact can increase yielding behavior (Guéguen, Meineri, & Eyssartier,
+2015) or lead drivers to start decelerating at a longer distance with a smoother process (Ren, Jiang, & Wang, 2016). Besides
+the effect of explicit communication cues, the yielding rate also showed a strong correlation with the natural crossing behav-
+ior of pedestrians (Lu, Ren, Wang, Chan, & Wang, 2016; Schroeder & Rouphail, 2011). Several researchers suggested that dri-
+vers were more likely to yield if pedestrians displayed more assertive behaviors like walking fast to the crosswalk (Jiang,
+Wang, Mao, Bengler, & Bubb, 2011; Schroeder & Rouphail, 2011); stepping onto the crosswalk rather than waiting on the
+sidewalk (Harrell, 1993); leaving a shorter lateral distance (Jiang et al., 2011) or not paying attention to the trafﬁc (Katz,
+Zaidel, & Elgrishi, 1975).
+Why do drivers yield or show other cautious behaviors to pedestrians who display a speciﬁc behavior? For explicit com-
+munication methods like hand gesture, smile, eye contact, it is possible that drivers understand pedestrians’ crossing inten-
+tions conveyed by them, thus decide to yield to them. Consistent with this conjecture, Dey and Terken (2017) classiﬁed the
+assertive behaviors of pedestrians (walk fast, step onto the roadway, etc.) as implicit communication behaviors, which meant
+that although pedestrians did not deliberately display these behaviors to convey the intentions to cross road. And these
+assertive behaviors could still be perceived as cues to drivers. Theoretically, this is possible because humans always under-
+stand others’ goals and intentions by interpreting others’ behaviors, which can invoke brain activities closely related to mir-
+ror neurons and action-observation network (AON) (Brass, Schmitt, Spengler, & Gergely, 2007; Kilner, 2011). Therefore, from
+the current ﬁndings, we can infer that drivers may rely on both explicit and implicit communication cues to recognize pedes-
+trian intentions, which may be a general mechanism underlain all the factors that induced yielding behavior.
+1.2. Drivers’ recognition of pedestrian intention during interaction
+The use of explicit and implicit cues to recognize intentions has been explored in a few studies involving road users
+beyond driver-pedestrian interaction. During the driver-driver interaction, intentions are usually recognized by formal sig-
+nals (like steering light, honking) and sometimes, when trafﬁc regulations are ambiguous in some speciﬁc situations, drivers
+use informal signals (like hand gesture, approaching speed, etc.) to recognize intentions (Kitazaki & Myhre, 2015; Lee &
+Sheppard, 2016). For cyclists, they usually interact with drivers at junctions where the most driver-cyclist collisions hap-
+pened (Bonham & Johnson, 2018). Researchers have found that hand gesture, head movement, and speed information of
+cyclists helped drivers to recognize their intentions to turn left/right or go straight (Hemeren, Johannesson, Lebram,
+Eriksson, Ekman, & Veto, 2014; Walker, 2005; Westerhuis & De Waard, 2017).
+For the driver-pedestrian interaction, there are two pioneering works focused on the intention recognition process. In the
+ﬁrst study, drivers were asked to consider whether the pedestrian would cross the street and report which cues they utilized
+to make judgments (Schmidt, Färber, & Grassi, 2008, see in Schmidt & Färber, 2009). Following this, in the next study, par-
+ticipants were asked to make intention judgments when some of the cues in video clips were masked (Schmidt & Färber,
+2009). The results showed that there might be ﬁve main cues utilized to recognize pedestrian intentions: head movement,
+legs movement, dynamics of walking, pedestrian characteristics and trafﬁc environment. Since all these cues were not delib-
+erately displayed by pedestrians, the ﬁnding suggested that drivers did use implicit communication cues to recognize pedes-
+trian intentions.
+While these two studies improved our understanding of drivers’ intention recognition strategy, literature around inten-
+tion recognition in trafﬁc is still scarce. As a result, some basic questions on intention recognition remain unclear. Can drivers
+recognize pedestrian intentions in all contexts? If not, what factors may modulate their performance? Without answering
+these basic questions, even these two ﬁndings on intention recognition cues cannot be properly interpreted. For example,
+in Schmidt and Färber’s study (2009), the videos were recorded in a third-party view without self-motions, and the perfor-
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+553
+
+--- Page 3 ---
+mance was evaluated without time constraints. In contrast, in a normal driving scenario, drivers interact with several poten-
+tial hazards. They need to detect potential risky pedestrians and recognize their intentions within a short duration. Besides,
+the moving of vehicle and the distance between drivers and pedestrians also affect the availability of some behavioral cues
+(e.g., head movements). It is unclear how these settings in natural driving inﬂuence intention recognition.
+1.3. Objectives
+As outlined, drivers need to recognize pedestrian intentions correctly and timely for safe interactions. However, only a
+few studies have explored the intention recognition process. We have gleaned some indirect evidence from drivers’
+responses to pedestrian behaviors to infer its role in driver yielding behavior, but the inference is just theoretical speculation.
+The two relevant studies (Schmidt et al., 2008; Schmidt & Färber, 2009) offered valuable ﬁndings on drivers’ strategies in
+intention recognition, but the experiment settings neglected the viewpoint of drivers, the distance to pedestrians, as well
+as the time limit of intention recognition that was crucial in realistic driving scenarios. Overall, the ﬁeld of intention recog-
+nition is still in its infancy.
+In this study, we evaluated drivers’ performance and process in intention recognition and how it was modulated by some
+important factors. To overcome potential limitations in previous research, we simulated the task from the detection of
+pedestrians to the recognition of their intentions in drivers’ viewpoint while scenes were moving towards drivers. The dis-
+tance to pedestrians was reﬂected by the time gap between drivers and pedestrians (Time-to-arrival, TTA) at the moment of
+requiring drivers to make an intention judgment. What’s more, previous researches on action understanding has shown that
+observer’s expectation acquired from experience also played a role in intention recognition beyond sensory information con-
+veyed by movement kinematics (Chambon et al., 2017, 2011). Applying the ﬁndings into the current study, driving experi-
+ence is likely to affect performance in intention judgments. Therefore, we included both experienced and novice drivers as
+participants to make intention judgments toward pedestrians who had the intention to cross or not. The recorded eye move-
+ments and reaction time in judgments helped to identify the process as well as the cues of intention recognition in the
+driver-pedestrian interaction. Overall, the current study evaluated drivers’ performance in intention judgments, and how
+it was affected by drivers’ experience, distance to pedestrians (in fact, TTAs), and real intentions of pedestrians.
+2. Methods
+2.1. Design
+A 2 (driving experience)  2 (pedestrian intentions)  4 (TTAs) mixed design was employed. The between-subject factor
+was driving experience (experienced drivers versus novice drivers). The within-subject factors were intentions of pedestri-
+ans (cross or non-cross) and TTAs (2, 3, 4, 5 s before the vehicle arrived at the intersection of vehicle and pedestrian’s paths).
+The dependent variables were the performance of drivers in intention judgments, including accuracy, response bias, speed of
+responses, and eye movements measures.
+2.2. Participants
+A total of 40 full-licensed drivers (29 males and 11 females) were paid to take part in the experiment. Twenty participants
+who had been driving for less than 10,000 km (range from 50 to 10, 000 km, M = 1, 031 km, SD = 2, 369 km) were classiﬁed as
+novice drivers. The others who had more than 100,000 km driving experience (range from 100,000 to 1500,000 km,
+M = 431,500 km, SD = 337, 99 km) were classiﬁed as experienced drivers. Novice drivers were undergraduate students
+recruited from the college and had an average age of 21.5 (SD = 1.93) with mean driving experience of 1.7 years. The expe-
+rienced were professional drivers (e.g. taxi drivers) recruited by phone call for participation. Experienced drivers had an
+average age of 35.7 (SD = 7.4) with mean driving experience of 11.2 years. All participants had normal or corrected to normal
+visions.
+2.3. Video clips used for simulation
+A video-based simulation was provided to present trafﬁc situations where drivers interacted with pedestrians. To offer a
+high-quality and natural simulation of interactions, a GoPro Hero 6 camera was mounted to the windscreen of vehicles to
+record trafﬁc scenes from drivers’ viewpoint. Five professional drivers were recruited for video recording in several days
+in Xi’an, a capital city of Shaanxi province in China where participants were recruited from. The drivers of recording vehicles
+were instructed to drive as usual and were naive to the purpose of the recording.
+The raw videotapes, which had a 3840  2160 resolution at 60 Hz frame rate, were cut and compressed into a
+3840  1080 resolution at 30 Hz frame rate, to play in the center of three monitors. The experimenter played the videotapes
+to select each driver-pedestrian interaction event based on some rules. First, during each interaction, the recording vehicle
+was the foremost vehicle in front of the pedestrian and did not decelerate, to ensure that the pedestrian intention was not a
+reaction to the yielding behavior of the recording driver or other vehicles. Second, the target pedestrian should be visible
+554
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+
+--- Page 4 ---
+during the interaction process, and there were only one to three pedestrians crossing the road (not in a group of pedestrians).
+Third, there was no trafﬁc light to assign the right of way. The procedure to generate video clips for the experiment is shown
+in Fig. 1.
+First, we selected 117 interaction events, with eight of them for practice trials and 109 for the formal experiment. Here,
+‘‘interaction event” was deﬁned as the process from pedestrian appearing to the vehicle passing the pedestrian. The 109
+events included 43 ‘‘cross” events where the pedestrian crossed before the recording vehicle, 57 ‘‘non-cross” events where
+the pedestrian did not cross (i.e., waited or slowed down), and 9 ‘‘noise” events where the pedestrian walked on the side-
+walk. The noise events were included to promote a more active visual search of trafﬁc scenes. All interactions took place
+in the urban environment and 16 of them took place when zebra crossing was present. The lanes of road ranged from 2
+to 8 (2 lanes: 23 events; 3 lanes: 9 events; 4 lanes: 23 events; 6 lanes: 45 events; 8 lanes: 9 events).
+Second, we cut interaction events into interaction clips with different TTAs, which is the time needed for the vehicle to
+arrive at the intersection between the vehicle and pedestrian’s paths. For each interaction event, one to four clips were gen-
+erated by stopping the driving scene at different TTAs (2, 3, 4, 5 s), which means that if TTA = 4 s, time between the ﬁnal
+frame of the clip and the frame where vehicle arriving at the intersection is 4 s. In addition, if the pedestrian had stepped
+onto the lane or was obscured at the ending frame in one clip, this clip would be excluded for this interaction event. In
+the Supplementary Materials, four images according to four TTAs of one interaction event are provided as an example, as well
+as our video analysis of the clips.
+Finally, we extended the interaction event to earlier normal driving phases of the video when pedestrians hadn’t
+appeared in the scene (Step 3 in Fig. 1). The normal driving section provided a natural sense of interacting with pedestrians
+from the detection to responses and avoided abrupt appearing of pedestrians. The normal driving scene varied in length so
+that participants could not expect target pedestrians to appear at a ﬁxed time. The ﬁnal clips looked like this: A driver is
+driving normally, then pedestrians appeared in the scene. As a result, the length of composite clips displayed in the exper-
+iment varied between 7 and 15 s (2 s intervals).
+2.4. Apparatus
+The video clips were presented in the center of three 24-inch Dell U2414H monitors to simulate real trafﬁc scenes. Each
+monitor had a 1920  1080 resolution. The angle between the contiguous screens was 135. The center monitor was posi-
+tioned facing the participant at a viewing distance of 62 cm. An EyeLink 1000 plus (SR Research Ltd, Ontario, Canada) eye
+tracker was used to track participants’ eye movements at a sample rate of 1000 Hz in tower mode. Participants used a joy-
+stick to input their judgments of pedestrian intentions.
+Fig. 1. The procedure to generate materials for the experiment. ‘‘Interaction clips” were generated from ‘‘interaction events”. One ‘‘interaction event” could
+generate several clips according to TTAs, depending on whether the pedestrian had crossed the road and whether the pedestrian was visible at the end
+frame of the clip.
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+555
+
+--- Page 5 ---
+2.5. Procedure
+The experiment was run in the same city as the video collection. The instruction and example picture (like Fig. 2) were
+shown on the center monitor. Participants were told that clips recorded from the drivers’ viewpoint would be shown on
+monitors and they should view clips as if they were the driver and look around the trafﬁc scenes as usual. When video
+stopped, they should judge pedestrian intentions (i.e., whether to cross in front of the approaching vehicle) and respond with
+a joystick (two keys assigned to two judgments).
+Each participant ﬁrst ﬁnished eight practice trials before the formal experiment. The 109 trials for the formal experiment
+were separated into three blocks included 36, 36 and 37 trials respectively to avoid fatigue. For each participant, the clip of
+each trial was randomly picked from a unique interaction event. Therefore, each participant watched an interaction event
+just once. A ﬁve-point calibration and validation procedure were used to calibrate the eye tracker at the beginning of each
+block on the center monitor.
+For each trial, the ﬁrst frame of the clip was displayed for 3 s as a preview of the trafﬁc scene. After that, the clip started to
+play automatically. Immediately following the ending frame of the clip, a yellow rectangle (as shown in Fig. 2) surrounded
+the target pedestrian whose intention was to be judged. Both the rectangle and the last frame of the clip lasted for a max-
+imum of 1 s. As instructed, participants needed to recognize pedestrian intentions (i.e., pedestrians would cross the road or
+not) and responded with a joystick as soon as possible. Finally, the trial would end with a black screen until participants
+responded (the maximum length of the black screen was 4 s). No feedback on whether pedestrians would cross the road
+was provided during the experiment.
+The whole experiment lasted about 60 min. After the experiment on the computer, the participants also ﬁlled a question-
+naire about driving experience and accident history. No accident history was reported.
+3. Results
+The recognition of pedestrian intention should be preceded by successful detection of pedestrians. In the following anal-
+yses, we ﬁrst reported drivers’ detection of pedestrians with eye tracking data. Then, in the main part, we evaluated drivers’
+performance in the judgment of pedestrian road crossing intentions from three aspects: accuracy, reaction time and eye
+movements. At last, we conducted an integrated analysis to explore the relationship between detection and reaction of
+intention recognition.
+Notice that participants’ responses for the condition where pedestrians just walking on the sidewalk were not included.
+And for clips with TTA of 2 s, pedestrians did not cross the road in most trials (690 in 710 trials, 97.1%), thus this level of TTA
+was also excluded for analysis employing ANOVA.
+3.1. The detection of pedestrians during interaction
+The dynamic area of interests (AOIs) in each frame surrounding the pedestrians were deﬁned to evaluate drivers’ detec-
+tion of target pedestrians. The AOIs in each frame were about 1.5 times of the rectangle which closely surrounded a pedes-
+trian (see the rectangle in Fig. 2 for an example). The wider AOI was used considering the accuracy of eye tracking and
+ﬁxation locating, and the fact that pedestrians can be detected at a far distance when they only covered a small area of
+the display. In fact, the average size of AOIs only occupied around 1% (range from 0.1% to 6%) area of the center monitor.
+Eight percent of trials were excluded for having no ﬁxation on the AOIs until the display turned black or the sample rate
+was lower than 80%, which might be caused by errors in eye tracking (e.g., participants moved the head, signal loss of eyes
+or inattention of participants).
+Detection rate: If participants gazed at the target pedestrian before the presentation of rectangular indicator, this trial
+would be coded as ‘‘detected before indicator”; otherwise, it was coded as ‘‘not detected before indicator”. There were
+7.6% trials in which participants did not detect the pedestrian before indicator. A 2 (driving experience)  2 (intention of
+Fig. 2. For each trial, the rectangle indicates the target pedestrian to be judged. It appeared at the last frame of a clip and stay for one second.
+556
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+
+--- Page 6 ---
+pedestrian)  3 (TTAs: 3, 4, 5 s) mixed ANOVA was employed to analyze the detection rates over groups and conditions. No
+signiﬁcant effect of driving experience was found, F < 1. The main effects of the intentions and TTAs were signiﬁcant (F (1,
+38) = 66.69, p < 0.001, partial g2 = 0.637; F (2, 76) = 19.76, p < 0.001, partial g2 = 0.342). The detection rate was higher for
+pedestrians would cross (cross: M = 0.95, SE = 0.006; non-cross: M = 0.86, SE = 0.011), and for trials ended at shorter TTA
+(i.e., 3 s) (3 s: M = 0.95; 4 s: M = 0.89, 5 s: M = 0.88), all ps < 0.001. The interaction between intentions and TTAs was margin-
+ally signiﬁcant, F (2, 76) = 3.01, p = 0.055, partial g2 = 0.073. Post hoc tests showed that for each level of TTAs, the detection
+rate was always lower when pedestrians did not intend to cross than when pedestrians would cross, and the differences
+were greater for larger TTAs, all ps < 0.002.
+Latency of detection and ﬁrst ﬁxation duration: The time taken to ﬁrst ﬁxate on target pedestrians (i.e., the latency of
+detection) was deﬁned as the duration from the appearing of pedestrians to the moment that ﬁrst ﬁxation fell into AOIs. For
+the latency of detection and ﬁrst ﬁxation duration, a 2 (driving experience)  2 (intention of pedestrian) mixed ANOVA was
+employed. The latency of detection was comparable for experienced and novice drivers, F (1, 38) = 1.81, p = 0.186, partial
+g2 = 0.046, but varied with pedestrian intentions, F (1, 38) = 5.71, p = 0.022, partial g2 = 0.131. More speciﬁcally, pedestrians
+intending to cross were detected earlier than those did not intend to cross (cross: M = 1345 ms, SE = 57 ms; non-cross:
+M = 1445 ms, SE = 50 ms), regardless of driver experience, F < 1.
+For the ﬁrst ﬁxation duration, similar pattern of results was found. There was no group difference between experienced
+drivers and novices for the ﬁrst ﬁxation duration (M = 634 ms for experienced drivers and M = 558 ms for novices), F (1, 38)
+= 1.69, p = 0.202, partial g2 = 0.043. All drivers had longer ﬁrst ﬁxation duration when pedestrians would cross (M = 646 ms,
+SE = 39 ms) than when pedestrians would not cross (M = 545 ms, SE = 25 ms), F (1, 38) = 12.17, p = 0.001, partial g2 = 0.243.
+No interaction effect was found, F < 1.
+3.2. Drivers’ performance in judgments of pedestrian road crossing intentions
+3.2.1. The accuracy, sensitivity and response bias in intention judgment
+The ground truth of pedestrian intentions was deﬁned as whether pedestrians crossed the road before the recording vehi-
+cle passing by. That is, if the pedestrians would cross the road in front of the recording vehicle at the end of this ‘‘interaction
+event”, we would deem that the pedestrians crossed before the vehicle (cross events). Otherwise, the pedestrians would be
+regarded as not crossed before the vehicle, or in other words, the pedestrians may intend to cross the road but did not do so
+before the recording vehicle (non-cross events). It has to be mentioned that the rate of pedestrians did not cross the road
+decreased for larger TTAs (648 in 854 trials, 75.9% for 3 s; 602 in 1210 trials, 49.8% for 4 s; 340 in 1226 trials, 27.7% for 5 s).
+Following the framework of signal detection theory (SDT), drivers’ responses were classiﬁed into four categories. For cross
+events, the response was a hit (drivers made a ‘‘will cross” judgment) or miss (a ‘‘will not cross” judgment). For non-cross
+events, the response was a false alarm (a ‘‘will cross” judgment) or a correct rejection (a ‘‘will not cross” judgment). Hit rate
+was calculated as the number of hit responses divided by the number of cross trials; false alarm rate was calculated as the
+number of false alarm responses divided by the numbers of non-cross trials. The overall hit rates of experienced (0.92) and
+novice drivers (0.91) were equally high, t = 0.26, p = 0.797, but the false alarm rate of experienced drivers (0.43) was higher
+than novices (0.30), t = 2.26, p = 0.029.
+Table 1 shows the hit rates and false alarm rates over driver groups and TTAs (3, 4, 5 s). Based on the hit rate and false
+alarm rate of each participant, the drivers’ sensitivity (the overall ability to discriminate pedestrian intentions) and bias (the
+tendency to make ‘‘will cross” or ‘‘will not cross” judgments) were assessed according to SDT. Fig. 3 shows the sensitivity (d’),
+criterion (C) and response bias (b) over groups and TTAs. A higher d’ score means the driver performed better in discrimi-
+nating whether pedestrians would cross or not, whereas a lower C or higher b means the driver was more likely to make
+a ‘‘will cross” judgment. A 2 (driving experience)  3 (TTAs: 3, 4, 5 s) mixed ANOVA was employed for analyses of parameters
+of SDT.
+When sensitivity d’ was regarded as the dependent variable, we found novice drivers (M = 1.960, SE = 0.118) performed
+better than experienced drivers (M = 1.535, SE = 0.118), F (1, 38) = 6.49, p = 0.015, partial g2 = 0.146. The main effect of TTAs
+was also statistically signiﬁcant, F (2, 76) = 7.36, p = 0.001, partial g2 = 0.162. Pairwise comparisons conﬁrmed that when the
+TTA was 4 s, the d’ was higher than that at other TTAs (all ps < 0.004). The interaction effect was not statistically signiﬁcant, F
+(2, 76) = 0.21, p = 0.809, partial g2 = 0.006.
+When criterion C was regarded as the dependent variable, we found the criterion of experienced drivers was marginally
+lower (M = -0.625, SE = 0.086) than that of novices (M = -0.382, SE = 0.086), F (1, 38) = 4.02, p = 0.052, partial g2 = 0.096. The
+effect of TTAs and its interaction with driving experience were signiﬁcant (F (2, 76) = 10.24, p < 0.001, partial g2 = 0.212; F (2,
+Table 1
+Hit rates and false alarm rates over TTAs and groups.
+Hit rate (SE)
+False alarm rate (SE)
+3 s
+4 s
+5 s
+3 s
+4 s
+5 s
+Experienced drivers
+0.86 (0.015)
+0.92 (0.015)
+0.90 (0.026)
+0.39 (0.048)
+0.43 (0.056)
+0.55 (0.049)
+Novice drivers
+0.89 (0.008)
+0.93 (0.011)
+0.87 (0.022)
+0.31 (0.045)
+0.28 (0.039)
+0.35 (0.050)
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+557
+
+--- Page 7 ---
+76) = 4.19, p = 0.019, partial g2 = 0.099). Further comparison showed that experienced drivers had a lower criterion for the
+larger TTA (i.e., 5 s) (all ps < 0.001), while novices kept a stable criterion for all TTAs (all ps > 0.07). As a result, the criteria
+of experienced drivers became signiﬁcantly lower than novices when TTA reached 5 s (p = 0.015).
+There was no signiﬁcant main effect when response bias b was regarded as the dependent variable (F (1, 38) = 2.89,
+p = 0.098, partial g2 = 0.071; F (2, 76) = 1.46, p = 0.239, partial g2 = 0.037). The interaction effect was marginally signiﬁcant,
+F (2, 76) = 2.76, p = 0.069, g2
+p = 0.068. The test of simple effect showed that when the TTA was 5 s, the response bias b of expe-
+rienced drivers was lower than novices (p = 0.039). In addition, the response bias b in all conditions were lower than 1, indi-
+cating a liberal criterion (tendency to say Yes, i.e., ‘‘the pedestrian will cross”).
+3.2.2. Reaction time (RT) of the intention judgment
+The reaction time was deﬁned as the time interval between the indicator presentation and participant’s response. As the
+hypothesis, the intention recognition is time-consuming, so the differences in RT would reﬂect the process of intention
+recognition.
+The means of reaction time over conditions are shown in Fig. 4. The trials with RT deviated beyond 2.5 times of standard
+deviation were excluded. A 2 (driving experience)  3 (TTAs: 3, 4, 5 s)  2 (intentions of pedestrians) mixed ANOVA was
+employed for the analysis of RT. Although experienced drivers made faster responses than novice drivers (M = 762 ms vs.
+M = 846 ms), RT was not signiﬁcantly different across driving experience, F < 1. The main effect of TTAs was signiﬁcant, F
+Fig. 3. Sensitivity (d’), criterion (C) and response bias (b) of drivers under different TTAs in intention judgments. Error bars represent standard errors.
+Fig. 4. Reaction time (RT) from a target pedestrian was indicated to response. Error bars represent standard errors.
+558
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+
+--- Page 8 ---
+(2, 76) = 33.50, p < 0.001, partial g2 = 0.469. The pairwise comparisons revealed that the RT was longer for larger TTA (all
+ps < 0.001) when drivers had less time to recognize intentions. The effect of pedestrian intentions was also signiﬁcant, with
+shorter RT in cross condition (M = 645 ms, SE = 40 ms) than non-cross condition (M = 964 ms, SE = 54 ms), F (1, 38) = 114.42,
+p < 0.001, partial g2 = 0.751. None of the interaction effects was signiﬁcant, all ps > 0.08.
+Because participants did not get any feedback on their judgments, we also explored the response process according to
+their judgments (‘‘will cross” or ‘‘will not cross”), rather than real intentions of pedestrians. A paired t-test showed that
+the RT was shorter for ‘‘will cross” judgments (M = 738 ms, SE = 42 ms) than ‘‘will not cross” judgments (M = 915 ms,
+SE = 51 ms), t = -7.59, p < 0.001, which means drivers were quicker in making a ‘‘will cross” judgment as compared with a
+‘‘will not cross” judgment.
+3.2.3. Eye movements during intention judgment
+The following analyses concerned the ﬁxation position and duration while processing pedestrian intentions. The eye
+movements during the last static frame (for a maximum of one second) were also included in the analyses, because even
+in the static frame, drivers could still get information on pedestrian intentions. Compared with the AOIs in the detection
+phase, the AOIs employed in this phase closely encompassed target pedestrians (see Fig. 5), allowing for more reﬁned coding
+of eye movements. The ﬁxation was deﬁned as a gaze within the scene for at least 100 ms. The offset of a ﬁxation, which
+meant the offset of the current ﬁxation position relative to the center of the AOI, was calculated respectively in the horizontal
+and vertical direction. Then, the offset of a ﬁxation position was transformed into a ratio scale ranged from 0 to 1 based on
+the width and height of the AOI (see Fig. 5).
+Fig. 5 shows that drivers’ ﬁxations on the horizontal direction are symmetric around the center of pedestrians’ body, with
+48.3% of the ﬁxations falling on a position smaller than 0.5. In contrast, in the vertical direction, more ﬁxations fall on the
+upper body, with 66.4% of the ﬁxations falling on the position smaller than 0.5.
+When taking ﬁxation duration into account, in order to carry on the statistical test, we simpliﬁed the ﬁxation positions
+into three areas with the same size: top, middle, bottom zone. The mean ﬁxation durations in the AOIs took into a 2 (driving
+experience)  2 (intentions of pedestrian)  3 (ﬁxation positions: top, middle, bottom zone) mixed ANOVA. The results
+showed that the mean ﬁxation duration was longer for experienced drivers (M = 676 ms, SE = 27 ms) than novice drivers
+(M = 576 ms, SE = 27 ms), F (1, 38) = 6.65, p = 0.014, partial g2 = 0.149. When the mean of ﬁxation duration was calculated
+with all ﬁxations in the experiment (including eye movement in the normal driving section), there was no group difference
+(M = 449 ms for experienced drivers vs. M = 433 ms for novices), t = 0.72, p = 0.477. It reﬂected that the signiﬁcant difference
+found in the ANOVA analysis was most likely due to the intention recognition task rather than other factors, excluding the
+possibility of general difference in normal driving style between experienced and novice drivers.
+The main effect of pedestrian intentions was also found, with longer ﬁxation duration for pedestrians intended to cross
+(M = 661 ms, SE = 20 ms) than those did not intend to cross (M = 592 ms, SE = 21 ms), F (1, 38) = 27.44, p < 0.001, partial
+g2 = 0.419. The ﬁxation duration also varied with positions, F (2, 76) = 16.88, p < 0.001, partial g2 = 0.308, which was longer
+for upper than lower zone (see Fig. 6, all ps < 0.005. No interaction effect was found, all ps > 0.3.
+3.3. Detection and intention recognition as a continual process
+Will drivers’ speed of intention recognition be affected by detection performance? For trials coded as ‘‘detected before
+indicator” as mentioned, their RTs (M = 776 ms, SE = 43 ms) were signiﬁcantly shorter than the RTs (M = 1157 ms,
+Fig. 5. The distribution of ﬁxation across the horizontal direction (left) and the vertical direction (right). The deﬁnition of ﬁxation positions is shown at the
+top-right of each ﬁgure.
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+559
+
+--- Page 9 ---
+SE = 61 ms) of trials coded as ‘‘not detected before indicator” (t = 12.49, p < 0.001). A possible reason is that if the drivers
+directed their attention to pedestrians before indicator, their intention recognition process would begin earlier, resulting
+in shorter RTs. To verify the possibility and exclude conditions where participants turned to other things after detection
+of pedestrians, we conducted a Spearman’s correlation (two-tailed) to estimate the relationship between dwell time (the
+total of ﬁxation time in the AOI in one trial) and RT for trials coded as ‘‘detected before indicator”. The signiﬁcant correlation
+(r = 0.208, p < 0.001) indicated that the RT was shorter for longer dwell time (longer processing duration). To sum up, if
+drivers detected target pedestrians earlier (‘‘detected before indicator”) and kept monitoring for a longer time (dwell time),
+they would make a quicker response to pedestrian intentions.
+4. Discussion
+The current study explored the drivers’ intention recognition process from detection to judgments when interacting with
+pedestrians. In the detection phase, both experienced and novice drivers had a higher detection rate, quicker detection and
+longer ﬁrst ﬁxation duration toward pedestrians who intended to cross than those did not intend to cross. As to the perfor-
+mance of intention judgments, experienced drivers were less accurate than novice drivers, with lower sensitivity. However,
+they had more ﬂexible criterion corresponding to the change of TTAs. Pedestrians intending to cross also attracted a longer
+mean ﬁxation duration, especially for experienced drivers. Within a speciﬁc pedestrian, the upper body attracted more and
+longer ﬁxations than the lower part. Overall, the detection and intention recognition phase both affected ﬁnal responses. The
+response was quicker when TTA was shorter, pedestrians intended to cross or drivers paid more attention to pedestrians. The
+implications of these ﬁndings are discussed in this section.
+4.1. The accuracy and bias of the intention judgment
+As to the accuracy of judgment, drivers with different experience failed to recognize the intentions of pedestrians
+intended to cross in about 8% of the 109 trials. Although the miss rate was apparently low, it was worth noting in terms
+of safety. If drivers made a wrong judgment to whom intended to cross, a conﬂict would happen. In contrast, even if drivers
+had a false alarm, it would not cause any conﬂict. Therefore, the traditional evaluation of performance with accuracy is not
+appropriate on this occasion. Instead, we evaluated drivers’ ability to distinguish pedestrians who intended to cross from
+those did not intend to cross. In regard to group differences between experienced drivers and novice drivers, plenty of stud-
+ies found that experienced drivers usually outperformed novice drivers in detection rate, judgment accuracy, processing efﬁ-
+ciency and situation awareness in hazard perception tasks (Borowsky, Shinar, & Oron-Gilad, 2010; Crundall, 2016; Crundall
+et al., 2012; Jackson, Chapman, & Crundall, 2009; Ventsislavova et al., 2016). However, in the current study, the result
+revealed the apparently better performance of novice drivers with higher sensitivity. One possible reason is that our study
+focused on the processing of intentions, and the target pedestrians were easy to notice, whereas, in hazard perception, dri-
+vers need to predict whether potential hazards would appear based on their experience.
+The lower sensitivity of experienced drivers did not mean riskier judgments, as experienced drivers showed more con-
+servative and ﬂexible strategies than novice drivers. The criteria of experienced drivers were relatively lower than novices’
+and changed over TTAs. More speciﬁcally, experienced drivers were more conservative at larger TTA (tending to report ‘‘will
+cross”), while novice drivers kept a stable criterion regardless of the changes in TTA. As a result, their difference in criterion
+became larger with increasing TTAs (usually means farther distance) and ﬁnally became signiﬁcant when TTA reached 5 s.
+Fig. 6. The means of ﬁxation duration on the different parts of a target pedestrian. Error bars represent the standard errors.
+560
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+
+--- Page 10 ---
+The higher tendency to report ‘‘will cross” of experienced drivers may reﬂect a lower level of risk acceptance (Deery, 1999). A
+similar phenomenon was also found in a hazard perception test: experienced drivers preferred to make an evasive maneuver
+than novices, even for the quasi-hazardous situations (Ventsislavova et al., 2016).
+The changing criterion relative to TTAs also indicates that experienced drivers may have a better prediction of pedestrian
+behaviors than novice drivers. According to studies on pedestrians’ gap acceptance and violation behaviors, pedestrians are
+more likely to cross at larger TTAs (Brewer, Fitzpatrick, Whitacre, & Lord, 2006; Wang, Wu, Zheng, & McDonald, 2010) and
+they may also run across the road instead of crossing in a constant speed (Zhuang and Wu, 2012, 2011). It was possible that
+experienced drivers considered the variability of pedestrians’ behaviors on the road, and predicted pedestrians’ behaviors
+based on their theory of mind about pedestrians. A piece of indirect evidence for this hypothesis was that drivers interacted
+with human pedestrians and robot pedestrians in different ways (Lehsing, Benz, & Bengler, 2016). In another study con-
+ducted by Lee (2016), the researcher measured drivers’ mentalizing skills, in addition to the main task to judge the intentions
+of road users. The result demonstrated a trend towards a signiﬁcant positive correlation between drivers’ mentalizing skills
+and sensitivity in intention judgments of other road users.
+4.2. Process and mechanism in intention recognition
+In normal driving, an appropriate response to interacting pedestrians requires successful detection, correct recognition,
+and timely response. In this study, the focus is the intention recognition phase, but the ﬁndings showed that previous pro-
+cesses affected the ﬁnal responses. Compared with the pedestrians not been detected before the presentation of rectangular
+indicator (pointing out the target pedestrian), those who were detected before the indicator resulted in faster responses. For
+them, the longer drivers gazed at (i.e., dwell time), the faster responses were. Therefore, ﬁndings from all phases need to be
+integrated to probe into the cognitive mechanism of intention recognition.
+In the detection phase, all drivers had a higher detection rate as well as shorter latency of detection towards pedestrians
+with ‘‘cross” intention than those with ‘‘non-cross” intention. The easier detection might be caused by salient visual features
+like close standing position, high walking speed or other aggressive behaviors that are often seen in pedestrians intending to
+cross but not available in those did not intend to cross. These behaviors also explained the longer ﬁrst ﬁxation duration
+towards pedestrians with ‘‘cross” intention, as hazardous behaviors could induce an attentional capture effect
+(Underwood, 2007; Underwood, Phelps, Wright, Van Loon, & Galpin, 2005). From the drivers’ aspect, the longer ﬁrst ﬁxation
+duration may indicate processing of information related to pedestrian intentions at the moment of detection. Although we
+named this process as the detection phase, drivers were in fact continuously evaluating the risk levels of interacting objects.
+In natural driving scenarios as well as in this study, there were usually multiple objects and pedestrians simultaneously vis-
+ible in a scene. Drivers need to make a rough assessment of them to focus on relatively more hazardous targets. In Tsimhoni,
+Kandt, and Flannagan’s study (2008), drivers were asked to evaluate the necessity of a pedestrian needed to be monitored
+and they found that pedestrian’s position and direction inﬂuenced drivers’ ratings. Therefore, it is possible that for pedestri-
+ans would not cross, drivers simply glanced at them and tagged them as safe. For those who intended to cross, drivers
+needed to interpret their intentions to decide whether further monitoring was needed. Accordingly, we suppose that the
+longer ﬁrst ﬁxation duration may reﬂect an initial evaluation of intentions to screen the potential hazards before an object
+is determined for further elaborate intention judgments.
+In the intention recognition phase, all drivers had longer mean ﬁxation duration on the pedestrians who intended to
+cross. In previous studies, longer ﬁxation duration meant that gazes were ﬁxed on task-relevant objects or locations
+(Lappi, Rinkkala, & Pekkanen, 2017). Fixation duration was also used to reﬂect the depth of processing of hazards in many
+studies (Chapman, Underwood, & Roberts, 2002; Chapman & Underwood, 1998; Kovácsová et al., 2018; Velichkovsky,
+Rothert, Kopf, Dornhöfer, & Joos, 2002). Therefore, the longer ﬁxation duration may reﬂect more attention allocated to pedes-
+trians intending to cross and a higher level of information processing of their intentions.
+However, the question remains as to what information drivers utilized to recognize intentions and how that led to ﬁnal
+judgments. The common process of choice and judgment beyond intention judgment could be described with the dynamic
+signal detection theory (Neal & Kwantes, 2009; Pleskac & Busemeyer, 2010). In this theory, participants collect information
+from many sources and transform them as pieces of evidence to support potential judgments. If evidence accumulated for
+any judgment reaches a threshold, the evidence accumulation will stop, and the judgment will be made. Adapting this theory
+to the drivers’ judgments of pedestrian intentions, it was possible that drivers collected information from pedestrians’
+behaviors, road contexts, and memories to support two potential judgments: ‘‘will cross” and ‘‘will not cross”. Since the gen-
+eral principle in trafﬁc context is to ensure safety, the threshold for making a ‘‘will cross” judgment should be much lower
+than ‘‘will not cross” judgment. If this is indeed the case, we would observe several phenomena: (1) Drivers will pay more
+attention to the area that provides richer information on crossing intentions to gain evidence. (2) Drivers will have a quicker
+response if more evidence is accumulated. (3) The responses of ‘‘will cross” judgments will be faster than ‘‘will not cross”
+judgments.
+All these predictions were conﬁrmed. First, the analysis of ﬁxation positions showed that drivers tended to spend a longer
+time to gaze at the upper part of pedestrians. Although the current experiment was not able to distinguish exactly which
+body part they are looking at, the upper 1/3 implied the head part. In Schmidt et al.’s study (2008), head activity was
+reported as the most important cue to pedestrian intentions. Similarly, in the driver-cyclist interaction, face, eye-contact,
+and head movement were proved to be important social signals of cyclist intentions (Walker, 2005; Walker & Brosnan,
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+561
+
+--- Page 11 ---
+2007). Therefore, drivers did pay more attention to the information-rich area. Second, corresponding to the prediction (2),
+drivers did respond faster when more evidence had been accumulated. As mentioned above, for pedestrians detected earlier
+and gained longer dwell time, the responses were quicker. Similarly, we observed shorter RT for pedestrians at smaller TTA,
+which meant a longer time to accumulate evidence before intention judgments. Third, corresponding to the prediction (3),
+we found that both groups of drivers tended to make ‘‘will cross” judgments, and the responses were faster than ‘‘will not
+cross” judgments. One reason might be the lower threshold of ‘‘will cross” judgments to ensure safety. Considering that most
+‘‘will cross” judgments were made when pedestrians did have the intention to cross (hit rate was 0.92 for experienced dri-
+vers, 0.91 for novice drivers), it was also possible that pedestrians intending to cross had more obvious communication cues
+to be transformed as evidence supporting ‘‘will cross” judgments. In contrast, for the ‘‘non-cross” condition, fewer cues were
+available to make a judgment. The ﬁnal ‘‘will not cross” judgment might be a consequence of ‘‘no evidence for will cross was
+found”. In fact, drivers do have slower responses (up to 319 ms) if pedestrians did not intend to cross than if they intended to
+cross.
+Combining the ﬁndings in all phases, we propose that intention recognition may consist of two phases: a rough evalua-
+tion closely after detection to screen potential hazards and an elaborate intention recognition in agreement with an evidence
+accumulation process. However, as a primitive study on intention recognition during the driver-pedestrian interaction, the
+current study could only provide some indirect evidence to support this postulation. Further studies are needed to discrim-
+inate the two phases and dive into the mechanism in each phase.
+4.3. Implications and further research
+In addition to the theoretical questions raised above, our ﬁndings have several additional implications for future research.
+First, we found that the time available to process intentions was crucial to the speed of responding. Therefore, future studies
+on intention recognition need to take the time dimension into account. Second, currently, autonomous driving is gaining
+ground, but its success depends on safe interaction with pedestrians, which involves correct recognition of pedestrian inten-
+tions. Our ﬁnding showed that human drivers relied more on the upper body to recognize intentions, rather than the body
+bending and spread of legs which used by some intention recognition algorithms (Köhler et al., 2012).
+Future studies can also compare the performance of machine drivers with human drivers in comparable contexts. If the
+former is weaker, then we can add or provide more weights on cues from the upper body to improve the algorithm. On the
+other way around, if computer vision exceeded the performance of human drivers, then we can probably train human drivers
+with the cues found by the algorithm or facilitate their judgments with ADAS to reduce uncertainty (Houtenbos, Jagtman,
+Hagenzieker, Wieringa, & Hale, 2005). This is especially important given that drivers tend to delay their responses when cues
+of intentions are inadequate.
+4.4. Limitations
+The current study simulated the driver-pedestrian interaction situation with videos in the laboratory. The task was to
+make an intention judgment with a joystick without the built-in requirement to control the vehicle. As a result, the workload
+of the driver was lower in the experiment than in real trafﬁc. It probably beneﬁted drivers’ performance, especially novice
+drivers who were younger and more familiar with the joystick as an input device. Therefore, although we found a shorter yet
+not statistically signiﬁcant RT for experienced drivers than novices (762 ms vs. 846 ms), it was possible that experienced dri-
+vers might take actions faster than novices in real driving scenes. A potential way to overcome this limitation is to study
+intention judgments in a more ecological context. Another related limitation was that pedestrians’ actual crossing behaviors
+observed afterward were used as the ground truths of their intentions, but their real intentions might also depend on drivers’
+responses and the overall trafﬁc condition. In real trafﬁc context, the driver-pedestrian interaction is bi-directional. The best
+way to study the interaction process is to involve two parties at the same time. However, real interaction behaviors and
+underlying information processing are hard to capture in natural scenes, and simulators are far from satisfactory. Currently,
+most driving simulators only gives a built-in module of pedestrians that can simulate very simple and rigid behaviors rather
+than take real pedestrian behaviors as input. At the same time, pedestrian simulators only afford a built-in module of vehicle
+behaviors rather than read real driver behaviors as input. To determine the detailed process of interaction, the future sim-
+ulator should be able to combine the two and allow simultaneous simulation of natural interaction behaviors within the
+same scene to promote development in this ﬁeld (Lehsing et al., 2016).
+5. Conclusions
+Making a judgment of pedestrian road crossing intentions requires detection of pedestrians and recognition of their
+intention. In the detection phase, an attentional capture effect was found for pedestrians who intended to cross: Drivers
+detected them earlier and gazed for a longer duration. During intention recognition, eye movements indicated that experi-
+enced drivers took a higher level of information processing than novices. However, both experienced drivers and novice dri-
+vers paid more attention to the information-rich area (the upper body of pedestrians) for a longer duration to gain evidence
+for intention judgments. The ﬁnal judgments of crossing intentions were conservative (prefer a ‘‘will cross” judgment), espe-
+562
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+
+--- Page 12 ---
+cially for experienced drivers and pedestrians at a greater time-to-arrival (TTA). Besides, the responses of intention judg-
+ments were much slower when the TTA was greater or when pedestrians did not intend to cross.
+Overall, these ﬁndings show that the intention recognition may include two phases: one closely following the detection
+phase to roughly screen potential hazards, and one elaborate evaluation of intentions that can be explained by the evidence
+accumulate process.
+Acknowledgments
+This work is supported by the Fundamental Research Funds for the Central Universities (GK201803098, GK201803099)
+and the National Natural Science Foundation of China (31600894, 31600877). We thank the anonymous reviewers for their
+insightful comments that greatly improved the manuscript.
+Appendix A. Supplementary material
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.trf.2019.07.004.
+References
+Bonham, J., & Johnson, M. (2018). Cyclist-related content in novice driver education and training. Accident Analysis and Prevention, 111, 321–327. https://doi.
+org/10.1016/j.aap.2017.12.008.
+Borowsky, A., Shinar, D., & Oron-Gilad, T. (2010). Age, skill, and hazard perception in driving. Accident Analysis and Prevention, 42(4), 1240–1249. https://doi.
+org/10.1016/j.aap.2010.02.001.
+Brass, M., Schmitt, R. M., Spengler, S., & Gergely, G. (2007). Investigating action understanding: Inferential processes versus action simulation. Current
+Biology, 17(24), 2117–2121. https://doi.org/10.1016/j.cub.2007.11.057.
+Brewer, M. A., Fitzpatrick, K., Whitacre, J. A., & Lord, D. (2006). Exploration of pedestrian gap-acceptance behavior at selected locations. Transportation
+Research Record, 1982(1), 132–140. https://doi.org/10.1177/0361198106198200117.
+Chambon, V., Domenech, P., Jacquet, P. O., Barbalat, G., Bouton, S., Pacherie, E., ... Farrer, C. (2017). Neural coding of prior expectations in hierarchical
+intention inference. Scientiﬁc Reports, 7(1), 1278. https://doi.org/10.1038/s41598-017-01414-y.
+Chambon, V., Domenech, P., Pacherie, E., Koechlin, E., Baraduc, P., & Farrer, C. (2011). What are they up to? The role of sensory evidence and prior knowledge
+in action understanding. PLoS ONE, 6(2). https://doi.org/10.1371/journal.pone.0017133 e17133.
+Chapman, P., Underwood, G., & Roberts, K. (2002). Visual search patterns in trained and untrained novice drivers. Transportation Research Part F: Trafﬁc
+Psychology and Behaviour, 5(2), 157–167. https://doi.org/10.1016/S1369-8478(02)00014-1.
+Chapman, P. R., & Underwood, G. (1998). Visual search of driving situations: Danger and experience. Perception, 27(8), 951–964. https://doi.org/10.1068/
+p270951.
+Crowley-Koch, B. J., Van Houten, R., & Lim, E. (2011). Effects of pedestrian prompts on motorist yielding at crosswalks. Journal of Applied Behavior Analysis, 44
+(1), 121–126. https://doi.org/10.1901/jaba.2011.44-121.
+Crundall, D. (2016). Hazard prediction discriminates between novice and experienced drivers. Accident Analysis and Prevention, 86, 47–58. https://doi.org/
+10.1016/j.aap.2015.10.006.
+Crundall, D., Chapman, P., Trawley, S., Collins, L., van Loon, E., Andrews, B., & Underwood, G. (2012). Some hazards are more attractive than others: Drivers of
+varying experience respond differently to different types of hazard. Accident Analysis and Prevention, 45, 600–609. https://doi.org/10.1016/j.
+aap.2011.09.049.
+Deery, H. A. (1999). Hazard and risk perception among young novice drivers. J. Safety Res., 30(4), 225–236. https://doi.org/10.1016/S0022-4375(99)00018-3.
+Dey, D., & Terken, J. (2017). Pedestrian interaction with vehicles: roles of explicit and implicit communication. In Proceedings of the 9th International
+Conference on Automotive User Interfaces and Interactive Vehicular Applications (pp. 109–113). Oldenburg, Germany: ACM.
+Endsley, M. R. (1995). Toward a theory of situation awareness in dynamic systems. Journal of Human Factors and Ergonomics Society, 37(1), 32–64. https://
+doi.org/10.1518/001872095779049543.
+Guéguen, N., Eyssartier, C., & Meineri, S. (2016). A pedestrian’s smile and drivers’ behavior: When a smile increases careful driving. Journal Safety Research,
+56, 83–88. https://doi.org/10.1016/j.jsr.2015.12.005.
+Guéguen, N., Meineri, S., & Eyssartier, C. (2015). A pedestrian’s stare and drivers’ stopping behavior: A ﬁeld experiment at the pedestrian crossing. Safety
+Science, 75, 87–89. https://doi.org/10.1016/j.ssci.2015.01.018.
+Gugerty, L. (2011). Situation awareness in driving. In D. L. Fisher, M. Rizzo, J. K. Caird, & J. D. Lee (Eds.), Handbook of Driving Simulation for Engineering,
+Medicine, and Psychology (pp. 265–272). CRC Press.
+Harrell, W. A. (1993). The impact of pedestrian visibility and assertiveness on motorist yielding. Journal of Social Psychology, 133(3), 353–360. https://doi.
+org/10.1080/00224545.1993.9712153.
+Hemeren, P.E., Johannesson, M., Lebram, M., Eriksson, F., Ekman, K., Veto, P., 2014. The use of visual cues to determine the intent of cyclists in trafﬁc. In: 2014
+IEEE International Inter-Disciplinary Conference on Cognitive Methods in Situation Awareness and Decision Support (CogSIMA). pp. 47–51. http://doi.
+org/10.1109/CogSIMA.2014.6816539.
+Houtenbos, M., Jagtman, H. M., Hagenzieker, M. P., Wieringa, P. A., & Hale, A. R. (2005). Understanding road users’ expectations: An essential step for ADAS
+development. EJTIR, 5(4), 253–266.
+Jackson, L., Chapman, P., & Crundall, D. (2009). What happens next? Predicting other road users’ behaviour as a function of driving experience and
+processing time. Ergonomics, 52(2), 154–164. https://doi.org/10.1080/00140130802030714.
+Jacobsen, P. L. (2003). Safety in numbers: More walkers and bicyclists, safer walking and bicycling. Injury Prevention, 9(3), 205–209. https://doi.org/10.1136/
+ip.9.3.205.
+Jiang, X., Wang, W., Mao, Y., Bengler, K., & Bubb, H. (2011). Situational factors of inﬂuencing drivers to give precedence to jaywalking pedestrians at
+signalized crosswalk. International Journal of Computational Intelligence Systems, 4(6), 1407–1414. https://doi.org/10.1080/18756891.2011.9727892.
+Kaparias, I., Bell, M. G. H., Biagioli, T., Bellezza, L., & Mount, B. (2015). Behavioural analysis of interactions between pedestrians and vehicles in street designs
+with elements of shared space. Transportation Research Part F: Trafﬁc Psychology and Behaviour, 30, 115–127. https://doi.org/10.1016/j.trf.2015.02.009.
+Katz, A., Zaidel, D., & Elgrishi, A. (1975). An experimental study of driver and pedestrian interaction during the crossing conﬂict. Journal of Human Factors and
+Ergonomics Society, 17(5), 514–527. https://doi.org/10.1177/001872087501700510.
+Kilner, J. M. (2011). More than one pathway to action understanding. TrendCS, 15(8), 352–357. https://doi.org/10.1016/j.tics.2011.06.005.
+Kitazaki, S., & Myhre, N. J. (2015). Effects of non-verbal communication cues on decisions and conﬁdence of drivers at an uncontrolled intersection. 8th
+International Driving Symposium on Human Factors in Driver Assessment, Training, and Vehicle Design.
+Köhler, S., Goldhammer, M., Bauer, S., Doll, K., Brunsmann, U., & Dietmayer, K. (2012). Early detection of the Pedestrian’s intention to cross the street. In 2012
+15th International IEEE Conference on Intelligent Transportation Systems (pp. 1759–1764). https://doi.org/10.1109/ITSC.2012.6338797.
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564
+563
+
+--- Page 13 ---
+Kovácsová, N., Cabrall, C. D. D., Antonisse, S. J., de Haan, T., van Namen, R., Nooren, J. L., ... de Winter, J. C. F. (2018). Cyclists’ eye movements and crossing
+judgments at uncontrolled intersections: An eye-tracking study using animated video clips. Accident Analysis and Prevention, 120, 270–280. https://doi.
+org/10.1016/j.aap.2018.08.024.
+Langham, M., & Moberly, N. (2003). Pedestrian conspicuity research: A review. Ergonomics, 46(4), 345–363. https://doi.org/10.1080/0014013021000039574.
+Lappi, O., Rinkkala, P., & Pekkanen, J. (2017). Systematic observation of an expert driver’s gaze strategy—an on-road case study. Frontiers in Psychology, 8,
+620. https://doi.org/10.3389/fpsyg.2017.00620.
+Lee, Y. M. (2016). Cognitive aspects of driving in Malaysia: Perception and judgement PhD thesis. University of Nottingham.
+Lee, Y. M., & Sheppard, E. (2016). The effect of motion and signalling on drivers’ ability to predict intentions of other road users. Accident Analysis and
+Prevention, 95, 202–208. https://doi.org/10.1016/j.aap.2016.07.011.
+Lehsing, C., Benz, T., & Bengler, K. (2016). Insights into interaction - effects of human-human interaction in pedestrian crossing situations using a linked
+simulator environment. IFAC-PapersOnLine, 49(19), 138–143. https://doi.org/10.1016/j.ifacol.2016.10.475.
+Lu, L., Ren, G., Wang, W., Chan, C.-Y., & Wang, J. (2016). A cellular automaton simulation model for pedestrian and vehicle interaction behaviors at
+unsignalized mid-block crosswalks. Accident Analysis and Prevention, 95, 425–437. https://doi.org/10.1016/j.aap.2016.04.014.
+Murphy, B., Levinson, D. M., & Owen, A. (2017). Evaluating the safety in numbers effect for pedestrians at urban intersections. Accident Analysis and
+Prevention, 106, 181–190. https://doi.org/10.1016/j.aap.2017.06.004.
+Naci, H., Chisholm, D., & Baker, T. D. (2009). Distribution of road trafﬁc deaths by road user group: A global comparison. Inj. Prev., 15(1), 55–59. https://doi.
+org/10.1136/ip.2008.018721.
+Neal, A., & Kwantes, P. J. (2009). An evidence accumulation model for conﬂict detection performance in a simulated air trafﬁc control task. Human Factors
+and Ergonomics Society, 51(2), 164–180. https://doi.org/10.1177/0018720809335071.
+Ni, Y., Wang, M., Sun, J., & Li, K. (2016). Evaluation of pedestrian safety at intersections: A theoretical framework based on pedestrian-vehicle interaction
+patterns. Accident Analysis and Prevention, 96, 118–129. https://doi.org/10.1016/j.aap.2016.07.030.
+Pleskac, T. J., & Busemeyer, J. R. (2010). Two-stage dynamic signal detection: A theory of choice, decision time, and conﬁdence. Psychological Review, 117(3),
+864–901. https://doi.org/10.1037/a0019737.
+Ren, Z., Jiang, X., & Wang, W. (2016). Analysis of the inﬂuence of pedestrians’ eye contact on drivers’ comfort boundary during the crossing conﬂict. Procedia
+Engineering, 137, 399–406. https://doi.org/10.1016/j.proeng.2016.01.274.
+Schmidt, S., & Färber, B. (2009). Pedestrians at the kerb – recognising the action intentions of humans. Transportation Research Part F: Trafﬁc Psychology and
+Behaviour, 12(4), 300–310. https://doi.org/10.1016/j.trf.2009.02.003.
+Schmidt, S., Färber, B., Grassi, A. P. (2008). Geht er oder geht er nicht? - Ein FAS zur Vorhersage von Fußgängerabsichten, in: 5. Workshop
+Fahrerassistenzsysteme. Freundeskreis Mess – und Regelungstechnik Karlsruhe e.V., 2–4 April 2008, pp. 176–184.
+Schroeder, B. J., & Rouphail, N. M. (2011). Event-based modeling of driver yielding behavior at unsignalized crosswalks. Journal of Transportation Engineering,
+137(7), 455–465. https://doi.org/10.1061/(ASCE)TE.1943-5436.0000225.
+Tsimhoni, O., Kandt, A. S., Flannagan, M. J., 2008. Driver perception of potential pedestrian conﬂict. The University of Michigan Transportation Research
+Institute, Report No. UMTRI-2008-46.
+Tyrrell, R. A., Wood, J. M., Owens, D. A., Whetsel Borzendowski, S., & Stafford Sewall, A. (2016). The conspicuity of pedestrians at night: A review. Clinical and
+Experimental Optometry, 99(5), 425–434. https://doi.org/10.1111/cxo.12447.
+Underwood, G. (2007). Visual attention and the transition from novice to advanced driver. Ergonomics, 50(8), 1235–1249. https://doi.org/10.1080/
+00140130701318707.
+Underwood, G., Phelps, N., Wright, C., Van Loon, E., & Galpin, A. (2005). Eye ﬁxation scanpaths of younger and older drivers in a hazard perception task.
+Ophthalmic and Physiological Optics, 25(4), 346–356.
+Velichkovsky, B. M., Rothert, A., Kopf, M., Dornhöfer, S. M., & Joos, M. (2002). Towards an express-diagnostics for level of processing and hazard perception.
+Transportation Research Part F: Trafﬁc Psychology and Behaviour, 5(2), 145–156.
+Ventsislavova, P., Gugliotta, A., Peña-Suarez, E., Garcia-Fernandez, P., Eisman, E., Crundall, D., & Castro, C. (2016). What happens when drivers face hazards
+on the road? Accident Analysis and Prevention, 91, 43–54. https://doi.org/10.1016/j.aap.2016.02.013.
+Walker, I. (2005). Signals are informative but slow down responses when drivers meet bicyclists at road junctions. Accident Analysis and Prevention, 37(6),
+1074–1085. https://doi.org/10.1016/j.aap.2005.06.005.
+Walker, I., & Brosnan, M. (2007). Drivers’ gaze ﬁxations during judgements about a bicyclist’s intentions. Transportation Research Part F: Trafﬁc Psychology
+and Behaviour, 10(2), 90–98. https://doi.org/10.1016/j.trf.2006.06.001.
+Wang, T., Wu, J., Zheng, P., & McDonald, M. (2010). Study of pedestrians’ gap acceptance behavior when they jaywalk outside crossing facilities. In 13th
+International IEEE Conference on Intelligent Transportation Systems (pp. 1295–1300). https://doi.org/10.1109/ITSC.2010.5625157.
+Westerhuis, F., & De Waard, D. (2017). Reading cyclist intentions: Can a lead cyclist’s behaviour be predicted? Accident Analysis and Prevention, 105,
+146–155. https://doi.org/10.1016/j.aap.2016.06.026.
+World Health Organization, 2013. Pedestrian safety: a road safety manual for decision-makers and practitioners.
+Zhuang, X., & Wu, C. (2014). Pedestrian gestures increase driver yielding at uncontrolled mid-block road crossings. Accident Analysis and Prevention, 70,
+235–244. https://doi.org/10.1016/j.aap.2013.12.015.
+Zhuang, X., & Wu, C. (2012). The safety margin and perceived safety of pedestrians at unmarked roadway. Transportation Research Part F: Trafﬁc Psychology
+and Behaviour, 15(2), 119–131. https://doi.org/10.1016/j.trf.2011.11.005.
+Zhuang, X., & Wu, C. (2011). Pedestrians’ crossing behaviors and safety at unmarked roadway in China. Accident Analysis and Prevention, 43(6), 1927–1936.
+https://doi.org/10.1016/j.aap.2011.05.005.
+564
+W. Chen et al. / Transportation Research Part F 64 (2019) 552–564

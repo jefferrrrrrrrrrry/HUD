@@ -1,0 +1,2080 @@
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+1
+Deep Learning for Safe Autonomous Driving:
+Current Challenges and Future Directions
+Khan Muhammad
+, Member, IEEE, Amin Ullah
+, Student Member, IEEE,
+Jaime Lloret
+, Senior Member, IEEE, Javier Del Ser
+, Senior Member, IEEE,
+and Victor Hugo C. de Albuquerque
+, Senior Member, IEEE
+Abstract—Advances in information and signal processing
+technologies have a signiﬁcant impact on autonomous driving
+(AD), improving driving safety while minimizing the efforts
+of human drivers with the help of advanced artiﬁcial intelli-
+gence (AI) techniques. Recently, deep learning (DL) approaches
+have solved several real-world problems of complex nature.
+However, their strengths in terms of control processes for AD
+have not been deeply investigated and highlighted yet. This survey
+highlights the power of DL architectures in terms of reliability
+and efﬁcient real-time performance and overviews state-of-the-
+art strategies for safe AD, with their major achievements and
+limitations. Furthermore, it covers major embodiments of DL
+along the AD pipeline including measurement, analysis, and exe-
+cution, with a focus on road, lane, vehicle, pedestrian, drowsiness
+detection, collision avoidance, and trafﬁc sign detection through
+sensing and vision-based DL methods. In addition, we discuss on
+the performance of several reviewed methods by using different
+evaluation metrics, with critics on their pros and cons. Finally,
+this survey highlights the current issues of safe DL-based AD with
+a prospect of recommendations for future research, rounding up
+a reference material for newcomers and researchers willing to
+join this vibrant area of Intelligent Transportation Systems.
+Manuscript received November 8, 2019; revised March 24, 2020 and
+July 21, 2020; accepted October 9, 2020. This work was supported by
+Institute of Information & Communications Technology Planning & Eval-
+uation (IITP) Grant funded by the Korea Government (MSIT) (2019-0-
+00136, Development of AI-Convergence Technologies for Smart City Industry
+Productivity Innovation); The work of Javier Del Ser was supported by the
+Basque Government through the EMAITEK and ELKARTEK Programs, as
+well as by the Department of Education of this institution (Consolidated
+Research Group MATHMODE, IT1294-19); VHCA received support from
+the Brazilian National Council for Research and Development (CNPq, Grant
+#304315/2017-6 and #430274/2018-1). The Associate Editor for this article
+was K. Kant. (Corresponding author: Khan Muhammad.)
+Khan Muhammad is with the Department of Software, Sejong University,
+Seoul 143-747, South Korea (e-mail: khan.muhammad@ieee.org).
+Amin Ullah is with the Intelligent Media Laboratory, Digital Contents
+Research Institute, Sejong University, Seoul 143-747, South Korea (e-mail:
+aminullah@ieee.org).
+Jaime Lloret is with the Instituto de Investigación para la Gestión Integrada
+de Zonas Costeras, Universitat Politècnica de València, 46370 Valencia, Spain,
+and also with the School of Computing and Digital Technologies, Staffordshire
+University, Stoke-on-Trent ST4 2DE, U.K. (e-mail: jlloret@dcom.upv.es).
+Javier Del Ser is with TECNALIA, Basque Research and Technology
+Alliance (BRTA), 48160 Derio, Spain, and also with the Department of
+Communications Engineering, University of the Basque Country (UPV/EHU),
+48013 Bilbao, Spain (e-mail: javier.delser@tecnalia.com).
+Victor Hugo C. de Albuquerque is with the LAPISCO, Federal Institute
+of Education, Science and Technology of Ceará, Fortaleza/CE 60040-215,
+Brazil, and also with the ARMTEC Tecnologia em Robótica, Fortaleza/CE
+60811-341, Brazil (e-mail: victor.albuquerque@ieee.org).
+Digital Object Identiﬁer 10.1109/TITS.2020.3032227
+Index Terms—Autonomous driving (AD), artiﬁcial intelligence,
+deep learning (DL), decision making, vehicular safety, vehicular
+technology, intelligent sensors.
+I. INTRODUCTION
+R
+ECENTLY, signiﬁcant improvements have been reported
+in the development of vehicular sensors for performing
+different simple and complex tasks including object detec-
+tion [1], localization [2], tracking [3], and activity recogni-
+tion [4] for numerous applications. Such advancements have
+improved the sensing and computing processes of autonomous
+driving (AD) [5]. Despite this, AD demands further attention
+of industry and academia due to its sensitive nature and key
+role in reducing the number of accidents and saving human
+lives. For instance, only in USA 6 million car accidents
+happen on average every year, out of which around 3 million
+people get injured and around 2 million experience permanent
+injuries [6]. Besides injuries, more than 90 people die in
+car accidents every day. The main reasons of these accidents
+include alcoholic (40%), speeding (30%), and reckless driving
+(33%). Similarly, distracted driving also results in huge num-
+ber of accidents [7]. According to a report, more than 9 people
+are killed each day due to distracted driving in USA [8].
+Similarly, more than 1060 people are injured in crashes due to
+driver distraction. These crashes can be dramatically reduced
+by using driverless vehicle technology as supporting tools
+to drivers or in full automation. Furthermore, the disabled
+community can be greatly beneﬁtted from this technology [9].
+Due to the wide range of beneﬁts the governments and
+companies worldwide are taking interest in AD. For instance,
+top twenty-ﬁve countries are evaluated in [10] for AD readi-
+ness and given scores in terms of policy and legislation,
+technology and innovation, and infrastructure. As depicted
+in Figure 1, Singapore is leading in the policy and legislation,
+Israel in technology and innovation, and Netherlands in the
+infrastructure for AD. The countries like UAE with good
+infrastructures are limited to advanced technologies to operate
+AD in their roads.
+Literature shows that autonomous vehicles have ﬁve dif-
+ferent levels of automation as deﬁned by SAE International
+standard with a range 0∼5 [11]. This level-based roadmap
+is visualized in Figure 2. Level 0 vehicles are those which
+are under the full control of drivers [12]. Level 1 allows
+performing minor tasks of acceleration or steering by car and
+This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+2
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+Fig. 1.
+The successes achieved by top twenty-ﬁve countries so far in race
+of AD in terms of policy and legislation, technology and innovation, and
+infrastructure.
+rest of the control is with human driver e.g., adaptive cruise
+control [13]. Level 2 car can take some safety actions such
+as emergency breaking but still driver needs to be alert while
+driving. Tesla’s autopilot or Nissan’s ProPilot can be regarded
+as level 2 because they can keep the car in the desired lane.
+At level 3, the car can automatically drive in certain condi-
+tions by monitoring the surrounding environment, but human
+driver needs to be still on command for taking control if the
+autonomous system fails [14]. Audi claimed that its A8 models
+featuring Trafﬁc Jam Pilot has Level 3. In case of Level 4,
+the car can safely take control and proceed accordingly if its
+request for human intervention is not responded [15]. Level
+4 cars are not recommended to be driven in uncertain weather
+conditions or unmapped areas. Lastly, level 5 vehicles cover
+full automation in all conditions and modes [16].
+To date, several efforts and initiatives have been triggered
+by major industries to mature the AD technology. For instance,
+the famous DARPA Grand Challenge of 2004 [17] for covering
+a 150 miles road using a driverless car, which was failed by
+all the 15 vehicles participating in the challenge. A further
+improvement was made thereafter, and 5 out of 23 participants
+passed the challenge in the 2005 edition of the contest.
+Another event “DARPA Urban Challenge” [18] was later
+initiated in 2007, in which six participants completed the
+mission. Other noteworthy events include “Intelligent Vehicle
+Future Challenge” [19] (2009∼2013), “Hyundai Autonomous
+Challenge” [20] 2010, and “Public Road Urban Driverless-
+Car Test” [21], 2013. Most recently, in 2015∼2016, Google
+self-driving car and Tesla’s autopilot system [22] were intro-
+duced as commercial examples. Apart from these milestones,
+different famous companies are planning to announce their
+autonomous vehicles of different levels in the near future. For
+instance, Ford has plan to deliver a “Level 4” driverless vehicle
+in 2021. Similarly, BMW is targeting “Level 4” or “Level 5”
+autonomous car in 2021 [23].
+Despite the aforementioned achievements, several issues
+still restrict the usefulness of AD technology for numerous
+environments such as the maturity of Artiﬁcial Intelli-
+gence (AI) methods – particularly, those relying on Deep
+Learning (DL) – for visual sensors, dependency of perfor-
+mance of individual parts of AD system, and social acceptance
+at large scale [24]. Among these, the ﬁrst two are important
+aspects and key enablers for AD system, which can signif-
+icantly increase its safety and consequently result in huge
+public appreciation. Indeed, safety is a key requirement of
+AD, assisting drivers and minimizing the risks of potential
+accidents. This requirement can be mainly ensured by seven
+key tasks including road detection [25], lane detection [26],
+vehicle detection [27], pedestrian detection [28], drowsiness
+detection [29], collision avoidance [30], and trafﬁc sign
+detection [31] for which numerous hand-crafted and learned
+representation based methods are presented. The current lit-
+erature contains surveys of traditional methods on different
+aspects of AD such as planning and controls [32], trafﬁc light
+recognition [33], and vehicle localization [34]. Many others
+have emphasized on the paramount role of DL in the ITS
+domain [35]–[38]. However, a detailed study on DL methods
+for safe AD is missing, which is considered as a backbone for
+AD and its safety.
+This survey aims to cover this literature gap by analyzing
+the most recent DL works related to the aforementioned seven
+tasks for safe AD. We encapsulate the seven tasks into a
+three-step pipeline of measurement, analysis, and execution,
+and enlist their major achievements and key limitations. Our
+work also highlights the current issues of safe AD with
+several research recommendations focused on enhancing the
+applicability of DL methods in realistic vehicular environment,
+with safety at their primary requirement. We complement our
+critical analysis of the existing literature with an excerpt of
+empirical results of different DL model architectures for sev-
+eral safety-related AD tasks, which shed light on the enormous
+potential of these models. We end up with a discussion on
+current research areas in the DL realm that remain insufﬁ-
+ciently studied to date, despite their straightforward connection
+to safety issues in this particular application ﬁeld.
+The remainder of this article is structured as follows:
+Section 2 brieﬂy describes the major control processes of
+AD. Section 3 provides details of the recent DL approaches,
+their strengths and limitations for AD systems. In Section 4,
+the major challenges of safe AD are discussed, and future
+directions are suggested in Section 5. In Section 6, we con-
+clude the survey with some concluding remarks and an
+outlook.
+II. MAJOR EMBODIMENTS OF AD AND
+RELATED STUDIES
+This section aims to brieﬂy describe the three-step pipeline
+of measurement, analysis, and execution (MAE) and presents
+several related studies associated with AD. “Measurement”
+refers to data collection from the surrounding environment
+via sensors, cameras, or radars and processing associated to
+detecting road, lane, vehicle, pedestrian etc., [39]. To this end,
+all the methods of this survey associated to these tasks will
+be covered under “M”. “Analysis” phase uses more advanced
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+3
+Fig. 2.
+Roadmap of the AD technologies from level 0 to level 5.
+algorithms for ﬁltering, tracking, and other concrete steps for
+fulﬁlling a certain set of optimization requirements for AD.
+As a result of analysis, the “execution” part uses certain actu-
+ators to trigger an alarm or revoke control of vehicle. In this
+phase, automatic braking can be enabled to save the vehicle to
+avoid collision, thus ensuring safety on roads for AD systems.
+Studies show that MAE is the necessary pipeline to control
+the automatic behavior of such vehicles and thus it is covered
+in this survey. Other aspects of such systems are already
+covered in detail by different surveys mentioned in Table I.
+For instance, state-of-the-art associated with vision based
+recognition of trafﬁc light for AD, is covered in [33]. Similarly,
+the planning and control aspect of AD for urban settings is
+investigated in [16]. To the best of our knowledge, an in-depth
+study of DL approaches for safe AD is missing in current
+literature and is thus presented in this paper with its overview
+in Figure 3.
+III. CRITICAL LITERATURE ANALYSIS OF AD TASKS
+In this section, the state-of-the-art DL approaches mentioned
+in Table II are brieﬂy described, considering the target seven
+tasks. Despite the fact that there are many studies about
+different parts of the AD system such as sensing, image
+processing, and communication etc., which work collectively
+for enabling it to drive itself, certain parts have achieved more
+attraction due to their huge impact on the overall performance
+of such vehicles. The most important parts are the seven tasks
+associated to MAE, in context of which the concerned studies
+are explored as follows:
+A. Road Detection
+This task aims at detecting round boundaries and areas
+where autonomous vehicle can possibly drive. In this context
+four representative works are selected. The ﬁrst frame-
+work [52] applies CNNs to estimate longer distance road
+course for augmented reality applications. The second one
+investigates cascaded end-to-end CNN (CasNet) for accurate
+road detection and localization of centerline in the presence of
+complex backgrounds and signiﬁcant occlusions of trees and
+cars as given in [53]. The other works present a Siamese fully
+convolutional network based framework for accurate detection
+of road boundaries using RGB images, semantic contours, and
+location priors [54] and a completely end-to-end model called
+as RBNet [55] for road presence as well as boundary detection
+in a single network.
+B. Lane Detection
+Lane detection has a key role in ensuring the safety of
+autonomous vehicles via lane keeping and lane departure
+control systems, enabling them to be on their speciﬁed lane,
+minimizing the chances of collision. In this context, four
+DL recent approaches are selected as examples. In the ﬁrst
+approach, [56] utilized multi-sensor data and passed it through
+a deep neural network for lane detection in 3D space. The sec-
+ond approach investigates waveforms and CNNs for detecting
+lane markings for safe AD as discussed in detail in [57]. In the
+third work, an energy-friendly lane detection and classiﬁcation
+strategy is proposed using stereo vision and CNN for lateral
+positioning of ego-car and issuing forward collision warning
+for safe AD [58]. In the next work [59], a recurrent neural
+network is utilized for road lane detection. Thus, it ensures
+both lane detection as well as collision avoidance.
+C. Vehicle Detection
+In order to avoid possible accident, the autonomous vehi-
+cle needs to detect and track other vehicles on the road.
+For this task, it needs to estimate different aspects of sur-
+rounding vehicles such as its shape, relative speed, size,
+and 3-dimensional locations. In this context, some of the
+state-of-the-art techniques are described as an example from
+recent literature. The ﬁrst one is an automatic approach for
+vehicle detection and counting using convolutional regression
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+4
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+TABLE I
+DETAILS OF EXISTING SURVEYS RELATED TO AD AND OUR PROPOSAL. THE SURVEYS COVERED IN THIS TABLE ARE SELECTED BASED ON RELEVANCY
+TO THE MAIN THEME “MAE”, PUBLICATION YEAR, REPUTATION OF THE PUBLISHER, AND ENDORSEMENT OF ASSOCIATED RESEARCH
+COMMUNITY IN TERMS OF CITATIONS
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+5
+TABLE I
+(Continued.) DETAILS OF EXISTING SURVEYS RELATED TO AD AND OUR PROPOSAL. THE SURVEYS COVERED IN THIS TABLE ARE SELECTED BASED
+ON RELEVANCY TO THE MAIN THEME “MAE”, PUBLICATION YEAR, REPUTATION OF THE PUBLISHER, AND ENDORSEMENT OF ASSOCIATED
+RESEARCH COMMUNITY IN TERMS OF CITATIONS
+neural network for trafﬁc management and safe AD with
+detailed discussion in [60]. Chen et al. [61] presented a
+framework for 3D object detection by utilization of deep CNN
+model for object, location, and contextual boxes prediction.
+Similarly, Rajaram et al. [2] presented a mathematical strategy
+for object localization. They utilized Faster-RCNN along with
+ReﬁneNet and region of interest pooling for vehicle detec-
+tion and localization. Another work is a vehicle detection
+framework using multi-task deep CNN and voting strategy of
+region-of-interest [62]. Both enable the autonomous vehicle to
+detect other on-road car vehicles to initiate safety measures,
+thus increasing the safety level of AD.
+D. Pedestrian Detection
+Vehicle-to-pedestrian accident is a common scenario and
+mostly happen on roads. For autonomous vehicle, it is
+necessary to differentiate other objects from humans due to
+their higher importance. Thus, visual cameras are installed
+on autonomous vehicle for detection, tracking, and possible
+recognition of pedestrians for avoiding collision and different
+other purposes. For instance, Ouyang et al. [63] presented a
+joint framework of deep features extraction, handling deforma-
+tion and occlusion, and classiﬁcation for pedestrian detection
+that helps increasing the safety of AD. Another approach
+presented by Cai et al. [64] formulated complexity aware cas-
+cade training for pedestrian detection. They integrated cascade
+with the CNN to enable accurate pedestrian detection at a
+faster speed. Similarly, Wang et al. [65] proposed a pedestrian
+detection approach by investigating body part semantics and
+contextual information with complex handling of occlusions,
+achieving highly accurate localization results, which conse-
+quently increase the safety of AD.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+6
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+Fig. 3.
+Distribution of DL approaches for major embodiments (measurement, analysis, execution-MAE) of the AD systems.
+E. Drowsiness Detection
+This task is related to drivers and especially for level 1 to
+level 3 autonomous vehicles as level 4 and level 5 vehicles
+are fully driverless. It is one of the key contributors for safety
+applications as it can automatically take necessary action
+once driver seems distracted or any drowsy state is detected.
+To do so, several approaches exist in literature. For instance,
+Lyu et al. [66] proposed a multi-granularity based deep frame-
+work by intelligent usage of CNN and LSTM drowsiness
+detection in videos. Vijayan and Sherly [67] presented three
+CNN architectures including ResNet50, VGG16, and Incep-
+tionV3 for drowsiness detection in ﬁrst person driver videos.
+These models are trained together by fusing them using a
+feature fused architecture layer. A similar approach is fol-
+lowed by Park et al. [68], where they integrated the results
+achieved by AlexNet, VGG-FaceNet, and FlowNet by fully
+connected layers for drowsiness detection. In another similar
+work, Guo and Markoni [69] investigated CNN and LSTM for
+drowsiness detection.
+F. Collision Avoidance
+It is obvious from the previous tasks that the important
+objects associated with autonomous vehicles can be tracked
+and detected by them, however, they are not enough to take
+a decision. The important decision and action are taken by
+collision avoidance system. Thus, it is a higher-level task on
+which the safety of AD is heavily dependent and numer-
+ous studies are conducted in this direction. For example,
+Song et al. [58] can detect both lane and avoid collision by
+taking necessary action. Similarly, Nguyen et al. [70] proposed
+a system, which detects the obstacles, recognize them using
+autoencoder, TCNN, and R-TCNN based DL architecture, and
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+7
+TABLE II
+SUMMARY OF DL STRATEGIES IN TERMS OF MAE FOR THE TARGET SEVEN MISSIONS FOR SAFE AD SYSTEMS
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+8
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+TABLE II
+(Continued.) SUMMARY OF DL STRATEGIES IN TERMS OF MAE FOR THE TARGET SEVEN MISSIONS FOR SAFE AD SYSTEMS
+ﬁnally track them to avoid the chances of collision during AD.
+In another approach, Long et al. [71] proposed a novel end-
+to-end collision avoidance system using deep neural network
+from noisy sensory measurements.
+G. Trafﬁc Sign Detection
+This task is mainly related to the control of the vehicles from
+collisions at zebra crossing and road junctions, to reduce speed
+at speed jumps, notify the driver before turns, and suggest
+about U-turn, etc. Its function is simple, yet very important
+and challenging to make decision as discussed in several
+studies. For instance, Zhu et al. [72] developed an object
+proposal-based framework for trafﬁc sign detection and recog-
+nition. The searching area for trafﬁc signs is reduced through
+CNN and then the detection and classiﬁcation are performed
+using R-CNN and EdgeBox methods. Li et al. [73] proposed
+trafﬁc light sign recognition model for on-vehicle cameras by
+using prior frame information that keeps the previous frame
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+9
+detection record and aggregates channel features that analyze
+the interframe information. Wang and Zhou [74] recognized
+trafﬁc light signs in dynamic images using a lightweight DL
+model. A dual-channel mechanism is proposed for trafﬁc light
+detection in dark frames and a lightweight CNN model is
+developed to classify them in real-time. For dark channel
+saliency model is developed to extract light from different col-
+ors simultaneously. Jensen et al. [75] applied real-time object
+detector algorithm for trafﬁc light signs detection using various
+YOLO versions and achieved state-of-the-art results over chal-
+lenging datasets. Ouyang et al. [76] used heuristic candidate
+region selection module for trafﬁc light sign identiﬁcation and
+developed a lightweight trafﬁc light detection (TDL) model for
+its classiﬁcation. The model is evaluated on both collected and
+benchmark datasets. Also, the model is tested through ofﬂine
+simulation and an on-road test. The model is integrated with
+Nvidia Jetson for on-road testing in normal trafﬁc over a bus
+and a car. Yuan et al. [77] developed VSSA-NET architecture
+for trafﬁc sign detection and treated it as a regression and
+sequence classiﬁcation task. The network architecture is based
+on vertical spatial sequence attention and multi resolution
+feature learning module. Also, the contextual information are
+extracted through regression and classiﬁcation with attention
+procedure. In a similar method, Tabernek and Skoˇcaj [42]
+used mask R-CNN object detection algorithm with different
+adaptation of the network to achieve the ﬁnal detection.
+For better performance, appearance and geometric distortion
+distributions are applied as data augmentation to increase the
+data. All these tasks contribute to the overall safety of AD and
+thus researchers are increasingly investigating these areas.
+IV. PERFORMANCE EVALUATION OF THE SAFE AD
+This section has been organized for the performance com-
+parison of different state-of-the-art DL models when applied to
+tasks closely related to AD safety. Each task is evaluated using
+multiple evaluation methods including F-measure, precision,
+recall, overall accuracy, average precision (AP), area under
+the curve (AUC), and runtime. However, we have discussed
+only those evaluation results which are achieved via a com-
+mon assessment criterion. For instance, majority of the road
+detection techniques are assessed using the F-measure score.
+F-measure is also known as F1-score which considers both
+precision and recall, calculating a harmonic mean of both
+values and captures the trade-off between them. It can be
+calculated using the formula given in Eq. 1.
+F1 = 2 × Precision × Recall
+(Precision + Recall)
+(1)
+Similarly, the mainstream techniques for lane detection
+utilized AP and AUC for its evaluation. AP (also known as
+mean average precision (mAP)) is a performance evaluation
+metric for object detectors, which computes the AP value
+from precision (Eq. 2) for different recall (Eq. 3) levels. More
+generally, AP is used to ﬁnd area under the precision-recall
+curve in the range 0 to 1.
+Precision =
+True positive
+(True positive + False positive)
+(2)
+Fig. 4.
+(a) The comparison of the road detection techniques including
+DNN [79], s-FCN-loc [54], Up Conv [80], and RBNet [55] (b) comparison
+of the lane detection techniques including SCNN [81] and DMS [56] using
+AP score and RNN [82], CNN [82], and SVM [82] using AUC values.
+Recall =
+True positive
+(True positive + False negative)
+(3)
+Likewise, AUC is used for the analysis of AI models
+where true positives are plotted against false positive rate
+in order to know that at which threshold the trained model
+performs well. Figure 4 (a) visualizes the state-of-the-art
+results achieved by different DL models on KITTI’s [78]
+benchmark dataset. This dataset is one of the challenging
+datasets for AD tasks such as road detection, lane detection,
+pedestrian detection on road, and vehicle detection. It is
+divided into three sets, which are urban marked (easy), urban
+multiple marked lanes (moderate), and urban unmarked (hard).
+Further, it has 289 training images and 290 testing images.
+For instance, RBNet [55] has achieved the current highest
+F-measure score. It resorts to ﬁve convolutional layers, DCNN
+for feature extraction, followed by post-processing for road
+boundary detection. The model is trained for 100k epochs
+with a learning rate equal to 0.01, amounting to 0.18 seconds
+per processed frame. The DNN [79], s-FCN-loc [54], and
+Up Conv [80] have achieved 93.43%, 93.26%, and 93.83%
+F-measure score, respectively. Furthermore, the DNN [79] and
+s-FCN-loc [54] utilized very deep CNN architectures, followed
+by complex post-processing. As a result, they require 2 and
+0.4 seconds of processing time per frame, respectively. The
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+10
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+Fig. 5.
+Performance comparison of different pedestrian detection meth-
+ods including CompACT-MSCNN [84], F-PointNet [85], MM-MRFC [86],
+3DOP [87], Mono3D [61], and Faster-RCNN [88] with respect to mAP for
+easy, moderate, and hard scenarios.
+Up Conv [80] takes only 0.083 seconds per processed frame,
+but its accuracy is lower than RBNet [55].
+Figure 4 (b) shows the compassion of different state-of-
+the-art methods for lane detection using AP and AUC scores.
+They used the Caltech lanes dataset [83] for experiments
+which contains 1225 challenging images taken in the busy
+streets of Pasadena. The SCNN [81] and DMS [56] utilized
+AP score for the evaluation of their techniques and achieved
+59.5 and 84.7 scores, respectively. The SCNN [81] utilized
+the VGG16 CNN architecture as its backend, with three
+additional fully connected layers added for road detection.
+They have trained this extended model with a learning rate
+of 0.01 and a weight decay of 0.0001 using “poly” learning
+rate policy. Their model is not efﬁcient for real time processing
+because it requires 0.115 seconds of processing time due to
+the VGG16 backbone. Similarly, Li et al. [82] utilized two
+convolutional layers and fully connected layers architecture
+followed by multitask object detection, where the ﬁrst task
+detects object and the second estimates the geometry output.
+They experimented RNN, CNN, and SVM after the features
+extracted from fully connected layers for multitask learning,
+where the RNN performed well and achieved the highest
+AUC value of 0.99. We represented 0.99 as 99 in the graph
+because the AUC values are between 0 and 1. However, due to
+the graph representation, the scores are normalized for better
+visualization.
+The pedestrian detection techniques given in Figure 5 have
+been evaluated using the mAP scores on KITTI’s [78] bench-
+mark dataset. In state-of-the-art, three scenarios have been
+chosen for pedestrian detection evaluation including easy,
+moderate, and hard as deﬁned by the benchmark datasets.
+In the easy scenarios, the minimum bounding box height for
+the object is 40 pixels and the objects are fully visible without
+any occlusion. In the moderate level data, the minimum
+bounding box height is 25 pixels and the objects are partly
+occluded. In the hard scenarios, the objects are very much
+occluded and difﬁcult to see, where the minimum height of the
+bounding box for the object is 25 pixels. For easy, moderate,
+and hard data, the F-PointNet [85] has achieved maximum
+mAP scores of 87.81, 77.25, and 74.46, respectively. They
+utilized 2D and 3D CNN architectures and their fusion for
+pedestrian detection. The MM-MRFC [86] utilized color,
+motion, and depth features and achieved the second highest
+Fig. 6.
+Comparison of different DL approaches for vehicle detection in
+easy, moderate, and hard scenarios i.e., 3DOP [87], SubCNN [89], SDP [90],
+ReﬁneNet [2], and Faster R-CNN [88].
+accuracy with per frame processing time of 0.05 seconds. The
+overall performance of the state-of-the-art in easy scenarios
+is around 85%, for moderate it is under 70% and 80%, and
+for the hard case it is less than 65%. Therefore, this is a
+very challenging issue for safe and trustworthy AD, where
+the accuracy of pedestrian detection should reach the level of
+human perception for easy, moderate, and hard levels.
+Similar to pedestrian detection, the evaluation of vehicle
+detection is also performed in easy, moderate, and hard sce-
+narios of KITTI’s [78] benchmark dataset as given in Figure 6.
+The evaluation of these methods for vehicle detection has
+been performed using the AUC. The mainstream methods
+have performed well in the easy cases, reaching a maximum
+of 93.04 by 3DOP [87], for moderate and hard cases 88.64 and
+79.27 maximum AUC values achieved by SubCNN [89]. The
+3DOP [87] encodes object size priors, ground plane as well
+as several depth informed features that reason about free
+space, point cloud densities and distance to the ground. They
+utilized structured SVM, which takes input-output pairs and
+learns the parameters by their proposed optimization function.
+SubCNN [89] exploited two very deep CNN architectures
+based Fast R-CNN; 1) region proposal network and 2) object
+detection network. The processing time is not discussed in
+the article, but it is greatly agreed that multiple CNNs based
+methods are not well suited for real-time processing due to
+huge computational complexity, thus of limited importance
+to AD.
+Overall accuracy=
+Number of correct predictions
+Total number of predictions made
+(4)
+Drowsiness detection is assessed using overall accuracy
+matric and the results of well-known DL methods are com-
+pared in Figure 7. The overall accuracy tells us “out of
+all test samples, what proportion were mapped correctly” as
+given in Eq. 4. The overall accuracy is usually expressed
+as a percent, with 100% accuracy being a perfect model.
+Drowsiness detection is very challenging task even for human
+to detect it is very difﬁcult and the average accuracy of
+human in day and night scenarios are only 80% [68]. The
+FFA reached the maximum accuracy of 75.57% which is the
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+11
+Fig. 7. Comparison of the state-of-the-art DL models for drowsiness detection
+i.e., AlexNet [91], VGG-FaceNet [92], LRCN [93], FlowImageNet [93],
+DDD-FFA [68], and FFA [67].
+highest so far achieved in drowsiness detection. Furthermore,
+the AlexNet [91], VGG-FaceNet [92], LRCN [93], FlowIm-
+ageNet [93], and DDD-FFA [68] achieved 65.85%, 67.85%,
+61.5%, 62.99%, and 70.81%, respectively. The AlexNet [91]
+and VGG-FaceNet [92] are very deep CNN architectures,
+containing 60 and 138 million parameters, respectively which
+is not efﬁcient for real time task like AD. The FlowIma-
+geNet [93] is originally trained for action recognition but it
+is ﬁne-tuned for drowsy states such as face and head gestures
+from the input image sequence. It has ﬁve convolutional and
+two fully connected layers and the ﬁnal layer is changed in ﬁne
+tuning process from 101 to 4 classes. It is fast but not effec-
+tive enough for trustable AD. DDD-FFA [68] and FFA [67]
+features from the FC layers of three CNN models are ensem-
+bled for drowsiness detection. This strategy has increased
+the overall accuracy; however, the processing time has also
+increased up to three times. Drowsiness is very dangerous in
+driving and is a frequent reason for accidents. Therefore, its
+accuracy should be considered to improve in the future work
+for safe AD, jointly with other aspects in predictive modeling
+that are often overlooked, such as the quantiﬁcation of the
+model’s output conﬁdence, the explainability of the knowledge
+captured by the model or the accountability of predictions.
+Since, safe AD decisions may put human lives at risk, therefore
+the need for explaining what a model observes in its input for
+producing its output becomes a critical factor for the sake of
+its viability with regulatory constraints.
+The mainstream techniques for trafﬁc sign detection are
+evaluated using precision, recall, and intersection over union
+(IOU). Precision and recall scores achieved on Swedish
+trafﬁc-sign dataset (STSD) [94] using different models are
+shown in Figure 8. The STSD is very challenging dataset
+that contains 19236 images of 20 trafﬁc sign categories.
+The R-CNN [72], FCN [72], Faster R-CNN [42], Mask
+R-CNN [42], MR Features [77], and MR Features +
+VSSA [77] achieved precision score of 91.2%, 97.7%, 95.4%,
+97.5%, 98.83%, and 99.18%, respectively, and achieved recall
+score of 87.2%, 92.9%, 94.6%, 96.7%, 93.96%, and 94.42%,
+respectively. As this task is more about detection rather
+than classiﬁcation or recognition, therefore, the researchers
+utilized IOU. IOU evaluates the results by comparing the
+area of the detected bounding box and the area of ground
+truth to be detected. The high intersection rate means good
+Fig. 8. Precision and recall values of mainstream trafﬁc sign detection models
+achieved on STSD dataset [94] including R-CNN [72], FCN [72], Faster
+R-CNN [42], Mask R-CNN [42], MR Features [77], and MR Features +
+VSSA [77].
+Fig. 9.
+Performance of different state-of-the-art trafﬁc light sign detec-
+tion models on VIVA [73] dataset, including Yolo2 [95], Yolo2-tiny [95],
+Yolo3 [96], Yolo3-tiny [96], SSD [97], Faster RNN [88], and Detector +
+RTTLD [76].
+performance of the detection model and vice versa. The
+performance of state-of-the-art trafﬁc sign detection models
+is given in Figure 9. These results are achieved on a very
+challenging dataset known as VIVA [73], which is captured in
+extremely complex scenes and contains almost all of the trafﬁc
+light signals including green, red, and their related right and
+left turns with short- and long-distance images in different
+day/night conditions and illuminations. Trafﬁc sign detection
+is one of the prompt applications of the AD, where both the
+effectiveness of the method and its processing time are very
+important for decision making to control vehicles. Therefore,
+we investigated the results of faster yet effective methods for
+trafﬁc sign detection. The very famous Yolo and its variants
+achieved 25%, 21%, 18%, and 16% of IOU for Yolo2 [95],
+Yolo2-tiny [95], Yolo3 [96], and Yolo3-tiny [96], respectively.
+The SSD [97] and Faster RNN [88] achieved 10% and 12%
+IOU and the recent Rttld detector [76] achieved the highest
+IOU of 44% on VIVA trafﬁc light detection dataset [73]. From
+the results, we can see that several famous detectors have less
+accuracy on the given challenging dataset, needing serious
+attention from researchers. Therefore, its accuracy should be
+considered to improve in future works for safe AD. Further-
+more, this task is related to the open environment, so the
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+12
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+conditions are changing according to different places and
+weather conditions, therefore model evaluation is an important
+future work to be considered for trafﬁc sign detection.
+The competence and performance of the aforementioned
+techniques in the capacity of seven missions, targeting safe
+AD reveal many challenges. In our investigated techniques,
+none of them is capable to encounter measurement, analysis,
+and execution together. Even though these methods show
+promising results for their targeted mission, they are computa-
+tionally very expensive. Furthermore, the mainstream methods
+are functional with high-specs GPUs and cloud servers, which
+is not a realistic setting for real application environments as
+it neglects important aspects such as energy consumption,
+or prediction latency. Besides the computational complexity,
+there exist several other open challenges that are discussed in
+the next section.
+V. CHALLENGES IN SAFE AD
+Despite signiﬁcant investment of both academia and indus-
+try in AD technology, certain aspects of these systems are
+still facing difﬁculties due to numerous challenges discussed
+as follows:
+a) Complexity of AD Systems: AD systems consist of a
+series of decision-making problems where the solution
+of one problem is the input to another one. Although,
+signiﬁcant improvement can be noted in certain parts,
+but overall there is dependency of individual parts on the
+performance of overall AD system [98]. For instance,
+Furda and Vlacic [99] presented a multiple criteria deci-
+sion making for the selection of most suitable driving
+move where the decision making is divided into suc-
+cessive stages. The ﬁrst stage in their proposal is safety
+critical. However, there are multiple decisions need to be
+taken similar to human thinking. Therefore, an efﬁcient
+motion planner of AD can be compatible with only an
+energy-intensive feedback controller. On the other hand,
+simpler controllers may be less robust [100], needing
+less energy but will need motion-planning approach of
+signiﬁcant detail. Thus, intelligent frameworks need to be
+developed to balance such conﬂicting metrics and come
+up with an optimal solution on the ﬂy.
+b) Dynamicity of Road Environment: It is agreeable that
+current cities are becoming more dynamic due to signif-
+icant digitization on roads with colored advertisements
+and illumination. Researchers have presented multiple
+sensors-based solutions including radar [101], vision [2],
+lasers [102], and different other modality-based solu-
+tions [103], however, in dynamicity of road scenarios
+the level of accuracy is still very low. There is also
+greater tendency of humans for keeping personal luxury
+vehicles, increasing the trafﬁc on road. These practices
+make the environment of autonomous vehicles further
+complex, thus increase its challenges by affecting the
+detection, tracking, and recognition accuracy of different
+tasks associated with AD.
+c) Big Data and Real-Time Processing: To keep the
+autonomous vehicle well aware of its surrounding
+environment, a variety of sensing devices including sen-
+sors [104], cameras [2], LIDAR [105] etc., are attached
+to it, capturing data continuously, resulting in big data.
+In addition, high quality data [106]–[108] (e.g., videos of
+higher resolution) are collected, considering the critical
+nature of AD. Thus, processing such huge amount of data
+in real-time is a big challenge, considering the accuracy,
+power consumption, and cost [109].
+d) Intelligent Data Prioritization: As discussed, a signif-
+icant amount of data of different nature is captured,
+resulting in big data. Literature shows that it is infea-
+sible for an autonomous vehicle to process all captured
+data and thus data prioritization mechanism [110], [111]
+is needed to ﬁlter only important contents for further
+processing and discard unnecessary data. This prioritiza-
+tion mechanism should be intelligent enough to prioritize
+a variety of data captured in different environmental
+scenarios [112].
+e) Robustness and Adaptability: Studies [56]–[65] suggest
+that it is comparatively easy to capture and process data
+for autonomous vehicle in certain environment. Most of
+the mainstream AI techniques for AD are trained on data
+collected in certain environment and not reliable in cross
+weather conditions. This issue is recently encountered by
+Google team and they presented an idea of all-weather
+autonomously driven vehicle. However, it becomes
+inherently challenging when the environment is uncertain
+with captured data affected by snow, rain [113], and
+fog [114]. Thus, the system for different tasks associated
+with MAE should be robust enough to adapt itself with
+the surrounding environment.
+f) Integration/Fusion of Sensory Data for Dynamic Deci-
+sion Making: In the real-world applications, it is very
+hard to achieve ideal performance and target accuracy
+using a single sensor. So, there are a wide use of
+the decision-making algorithms for processing fusion
+data acquired from multisensory [115], [116]. Two
+major types of sensors are used in autonomous vehicles
+i.e., environment perception and localization. The envi-
+ronment perception is used to detect surrounding objects
+of the vehicle while localization tracks the location
+of the vehicle. The fusion algorithms are categorized
+into two groups: 1) machine learning methods (deep
+neural network) and 2) multi sensor information fusion
+for measuring the state i.e., Kalman ﬁlter (KF). In the
+literature many sensor fusion based models are pro-
+posed using various sensors and fusion algorithms. These
+frameworks mainly focused on improving the accuracy
+but the implementation feasibility of these methods is less
+explored. The main challenges in the AD are perception,
+real-time computing and communication, and learning
+based controls methods. There is a huge space for efﬁ-
+cient, lightweight, and robust fusion based pipeline for
+autonomous vehicle [117].
+g) Fairness, Accountability, and Transparency in DL
+for AD: Recent studies have stressed on the utmost
+necessity of explaining decision provided by AI models
+in scenarios where such decisions ultimately impact
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+13
+Fig. 10.
+Major challenges and possible recommendations for intelligent and safe AD.
+on humans’ lives (e.g., health, law, etc.) [118], [119].
+AD harnessing DL approaches is not an exception to
+this requirement for model explainability, particularly
+due to the black-box nature of this kind of AI models.
+By virtue of eXplainable AI (XAI) techniques [120],
+it is possible not only to shed light on the internals and
+knowledge learned by DL models, but also to ease the
+traceability and post-mortem analysis of incorrect deci-
+sions (accountability) for model reﬁnement. Likewise,
+ensuring that DL models [121] for AD are not affected
+by severely imbalanced or scarce training samples (i.e.,
+lack of model bias) guarantees improved generalization
+performance, hence a more reliable contextual awareness
+of the vehicle, and a compliance with eventual regula-
+tory constraints [122]. Interpreting what the model has
+learned and constructing plausible counterfactuals via
+XAI techniques has the potential to delimit the perfor-
+mance boundaries of the model, unveil possible sources
+of bias, and analyze how decisions were made in search
+for possible deﬁciencies in the model. Without advances
+in model explainability, AD functionalities harnessing the
+powerful modeling capability of DL will be far from
+practicality.
+h) Online
+Learning
+Capabilities
+in
+AD:
+One
+of
+the
+major challenges in
+the
+AD
+is
+dealing
+with
+various
+environments
+with
+a
+scalable
+model.
+For
+instance, a model trained for urban environment may
+not be applicable in rural areas, since the trafﬁc
+rules are quite different in both scenarios. Similarly,
+this condition can be applied due to newly con-
+structed areas, weather condition, and climates changes
+etc., [123]. This problem can be tackling with online
+learning strategy (updating model with new data).
+Recently, researchers have applied online learning strate-
+gies in many domains such as surveillance [124],
+where the deep model iteratively ﬁne-tunes itself and
+update the parameters of trained model to adopt the
+changed environment. Similarly, Guaranteed Safe Online
+Learning via Reachability (GSOLR) [125], Stochastic
+Online
+Learning
+[126],
+and
+Online
+Learning
+via
+meta-learning [127] are the recent approaches which can
+be adopted to online learning in AD cars to update
+different deep models using maps, weather conditions,
+and visual changes accordingly.
+i) Robustness Against Adversarial Attacks: Analogously
+to the above, much has been lately said around the
+weakness of DL models against intelligently crafted
+examples that even if visually imperceptible, lead them to
+incorrect decisions (e.g., misclassﬁcation [128]). Adver-
+sarial attacks pose enormous challenges in the vehicular
+domain, as has been exempliﬁed with trafﬁc signs being
+wrongly classiﬁed by vehicular cameras due to physical
+adversarial modiﬁcations in the form of printable stick-
+ers [129]. Although the activity around defense strategies
+against adversarial attacks is vibrant at the time, deﬁnitely
+there is still road ahead in regard to the compliance of
+its effectiveness with design speciﬁcations and admissible
+risk limits.
+j) Variability of Trafﬁc Sign Boards: The object detection
+models are usually trained with ﬁxed size resolution data.
+However, most of the trafﬁc signs appear to be very
+small and when high resolution images are resized to the
+required input size of the model. The large size sign board
+can be easily captured in the resized image, however, this
+leads to the misdetection problem of small size trafﬁc
+sign boards [42]. Furthermore, when the vehicle travels
+with a very high speed i.e., 100 km/h, such high-speed
+camera motion destroys the structure of small size sign
+boards. This is a very challenging task to detect and
+recognize all types of trafﬁc sign boards, which can be
+possibly achieved by using high resolution images as
+input to the model and not the resized images.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+14
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+VI. RECOMMENDATIONS FOR FUTURE RESEARCH
+In the light of challenges raised in Section 5 and literature,
+a list of important areas for further research in safe AD
+is presented with brief details for industry and academia.
+Improvement in these directions can increase the signiﬁcance
+of AD systems and can contribute to their safety and reliability.
+a) Energy-Friendly
+Convolutional
+Neural
+Networks
+(CNNs): A study of several surveys shows that CNNs
+have obtained state-of-the-art achievements in various
+computer
+vision
+tasks
+associated
+to
+AD
+such
+as
+tracking [2], [130], speed control [76], and obstacles
+avoidance [131], [132] etc. However, their high memory
+requirement and computational complexity limit their
+usefulness. Thus, energy-friendly and efﬁcient CNN
+models should be designed for improving the driving
+safety of AD technology.
+b) Reinforcement Learning for AD: Reinforcement learn-
+ing (RL) is an active research focus in various domains
+of AD, such as control [133], [134] and path plan-
+ning [135], [136]. Reinforcement learning techniques
+have at no doubt achieved good performance levels,
+evincing the capability of these techniques to learn
+near-optimal policies to efﬁciently operate different sub-
+systems of the autonomous vehicle. Nevertheless, most
+research contributions reported so far in the literature
+have been conducted on various simulators or restricted
+trial environments due to a manifold of reasons, ranging
+from established regulatory restrictions to the availabil-
+ity of vehicle prototypes, or the earliness of research
+outcomes. As a result, current RL models cannot fully
+cope with real-world environments, which are full of
+uncertainties that hinder the provision of safety guar-
+antees [137]. Even though simulators allow generating
+driving scenarios at a low cost, models are trained off-line
+over virtual environments, but cannot be expected to
+perform that effectively in real conditions, and ultimately
+cannot be deployed directly. Therefore, further research is
+needed towards ensuring good generalization properties
+of RL models when used in simulated and real environ-
+ments. To this end, several directions should be targeted
+in the near future, such as increasingly higher levels
+of realism attained by vehicular simulation software
+(for instance, procedural generation of urban scenarios),
+the latest advances in data augmentation methods (to e.g.,
+imprint varying meteorological conditions on data cap-
+tured on driving tests), or speciﬁc algorithmic proposals
+aimed at improving the generalization of RL models to
+unseen environments and/or tasks (Meta Reinforcement
+Learning [138], with initial ﬁndings in the ITS domain
+appearing very recently [139].
+c) Sequence Learning and Generative Adversarial Net-
+work for AD: Vision sensors deployed on AV capture
+pedestrians performing different activities. The patterns
+underlying these activities cannot be captured from a
+single frame, but they rather require learning over a
+sequence of consecutive frames [124]. This augmented
+information substratum requires efﬁcient techniques for
+sequence learning for pedestrian activity recognition in
+the AV surroundings, considering additional elements
+of complexity such as partial occlusions or different
+camera angles over time. To this end, data augmentation
+techniques capable of imprinting these effects in the
+data from which sequence learning models are built
+constitute a promising path to follow. Similarly, gener-
+ative adversarial networks (GAN) can be investigated to
+generate accurate environments in simulation for training
+self-driving car policies. GANs can learn to re-render a
+scene from a different viewpoint, which could be useful
+for laying new learning environments for Reinforcement
+Learning methods, and ultimately producing more gen-
+eralizable policies for self-driving cars.
+d) Reliable and Efﬁcient Motion Planners and Feedback
+controllers: Motion planner and feedback controller are
+one of the critical parts of AD systems as they have a
+key role in the overall running time of the system [140].
+However, they are working in an inverse way as described
+in Section 4. Thus, further investigation is needed to
+come up with a reliable and efﬁcient motion planner and
+feedback controller to balance the computational burden,
+speed, and safety [141].
+e) Universal Benchmark Datasets: Despite the available
+datasets [142]–[145] for evaluating different individual
+aspects of AD systems (such as KITTI benchmark [78]
+and publicly accessible datasets [146]), there is a need
+to make universal benchmark datasets to measure the
+overall performance of AD prototypes. Such efforts will
+make AD a hot topic for both academia and industries,
+helping in benchmarking and arranging competitions for
+the concerned research community to improve different
+individual aspects as well as overall performance of AD
+systems.
+f) Industrialization and Personalization: Although sig-
+niﬁcant research is in progress for improving almost
+every aspect of AD such as tracking [147]–[149],
+velocity control [150], [151], localization and map-
+ping [34], [152], path planning [153]–[156], and visual
+guidance [98], [43], such systems are yet not globally
+recognized and adoptable due to safety risks and lack
+of large-scale industrialization. Thus, AD models should
+be made mature enough to be universally trusted and
+adoptable at large scales. Further, personalization (such
+as preliminary explorations for cruise control [157] and
+lane departure [158], [159]) can be another interesting
+research direction for users to adjust their preferences in
+terms of safety, speed limit, available features, and cost.
+As an example, companies like Google and NVIDIA are
+building powerful AI-based self-driving cars, investing
+resources towards dedicated high-processing GPU and
+TPU devices for AD that can efﬁciently run DL models
+as the ones addressed in this study.
+g) Edge Computing for Autonomous Vehicles: To guaran-
+tee the safety and robustness of AD, AV are equipped
+with various smart sensors and high-computing embed-
+ded devices. Data acquired from these sensors are
+processed through DL models for accurate decisions.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+15
+In this context, one of the main challenges is to
+properly balance the tradeoff between the cost of
+processing devices and the competence of the compu-
+tational model [160], [161]. In general, manufacturing
+industries prioritize the fabrication of sensors at min-
+imum costs with maximum performance [162]. This
+paves an unprecedented opportunity for Edge Comput-
+ing to contribute to safe AD. Edge Computing for
+DL [163] requires research for online training over the
+Edge because vehicular data dynamically changes over
+time [164]. The traditional training process is often
+performed on devices with high computational resources,
+and then, once trained, they are installed on the edge.
+This strategy is far from effective when adopted for
+tasks associated to AD, due to the need for refreshing
+the knowledge captured by the model. This is challeng-
+ing research direction, requiring effective and optimized
+online learning mechanisms for training DL models over
+the edge [165].
+Speciﬁcally, there is a growing need for mature software
+frameworks capable of federating DL models learned
+locally across different distant contexts, without compro-
+mising protected data. This federated learning scenario
+ﬁts perfectly in safe AD, wherein models can be enriched
+by sharing model information among vehicles rather
+than the captured data themselves. The relative youth
+of this research area deserves further attention from
+the community towards extrapolating the early ﬁndings
+achieved with already existing frameworks to the auto-
+motive domain, placing an emphasis on crucial imple-
+mentation aspects such as latency, reliability/reputation
+of the federated models, and the obsolescence of the
+model [166].
+h) Privacy-Aware Knowledge Sharing: In safety matters,
+human is the last asset to put at risk. Therefore, the com-
+munity should synergistically aim at more accurate
+models. Unfortunately, the huge variability of vehicu-
+lar situations and environments makes it complicated
+to build DL models capable of maintaining their per-
+formance levels across diverse environmental scenarios.
+In this context, a need emerges for feeding models with
+diverse datasets that can represent as many practical
+safety-critical situations as possible. However, technical
+aspects aside and despite ultimately targeting an increase
+of safety, this workaround becomes complex to imple-
+ment in competitive markets with stakeholders reluctant
+to share the data acquired from their portfolio of clients.
+Bearing this in mind, the focus should be drifted onto
+Federated Learning [167], a new distributed computing
+paradigm with DL at their core, by which locally trained
+models deployed at vehicles can share their knowledge
+(embodied in their adjusted parameters delivered to a
+central server), and exploit them locally towards improv-
+ing their performance 175]. Interestingly, this distributed
+computation is accomplished without compromising the
+privacy of the data from where local models were trained.
+We foresee an exciting application scenario of feder-
+ated DL in vehicular perception, allowing manufacturers
+to attain unprecedented levels of vehicular perception
+without major concerns with respect to the privacy and
+conﬁdentiality of their datasets.
+i) Internet of Everything for Increased Safety: In the
+future smart cities [169], different entities associated with
+roads such as vehicles, sign-boards, trafﬁc lights, etc.,
+will be connected with each other for sharing useful
+information [170], [171]. Of course, they need to be
+interoperable and thus, a diverse set of communication
+standards need to be investigated for autonomous vehicles
+so that there is no interoperability issue [172], [173]. This
+will enable autonomous vehicles to get necessary infor-
+mation about trafﬁc jams, real-time best available route
+suggestions, and expected collisions and can increase the
+safety of AD.
+j) Risk Assessment: One of the goals of AD is to reduce
+road fatalities and eliminate human error on roads.
+However, AVs are not completely risk-free due to the
+prevalence of real-world uncertainties. Therefore, risk
+assessment is crucial in order to improve the safety
+of AD. A plentiful strand of literature has focused on
+the various aspects of the AD including path planning,
+motion planning, scene segmentation and understanding,
+DL based solutions, and pedestrian’s receptivity towards
+fully AVs to reduce the risk of AD in real environ-
+ments. For instance, Cunneen et al. [174] studied the
+ethical framings of AD technology to reduce the risk.
+Further, the challenge of the AD relies in how AVs
+perceive the external environment to understand different
+situations that could minimize the overall risk of the
+AD. A survey conducted on the road and lane detection
+by Hillel et al. [175], suggests that path planning for
+AVs involves two strategies: 1) bounding-box detection,
+maximizing the likelihood of detecting an object inside
+the box and 2) semantic segmentation by classifying each
+pixel in the input frames. However, for both the scenarios,
+the performance of the neural networks is dominantly
+successful in AVs that could efﬁciently segment the lanes
+to follow road up to the ﬁnal destination. Moreover, there
+is a high probability of risks when AVs are exposed to
+drive autonomously on a completely new environment.
+To minimize the risk of AD in such environments,
+new large scale datasets have been proposed [176] for
+benchmarking the scene understanding. For example,
+SYNTHIA dataset [177] containing images for scene
+understanding, and [178] algorithm for real time scene
+segmentation in AVs to reduce risks in AD. Further-
+more, Johnson-Roberson et al. [179] gathered more than
+200,000 images of the computer game “Grand Theft
+Auto V”, for the vehicle detection and speed optimization
+of AVs to reduce the risk in real environments. The exper-
+imental results showed that using virtual environment
+images in training process signiﬁcantly reduced the risk
+of AVs in real-world environments.
+Besides the signiﬁcant achievements of DL in AVs,
+a large limitation of DL-based perception systems is the
+inadequate feedback of uncertainty. Cunneen et al. [180]
+reviewed the challenges of AI based decision making,
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+16
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+its risks, and societal beneﬁts. Bayesian DL is the bridge
+between DL and Bayesian probability that offers princi-
+pled risks analysis within DL. Furthermore, the uncer-
+tainty assessment of the model can be measured using
+Monte Carlo dropout sampling via circulating the input
+data through the network multiple times with vari-
+ous dropout weights. Furthermore, as suggested by
+McAllister et al. [181], using the Bayesian network to
+estimate and propagate the risk assessment would enable
+AVs to cope with uncertainty. Other techniques related to
+risk assessment should be inspected further in the years
+to come towards addressing this issue.
+Another risk factor of AD is the autonomous vehicle
+itself because it involves certain complex tasks where
+several motors and cognitive actions are simultaneously
+applied and sometimes in a quick succession. Also,
+the performance of the AVs is profoundly dependent on
+the varying weather, lightning condition, and road sur-
+face. Moreover, the pedestrian behavior is also a critical
+factor that imprints additional uncertainty to the vehicle’s
+decisional environment [182]. Due to these challenges,
+it is perhaps not surprising that if anything goes wrong,
+the cost it does will be very high. For the reliability of
+AVs in public, they must be driven for billions of miles
+in complex environments and varying conditions.
+VII. CONCLUSION
+The recent emergence of sensing, perception, and signal
+processing technologies have brought signiﬁcant improvement
+to the maturity of AD, thereby reducing human drivers’
+efforts and contributing to the overall safety of AD. DL
+strategies recently solved numerous complex problems related
+to different areas in general and AD, however, their detailed
+investigation on control processes for AD is not covered by
+current literature. This article pointed out the key strengths of
+DL methods and surveyed state-of-the-art approaches for safe
+AD, covering both their major achievements and limitations.
+In addition, this survey identiﬁed the major embodiments
+of AD pipeline i.e., measurement, analysis, and execution
+(also known as control processes) and investigated the per-
+formance of DL methods for several safety-related AD tasks,
+including road, lane, vehicle, pedestrian, drowsiness detection,
+collision avoidance, and trafﬁc sign detection. Lastly, this
+paper highlighted the major challenges and issues faced by
+AD community and suggested recommendations for future
+research in further development towards safe AD.
+Research on safe AD has been on the spotlight of the ITS
+community for decades. DL experts are in continuous race
+to reach a sufﬁcient level of maturity in the AVs domain
+to make vehicles achieve a thorough, reliable context aware-
+ness through sensors endowed with this family of powerful
+modeling approaches. We advocate for a new time in which
+investigations should not only aim at improving the accuracy
+of modern DL ﬂavors, but also inspect aspects related to
+their usability and practicability [183], such as the need for
+explanations, robustness to adversarial attacks, the assessment
+of epistemic uncertainty and risk characterizing such models,
+or the derivation of neural architectures capable of lowering
+their energy consumption. Unless these directions are actively
+pursued by the research community, DL will remain relegated
+to academic research and controlled trial environments, and
+vehicular safety will not harness the enormous potential of
+this branch of Artiﬁcial Intelligence.
+REFERENCES
+[1] C. D. Prakash, F. Akhbari, and L. J. Karam, “Robust obstacle detection
+for advanced driver assistance systems using distortions of inverse
+perspective mapping of a monocular camera,” Robot. Auto. Syst.,
+vol. 114, pp. 172–186, Apr. 2019.
+[2] R. N. Rajaram, E. Ohn-Bar, and M. M. Trivedi, “ReﬁneNet: Reﬁning
+object detectors for autonomous driving,” IEEE Trans. Intell. Vehicles,
+vol. 1, no. 4, pp. 358–368, Dec. 2016.
+[3] A. Brunetti, D. Buongiorno, G. F. Trotta, and V. Bevilacqua, “Computer
+vision and deep learning techniques for pedestrian detection and
+tracking: A survey,” Neurocomputing, vol. 300, pp. 17–33, Jul. 2018.
+[4] A.
+Ullah,
+K.
+Muhammad,
+J.
+D.
+Ser,
+S.
+W.
+Baik,
+and
+V. H. C. D. Albuquerque, “Activity recognition using temporal
+optical ﬂow convolutional features and multilayer LSTM,” IEEE
+Trans. Ind. Electron., vol. 66, no. 12, pp. 9692–9702, Dec. 2019.
+[5] M. Gerstmair, A. Melzer, A. Onic, and M. Huemer, “On the safe road
+toward autonomous driving: Phase noise monitoring in radar sensors
+for functional safety compliance,” IEEE Signal Process. Mag., vol. 36,
+no. 5, pp. 60–70, Sep. 2019.
+[6] J. D. Aydelotte et al., “Crash fatality rates after recreational marijuana
+legalization in Washington and Colorado,” Amer. J. Public Health,
+vol. 107, no. 8, pp. 1329–1331, Aug. 2017.
+[7] I. Lana, J. D. Ser, M. Velez, and E. I. Vlahogianni, “Road trafﬁc
+forecasting: Recent advances and new challenges,” IEEE Intell. Transp.
+Syst. Mag., vol. 10, no. 2, pp. 93–109, Summer 2018.
+[8] V.
+S.
+Motor.
+(2019).
+Distracted
+Driving.
+[Online].
+Available:
+https://www.cdc.gov/motorvehiclesafety/distracted_driving/index.html
+[9] V. Petrov, S. Andreev, M. Gerla, and Y. Koucheryavy, “Breaking the
+limits in urban video monitoring: Massive crowd sourced surveillance
+over vehicles,” IEEE Wireless Commun., vol. 25, no. 5, pp. 104–112,
+Oct. 2018.
+[10] I. KPMG. (2019). 2019 Autonomous Vehicles Readiness Index,
+Assessing Countries’ Preparedness For Autonomous Vehicles. [Online].
+Available:
+https://home.kpmg/xx/en/home/insights/2019/02/2019-
+autonomous-vehicles-readiness-index.html
+[11] B. Goldfain et al., “AutoRally: An open platform for aggressive
+autonomous driving,” IEEE Control Syst., vol. 39, no. 1, pp. 26–55,
+Feb. 2019.
+[12] A. Skarbek-Zabkin and M. Szczepanek, “Autonomous vehicles and
+their impact on road infrastructure and user safety,” in Proc. 9th Int.
+Sci.-Tech. Conf. Automot. Saf., Apr. 2018, pp. 1–4.
+[13] A. Shaout, D. Colella, and S. Awad, “Advanced driver assistance
+Systems–past, present and future,” in Proc. 7th Int. Comput. Eng. Conf.
+(ICENCO), Dec. 2011, pp. 72–82.
+[14] T. Litman, “Autonomous vehicle implementation predictions: Impli-
+cations
+for
+transport
+planning,”
+Victoria
+Transp.
+Policy
+Inst.,
+Victoria, BC, Canada, Tech. Rep., Jan. 2015. [Online]. Available:
+https://trid.trb.org/view/1678741
+[15] J. B. Matthew. (Oct. 3). Ford Aims For Self-Driving Car With No Gas
+Pedal, No Steering Wheel in 5 Years, Ceo Says. [Online]. Available:
+https://www.cnbc.com/2017/01/09/ford-aims-for-self-driving-car-with-
+no-gas-pedal-no-steering-wheel-in-5-years-ceo-says.html?___source=
+Facebook
+[16] B. Paden, M. Cap, S. Z. Yong, D. Yershov, and E. Frazzoli, “A survey of
+motion planning and control techniques for self-driving urban vehicles,”
+IEEE Trans. Intell. Vehicles, vol. 1, no. 1, pp. 33–55, Mar. 2016.
+[17] H.
+Joseph.
+(Oct.
+3,
+2019).
+From
+Darpa
+Grand
+Challenge
+2004DARPA’s Debacle in the Desert. [Online]. Available: https://www.
+popsci.com/scitech/article/2004-06/darpa-grand-challenge-2004darpas-
+debacle-desert/
+[18] M. John. (Oct. 3, 2019). DARPA Urban Challenge. [Online]. Available:
+https://www.nytimes.com/2007/11/05/technology/05robot.html
+[19] G. Xiong et al., “Autonomous driving of intelligent vehicle BIT in
+2009 future challenge of China,” in Proc. IEEE Intell. Vehicles Symp.,
+Jun. 2010, pp. 1049–1053.
+[20] P. Cerri et al., “Computer vision at the hyundai autonomous challenge,”
+in Proc. 14th Int. IEEE Conf. Intell. Transp. Syst. (ITSC), Oct. 2011,
+pp. 777–783.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+17
+[21] A. Broggi et al., “PROUD—Public road urban driverless-car test,”
+IEEE Trans. Intell. Transp. Syst., vol. 16, no. 6, pp. 3508–3519,
+Dec. 2015.
+[22] Waymo. (Oct. 3). Google Self-Driving Car. [Online]. Available: https://
+waymo.com/journey/
+[23] C. Bila, F. Sivrikaya, M. A. Khan, and S. Albayrak, “Vehicles of the
+future: A survey of research on safety issues,” IEEE Trans. Intell.
+Transp. Syst., vol. 18, no. 5, pp. 1046–1065, May 2017.
+[24] I. Bilik, O. Longman, S. Villeval, and J. Tabrikian, “The rise of radar for
+autonomous vehicles: Signal processing solutions and future research
+directions,” IEEE Signal Process. Mag., vol. 36, no. 5, pp. 20–31,
+Sep. 2019.
+[25] H. Wang, Y. Wang, X. Zhao, G. Wang, H. Huang, and J. Zhang,
+“Lane detection of curving road for structural highway with straight-
+curve model on vision,” IEEE Trans. Veh. Technol., vol. 68, no. 6,
+pp. 5321–5330, Jun. 2019.
+[26] X. Du and K. K. Tan, “Comprehensive and practical vision system
+for self-driving vehicle lane-level localization,” IEEE Trans. Image
+Process., vol. 25, no. 5, pp. 2075–2088, May 2016.
+[27] M. R. Ashouri, A. Nahvi, and S. Azadi, “Time delay analysis of vehicle
+handling variables for near-crash detection of drowsy driving using a
+bus driving simulator,” in Proc. 6th RSI Int. Conf. Robot. Mechatronics
+(IcRoM), Oct. 2018, pp. 243–249.
+[28] Z. Yang, J. Li, and H. Li, “Real-time pedestrian detection for
+autonomous driving,” in Proc. Int. Conf. Intell. Auto. Syst. (ICoIAS),
+Mar. 2018, pp. 9–13.
+[29] A. Picot, S. Charbonnier, and A. Caplier, “On-line detection of drowsi-
+ness using brain and visual information,” IEEE Trans. Syst., Man,
+Cybern. A, Syst. Humans, vol. 42, no. 3, pp. 764–775, May 2012.
+[30] R.
+Deng,
+B.
+Di,
+and
+L.
+Song,
+“Cooperative
+collision
+avoid-
+ance for overtaking maneuvers in cellular V2X-based autonomous
+driving,” IEEE Trans. Veh. Technol., vol. 68, no. 5, pp. 4434–4446,
+May 2019.
+[31] H. S. Lee and K. Kim, “Simultaneous trafﬁc sign detection and
+boundary estimation using convolutional neural network,” IEEE Trans.
+Intell. Transp. Syst., vol. 19, no. 5, pp. 1652–1663, May 2018.
+[32] C. Flores, P. Merdrignac, R. de Charette, F. Navas, V. Milanes, and
+F. Nashashibi, “A cooperative car-following/emergency braking system
+with prediction-based pedestrian avoidance capabilities,” IEEE Trans.
+Intell. Transp. Syst., vol. 20, no. 5, pp. 1837–1846, May 2019.
+[33] M. B. Jensen, M. P. Philipsen, A. Mogelmose, T. B. Moeslund, and
+M. M. Trivedi, “Vision for looking at trafﬁc lights: Issues, survey,
+and perspectives,” IEEE Trans. Intell. Transp. Syst., vol. 17, no. 7,
+pp. 1800–1815, Jul. 2016.
+[34] G. Bresson, Z. Alsayed, L. Yu, and S. Glaser, “Simultaneous localiza-
+tion and mapping: A survey of current trends in autonomous driving,”
+IEEE Trans. Intell. Vehicles, vol. 2, no. 3, pp. 194–220, Sep. 2017.
+[35] J. D. Ser, E. Osaba, J. J. Sanchez-Medina, I. Fister, and I. Fister,
+“Bioinspired computational intelligence and transportation systems:
+A long road ahead,” IEEE Trans. Intell. Transp. Syst., vol. 21, no. 2,
+pp. 466–495, Feb. 2020.
+[36] H. Ye, L. Liang, G. Y. Li, J. Kim, L. Lu, and M. Wu, “Machine learning
+for vehicular networks: Recent advances and application examples,”
+IEEE Veh. Technol. Mag., vol. 13, no. 2, pp. 94–101, Jun. 2018.
+[37] L. Liang, H. Ye, and G. Y. Li, “Toward intelligent vehicular networks:
+A machine learning framework,” IEEE Internet Things J., vol. 6, no. 1,
+pp. 124–135, Feb. 2019.
+[38] J. Li, H. Cheng, H. Guo, and S. Qiu, “Survey on artiﬁcial intelligence
+for vehicles,” Automot. Innov., vol. 1, no. 1, pp. 2–14, Jan. 2018.
+[39] D. Gonzalez, J. Perez, V. Milanes, and F. Nashashibi, “A review
+of motion planning techniques for automated vehicles,” IEEE Trans.
+Intell. Transp. Syst., vol. 17, no. 4, pp. 1135–1145, Apr. 2016.
+[40] A. Rasouli and J. K. Tsotsos, “Autonomous vehicles that interact with
+pedestrians: A survey of theory and practice,” IEEE Trans. Intell.
+Transp. Syst., vol. 21, no. 3, pp. 900–918, Mar. 2020.
+[41] Y. Wang, D. Zhang, Y. Liu, B. Dai, and L. H. Lee, “Enhancing
+transportation systems via deep learning: A survey,” Transp. Res. Part
+C, Emerg. Technol., vol. 99, pp. 144–163, Feb. 2019.
+[42] D. Tabernik and D. Skocaj, “Deep learning for large-scale trafﬁc-sign
+detection and recognition,” IEEE Trans. Intell. Transp. Syst., vol. 21,
+no. 4, pp. 1427–1440, Apr. 2020.
+[43] E. Arnold, O. Y. Al-Jarrah, M. Dianati, S. Fallah, D. Oxtoby,
+and A. Mouzakitis, “A survey on 3D object detection methods for
+autonomous driving applications,” IEEE Trans. Intell. Transp. Syst.,
+vol. 20, no. 10, pp. 3782–3795, Oct. 2019.
+[44] J. Wang, J. Liu, and N. Kato, “Networking and communications in
+autonomous driving: A survey,” IEEE Commun. Surveys Tuts., vol. 21,
+no. 2, pp. 1243–1274, 2nd Quart., 2019.
+[45] S. Kuutti, S. Fallah, K. Katsaros, M. Dianati, F. Mccullough, and
+A. Mouzakitis, “A survey of the state-of-the-art localization techniques
+and their potentials for autonomous vehicle applications,” IEEE Inter-
+net Things J., vol. 5, no. 2, pp. 829–846, Apr. 2018.
+[46] C. M. Martinez, M. Heucke, F.-Y. Wang, B. Gao, and D. Cao, “Driving
+style recognition for intelligent vehicle control and advanced driver
+assistance: A survey,” IEEE Trans. Intell. Transp. Syst., vol. 19, no. 3,
+pp. 666–676, Mar. 2018.
+[47] J.-R. Xue, J.-W. Fang, and P. Zhang, “A survey of scene understanding
+by event reasoning in autonomous driving,” Int. J. Autom. Comput.,
+vol. 15, no. 3, pp. 249–266, Jun. 2018.
+[48] Y. Saadna and A. Behloul, “An overview of trafﬁc sign detection and
+classiﬁcation methods,” Int. J. Multimedia Inf. Retr., vol. 6, no. 3,
+pp. 193–210, Sep. 2017.
+[49] J. Rios-Torres and A. A. Malikopoulos, “A survey on the coordination
+of connected and automated vehicles at intersections and merging at
+highway on-ramps,” IEEE Trans. Intell. Transp. Syst., vol. 18, no. 5,
+pp. 1066–1077, May 2017.
+[50] J. Janai, F. Güney, A. Behl, and A. Geiger, “Computer vision for
+autonomous vehicles: Problems, datasets and state of the art,” 2017,
+arXiv:1704.05519. [Online]. Available: http://arxiv.org/abs/1704.05519
+[51] A. Mogelmose, M. M. Trivedi, and T. B. Moeslund, “Vision-based
+trafﬁc sign detection and analysis for intelligent driver assistance
+systems: Perspectives and survey,” IEEE Trans. Intell. Transp. Syst.,
+vol. 13, no. 4, pp. 1484–1497, Dec. 2012.
+[52] M. Limmer, J. Forster, D. Baudach, F. Schule, R. Schweiger, and
+H. P. A. Lensch, “Robust Deep-Learning-Based road-prediction for
+augmented reality navigation systems at night,” in Proc. IEEE 19th
+Int. Conf. Intell. Transp. Syst. (ITSC), Nov. 2016, pp. 1888–1895.
+[53] G. Cheng, Y. Wang, S. Xu, H. Wang, S. Xiang, and C. Pan, “Automatic
+road detection and centerline extraction via cascaded end-to-end con-
+volutional neural network,” IEEE Trans. Geosci. Remote Sens., vol. 55,
+no. 6, pp. 3322–3337, Jun. 2017.
+[54] Q. Wang, J. Gao, and Y. Yuan, “Embedding structured contour and
+location prior in siamesed fully convolutional networks for road detec-
+tion,” IEEE Trans. Intell. Transp. Syst., vol. 19, no. 1, pp. 230–241,
+Jan. 2018.
+[55] Z. Chen and Z. Chen, “Rbnet: A deep neural network for uniﬁed road
+and road boundary detection,” in Proc. Int. Conf. Neural Inf. Process.
+Springer, 2017, pp. 677–687, doi: 10.1007/978-3-319-70087-8_70.
+[56] M. Bai, G. Mattyus, N. Homayounfar, S. Wang, S. K. Lakshmikanth,
+and R. Urtasun, “Deep multi-sensor lane detection,” in Proc. IEEE/RSJ
+Int. Conf. Intell. Robots Syst. (IROS), Oct. 2018, pp. 3102–3109.
+[57] Y. Y. Ye, X. L. Hao, and H. J. Chen, “Lane detection method based on
+lane structural analysis and CNNs,” IET Intell. Transp. Syst., vol. 12,
+no. 6, pp. 513–520, Aug. 2018.
+[58] W. Song, Y. Yang, M. Fu, Y. Li, and M. Wang, “Lane detection and
+classiﬁcation for forward collision warning system based on stereo
+vision,” IEEE Sensors J., vol. 18, no. 12, pp. 5151–5163, Jun. 2018.
+[59] J. Li, X. Mei, D. Prokhorov, and D. Tao, “Deep neural network for
+structural prediction and lane detection in trafﬁc scene,” IEEE Trans.
+Neural Netw. Learn. Syst., vol. 28, no. 3, pp. 690–703, Mar. 2017.
+[60] H. Tayara, K. G. Soo, and K. T. Chong, “Vehicle detection and counting
+in high-resolution aerial images using convolutional regression neural
+network,” IEEE Access, vol. 6, pp. 2220–2230, 2018.
+[61] X.
+Chen,
+K.
+Kundu,
+Z.
+Zhang,
+H.
+Ma,
+S.
+Fidler,
+and
+R. Urtasun, “Monocular 3D object detection for autonomous driving,”
+in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Jun. 2016,
+pp. 2147–2156.
+[62] W. Chu, Y. Liu, C. Shen, D. Cai, and X.-S. Hua, “Multi-task vehicle
+detection with region-of-interest voting,” IEEE Trans. Image Process.,
+vol. 27, no. 1, pp. 432–441, Jan. 2018.
+[63] W. Ouyang, H. Zhou, H. Li, Q. Li, J. Yan, and X. Wang, “Jointly
+learning deep features, deformable parts, occlusion and classiﬁcation
+for pedestrian detection,” IEEE Trans. Pattern Anal. Mach. Intell.,
+vol. 40, no. 8, pp. 1874–1887, Aug. 2018.
+[64] Z. Cai, M. Saberian, and N. Vasconcelos, “Learning complexity-aware
+cascades for pedestrian detection,” IEEE Trans. Pattern Anal. Mach.
+Intell., vol. 42, no. 9, pp. 2195–2211, Sep. 2020.
+[65] S. Wang, J. Cheng, H. Liu, F. Wang, and H. Zhou, “Pedestrian detection
+via body part semantic and contextual information with DNN,” IEEE
+Trans. Multimedia, vol. 20, no. 11, pp. 3148–3159, Nov. 2018.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+18
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+[66] J. Lyu, Z. Yuan, and D. Chen, “Long-term multi-granularity deep
+framework for driver drowsiness detection,” 2018, arXiv:1801.02325.
+[Online]. Available: http://arxiv.org/abs/1801.02325
+[67] V. Vijayan and E. Sherly, “Real time detection system of driver drowsi-
+ness based on representation learning using deep neural networks,”
+J. Intell. Fuzzy Syst., vol. 36, no. 3, pp. 1977–1985, 2019.
+[68] S. Park, F. Pan, S. Kang, and C. D. Yoo, “Driver drowsiness detection
+system based on feature representation learning using various deep
+networks,” in Proc. Asian Conf. Comput. Vis. Taipei, Taiwan: Springer,
+Nov. 2016, pp. 154–164.
+[69] J.-M. Guo and H. Markoni, “Driver drowsiness detection using hybrid
+convolutional neural network and long short-term memory,” Multimedia
+Tools Appl., vol. 78, pp. 29059–29087, Jul. 2018.
+[70] V. D. Nguyen, H. Van Nguyen, D. T. Tran, S. J. Lee, and
+J. W. Jeon, “Learning framework for robust obstacle detection, recog-
+nition, and tracking,” IEEE Trans. Intell. Transp. Syst., vol. 18, no. 6,
+pp. 1633–1646, Jun. 2017.
+[71] P. Long, W. Liu, and J. Pan, “Deep-learned collision avoidance policy
+for distributed multiagent navigation,” IEEE Robot. Autom. Lett., vol. 2,
+no. 2, pp. 656–663, Apr. 2017.
+[72] Y. Zhu, C. Zhang, D. Zhou, X. Wang, X. Bai, and W. Liu, “Trafﬁc
+sign detection and recognition using fully convolutional network guided
+proposals,” Neurocomputing, vol. 214, pp. 758–766, Nov. 2016.
+[73] X. Li, H. Ma, X. Wang, and X. Zhang, “Trafﬁc light recognition for
+complex scene with fusion detections,” IEEE Trans. Intell. Transp.
+Syst., vol. 19, no. 1, pp. 199–208, Jan. 2018.
+[74] J.-G. Wang and L.-B. Zhou, “Trafﬁc light recognition with high
+dynamic range imaging and deep learning,” IEEE Trans. Intell. Transp.
+Syst., vol. 20, no. 4, pp. 1341–1352, Apr. 2019.
+[75] M. B. Jensen, K. Nasrollahi, and T. B. Moeslund, “Evaluating state-of-
+the-art object detector on challenging trafﬁc light data,” in Proc. IEEE
+Conf. Comput. Vis. Pattern Recognit. Workshops (CVPRW), Jul. 2017,
+pp. 9–15.
+[76] Z. Ouyang, J. Niu, Y. Liu, and M. Guizani, “Deep CNN-based real-
+time trafﬁc light detector for self-driving vehicles,” IEEE Trans. Mobile
+Comput., vol. 19, no. 2, pp. 300–313, Feb. 2020.
+[77] Y. Yuan, Z. Xiong, and Q. Wang, “VSSA-NET: Vertical spatial
+sequence attention network for trafﬁc sign detection,” IEEE Trans.
+Image Process., vol. 28, no. 7, pp. 3423–3434, Jul. 2019.
+[78] A. Geiger, P. Lenz, and R. Urtasun, “Are we ready for autonomous
+driving? The KITTI vision benchmark suite,” in Proc. IEEE Conf.
+Comput. Vis. Pattern Recognit., Jun. 2012, pp. 3354–3361.
+[79] R. Mohan, “Deep deconvolutional networks for scene parsing,” 2014,
+arXiv:1411.4101. [Online]. Available: https://arxiv.org/abs/1411.4101
+[80] O. G. Leivas, W. Burgard, and T. Brox, “Efﬁcient deep methods for
+monocular road segmentation,” in Proc. IEEE/RSJ Int. Conf. Intell.
+Robots Syst. (IROS), Daejeon, South Korea, 2016, pp. 4885–4891, doi:
+10.1109/IROS.2016.7759717.
+[81] X. Pan, J. Shi, P. Luo, X. Wang, and X. Tang, “Spatial as deep: Spatial
+CNN for trafﬁc scene understanding,” in Proc. 32nd AAAI Conf. Artif.
+Intell., 2018, pp. 1–8.
+[82] J. Li, X. Mei, D. Prokhorov, and D. Tao, “Deep neural network for
+structural prediction and lane detection in trafﬁc scene,” IEEE Trans.
+Neural Netw. Learn. Syst., vol. 28, no. 3, pp. 690–703, Mar. 2017.
+[83] M. Aly, “Real time detection of lane markers in urban streets,” in Proc.
+IEEE Intell. Vehicles Symp., Jun. 2008, pp. 7–12.
+[84] Z. Cai, M. Saberian, and N. Vasconcelos, “Learning complexity-
+aware cascades for pedestrian detection,” IEEE Trans. Pattern Anal.
+Mach. Intell., vol. 42, no. 9, pp. 2195–2211, Sep. 2020, doi:
+10.1109/TPAMI.2019.2910514.
+[85] C. R. Qi, W. Liu, C. Wu, H. Su, and L. J. Guibas, “Frustum PointNets
+for 3D object detection from RGB-D data,” in Proc. IEEE/CVF Conf.
+Comput. Vis. Pattern Recognit., Jun. 2018, pp. 918–927.
+[86] A. D. Costea, R. Varga, and S. Nedevschi, “Fast boosting based detec-
+tion using scale invariant multimodal multiresolution ﬁltered features,”
+in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Jul. 2017,
+pp. 6674–6683.
+[87] X. Chen et al., “3D object proposals for accurate object class detec-
+tion,” in Proc. Adv. Neural Inf. Process. Syst., 2015, pp. 424–432.
+[88] S. Ren, K. He, R. Girshick, and J. Sun, “Faster R-CNN: Towards
+real-time object detection with region proposal networks,” in Proc. Adv.
+Neural Inf. Process. Syst., 2015, pp. 91–99.
+[89] Y. Xiang, W. Choi, Y. Lin, and S. Savarese, “Subcategory-aware
+convolutional neural networks for object proposals and detection,” in
+Proc. IEEE Winter Conf. Appl. Comput. Vis. (WACV), Mar. 2017,
+pp. 924–933.
+[90] F. Yang, W. Choi, and Y. Lin, “Exploit all the layers: Fast and accurate
+CNN object detector with scale dependent pooling and cascaded rejec-
+tion classiﬁers,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
+(CVPR), Jun. 2016, pp. 2129–2137.
+[91] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classiﬁcation
+with deep convolutional neural networks,” in Proc. Adv. Neural Inf.
+Process. Syst. (NIPS), 2012, pp. 1097–1105.
+[92] O. M. Parkhi, A. Vedaldi, and A. Zisserman, “Deep face recognition,”
+in Proc. BMVC, 2015, vol. 1, no. 3, p. 6.
+[93] J. Donahue et al., “Long-term recurrent convolutional networks for
+visual recognition and description,” in Proc. IEEE Conf. Comput. Vis.
+Pattern Recognit. (CVPR), Jun. 2015, pp. 2625–2634.
+[94] F. Larsson and M. Felsberg, “Using Fourier descriptors and spatial
+models for trafﬁc sign recognition,” in Proc. 17th Scand. Conf. (SCIA),
+Ystad, Sweden, A. Heyden and F. Kahl, Eds. Berlin, Germany:
+Springer, May 2011, pp. 238–249.
+[95] J. Redmon and A. Farhadi, “YOLO9000: Better, faster, stronger,” in
+Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Jul. 2017,
+pp. 7263–7271.
+[96] J. Redmon and A. Farhadi, “YOLOv3: An incremental improvement,”
+2018, arXiv:1804.02767. [Online]. Available: http://arxiv.org/abs/1804.
+02767
+[97] W. Liu et al., “SSD: Single shot multibox detector,” in Proc. 14th Eur.
+Conf. Comput. Vis. (ECCV), Amsterdam, The Netherlands: Springer,
+Oct. 2016, pp. 21–37.
+[98] S. Noh, “Decision-making framework for autonomous driving at
+road intersections: Safeguarding against collision, overly conservative
+behavior, and violation vehicles,” IEEE Trans. Ind. Electron., vol. 66,
+no. 4, pp. 3275–3286, Apr. 2019.
+[99] A. Furda and L. Vlacic, “Enabling safe autonomous driving in
+real-world
+city trafﬁc using multiple criteria
+decision making,”
+IEEE Intell. Transp. Syst. Mag., vol. 3, no. 1, pp. 4–17, Spring
+2011.
+[100] K. Kaur, N. Kumar, and M. Singh, “Coordinated power control of
+electric vehicles for grid frequency support: MILP-based hierarchical
+control design,” IEEE Trans. Smart Grid, vol. 10, no. 3, pp. 3364–3373,
+May 2019.
+[101] A. Manjunath, Y. Liu, B. Henriques, and A. Engstle, “Radar based
+object detection and tracking for AD,” in IEEE MTT-S Int. Microw.
+Symp. Dig., Apr. 2018, pp. 1–4.
+[102] Y. Ye, L. Fu, and B. Li, “Object detection and tracking using multi-
+layer laser for autonomous urban driving,” in Proc. IEEE 19th Int.
+Conf. Intell. Transp. Syst. (ITSC), Nov. 2016, pp. 259–264.
+[103] S. M. Grigorescu, B. Trasnea, L. Marina, A. Vasilcoi, and T. Cocias,
+“NeuroTrajectory: A neuroevolutionary approach to local state trajec-
+tory learning for autonomous vehicles,” IEEE Robot. Autom. Lett.,
+vol. 4, no. 4, pp. 3441–3448, Oct. 2019.
+[104] S. Seo and J.-M. Chung, “Outlier detection technique for IoT sensor-
+driven big data systems,” in Proc. Int. Conf. Electron., Inf., Commun.
+(ICEIC), Jan. 2019, pp. 1–2.
+[105] A. Ibisch et al., “Towards autonomous driving in a parking garage:
+Vehicle localization and tracking using environment-embedded LIDAR
+sensors,” in Proc. IEEE Intell. Vehicles Symp. (IV), Jun. 2013,
+pp. 829–834.
+[106] G. Cheng, Z. Wang, and J. Y. Zheng, “Modeling weather and illumina-
+tions in driving views based on big-video mining,” IEEE Trans. Intell.
+Vehicles, vol. 3, no. 4, pp. 522–533, Dec. 2018.
+[107] H. Xu, Y. Gao, F. Yu, and T. Darrell, “End-to-end learning of driving
+models from large-scale video datasets,” in Proc. IEEE Conf. Comput.
+Vis. Pattern Recognit. (CVPR), Jul. 2017, pp. 2174–2182.
+[108] Y. Chen et al., “LiDAR-video driving dataset: Learning driving policies
+effectively,” in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.,
+Jun. 2018, pp. 5870–5878.
+[109] A. Kumari, S. Tanwar, S. Tyagi, N. Kumar, M. Maasberg, and
+K.-K.-R. Choo, “Multimedia big data computing and Internet of Things
+applications: A taxonomy and process model,” J. Netw. Comput. Appl.,
+vol. 124, pp. 169–195, Dec. 2018.
+[110] K. Muhammad, J. Lloret, and S. W. Baik, “Intelligent and energy-
+efﬁcient data prioritization in green smart cities: Current challenges
+and future directions,” IEEE Commun. Mag., vol. 57, no. 2, pp. 60–65,
+Feb. 2019.
+[111] T. Hussain, K. Muhammad, A. Ullah, Z. Cao, S. W. Baik, and
+V. H. C. de Albuquerque, “Cloud-assisted multiview video summariza-
+tion using CNN and bidirectional LSTM,” IEEE Trans. Ind. Informat.,
+vol. 16, no. 1, pp. 77–86, Jan. 2020.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+19
+[112] K. Muhammad, J. J. P. C. Rodrigues, S. Kozlov, F. Piccialli, and
+V. H. C. D. Albuquerque, “Energy-efﬁcient monitoring of ﬁre scenes
+for intelligent networks,” IEEE Netw., vol. 34, no. 3, pp. 108–115,
+May 2020.
+[113] S. Zang, M. Ding, D. Smith, P. Tyler, T. Rakotoarivelo, and M. A. Kaa-
+far, “The impact of adverse weather conditions on autonomous vehi-
+cles: How rain, snow, fog, and hail affect the performance of a self-
+driving car,” IEEE Veh. Technol. Mag., vol. 14, no. 2, pp. 103–111,
+Jun. 2019.
+[114] C. J. Jacobus and D. Haanpaa, “All weather autonomously driven
+vehicles,” 2018.
+[115] L. Dymova and P. Sevastjanov, “An interpretation of intuitionistic fuzzy
+sets in terms of evidence theory: Decision making aspect,” Knowl.-
+Based Syst., vol. 23, no. 8, pp. 772–782, Dec. 2010.
+[116] Y. Deng, “Generalized evidence theory,” Int. J. Speech Technol., vol. 43,
+no. 3, pp. 530–543, Oct. 2015.
+[117] Z.-Q. Zhao, P. Zheng, S.-T. Xu, and X. Wu, “Object detection with deep
+learning: A review,” IEEE Trans. Neural Netw. Learn. Syst., vol. 30,
+no. 11, pp. 3212–3232, Nov. 2019.
+[118] A. B. Arrieta et al., “Explainable artiﬁcial intelligence (XAI): Concepts,
+taxonomies, opportunities and challenges toward responsible AI,” Inf.
+Fusion, vol. 58, pp. 82–115, Jun. 2020.
+[119] K. Muhammad, S. Khan, N. Kumar, J. Del Ser, and S. Mir-
+jalili, “Vision-based personalized wireless capsule endoscopy for
+smart healthcare:
+Taxonomy, literature review, opportunities
+and
+challenges,” Future Gener. Comput. Syst., vol. 113, pp. 266–280,
+Dec. 2020.
+[120] A. Adadi and M. Berrada, “Peeking inside the black-box: A survey
+on explainable artiﬁcial intelligence (XAI),” IEEE Access, vol. 6,
+pp. 52138–52160, 2018.
+[121] K. Muhammad, S. Khan, J. D. Ser, and V. H. C. de Albuquerque, “Deep
+learning for multigrade brain tumor classiﬁcation in smart healthcare
+systems: A prospective survey,” IEEE Trans. Neural Netw. Learn. Syst.,
+early access, Jun. 30, 2020, doi: 10.1109/TNNLS.2020.2995800.
+[122] L. H. Gilpin, D. Bau, B. Z. Yuan, A. Bajwa, M. Specter, and L. Kagal,
+“Explaining explanations: An overview of interpretability of machine
+learning,” in Proc. IEEE 5th Int. Conf. Data Sci. Adv. Analytics (DSAA),
+Oct. 2018, pp. 80–89.
+[123] K. Ofjall, M. Felsberg, and A. Robinson, “Visual autonomous road
+following by symbiotic online learning,” in Proc. IEEE Intell. Vehicles
+Symp. (IV), Jun. 2016, pp. 136–143.
+[124] A. Ullah, K. Muhammad, I. U. Haq, and S. W. Baik, “Action recogni-
+tion using optimized deep autoencoder and CNN for surveillance data
+streams of non-stationary environments,” Future Gener. Comput. Syst.,
+vol. 96, pp. 386–397, Jul. 2019.
+[125] J. H. Gillula and C. J. Tomlin, “Guaranteed safe online learning via
+reachability: Tracking a ground target using a quadrotor,” in Proc. IEEE
+Int. Conf. Robot. Autom., May 2012, pp. 2723–2730.
+[126] Q. Cui et al., “Stochastic online learning for mobile edge comput-
+ing: Learning from changes,” IEEE Commun. Mag., vol. 57, no. 3,
+pp. 63–69, Mar. 2019.
+[127] A. Nagabandi, C. Finn, and S. Levine, “Deep online learning via
+meta-learning: Continual adaptation for model-based RL,” 2018,
+arXiv:1812.07671. [Online]. Available: http://arxiv.org/abs/1812.07671
+[128] X. Yuan, P. He, Q. Zhu, and X. Li, “Adversarial examples: Attacks and
+defenses for deep learning,” IEEE Trans. Neural Netw. Learn. Syst.,
+vol. 30, no. 9, pp. 2805–2824, Sep. 2019.
+[129] N. Morgulis, A. Kreines, S. Mendelowitz, and Y. Weisglass, “Fooling
+a real car with adversarial trafﬁc signs,” 2019, arXiv:1907.00374.
+[Online]. Available: http://arxiv.org/abs/1907.00374
+[130] M. Gao, L. Jin, Y. Jiang, and B. Guo, “Manifold siamese network:
+A novel visual tracking ConvNet for autonomous vehicles,” IEEE
+Trans. Intell. Transp. Syst., vol. 21, no. 4, pp. 1612–1623, Apr. 2020.
+[131] W. Song, Y. Yang, M. Fu, F. Qiu, and M. Wang, “Real-time obstacles
+detection and status classiﬁcation for collision warning in a vehicle
+active safety system,” IEEE Trans. Intell. Transp. Syst., vol. 19, no. 3,
+pp. 758–773, Mar. 2018.
+[132] C. Zhou, F. Li, W. Cao, C. Wang, and Y. Wu, “Design and imple-
+mentation of a novel obstacle avoidance scheme based on combination
+of CNN-based deep learning method and liDAR-based image process-
+ing approach,” J. Intell. Fuzzy Syst., vol. 35, no. 2, pp. 1695–1705,
+Aug. 2018.
+[133] W. Gao, J. Gao, K. Ozbay, and Z.-P. Jiang, “Reinforcement-Learning-
+Based cooperative adaptive cruise control of buses in the Lincoln tunnel
+corridor with time-varying topology,” IEEE Trans. Intell. Transp. Syst.,
+vol. 20, no. 10, pp. 3796–3805, Oct. 2019.
+[134] Z. Huang, X. Xu, H. He, J. Tan, and Z. Sun, “Parameterized batch
+reinforcement learning for longitudinal control of autonomous land
+vehicles,” IEEE Trans. Syst., Man, Cybern. Syst., vol. 49, no. 4,
+pp. 730–741, Apr. 2019.
+[135] D. Isele, R. Rahimi, A. Cosgun, K. Subramanian, and K. Fujimura,
+“Navigating occluded intersections with autonomous vehicles using
+deep reinforcement learning,” in Proc. IEEE Int. Conf. Robot. Autom.
+(ICRA), May 2018, pp. 2034–2039.
+[136] S. Wen, Y. Zhao, X. Yuan, Z. Wang, D. Zhang, and L. Manfredi, “Path
+planning for active SLAM based on deep reinforcement learning under
+unknown environments,” Intell. Service Robot., vol. 13, pp. 263–272,
+Jan. 2020.
+[137] S. Shalev-Shwartz, S. Shammah, and A. Shashua, “Safe, multi-
+agent,
+reinforcement
+learning
+for
+autonomous
+driving,”
+2016,
+arXiv:1610.03295. [Online]. Available: http://arxiv.org/abs/1610.03295
+[138] C. Packer, K. Gao, J. Kos, P. Krähenbühl, V. Koltun, and D. Song,
+“Assessing generalization in deep reinforcement learning,” 2018,
+arXiv:1810.12282. [Online]. Available: http://arxiv.org/abs/1810.12282
+[139] Y. Jaafra, A. Deruyver, J. L. Laurent, and M. S. Naceur, “Context-aware
+autonomous driving using meta-reinforcement learning,” in Proc. 18th
+IEEE Int. Conf. Mach. Learn. Appl. (ICMLA), Dec. 2019, pp. 450–455.
+[140] L. Claussmann, M. Revilloud, D. Gruyer, and S. Glaser, “A review of
+motion planning for highway autonomous driving,” IEEE Trans. Intell.
+Transp. Syst., vol. 21, no. 5, pp. 1826–1848, May 2020.
+[141] S. Sendra, L. Garcia, J. M. Jimenez, and J. Lloret, “Low-cost vehicle
+driver assistance system for fatigue and distraction detection,” in
+Future Intelligent Vehicular Technologies, Future 5V. Porto, Portugal:
+Springer, Sep. 2016, pp. 69–78.
+[142] Z. Luo et al., “MIO-TCD: A new benchmark dataset for vehicle
+classiﬁcation and localization,” IEEE Trans. Image Process., vol. 27,
+no. 10, pp. 5129–5141, Oct. 2018.
+[143] B. Wang, V. Fremont, and S. A. Rodriguez, “Color-based road detection
+and its evaluation on the KITTI road benchmark,” in Proc. IEEE Intell.
+Vehicles Symp. Proc., Jun. 2014, pp. 31–36.
+[144] A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, “Vision meets robotics:
+The KITTI dataset,” Int. J. Robot. Res., vol. 32, no. 11, pp. 1231–1237,
+Sep. 2013.
+[145] X. Huang, P. Wang, X. Cheng, D. Zhou, Q. Geng, and R. Yang,
+“The ApolloScape open dataset for AD and its application,” IEEE
+Trans. Pattern Anal. Mach. Intell., vol. 42, no. 10, pp. 2702–2719,
+Oct. 2020.
+[146] Y. Kang, H. Yin, and C. Berger, “Test your self-driving algorithm:
+An overview of publicly available driving datasets and virtual testing
+environments,” IEEE Trans. Intell. Vehicles, vol. 4, no. 2, pp. 171–185,
+Jun. 2019.
+[147] A. Rangesh and M. Manubhai Trivedi, “No blind spots: Full-surround
+multi-object tracking for autonomous vehicles using cameras and
+LiDARs,” IEEE Trans. Intell. Vehicles, vol. 4, no. 4, pp. 588–599,
+Dec. 2019.
+[148] J.
+Li,
+W.
+Zhan,
+Y.
+Hu,
+and
+M.
+Tomizuka,
+“Generic
+track-
+ing and probabilistic prediction framework and its application in
+autonomous driving,” IEEE Trans. Intell. Transp. Syst., vol. 21, no. 9,
+pp. 3634–3649, Sep. 2020.
+[149] C. Chatzikomis, A. Sorniotti, P. Gruber, M. Zanchetta, D. Willans, and
+B. Balcombe, “Comparison of path tracking and torque-vectoring con-
+trollers for autonomous electric vehicles,” IEEE Trans. Intell. Vehicles,
+vol. 3, no. 4, pp. 559–570, Dec. 2018.
+[150] S. Lefevre, A. Carvalho, and F. Borrelli, “A learning-based framework
+for velocity control in autonomous driving,” IEEE Trans. Autom. Sci.
+Eng., vol. 13, no. 1, pp. 32–42, Jan. 2016.
+[151] H. Taghavifar, “Neural network autoregressive with exogenous input
+assisted multi-constraint nonlinear predictive control of autonomous
+vehicles,” IEEE Trans. Veh. Technol., vol. 68, no. 7, pp. 6293–6304,
+Jul. 2019.
+[152] J. Choi et al., “Environment-detection-and-mapping algorithm for
+autonomous driving in rural or off-road environment,” IEEE Trans.
+Intell. Transp. Syst., vol. 13, no. 2, pp. 974–982, Jun. 2012.
+[153] K. Chu, M. Lee, and M. Sunwoo, “Local path planning for off-road
+autonomous driving with avoidance of static obstacles,” IEEE Trans.
+Intell. Transp. Syst., vol. 13, no. 4, pp. 1599–1616, Dec. 2012.
+[154] M. Althoff, O. Stursberg, and M. Buss, “Model-based probabilistic
+collision detection in autonomous driving,” IEEE Trans. Intell. Transp.
+Syst., vol. 10, no. 2, pp. 299–310, Jun. 2009.
+[155] Y. Kuwata, S. Karaman, J. Teo, E. Frazzoli, J. P. How, and
+G. Fiore, “Real-time motion planning with applications to autonomous
+urban driving,” IEEE Trans. Control Syst. Technol., vol. 17, no. 5,
+pp. 1105–1118, Sep. 2009.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+20
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+[156] J. K. Subosits and J. C. Gerdes, “From the racetrack to the road: Real-
+time trajectory replanning for AD,” IEEE Trans. Intell. Vehicles, vol. 4,
+no. 2, pp. 309–320, Jun. 2019.
+[157] A. P. Bolduc, L. Guo, and Y. Jia, “Multimodel approach to personalized
+autonomous adaptive cruise control,” IEEE Trans. Intell. Vehicles,
+vol. 4, no. 2, pp. 321–330, Jun. 2019.
+[158] B. Zhu, S. Yan, J. Zhao, and W. Deng, “Personalized lane-change
+assistance system with driver behavior identiﬁcation,” IEEE Trans. Veh.
+Technol., vol. 67, no. 11, pp. 10293–10306, Nov. 2018.
+[159] W. Wang, D. Zhao, W. Han, and J. Xi, “A learning-based approach
+for lane departure warning systems with a personalized driver model,”
+IEEE Trans. Veh. Technol., vol. 67, no. 10, pp. 9145–9157, Oct. 2018.
+[160] S. Liu, L. Liu, J. Tang, B. Yu, Y. Wang, and W. Shi, “Edge computing
+for autonomous driving: Opportunities and challenges,” Proc. IEEE,
+vol. 107, no. 8, pp. 1697–1716, Aug. 2019.
+[161] S. Garg et al., “Edge computing-based security framework for big
+data analytics in VANETs,” IEEE Netw., vol. 33, no. 2, pp. 72–81,
+Mar. 2019.
+[162] X. Zhang, Y. Wang, S. Lu, L. Liu, L. Xu, and W. Shi, “OpenEI:
+An open framework for edge intelligence,” in Proc. IEEE 39th Int.
+Conf. Distrib. Comput. Syst. (ICDCS), Jul. 2019, pp. 1840–1851.
+[163] K.
+Muhammad,
+S.
+Khan,
+V.
+Palade,
+I.
+Mehmood,
+and
+V. H. C. de Albuquerque, “Edge intelligence-assisted smoke detection
+in foggy surveillance environments,” IEEE Trans. Ind. Informat.,
+vol. 16, no. 2, pp. 1067–1075, Feb. 2020.
+[164] J. Tang, S. Liu, B. Yu, and W. Shi, “Pi-edge: A low-power
+edge
+computing
+system
+for
+real-time
+autonomous
+driving
+ser-
+vices,” 2018, arXiv:1901.04978. [Online]. Available: https://arxiv.org/
+abs/1901.04978
+[165] K.
+Muhammad,
+T.
+Hussain,
+J.
+D.
+Ser,
+V.
+Palade,
+and
+V. H. C. D. Albuquerque, “DeepReS: A deep learning-based video
+summarization strategy for resource-constrained industrial surveillance
+scenarios,” IEEE Trans. Ind. Informat., vol. 16, no. 9, pp. 5938–5947,
+Sep. 2020.
+[166] A. Alhilal, T. Braud, and P. Hui, “Distributed vehicular computing
+at the dawn of 5G: A survey,” 2020, arXiv:2001.07077. [Online].
+Available: https://arxiv.org/abs/2001.07077
+[167] V. Smith, C.-K. Chiang, M. Sanjabi, and A. S. Talwalkar, “Federated
+multi-task learning,” in Proc. Adv. Neural Inf. Process. Syst., 2017,
+pp. 4424–4434.
+[168] A. Jindal, G. S. Aujla, and N. Kumar, “SURVIVOR: A blockchain
+based edge-as-a-service framework for secure energy trading in
+SDN-enabled vehicle-to-grid environment,” Comput. Netw., vol. 153,
+pp. 36–48, Apr. 2019.
+[169] K.
+Muhammad,
+T.
+Hussain,
+M.
+Tanveer,
+G.
+Sannino,
+and
+V. H. C. de Albuquerque, “Cost-effective video summarization using
+deep CNN with hierarchical weighted fusion for IoT surveillance
+networks,” IEEE Internet Things J., vol. 7, no. 5, pp. 4455–4463,
+May 2020.
+[170] S. H. Ahmed et al., “Emerging technologies for connected and
+smart vehicles,” IEEE Commun. Mag., vol. 56, no. 10, pp. 20–21,
+Oct. 2018.
+[171] H. Guangjie et al., “Emerging information and communication tech-
+nologies for autonomous driving,” IEEE Wireless Commun., vol. 26,
+no. 4, pp. 4–5, Aug. 2019.
+[172] K. Z. Ghafoor, K. A. Bakar, J. Lloret, R. H. Khokhar, and
+K. C. Lee, “Intelligent beaconless geographical forwarding for urban
+vehicular environments,” Wireless Netw., vol. 19, no. 3, pp. 345–362,
+Apr. 2013.
+[173] J. Srinivas, A. K. Das, and N. Kumar, “Government regulations in
+cyber security: Framework, standards and recommendations,” Future
+Gener. Comput. Syst., vol. 92, pp. 178–188, Mar. 2019.
+[174] M. Cunneen,
+M. Mullins,
+F. Murphy, D. Shannon, I. Furxhi,
+and
+C.
+Ryan,
+“Autonomous
+vehicles
+and
+avoiding
+the
+trolley
+(Dilemma): Vehicle perception, classiﬁcation, and the challenges of
+framing decision ethics,” Cybern. Syst., vol. 51, no. 1, pp. 59–80,
+Jan. 2020.
+[175] A. B. Hillel, R. Lerner, D. Levi, and G. Raz, “Recent progress in
+road and lane detection: A survey,” Mach. Vis. Appl., vol. 25, no. 3,
+pp. 727–745, Apr. 2014.
+[176] M. Cordts et al., “The cityscapes dataset for semantic urban scene
+understanding,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
+(CVPR), Jun. 2016, pp. 3213–3223.
+[177] G. Ros, L. Sellart, J. Materzynska, D. Vazquez, and A. M. Lopez,
+“The SYNTHIA dataset: A large collection of synthetic images for
+semantic segmentation of urban scenes,” in Proc. IEEE Conf. Comput.
+Vis. Pattern Recognit. (CVPR), Jun. 2016, pp. 3234–3243.
+[178] E. Romera, J. M. Alvarez, L. M. Bergasa, and R. Arroyo, “ERFNet:
+Efﬁcient residual factorized ConvNet for real-time semantic segmen-
+tation,” IEEE Trans. Intell. Transp. Syst., vol. 19, no. 1, pp. 263–272,
+Jan. 2018.
+[179] M. Johnson-Roberson, C. Barto, R. Mehta, S. N. Sridhar, K. Rosaen,
+and R. Vasudevan, “Driving in the matrix: Can virtual worlds replace
+human-generated annotations for real world tasks?” in Proc. IEEE Int.
+Conf. Robot. Autom. (ICRA), May 2017, pp. 746–753.
+[180] M. Cunneen, M. Mullins, and F. Murphy, “Autonomous vehicles and
+embedded artiﬁcial intelligence: The challenges of framing machine
+driving decisions,” Appl. Artif. Intell., vol. 33, no. 8, pp. 706–731,
+Jul. 2019.
+[181] R. McAllister et al., “Concrete problems for autonomous vehi-
+cle safety: Advantages of Bayesian deep learning,” in Proc. 26th
+Int. Joint Conf. Artif. Intell., Aug. 2017, pp. 4745–4753, doi: 10.
+24963/ijcai.2017/661.
+[182] E. Petridou and M. Moustaki, “Human factors in the causation of
+road trafﬁc crashes,” Eur. J. Epidemiol., vol. 16, no. 9, pp. 819–826,
+Sep. 2000.
+[183] I. Lana, J. J. Sanchez-Medina, E. I. Vlahogianni, and J. D. Ser, “From
+data to actions in intelligent transportation systems: A prescription
+of functional requirements for model actionability,” 2020, arXiv:2002.
+02210. [Online]. Available: https://arxiv.org/abs/2002.02210
+Khan Muhammad (Member, IEEE) received the
+Ph.D. degree in digital contents from Sejong Uni-
+versity, South Korea. He is currently working as an
+Assistant Professor with the Department of Software
+and a Lead Researcher of the Intelligent Media
+Laboratory, Sejong University. His research interests
+include intelligent video surveillance (ﬁre/smoke
+scene analysis, transportation systems, and disas-
+ter management), medical image analysis, (brain
+MRI, diagnostic hysteroscopy, and wireless cap-
+sule endoscopy), information security (steganogra-
+phy, encryption, watermarking, and image hashing), video summarization,
+multimedia, computer vision, the IoT, and smart cities. He has ﬁled/published
+more than seven patents and 140 papers in peer-reviewed journals and
+conferences in these areas. He is serving as a reviewer for more than 90 well-
+reputed journals and conferences, from IEEE, ACM, Springer, Elsevier, Wily,
+SAGE, and Hindawi publishers. He acted as a TPC member and the session
+chair at more than ten conferences in related areas. He is an Editorial Board
+Member of the Journal of Artiﬁcial Intelligence and Systems and a Review
+Editor of the Section Mathematics of Computation and Data Science in the
+journal Frontiers in Applied Mathematics and Statistics.
+Amin Ullah (Student Member, IEEE) received the
+bachelor’s degree in computer science from Islamia
+College Peshawar, Peshawar, Pakistan. He is cur-
+rently pursuing the M.S. degree with the Intel-
+ligent Media Laboratory, Department of Digital
+Contents, Sejong University, South Korea, where
+he will pursue his Ph.D. degree. He has published
+several papers in reputed peer-reviewed interna-
+tional journals and conferences, including the IEEE
+TRANSACTIONS ON INDUSTRIAL ELECTRONICS,
+the IEEE TRANSACTIONS ON INDUSTRIAL INFOR-
+MATICS, the IEEE INTERNET OF THINGS JOURNAL, IEEE ACCESS, Future
+Generation Computer Systems, Neurocomputing, Multimedia Tools and Appli-
+cations, Mobile Networks and Applications, and Sensors. His major research
+focus is on human actions and activity recognition, sequence learning, image
+and video analytics, content-based indexing and retrieval, the IoT and smart
+cities, and deep learning for multimedia understanding.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+MUHAMMAD et al.: FOR SAFE AD: CURRENT CHALLENGES AND FUTURE DIRECTIONS
+21
+Jaime Lloret (Senior Member, IEEE) received the
+M.Sc. degree in physics in 1997, the M.Sc. degree in
+electronic engineering in 2003, and the Ph.D. degree
+in telecommunication engineering in 2006. He is
+currently an Associate Professor with Universitat
+Politecnica de Valencia. He is also the Chair of the
+Research Institute IGIC and the Head of the Active
+and Collaborative Techniques and Use of Techno-
+logic Resources in the Education (EITACURTE)
+Innovation Group. He has authored more than 450
+research articles and book chapters. He is an ACM
+Senior and IARIA Fellow. He was the Vice-Chair of the Europe/Africa Region
+of Cognitive Networks Technical Committee (IEEE Communications Society)
+from 2010 to 2012 and the Vice-Chair of the Internet Technical Committee
+(IEEE Communications Society and the Internet Society) from 2011 to 2013.
+He is also the Chair of the Working Group of the Standard IEEE 1907.1. He
+has been the Internet Technical Committee Chair of the IEEE Communications
+Society and the Internet Society from 2013 to 2015. Since 2016, he has
+been the Spanish Researcher with highest H-index in the Telecommunications
+journal list according to the Clarivate Analytics Ranking. He is the Editor-in-
+Chief of Ad Hoc and Sensor Wireless Networks and Network Protocols and
+Algorithms.
+Javier Del Ser (Senior Member, IEEE) received
+the ﬁrst Ph.D. degree (cum laude) in telecommuni-
+cation engineering from the University of Navarra,
+Spain, in 2006, and the second Ph.D. degree (summa
+cum laude, extraordinary prize) in computational
+intelligence from the University of Alcala, Spain,
+in 2013. He has held several positions as a Professor
+and a Researcher at different institutions of the
+Basque Research Network (including the University
+of Mondragon, CEIT and Robotiker). He is cur-
+rently a Research Professor in Data Analytics and
+Optimization with TECNALIA, Spain, a Visiting Fellow with the Basque
+Centre for Applied Mathematics (BCAM), and an Adjunct Professor with
+the University of the Basque Country (UPV/EHU). He is also a Senior
+AI Advisor with the technological startup Sherpa.AI. His research interests
+gravitate on data mining and optimization applied to a diversity of ﬁelds,
+such as Energy, Transportation, Mobility, Industry 4.0, Telecommunications,
+and Health. In these ﬁelds, he has published more than 300 scientiﬁc articles,
+co-supervised ten Ph.D. thesis, edited seven books, coauthored 9 patents, and
+participated/led more than 45 research projects. He has been involved in the
+organization of various national and international conferences, and serves as
+an Associate Editor in a number of indexed journals, including Information
+Fusion, Swarm and Evolutionary Computation, Cognitive Computation, and
+the IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+Victor Hugo C. de Albuquerque (Senior Member,
+IEEE) received the degree in mechatronics engi-
+neering from the Federal Center of Technological
+Education of Ceará (CEFETCE), in 2006, the M.Sc.
+degree in teleinformatics engineering from the Fed-
+eral University of Ceará (UFC), in 2007, and the
+Ph.D. degree in mechanical engineering from the
+Federal University of Paraíba (UFPB), in 2010. He
+is currently a Professor and a Senior Researcher
+with the University of Fortaleza, LAPISCO/IFCE,
+and ARMTEC Tecnologia em Robótica, Brazil. His
+research interests include the IoT, machine/deep learning, pattern recognition,
+and robotic.
+
+

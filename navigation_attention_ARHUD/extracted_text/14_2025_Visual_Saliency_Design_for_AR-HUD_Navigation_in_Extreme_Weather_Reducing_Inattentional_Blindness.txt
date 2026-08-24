@@ -1,0 +1,270 @@
+# 来源: Jina @ https://doi.org/10.1109/access.2025.3588576
+
+Title: Visual Saliency Design for AR-HUD Navigation in Extreme Weather: Reducing Inattentional Blindness
+
+URL Source: https://doi.org/10.1109/access.2025.3588576
+
+Markdown Content:
+*    Download References 
+*   [Request Permissions](https://ieeexplore.ieee.org/document/)
+*   [Save to](https://ieeexplore.ieee.org/document/)
+*   [Alerts](https://ieeexplore.ieee.org/document/)
+
+This study explores how dynamic scaling and contour saliency in AR-HUD navigation reduce inattentional blindness in extreme weather. A user study combining eye-tracking a...
+
+## Abstract:
+
+Background: Current research on AR-HUD visual icons focuses primarily on interface, color, and motion trajectory design. However, when displayed in complex environments, ...[Show More](https://ieeexplore.ieee.org/document/)
+
+## Metadata
+
+## Abstract:
+
+Background: Current research on AR-HUD visual icons focuses primarily on interface, color, and motion trajectory design. However, when displayed in complex environments, AR-HUD might cause inattentional blindness, particularly during extreme weather conditions where occurrence rates increase significantly. Methods: This study employed a two-factor within-subjects design to examine how dynamic saliency and contour saliency in AR-HUD navigation graphics affect inattentional blindness and user experience. Eye-tracking metrics with total fixation time and first fixation time, driver reaction time, and user experience scores were analyzed. Results: Objective measures revealed significant interaction effects between saliency types, though user experience feedback showed no significance. Both contour and dynamic saliency effectively reduced inattentional blindness and improved information-seeking efficiency. Conclusions: The combination of dynamic and contour saliency produced the lowest inattentional blindness rates, fastest reaction times, and highest user satisfaction. We recommend: 1) adding distinct contours to prevent environmental visual fusion, 2) implementing temporary icon enlargement during critical moments to enhance attentional capture. These findings provide actionable design principles for improving AR-HUD safety in adverse weather conditions.
+
+This study explores how dynamic scaling and contour saliency in AR-HUD navigation reduce inattentional blindness in extreme weather. A user study combining eye-tracking a...
+
+**Page(s):** 137613 - 137622
+
+**Date of Publication:** 14 July 2025
+
+[](http://ieeexplore.ieee.org/Xplorehelp/Help_Pubdates.html)
+
+**Electronic ISSN:** 2169-3536
+
+* * *
+
+CCBY - IEEE is not the copyright holder of this material. Please follow the instructions via https://creativecommons.org/licenses/by/4.0/ to obtain full-text articles and stipulations in the API documentation.
+
+SECTION I.
+
+## Introduction
+
+Augmented Reality Head-Up Displays (AR-HUDs) can assist navigation by mitigating the perceptual degradation caused by adverse external environments. By overlaying navigational information directly onto the windshield, AR-HUDs integrate digital cues with the real-world view, thereby enhancing driver attention and facilitating cognitive resource recovery, which ultimately improves both cognitive availability and visibility [1], [2]. While well-designed AR-HUD interfaces can enhance the allocation of cognitive resources, poorly designed systems may compromise driving safety [3]. This issue is particularly prominent when drivers operate under varying road conditions, such as rain or fog, which can significantly degrade visual perception and impair attention distribution [4]. Therefore, it is essential to examine how the visual design of AR-HUD navigation graphics affects drivers’ inattentional blindness in extreme weather conditions.
+
+Previous research on inattentional blindness during driving has largely focused on environmental and task-related factors. Driving is a cognitively demanding activity that requires managing multiple environmental variables [5]. Inattentional blindness occurs when critical stimuli are overlooked due to limited attentional resources [6], and such occurrences are exacerbated in rainy or foggy conditions. Reduced visibility, visual noise from raindrops, and the motion of wipers can distort attention allocation, increasing the likelihood of inattentional blindness [6]. In low-illumination foggy conditions, attentional resources may become strained due to visual processing limitations [7]. Reference [8] have indicated that perceptual, cognitive, and physical workload can impair situational awareness and negatively affect attention distribution. Reference [9] also noted that the concurrent demands of multitasking, internal and external distractions, and the need to monitor and predict the behavior of other road users can result in inattentional blindness and potential accidents [10]. When driving in extreme weather, already-limited attention resources can be further compromised by poorly designed AR-HUDs, increasing the risk of missing critical information [11], [12], [13]. This highlights the negative impact of suboptimal AR-HUD interface designs.
+
+To mitigate inattentional blindness, researcher emphasized improving interface structure to enhance cognitive resource allocation [14]. AR-HUD systems that redirect attention to areas of interest (AOIs) associated with potential risks can reduce cognitive load and enable faster responses [15]. Similarly, [16] demonstrated that prioritizing safety alerts and essential information within AR-HUD interfaces based on driving context can significantly improve attention allocation. However, although some researchers have explored the role of enhanced alerts for unpredictable events in reducing inattentional blindness, few have examined the influence of AR-HUD information design itself on this phenomenon. The effectiveness of AR-HUD interfaces depends on the perceptual properties of the displayed graphical elements, which may either convey vital information or become distracting. In extreme weather conditions such as rain and fog, the probability of inattentional blindness may be further elevated. Therefore, this study focuses on the visual saliency design of AR navigation graphics, aiming to investigate how their graphical features influence inattentional blindness in adverse weather conditions.
+
+SECTION II.
+
+## Literature Review
+
+Unlike in clear weather, illumination levels are significantly reduced in foggy or rainy conditions due to the scattering and absorption by water droplets and mist particles in the atmosphere [17]. Extreme weather phenomena are inherently challenging to perceive clearly due to their complex and variable nature, being influenced by a range of factors including atmospheric conditions, geographical features, and climate change. These conditions can impair color perception and visual clarity, making driving in such environments particularly demanding [18]. In contrast, clear weather generally improves visibility, ensures stable road conditions, and facilitates safer driving speeds, thereby reducing the likelihood of accidents [19].
+
+Heavy rainfall dramatically reduces available illumination. A comparative study of illumination levels under various weather conditions revealed a significant drop in illuminance during intense rainfall [20]. Fog scatters illumination, resulting in attenuation, halo effects, and visual occlusion, which all contribute to reduced visibility and illumination levels [21]. Reference [11] demonstrated that reduced visibility alters drivers’ emergency responses, and that driving simulator fidelity also impacts estimations of such behaviors. Moreover, factors such as wet road surfaces and signal illumination control significantly influence the severity of fog-related crashes, though they appear to have minimal impact during clear conditions [22]. Given these findings, this study adopts rainy and foggy weather as the experimental scenarios. The primary objective is to evaluate how the placement and design of AR-HUD graphical information under extreme weather conditions affects inattentional blindness, thereby supporting drivers in effectively acquiring information from both the interface and their surrounding environment.
+
+The design of AR-HUD navigation systems directly influences the allocation of users’ attentional resources during human–machine interaction, affecting driver perception, user experience, and behavioral outcomes [23], [24]. Visual saliency design has been approached from multiple perspectives [25], referring to the dynamic alteration of visual attributes such as size, color, animation, to make specific elements stand out and capture user attention. A study in ergonomics found that adjusting the color contrast combinations of HUD graphics can enhance visibility and reduce visual search time [24]. Reference [23] confirmed that blinking animation effects and transparency levels between 0.5–0.75 can effectively mitigate inattentional blindness. While static graphics support good perceptual motion, dynamic visual features significantly enhance driver awareness and attentional allocation [24]. Reference [26] compared two types of navigation graphics—boomerangs and arrows—and their four variations, finding that boomerang designs led to faster reaction times and greater trust and satisfaction. Most prior research has focused on color, interface layout, arrow shapes, and animation modes, but has overlooked how visual saliency under high-risk or extreme conditions may reduce inattentional blindness.
+
+Adding a color ring around graphics can significantly enhance their visual saliency, making them more prominent and easily recognizable. This technique is especially effective in environments with limited display space, where salient cues improve navigation and information display [27]. The theoretical terms for visually saliency elements using outlines or strokes include contour saliency or contour mapping [28]. Studies have shown that adding borders or color circles around symbols is a preferred method for increasing saliency because it preserves the original semantic meaning while enhancing visibility [29]. Using black outlines improves visibility and provides contrast against various backgrounds, whereas colored outlines may blend into either the graphic or background, leading to potential confusion [30]. Therefore, this study includes contour saliency (with vs. without black outline) as one of the independent variables to examine its effect on inattentional blindness.
+
+Additionally, animated AR-HUD graphics have been shown to draw attention to emergency warnings, making them more prominent in complex driving environments [31], [32], [33]. Compared to static warnings, animated alerts in AR-HUD reduce detection time by 25.64%, allowing drivers to notice them more quickly [34]. Various dynamic effects include movement, pulsation, deformation, gradient shifts, rotation, blinking, and blurring [35], [36]. However, existing AR-HUD navigation arrows are often presented using repetitive motion animations, and their unchanging visual characteristics may induce visual fatigue or habituation under hazardous conditions, resulting in inattentional blindness. Therefore, we propose that during normal driving, navigation animation remains unchanged, while in proximity to danger, arrows enlarge from 150px to 300px to highlight potential risks. The graphic size is based on standard AR-HUD dimensions, ranging from $150\times 150$ px to $300\times 300$ px [16], [37]. While larger animated AR-HUD graphics enhance attention to emergencies, frequent and poorly managed AR graphical changes may lead to visual clutter and increased cognitive load [38]. Hence, this study also adopts animation presentation (static vs. enlarged arrow) as an independent variable to examine its effect on driver inattentional blindness during extreme weather conditions.
+
+In summary, previous studies on AR-HUD navigation design have primarily focused on factors such as interface layout, information density, graphic motion design, color contrast, and display area, and their influence on driver behavior, visibility, subjective acceptance, and user satisfaction. However, they have largely overlooked whether the saliency design of AR-HUD information affects the occurrence of inattentional blindness among drivers. How can AR-HUD navigation graphics be designed to enable drivers to perceive information quickly and efficiently during driving, while minimizing distraction and ensuring safe operation. To address this gap, the present study aims to investigate the effect of visual saliency in AR-HUD navigation graphics on inattentional blindness and user experience by analyzing eye-tracking metrics, visual search efficiency, and subjective evaluation. This study seeks to identify which types of graphic variations most effectively assist drivers in acquiring navigational information swiftly and accurately while staying focused on the driving environment, thereby reducing the likelihood of traffic accidents.
+
+To achieve these objectives, the study proposes the following research questions (RQs):
+
+**RQ1**: Can AR-HUD navigation graphics of contour saliency significantly reduce drivers’ inattentional blindness?
+
+**RQ2**: Can dynamically scaled AR-HUD navigation graphics significantly reduce drivers’ inattentional blindness?
+
+To address RQ1, we reviewed visual saliency strategies in AR-HUD design and selected contour saliency (graphic outlining) as an independent variable to examine its effect on inattentional blindness. A controlled experiment was conducted incorporating user experience surveys, driver behavior observations, and eye-tracking data to obtain both subjective and objective results. To address RQ2, we designed a dynamic scaling animation for navigation graphics, changing their size from 150 px to 300 px as the vehicle approaches an obstacle or perceives a potential hazard. The performance of this dynamic graphic was then compared with a constant-sized graphic to evaluate its impact on driver attention and awareness.
+
+SECTION III.
+
+## Methods
+
+### A. Experimental Participants and Equipment
+
+This study used the G*Power model to estimate the experimental sample size. Statistical test power with a standard effect size of 0.8 or above is generally considered to be effective, so the test power is generally considered to be 0.8 [39]. According to Cohen’s guidelines to interpret the practical significance of statistical results, an effect size (f) below 0.1 is considered small, approximately 0.25 is medium, and above 0.4 is large. Typically, medium and large effect sizes are deemed acceptable [40]. To ensure the reliability and validity of the study, a significance level ($\alpha $ ) of 0.05, an effect size (f) of 0.25, and a statistical power of 0.95 were set, resulting in a minimum sample size of 18 participants.
+
+We recruited 30 participants with an approximately balanced gender distribution. Their ages ranged from 20 to 25 years, with a mean age of 22.23 years (SD =1.73). All participants held valid driver’s licenses, with an average driving experience of 2.21 years (SD =3.11). The majority had attained a bachelor’s degree and possessed a fundamental understanding of driver-assistance technology, while some had prior experience using HUD. To ensure consistency, all participants were required to have normal or corrected-to-normal vision, hold a valid driver’s license, and be right-handed. Eye-tracking was captured and analyzed using a Tobii desktop eye tracker.
+
+The experimental video was presented on a 34-inch screen with a standard 16:9 aspect ratio, measuring approximately 79 cm in width and 34 cm in height, simulating the size of a typical automobile windshield. To recreate a realistic driving environment, the experiment also utilized a Logitech G29 steering wheel, accelerator pedal, brake pedal, and a driving seat. The buttons on the steering wheel were used to record participants’ driving response times. In addition, participants wore Tobii Pro Glasses 3 eye-tracking glasses to detect and record Eye-tracking data throughout the experiment.
+
+### B. Experiment Material Design
+
+#### 1) AR-HUD Navigation Graphics and Scenario Design
+
+This study employed a two-factor within-subjects design. The independent variables were the contour saliency and dynamic effects of AR-HUD navigation graphics, while the dependent variable was inattentional blindness. In this experiment, we manipulated two key variables: (a) contour saliency (CS+: with black outline vs. CS-: without black outline), and (b) animation presentation (APS: fixed arrow vs. APE: dynamically scaled arrow) were used to evaluate dynamic effects. Accordingly, four different combinations of AR-HUD navigation graphics were created.
+
+Dynamic navigation graphics were developed using Unity. Drawing upon earlier studies, the AR-HUD graphics adopted a boomerang-shaped navigation concept [41], and were designed in orange, a color proven to be robust and suitable for rain and fog conditions [42]. The contour saliency effect was achieved by applying black outlines, while the dynamic animation involved a gradual scaling of the graphic from 150 px to 300 px. [Figure 1](https://ieeexplore.ieee.org/document/) illustrates the dynamic effects of the experimental AR-HUD navigation graphics, and [Figure 2](https://ieeexplore.ieee.org/document/) presents the contrast between graphics with and without contour saliency.
+
+[![Image 1: FIGURE 1. - Dynamic size variation of navigation graphics. The left shows a constant-size animated navigation graphic throughout the scenario, while the right shows a graphic that gradually increases in size when approaching a hazardous area.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu1ab-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu1ab-3588576-large.gif)
+
+**FIGURE 1.**
+
+Dynamic size variation of navigation graphics. The left shows a constant-size animated navigation graphic throughout the scenario, while the right shows a graphic that gradually increases in size when approaching a hazardous area.
+
+[![Image 2: FIGURE 2. - Contour saliency effects of graphics. The left shows a constant-size graphic with a black contour, and the right shows a dynamically enlarging graphic with contour saliency.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu2ab-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu2ab-3588576-large.gif)
+
+**FIGURE 2.**
+
+Contour saliency effects of graphics. The left shows a constant-size graphic with a black contour, and the right shows a dynamically enlarging graphic with contour saliency.
+
+Due to practical limitations, such as the inability to simulate diverse real-world weather conditions in the short term, this study collected 50 images each of various levels of rainy and foggy weather from online sources. The rainy weather images included light rain, moderate rain, heavy rain, and torrential rain [43], [44], while the foggy conditions included both light fog and dense fog [45], [46]. To determine the experimental luminance settings, we used the Image Color Summarizer tool [47] to calculate the average illuminance of rain and fog scenes. [Figure 3](https://ieeexplore.ieee.org/document/) shows a sample of the collected foggy weather images, and [Figure 4](https://ieeexplore.ieee.org/document/) displays sample images of rainy conditions. Finally, an extreme weather scenario was designed, simulating hazardous conditions involving both rain and fog. [Table 1](https://ieeexplore.ieee.org/document/) summarizes the final experimental materials.
+
+**TABLE 1**Experiment Material
+
+[![Image 3: Table 1- Experiment Material](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t1-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t1-3588576-large.gif)
+
+[![Image 4: FIGURE 3. - Illuminance sampling of foggy weather images.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu3-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu3-3588576-large.gif)
+
+**FIGURE 3.**
+
+Illuminance sampling of foggy weather images.
+
+[![Image 5: FIGURE 4. - Illuminance sampling of rainy weather images.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu4-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu4-3588576-large.gif)
+
+**FIGURE 4.**
+
+Illuminance sampling of rainy weather images.
+
+#### 2) Design of Interactive Content for AR-HUD Navigation Driving Simulation Scenes
+
+This study employed Unity-based materials to realistically simulate a first-person driving environment. Subsequently, both objective and subjective data from participants were collected through experiments. The road types used in the simulated scenes were all based on real-world roads. Four experimental conditions were created and exported.
+
+According to current research and actual driving conditions, visibility in rainy and foggy weather is significantly reduced, impairing sensor data acquisition and making the detection of obstacles and lane markings more difficult [48], [49]. In foggy weather, the recognition of vehicles, pedestrians, and cyclists is diminished, increasing the risk of collision [50]. Situation awareness is reduced due to the lack of depth cues in such weather. The decreased brightness and contrast also make it more difficult to perceive warning information in the environment, potentially causing drivers to miss intersections or be involved in accidents [51], [52], [53]. Therefore, participants were required to undergo scenarios that are prone to inattentional blindness, with attention data collected via button presses on the Logitech steering wheel. In these scenarios, the Ego-Car drove at a constant speed through urban roads under rainy and foggy weather conditions. These roads included features such as buildings, trees, traffic lights, street lamps, road signs, other vehicles, and pedestrians. The road types included arterial roads, collector roads, highways, and minor roads. The Ego-Car performed both turning and straight-driving maneuvers. Additionally, four attention-blindness-prone test scenarios were embedded, each occurring once during the simulation.
+
+### C. Data Collection and Analysis
+
+To investigate the effects of contour saliency and dynamic effects in AR-HUD navigation graphics on driver inattentional blindness, a multidimensional evaluation approach was employed. Objective indicators included measures of inattentional blindness and eye-tracking metrics, supplemented by subjective assessments using a user experience questionnaire. Previous studies have assessed inattentional blindness through questioning [48] and button response tasks [54], [55], with the latter also capturing reaction time. In the present study, both eye-tracking and button-press data were collected to evaluate participants’ efficiency in perceiving AR-HUD navigation information and to identify instances of inattentional blindness, thereby providing objective support for the analysis. In adverse weather conditions such as rain and fog, attention-related blindness is more likely to occur. Accordingly, the response time to three specific traffic scenarios—traffic light turning red, pedestrian stepping into the road, and decreasing following distance of the lead vehicle—was recorded in milliseconds as a baseline reference for non-inattentional blindness. The final analysis used the cumulative reaction score across all trials, with higher values indicating longer response times and lower values reflecting quicker responses.
+
+In addition, the AR-HUD navigation graphics were defined as areas of interest (AOIs) within the eye-tracking data. Two primary metrics were extracted: Total Dwell Time (TDT) and Time to First Fixation (TTFF) [15]. TDT represents the cumulative time spent fixating on the AOI, which may indicate increased cognitive demand or enhanced visual saliency. An optimal TDT typically falls within 500–2000 ms; a TDT $\leq 500$  ms suggests insufficient attention, whereas $\geq 2000$  ms may indicate distraction due to complexity, occlusion, or misleading content. TTFF refers to the time taken to initially fixate on the AOI, with shorter durations suggesting that the AR-HUD graphics successfully captured attention. Optimal TTFF is generally between 100–300 ms. Values outside this range may reflect either failure to attract attention or delayed detection. These indicators collectively assess participants’ attentional distribution and cognitive processing of the dynamic AR-HUD graphics.
+
+Finally, participants’ subjective experience with the AR-HUD graphics was measured using the User Experience Questionnaire (UEQ) [56], providing additional insight into drivers’ overall perception and comfort during interaction. UEQ evaluates six dimensions: attractiveness, Perspicuity, efficiency, dependability, stimulation, and novelty. This scale reflects participants’ overall impression, comprehensibility, accessibility, and speed of information processing. Responses were recorded using a 7-point Likert scale ranging from 1 representing strongly disagree to 7 representing strongly agree. The total score across all dimensions was used for final analysis, with higher scores indicating a more favorable user experience.
+
+### D. Experimental Procedure
+
+Prior to the experiment, 30 participants were asked to carefully read and sign an informed consent form. Each participant received a brief introduction explaining the research background and objectives. Upon confirming their understanding of the experimental procedure, participants were seated in a driving simulator, equipped with Tobii wearable eye-tracking glasses, and underwent a calibration process. They were instructed to minimize body movement and maintain the same posture as during calibration throughout the session. The experimental materials were developed using Unity 2022 LTS and programmed in C#, the only officially supported language for Unity, which was also used to collect driving behavior data. Before the formal experiment began, each participant completed a practice session to become familiar with the task and experimental setup. During the formal phase, each participant completed four experimental sessions, each involving three inattentional blindness measurement scenarios. Participants began each session by reading the instructions and pressing the accelerator to initiate the trial. The four experimental sessions were presented in a randomized order to control for order effects. After completing each session, participants completed the UEQ. This process continued until all four sessions were completed. A detailed flowchart of the experimental procedure is provided in [Figure 5](https://ieeexplore.ieee.org/document/).
+
+[![Image 6: FIGURE 5. - The procedure of the experiment.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu5-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu5-3588576-large.gif)
+
+**FIGURE 5.**
+
+The procedure of the experiment.
+
+SECTION IV.
+
+## Results
+
+The contour saliency and dynamic enhancement of AR-HUD navigation graphics significantly influenced driver behavior and subjective experience. This study examined the effects of contour saliency including CS+ and CS-, dynamic saliency including APS and APE by analyzing participants’ Time to First Fixation (TTFF), Total Dwell Time (TDT), reaction time, and subjective responses from the UEQ. The UEQ assessed six dimensions: attractiveness, perspicuity, efficiency, dependability, stimulation, and novelty.
+
+### A. Reaction Time
+
+To investigate the effects of contour saliency and dynamic saliency in AR-HUD navigation graphics on reaction time, this study employed a two-factor ANOVA. Since Levene’s test provided partial evidence of heterogeneity of variance ($p =0.034$ ), the Kolmogorov–Smirnov test was conducted. The results showed no significant deviation in reaction time ($p \gt 0.05$ ), indicating that the data conformed to normality. Contour saliency and dynamic saliency were used as independent variables, and the reaction time under inattentional blindness conditions was used as the dependent variable. A two-factor repeated-measures ANOVA was conducted. As shown in [Table 2](https://ieeexplore.ieee.org/document/), the main effect of the dynamic graphic was significant. There was a significant main effect of Dynamic on reaction time, $F =52.63$ , $p \lt 0.001$ , $\eta p^{2} =0.31$ , indicating that dynamic conditions significantly reduced reaction time compared to non-dynamic conditions. A significant main effect of Contour was also found, $F =14.76$ , $p \lt 0.001$ , $\eta p^{2} =0.11$ , with the presence of contour resulting in shorter reaction times. Importantly, the interaction between Dynamic and Contour was significant, $F =8.08$ , $p =0.015$ , $\eta p^{2} =0.05$ , suggesting that the impact of dynamic information on reaction time was moderated by the presence of contour.
+
+**TABLE 2**Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on Reaction Time
+
+[![Image 7: Table 2- Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on Reaction Time](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t2-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t2-3588576-large.gif)
+
+As shown in [Table 3](https://ieeexplore.ieee.org/document/), the APE/CS+ condition (M =1579.63, SD =271.02) had the shortest reaction time, indicating the most effective reduction of inattentional blindness. The next best conditions in order were APE/CS- (M =1654.33, SD =250.37), APS/CS+ (M =1839.70, SD =342.70), and APS/CS- (M =2182.30, SD =316.86).
+
+**TABLE 3**The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on Reaction Time
+
+[![Image 8: Table 3- The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on Reaction Time](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t3-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t3-3588576-large.gif)
+
+### B. Eye-Tracking Responses
+
+The Kolmogorov–Smirnov test results showed that both total fixation duration and first fixation duration reached significance ($p \lt 0.05$ ), but the absolute kurtosis values were less than 10 and the absolute skewness values were less than 3, indicating that although the data were not perfectly normal, they could be basically accepted as normally distributed. This study conducted a two-factor ANOVA on the Eye-tracking data and obtained the following results.
+
+#### 1) Total Fixation Duration
+
+As shown in [Table 4](https://ieeexplore.ieee.org/document/), analysis revealed a significant main effect of Dynamic, $F=54.60$ , $p \lt 0.001$ , $\eta p^{2} =0.32$ , indicating that dynamic conditions influenced drivers’ visual scanning behavior. The main effect of Contour was also significant, $F=4.22$ , $p=0.042$ , $\eta p^{2} =0.04$ . Moreover, the Dynamic $\times $  Contour interaction was significant, $F=23.86$ , $p \lt 0.001$ , $\eta p^{2} =0.17$ , indicating a combined influence of both factors on total fixation duration.
+
+**TABLE 4**Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on Total Fixation Duration
+
+[![Image 9: Table 4- Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on Total Fixation Duration](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t4-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t4-3588576-large.gif)
+
+As shown in [Table 5](https://ieeexplore.ieee.org/document/), the APE/CS+ condition (M =1836.47, SD =359.52) was more effective at attracting attention, followed by APS/CS+ (M =1607.27, SD =704.83). The total fixation duration in the APE/CS- condition (M =2471.30, SD =526.22) was excessively long, whereas in the APS/CS- condition (M =1348.17, SD =319.23) it was too short.
+
+**TABLE 5**The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on Total Fixation Duration
+
+[![Image 10: Table 5- The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on Total Fixation Duration](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t5-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t5-3588576-large.gif)
+
+#### 2) First Fixation Duration
+
+The results in [Table 6](https://ieeexplore.ieee.org/document/) show a significant main effect of Dynamic, $F=16.59$ , $p \lt 0.001$ , $\eta p^{2} =0.13$ . The main effect of Contour was also significant, $F=26.58$ , $p \lt 0.001$ , $\eta p^{2} =0.19$ . Additionally, there was a significant interaction effect, $F=11.34$ , $p=0.001$ , $\eta p^{2} =0.09$ , suggesting that the combination of dynamic information and contour had a synergistic effect on initial visual attention.
+
+**TABLE 6**Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on First Fixation Duration
+
+[![Image 11: Table 6- Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on First Fixation Duration](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t6-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t6-3588576-large.gif)
+
+As shown in [Table 7](https://ieeexplore.ieee.org/document/), the APE/CS+ condition (M =1836.47, SD =359.52) had the longest first fixation duration, indicating the strongest attention attraction. It was followed by APS/CS+ (M =186.30, SD =72.12) and APE/CS- (M =176.37, SD =48.26), whereas the APS/CS- condition (M =108.10, SD =35.34) had too short a first fixation duration, which may lead to inattentional blindness.
+
+**TABLE 7**The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on First Fixation Duration
+
+[![Image 12: Table 7- The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on First Fixation Duration](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t7-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t7-3588576-large.gif)
+
+In summary, both dynamic and contour significantly influenced drivers’ objective behavioral measures, with interaction effects further highlighting the importance of considering their combined impact on driver performance. [Figure 6](https://ieeexplore.ieee.org/document/), shows the comparison of objective data.
+
+[![Image 13: FIGURE 6. - The figure shows the average total fixation time (A), first fixation time (B) and reaction time (C) (unit: ms) under four experimental conditions (APE/CS+, APE/CS-, APS/CS+, APS/CS-), and the error bars represent standard errors.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu6abc-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu6abc-3588576-large.gif)
+
+**FIGURE 6.**
+
+The figure shows the average total fixation time (A), first fixation time (B) and reaction time (C) (unit: ms) under four experimental conditions (APE/CS+, APE/CS-, APS/CS+, APS/CS-), and the error bars represent standard errors.
+
+### C. Subjective Evaluation of User Experience
+
+User experience subjective evaluations passed the Jarque-Bera test, showing that all elements followed a normal distribution. Subsequently, two-factor ANOVA analyses were conducted separately on six dimensions, with the total UEQ score used for comparison to determine the AR-HUD condition that provides the best user experience and driving sensation.
+
+As shown in [Figure 7](https://ieeexplore.ieee.org/document/) and [Table 8](https://ieeexplore.ieee.org/document/), The results of ANOVA showed that dynamics had a significant effect on the total UEQ score ($F=73.946$ , $p\lt 0.001$ ), and contour also had a significant effect ($F=30.765$ , $p\lt 0.001$ ). However, the interaction between dynamics and contour was not significant ($F=0.012$ , $p=0.911$ ). The results show that no matter what the contour condition is, dynamics can significantly improve the user experience score; similarly, the contour condition also has a significant impact on the user experience, suggesting that the independent effects of dynamics and contours on UEQ should be emphasized in interface design. Since both factors only contain two levels, no Bonferroni post hoc test was performed.
+
+**TABLE 8**Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on UEQ
+
+[![Image 14: Table 8- Two-Factor Repeated Measures ANOVA Results for the Effects of Dynamic and Contour on UEQ](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t8-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t8-3588576-large.gif)
+
+[![Image 15: FIGURE 7. - Mean values of the total UEQ scores under four experimental conditions (APE/CS+, APE/CS-, APS/CS+, APS/CS-), with error bars representing standard deviations.](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu7-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu7-3588576-large.gif)
+
+**FIGURE 7.**
+
+Mean values of the total UEQ scores under four experimental conditions (APE/CS+, APE/CS-, APS/CS+, APS/CS-), with error bars representing standard deviations.
+
+As shown in [Table 9](https://ieeexplore.ieee.org/document/), APE/CS+ (M =35.57, SD =2.32) provided the best user experience, followed by APE/CS- (M =33.13, SD =2.89) and APS/CS+ (M =31.77, SD =2.461), while APS/CS- (M =29.23, SD =2.08) scored the lowest, indicating the weakest user experience.
+
+**TABLE 9**The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on UEQ
+
+[![Image 16: Table 9- The Effect of Dynamics and Contour Saliency in AR-HUD Navigation Graphics on UEQ](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t9-3588576-small.gif)](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/6287639/10820123/11079581/liu.t9-3588576-large.gif)
+
+SECTION V.
+
+## Discussion
+
+### A. Reaction Time Analysis
+
+The results of this study indicate that both dynamic saliency and contour saliency significantly shortened drivers’ reaction times ($p \lt 0.001$ ), with a significant interaction between the two factors ($p=0.007$ ). Specifically, the navigation graphic APE/CS+, which featured both dynamic and contour saliency, performed best with the shortest reaction time ($M=1594.67$  ms), while the APS/CS- graphic, lacking both enhancements, performed the worst ($M =2183.50$  ms). These findings support the research hypotheses (RQ1 & RQ2), namely that dynamic changes and contour outlining can effectively reduce inattentional blindness. Particularly in low-illumination conditions such as foggy or rainy weather, visually salient designs can accelerate the driver’s perception of critical information. The interaction effect further suggests that dynamic effects work better with the assistance of contour outlines. This may be because contours enhance the boundary contrast of graphics, while dynamic changes attract attention through motion cues, with both working synergistically to improve visual search efficiency. This finding aligns with [26], who also reported that dynamic graphics reduce reaction times; however, the present study further reveals the additive effect of contour outlining.
+
+### B. Eye-Tracking Indicators (Total Fixation Duration and First Fixation Duration) Analysis
+
+The results for total fixation duration (TDT) and time to first fixation (TTFF) show that dynamic and contour saliency have differential impacts on visual attention allocation. Dynamic saliency significantly reduced total fixation duration ($p \lt 0.001$ ), indicating that dynamically enlarging graphics help drivers process information more quickly, thereby reducing cognitive load. In contrast, the main effect of contour saliency was relatively weaker ($p=0.042$ ), but its interaction with dynamics was significant ($p \lt 0.001$ ). This suggests that AR-HUD designs with contour outlining under dynamic enlargement further optimize attention allocation, with the APE/CS+ condition achieving the best performance in total fixation duration. For first fixation duration, the main effect of contour saliency was stronger ($p \lt 0.001$ ), indicating that outlining more effectively captures initial attention. The results show that the APE/CS+ condition had the longest first fixation time, suggesting it most successfully attracted attention. Dynamic saliency may serve to maintain attention through continuous motion. These results are consistent with the visual saliency theory proposed by [25], which states that static contours “capture” attention through high contrast, while dynamic changes “hold” attention via motion cues.
+
+### C. User Experience (UEQ) Analysis
+
+Both dynamic and contour saliency significantly enhanced user experience scores (total score: $p \lt 0.001$ ), but no interaction effect was found between them ($p=0.911$ ), indicating their subjective influences are independent. Dynamic saliency had the greatest effect on the dimensions of novelty and attractiveness, consistent with the findings of [34], which showed that animation effects can enhance interface appeal. Contour saliency significantly improved perspicuity and dependability, supporting the view of [29] that contours enhance information readability and trust. Notably, the APE/CS+ condition scored the highest across all UEQ dimensions (M =5.93), indicating that users preferred designs combining both dynamic and contour features. However, this advantage may stem from the additive effects of the two factors rather than a synergistic enhancement, as no interaction was observed.
+
+SECTION VI.
+
+## Conclusion
+
+This study employed a two-factor within-subject design to examine how dynamic and contour saliency in AR-HUD graphics affect inattentional blindness and user experience. Results showed that both forms of saliency significantly improved reaction time, eye-tracking behavior, and subjective experience. Dynamic saliency facilitated information processing via motion cues, while contour saliency enhanced initial attention capture through high-contrast boundaries. The combined dynamically scaled arrow with black outline APE/CS+) condition yielded the best overall performance. These findings offer both theoretical insight into multimodal visual saliency under extreme weather and practical guidance for AR-HUD design, supporting the integration of dynamic graphics with black contours to optimize driving safety and experience.
+
+Despite these contributions, the study has certain limitations. Although the Unity platform was used to simulate realistic driving conditions, it could not fully replicate the complex interference of foggy and rainy weather. Moreover, the sample consisted mainly of participants aged 20–25 with relatively limited driving experience, raising questions about the generalizability of the findings to older or more experienced drivers. The experiment focused only on short-term reactions and did not account for possible long-term adaptation, such as habituation-induced inattentional blindness due to repeated exposure to salient elements.
+
+Based on the current findings and limitations, future research can proceed in several directions. First, fine-tuned control of dynamic parameters is recommended: exploring the effects of different animation speeds and graphic transformation amplitudes on visual attention could help establish quantitative design guidelines. Second, multimodal integration—combining visual saliency with auditory or haptic feedback—may further reduce cognitive load under extreme weather conditions. When feasible, real-world validation should be conducted via on-road testing using in-vehicle AR-HUDs during adverse weather, alongside physiological indicators such as heart rate and electrodermal activity to assess design safety. Additionally, participant selection should account for individual differences such as age and driving experience to enhance external validityCitation.
+
+## Data Availability Statement
+
+The datasets used during the current study are available from the corresponding author upon reasonable request.
+
+## Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+## Abbreviations
+
+The following abbreviations are used in this manuscript:
+
+APS Animation Presentation With Static Arrow.
+APE Animation Presentation With Enlarged Arrow.
+CS+With Contour Saliency.
+CS-Without Contour Saliency.

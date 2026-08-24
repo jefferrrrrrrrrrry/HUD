@@ -1,0 +1,264 @@
+--- Page 1 ---
+2351-9789 © 2015 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license 
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Peer-review under responsibility of AHFE Conference
+doi: 10.1016/j.promfg.2015.07.678 
+ Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+Available online at www.sciencedirect.com 
+ScienceDirect
+6th International Conference on Applied Human Factors and Ergonomics (AHFE 2015) and the 
+Affiliated Conferences, AHFE 2015
+A comparison of display concepts for a navigation system in an 
+automotive contact analog head-up display
+Lisa Pfannmüllera,*, Martina Kramerb, Bernhard Sennerb, Klaus Benglera
+aTechnische Universität München, Institute of Ergonomics, Boltzmannstr. 15, 85747 Garching, Germany
+bAUDI AG, 85057Ingolstadt, Germany
+Abstract
+Contact analog head-up displays (cHUDs) enable the presentation of augmented reality (AR) information in the driver’s primary 
+field of view and are a promising display innovation in light of the increasing degree of assistance and automation in modern
+cars. As cHUD technology still faces several limitations, robust and error-tolerant display concepts are required. Four design 
+variations (cut-off, no cut-off, tilt, 2D) of two display concepts (boomerang, arrow) for contact analog navigation were realized in 
+a mock-up setting in which the virtual cHUD image was overlaid on a video recording of a real driving scene. Thirty participants 
+(within-subjects design) ratedattractiveness, positional accuracy, functionality, clearness/unambiguousness, distraction, quality of 
+3D representation, interpretability, and intuitiveness. The results suggest that the variation tilt cannot be recommended for 
+application in an automotive cHUD. The boomerang concept was preferred over the arrow concept. The results have important 
+implications for the design of contact analog information in an automotive cHUD.
+© 2015 The Authors. Published by Elsevier B.V.
+Peer-review under responsibility of AHFE Conference.
+Keywords:Head-up display; Augmented reality; Contact analog; Driving simulator; Display concept; Navigation
+* Corresponding author. Tel.: +49-89-289-15413; fax: +49-89-289-15389.
+E-mail address: pfannmueller@lfe.mw.tum.de
+© 2015 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license 
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Peer-review under responsibility of AHFE Conference
+
+--- Page 2 ---
+2723
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+1. Introduction
+Thenature of the driving task has been changed by the increase of assistance and information systems in the 
+vehicle that are supposed to enhance safety and comfort while driving[1]. Although these systems aim at 
+disburdening the driver, he isstill in charge of supervising these systems, their operations and correct functioning. 
+Innovative display technologies play an important role inthe ergonomic implementation of the interaction between 
+driver and vehicle in the context of increasing degrees of assistance and automation in modern and future 
+automobiles. Conventional head-up display (HUD) technology is already implemented in many series vehicles of 
+different manufacturers.Via a virtual image appearing in front of the car, HUDs enable the presentation of 
+information in the driver’s primary field of view.This helps the driver monitor driving-related information, such as 
+the speedometer orAdvanced Driver Assistance Systems (ADAS) with minimum focal accommodation and eye 
+movement effort, i.e., while keeping his eyes on the road, resulting insafety benefits such as reduced eyes-off-the-
+road times and faster reaction times to unexpected traffic events[2–5].
+A further stage of conventional HUD technology is the realization of augmented reality (AR) in the HUD, i.e., the 
+combination of real and virtual information via the projection onto a transparent plane [6]. In a so-called contact 
+analog head-up display (cHUD), information is still presented in the driver’s primary field of vision, but now
+directly superimposed onto the real driving environment outside the car. By providing thisimmediate spatial context 
+information, contact analogy in an automotive HUD is supposed to reduce the driver’scognitive effort required to 
+interpret the information displayed and correctly transfer it to the traffic environment. AR cues have already been
+shown to be efficient in directing the driver’s attention to and improving his detection of critical traffic events or 
+objects [7–10]. Due to its intuitiveness andthe spatial information provided, AR information in an automotive 
+cHUDmay help to increase situation and system awareness, and may improvethe understanding of ADAS such as 
+ACC.
+AlthoughcHUD technology seems to implynumerous advantagesover other information presentation approaches, 
+there are several challenges to the successful implementation of an automotive cHUD.Deviations of the virtual 
+information from the ideal location in the outside environment, due to imprecise sensor (e.g. GPS) or road map 
+data,bear the risk of driver distraction and annoyance. Depending on the characteristics of the optical system, the 
+driver’s sitting position, head posture, and movements,as well as pitch and yaw movements of the vehicle [11]may 
+lead to displacements of the virtual image in relation to the driving environment. Package limitations constitute 
+another challenge, as they determine the maximum display range of the virtual image. The resulting limitations,
+especially in the horizontal plane, prevent information in the cHUDfrombeing displayed in contact analog manner 
+across the whole windshield.Instead, the virtual information will either be cut off or has to renounce contact analogy 
+at some point. Furthermore, adding virtual information to the real world within the driver’s primary field of vision 
+may interfere with his perception of the traffic scene, reducing accuracy and increasing reaction times for the 
+detectionof critical objects or events [12] due to masking, clutter, interposition, or divided attention.These limitations 
+have to be considered when developing concepts for presenting information in an automotivecHUD.
+Whereas the general optical quality of current cHUD systems has been subject to ongoing improvements, some of 
+the technological limitations mentioned above will most likely not be eliminated in the foreseeable future. In light of 
+these limitations, an optimized ergonomic concept for presenting information in the cHUD,with respect to or within 
+the technological boundaries,becomes even more important. Potential display concepts should support the 
+augmentation, aim at maximizing functionality, and intuitiveness while minimizing distraction or masking of 
+(critical) real life objects.Although there are guidelines for the presentation of visual information in the vehicle 
+[13,14], focused research on the design of display concepts for a cHUD has been scarce and,if at all, has mainly been 
+realized in driving simulators with the virtual image of the cHUD directly integrated into the simulated driving 
+environment, which doesnot precisely constitute an augmented reality but a virtual reality setting.  
+In the current study, four design variations of two display concepts wereeach realized in an innovative mock-up 
+setup in which the virtual cHUD image was accurately overlaid over a video recording of a real driving scene. The 
+detailed description and illustration of the setup is given in the following.
+
+--- Page 3 ---
+2724  
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+2. Method
+2.1. Participants
+Thirty participants (seven women, 23 men, Mage = 32.9, SDage= 6.4, range = 22-52 years) took part in the study. 
+All participants were employees of AUDI AG, recruited via an e-mail distribution list, with an average of 26,383 km 
+driven per year. Fifty-seven percent of the participants were users of a conventional head-up display. All participants 
+gave written, informed consent and did not receive any monetary compensation for their participation in the study.
+All participants reported having normal or corrected-to-normal vision.
+2.2. Experimental setup, display concepts and design variations
+The experimental setup (see Fig. 1) consisted of a cHUD mock-up anda projection screen 10m in front of the 
+mock-up. Video recordings of a real driving scene (driver’s perspective) were projected onto the screen (resolution 
+1280 x 960 pixel). The virtual image of the cHUD (physical resolution: 858 x 600 pixel), starting at 12m in front of 
+the mock-up, was superimposed on top of the driving scene. The setup resembled a driving simulator, but differed in 
+that participants in the current study were not able to actively intervene in the driving process and the driving scene 
+was not a simulation, but a video recording of a real drive. 
+In the current study, two display concepts (boomerang vs. arrow) for a navigation system in a cHUD and four 
+variations of each concept were implemented (see Fig. 2 and 3). In the four design variations, the navigation symbol 
+(display concept: boomerang or arrow) was either (a) cut off by the limited display range when turning onto a street 
+(cut-off), (b) not cut off (no cut-off), (c) tilted along its longitudinal axis when approaching the maneuver point (tilt), 
+or (d) supplemented by a 2D (not contact analog) arrowwhen approaching the maneuver point (2D).
+2.3. Procedure
+All participants were presented with all four variations of the two display concepts. The order of the display 
+concepts was randomized, but within each concept the variations were presented in a fixed order (a-d; see previous 
+section) due to technical limitations. The recorded route on which the cHUD image was superimposed was the same 
+for both display concepts, with an approximate length of 600 m passing through a residential area with little traffic. 
+After having seen each variation of a concept, participants filled out a questionnaire, i.e., eight times in total. 
+Fig.1.Experimental setup with cHUD mock-up andprojection screen.
+
+--- Page 4 ---
+2725
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+Fig. 2.Boomerang concept with the four different design variations: (a) cut-off, (b) no cut-off, (c)tilt, (d) 2D.
+Fig. 3.Arrow concept with the four different design variations: (a) cut-off, (b) no cut-off, (c)tilt, (d) 2D.
+a)
+b)
+c)
+d)
+a)
+b)
+c)
+d)
+
+--- Page 5 ---
+2726  
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+In the questionnaire, participants rated attractiveness (“The design of the navigation symbol was attractive.”), 
+positional accuracy (“The navigation symbols were displayed at the correct location in the environment.”), 
+functionality (“The design of the symbols was functional.”), clearness/unambiguousness (“The navigation 
+instructions provided by the symbols were clear, i.e., unambiguously comprehensible.”), annoyance (“The design of 
+the symbols was annoying.”), distraction (“The design distracted me from the traffic.”), quality of 3D representation
+(“The 3D representation of the navigation symbols was well recognizable.”), interpretability (“The design of the 
+symbols required a high degree of concentration in order to interpret them.”), and intuitiveness (“The design of the 
+symbols was intuitive.”) on a 5-point Likert scale with the endpoints fully disagree and fully agree.
+3. Results
+Two-way (Concept [boomerang, arrow] x Variation [cut-off, no cut-off, tilt, 2D]) repeated measures ANOVAs 
+were calculated toanalyze all items separately. Greenhouse-Geisser corrections were applied in case of violations of 
+sphericity.Post-hoc t-tests with Bonferroni-correction were calculated for all significant main effects of the factor 
+variation. 
+The arrow concept was rated significantly more ambiguous than the boomerang concept, F(1,28)= 4.84, p<.001, 
+as well as more difficult/effortfulto interpret, F(1,28)=4.42, p=.003, and less intuitive, F(1,28)= 4.32, p=.003 (see 
+Fig. 4). For all other items, no significant main effect of the concept was revealed.
+The ANOVAs revealed a significant main effect of the design variation for the items attractiveness, F(3, 26) = 
+25.09, p< .001, accuracy, F(3, 26) = 16.16, p< .001, functionality, F(3, 26) = 14.09, p< .001, 
+clearness/unambiguousness, F(3, 26) = 8.64, p< .001, annoyance, F(3, 26) = 27.66, p< .001, distraction, F(3, 26) = 
+18.71, p< .001, interpretability, F(3, 26) = 4.81, p= .002, and intuitiveness, F(3, 26) = 8.77, p< .001. The variations 
+did not differ significantly from each otherwith respect to the quality of 3D representation.
+As can be seen in Fig.5-7and the indicated results from the Bonferroni-corrected post-hoc t-tests, the variation tilt
+was rated the least attractive, least accurate, least functional, most ambiguous, most difficult to interpret, and least 
+intuitive compared to all other variations. The variations tilt and 2D were perceived as significantly more annoying 
+and distracting than cut-off and no cut-off, as can be seen in Fig. 6 (b and c). 
+Fig. 4.(a) Clearness/Unambiguousness: “The navigation instructions provided by the symbols were clear, i.e., unambiguously 
+comprehensible.”;(b) Interpretability: “The design of the symbols required a high degree of concentration in order to interpret them.”; (c)
+Intuitiveness: “The design of the symbols was intuitive.”
+
+--- Page 6 ---
+2727
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+Fig.. 5. (a)Attractiveness: “The design of the navigation symbol was attractive.”; (b) Positional Accuracy: “The navigation symbols were 
+displayed at the correct location in the environment.”; (c) Functionality: “The design of the symbols was functional.”
+Fig. 6.(a) Clearness/Unambiguousness: “The navigation instructions provided by the symbols were clearly/ unambiguously comprehensible.”;(b)
+Annoyance: “The design of the symbols was annoying.”; (c) Distraction: “The design distracted me from the traffic.”
+Fig. 7.(a) Interpretability: “The design of the symbols required a high degree of concentration in order to interpret them.”; (b) Intuitiveness: “The 
+design of the symbols was intuitive.”
+
+--- Page 7 ---
+2728  
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+4. Discussion
+In the current study, different display concepts and design variations for contact analog navigation in a HUD 
+were compared in light of current technological limitations of automotive cHUD systems. Although participants 
+were not actively driving, the advantage of the experimental setup over a driving simulator was the realization of an 
+augmented reality scenario with the virtual image of the cHUD overlaid on the video recording of a driving scene. In 
+most driving simulator studies, cHUDs arealso only simulated by integrating the symbols directly into the 
+simulation environment.
+Significant 
+differences 
+between 
+the 
+two 
+navigation 
+display 
+concepts 
+were 
+only
+revealed 
+for 
+clearness/unambiguousness, interpretability, and intuitiveness. For each of the three items, the boomerang concept 
+was preferred over the arrow concept. One possible reason is that the continuous, extensive, and rather salient
+arrowbears a greater risk of interferingwith the driver’s perception of the traffic scene than the string of boomerangs 
+due to masking or attentional and cognitive capture [12,15].This should be verified in a future study, which also 
+takes into account objective measures of driving performance and attention.
+For eight of the nine items, significant differences between the design variations were revealed. All in all, the 
+variation tilt received significantly worse ratings than all other variations. Only for distraction and annoyance,tilt 
+and 2D were both rated significantly worse than the other two variations.Based on the current results, the variation 
+tilt can, therefore,not be recommended for the application in an automotive cHUD. With respect to a 2D symbol in 
+addition to the contact analog symbol, it is possible that this combination might have caused disadvantageous 
+display clutter[5,15]. Whether it is sensible to temporarily replace the contact analog navigation symbol by a static 
+2D representation in certain situations or to smoothly transform the 3D into a 2D representation is subject to further 
+investigations.Interestingly, having the navigation symbol cut off by the horizontal borders of the virtual image did 
+not have a negative impact on the ratings as might have been expected. It is possible that an additional animation/ 
+movement of the virtual symbol such as the tiltmay have attracted the driver’s attention more strongly than the cut
+due to the saliency of the movement[16]. Although animation can be purposefully used to direct attention e.g. to 
+hazards, the animation in the context of navigation may have rather been perceived as distracting or annoying and 
+may not have been intuitively understandable.This issue needs to be addressed in future investigations. 
+In general, as in a conventional HUD, display clutter and highly salient, obtrusive design of the AR information
+should also be avoided in a cHUD. Although a comparison of different cHUD display concepts for ACC has 
+revealed surprisingly little differences between a minimalistic and a very salient, stimulating display concept 
+concerning workload and standard deviation of the steering wheel[17], as virtual elements in the cHUD are
+presented in the driver’s safety-critical primary field of vision, it is advised to only display informationsituationally
+and if desired by the driver. 
+5. Conclusion
+All in all, future research should aim at developing and evaluating guidelines for the safe and ergonomic design 
+of display concepts for automotivecHUDsagainst the background of the characteristics of the information to be 
+displayed, as well as the technological and environmental limitations. As the current study only included subjective 
+ratings as dependent measures and was conducted in a laboratory setting, the results need to be validated in a 
+naturalistic driving study using also metrics for driving and navigation performance. Future investigations should
+focus on the optimal design of different cHUD display concepts with respect to the driver’s attention, workload, and
+driving performance, as well as usability and customer acceptance. While the current study focused on navigation 
+only, the integration and prioritization of information from different ADAS needs to be addressed in future studies.
+Acknowledgements
+The authors would like to thank icon incar for their graphical support.
+
+--- Page 8 ---
+2729
+ Lisa Pfannmü ller et al. /  Procedia Manufacturing  3 ( 2015 )  2722 – 2729 
+References
+[1]K. Bengler, K. Dietmayer, B. Farber, M. Maurer, C. Stiller, H. Winner, Three Decades of Driver Assistance Systems: Review and Future 
+Perspectives, IEEE Intell. Transport. Syst. Mag. 6 (2014) 6–22.
+[2]R.J. Kiefer, Defining the "HUD benefit time window", in: Vision in vehicles - VI, Derby, England, North Holland, Amsterdam, New York, 
+1998, pp. 133–142.
+[3]K.W. Gish, L. Staplin, Human Factors Aspects of Using Head Up Displays in Automobiles: A Review of the Literature, Washington D.C., 
+1995.
+[4]R.J. Kiefer, Older Drivers' Pedestrian Detection Times Surrounding Head-Up Versus Head-Down Speedometer Glances, in: Vision in vehicles 
+-VII, Marseille, France, Elsevier, Amsterdam, New York, 1999, pp. 111–118.
+[5]W.J. Horrey, C.D. Wickens, A.L. Alexander, The Effects of Head-Up Display Clutter and In-Vehicle Display Separation on Concurrent 
+Driving Performance, Proc. Hum. Fact. Ergon. Soc. Annu. Meet. 47 (2003) 1880–1884.
+[6]R.T. Azuma, A Survey of Augmented Reality, Presence-Teleop. Virt. 6 (1997) 355–385.
+[7]C. Ho, C. Spence, Assessing the effectiveness of various auditory cues in capturing a driver's visual attention, J. Exp. Psychol.-Appl. 11 (2005) 
+157–174.
+[8]M. Yeh, C.D. Wickens, Display Signaling in Augmented Reality: Effects of Cue Reliability and Image Realism on Attention Allocation and 
+Trust Calibration, Hum Factors 43 (2001) 355–365.
+[9]M.L. Rusch, M.C. Schall, P. Gavin, J.D. Lee, J.D. Dawson, S. Vecera, M. Rizzo, Directing driver attention with augmented reality cues, 
+Transp Res Part F Traffic Psychol Behav 16 (2013) 127–137.
+[10]M.C. Schall, M.L. Rusch, J.D. Lee, J.D. Dawson, G. Thomas, N. Aksan, M. Rizzo, Augmented Reality Cues and Elderly Driver Hazard 
+Perception, Hum Factors 55 (2013) 643–658.
+[11]M. Schneid, Entwicklung und Erprobung eines kontaktanalogen Head-up Displays im Fahrzeug. Dissertation, Munich, 2009.
+[12]M.C. Schall, M.L. Rusch, J. Lee, D. Vecera, S.M. Rizzo, Attraction without distraction: effects of augmented reality cues on driver hazard 
+perception, J Vis 10 (2010) 236.
+[13]International Organization for Standardization, ISO 15008:2009,Road vehicles -- Ergonomic aspects of transport information and control
+systems -- Specifications and test procedures for in-vehicle visual presentation 13.180; 43.040.15, 2009.
+[14]Commission of the European Communities, Commission Recommendation of 26 May 2008 on safe and efficient in-vehicle information and 
+communication systems: update of the European Statement of Principles on human-machine interface, Brussels, 2008.
+[15]P.M. Ververs, C.D. Wickens, Head-Up Displays: Effect of Clutter, Display Intensity, and Display Location on Pilot Performance, Int J Aviat 
+Psychol 8 (1998) 377–403.
+[16]J. Wolfe, Visual Search, in: H. Pashler (Ed.), Attention, University College London Press, London, 1998.
+[17]B. Israel, M. Seitz, H. Bubb, B. Senner, Contact Analog Information in the Head-Up Display – How Much Information Supports the Driver?, 
+in: H. Khalid, A. Hedge, T. Ahram (Eds.), Advances in Ergonomics Modeling and Usability Evaluation, CRC Press, 2010, pp. 163–171.

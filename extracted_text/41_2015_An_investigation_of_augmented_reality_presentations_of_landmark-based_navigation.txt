@@ -1,0 +1,819 @@
+--- Page 1 ---
+An Investigation of Augmented Reality Presentations of 
+Landmark-Based Navigation using a Head-Up Display
+Adam Bolton 
+University of Nottingham 
+Nottingham, UK 
+adamjbolton@hotmail.co.uk 
+Gary Burnett 
+University of Nottingham 
+Nottingham, UK 
+gary.burnett@nottingham.ac.uk 
+David R Large 
+University of Nottingham 
+Nottingham, UK 
+david.r.large@nottingham.ac.uk 
+ABSTRACT 
+Using landmark-based navigation can greatly improve 
+drivers’ route-finding performance. Previous research in 
+this area has tended to focus on the inclusion of text or 
+icon-based landmark information utilising dashboard-
+mounted displays. In contrast, we present landmark-based 
+navigation information using a Head-Up Display (HUD). A 
+major issue with using landmarks for navigation is their 
+inherent variability in quality, with many ‘poor’ candidates 
+that are not easily identifiable or communicable. A 
+proposed solution to improve the usefulness and utility of 
+such landmarks is to highlight/enhance them using 
+augmented reality (AR). Twenty participants undertook 
+four drives in a driving simulator utilising an AR navigation 
+system presented on a HUD. Participants were provided 
+navigational instructions presented as either conventional 
+distance-to-turn information, on-road arrows or augmented 
+landmark information (arrow highlighting or box enclosing 
+landmark adjacent to the required turning). Participants 
+demonstrated significant performance improvements while 
+using the AR landmark 'box’ presentations compared to 
+conventional distance-to-turn information, with response 
+times and success rates enhanced by 43.1% and 26.2%, 
+respectively. Moreover, drivers reported a significant 
+reduction in workload when using the AR landmark 
+‘boxes’. We conclude that there are significant benefits to 
+providing 
+navigational 
+information 
+utilising 
+AR 
+presentations of landmark information on a HUD. 
+Author Keywords 
+Heads-Up Display; Augmented Reality; Landmarks; 
+Navigation Systems. 
+ACM Classification Keywords 
+H.5.m. Information interfaces and presentation (e.g., HCI):
+Miscellaneous.
+INTRODUCTION 
+Originally deployed with aerospace, Head-Up Displays 
+(HUD) have attracted significant interest within the 
+automotive research community. By presenting information 
+on a HUD, drivers are able to maintain their view of the 
+road ahead whilst acquiring the displayed information, 
+leading to improvements in driving performance and safety 
+[9]. Traditionally, HUD in vehicles have been used to 
+provide limited task-related information, such as current 
+speed, revs, warnings, etc. More recently, researchers have 
+investigated the potential of displaying other driving-related 
+information on HUD, such as navigational advice/ 
+instructions (with the aim of reducing navigational decision 
+time and uncertainty) [3]. These studies have tended to 
+simply re-present traditional distance-to-turn styles of 
+information, previously intended for Head-Down Displays 
+(HDD). Nevertheless, performance enhancements have still 
+been realised.  
+For example, in a comparative study involving a secondary 
+observation task, participants achieved 100% success rate 
+while following navigation information presented on a 
+HUD, compared to 80% associated with the equivalent 
+‘head-down’ display. The HUD navigation system was also 
+deemed to be less physically and mentally demanding [12]. 
+A similar study demonstrated that the gaze retention period 
+(amount of time focused on the navigational cues) was 
+significantly lower when using the HUD, suggesting that 
+less time is ‘spent’ acquiring information from the HUD 
+[2]. Both [9] and [11] reported similar preferences, in 
+addition to improvements in driving performance, when 
+using a HUD, with the latter study revealing that 72.2% of 
+participants felt their driving was better when using the 
+HUD and two thirds of participants expressed a preference 
+towards using the HUD. However, opposite effects have 
+been reported within other fields, such as aviation – pilots 
+made more errors and collided with unexpected runway 
+obstacles when using a HUD in a Boeing 727 simulator 
+under conditions of low visibility and turbulence [7]. This 
+was attributed to pilots directing attention towards the HUD 
+imagery, rather than the real world situation, suggesting that 
+pilots were not fully engaged with the outside world. This 
+highlights 
+the 
+importance 
+of 
+ensuring 
+that 
+HUD 
+information is presented in a manner that minimises 
+distraction effects. [14] advise that priority should always 
+be given to visual information corresponding to the primary 
+Permission to make digital or hard copies of all or part of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that copies 
+bear this notice and the full citation on the first page. Copyrights for 
+components of this work owned by others than ACM must be honored. 
+Abstracting with credit is permitted. To copy otherwise, or republish, to 
+post on servers or to redistribute to lists, requires prior specific permission
+and/or a fee. Request permissions from Permissions@acm.org. 
+AutomotiveUI '15, September 01 - 03, 2015, Nottingham, United Kingdom 
+© 2015 ACM. ISBN 978-1-4503-3736-6/15/09…$15.00  
+DOI: http://dx.doi.org/10.1145/2799250.2799253 
+56
+
+--- Page 2 ---
+task, and thus HUD information and iconography should 
+not be placed such that it obscures real world information.  
+A related concern is that of visual clutter, whereby too 
+much information presented on the HUD can distract 
+drivers and cause objects in the outside world to be missed. 
+[16] highlighted the deleterious effects of visual clutter
+when observing military personnel equipped with helmet‐
+mounted displays (HMD) to detect targets hidden in terrain
+in the far domain. Reductions in detection times when there
+was no assistance from the HMD were attributed the highly
+detailed display causing clutter. [1] thus recommend that a
+maximum of three items can be displayed before
+deterioration in performance occurs due to ‘clutter.’
+The effect of workload on task performance may also 
+influence a driver’s ability to acquire visual information 
+presented on a HUD. Complex driving situations (dense 
+traffic, complicated road situations, high road speed etc.) 
+naturally elevates drivers’ cognitive and visual workload, 
+compared with driving along a straight road absent of 
+traffic. Furthermore, increases in secondary task demand 
+will elevate overall workload, and may encourage drivers to 
+prioritise the secondary task at the expense of driving, 
+thereby diverting their attention in-vehicle and leading to 
+decrements in driving performance (e.g. [15]). 
+Landmarks 
+There has been much interest regarding the use of 
+landmarks to support route-finding. Using landmarks 
+during the provision of directions is consistent with basic 
+human wayfinding strategies [5] and has been shown to 
+improve navigation and driving performance, increase 
+driver 
+confidence, 
+improve 
+engagement 
+with 
+the 
+environment, promote enhanced spatial learning and reduce 
+reliance on the navigation system, compared with 
+conventional distance-to-turn systems [4].  
+The provision of additional landmark information has been 
+shown to significantly reduce navigational decision time, 
+but failed to deliver any additional accuracy benefits [13], 
+although this may have been due to the use of an over-
+simplified driving scenario, where the ability to make errors 
+was significantly compromised. Indeed, [10] found that 
+using landmarks to navigate resulted in significantly fewer 
+errors than using a conventional distance-to-turn device. 
+Moreover, both [10] and [6] also witnessed an increase in 
+both driver performance and confidence when using 
+landmarks, and both studies demonstrated significantly 
+lower frequency of glances to the in-vehicle display, 
+thereby reducing eyes-off-road time.  
+A key consideration when selecting a landmark for use in a 
+navigation system is its ‘quality’ and effectiveness as a 
+navigational aid. Several formative studies have taken place 
+in order to determine the qualities that a ‘good’ navigational 
+landmark should possess (e.g. [5]). A common consensus is 
+that ‘good’ navigational landmarks should be permanent (in 
+form and labelling), easily visible, unique, have a useful 
+location and be easily identifiable. [10] found that the 
+quality of navigational landmarks is extremely important as 
+‘good’ landmarks resulted in a significant reduction in 
+navigation errors when compared to landmarks deemed to 
+be ‘poor’ navigational aids. Furthermore, drivers reported a 
+higher confidence in route-finding when using ‘good’ 
+landmarks. Examples of landmarks that are deemed to be 
+‘good’ navigational cues, include: traffic lights, petrol 
+stations, public houses, churches, schools and railway 
+stations [5]. However, there may be certain situations in 
+which the quality of ‘good’ landmarks is diminished 
+(perhaps temporarily), e.g. a church obscured by summer 
+vegetation, several sets of traffic lights in close proximity to 
+each other etc. [4]. A possible solution, in these situations, 
+is to enhance or augment the required landmark. 
+The aforementioned ‘landmark’ studies, though revealing, 
+were all conducted using ‘head-down’ in-vehicle displays, 
+and to the authors’ knowledge, no research has been 
+reported comparing landmark-based navigation presented 
+on a HUD with conventional distance-to-turn system 
+instructions presented in the same manner. It is 
+hypothesized that, by augmenting navigational instructions 
+with landmark information and presenting these on a HUD, 
+synergetic benefits (HUD versus HDD and landmark versus 
+conventional instructions) may be realised.  
+A study was conducted to compare conventional distance-
+to-turn information with augmented reality presentations of 
+landmark-based navigation. The study aimed to investigate 
+if landmark-based navigation reduced navigational decision 
+time and enhanced navigational success compared to a 
+conventional distance-to-turn approach. Furthermore, the 
+study considered whether using AR to enhance potentially 
+‘poor’ landmarks would increase their usability and utility 
+as ‘good’ navigational landmark candidates. 
+METHOD 
+Participants 
+Twenty participants were recruited to take part in the study 
+(14 males, 6 females). Ages ranged from 21 to 54 years 
+(mean, 27.7 years). All participants held a valid UK driving 
+license, but were not necessarily regular drivers. Mean 
+annual mileage for the 12 months prior to the study was 
+4115 miles (max. 15,000 miles), with 9 participants driving 
+daily and 11 driving occasionally. One participant used a 
+navigation device on a weekly basis, 16 occasionally and 3 
+never. Eight participants had previously used a driving 
+simulator and 6 had some experience using a HUD. 
+Apparatus, Design and Procedure 
+The experiment took place in a medium-fidelity, fixed-
+based driving simulator located at the University of 
+Nottingham. The simulator comprises the front half of a 
+2001 right-hand drive Honda Civic car positioned within a 
+curved screen setup. A bespoke driving scenario was 
+created using STISIM Version 3 software, to replicate a 
+57
+
+--- Page 3 ---
+ 
+Figure 1. In-vehicle setup showing HUD, road scene and 
+participant wearing ETG 
+suburban road scene presenting a challenging navigation 
+environment (i.e. many turnings close to one another). The 
+road scene was projected onto the curved screen in front of 
+participants using an overhead projector. To ensure that the 
+display of HUD imagery corresponded with the required 
+turnings and remained consistent between participants, a 
+video recording of the road scene was used. Participants 
+were required to maintain a normal driving position within 
+the simulator for the duration of each drive, but were not 
+actually in control of the vehicle. Navigation cues were 
+created 
+using 
+Synfig 
+Studio 
+animation 
+software 
+independently of the road scene and displayed using a 
+Pioneer Carrozzeria Laser ND-HUD1 head-up display unit 
+(customised to allow VGA input) affixed in place of the 
+driver’s sun visor (see Figure 1). Thus, the information 
+presented on the HUD appeared to be superimposed on the 
+driving scene. Playback of the driving scenario and HUD 
+cues was synchronised by the experimenter. SensoMotoric 
+Instruments (SMI) Eye Tracking Glasses (ETG) were used 
+to collect binocular gaze data at 30 fps. A digital camcorder 
+was unobtrusively located in order to record the driver’s 
+behaviour and their route selection. 
+Drivers completed the driving scenario using each of four 
+presentations of navigational instructions – conventional 
+(CV), AR arrows (AR), landmark arrows (LA) and 
+landmark boxes (LB) (see Figure 2). The conventional 
+(CV) presentation displayed the distance-to-turn (in metres) 
+and turn direction (utilising a fixed arrow) on the right or 
+left of the HUD display (depending on which direction was 
+being indicated). During the AR condition, an augmented 
+arrow was displayed in the centre of the road that pointed to 
+the required turning and changed dynamically (shortened 
+and increased in size) as the car approached the junction. 
+Landmarks were highlighted either by using an arrow 
+pointing at the landmark (LA) or by using boxes that 
+enclosed the landmark (LB). Distance-to-turn information 
+was present in all conditions. The HUD elements initially 
+appeared 15 seconds before each junction and were 
+synchronised with the road scene, thus updating/moving as 
+the participant approached the designated junction (e.g. the 
+distance-to-turn indicator counted down at increments of 10 
+metres, the landmark ‘box’ changed with perspective etc.). 
+ 
+ 
+ 
+ 
+Figure 2. Experimental conditions showing HUD images 
+superimposed on road scene (top to bottom: CV, AR, LA, LB) 
+The landmarks selected for the LA and LB conditions were 
+representative of ‘poor’ landmarks (as defined within the 
+aforementioned literature) and as such were neither unique 
+nor easily identifiable. These primarily comprised generic, 
+nondescript buildings. Both landmark conditions utilised 
+the same landmarks, ensuring consistency between 
+conditions, but they were encountered in a different order 
+and similar landmarks were presented at multiple junctions 
+to prevent the participant learning which landmark would 
+be highlighted. Throughout the simulated environment, all 
+traffic lights remained ‘green’ to avoid influencing driving 
+behaviour. 
+Drivers progressed along the route at a constant speed of 30 
+mph, encountering eight route-decision points. Each of 
+these contained eight possible road selections presented in 
+close proximity (4 to the right and 4 to the left). Participants 
+were asked to use the information presented on the HUD to 
+select the ‘correct’ turning. During the LA and LB 
+conditions, participants were advised that the correct 
+turning would always be immediately in front of the 
+highlighted landmark. Each roadway was coloured 
+differently (using primary colours) to aid identification. 
+58
+
+--- Page 4 ---
+Participants indicated their choice by initiating the 
+appropriate signalling action (activating right or left 
+indicator) and speaking aloud the colour of the road that 
+they would follow based on the information provided to 
+them. Participants were asked to signal and announce their 
+selection as soon as they were confident that they were 
+‘correct.’ 
+No 
+voice 
+information 
+was 
+provided 
+as 
+navigational cues, to ensure participants were wholly reliant 
+on the visual representations.   
+Following each drive, participants completed a NASA-TLX 
+questionnaire [8] to record the workload they associated 
+with each presentation. After completing all four 
+conditions, 
+participants 
+were 
+asked 
+to 
+rank 
+each 
+presentation (from 1 to 4, with 1 being most preferred and 4 
+being least). Drivers only experienced one style of 
+navigational cue during each drive and the order of 
+presentation was counterbalanced between subjects. Each 
+drive took approximately 5 minutes to complete and 
+participants wore ETG throughout. The entire study lasted 
+approximately 45 minutes. Participants received £10 (GBP) 
+as compensation for their time. 
+Measures 
+The following measures were captured: 
+1. Response Time. Defined as the time between the cue 
+being displayed on the HUD and the participant indicating 
+their choice by activating the appropriate indicator.  
+2. Success Rate. Defined as the number of correct road 
+selections for the entire route, expressed as a percentage. 
+3. Subjective Workload. Captured using the NASA TLX 
+questionnaire and reported as a raw cumulative mean value 
+determined across all subscales (mental, physical and 
+temporal demand, performance, effort and frustration). 
+4. Driver 
+Preference. 
+Captured 
+using 
+a 
+bespoke 
+questionnaire completed after all conditions had been 
+experienced and presented as a mean ranking. 
+5. Eye Glance Behaviour. Captured using SMI ETG. 
+Coded by Area of Interest (AOI) and presented as fixation 
+intensity (%), heat map visualisations and gaze sequence 
+charts. 
+6. General 
+Comments. 
+Captured 
+using 
+a 
+bespoke 
+questionnaire at the end of the study and presented, where 
+appropriate, within the discussion section. 
+RESULTS 
+Response Time 
+A repeated measures ANOVA, with Greenhouse-Geisser 
+correction, revealed a significant difference for the mean 
+response times between the four conditions (F(2,44)= 
+35.75, 
+p<.0001). 
+Post 
+hoc 
+comparisons, 
+applying 
+Bonferroni 
+correction, 
+indicated 
+that 
+participants’ 
+navigational decision time was significantly shorter during 
+the LB condition (mean 5.01 seconds, at a distance of  
+ 
+ 
+Figure 3. Mean response time and distance before turning 
+133.0m before the turning) compared with LA (5.62s, 
+122.4m; p<.05), AR (7.88s, 94.9m; p<.0001) and CV 
+presentations (8.81s, 80.5m; p<.0001) (see Figure 3). The 
+LA presentation was also significantly faster than AR 
+(p<.0001). In addition, participants performed significantly 
+slower during CV than in both AR (p<.05) and LA 
+(p<.0001). 
+Success Rate 
+A second ANOVA, with Greenhouse-Geisser correction, 
+revealed a significant difference between the success rates 
+for each of the four conditions (F(2,34)= 7.07, p < .005). 
+The Bonferroni-corrected post hoc tests showed that 
+participants achieved a significantly higher success rate 
+(mean 7.67 out of 8, 95.8%) while using the LB 
+presentation compared to both CV (6.08, 76.0%; p<.001) 
+and AR (7.17, 89.6%; p<.001). However, participants were 
+no more successful using LB than LA (7.42, 92.7%; 
+p=.086). Similarly, there were no significant differences in 
+success rates between the two non-landmark conditions, CV 
+and AR (p=.114) (see Figure 4). 
+ 
+Figure 4. Success rate with standard error bars 
+59
+
+--- Page 5 ---
+Figure 5. Mean workload ratings (raw-TLX) with standard 
+error bars 
+Figure 6. Drivers’ preference ratings 
+Subjective Workload 
+A repeated measures ANOVA test revealed significant 
+differences between workload ratings (raw-TLX score) 
+(F(3,57)=4.671, p=.005), with participants rating the CV 
+presentation as most demanding (mean score: 7.64). 
+Ratings for AR, LA and LB were not significantly different 
+from each other (5.88, 5.96 and 5.32, respectively) (see 
+Figure 5). It is also noteworthy that, on average, 
+participants felt that they performed better (revealed by the 
+NASA-TLX ‘performance’ subscale ratings) during the AR 
+presentation compared to LA, despite objective results 
+showing the opposite effect for both response time and 
+success rate. 
+Area Of Interest (AOI) 
+Distance- 
+to-turn 
+Road 
+Arrow 
+Land-
+mark 
+CV 
+14.0 
+26.6 
+NA 
+NA 
+AR 
+8.8 
+12.7 
+17.5 
+NA 
+LA 
+2.1 
+7.1 
+5.0 
+11.2 
+LB 
+1.2 
+13.8 
+NA 
+10.2 
+Table 1. Gaze fixation times (% of total time cues presented). 
+Driver Preference 
+A Friedman test revealed statistically significant differences 
+between participants’ preference rankings (χ2(3)=8.88, 
+p=.031). The LB presentation was most preferred (mean 
+ranking, 1.9) with CV being least preferred (ranking: 3.1). 
+Additionally, AR tended to be more preferred than LA, 
+with mean rankings of 2.4 and 2.6 respectively. Post hoc 
+Wilcoxon Signed Ranks tests 
+indicated 
+significant 
+differences between LB and CV (p<.01) and LA (p<.05) 
+only. Mean preference rankings for AR were less 
+perspicuous as this configuration divided opinion – 7 
+participants ranked this as their most preferred (‘1’), while 
+6 indicated that this was their least preferred presentation 
+(‘4’) – and this had opposing effects on the mean value (see 
+Figure 6). 
+Eye Glance Behaviour 
+Eye-tracking data were analysed from the time at which the 
+navigation cue was displayed to when the participant 
+indicated their response. Data recorded after each response 
+were not included during the analysis as there was no direct 
+driving involved in the task, meaning that participants were 
+not required to maintain attention. Eye glance fixations 
+were coded based on different areas of interest (AOI) for 
+each presentation. These were: distance-to-turn countdown 
+and the side-road turning itself (for all presentations). 
+Additionally, the following AOIs were coded (where 
+applicable): AR arrow (for AR), landmark (for LA and LB) 
+and landmark arrow (for LA). 
+Figure 7. Sequence chart visualisation of eye glance data (participant 20). 
+60
+
+--- Page 6 ---
+ 
+Figure 8. ‘Heat map’ visualisations of eye glance behaviour 
+Gaze fixation time, defined as the total time that 
+participants’ visual attention was directed towards elements 
+presented on the HUD (expressed as a percentage of the 
+total time (120 seconds) that each cue was presented), was 
+calculated for each condition (see Table 1). The ‘distance-
+to-turn’ cue received the highest proportion of participants’ 
+visual attention during CV and AR (14.0% and 8.8% 
+respectively), compared to 2.1% for LA and 1.2% for LB, 
+indicating less reliance on the conventional cue during the 
+‘landmark’ presentations. These data also highlight that the 
+total time looking at the navigational cues is significantly 
+lower during the two landmark conditions (LA, 30.2s; LB, 
+30.5s) compared with the CV (48.7s) and AR (46.8s). 
+The sequence chart (Figure 7) shows typical visual 
+strategies employed during each of the presentations. Heat 
+maps were also generated to visualise the frequency that 
+participants attended to each AOI (see Figure 8). The size 
+and colours represent the intensity of fixations, with larger, 
+redder areas indicating high fixation intensity and smaller, 
+greener dots indicating fewer fixations. It is evident from 
+the sequence charts that participant 20 viewed the distance-
+to-turn information frequently when using the CV and AR 
+presentations. However, this information was attended to 
+less during the landmark presentations. For example, during 
+the LB condition, distance-to-turn information was sampled 
+at the start of each navigational decision point but not used 
+again until the next decision point. It is also noteworthy that 
+the road itself was attended to least during the LA 
+presentation.  
+DISCUSSION 
+The main aim of the study was to compare different formats 
+of navigation advice presented on a HUD, with particular 
+focus on AR enhancement of landmarks. In line with 
+similar comparative studies conducted using HDD (e.g. 
+[10]), landmark-based navigation resulted in significant 
+improvements in performance, revealed by reduced 
+decision times and enhanced success rates, compared with 
+conventional distance-to-turn approaches. Furthermore, 
+both landmark presentations resulted in significantly lower 
+response times compared with the distance-to-turn and 
+more common AR presentations, such as arrows overlaid 
+on the road scene. The reduction in response time indicates 
+that participants were able to distinguish which landmark 
+was being highlighted and determine the ‘correct’ turning 
+more quickly than when provided with distance-to-turn or 
+roadway arrows (approximately 50 metres sooner). 
+In addition to quicker mean response times, the success rate 
+for the landmark-based conditions was also significantly 
+higher, on average, than the more conventional methods. It 
+is suggested that this is due to there being less ambiguity 
+when using landmarks, i.e. once the landmark has been 
+identified, it is ‘known’ and drivers simply select the 
+corresponding roadway. Furthermore, drivers are more 
+likely to remain confident that their choice of turning is 
+correct, as the landmark remains unchanged. In contrast, 
+drivers appeared to be less able to identify which turning 
+was highlighted by the CV and AR presentations, and 
+therefore either delayed these decisions or selected the 
+incorrect turning. 
+A major concern when using landmark-based navigation is 
+the quality and availability of landmarks during normal 
+driving 
+[5]. 
+By 
+conducting 
+the 
+experiment 
+using 
+traditionally ‘poor’, nondescript landmarks, the study also 
+demonstrated the feasibility of elevating the status of 
+unremarkable landmarks, and promoting their utility as 
+effective navigational cues. Furthermore, it was evident that 
+there was no requirement to name or identify the 
+purpose/function of the landmark in order to promote its 
+status – physically highlighting the landmark by using an 
+arrow or box appears to be sufficient to enhance its utility. 
+In contrast, other landmark-based navigation paradigms 
+61
+
+--- Page 7 ---
+require clear descriptors to allow users to identify 
+landmarks correctly (e.g. the name of a public house). 
+Results from the current study suggest that any building, 
+object or feature could be utilised for navigational purposes, 
+provided it can be highlighted on the HUD and persists in 
+the driver’s field of view, suggesting that there are 
+significant benefits to this navigational approach. However, 
+it is unclear from the current data whether participants were 
+actually attending to the landmark, or were solely fixated on 
+the box enclosing it (or a combination both). This has clear 
+implications for the design/acceptance of such a system. 
+It is also noteworthy from the eye-tracking data that drivers 
+relied less on the conventional distance-to-turn cues when 
+following the AR landmark-based navigation approaches, 
+compared to AR arrows. This suggests that once 
+participants had identified the ‘correct’ landmark, they 
+remained confident with their selection, and displayed no 
+tendency to interrogate the distance-to-turn cue to 
+confirm/re-affirm their choice. Such a strategy is 
+highlighted in the sequence map (Figure 7). When using 
+either the CV or AR presentations, participant 20 alternated 
+their fixations between the physical turning and the 
+distance-to-turn cue, suggesting constant checking/re-
+affirming. However, while using the LB, the participant 
+made a brief glance to the distance-to-turn at the start of 
+each manoeuvre but thereafter very few, if any, 
+confirmation checks were made, suggesting much higher 
+confidence in route selection.  
+It is also evident from the NASA TLX ratings that using the 
+LB approach to highlight the required turning significantly 
+reduced drivers’ perceived workload compared to the more 
+conventional AR approaches. This is likely to have been 
+influenced by a number of factors. For example, drivers 
+were not required to estimate distances when using 
+landmark presentations, thus reducing their cognitive/visual 
+effort. Consequently, the NASA-TLX scores for the 
+landmark conditions were relatively low, suggesting that 
+this style of presentation is likely to impose reduced 
+workload, allowing drivers to maintain their attention on 
+the primary driving task. 
+Participants’ preference ratings revealed that the least 
+preferred presentation was the conventional distance-to-turn 
+information. This is likely to be due to the fact that many 
+participants found it difficult to judge distances accurately 
+(highlighted by higher workload ratings and comments 
+recorded on the feedback form) and thus found it difficult to 
+identify the correct turning, particularly given that there 
+were several possible roads in close proximity; this is 
+supported by the objective data. 
+There were mixed responses to the AR presentation with 
+many participants scoring this either as most or least 
+preferred. Participant 6, who ranked AR as ‘least preferred’, 
+commented that, “it was difficult to concentrate on two 
+changing arrows simultaneously”. Others, who ranked this 
+presentation more highly, stated that the (road) arrow was 
+“quick” and “easy to read.” Nevertheless, none of the 
+participants who ranked AR as ‘most preferred’ performed 
+best using this presentation, suggesting that, although the 
+information was ‘quick’ and ‘easy’ to understand, this did 
+not necessarily translate to enhanced performance. This 
+may be because there was no performance feedback – 
+participants did not know if they had selected the correct 
+turning and may therefore believe that they had selected 
+correctly, even if they had not. Another possible 
+explanation is that this presentation was most comparable in 
+design to existing navigation systems and thus participants 
+were responding to ‘familiarity’ or expectations. This may 
+also have contributed to some of the positive responses to 
+the CV presentation. 
+When considering the two landmark conditions, it was 
+evident that there was a strong preference towards using a 
+box to identify the landmark rather than an arrow to 
+highlight it. Participants’ comments suggested that this was 
+because it was more difficult to identify to which landmark 
+the arrow pointed (there was also a high concentration of 
+buildings/other landmarks in the scenario). The arrow 
+provided limited depth perception cues making it difficult 
+to judge distance. Distance/depth perception is notoriously 
+difficult to determine within a simulated environment, due 
+to the monoscopic two-dimensional projection of the three-
+dimensional world. In the current study, using a box to 
+identify the landmark is effective even with poor depth 
+perception – the box assumed and maintained the same 
+approximate proportions as the landmark being represented 
+and thus there was little ambiguity or confusion identifying 
+the landmark and hence the correct turning. Indeed, there 
+were notably very few errors and responses times were 
+quickest using this presentation (identification was, “clear, 
+even in the distance”). In a commercialised product with a 
+wider field of view, one might conceive that the ‘box’ 
+would assume an exact outline of the chosen landmark, thus 
+making identification even easier.  
+Some participants also highlighted the desire/necessity of 
+maintaining the conventional distance-to-turn information 
+(“the distance was extremely useful in all conditions, 
+especially for confirming selection”) even with the more 
+‘novel’ presentations. Indeed, there was evidence from the 
+sequence 
+maps 
+that, 
+even 
+during 
+the 
+landmark 
+presentations, some participants made their selection using 
+the landmark cue and then confirmed that this was correct 
+by interrogating the distance-to-turn information repeatedly 
+until the road had been reached. 
+There was little evidence to suggest that drivers were 
+distracted by any of the HUD imagery during the study or 
+that 
+they 
+allocated 
+their 
+attention 
+inappropriately. 
+Furthermore, there was no evidence of poorer performance 
+due to inattention on the primary task when using the HUD, 
+as observed by [7], although it is recognised that no 
+baseline comparisons were made using a traditional ‘heads-
+down’ display during the study. Two participants 
+62
+
+--- Page 8 ---
+commented that they felt distracted when using the 
+landmark ‘box’ presentation (“focus was directed to the box 
+instead of the turning”). However, although participants 
+were seated in a car and were required to adopt a driving 
+position throughout the study, they were not actually in 
+control of the vehicle. Further work should investigate the 
+specific implications of these displays on the driving task. 
+CONCLUSIONS 
+The study investigated different augmented reality 
+presentations of navigational information using a HUD. 
+Results revealed strong preferences and navigational 
+performance benefits (in terms of speed of response and 
+accuracy) 
+when 
+using 
+AR landmark 
+presentations, 
+compared to other, more traditional presentations. Particular 
+benefits were associated with using a ‘box’ to highlight a 
+landmark located at the required intersection (with 
+improvements of 43.1% and 26.2% for response time and 
+success rate, respectively); this was also the most preferred 
+presentation and attracted the lowest ratings of workload. 
+The study also revealed that the usability and utility of 
+landmarks, that were previously assumed to be ‘poor’ 
+navigational candidates, could be enhanced by highlighting 
+them using AR. Furthermore, there was no requirement to 
+use descriptors to identify these landmarks, suggesting that 
+any building, object or feature that persists in the driver’s 
+(HUD) field of view could be used to support route-finding, 
+The inclusion of additional distance-to-turn information 
+would allow drivers to confirm their decisions, if required. 
+We conclude that there are significant benefits to this 
+navigational approach. In future work, care should be taken 
+to minimise the distraction effects of presenting additional 
+information to drivers and to avoid information ‘clutter’. 
+Further work should also consider the effects on driving 
+and consider the impact of improved depth perception in a 
+real world, rather than simulated environment. 
+REFERENCES 
+1. Ablaβmeier, M., McGlaun, G., Rigoll, G. (2005)
+“Evaluating the Potential of Head-Up Displays for a
+Multimodal Interaction Concept in the Automotive
+Environment.” Proceedings of the WMSCI
+2. Ablaβmeier, M., et al. (2007) “Eye Gaze Studies
+Comparing Head-Up and Head-Down Displays in
+Vehicles.” 
+IEEE 
+International 
+Conference 
+on
+Multimedia and Expo. 2250-2252.
+3. BMW. (2014) BMW Head-Up Display. Available:
+http://www.bmw.com/com/en/insights/technology/techn
+ology_guide/articles/head_up_display.html. 
+Accessed
+2nd Dec 2014.
+4. Burnett, G. (2000) “‘Turn right at the Traffic Lights’ 
+The Requirement for Landmarks in Vehicle Navigation
+Systems.” The Journal of Navigation. Vol.53 p499-510.
+5. Burnett, G., Smith, D., May, A. (2001) “Supporting the
+Navigation Task: Characteristics of 'Good' Landmarks.”
+Contemporary Ergonomics. p441-446.
+6. Goodman, J., Gray, P., Khammampad, K. Brewster, S.
+(2004) “Using Landmarks to Support Older People in
+Navigation.” Lecture Notes in Computer Science.
+Vol.3160 p38-48.
+7. Haines, R. F., Price, T. A., (1980) “Cognitive Issues in
+Head-Up Displays” NASA Technical Paper.
+8. Hart, S. G., Staveland, L. E. (1988). Development of
+NASA-TLX: Results of empirical and theoretical
+research. Advances in psychology, 52, 139-183.
+9. Kim, S., Dey, A. (2009) “Simulated Augmented Reality
+Windshield Display as a Cognitive Mapping Aid for
+Elder Driver Navigation.” Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems.
+p133-142.
+10. May, A., Ross. (2006) “Presence and Quality of
+Navigational Landmarks: Effect on Driver Performance
+and Implications for Design.” Human Factors: The
+Journal of the Human Factors and Ergonomics Society.
+Vol.48 p346-361.
+11. Medenica, Z., Kun, A. L., Paek, T., Palinko, O. (2011)
+“Augmented Reality vs Street Views: A Driving
+Simulator Study Comparing Two Emerging Navigation
+Aids.” Proceedings of the 13th International Conference
+on HCI with Mobile Devices and Services. p265-274.
+12. Nwakacha, V., Crabtree, A., Burnett, G. (2013).
+Evaluating Distraction and Disengagement of Attention
+from the Road. In Virtual, Augmented and Mixed
+Reality. Systems and Applications (pp. 261-270).
+Springer Berlin Heidelberg.
+13. Phillips, B. (1999) “The Role of Landmark Information
+in Intelligent Navigation Displays.” Proceedings of the
+Human Factors and Ergonomics Society Annual
+Meeting. Vol.43 p972-976.
+14. Sojourner, R. J., Antin, J. F. (1990) “The Effects of a
+Simulated Head-Up Display Speedometer on Perceptual
+Task Performance.” Human Factors: The Journal of the
+Human Factors and Ergonomics Society. Vol 32. p329-
+339.
+15. Victor, T. W., Harbluk, J. L., Engström, J. A. (2005)
+“Sensitivity of Eye-Movement Measures to In-Vehicle
+Task Difficulty” Transportation Research Part F: Traffic
+Psychology and Behaviour, 8. p167-190.
+16. Yeh, M., Wickens, C. D., Merlo, J. L., Brandenburg, D.
+L. (2001) “Effects of Precision on Cue Effectiveness
+and Display Signalling.” Proceedings of the Human
+Factors and Ergonomics Society Annual Meeting. Vol
+45. p1886-1890.
+63

@@ -1,0 +1,729 @@
+--- Page 1 ---
+Enhancing the Driver Awareness of Pedestrian
+using Augmented Reality Cues
+Minh Tien Phan, Indira Thouvenin, Vincent Frémont
+Abstract—Pedestrian accident is a serious problem for the
+society. Pedestrian Collision Warning Systems (PCWS) are
+proposed to detect the presence of pedestrians and to warn
+the driver about the potential dangers. However, their interfaces
+associated with ambiguous alerts can distract drivers and create
+more dangers. On the other hand, Augmented Reality (AR)
+with Head-Up Display (HUD) interfaces have recently attracted
+the attention in the ﬁeld of automotive research as they can
+maintain driver’s gaze on the road. In this paper, we design a
+new PCWS with the AR cues and propose an experimental to
+evaluate the AR cues by assessing the driver’s awareness of a
+pedestrian. At this stage, a ﬁxed-based driving simulator is used
+for the study. Twenty ﬁve healthy middle-aged licensed drivers
+participate in the experiment. A car following task is proposed
+as the main driving task. Three levels of the driver’s awareness
+of a pedestrian: the perception level, the vigilance level and the
+anticipation level are assessed through the observable outcomes.
+The results show that the proposed AR cues can enhance the
+driver’s awareness of a pedestrian in all the three levels.
+Index Terms—Augmented reality, Driver Behaviors; Pedes-
+trian Safety; Situation Awareness; Driving Simulation;
+I. INTRODUCTION
+I
+N the domain of Advanced Driver Assistance Systems
+(ADAS), a close coupling between vehicle and driver
+can be achieved with active interfaces. Recently, several car
+manufacturers proposed many developments and commer-
+cialization plans about HUDs. This technology creates a new
+way for interactions between the driver and the vehicle. The
+HUDs can offer drivers various information related to safety
+and convenience such as velocity, navigation information,
+warning messages, etc. [5], [22], [8]. The HUD reduces the
+number and the duration of the driver’s sight deviations from
+the road, by projecting the required information directly into
+the driver’s line of sight. This allows drivers to receive infor-
+mation without lowering their gaze, thus avoiding attention
+gaps when taking their eyes off the road to look down at
+the driving information [7], [16]. Moreover, by highlighting
+important objects or regions, the AR cues help enhancing the
+visibility of some important elements in the road scene such
+as obstacles or pedestrians. It also helps the driver to do the
+right actions to avoid potential dangers.
+In particular, pedestrians are known as the most vulnerable
+road users, whilst also being the most difﬁcult to observe both
+in day and in night conditions [28]. Nowadays, the PCWS are
+Phan
+Minh
+Tien,
+Indira
+Thouvenin,
+Vincent
+Frémont
+Heudiasyc
+Laboratory, University of Technology of Compiegne, France, e-mail:
+minh.phan@hds.utc.fr.
+able to detect the presence of pedestrians with high accuracy.
+Then, they can alert the driver in case of possible accidents
+across the beeps and sounds from a small interface posed on
+the dashboard [19]. However, the beeps and sound are only
+helpful if drivers know what sound means or if the sound
+occurs in conjunction with a visual cue [9]. We argue that
+the AR cues can give beneﬁts in this kind of application.
+Therefore, the ﬁrst objective of this paper is to propose an
+augmented reality assistance system that can enhance the
+driver’s awareness of a pedestrian.
+To the best of our knowledge, the work of Fukagawa et
+al. [13] is the only previous work that described the driver’s
+awareness of a pedestrian. The authors considered the driver
+to be aware of a pedestrian when there was no accident in that
+situation. In this study, we propose a deﬁnition of Driver’s
+Awareness of a Pedestrian (DAP) based on the Situation
+Awareness (SA) concept. In [11], SA is deﬁned with three
+levels (perception, comprehension, projection) that describe
+how the operators maintain state and future state information
+of elements in their environment. In the situation where a
+pedestrian appears in front of the vehicle, the DAP is deﬁned
+with three levels: The perception level, the vigilance level
+and the anticipation level (see Fig. 1). The perception level
+can be related to the moment and the period when the driver
+ﬁgures out there is a pedestrian on road. The vigilance level
+is the ability of the driver to sustain attention to the pedestrian
+and his estimation of the possibility that the pedestrian can
+cross the road. The anticipation level consists of right actions
+that driver chooses to do in that situation such as stopping,
+passing by, slowing down or speeding up, etc.
+Figure 1: Driver Awareness of Pedestrian (DAP) deﬁnition
+The second objective of this paper is to propose an
+experimental protocol that allows to evaluate implicitly three
+levels of the driver’s awareness of a pedestrian. Finally, by
+comparing the DAP between the drivings with and without
+AR cues, we can determine costs and beneﬁts of the cues in
+the critical situation with pedestrians.
+Overall, this paper is organized as follows: Part II presents
+some related AR applications in automobile and presents our
+2016 IEEE 19th International Conference on Intelligent Transportation Systems (ITSC)
+Windsor Oceanico Hotel, Rio de Janeiro, Brazil, November 1-4, 2016
+978-1-5090-1889-5/16/$31.00 ©2016 IEEE
+1298
+
+--- Page 2 ---
+proposed AR-PCW system. Part III presents some related
+work in driver’s awareness assessment followed by our exper-
+iment design that aims to evaluate the AR cues by assessing
+the driver’s awareness of a pedestrian. The experimental
+results are showed and discussed in Part IV. Finally, Part
+V gives a conclusion and presents some future works of the
+study.
+II. PROPOSED SYSTEM
+A. HUD Prototype and Augmented Reality Cues
+According to our knowledge of industrial wind-shield
+manufacturing, only a small windshield zone in front of the
+driver can be dedicated to the AR zone [6]. Therefore, we
+propose to study a HUD combiner that allows to project the
+virtual images only on the center part of the windshield (see
+Fig. 2b). This part cover about ﬁfteen degree of the driver’s
+ﬁeld of view
+Concerning the AR cues, we consider to use two cues.
+Firstly, we propose a conformal cue which is the bounding
+box at the pedestrian position (see Fig. 2a). This cue is
+expected to remind that the pedestrian is vulnerable and can
+cross the road at any time. Secondly, we propose a non-
+conformal cue which is the warning panel. The panel is
+displayed at the bottom left of the HUD. In case the system
+detects that the situation becomes critical, a yellow pedestrian
+warning panel is displayed at the left corner of the HUD.
+This cue warns directly driver from the potential accident to
+the pedestrian. The yellow color is chosen for two cues, to
+convey a warning rather than an immediate threat [4], [14].
+Indeed, the non-conformal cues are displayed at a prede-
+ﬁned depth (usually2.5m to 4m) on the road in front of the
+driver. They are typically used to display the speed or other
+vehicle information [3]. The advantage of the non-conformal
+displaying is that the driver knows exactly where the cue is
+and gets used to it. However, it can create occlusion with the
+trafﬁc elements such as precedent cars or obstacles. On the
+contrary, a conformal display is represented by the virtual
+imagery that is overlaid on the trafﬁc elements . The image
+is optically superimposed on the objects it augments [15],
+[27]. In the driving context, this type of cue has advantage
+to enhance the visibility of the obstacles. In [24], the authors
+proposed also to use the bounding box as a conformal aid to
+highlight the hazards and to direct the driver attention to them
+(see Fig. 2b). The authors found that the static bounding box
+was actually related to longer reaction times than using no
+cues. In [25], the authors explored the use of bounding boxes
+for elderly drivers and found that they improved detection of
+hazardous object under low visibility, while not interfering
+with the detection of non-hazardous objects.
+B. Decision Module
+The decision module of the AR-PCW system consists of
+deﬁning the rules to execute the visual cues (the bounding
+box and the warning panel). The Bounding Box (BB) is
+displayed whenever a pedestrian is detected in front of the
+driver.
+(a) Example of a pedestrian
+highlighting [24]
+(b) The proposed visual cues for Pedes-
+trian Collision Warning Systems.
+Figure 2: Augmented reality cues for pedestrian collision
+warning systems.
+Otherwise, the warning panel is displayed only when
+the situation is detected to be critical. At ﬁrst stage, we
+consider the Time-To-Collision (TTC) and the distance to
+the pedestrian (d) to determine the moment when the warning
+panel is displayed (tW P ). By neglecting the pedestrian speed,
+the TTC is calculated as follows:
+TTC =
+d
+vveh
+(1)
+where vveh is the vehicle speed.
+Now, let consider TTCcritical and dcritical, which are the
+critical Time to Collision and the critical distance to pedes-
+trian. The warning panel display moment tW P is computed
+as follows:
+tW P = min(t(TTCcritical), t(dcritical))
+(2)
+The choice of TTCcritical is based on the cumulative
+human response time distribution. This distribution means the
+percentage of population that is able to react to a potential
+collision. To summarize, the larger the response time, the
+bigger the percentage of population to react on time to the
+warning. But a larger response time is expected to lead to
+a worse performance of the warning because it can become
+annoying to the driver. This distribution is 1.0s, 1.6s, and
+2.0s, corresponding to 45%, 80%, and 90% of the population,
+respectively [2], [18]. In order to correspond to a large
+population, our proposed system is aimed to correspond to
+90% of population, so the TTCcritical is chosen to be 2s.
+On the other hand, the critical-Distance (dcritical) plays
+the role of a safety net to determine the critical situation.
+In some cases where the vehicle approaches the pedestrian
+with a low speed, the TTCcritical is met when the vehicle
+is too close to the pedestrian. For example, when the vehicle
+speed (vveh) is about 20km/h ( 5.5m/s) and the TTCcritical
+is 2s, the distance is equal to 11m. It is already too close
+to the pedestrian. The dcritical should be taken into account
+ﬁrst. The dcritical is then chosen to be 16.6m in the cases
+when the speed is lower than 30km/h. Finally, the moment
+to display the warning panel (tW P ) are given as follows:
+tW P = min(t(TTC = 2), t(d = 16.6))
+(3)
+1299
+
+--- Page 3 ---
+III. EXPERIMENTS DESIGN
+A. Related Works
+A technique called SAGAT (Situation Awareness Global
+Assessment Technique) is a global tool developed to access
+Situation Awareness (SA) of the cockpit pilots. Endsley
+[12] lays out the criteria for SA measurement which has
+subsequently become one of the standard instruments. Here,
+participants are intermittently queried, in the middle of a
+dynamic simulation, about the values of various state pa-
+rameters in the process under supervision. In the driving
+context, the SAGAT technique has also been used to assess
+the driver’s SA at the intersections. In [23], the authors
+have created four critical scenarios at the intersections and
+provided a questionnaire to evaluate their focus of attention
+before accident. This technique is easy to use when one
+can build a set of queries about the situation to assess the
+driver SA in that speciﬁc situation. However, this technique
+is intrusive because the driver has to stop driving to answer
+the questions [1]. The participants may need to recall speciﬁc
+information on the driving environment from their earlier
+performance.
+As another approach, the loss of SA can be inferred from
+changes in performance on tasks for which good SA is
+essential. For example, the freeway driver who pulls into
+another lane in front of an overtaking car can be inferred
+to have poor SA. This would be an example of an implicit
+SA measure. In [17], the authors investigated the effects of
+adaptive cruise control (ACC) and mobile phone use on driver
+SA and performance in a lead-car following task primarily
+involving operational behaviors. Their results revealed that
+SA improved with the use of ACC and decreased with use
+of the mobile phone under normal driving conditions. In
+[20], the authors have used the second task in order to study
+the performance of the driver and to assess the Situation
+Awareness. At predetermined road points, the choice to
+perform an additional task was proposed to the driver. The
+possibility of accepting and rejecting the second task was
+then given either just before a critical situation or in a non-
+critical situation. The driver’s situation awareness is scored
+if the driver does not accept the secondary task in critical
+situations. The result showed that the driver rejected more
+secondary tasks in critical compared than in the non-critical
+situations. This technique seems more natural to assess the
+driver’s SA. However, the use of a distraction is inappropriate
+in driving. The accident happened because of the distraction
+and not the driver’s low SA. Moreover, our goal is to evaluate
+the visual cues which are provided to the driver during the
+driving time. Therefore, providing a visual distraction will
+complicate the visual task for the driver and this is not
+suitable for our goal.
+B. Proposed Method
+1) Protocol: The previous works showed that it is more
+suitable to measure implicitly the driver’s SA in order to
+determine the costs and the beneﬁts of the visual cues in the
+driving context. Based on this idea, we propose an exper-
+imental protocol to assess implicitly the driver’s awareness
+of a pedestrian. This allows to identify the effects of the
+proposed AR-PCW system.
+In order to assess the driver’s awareness of a pedestrian
+(DAP), we create an ambiguous situation with pedestrians. A
+lead vehicle following task is proposed as a primary driving
+task. Indeed, the participant has to keep a constant distance
+with a lead vehicle. Therefore, the ambiguity happens when
+the driver enters to a situation where there is a pedestrian
+having intention to cross the road. This lead vehicle following
+task makes the experience more representative of typical
+driving situations and engages drivers so that the pedestrian
+would be more difﬁcult to perceive or could be neglected by
+the driver.
+The Fig. 3 shows the detail of a typical scenario with a
+pedestrian. The lead vehicle accelerates randomly when both
+vehicles enter into the situation with the pedestrian (from
+100m to pedestrian). At this point, the participant has to
+choose the right decisions between keeping distance with the
+lead vehicle and lifting up the pedestrian crossing.
+In the experiment, the participant drives both times with
+two conﬁgurations of the system (noAR and AR conﬁgura-
+tions). In each driving, there are 23 pedestrians on road at
+different point. The positions, the appearances, and the be-
+haviors of the pedestrians are randomly changed in different
+driving times. The driver is required to press a button placed
+on the steering wheel in order to indicate that he has noticed
+a pedestrian. The driver’s performance in the lead vehicle
+following task and his reactions to avoid the accidents with
+the pedestrians are then measured in order to evaluate his
+situation awareness.
+Before entering to the test, there is a practical session in
+which the instructor recommends and trains the driver to
+keep a distance about 50m to the lead vehicle. When the
+participant feels familiar with the task, he can start the formal
+tests. There is no pedestrian in this session.
+Figure 3: Typical scenario used in the experiment
+2) Apparatus: The experiments are conducted on a driving
+simulator manufactured by [21]. This simulator interface is
+set up to be the most comfortable as possible in order to
+facilitate various conditions of the experiments. The simulator
+is conﬁgured as shown in the Fig. 4a. A projector screen is
+placed at1.5m in front of the driver with a real steering wheel
+mounted at a real comfortable position near the driver. The
+1300
+
+--- Page 4 ---
+simulator is controlled by the driving engine SCANeR-Studio
+[21] which enables to create different driving scenarios as
+well as to record all necessary driving data.
+We propose a transparency zone (higher opacity) rendered
+as a rectangle to simulate a combined HUD. This zone covers
+the center part of the driver’s ﬁeld of view. This transparency
+zone and the visual cues are supposed to create an impression
+of a HUD to the driver (see Fig. 4b).
+(a) Experimental Platform
+(b) Simulated HUD and AR
+cues in the virtual scene
+Figure 4: Driving Simulator
+3) Participants: The sample involved 27 subjects. Two of
+them did not ﬁnish the test due to the driver sickness of the
+simulator. All upcoming data refers to the 25 subjects who
+ﬁnished the test. All the participants were students, had at
+least three years licensed driving and was familiar with the
+simulator. Moreover, these participants had no disease about
+eye or physic at the moment of the test. They were ranged
+from 21 to 35 years old. 21 subjects are male and 4 subjects
+are female.
+4) Dependent and independent variables.: In this exper-
+iment, independent variable includes participants, pedestrian
+situations and the head vehicle’s behaviors. We hypothesize
+that the system with its AR conﬁguration would help to
+enhance the DAP in its three levels. Each level is then eval-
+uated through the following outcome measures (dependent
+variables):
+• Outcomes associated with the perception level: The
+Visual Reaction Time (V RT) is considered. The Visual
+Reaction Time is the moment (calculated in TTC) when
+the driver notices the pedestrian and presses the button.
+We expect that the AR cues will enhance the visibility of
+the pedestrian and the driver will notice the pedestrian
+sooner with AR aids.
+• Outcomes associated with the vigilance level: The Head
+Vehicle Distance and the Accelerator Pedal Position
+(APP) are analyzed. We expect that the driver will be
+more vigilant with the aids. This means the Accelerator
+Pedal Position is smaller with the AR cues and the Head
+Vehicle Distance is shortest with noAR.
+• Outcomes associated with the anticipation level: The
+number of time the driver brakes urgently (so called
+Urgent Braking ) is calculated. We hypothesize that
+the driver does more Urgent Braking with the noAR
+conﬁguration compared to the drivings with the AR
+conﬁguration.
+IV. RESULTS AND DISCUSSIONS
+In the result analysis step, we will consider the mean of
+each outcome over the participants and over the pedestrian
+situations. The differences between the outcomes from the
+drivings with two conﬁgurations (noAR and AR) will be
+exposed using the one-way Analysis of Variance (ANOVA
+) tools [26].
+A. Outcomes associated to Perception Level
+a) Visual Reaction Times (V RT): This outcome is mea-
+sured by the instant (calculated in Time-To-Collision) when
+the driver presses the button when he notices a pedestrian
+in front of the vehicle. Fourteen participants followed the
+recommendations and pressed the button when they noticed
+the pedestrian. The others just forgot the instructions and
+we could not get the V RT data from these participants.
+Therefore, we had ﬁnally 14 participants for this result.
+The V RT corresponds to the perception level of the DAP.
+The Fig 5 exposed the result of V RT for 23 pedestrian
+situations whereas the Fig. 9a showed the mean values of
+V RT of two conﬁgurations for all pedestrian scenarios.
+The ANOVA results conﬁrmed there was a statistically
+signiﬁcant difference between the noAR, AR conﬁgurations
+(F(1, 642) = 23.46, p < 0.05). In the noAR conﬁguration,
+the driver noticed signiﬁcantly lately the pedestrian when
+the vehicle is around 3s of TTC to the pedestrian and
+the driver noticed the pedestrian around for 4.5s of TTC
+with AR conﬁguration. Regarding the Fig. 5, the V RT
+values are found different between the pedestrian situations.
+This is perhaps due to the difference between the road
+situations, pedestrian’s behaviors or the latency in button
+presses. However, in every situations, the driver noticed the
+pedestrian sooner with AR conﬁguration.
+Figure 5: Mean of VRT in each pedestrian situation. The
+result showed that, with the AR conﬁguration (in dark color);
+the driver noticed earlier the pedestrian.
+B. Outcomes associated to Vigilance Level
+a) Head Vehicle Distance (HV D): Graphically, head
+vehicle following task was performed better with the noAR,
+we observed that the driver kept a shortest distance to
+the head vehicle ) because they are more concentrate into
+task when there is visual cues (see Fig. 6). The ANOVA
+results revealed a signiﬁcant difference of HV D between
+two conﬁgurations(F(1, 1148) = 13.25, p < 0.05). The test
+conﬁrmed that, with the AR conﬁguration, the driver was
+1301
+
+--- Page 5 ---
+less performing in keeping distance with the lead vehicle
+(118m). Thus, he was more vigilant to pedestrians (see Fig.
+9b) compared to the noAR conﬁguration (86m).
+Figure 6: Head Vehicle Distance for 23 pedestrian situations.
+In all pedestrian situations, the distance between two vehicles
+is greater with the AR conﬁgurations. The driver seems to
+pay less attention on the head vehicle when the aids are on
+the pedestrian. The AR aids can direct the driver attention
+from the lead vehicle to the pedestrian.
+b) Accelerator Pedal Position (APP): In every pedes-
+trian situation, the drivers were found to accelerate more
+aggressively when the cues were not provided (noAR conﬁg-
+uration see Fig. 7). The ANOVA conﬁrmed the difference of
+APP between two conﬁgurations (F(1, 1148) = 18.47, p <
+0.05). The test revealed that the driver pressed more deeply
+the accelerator pedal with noAR. The average of APP with
+noAR is equal to0.46 whereas with AR is equal to 0.23. (see
+Fig. 9c).
+Figure 7: Mean of accelerator pedal position for the two
+conﬁgurations for each pedestrian situation. With noAR, the
+driver pressed more the accelerator pedal. The AR has effect
+on the driver’s acceleration behaviors, the cues encourage the
+driver to slow down.
+C. Outcomes associated to Anticipation Level
+a) Number of Urgent Braking Detected: A braking is
+considered to be urgent whenever the force applied on the
+pedal is detected to be over 200N at a TTC smaller than
+2s. In the total of all the driving test, 72 hard braking were
+detected with the noAR conﬁguration, this number was found
+for 11 times with AR conﬁguration (see Fig. 9d). The AR
+conﬁguration is found having more inﬂuence on the driver’s
+awareness.
+The Fig. 8 showed the number of urgent braking detected
+in each pedestrian situation. With the noAR conﬁguration, we
+found more often that the driver brakes urgently in front of
+the pedestrians. On the contrary, with the AR conﬁguration,
+we found less the urgent braking. Indeed, the AR cues
+encouraged the driver to be attentive to pedestrian, more
+vigilant and ﬁnally it was found that the driver had a better
+anticipation in critical situations.
+Figure 8: The Sum of number of times, the urgent braking
+was found in three conﬁgurations
+D. Subjective results analysis
+The Tab. I presented some our questionnaire results. The
+questionnaire was given after each driving with AR con-
+ﬁguration. The results conﬁrmed mostly the advantage of
+the AR conﬁguration. Firstly all the participants feed-backed
+that they had driven like in the real life (the question Q01).
+This demonstrated that the drivers have felt comfortablywith
+the simulator. For the scenario difﬁculty, the lead vehicle
+following task was considered as quite difﬁcult (question
+Q02), 20/25 participants have answered «difﬁcult», and have
+commented that the difﬁculty was because the lead vehicle
+reacts too spontaneously. Moreover, 19/25 drivers answered
+that they had not tried to catch the lead vehicle (question
+Q04) and they had been aware of the pedestrians (answered
+as «normal» or «completely»).
+For the questions concerning the cues, all the participants
+liked to have a HUD and the AR-PCW system on their cars
+(question Q05). 17/25 of participants preferred the bounding
+box compared to the pedestrian panel (question Q6). They
+argued that the bounding box helped them to identify where
+the pedestrian was, whereas the pedestrian panel did not and
+somehow forced them to brake and make them distracted.
+E. Discussion
+In this paper, three levels of the driver’s awareness (per-
+ception, vigilance and anticipation) have objectively been as-
+sessed through the different outcome variables that represent
+the interaction between the driver and environment elements
+(lead vehicle and pedestrians). This protocol helps to mea-
+sure objectively the driver’s situation awareness without any
+distraction. The driver can drive normally during the test
+and is not interrupted for the questionnaire as using SAGAT
+technique.
+In the result, the AR aids were found to help the driver
+in the perception level, the driver perceived much sooner the
+pedestrian. We found the same conclusion with Schall et al.
+1302
+
+--- Page 6 ---
+(a) VRT
+(b) HVD
+(c) APP
+(d)
+Urgent
+braking
+number
+Figure 9: Results in 23 pedestrian situations and 25 participants
+Questions
+Result
+Q01
+Do you perform the driving like in real conditions? (Yes/No)
+25/25 Yes
+Q02
+The driving task is difﬁcult? (easy/normal/difﬁcult/)
+20/25 difﬁcult
+Q03
+Are you try to catch the lead vehicle? (Yes/No)
+19/25 No
+Q04
+Are you aware of the pedestrians?(completely/normal/not at all)
+4/25 not at all
+Q05
+Would you like to use this combiner HUD ? (Yes/No)
+25/25 Yes
+Q06
+Which cue do you prefer? (Bounding Box/Warning Panel)
+17/25 Box
+Table I: Some signiﬁcant questions asked in the questionnaire
+[25] that the aids could help the driver to perceive earlier the
+hazard. We found the same result as Rusch et al. [24], the
+visual aids could potentially direct the driver attention to the
+hazard.
+Moreover, we found that the AR aids inﬂuenced the
+driver’s vigilance. They did not focus only on the head vehi-
+cle following task and were more aware of the pedestrians.
+The drivers did not brake urgently with the AR aids and were
+less aggressively driving in term of speed in the situation with
+pedestrian.
+However, during the experiment, we have noticed that
+the driver’s reactions varied a lot between the situations. In
+the results presented above, such as Visual Time Reaction,
+Accelerator Pedal Position, etc, the variances were really
+important. Indeed, the driver’s awareness changed a lot in
+each pedestrian situation and a long the experiment. For the
+ﬁrst pedestrians appearing on road, the drivers didn’t care too
+much and they were less vigilant, but after certain times that
+pedestrians crossed the road, the drivers paid more attention
+and were more careful of that. Our technique of assessment
+of the driver’s situation awareness necessities a wide range
+of situation in order to eliminate the repetition effect on the
+results. On the other side, the complexity of situations has to
+be the same because it also inﬂuences the results. Moreover,
+as human learns and anticipates fast, the driver’s situation
+awareness is naturally improved during the experiment.
+Since driving is a visual and motor control process, it
+is possible that the visual search demands associated with
+retrieving information from the displayed aids also degraded
+the driving task performance. In [10], the author highlighted
+that the automation human aids can cause comparable levels
+of distraction on driver navigation. However, It is also im-
+portant to remark the different between conformal aids and
+non conformal aids. Indeed, the aids in their study is not
+conformal which can distract more than the conformal aids.
+The non-conformal aids (such as the warning panel) involve
+enclosed non-changing opaque rhombus shapes. These non-
+conformal aids therefore complicate the driver’s ability to
+discriminate information about the targets (pedestrians) in
+which the aids highlighted. In contrast, the conformal aids
+(such as bounding box around the pedestrian in our work)
+were found that it did not produce any negative masking ef-
+fects. After the experiment, the participants have commented
+that the conformal aids could enhance the awareness without
+distracting them.
+We have found that the best strategy for building driving
+aids for achieving better situation awareness is to focus
+on speciﬁc problems where driving accidents are prevalent.
+Comparing to the related work, we provide an important
+aspect in designing a new ADAS interface that enhance the
+driver’s situation awareness. Basically, these previous works
+considered subjectively the driver and his inattentive states
+such as sleepiness, drowsiness or distracted by hand phone
+which are helpful but not sufﬁcient for the pedestrian accident
+purposes. The driver could be in normal state but if he
+underestimates the danger level of the situation, the accident
+can also happen. Therefore, our study is dedicated to the
+analysis of the driver interaction in a particular situation such
+as with pedestrians. Other critical situations have also been
+considered such as entering a intersection or complex danger
+scenarios [23], [2].
+V. CONCLUSION AND FUTURE WORK
+In this paper, an advanced driving assistance system using
+augmented reality cues has been proposed in the pedestrian
+safety context. The system highlights the pedestrian presence
+by a conformal bounding box. Moreover, it takes into account
+the time to collision and alert the driver in case there is
+1303
+
+--- Page 7 ---
+a potential danger. It is expected to help the driver sooner
+identify the pedestrian and be aware of them. The study also
+highlighted the importance of validating a ADAS interface
+by assessing the driver’s situation awareness while using the
+interface. Therefore, an experiment with 25 participants on a
+driving simulator was carried out to determine the effects of
+the visual cues on the driver in term of his/her awareness of
+a pedestrian.
+AR cues may offer a promising mean to improve driver
+safety. During the experiment, we found out that the driver
+can achieve a higher perception level with the AR cues. The
+bounding box enhanced the visibility of the pedestrian, the
+driver noticed the bounding box where there was probably a
+pedestrian before noticing the pedestrian. The driver was also
+more vigilant with the AR cues (vigilance level). The cues
+somehow put the driver to a sensation that something could
+happen such as the pedestrian crossing. It encouraged the
+driver slowing down in situations. The results showed that the
+driver pressed less the accelerator pedal when the cues were
+displayed. In the anticipation level, the urgent braking was an
+indication to evaluate the driver’s awareness. The preliminary
+result indicated that the driver braked urgently more often
+while driving without the aids.
+However, these ﬁndings suggests that AR-ADAS merit
+further investigation. First of all, the study is based on
+a simulator in which the pedestrian detection is totally
+accurate which is not the case in reality. We will do a
+further analysis of the cues with different levels of pedestrian
+detection accuracy. Another experiments with new scenarios
+and more participants, and in real driving conditions using
+our intelligent vehicle platform1 will be carried out.
+ACKNOWLEDGMENT
+This work was carried out in the framework of the FUI18
+SERA project, and the Labex MS2T which is funded by the
+French Government, through the program " Investments for
+the future” managed by the National Agency for Research
+(Reference ANR-11-IDEX-0004-02).
+REFERENCES
+[1] Amy L Alexander, Christopher D Wickens, and Thomas J Hardy.
+Synthetic vision systems: The effects of guidance symbology, display
+size, and ﬁeld of view. Human Factors: The Journal of the Human
+Factors and Ergonomics Society, 47(4):693–707, 2005.
+[2] G.S. Aoude, V.R. Desaraju, L.H. Stephens, and J.P. How. Driver be-
+havior classiﬁcation at intersections and validation on large naturalistic
+data set. Intelligent Transportation Systems, IEEE Transactions on,
+13(2):724–736, June 2012.
+[3] J Caird, W Horrey, and C Edwards.
+Effects of conformal and
+nonconformal vision enhancement systems on older-driver perfor-
+mance. Transportation Research Record: Journal of the Transportation
+Research Board, (1759):38–45, 2001.
+[4] Alphonse Chapanis. Hazards associated with three signal words and
+four colours on warning signs. Ergonomics, 37(2):265–275, 1994.
+[5] Vassilis Charissis and Stylianos Papanastasiou.
+Human–machine
+collaboration through vehicle head up display interface.
+Cognition,
+Technology & Work, 12(1):41–50, 2010.
+[6] Continental. Combiner head up display, 2015.
+1Robotex,
+the
+national
+network
+of
+robotics
+platforms
+http:
+//equipex-robotex.fr/
+[7] Thomas A Dingus, Melissa C Hulse, Jonathan F Antin, and Walter W
+Wierwille. Attentional demand requirements of an automobile moving-
+map navigation system.
+Transportation Research Part A: General,
+23(4):301–315, 1989.
+[8] A Doshi, Shinko Yuanhsien Cheng, and M.M. Trivedi. A novel active
+heads-up display for driver assistance. Systems, Man, and Cybernetics,
+Part B: Cybernetics, IEEE Transactions on, 39(1):85–93, Feb 2009.
+[9] Anup Doshi, Shinko Yuanhsien Cheng, and Mohan Manubhai Trivedi.
+A novel active heads-up display for driver assistance. Systems, Man,
+and Cybernetics, Part B: Cybernetics, IEEE Transactions on, 39(1):85–
+93, 2009.
+[10] Mary T Dzindolet, Linda G Pierce, Hall P Beck, and Lloyd A
+Dawe. The perceived utility of human and automated aids in a visual
+detection task. Human Factors: The Journal of the Human Factors
+and Ergonomics Society, 44(1):79–94, 2002.
+[11] M. R. Endsley. Toward a theory of situation awareness in dynamic
+systems.
+Human Factors: The Journal of the Human Factors and
+Ergonomics Society, 37(1):32–64, 1995.
+[12] Mica R Endsley.
+Measurement of situation awareness in dynamic
+systems.
+Human Factors: The Journal of the Human Factors and
+Ergonomics Society, 37(1):65–84, 1995.
+[13] Y. Fukagawa and K. Yamada. Estimating driver awareness of pedestri-
+ans from driving behavior based on a probabilistic model. In Intelligent
+Vehicles Symposium (IV), 2013 IEEE, pages 1155–1160, June 2013.
+[14] Elisa Drelie Gelasca, Danko Tomasic, and Touradj Ebrahimi. Which
+colors best catch your eyes: a subjective study of color saliency. In
+Fisrt International Workshop on Video Processing and Quality Metrics
+for Consumer Electronics. Citeseer, 2005.
+[15] Kenneth W Gish and Loren Staplin. Human factors aspects of using
+head up displays in automobiles: A review of the literature. 1995.
+[16] Paul Green. The 15-second rule for driver information systems. In
+Proceedings of the ITS America Ninth Annual Meeting, 1999.
+[17] R Ma and David B Kaber. Situation awareness and driving performance
+in a simulated navigation task. Ergonomics, 50(8):1351–1364, 2007.
+[18] Shane B McLaughlin, Jonathan M Hankey, and Thomas A Dingus. A
+method for evaluating collision avoidance systems using naturalistic
+driving data. Accident Analysis & Prevention, 40(1):8–16, 2008.
+[19] Mobileye. Mobileye pedestrian collision warning (pcw). Online, 2015.
+[20] B. Metz N. Schomig. Three levels of situation awareness in driving
+with secondary tasks. Safety Science, 56(0):44 – 51, 2013. Situation
+Awareness and Safety.
+[21] Oktal.
+Driving
+simulation
+engine
+scaner.
+http://www.scanersimulation.com, 2015.
+[22] Hye Sun Park and Kyong-Ho Kim.
+Driver-view based augmented-
+reality hud system: concept and background.
+In 19th ITS World
+Congress, 2012.
+[23] Marina Plavši´c, Gudrunk Klinker, and Heiner Bubb. Situation aware-
+ness assessment in critical driving situations at intersections by task
+and human error analysis. Human Factors and Ergonomics in Manu-
+facturing & Service Industries, 20(3):177–191, 2010.
+[24] Michelle L. Rusch, Mark C. Schall Jr., Patrick Gavin, John D. Lee,
+Jeffrey D. Dawson, Shaun Vecera, and Matthew Rizzo. Directing driver
+attention with augmented reality cues. Transportation Research Part
+F: Trafﬁc Psychology and Behaviour, 16(0):127 – 137, 2013.
+[25] Mark C Schall Jr, Michelle L Rusch, John D Lee, Jeffrey D Dawson,
+Geb Thomas, Nazan Aksan, and Matthew Rizzo. Augmented reality
+cues and elderly driver hazard perception. Human Factors: The Journal
+of the Human Factors and Ergonomics Society, 55(3):643–658, 2013.
+[26] Laerd Statistics. One-way anova in spss. Retrieved December, 21:2013,
+2013.
+[27] Nicholas J Ward and Andrew Parkes.
+Head-up displays and their
+automotive application: An overview of human factors issues affecting
+safety. Accident Analysis & Prevention, 26(6):703–717, 1994.
+[28] WHO. World health organization, 2013. global status report on road
+safety supporting a decade of action. 2013.
+1304

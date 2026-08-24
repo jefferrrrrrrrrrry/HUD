@@ -1,0 +1,1517 @@
+COGNITIVE NEUROSCIENCE
+Reward association facilitates distractor suppression in
+human visual search
+Mengyuan Gong,1,2,3 Feitong Yang1,4 and Sheng Li1,2,3
+1Department of Psychology and Beijing Key Laboratory of Behavior and Mental Health, Peking University, 5 Yiheyuan Road,
+Haidian, Beijing 10087, China
+2PKU-IDG/McGovern Institute for Brain Research, Peking University, Beijing, China
+3Key Laboratory of Machine Perception (Ministry of Education), Peking University, Beijing, China
+4Department of Psychological and Brain Sciences, Johns Hopkins University, Baltimore, MD, USA
+Keywords: active suppression, priority map, reward salience, working memory
+Edited by John Foxe
+Received 23 September 2015, revised 31 December 2015, accepted 12 January 2016
+Abstract
+Although valuable objects are attractive in nature, people often encounter situations where they would prefer to avoid such dis-
+traction while focusing on the task goal. Contrary to the typical effect of attentional capture by a reward-associated item, we pro-
+vide evidence for a facilitation effect derived from the active suppression of a high reward-associated stimulus when cuing its
+identity as distractor before the display of search arrays. Selection of the target is shown to be signiﬁcantly faster when the dis-
+tractors were in high reward-associated colour than those in low reward-associated or non-rewarded colours. This behavioural
+reward effect was associated with two neural signatures before the onset of the search display: the increased frontal theta oscilla-
+tion and the strengthened top-down modulation from frontal to anterior temporal regions. The former suggests an enhanced work-
+ing memory representation for the reward-associated stimulus and the increased need for cognitive control to override Pavlovian
+bias, whereas the latter indicates that the boost of inhibitory control is realized through a frontal top-down mechanism. These
+results suggest a mechanism in which the enhanced working memory representation of a reward-associated feature is integrated
+with task demands to modify attentional priority during active distractor suppression and beneﬁt behavioural performance.
+Introduction
+Visual attention selects information based on a spatial map where
+the priority of attentional allocation is determined according to the
+competitive interactions between bottom-up and top-down mecha-
+nisms (Theeuwes, 1991; Itti & Koch, 2001; Corbetta & Shulman,
+2002; Fecteau & Munoz, 2006; Bisley & Goldberg, 2010). This pri-
+ority map weights the information in different locations and guides
+attention toward the peak of the map. It has been shown that a phys-
+ically salient item has privileged access to attentional selection
+(Theeuwes, 1991). The enhanced neural activity induced by the sali-
+ent item in its topologically corresponding location in early visual
+cortex is considered as the bottom-up signal that modiﬁes the prior-
+ity map (Itti et al., 1998; Li, 2002). Meanwhile, top-down factors
+such as target template and search mode can also inﬂuence the gen-
+eration of attentional priority, and reduce (Folk et al., 1992; Bacon
+& Egeth, 1994) or even reverse the bottom-up salience effect (Ein-
+hauser et al., 2008). More speciﬁcally, the active maintenance of the
+task-relevant information in working memory (WM) has been shown
+to bias the stimulus’ representation in the fronto-parietal network to
+compete for selection (Olivers et al., 2011; Ptak, 2012). Moreover,
+optimal allocation of attention not only requires successful target
+selection, but also efﬁcient distractor suppression. Recent studies
+have shown that foreknowledge of distractor identity can facilitate
+visual search performance by serving as a ‘template for rejection’
+(Woodman & Luck, 2007; Arita et al., 2012). This top-down inﬂu-
+ence driven by suppression of a distractor can gate the sensory rep-
+resentation and override the effect of bottom-up salience (Geng &
+Diquattro, 2010; Geng, 2014). As suggested by neurophysiological
+investigations, such successful attentional suppression is linked to
+increased neural activity in the frontal areas that initiates the inhibi-
+tory control, and reduced neural activity in the parietal areas that
+represents the priority map (Hasegawa et al., 2004; Ipata et al.,
+2006).
+In the natural environment, directing attention to the information
+that leads to reward or avoids punishment posits motivational impor-
+tance. It has been shown that visual attention is prioritized for moti-
+vationally signiﬁcant locations or objects (Engelmann & Pessoa,
+2007; Liston & Stone, 2008; Kiss et al., 2009), even if they are
+irrelevant to the task at hand (Della Libera & Chelazzi, 2009; Peck
+et al., 2009; Hickey et al., 2010; Anderson et al., 2011; Le Pelley
+et al., 2015). These behavioural effects are associated with changes
+Correspondence: Dr S. Li, 1Department of Psychology, as above.
+E-mail: sli@pku.edu.cn.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, Vol. 43, pp. 942–953, 2016
+doi:10.1111/ejn.13174
+
+
+in neural activity in lateral intraparietal area that encode the value of
+the stimulus (Platt & Glimcher, 1999; Sugrue et al., 2004) and per-
+sist when the reward-conditioned stimulus is task-irrelevant (Peck
+et al., 2009). According to a modiﬁed theory of attentional control,
+reward association based on past experience becomes integrated into
+the priority map as an independent modulator to guide where atten-
+tion is directed (Awh et al., 2012). Nevertheless, it remains unclear
+whether the priority of reward salience could be reversed by top-
+down factors when it serves as distractor. Studies have mainly
+characterized the reward salience-driven capture effect as being difﬁ-
+cult to be overridden by top-down control (Hickey et al., 2011;
+Hickey & van Zoest, 2012; Le Pelley et al., 2015). By contrast,
+indirect evidence indicates that suppression of reward salience in
+visual search includes observation of the Pd component, an event-
+related potential (ERP) that is linked to inhibitory control (Hickey
+et al., 2009; Sawaki & Luck, 2010), that appears contralateral to a
+reward-associated distractor in fast-response trials (Qi et al., 2013),
+and that the encoding accuracy in object-selective visual cortex for
+reward-associated objects decreases when they were distractors
+(Hickey & Peelen, 2015). Despite the presence of these neural sig-
+natures for the suppression of items with reward salience, it remains
+unclear whether inhibitory processing of reward salience can lead to
+facilitated behavioural performance as shown for physical salience
+(Geng & Diquattro, 2010).
+Previous ﬁndings have demonstrated that the performance beneﬁt
+obtained through distractor suppression was critically related to the
+top-down knowledge of distractor identity held in WM (Woodman
+& Luck, 2007; Arita et al., 2012) and inhibitory activity during
+WM maintenance (Dhawan et al., 2013). In the experiments con-
+ducted by Woodman and colleagues (Woodman & Luck, 2007;
+Arita et al., 2012), a WM-guided visual search paradigm was used.
+In this paradigm, the memorized item always shared an identical
+feature with the distractors in subsequent search display, and the
+observers were instructed to ignore the items with the WM-matching
+feature.
+Although
+the
+WM-matching
+distractors
+needed to
+be
+ignored, they remained task-relevant and must be memorized during
+the delay. In this set-up, the reaction time for the matching distractor
+condition was faster than for the non-matching distractor condition,
+indicating that the WM template of a distractor plays an important
+role in facilitating top-down suppression. In our previous work,
+combining reward learning and change detection paradigms, we
+have shown improved WM performance for the items that shared
+previously reward-associated features (Gong & Li, 2014). Therefore,
+we hypothesize that, if the reward-associated feature is to be sup-
+pressed voluntarily, its enhanced WM representation can be used by
+top-down control to facilitate the suppression. To test this idea, we
+modiﬁed the WM-guided visual search paradigm (Woodman &
+Luck, 2007; Arita et al., 2012) and combined it with electroen-
+cephalogram (EEG) measurements, aiming to examine whether the
+reward-associated feature can be effectively suppressed and to unra-
+vel the underlying mechanism of the suppression.
+Experiment 1 – behavioral task
+Materials and methods
+Participants
+Twenty-two observers (11 males; mean age, 22.09 years) partici-
+pated in Experiment 1. All participants completed two sessions
+(training and test) on two successive days and were paid for their
+participation. They were students from Peking University with nor-
+mal or corrected-to-normal vision, and gave written informed con-
+sent. The study was approved by the Committee for Protecting
+Human and Animal Subjects, Department of Psychology, Peking
+University.
+Stimuli
+Ten colours were selected (including red and green) for Experiment
+1 (15 cd/m2). Stimuli were displayed on a black background of a
+cathode ray tube (CRT) monitor (refresh rate: 60 Hz).
+Procedure
+Training session. As shown in Fig. 1A, each trial started with the
+presentation of a central ﬁxation cross, followed by a search display.
+The search display around the ﬁxation point was composed of eight
+white
+bars
+(1.3° 9 0.1°)
+that
+were
+located
+inside
+differently
+coloured circles (2.6° 9 2.6°). The bars were shown at equal eccen-
+tricities (6°). The search target was a uniquely orientated bar with a
+horizontal (0°) or vertical (90°) orientation, whereas the other seven
+bars were tilted by 45° to either the left or the right. The target bar
+appeared only inside a red or a green circle with equal probability
+(50%). The observers were instructed to identify the orientation of
+the target bar by pressing a button (left and right arrow keys) with
+the index and middle ﬁngers of their right hand. On-screen feedback
+was provided to the observers immediately after a correct response
+to indicate both the reward for the current trial and the total earn-
+ings. A blank screen appeared after an incorrect response. Impor-
+tantly, the red and green circles were associated with a high
+probability (80%) of a high reward (¥ 0.5) and a low reward
+(¥ 0.1), respectively (or vice versa). The assignment of the colours
+to the reward magnitudes was counterbalanced across observers who
+were na€ıve to this association. However, they were told that the pay-
+ment in the training session was based on individual performance.
+There were 800 trials in the training session.
+Test session. As shown in Fig. 1B, each trial started with a central
+ﬁxation cross. The cue display was shown with a centrally posi-
+tioned coloured circle (2.25° 9 2.25°), followed by the search dis-
+play composed of a ring of 12 circles. Each circle (2.25° 9 2.25°)
+in the search display enclosed an orientated bar (0.96° 9 0.1°) and
+located at equal eccentricities (7°) around the ﬁxation point. Six cir-
+cles appeared in each hemiﬁeld. The circles within one hemiﬁeld
+were in the same colour. The search target was a uniquely orientated
+bar with horizontal or vertical orientation, whereas the other 1 bars
+were tilted by 15° to either the left or the right. The observers were
+instructed to identify the orientation of the target bar by pressing a
+button (left and right arrow keys).
+There were two cue conditions. In the valid cue condition, the
+observers were instructed to ignore half of the circles that matched
+the cued colour and appeared in one hemiﬁeld of the search display,
+as the target would never appear in these circles. The cued colour
+could be associated with high or low reward (i.e. HRC or LRC) dur-
+ing a training session, or was randomly chosen from two of the
+non-rewarded colours (control colours, CCs) for each observer. The
+remaining six CCs were used only in the search display. In the neu-
+tral cue condition, none of the colours in the search display matched
+the cued colour, and hence the colour cue was not informative for
+the target location. The four cue colours were repeated with equal
+probability in the cue display for both the valid cue and neutral cue
+conditions, and each of them was randomly paired with one of the
+six CCs in the search display. There were 320 trials for the valid
+cue and neutral cue condition, respectively.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+Suppression of reward salience
+943
+
+
+D
+C
+0
+1
+1.2
+1.4
+1.6
+1.8
+2
+Search RT in valid 
+cue condition (s) 
+P < 0.05
+P < 0.01
+n.s.
+0
+0.8
+0.85
+0.9
+0.95
+1
+Search accuracy in
+ valid cue condition 
+n.s.
+n.s.
+n.s.
+0
+1
+1.2
+1.4
+1.6
+1.8
+2
+Search RT in neutral 
+cue condition (s) 
+n.s.
+n.s.
+n.s.
+0
+0.75
+0.8
+0.85
+0.9
+0.95
+1
+Search accuracy in
+ neutral cue condition 
+P < 0.05
+n.s.
+n.s.
+Blank 400 - 600 ms
++
++
++
+   
+   
+A
+Search display 500 ms
+Response 0 - 3000 ms
+Feedback 1500 ms
+Target
++ 
+0.5
+Total: 
+2
++ 
+0.1
+Total: 
+2
+Or
++
++
++
+B
+Blank 1000 - 1500 ms
+Cue display 100 ms
+Or
+Blank 500 - 1000 ms
+Search display and
+response 0 - 3000 ms
+Target
+High reward    Low reward    Control
+Cue color condition
+High reward    Low reward    Control
+Cue color condition
+High reward    Low reward    Control
+Target color condition
+High reward    Low reward    Control
+Target color condition
+Fig. 1. Procedure and results in Experiments 1. (A) In the training session, observers searched for a target bar (horizontal or vertical). A correct response was
+followed by either a high (¥0.5) or low (¥0.1) reward. (B) In the test session, observers searched for a target bar (horizontal or vertical) inside a coloured circle.
+For the valid cue condition, One of the three cue types (HRC, LRC and CCs) at the start of the trial instructed the observers to ignore the circles that matched
+the cued colour in the search display. For the neutral cue condition, the cued colour did not appear in the search display. (C) Behavioural results for valid cue
+condition: search RT and accuracy across three cue colours. (D) Behavioural results for neutral cue condition: search RT and accuracy across three target col-
+ours. Each point on the scatter plot shows an individual observer’s data. Error bars represent the standard error of the mean.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+944
+M. Gong et al.
+
+
+Data analysis
+Reaction time (RT) and accuracy were measured during the training
+and test session. To compute search RT, error trials and outliers (tri-
+als with RTs exceeding  3 SD) were excluded. Repeated measures
+analyses of variance (ANOVAs) were performed with Bonferroni cor-
+rection for multiple comparisons.
+Results
+As indicated by a paired t-test, RT in the training session was sig-
+niﬁcantly shorter when the target bar appeared inside the circle ren-
+dered in the HRC than in the LRC (t21 = 2.21, P < 0.05), whereas
+no
+signiﬁcant
+difference
+was
+observed
+for
+search
+accuracy
+(t21 = 0.71, P = 0.49).
+We then analysed the behavioural data from the test session. For
+the valid cue condition, as illustrated in Fig. 1C, a main effect of
+reward was found across cue colours (HRC, LRC and CCs;
+F2,42 = 6.76, P < 0.01, g2
+p = 0.24). RT was signiﬁcantly faster when
+the
+cue
+was
+in
+the
+HRC
+than
+in
+the
+LRC
+(mean
+differ-
+ence = 0.05 s, SE = 0.018 s, P < 0.05) or CCs (mean differ-
+ence = 0.07 s, SE = 0.018 s, P < 0.01). No signiﬁcant difference
+was found between the LRC and CCs (mean difference = 0.015 s,
+SE = 0.02 s, P = 1.0). No signiﬁcant effect on search accuracy was
+observed, either (F2,42 = 1.0, P = 0.38, g2
+p = 0.05). These results
+suggest that search performance was facilitated when the known dis-
+tractors’ critical feature had been associated with high reward.
+Before drawing any conclusion on the underlying inhibitory
+mechanism, we tested the possibility of whether reward facilitated
+the visual search because of the arousal effect. We analysed the
+data from the neutral cue condition: if the reward-induced increase
+in arousal level can account for the observed behavioural effect,
+we should expect to ﬁnd similar facilitation when the HRC was
+shown in the cue display, as compared with other conditions.
+However, the results showed no inﬂuence of reward colour on
+search
+RT
+(F2,42 = 1.29,
+P = 0.29,
+g2
+p = 0.06)
+or
+accuracy
+(F2,42 = 1.71, P = 0.19, g2
+p = 0.07). We also split the data accord-
+ing to the colour of the target circle while the trials with the dis-
+tractors
+in
+the
+reward-associated
+colours
+were
+excluded.
+The
+repeated-measures ANOVA revealed a main effect of target colour as
+shown
+in
+Fig. 1D
+(HRC,
+LRC
+and
+CCs;
+RT:
+F2,42 = 3.62,
+P < 0.05, g2
+p = 0.15; accuracy: F2,42 = 4.05, P < 0.05, g2
+p = 0.16),
+but the Bonferroni post-hoc analysis showed no advantage of the
+HRC in either RT or accuracy relative to the LRC or CCs (for all
+comparison, RT: P > 0.06; accuracy: P > 0.13), except a superior
+search
+accuracy
+for
+the
+LRC
+than
+for
+CCs
+(mean
+differ-
+ence = 0.032, SE = 0.011, P < 0.05). These results suggest that
+the observed reward effect was unlikely a reﬂection of the general
+elevation in arousal level.
+The beneﬁt in overall RT in Experiment 1 suggests an effective
+suppression over the high reward-associated distractors. Neverthe-
+less, the spatial symmetry of the search display made it easy for the
+observers to deploy a space-based, rather than a feature-based, inhi-
+bitory strategy. In Experiment 2, we minimized this possible con-
+founding factor by randomizing the locations of the items in cued
+and non-cued colours. We also added a change detection task to
+ensure the active maintenance of the cued colour in WM throughout
+the trial, avoiding a diminished cue effect by simple exposure
+(Downing, 2000). To help elucidate the neural mechanism underly-
+ing the reward effect at the behavioural level, we recorded EEG sig-
+nals
+while
+the
+observers
+performed
+the
+behavioural
+task
+in
+Experiment 2.
+Experiment 2 – ERP study
+Materials and methods
+Participants
+Twenty-eight (16 males; mean age, 22.18 years) observers partici-
+pated in Experiment 2. None of the observers had participated in
+Experiment 1. All participants completed two sessions (training and
+test) on two successive days and were paid for their participation.
+They were students from Peking University with normal or cor-
+rected-to-normal vision, and gave written informed consent. The
+study was approved by the Committee for Protecting Human and
+Animal Subjects, Department of Psychology, Peking University.
+Stimuli
+Eight colours were selected for Experiment 2 (10.5 cd/m2) to equal-
+ize the visual display of stimuli in monitors from the behavioural
+and EEG labs. Stimuli were displayed on a black background of a
+CRT monitor (refresh rate: 75 Hz).
+Procedure
+The training session in Experiment 2 was identical to that in Experi-
+ment 1. During the test session (Fig. 2A), each trial started with a
+central ﬁxation cross. Then an arrow (0.6° 9 0.3°) was presented
+centrally and pointed either leftward or rightward, indicating the
+location of the to-be-memorized cue colour. The cue display con-
+sisted of two coloured squares (0.6° 9 0.6°) appearing on both
+sides of the ﬁxation cross (3° in distance) along the horizontal axis.
+The search display was presented after a blank screen and consisted
+of eight items (i.e. Landolt-C) that were randomly positioned within
+a virtual circle (6.1° 9 6.1°) centered at the ﬁxation point. The
+search target was a unique Landolt-C with a gap on the top or the
+bottom, while the remaining seven items were Landolt-Cs with a
+gap on the left or the right. An equal number of items were pre-
+sented in two different colours. The observers were instructed to
+identify the gap on the target Landolt-C by pressing a button (up
+and down arrow keys). Only the valid cue condition was included.
+The observers were asked to ignore the search items that matched
+the cued colour to enable fast and accurate responses. The HRC,
+LRC and two CCs were selected as the candidates of the cue colour.
+The remaining four CCs were used only in the search display. The
+HRC and LRC were separately paired with two CCs in the cue dis-
+play. These four colours were repeated with equal probability in the
+cue display, and each of them was randomly paired with one of the
+four remaining CCs in the search display. Following the response
+and a delay, a memory display appeared with two coloured squares.
+The observers were asked to indicate whether the square at the cued
+position had changed its colour by pressing a button (left and right
+arrow keys). The test session comprised nine blocks, with 80 trials
+for each block.
+Data analysis
+Behavioural analysis. RT and accuracy were measured during the
+training and test sessions. Trials with RT longer than 2500 ms were
+excluded from the analysis as the long-RT trials tended to show a
+residual effect in the EEG signal after the correction of ocular artefacts
+with independent component analysis (ICA). We also excluded trials
+with error responses. Repeated-measures ANOVAS were performed with
+Bonferroni correction for multiple comparisons.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+Suppression of reward salience
+945
+
+
+EEG recording and ERP analysis. EEG data were acquired from a
+64-channel EEG cap positioned according to the international 10-20
+system (Brain Products, Munich, Germany). Electrode impedance
+was kept below 5 kΩ for scalp channels. The electrooculograms
+were recorded with electrodes placed lateral to the external canthus
+of the left eye and above the right eye. An external electrode placed
+on the tip of the nose served as the on-line reference. The electrode
+AFz was chosen to be the ground electrode. EEG data were
+recorded at a sampling rate of 1000 Hz and were re-referenced
+off-line with the averaged mastoids.
+Conventional off-line analysis was performed using BRAIN VISION
+ANALYZER 2.0. Ocular artefacts were semi-automatically corrected
+using ICA. In addition to the automatically calculated electrooculo-
+gram variance for each ICA component, the semi-automatic mode
+allowed us to visually identify the relevance of the ICA components
+to eye movement and reject them based on their scalp topographies
+(i.e. ocular activity projects strongly over the frontal sites). The
+EEG signal from each electrode was ﬁltered using a ﬁnite impulse
+response (low-frequency cutoff: 0.016 Hz; high-cutoff frequency:
+100 Hz; decay of stop band: 24 dB per octave). The continuous
+EEG data were separated into epochs from 200 to 800 ms around
+the onset of cue and search displays. A 200-ms pre-stimulus epoch
+was used as the baseline period. Artefact rejection was performed
+before averaging to discard epochs with signals exceeding  70 lV.
+The ERPs were averaged across observers for visual inspection of
+the components, which may differ across three cue colour condi-
+tions. The averaged waveforms were separately computed for con-
+tralaterality (electrodes contralateral vs. ipsilateral to the location of
+the cue colour). The peak point of each ERP component was indi-
+vidually identiﬁed with a semi-automatic peak detection program.
+The mean amplitude of each ERP component was calculated by
+averaging 11 points centered at the peak point within separate time
++
++
+Fixation
+400-600 ms
+Arrowhead
+200 ms
+1000 ms
+Blank
++
+Interval
++
+Cue display
+200 ms
+0-4000 ms
+400-600 ms
++
+Interval
++
+Search display
+and response
+900 ms
++
+Interval
++
+Memory test display
+ and response
+400-600 ms
+0-4000 ms
+A
+Search RT in valid 
+cue condition (s) 
+0
+0.9
+0.92
+0.94
+0.96
+0.98
+1
+Search accuracy in
+ valid cue condition 
+n.s.
+n.s.
+n.s.
+High reward      Low reward     Control
+Cue color condition
+0
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+1.2
+1.3
+1.4
+P < 0.01
+P < 0.05
+n.s.
+B
+C
+High reward      Low reward      Control
+Cue color condition
+Fig. 2. Test task and results in Experiments 2. (A) Observers searched for a target Landolt-C with a unique gap (on the top or bottom) and reported whether
+the cued position had changed its colour in the memory test display. Half of the Landolt-Cs in the search display that matched the colour of the cued square
+were to be ignored during the search. (B) Search RT and (C) accuracy across three cue colours. Each point on the scatter plot shows an individual observer’s
+data. Error bars represent the standard error of the mean.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+946
+M. Gong et al.
+
+
+windows for P1 (70–150 ms), N1 (120–220 ms), P2 (160–280 ms)
+and P3 (220–350 ms) components. Repeated-measures ANOVAs with
+two factors (cue colour: HRC, LRC and CCs; contralaterality) were
+performed for each group of paired electrodes: the frontal (F1/F2,
+F3/F4, F5/F6, FC1/FC2, FC3/FC4, FC5/FC6), central (C1/C2, C3/
+C4, C5/C6), central-parietal (CP1/CP2, CP3/CP4, CP5/CP6), parietal
+(P1/P2, P3/P4, P5/P6) and parieto-occipital (PO3/PO4, PO7/PO8,
+O1/O2) regions. Contralaterality was not considered for the midline
+electrodes. All reported P values were Bonferroni corrected.
+Time–frequency analysis. Time–frequency analyses on single trial
+EEG data were performed using EEGLAB software (Delorme &
+Makeig, 2004). The Morlet wavelet transformation was applied to
+the epochs from 1500 ms before to 2000 ms after the cue onset.
+Baseline power from 200 to 0 ms relative to the cue onset was
+removed. There were 200 linearly spaced time points and 100 log-
+spaced frequencies ranging from 1 to 30 Hz, with two cycles at the
+lowest frequency increasing linearly to eight cycles at the highest
+frequency. The variation in the number of cycles was adopted to
+make a compromise between temporal and frequency resolutions.
+Event-related spectral perturbations (ERSPs) were calculated for
+each channel and averaged across trials, after which the ERSPs were
+individually estimated by the regional mean value of the grouped
+electrodes in the frontal region (Fz, F1, F2, F3, F4, FCz, FC1, FC2,
+FC3, FC4) across cue conditions. Repeated-measures ANOVAs with
+one factor (cue colour: HRC, LRC and CCs) were performed for
+each frequency at each time point. To make comparison between
+conditions
+while
+avoiding
+the
+problem
+of
+circular
+analysis
+(Kriegeskorte et al., 2009), we adopted the method of leave-one-out
+cross-validation. EEG data were divided into nine independent
+epochs according to the number of blocks during the test session.
+ERSPs were calculated separately for each epoch and each observer.
+We reduced the number of output frequency to 30 (linearly spaced)
+for computational efﬁciency while leaving all other parameters
+unchanged. We chose eight epochs as the training set and one epoch
+as the test set. The training set was analysed to deﬁne a region of
+interest (ROI) (P < 0.01, uncorrected), and the corresponding time
+and frequency information within the ROI was used for the retrieval
+of data points from the test set. This process was repeated nine
+times until all combinations of assigning blocks as training and test
+sets were examined. For each observer, the ERSPs were averaged
+across repetitions for each cue condition.
+Source reconstruction. Source reconstruction was performed on the
+preprocessed epochs between 0 and 350 ms after cue onset, using
+statistical
+parametric
+mapping
+(SPM8).
+The
+differential
+wave
+between the HRC and LRC was individually calculated for the sub-
+sequent analysis of distributed source reconstruction with the follow-
+ing procedure (Litvak et al., 2011). The data modality (i.e. EEG)
+was initially deﬁned, followed by the conﬁrmation of sensor loca-
+tions and ﬁducials available in SPM8. The possible sources were
+generated using the normal cortical mesh in a head model in Mon-
+treal Neurological Institute (MNI) space. The link between sensor
+locations and MNI coordinates was established by means of co-
+registration. To compute the activity that would have been reﬂected
+on the sensors by each dipole on the cortical mesh, the forward
+model was calculated using the boundary element model. Group
+inversion was then used to estimate the hyperparameters of multiple
+sparse priors, ensuring that the reconstructed activity were from the
+same sources across observers (Litvak & Friston, 2008). No prior
+information about dipole locations and orientations was provided.
+The estimated solutions for sources were written to the contrast
+images for each observer. The resultant mean of the explained vari-
+ance across observers was 92.14% (25 of 28 observers had the
+explained variance above 90%), providing a ﬁrm foundation for the
+further connectivity analysis. The general linear model was con-
+ducted to determine the reward-modulated sources (P < 0.05, fam-
+ily-wise error corrected). The effects of reward were evident in
+multiple clusters within different brain areas. Each cluster consisted
+of a set of closely located coordinates. We chose the coordinate with
+the maximal t-value (i.e. an index of reward effect) from a cluster to
+represent a speciﬁc brain region. These coordinates were then used
+as the prior mean locations for the to-be-modelled sources in the
+connectivity analysis.
+Dynamic causal modelling (DCM). The DCM used the spatial pri-
+ors from source reconstruction and speciﬁed the neuronal models
+with constraints on physiological plausibility (David et al., 2006).
+By adopting the approach of a single equivalent current dipole, the
+parameters of the predetermined extrinsic connectivity were esti-
+mated. To be consistent with the reconstruction analysis, the win-
+dow of interest was deﬁned from 0 to 350 ms after cue onset. We
+also deﬁned the comparison between the HRC and LRC conditions
+to model the dynamics of the reward effect. The averaged wave-
+forms for each observer were computed using singular value decom-
+position, with the multi-channel EEG data being modelled with six
+principal eigenvectors to increase computational efﬁciency (Harner,
+1990). The optimal model was selected with Bayesian model selec-
+tion (BMS) by performing a group-level ﬁxed-effect analysis (FFX)
+on the summed log-evidence for each model across individuals (Ste-
+phan et al., 2010). The same analysis was also performed on the
+grand-averaged data. One model was deﬁned to be superior to other
+models with a difference in log-evidence above 3 (Penny et al.,
+2004). Statistical analyses were performed to test the individually
+estimated posterior means for the possible experimental effect on
+each connection.
+Results
+Behavioral results
+The training performance showed no signiﬁcant difference between
+the HRC and LRC conditions (RT: t27 = 0.79, P = 0.44; accuracy:
+t27 = 0.12, P = 0.56). The results of the test session were similar to
+Experiment 1 (Fig. 2B). We observed a signiﬁcant main effect of
+cue
+colour
+(F2,54 = 5.76,
+P < 0.01,
+g2
+p = 0.18).
+The observers
+responded signiﬁcantly faster when the cued colour was in the HRC
+than when it
+was in the LRC
+(mean difference = 0.023 s,
+SE = 0.009 s, P < 0.05) or the CCs (mean difference = 0.022 s,
+SE = 0.006 s,
+P < 0.01).
+No
+signiﬁcant
+difference
+was
+found
+between the LRC and the CCs (mean difference = 0.002 s,
+SE = 0.008 s, P = 1.0). Analyses of search accuracy (F2,54 = 2.20,
+P = 0.12, g2
+p = 0.07; Fig. 2B) and memory accuracy (F2,54 = 0.62,
+P = 0.54, g2
+p = 0.02; Fig. 2C) revealed no signiﬁcant difference
+across conditions. These results conﬁrmed the facilitation of search
+performance when the known distractors were in previously high
+reward-associated colour.
+Anterior P2 and posterior P3 components
+We analysed the ERP waveforms time-locked to the cue display and
+search display, and contrasted the ERP waveforms across three cue
+colour conditions. No signiﬁcant differences were found between
+conditions for the ERP waveforms elicited by the search display.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+Suppression of reward salience
+947
+
+
+As shown in Fig. 3, when time-locked to the onset of the cue dis-
+play, the ﬁrst ERP component that differed across cue colours was
+P2 (a.k.a. P2a) (Potts & Tucker, 2001; Voss & Paller, 2009). Analy-
+ses of P2 amplitude revealed signiﬁcant effects of cue colour in the
+frontal (F2,54 = 8.22, P < 0.01, g2
+p = 0.23), central (F2,54 = 8.19,
+P < 0.01, g2
+p = 0.23) and centro-parietal (F2,54 = 9.011, P < 0.01,
+g2
+p = 0.25) regions. P2 was larger when the cue was in the HRC
+than in the LRC (frontal: mean difference = 0.399, SE = 0.125,
+P < 0.05; central: mean difference = 0.368, SE = 0.117, P < 0.05;
+centro-parietal: mean difference = 0.394, SE = 0.122, P < 0.05) or
+the CCs (frontal: mean difference = 0.421, SE = 0.132, P < 0.05;
+central: mean difference = 0.424, SE = 0.128, P < 0.01; centro-par-
+ietal: mean difference = 0.517, SE = 0.136, P < 0.01). No signiﬁ-
+cant difference was found between the LRC and the CCs (P > 0.9
+across all regions). Moreover, P2 amplitude was larger at the con-
+tralateral than ipsilateral side in the central (F1,27 = 4.46, P < 0.05,
+g2
+p = 0.14) and centro-parietal (F1,27 = 10.18, P < 0.01, g2
+p = 0.27)
+regions. No signiﬁcant interaction was observed between the two
+factors (P > 0.5 across all regions).
+As shown in Fig. 4, the second ERP component that differed
+across cue colours was P3 (a.k.a. P3b) (Polich, 2007). Analyses of
+P3 amplitude revealed signiﬁcant effects of cue colour in the centro-
+parietal
+(F2,54 = 11.85,
+P < 0.01,
+g2
+p = 0.31),
+parietal
+(F2,54 = 10.62,
+P < 0.01,
+g2
+p = 0.28)
+and
+parieto-occipital
+(F2,54 = 8.54, P < 0.01, g2
+p = 0.24) regions. Signiﬁcantly larger P3
+amplitude was elicited for the cue in the HRC than the cue in the
+LRC
+(centro-parietal:
+mean
+difference = 0.414,
+SE = 0.143,
+P < 0.05; parietal: mean difference = 0.36, SE = 0.136, P < 0.05;
+parieto-occipital: mean difference = 0.299, SE = 0.121, P = 0.059)
+or the CCs (centro-parietal: mean difference = 0.72, SE = 0.173,
+P < 0.01; parietal: mean difference = 0.613, SE = 0.148, P < 0.01;
+parieto-occipital: mean difference = 0.46, SE = 0.107, P < 0.01).
+No signiﬁcant difference was observed between the LRC and the
+CCs (P > 0.07 across all regions). Neither a main effect of con-
+tralaterality (P > 0.7 across all regions) nor an interaction was found
+between
+cue
+colour
+and
+contralaterality
+(P > 0.37
+across
+all
+regions).
+The observed reward effects time-locked to the cue display sug-
+gest that the task-relevant cue information is better processed if it
+was associated with higher reward. The anterior P2 has been linked
+to the matching degree between the sensory input and the stored
+memory representation (Voss & Paller, 2009), whereas posterior P3
+is commonly associated with attention and memory processing
+(Polich, 2007). Given the necessity of maintaining this task-relevant
+cue information in WM for the upcoming visual search, the reward
+effects on anterior P2 and posterior P3 components may reﬂect an
+enhanced WM representation of the HRC in the fronto-parietal net-
+work (Ptak, 2012). Reward effects were also observed to covary
+between ERP components, as indicated by the cross-region covari-
+ance between the amplitudes of frontal P2 and centro-parietal P3
+across observers, which was only evident under the HRC condition
+(r = 0.42, P < 0.05). This result shed light on the possible informa-
+tion ﬂow passed from frontal to parietal regions, which resembles
+the top-down modulation that regulated the expression of HRC in
+the priority map (Ipata et al., 2006; Zanto et al., 2011). However,
+we failed to observe the effect of reward on lateralized activity, such
+High-Low
+High-Control
+Low-Control
+1 µV
+0 µV
+–1 µV
+180 - 200 ms
+A
+P2
+Averaged waveform in frontal region
+Time post cue onset (ms)
+High reward
+Low reward
+Control
+–2 µV
+2 µV
+–200              0           200            400           600           800
+B
+Region of interest
+P2 amplitude (µV)
+High reward
+Low reward
+Control
+C
+1
+2
+3
+4
+5
+6
+Frontal
+Central
+Centro-parietal
+Frontal
+Central
+Centro-parietal
+Contralateral
+Ipsilateral
+*
+**
+*
+*
+**
+**
+*
+**
+**
+**
+Fig. 3. ERP results of anterior P2. (A) The grand-averaged scalp topography of the P2 component elicited by the cue display. (B) The grand-averaged ERP
+waveforms of the averaged frontal electrodes. (C) Contralateral and ipsilateral P2 amplitudes of the frontal, central and centro-parietal regions across three cue
+colours. Error bars represent the standard error of the mean (*P < 0.05, **P < 0.01).
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+948
+M. Gong et al.
+
+
+as N2pc difference waveforms between the hemiﬁelds contralateral
+and ipsilateral to the cue colour (Kiss et al., 2009). This is probably
+due to two reasons: ﬁrst, the cue colours in all conditions were pre-
+attended by an arrow that rendered the attention level less different
+between the HRC, LRC and CCs; second, the spatial information of
+the cue colour was irrelevant to where the target and distractor
+would appear in the search arrays, thus making it unnecessary for
+attention to vary across hemiﬁelds. The lack of the lateralized activ-
+ity suggests further that the anterior P2 and posterior P3 reﬂect
+WM-related attentional processing that is based on feature rather
+than space.
+Frontal theta oscillation
+To further conﬁrm the enhanced WM representation for the HRC
+during the cue display, we conducted a time–frequency analysis that
+focused on frontal theta oscillation. The frontal theta oscillation is
+considered as an important neural signature for WM processing
+(Raghavachari et al., 2001; Hsieh & Ranganath, 2014), including
+active maintenance and manipulation (Itthipuripat et al., 2013).
+Recent advances in the understanding of frontal theta have extended
+its potential role in signalling a need for enhanced cognitive control
+(Cavanagh & Frank, 2014), which echoes well with the literature of
+WM-based top-down processes (Olivers et al., 2011). The statistical
+parametric map of the F-test (Fig. 5) visualized the reward-induced
+power changes in the frequency range from 5.8 to 7.6 Hz, at 197–
+343 ms after cue onset. This result showed a reward effect within
+the theta range over the frontal region. Similar range of frequency
+and time interval were found by cross-validation (5–9 Hz, 153–
+406 ms after cue onset). Within the ROI deﬁned by the independent
+training set, a main effect of cue colour in the test set was observed
+(F2,54 = 4.18, P < 0.05, g2
+p = 0.13). The Bonferroni post-hoc analy-
+sis revealed a signiﬁcant difference between HRC and LRC (mean
+difference = 0.268, SE = 0.079, P < 0.01), whereas no signiﬁcant
+differences were obtained for the other comparisons (HRC vs. CCs:
+mean difference = 0.117, SE = 0.089, P = 0.61; LRC vs. CCs:
+mean difference = 0.151, SE = 0.108, P = 0.52).
+Taken together, these results not only support the strengthened
+representation of a high reward-associated item in WM that conﬁrms
+our previous ﬁndings about the reward-induced improvement in
+WM representation (Gong & Li, 2014), but also reveals the instanti-
+ation of increased top-down control that overrides Pavlovian biases
+(Cavanagh et al., 2013). Taken together, these ﬁndings lead to the
+idea
+that
+the
+reward-enhanced
+WM
+representation
+during
+the
+preparatory phase before the search arrays contributes to the activa-
+tion of a top-down suppression mechanism.
+Top-down modulations from frontal regions
+DCM analysis was conducted to characterize the temporo-spatial
+dynamics between the reward-related ROIs that were deﬁned based
+on source reconstruction (Fig. 6A): bilateral anterior temporal lobe
+(ATL; left: t27 = 10.51, P < 0.01, right: t27 = 8.13, P < 0.01), bilat-
+eral lateral prefrontal cortex (LPFC; left: t27 = 6.92, P < 0.01, right:
+t27 = 7.07,
+P < 0.01)
+and
+cingulate
+gyrus
+(CG;
+t27 = 8.53,
+P < 0.01). Nine unilateral or bilateral candidate models within these
+ROIs (Fig. 6B) were tested with the assumption that the experimen-
+tal manipulation had inﬂuenced the forward (F-model), backward
+High-Low
+High-Control
+Low-Control
+270 - 320 ms
+A
+1 µV
+0 µV
+–1 µV
+–2 µV
+2 µV
+Averaged waveform in parietal region
+P3
+Time post cue onset (ms)
+High reward
+Low reward
+Control
+B
+–200             0            200           400            600            800
+C
+1
+2
+3
+4
+5
+Centro-parietal Parietal Parieto-occipital
+Contralateral
+Ipsilateral
+Centro-parietal Parietal Parieto-occipital
+P3 amplitude (µV)
+**
+**
+*
+**
+**
+*
+**
+**
+Region of interest
+High reward
+Low reward
+Control
+Fig. 4. ERP results of posterior P3. (A) The grand-averaged scalp topography of the P3 component elicited by the cue display. (B) The grand-averaged ERP
+waveforms of the averaged parietal electrodes. (C) Contralateral and ipsilateral P3 amplitudes of the centro-parietal, parietal and parieto-occipital regions across
+three cue colours. Error bars represent the standard error of the mean (*P < 0.05, **P < 0.01).
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+Suppression of reward salience
+949
+
+
+(B-model) or both pathways (FB-model). BMS revealed strong evi-
+dence in favour of the bilateral FB-model (Fig. 6C), exceeding that
+of the second best model by a relative Bayes factor of 679.02.
+As shown in Fig. 6D, estimation of the reward modulation on the
+effective connectivity for the optimal model revealed stronger cou-
+plings in the backward pathways from lLPFC to lATL (t27 = 2.76,
+P < 0.05), from CG to rATL (t27 = 3.19, P < 0.01) and from
+rLPFC to CG (t27 = 2.36, P < 0.05). A trend of signiﬁcant modula-
+tion was observed from CG to lATL (t27 = 1.88, P = 0.07). None
+of the forward modulations approached signiﬁcance (P > 0.13 for
+all comparisons). The signiﬁcant reward effects on the feedback
+connectivity demonstrate an important role of top-down modulation
+for the observed behavioural facilitation. The feedback modulation
+that occurred during WM maintenance agrees with the idea of a
+‘template for rejection’ in guiding the cognitive control to imple-
+ment suppression over reward-associated distractors (Woodman &
+Luck, 2007; Arita et al., 2012).
+Discussion
+Our results demonstrate that, after associating a colour with reward,
+the performance of a visual search task is facilitated when this col-
+our is cued as a critical feature of distractor before the onset of the
+search
+display.
+The
+behavioural
+results
+are
+accompanied
+by
+increased theta oscillation over the frontal region and enhanced top-
+down modulation from frontal to anterior temporal regions during
+the delay period. To conclude with a mechanistic interpretation of
+our results, two important questions need to be addressed.
+First, why can reward association facilitate distractor suppression?
+Provided that reward salience and physical salience exert a similar
+inﬂuence on attentional selection (Della Libera & Chelazzi, 2009;
+Hickey et al., 2010; Anderson et al., 2011; Le Pelley et al., 2015),
+it is reasonable to ascribe the main trigger of the active suppression
+in our study to the increased salience of the distractors in the HRC.
+According to the signal suppression hypothesis of controlled atten-
+tion capture (Sawaki & Luck, 2010, 2011; Sawaki et al., 2012), the
+priority signal generated by reward salience can be counteracted by
+top-down suppression. However, this apparent account is not sufﬁ-
+cient to clarify the source for the strengthened top-down suppression
+of distractors in HRC. Importantly, we found a neural signature of
+frontal theta oscillation that suggests an enhanced WM representa-
+tion for the HRC and the increased need for cognitive control under
+the HRC condition. On the one hand, this result is consistent with
+recent ﬁndings showing that previously established reward associa-
+tion can enhance the representation of reward-related items in either
+WM (Gong & Li, 2014) or long term memory (Murayama & Kita-
+gami, 2014), presumably accompanied by automatic activation of
+the stored reward association in these memory systems (Logan,
+1988; Moores et al., 2003). On the other hand, this result coincides
+with the ﬁnding that the conﬂict between goal-directed attention and
+Pavlovian biases predicts an increase in cognitive control (Cavanagh
+et al., 2013). Moreover, given the idea that the WM content can be
+used to avoid attention towards WM-matching items (Woodman &
+Luck, 2007; Arita et al., 2012), we suggest that the reward salience
+facilitates the suppression mechanism through its enhanced WM rep-
+resentation and guides top-down attention based on task instruction.
+The WM representation and task instruction can jointly contribute to
+produce a stronger top-down signal that modiﬁes the priority of the
+items with reward salience.
+Second, how does reward association facilitate distractor suppres-
+sion? In our experiments, the suppression effects were generated by
+proactive control, in which the instructed task goal and rule (i.e.
+searching for a unique orientation or Landolt-C while ignoring the
+items in the cued colour) were actively maintained in WM to guide
+top-down attention. While the proactive strategy was manipulated to
+render direct suppression over a reward-associated distractor (i.e.
+without directing attention to it in the ﬁrst place), the reactive strat-
+egy (i.e. initial capture plus rapid rejection) may also be recruited
+for effective target selection. Concerning the non-informativeness of
+the cue colour in predicting distractor location and the reward sal-
+ience-driven attentional effect for the items in the HRC, we believe
+that both proactive and reactive control could play roles in the
+observed facilitation effect. More speciﬁcally, observers’ attention
+may be initially orientated to the items in either the CCs or the
+HRC. In the former case, direct suppression may take place to pre-
+vent further attraction by the HRC because in observers’ priority
+maps, the items in the HRC were marked with lower priority as
+compared with the currently ﬁxed colour. In the latter case, rapid
+rejection may operate to compensate for the HRC-induced RT costs
+due to misallocation of attention (Peck et al., 2009; Hickey et al.,
+2010; Anderson et al., 2011). Both accounts are consistent with pre-
+vious theoretical notions (Braver, 2012; Geng, 2014), and well
+aligned with our DCM results that demonstrate direct frontal sup-
+pression (i.e. from lPFC to lATL) and indirect suppression mediated
+by cingulate cortex that is responsible for conﬂict detection (i.e.
+from rPFC to rATL via CG) (van Veen et al., 2001; Padmala &
+Pessoa, 2011). In addition, while ATL is generally thought to be
+critical for the processing of semantic memory
+recent studies on
+ATL have observed its role in representing associative pairings
+(Eifuku et al., 2010), and in encoding and maintenance of stimuli
+with emotionally signiﬁcance (Olson et al., 2013). Therefore, it is
+likely that the activation of ATL in the present study reﬂected its
+response to the learned reward association, which can be further
+25
+20
+15
+10
+5
+1
+–100
+0
+100
+200
+300
+400
+500
+600
+700
+–100
+0
+100
+200
+300
+400
+500
+600
+700
+Frequency (Hz)
+F-value
+A
+2
+1
+3
+4
+5
+6
+7
+8
+25
+20
+15
+10
+5
+P < 0.01 (uncorrected)
+Time after cue onset (ms)
+Frequency (Hz)
+1
+B
+Fig. 5. Reward effects observed in frontal theta oscillation. (A) Statistical
+parametric map of the F-statistic revealed a reward effect in the theta range
+between 5.8 and 7.6 Hz, at 197–343 ms after cue onset for the frontal elec-
+trodes. (B) The map with threshold at P < 0.01 (uncorrected).
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+950
+M. Gong et al.
+
+
+modulated by PFC to guide optimal behaviour. Taking the beha-
+vioural and electrophysiological evidence together, we suggest two
+coexisting pathways (i.e. direct suppression and rapid rejection) that
+work together to modify the priority map and facilitate the suppres-
+sion of reward-associated distractors. Importantly, our ﬁndings pro-
+vide the ﬁrst neural evidence that reward association modulates the
+top-down control through its enhanced WM representation before
+the onset of the visual search display, leading to a more efﬁcient
+deployment of task strategy when search items appear.
+Several previous studies have reported the reward-related suppres-
+sion effect at behavioural and neural levels. However, the beha-
+vioural evidence was obtained depending on extra antecedents. For
+example, suppression over a high reward-associated distractor is
+possible when it served as a distractor during the learning period
+(Della Libera & Chelazzi, 2009), or when the reward-associated dis-
+tractors shared a critical feature with the cued target template,
+regardless of reward magnitude (Lee & Shomstein, 2014). While
+neural evidence was shown for inhibition-related evoked potential
+(i.e. Pd component) in fast-response trials (Qi et al., 2013) and with
+decreased encoding accuracy in sensory cortex in the presence of a
+reward-associated distractor (Hickey & Peelen, 2015), no corre-
+sponding evidence for suppression was observed at the behavioural
+level. In comparison with these studies, our ﬁndings have two major
+advances. First, we disentangled the antecedents based on learning
+history and target–distractor relationship from our design, providing
+consistent behavioural and electrophysiological evidence in support
+of attentional suppression over reward salience. Second, we offered
+mechanistic accounts for ‘why and how’ the stronger suppression
+A
+B
+D
+C
+1.5
+x 104
+Bayesian model selection
+Bayesian model selection
+2
+1
+0.5
+0.8
+1
+0.6
+0.4
+0.2
+0
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Log-evidence (relative)
+Model posterior probability
+Models
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Models
+lATL
+rATL
+CG
+lLPFC rLPFC
+L
+R
+y = 13
+z = -1
+x = 3
+rLPFC
+rATL
+lLPFC
+lATL
+CG
+lLPFC
+lATL
+CG
+input
+input
+CG
+rLPFC
+rATL
+forward
+backward
+input
+backward
+lLPFC
+lATL
+CG
+rLPFC
+rATL
+1.32 *
+1.25 **
+1.15 *
+1.10 #
+input
+Fig. 6. Source reconstruction and DCM results. (A) Five ROIs in MNI space (in mm): lATL [46, 4, 32], rATL [46, 8, 28], lLPFC [24, 54, 14],
+rLPFC [40, 48, 14] and CG [2, 24, 26]. (B) Nine candidate DCMs [left-unilateral, right-unilateral or bilateral; forward (F-model), backward (B-model), or
+both pathways (FB-model)]. (C) Bayesian model selection (BMS) indicated that the bilateral FB model was the optimal one. (D) The effects of reward on con-
+nection strength of the optimal model (#P = 0.07, *P < 0.05, **P < 0.01).
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+Suppression of reward salience
+951
+
+
+was found for the distractors in the HRC relative to the LRC and
+CCs, unravelling the neural mechanism that contributes to the modi-
+ﬁcation of priority for the items with reward salience. However, we
+believe that further investigations with functional magnetic reso-
+nance imaging could complement our ﬁndings with greater spatial
+resolution.
+The behavioural results from Experiment 1 showed that visual
+search was not inﬂuenced by the cued colour in the neutral cue con-
+dition, suggesting that our ﬁndings were unlikely to be due to an
+arousal effect caused by the reward-associated distractors. Under the
+neutral cue condition, the lack of beneﬁt in search RT for the target
+in the reward-associated colour seems contradictory to the prediction
+of the reward-induced priority in attentional selection (Awh et al.,
+2012). However, in our design, the cued HRC matched the colour
+of half of the distractors in the search display. This set-up reduced
+the expression of reward salience as compared with the capture
+effect driven by a singleton distractor in HRC (Hickey et al., 2010;
+Anderson et al., 2011). More importantly, in both Experiments 1
+and 2, observers were required to engage in a feature-based serial
+search, thus enforcing the search process to be dominated by a top-
+down mechanism. This manipulation differed fundamentally from
+previous studies that used singleton-based parallel search controlled
+by bottom-up attention (Theeuwes et al., 2010). The interpretation
+of search mode echoes well with the latest behavioural ﬁnding on
+suppression over physical salience (Gaspelin et al., 2015), suggest-
+ing that our results are not contradictory to the previous ﬁndings of
+value-driven attentional capture (Hickey et al., 2010; Anderson
+et al., 2011).
+To summarize, our results agree with the proposal that reward
+association modiﬁes attentional priority based on a factor other than
+bottom-up physical salience and top-down task goal (Awh et al.,
+2012; Chelazzi et al., 2014). The present study showed an alterna-
+tive form of modiﬁcation on the priority map by reward salience
+through distractor suppression. Our ﬁndings suggest that reward
+association can modify the priority map during active distractor sup-
+pression and beneﬁt behavioural performance, as a result of the
+interaction between a top-down inhibition mechanism and enhanced
+WM representation of the reward-associated feature. These ﬁndings
+demonstrate a ﬂexible role of learned reward association on cogni-
+tive control (Pessoa, 2009), and could advance our understanding of
+inhibition-related clinical syndromes, such as attention deﬁcit/hyper-
+activity disorder, drug addiction and depression.
+Conﬂict of interest
+The authors declare no competing ﬁnancial interests.
+Acknowledgements
+This work was supported by the National Natural Science Foundation of
+China (31230029, 31470974, 31271081, J1103602), the National High Tech-
+nology Research and Development Program of China (863 Program)
+(2012AA011602), and the Program for New Century Excellent Talents in
+University, State Education Ministry.
+Abbreviations
+ANOVA, analysis of variance; ATL, anterior temporal lobe; BMS, Bayesian
+model selection; CC, control colour; CG, cingulate gyrus; DCM, dynamic
+causal modelling; EEG, electroencephalogram; ERP, event-related potential;
+ERSP, event-related spectral perturbation; HRC, high reward colour; ICA, in-
+dependent component analysis; LPFC, lateral prefrontal cortex; LRC, low
+reward colour; MNI, Montreal Neurological Institute; ROI, region of interest;
+RT, reaction time; WM, working memory.
+References
+Anderson, B.A., Laurent, P.A. & Yantis, S. (2011) Value-driven attentional
+capture. Proc. Natl. Acad. Sci USA, 108, 10367–10371.
+Arita, J.T., Carlisle, N.B. & Woodman, G.F. (2012) Templates for rejection:
+conﬁguring attention to ignore task-irrelevant features. J. Exp. Psychol.
+Human, 38, 580–584.
+Awh, E., Belopolsky, A.V. & Theeuwes, J. (2012) Top-down versus bottom-
+up attentional control: a failed theoretical dichotomy. Trends Cogn. Sci.,
+16, 437–443.
+Bacon, W.F. & Egeth, H.E. (1994) Overriding stimulus-driven attentional
+capture. Percept. Psychophys., 55, 485–496.
+Bisley, J.W. & Goldberg, M.E. (2010) Attention, intention, and priority in
+the parietal lobe. Annu. Rev. Neurosci., 33, 1–21.
+Braver, T.S. (2012) The variable nature of cognitive control: a dual mecha-
+nisms framework. Trends Cogn. Sci., 16, 106–113.
+Cavanagh, J.F. & Frank, M.J. (2014) Frontal theta as a mechanism for cogni-
+tive control. Trends Cogn. Sci., 18, 414–421.
+Cavanagh, J.F., Eisenberg, I., Guitart-Masip, M., Huys, Q. & Frank, M.J.
+(2013) Frontal theta overrides pavlovian learning biases. J. Neurosci., 33,
+8541–8548.
+Chelazzi, L., Estocinova, J., Calletti, R., Gerfo, E.L., Sani, I., Della Libera,
+C. & Santandrea, E. (2014) Altering spatial priority maps via reward-based
+learning. J. Neurosci., 34, 8594–8604.
+Corbetta, M. & Shulman, G.L. (2002) Control of goal-directed and stimulus-
+driven attention in the brain. Nat. Rev. Neurosci., 3, 201–215.
+David, O., Kiebel, S.J., Harrison, L.M., Mattout, J., Kilner, J.M. & Friston,
+K.J. (2006) Dynamic causal modeling of evoked responses in EEG and
+MEG. Neuroimage, 30, 1255–1272.
+Della Libera, C. & Chelazzi, L. (2009) Learning to attend and to ignore is a
+matter of gains and losses. Psychol. Sci., 20, 778–784.
+Delorme, A. & Makeig, S. (2004) EEGLAB: an open source toolbox for ana-
+lysis of single-trial EEG dynamics including independent component ana-
+lysis. J. Neurosci. Methods, 134, 9–21.
+Dhawan, S., Deubel, H. & Jonikaitis, D. (2013) Inhibition of saccades elicits
+attentional suppression. J. Vision, 13, 9.
+Downing, P.E. (2000) Interactions between visual working memory and
+selective attention. Psychol. Sci., 11, 467–473.
+Eifuku, S., Nakata, R., Sugimori, M., Ono, T. & Tamura, R. (2010) Neural
+correlates of associative face memory in the anterior inferior temporal cor-
+tex of monkeys. J. Neurosci., 30, 15085–15096.
+Einhauser, W., Rutishauser, U. & Koch, C. (2008) Task-demands can imme-
+diately reverse the effects of sensory-driven saliency in complex visual
+stimuli. J. Vision, 8, 1–19.
+Engelmann, J.B. & Pessoa, L. (2007) Motivation sharpens exogenous spatial
+attention. Emotion, 7, 668–674.
+Fecteau, J.H. & Munoz, D.P. (2006) Salience, relevance, and ﬁring: a prior-
+ity map for target selection. Trends Cogn. Sci., 10, 382–390.
+Folk, C.L., Remington, R.W. & Johnston, J.C. (1992) Involuntary covert ori-
+enting is contingent on attentional control settings. J. Exp. Psychol.
+Human, 18, 1030–1044.
+Gaspelin, N., Leonard, C.J. & Luck, S.J. (2015) Direct evidence for active
+suppression of salient-but-irrelevant sensory inputs. Psychol. Sci., 26,
+1740–1750.
+Geng, J.J. (2014) Attentional mechanisms of distractor suppression. Curr.
+Dir. Psychol. Sci., 23, 147–153.
+Geng, J.J. & Diquattro, N.E. (2010) Attentional capture by a perceptually
+salient non-target facilitates target processing through inhibition and rapid
+rejection. J. Vision, 10, 5.
+Gong, M. & Li, S. (2014) Learned reward association improves visual work-
+ing memory. J. Exp. Psychol. Human, 40, 841.
+Harner, R.N. (1990) Singular value decomposition – a general linear model
+for analysis of multivariate structure in the electroencephalogram. Brain
+Topogr., 3, 43–47.
+Hasegawa, R.P., Peterson, B.W. & Goldberg, M.E. (2004) Prefrontal neurons
+coding suppression of speciﬁc saccades. Neuron, 43, 415–425.
+Hickey, C. & Peelen, M.V. (2015) Neural mechanisms of incentive salience
+in naturalistic human vision. Neuron, 85, 512–518.
+Hickey, C. & van Zoest, W. (2012) Reward creates oculomotor salience.
+Curr. Biol., 22, R219–R220.
+Hickey, C., Di Lollo, V. & McDonald, J.J. (2009) Electrophysiological
+indices of target and distractor processing in visual search. J. Cognitive
+Neurosci., 21, 760–775.
+Hickey, C., Chelazzi, L. & Theeuwes, J. (2010) Reward changes salience in
+human vision via the anterior cingulate. J. Neurosci., 30, 11096–11103.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+952
+M. Gong et al.
+
+
+Hickey, C., Chelazzi, L. & Theeuwes, J. (2011) Reward has a residual
+impact on target selection in visual search, but not on the suppression of
+distractors. Vis Cogn., 19, 117–128.
+Hsieh, L.T. & Ranganath, C. (2014) Frontal midline theta oscillations during
+working memory maintenance and episodic encoding and retrieval. Neu-
+roimage, 85, 721–729.
+Ipata, A.E., Gee, A.L., Gottlieb, J., Bisley, J.W. & Goldberg, M.E. (2006)
+LIP responses to a popout stimulus are reduced if it is overtly ignored.
+Nat. Neurosci., 9, 1071–1076.
+Itthipuripat, S., Wessel, J.R. & Aron, A.R. (2013) Frontal theta is a signature of
+successful working memory manipulation. Exp. Brain Res., 224, 255–262.
+Itti, L. & Koch, C. (2001) Computational modelling of visual attention. Nat.
+Rev. Neurosci., 2, 194–203.
+Itti, L., Koch, C. & Niebur, E. (1998) A model of saliency-based visual
+attention for rapid scene analysis. IEEE T. Pattern. Anal., 11, 1254–1259.
+Kiss, M., Driver, J. & Eimer, M. (2009) Reward priority of visual target sin-
+gletons modulates event-related potential signatures of attentional selection.
+Psychol. Sci., 20, 245–251.
+Kriegeskorte, N., Simmons, W.K., Bellgowan, P.S. & Baker, C.I. (2009) Cir-
+cular analysis in systems neuroscience: the dangers of double dipping.
+Nat. Neurosci., 12, 535–540.
+Le Pelley, M.E., Pearson, D., Grifﬁths, O. & Beesley, T. (2015) When goals
+conﬂict with values: counterproductive attentional and oculomotor capture
+by reward-related stimuli. J. Exp. Psychol. Gen., 144, 158–171.
+Lee, J. & Shomstein, S. (2014) Reward-based transfer from bottom-up to
+top-down search tasks. Psychol. Sci., 25, 466–475.
+Li, Z. (2002) A saliency map in primary visual cortex. Trends Cogn. Sci., 6,
+9–16.
+Liston, D.B. & Stone, L.S. (2008) Effects of prior information and reward
+on oculomotor and perceptual choices. J. Neurosci., 28, 13866–13875.
+Litvak, V. & Friston, K. (2008) Electromagnetic source reconstruction for
+group studies. Neuroimage, 42, 1490–1498.
+Litvak, V., Mattout, J., Kiebel, S., Phillips, C., Henson, R., Kilner, J., Bar-
+nes, G., Oostenveld, R., Daunizeau, J., Flandin, G., Penny, W. & Friston,
+K. (2011) EEG and MEG data analysis in SPM8. Comput. Intell. Neu-
+rosci., 2011, 852961.
+Logan, G.D. (1988) Toward an instance theory of automatization. Psychol.
+Rev., 95, 492–527.
+Moores, E., Laiti, L. & Chelazzi, L. (2003) Associative knowledge controls
+deployment of visual selective attention. Nat. Neurosci., 6, 182–189.
+Murayama, K. & Kitagami, S. (2014) Consolidation power of extrinsic
+rewards: reward cues enhance long-term memory for irrelevant past events.
+J. Exp. Psychol. Gen., 143, 15–20.
+Olivers, C.N., Peters, J., Houtkamp, R. & Roelfsema, P.R. (2011) Different
+states in visual working memory: when it guides attention and when it
+does not. Trends Cogn. Sci., 15, 327–334.
+Olson, I.R., McCoy, D., Klobusicky, E. & Ross, L.A. (2013) Social cogni-
+tion and the anterior temporal lobes: a review and theoretical framework.
+Soc. Cogn. Affect Neur., 8, 123–133.
+Padmala, S. & Pessoa, L. (2011) Reward reduces conﬂict by enhancing
+attentional control and biasing visual cortical processing. J. Cognitive Neu-
+rosci., 23, 3419–3432.
+Peck, C.J., Jangraw, D.C., Suzuki, M., Efem, R. & Gottlieb, J. (2009)
+Reward modulates attention independently of action value in posterior
+parietal cortex. J. Neurosci., 29, 11182–11191.
+Penny, W.D., Stephan, K.E., Mechelli, A. & Friston, K.J. (2004) Comparing
+dynamic causal models. Neuroimage, 22, 1157–1172.
+Pessoa, L. (2009) How do emotion and motivation direct executive control?
+Trends Cogn. Sci., 13, 160–166.
+Platt, M.L. & Glimcher, P.W. (1999) Neural correlates of decision variables
+in parietal cortex. Nature, 400, 233–238.
+Polich, J. (2007) Updating P300: an integrative theory of P3a and P3b. Clin.
+Neurophysiol., 118, 2128–2148.
+Potts, G.F. & Tucker, D.M. (2001) Frontal evaluation and posterior represen-
+tation in target detection. Cognitive Brain Res., 11, 147–156.
+Ptak, R. (2012) The frontoparietal attention network of the human brain:
+action, saliency, and a priority map of the environment. Neuroscientist, 18,
+502–515.
+Qi, S., Zeng, Q., Ding, C. & Li, H. (2013) Neural correlates of reward-dri-
+ven attentional capture in visual search. Brain Res., 1532, 32–43.
+Raghavachari, S., Kahana, M.J., Rizzuto, D.S., Caplan, J.B., Kirschen,
+M.P., Bourgeois, B., Madsen, J.R. & Lisman, J.E. (2001) Gating of
+human theta oscillations by a working memory task. J. Neurosci., 21,
+3175–3183.
+Sawaki, R. & Luck, S.J. (2010) Capture versus suppression of attention by
+salient singletons: electrophysiological evidence for an automatic attend-to-
+me signal. Atten. Percept. Psycho., 72, 1455–1470.
+Sawaki, R. & Luck, S.J. (2011) Active suppression of distractors that match
+the contents of visual working memory. Vis. Cogn., 19, 956–972.
+Sawaki, R., Geng, J.J. & Luck, S.J. (2012) A common neural mechanism for
+preventing and terminating the allocation of attention. J. Neurosci., 32,
+10725–10736.
+Stephan, K.E., Penny, W.D., Moran, R.J., den Ouden, H.E., Daunizeau, J. &
+Friston, K.J. (2010) Ten simple rules for dynamic causal modeling. Neu-
+roimage, 49, 3099–3109.
+Sugrue, L.P., Corrado, G.S. & Newsome, W.T. (2004) Matching behavior
+and the representation of value in the parietal cortex. Science, 304, 1782–
+1787.
+Theeuwes, J. (1991) Cross-dimensional perceptual selectivity. Percept. Psy-
+chophys., 50, 184–193.
+Theeuwes, J., Olivers, C.N.L. & Belopolsky, A. (2010) Stimulus-driven
+capture and contingent capture. Wiley Int. Rev. Cogn. Sci., 1, 872–
+881.
+van Veen, V., Cohen, J.D., Botvinick, M.M., Stenger, V.A. & Carter, C.S.
+(2001) Anterior cingulate cortex, conﬂict monitoring, and levels of pro-
+cessing. Neuroimage, 14, 1302–1308.
+Voss, J.L. & Paller, K.A. (2009) An electrophysiological signature of uncon-
+scious recognition memory. Nat. Neurosci., 12, 349–355.
+Woodman, G.F. & Luck, S.J. (2007) Do the contents of visual working
+memory automatically inﬂuence attentional selection during visual search?
+J. Exp. Psychol. Human, 33, 363–377.
+Zanto, T.P., Rubens, M.T., Thangavel, A. & Gazzaley, A. (2011) Causal role
+of the prefrontal cortex in top-down modulation of visual processing and
+working memory. Nat. Neurosci., 14, 656–661.
+© 2016 Federation of European Neuroscience Societies and John Wiley & Sons Ltd
+European Journal of Neuroscience, 43, 942–953
+Suppression of reward salience
+953
+
+

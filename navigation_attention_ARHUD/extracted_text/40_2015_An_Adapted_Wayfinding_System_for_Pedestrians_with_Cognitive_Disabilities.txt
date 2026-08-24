@@ -1,0 +1,1056 @@
+Research Article
+An Adapted Wayfinding System for Pedestrians with
+Cognitive Disabilities
+Javier Gomez, Germán Montoro, Juan Carlos Torrado, and Adalberto Plaza
+Department of Computer Engineering, Autonomous University of Madrid, 28049 Madrid, Spain
+Correspondence should be addressed to Javier Gomez; jg.escribano@uam.es
+Received 9 June 2015; Revised 8 September 2015; Accepted 27 September 2015
+Academic Editor: Dik Lun Lee
+Copyright © 2015 Javier Gomez et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+This paper presents a novel wayfinding system adapted to people with cognitive disabilities. It adapts to the user in terms of route
+calculation, instructions delivery, and interface design. To do so, the system divides the calculated route into atomic instructions
+and uses street-level photographs at the decision points. To evaluate this approach, we compared it with a commercial navigation
+application on a field trial with a sample of users (N = 18). From the evaluation, we concluded that our system improves users’
+performance in terms of the number who reached the destination and were able to identify it correctly.
+1. Introduction
+Human navigation requires mobility and orientation capa-
+bilities [1]. Both of these skills are implicit in the term
+wayfinding, coined by Lynch [2]. This concept includes
+four stages in effective navigation, namely, orientation, route
+decision, route monitoring, and destination recognition, in
+other words, determining one’s own location, selecting the
+correct direction, checking whether the course leads to the
+destination or not, and recognizing the destination.
+In recent years, other research work has dealt with
+wayfinding, such as the study by Montello and Sas [3]. These
+authors described effective navigation as a set of coordinated
+movements through an environment which are orientated to
+reaching an objective. Therefore, orientation is a basic skill.
+In order to keep oriented, human beings rely on two
+complementary processes: identification of reference points
+and dead-reckoning [4]. The first is based on the visual
+identification of cues and allows us to establish an exact
+position from a mental map of the environment. The second
+is based on self-perception of pace and distance walked to
+estimate the position. The combination of both techniques
+reduces error from imprecise dead-reckoning and enables us
+to create mental maps.
+However, people with cognitive disabilities usually
+present limitations in both orientation and navigation skills,
+due to their reduced cognitive capability. Therefore, their
+navigation is less effective, leading to errors and increasing
+the probability of getting lost. These issues directly affect their
+independence, limiting their autonomous movement and
+causing them to require supervision most of the time [5, 6].
+Generally, outdoor movements are trained by a caregiver
+who escorts the user over a period of time and explains the
+route, directions, reference points, and any other related
+issue. This process involves time and human resources that
+are not always available, preventing some users from being
+instructed, which limits their independence.
+To address this problem, we have designed, developed,
+and evaluated a mobile pedestrian navigation assistant for
+smartphones: AssisT-OUT. Our approach adapts to the user
+in terms of route calculation, instructions delivery, and
+interface design. To achieve this, we followed a user-centered
+design, working in close collaboration with therapists and
+professionals in the field of special education, who provided
+their views and opinions on interface design, in particular,
+and took an active part in the evaluation and selecting the
+routes and the users.
+In order to adapt the guidance provided, the system
+divides the calculated route into atomic instructions (con-
+tinue straight, turn left, and turn right) and uses street-
+level photographs of the decision points. Additionally, it
+implements GPS tracking and an alarm system to notify
+Hindawi Publishing Corporation
+Mobile Information Systems
+Volume 2015, Article ID 520572, 11 pages
+http://dx.doi.org/10.1155/2015/520572
+
+
+2
+Mobile Information Systems
+users about their relative position regarding the next decision
+point. All these techniques promote, at the same time, the
+duality assistance-training. That is, an assistive tool should
+not only provide assistance but also train the user in the
+necessary capabilities to perform the activity. In this case, one
+of the most important capabilities is landmark recognition.
+Apart from the mobile application, the system integrates
+an authoring tool that allows caregivers to manage their
+users and destination points, as well as for analyzing their
+performance in terms of time needed and route actually
+followed compared to the route originally calculated.
+In order to evaluate our proposal, we tested the system
+with real users (𝑁= 18) in a real environment and compared
+it against a commercial navigation application (i.e., Google
+Maps). From the evaluation we concluded that our system
+produced significantly better results than the commercial
+application regarding the number of users who reached the
+destination, but they needed significantly more time to walk
+the proposed routes.
+This paper is organized as follows: after this short intro-
+duction we present the background for the research, empha-
+sizing assistive technologies for people with cognitive dis-
+abilities. After that, AssisT-OUT is presented. Following a
+detailed explanation of the approach, the evaluation process
+is described. Finally, we close with a discussion on the data
+collected and conclude with the most important ideas and
+future work lines.
+2. Related Work
+Current mobile platforms and application stores offer a
+great variety of navigation assistants. In particular, thanks
+to the location possibilities of available smartphones (GPS,
+GLONASS, or mobile/Wi-Fi signal triangulation), these
+applications make our trips easier, faster, or safer by giving
+turn-by-turn navigation instructions. In general, they allow
+possibilities for adaptation: route calculation depending on
+users’ preferences (shortest route, fastest route, etc.) and
+some interface customization, such as color palettes for day
+and night or types of points-of-interest displayed. However,
+neither routes nor interfaces are usually adapted to users’
+cognitive capabilities. In other words, the way directions are
+delivered and presented is not adapted to meet users’ needs.
+Previous research works on the topic have provided
+different approaches and solutions, such as the “Assistive
+Navigation System,” presented by Herv´as et al. in [7]. In this
+work, the authors addressed route adaptation by including
+places that are well-known (to the user) to calculate the
+best route. This way, instead of delivering the shortest or
+fastest path, it employs known and near places to get to
+the destination. That is, it uses known places as reference
+points in order to reduce the cognitive load of the route.
+Nevertheless, although most of the participants preferred this
+new route calculation mechanism, known reference points
+are not always available for every route and its preparation
+for each user can be difficult to process.
+In this same sense, “Our way” [8] proposed a novel
+route calculation engine based on social collaboration. By
+users’ annotations, the system was able to adapt the route
+to meet users’ needs in terms of accessibility. This approach
+is particularly interesting for users with motor disabilities
+(temporal or permanent), although the authors did not report
+any quantitative data.
+Related to instructions delivery, Rispoli et al. remarked
+the positive value of splitting the whole task into simpler
+subtasks to make them easier to understand [9].
+Regarding directions and route presentation, works such
+as [10–13] explored different mechanisms for giving direc-
+tions to people with cognitive impairments, namely, using
+arrows, audio prompts, maps, and landmarks. In general,
+all authors agreed that landmarks are the best way to
+orient and guide these users. However, the combination
+of different mechanisms (i.e., landmarks and audio cues)
+would be even better since the message is given in different
+modalities and users may recognize the information more
+easily. Kaminoyama et al. [14] presented the “Walk Navigation
+System,” a navigation system developed for PDAs and partic-
+ularly designed to help people with dementia. It shows street-
+level photographs at the particular points of the route (e.g.,
+intersections, places where the user has to take an action)
+combined with animations and arrows to make the decision
+easier. From their evaluation it can be concluded that the
+system helped users to reach the destination and they found
+photographs very useful. Moreover, on average, users needed
+less time to reach the destination compared to the time
+needed when using maps, but they spent more time looking
+at the device than at the map. However, users reported that
+photos should be updated since they were different from
+the actual view. These may be the key issues for making
+improvements in new developments.
+Additionally, Garc´ıa de Marina et al. [15] explained
+some other problems, such as the difficulty in distinguishing
+between left and right (when using textual instructions) and
+the confusion produced by the differences between the actual
+view and the picture shown, that is, items that appear or do
+not appear.
+Finally, due to the inherent danger of the activity (i.e.,
+getting lost), Fickas et al. [16] studied the ability to recover
+from errors and found that people with cognitive dis-
+abilities had serious problems describing their position in
+order to get reoriented, so systems should include mecha-
+nisms to provide quick and straightforward assistance and
+location.
+3. AssisT-OUT
+Current state-of-the-art developments offer a wide range of
+material with which to work on improving currently available
+solutions. With this aim in mind, we present AssisT-OUT,
+a mobile system specifically designed to help people with
+cognitive disabilities to walk through urban environments
+such as towns. Route calculation, instruction delivery, and
+user interface are adapted to meet users’ needs.
+AssisT-OUT makes use of users’ smartphones with two
+objectives: first, to locate and track users during their move-
+ments and, second, as a presentation tool to show the
+appropriate directions. The guidance process, according to
+Fallah et al. [17], can be divided into four steps: environment
+
+
+Mobile Information Systems
+3
+Web server
+Authoring
+tool
+Database
+Routes
+Images
+Users
+Destinations
+Registries
+Requests
+Processing
+Decision points
+Requests
+Local 
+repository
+Figure 1: System architecture.
+representation, user location, path planning, and user inter-
+action.
+3.1. Architecture. The architecture of the system is based
+on the client-server scheme. In Figure 1, a diagram of the
+system is provided. On the one hand, the mobile client
+locates and interacts with the user. On the other hand, the
+server is divided into three modules. The database stores the
+information related to users, their destinations and registries.
+The routes module communicates with third-party services
+(i.e., Google Maps), processes the routes, and draws up a list
+of directions and decision points. Finally, the images module
+is in charge of requesting images from Google Street View
+and providing the ones from the local repository (only for
+destination points).
+The communication between the client and the server
+is bidirectional, since the mobile application has to provide
+information (user’s location and registry) to the server in
+order to calculate the route and it also has to download infor-
+mation from it (e.g., destination list and routes). Additionally,
+the authoring tool also communicates with the server. It
+allows caregivers to edit users’ information as well as their
+destinations.
+3.2. Environment Representation. Since AssisT-OUT relies
+on available cartography services, caregivers do not have to
+make any environment representation beyond the destina-
+tion points of their users. To establish these, they make use of
+the authoring tool to add, edit, or remove these points. Each
+point is represented by its coordinates (longitude, latitude),
+a name, an icon, and the street-level view of the place.
+The coordinates are extracted from Google Maps. Caregivers
+only have to look for the place on a map and add a pin
+at the proper location. After that, they provide the name,
+the icon, and the street-level photo of the destination. This
+last attribute can be obtained from Google Street View
+service or from a picture uploaded by the caregiver, providing
+adaptation for each specific user, if needed. Figure 2(a) shows
+the interface employed. When the caregiver selects a user
+to edit (on the left side bar), the map including that user’s
+particular destinations is loaded and appears on the right
+side. The destinations are marked with a blue circle. By
+clicking on them, it is possible to see or edit their names or
+pictures.
+Additionally, the authoring tool allows caregivers to
+supervise users’ performance. Once a user finishes a route,
+the registry (location and time information) is processed
+and represented on a map. This way, a caregiver can analyze
+a user’s performance. Figure 2(b) shows this supervision
+screen. For the selected user and route, it presents a map with
+both paths: the proposed one (solid green line) and the path
+followed (blue dotted line).
+
+
+4
+Mobile Information Systems
+(a)
+(b)
+Figure 2: Authoring tool screenshots: (a) destination points edit screen. Blue circles represent the destination of the selected user. (b) Route
+supervision screen. Green circles correspond to the start, finish, and decision points. The solid green line represents the proposed route and
+the blue dotted line represents the followed route (users’ names and photographs have been blurred in order to preserve their privacy).
+Figure 3: Destination selection screenshot.
+3.3. Location of Users. In this case, thanks to the use of
+smartphones, their GPS sensors, and digital compasses,
+locating and tracking users are straightforward tasks.
+Once users are located, the destination has to be known.
+Several studies have reported that people with cognitive
+disabilities seldom go to new places on their own [5].
+Therefore, the number of possible destinations is restricted
+to certain places (education center, relatives’ and friends’
+houses, work place, etc.). This list is drawn up by the caregiver
+and customized by means of the provided authoring tool.
+Each destination is represented on the smartphone screen by
+its icon and name. This way, the system presents the user with
+a list of the possible destinations to choose one. A screenshot
+of the interface is shown in Figure 3. Thanks to the destination
+icons, users can identify them easily, reducing the cognitive
+load of the process [18].
+3.4. Path Planning. To calculate the best route, the environ-
+ment must be modeled and processed. In general, navigation
+systems make use of graphs to model spaces and apply mathe-
+matical algorithms to calculate the shortest path between the
+starting and destination points. Due to the complexity and
+extensive work required to model a city environment, AssisT-
+OUT makes use of third-party services such as Google Maps
+and Bing Maps and their APIs.
+Although these services offer a certain degree of adap-
+tation in terms of means of transportation or road prefer-
+ences, the instructions provided usually include additional
+information, such as street names, cardinal points, and
+distances. This information is useful for locating decision
+points but they make instructions more complex, requiring
+a higher cognitive load to be processed to understand them.
+Moreover, in some situations the instructions include more
+than one direction, for example, “turn left and after 100 m your
+destination will be on your right.” This typical cartography
+services instruction is too complex for people with cognitive
+disabilities. The adapted version of the same instruction
+should be divided into three simpler directions: “turn left,”
+“go straight (for 100 m),” and “your destination is on your
+right.”
+This issue makes it necessary to analyze and process
+the chosen route. As mentioned in the previous section,
+dividing tasks into simpler steps would result in better
+understanding of the instructions by the user and, therefore,
+better performance. Hence, the route is divided into atomic
+instructions (i.e., continue straight, turn left, and turn right)
+so that it results in a sequence of decision points (places
+where users have to make a decision) and their associated
+instructions. In this way, the navigation process becomes a
+systematic task that is easy to understand and process by
+people with cognitive disabilities.
+To facilitate the identification of decision points, every
+instruction is associated with a street-level photograph.
+This helps users to visually identify the location of these
+points, as well as their direction, thus considerably reducing
+the cognitive load required in comparison to the original
+instruction. To achieve this, AssisT-OUT estimates the best
+location for the views and requests them from the Google
+Street View Service. Although Google Street View can be a
+
+
+Mobile Information Systems
+5
+D
+S
+A
+B
+C
+1
+2
+4
+5
+6
+7
+3
+Figure 4: Route representation diagram, from S (start) to D
+(destination). Circles labeled from A to C indicate decision point
+locations. Triangles numbered from 1 to 7 represent displayed views.
+limitation due to outdated or mismatched images, it presents
+a major advantage: caregivers do not have to take and prepare
+the photographs by themselves. In other words, the image
+collection task can be automatized. Therefore, human and
+time resources required to provide the assistance are also
+reduced.
+Figure 4 presents an example route to go from point
+S (start) to point D (destination), the calculated decision
+points are represented by circles labeled A, B, and C, and the
+associated views are represented by triangles, numbered from
+1 to 7. The set of instructions and views associated to the route
+are as follows:
+(1) Turn until you see the view (point S, view 1).
+(2) Go straight until you see the view (from point S to
+point A, view 2).
+(3) Turn left until you see the view (point A, view 3).
+(4) Go straight until you see the view (from point A to
+point B, view 4).
+(5) Turn right until you see the view (point B, view 5).
+(6) Go straight until you see the view (from point B to
+point C, view 6).
+(7) You have finished (point C, view 7).
+As can be seen, the views chosen to identify the decision
+points are located a few meters before the point and slightly
+oriented toward the direction the user will have to turn at
+the decision point. This way, all the possible references will
+be shown: the street, the building at the corner, and so forth,
+making turns and point identification simpler.
+3.5. User Interaction. The breakdown into simple instructions
+makes navigation a systematic task, since the users have to
+proceed the same way all the time: read (or listen to) the
+instruction and execute it (walk or turn) until they find the
+same view that is shown on the screen.
+Navigation is supported by an adapted user interface,
+which follows the ideas expressed in the previous section. The
+design process was centered on the user and supported by
+experts in special education. It was based on a previous design
+and refined according to the conclusions extracted from its
+evaluation [19].
+It shows a photograph of the next decision point and
+an atomic instruction. In order to facilitate navigation, the
+interface also shows a progress bar and a help button. The
+progress bar helps to identify how far the user is from the
+shown decision point in a way that is graphical and easy to
+understand. The help button triggers an alarm, notifying the
+caregiver that the user feels lost. Besides, AssisT-OUT is also
+provided with a mechanism to warn the user as she gets close
+to the decision point. The mobile beeps and vibrates when
+this happens, relieving the user of the need to constantly
+pay attention to the interface while walking to the decision
+point.
+Figure 5 shows the developed interface. At the top of
+the application screen, we find the instruction, for example,
+“go straight until you see this” (a). Under the instruction,
+we see the red alarm button. Below we see the picture of
+the next decision point and under it the progress bar. This
+is gray and fills in with green as the user gets close to the
+shown decision point. To do this, the system first calculates
+the distance between the decision points. After that, thanks
+to the GPS location, it calculates the remaining distance to
+the next decision point and fills the bar proportionally to
+the walked distance. Additionally, this progress bar is also
+used in turns, becoming filled when the user faces the right
+direction (b). This helps to alleviate the left/right confusion
+that many users present. In this case the sensor employed is
+the compass. Thanks to the information provided by Google
+Maps, AssisT-OUT estimates the angle that the user has to
+turn. Then, according to the compass measure, the bar fills
+green.
+Finally, the interface includes two navigation buttons at
+the bottom of the screen. They allow users to move forward
+to the next step or backward to see a previous one again. Using
+these buttons, once a user reaches a decision point (c), she can
+tap on the forward button to get the next instruction with
+the next decision point. In order to prevent the user from
+skipping steps, a location awareness mechanism has been
+added to the forward button. This keeps it disabled until the
+user gets close enough to the decision point (a).
+In addition to the graphical interface, AssisT-OUT pro-
+vides automatic text-to-speech conversion of instructions, so
+users who cannot read are still able to use it.
+4. Evaluation
+The evaluation was carried out with two main objectives: on
+the one hand, to test the correct operation of AssisT-OUT in
+a real environment on users with cognitive disabilities and,
+on the other hand, to compare it with standard commercial
+navigation software: Google Maps application, available for
+Android smartphones at Google Play.
+Therefore, we conducted an evaluation with 18 users
+with cognitive disabilities. All participants were students of
+
+
+6
+Mobile Information Systems
+(a)
+(b)
+(c)
+Figure 5: Screenshots of the navigation interface. (a) Before arriving at a decision point. (b) Turning left at the decision point. (c) Arriving
+at the destination.
+courses at the Madrid Down Syndrome Foundation. In these
+courses, students are trained in job-related skills (generally,
+office assistant), but also social and behavioral skills and, of
+course, skills required for moving through different environ-
+ments.
+On average, users were 23.72 years old (stdev = 3.66).
+Eleven of them were male and seven were female. Since
+we wanted to test AssisT-OUT as a universal tool, the
+recruited participants presented different cognitive levels
+and capabilities. In particular, one of the participants had
+limited vision. Regarding their relation to technology, all
+participants had a mobile phone, although only 11 out of the
+18 reported that it was a smartphone. Finally, 7 of them used
+navigational applications or public transport applications
+(e.g., for knowing the time remaining when waiting for a bus).
+Therefore, there was a certain variability in the technological
+profiles as well.
+4.1. Methodology. The evaluation process involved different
+techniques such as video recordings and analysis, question-
+naires, focus groups, or thinking aloud. In this way, we
+were able to collect both qualitative and quantitative data to
+evaluate AssisT-OUT and compare it to Google Maps.
+In order to perform the evaluation efficiently, a coun-
+terordered repeated measures experiment design was pro-
+posed. This incomplete factorial design allows comparing
+tools, methods, or interfaces with a minimum number of
+sessions but keeping user, task, and tool polarizations away.
+In this case study, we divided the 18 participants into two
+heterogeneous but similar groups. That is, both groups were
+composed of users with different skills and levels but, as a
+group, they were equivalent. We also defined two different
+routes and assigned them to both groups and tools. Table 1
+summarizes the distribution of groups, routes, and applica-
+tions.
+Table 1: Distribution of groups, routes, and applications during the
+evaluation sessions.
+Group A
+Group B
+Session 1
+Route 1
+Google Maps
+AssisT-OUT
+Session 2
+Route 2
+AssisT-OUT
+Google Maps
+Both routes started from the education center and fin-
+ished at a news-stand and a candy store, respectively. The
+distance on both routes was 300 m approximately, making
+them similar on this account. Figure 6 presents a diagram
+of both routes: (a) corresponds to route 1 and (b) to route
+2. As can be seen, both routes have the same number
+of intersections (4). However, route 1 includes three turns
+(left, right, and left) while route 2 includes only two (right,
+left).
+In order to compare both routes in detail, the Richter and
+Duckham route complexity analysis was carried out [20]. This
+metric evaluates routes’ simplicity by scoring their crossings
+and turns. Table 2 summarizes the possible values.
+From the analysis of their turns and crossings, we
+obtained the scores summarized in Table 3. In light of the
+results, although both routes’ scores were similar, route 1
+scored slightly higher.
+However, the analysis did not consider the open area
+on route 2, a small paved park with trees that delimited
+pedestrian streets. A schematic view of the area is shown
+in Figure 7. The solid green arrow indicates the route that
+should be followed, while the dashed line arrow indicates
+other possible paths. Therefore, this should be included in the
+analysis, since it added difficulty to the route. Considering
+this, 3 extra slots should be added to the score for route 2,
+leading to very close values for both routes. On these grounds,
+we assumed them to be equivalent in terms of difficulty.
+
+
+Mobile Information Systems
+7
+Start
+End
+DP1
+DP2
+DP3
+Pedestrian crossings 
+Route points 
+(a)
+Start
+End
+DP1
+Wide open area
+DP2
+Pedestrian crossings 
+Route points 
+(b)
+Figure 6: Diagrams of the route followed in the evaluation, corresponding (a) to route 1 and (b) to route 2.
+Table 2: Scores of the different intersections, adapted from [20].
+Direction
+Diagram
+Score
+Continue straight
+1 slot
+Turn (no
+intersection)
+4 slots
+Turn at a
+T-intersection
+6 slots
+Turn at a complex
+intersection
+6 + deg(v)
+slots
+The evaluation took place during class time. Each par-
+ticipant was asked to leave the class individually and go to
+the main door of the building. Before walking the route, they
+received a short training session on the application, consisting
+in a short walk to a nearby bus stop. During this training
+they were assisted by the smartphone and a researcher. The
+researcher showed them all the features of the application and
+gave them a short explanation on the guidance mode of the
+corresponding application (Google Maps or AssisT-OUT).
+Once they got to the bus stop and all their doubts were solved,
+they started the test route.
+During the walk, users were escorted by two researchers,
+who walked a few meters behind them. One was tasked to
+help the user in case of a mistake or any other situation while
+the other recorded the session to obtain a third-person view
+of the user during the test. Additionally, users were asked to
+wear a head-mounted camera to record a first-person view.
+These videos, in combination with the AssisT-OUT registries,
+were analyzed afterwards.
+To start the walk, users received the smartphone with the
+application installed. Besides, in the case of Google Maps,
+the destination was preset by a researcher, as otherwise some
+of the participants would not have been able to choose the
+destination and carry out the evaluation. This marked a
+difference with regard to AssisT-OUT. The initial state of the
+Google Maps application is shown in Figure 8. As can be seen,
+the destination was preselected before giving the phone to the
+user.
+
+
+8
+Mobile Information Systems
+Table 3: Complexity analysis of both routes.
+Route 1
+Route 2
+Turn left (complex) deg(v) = 4
+9
+Turn right (complex) deg(v) = 4
+9
+Straight on
+1
+Straight on
+1
+Turn right (T)
+6
+Straight on
+1
+Turn left (complex) deg(v) = 4
+9
+Turn left (complex) deg(v) = 4
+9
+Total score
+25 slots
+Total score
+20 slots
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+Route followed
+Possible path
+Tree
+Figure 7: Diagram of the open area.
+Next, users had to follow the instructions presented by
+each application to get to the destination by themselves.
+Researchers only intervened in case of danger (i.e., crossing
+without looking) or mistake. In case of error, researchers
+waited for a short time and, only if users did not recover on
+their own, they were relocated to the place where they went
+wrong.
+Finally, once the users reported that they had finished,
+researchers asked them to point to the destination and then
+escorted them back to the education center. This information
+(reaching the destination or not and its identification) was
+also recorded to be included in the subsequent analysis. After
+finishing all the sessions, one of the educators directed a focus
+group discussion about their preferred application.
+4.2. Data Collection and Analysis. From the videos and
+registries, 5 measurements were collected for later analysis:
+(i) Walking Time. The time taken to walk from the edu-
+cation center to the destination. This factor provides a
+first estimation of each user’s performance, but it has
+to be considered carefully, since it depends on factors
+other than users’ navigational capabilities, given that
+pace, waiting time at crossings, and so forth vary
+according to the situation.
+Figure 8: Screenshot of Google Maps application at the beginning
+of the route.
+(ii) Reaching the Destination. Whether or not the user
+reached the final destination. The main goal of any
+navigational assistant is taking the user to the desti-
+nation. Therefore, this is the most important factor
+in the evaluation. Additionally, we considered that
+reaching the destination also involved identifying it
+correctly. Therefore, users who did not identify the
+news-stand or the candy store were counted as not
+having reached the destination.
+(iii) End of Task Recognition. Whether or not the user
+understood that the destination had been reached.
+(iv) Relocations. Taking the wrong direction (and not
+recovering from the error by themselves). In this case,
+users were relocated to their last correct position.
+(v) Mistakes. Errors made when taking decisions. That is,
+taking the wrong direction at decision points or not
+being aware of these points and passing by.
+Table 4 summarizes the measured factors for both routes and
+applications.
+As we have said above, the time factor provides a first
+estimation of users’ performance. In this case, Google Maps
+offered better results than AssisT-OUT. Moreover, this result
+is supported statistically (𝑝= 0.011; Independent Samples
+Mann-Whitney 𝑈Test). Therefore, we can affirm that tech-
+nology influenced the time factor. However, this time is also
+
+
+Mobile Information Systems
+9
+Table 4: Measured factors during the evaluation.
+Google Maps AssisT-Out 𝑝value
+Walking time (s)
+329.70 (79.6) 410.25 (91.47) 0.011
+Reaching the destination (y/n)
+9/9
+17/1
+0.022
+End of task recognition (y/n)
+18/0
+18/0
+1.000
+Relocations
+0.39 (1.04)
+0.50 (0.79)
+0.339
+Mistakes
+1.17 (2.28)
+0.56 (0.98)
+0.767
+affected by users’ pace, time spent waiting to cross streets, and
+so forth.
+The next measure is the number of users who arrive
+at the destination. This is the most important factor since
+the goal of any navigation assistance is to make the user
+reach the destination. In this case, AssisT-OUT yielded far
+better results. Seventeen out of the 18 participants reached the
+destination and identified it correctly. In the case of Google
+Maps, only 9 out of the 18 did so. This result is supported
+statistically (𝑝= 0.022; Independent Samples Mann-Whitney
+𝑈Test). Moreover, even if relocations are included in the
+analysis, AssisT-OUT continues to yield better results.
+Regarding the number of errors, AssisT-OUT presented
+lower values, but no statistical evidence supported this result.
+Hence, we cannot clearly support one application or the other.
+However, we can state that AssisT-OUT is, at least, as good
+as the standard application regarding this factor, which is a
+positive result. The same occurs in the case of relocations: no
+statistical evidence was found to support the difference.
+Finally, from the discussion group, it emerged that 9 out of
+the 18 users preferred AssisT-OUT, 4 preferred Google Maps,
+4 preferred both equally, and only one user did not have any
+specific preference. This is a positive result as well, since users
+chose the adapted proposal over the standard one.
+4.3. Discussion and Future Work. As presented in the related
+work section, previous studies such as that of Liu et al. [12]
+compared different mechanisms to guide people with cogni-
+tive disabilities. Moreover, Goodman et al. [21] and Rassmus-
+Gr¨ohn and Magnusson [22] conducted similar studies on
+elderly people with memory problems. Although their focus
+groups were different, they presented equivalent findings: the
+best way to orient people with special needs is landmark-
+based directions.
+These ideas motivated us to design, develop, and eval-
+uate a novel system, based on these works, but providing
+full functionality. That is, previous experiments were based
+on Wizard-of-Oz approaches that required external control
+during the trials or the preparation of routes, pictures, and
+their processing by researchers or educators. In our case,
+this process is carried out automatically since the route
+calculation and street-level photographs are requested from
+external services and processed at the server in execution
+time. This way, not only was our approach closer to a real-
+world deployment, but it also reduced carers’ workload.
+From the evaluation, we can affirm that our wayfind-
+ing proposal, based on atomic instructions and street-level
+images at decision points, worked better than the commercial
+application. The most valuable result was the higher number
+of users who arrived at the destination and identified it
+correctly. This factor is crucial in navigation and is the main
+objective of these applications: to enable users to reach their
+destinations. Related to this, another important issue we
+found was that some users, despite not finishing the route,
+reported they had reached the destination (such destinations
+were not valid). We consider that reaching and recognizing
+the destination are both equally significant. Therefore, these
+false identifications are also critical in wayfinding solutions
+and, what is more, dangerous, since users may feel confused
+or lost.
+Another important metric in evaluating navigation assis-
+tants is the time taken to complete the route. In this case,
+users required significantly more time when using Assist-
+OUT. We consider that this increment in AssisT-OUT times
+is motivated by the fact that it is a systematic application,
+which requires users’ attention and interaction during the
+route, while Google Maps offers a more dynamic experience
+and users only have to interact with it at setup.
+At this point we would like to recall the fact that, in
+the case of Google Maps, the application was given to users
+preconfigured. That is, a researcher selected the destination
+and asked the application for the route. In contrast, in the case
+of AssisT-OUT, users selected the destination by themselves.
+Therefore, they performed the whole process instead of only
+the navigation part. According to their educators, many of
+the users would not have been able to configure Google
+Maps application by themselves, which would have made
+the navigation impossible. Thus, not only did AssisT-OUT
+make more users reach the destination, but it also enabled
+assistance by means of the adapted interface.
+Although the system worked satisfactorily in a real and
+controlled setting, for intensive use it needs to be improved
+in terms of route recalculation. Due to GPS accuracy errors,
+lack of attention, or confusion between left and right, users
+may deviate from the proposed route and be unable to return
+to the correct place on their own. Therefore, the route should
+be recalculated. This feature should be implemented in future
+versions of the system but in a sensible way. Many commercial
+systems recalculate the route and propose a new path. In our
+case, as we want to assist and train users at the same time,
+it would be preferable to guide them back to the location
+where they took the wrong direction and continue with the
+precalculated route.
+In the same sense, the public transport system should
+be included in route calculation. This way, more users could
+make use of the application in their daily lives. In small cities
+or walks around the neighborhood, this is not necessary, but it
+would be useful in bigger cities where users may have to cover
+several kilometers to get to their workplace or education
+center.
+5. Conclusions
+In this paper, we have presented a novel wayfinding system
+adapted for people with cognitive disabilities. The path
+planning and presentation have been specifically developed
+to meet their needs. Therefore, instead of showing complex
+instructions on maps, we decided to break down the route
+
+
+10
+Mobile Information Systems
+into atomic instructions and make use of images at the deci-
+sion points. This mechanism, supported by location aware-
+ness alarms, constitutes a different, more adapted approach
+in comparison to those offered by standard commercial
+applications.
+From the evaluation, we can conclude that an adapted
+system such as that we have described here surpasses the
+performance of a standard navigation tool in terms of the
+number of users who reached and identified their destination
+correctly.
+Outdoor guidance is a promising research issue for people
+with cognitive disabilities. Most of these users are not allowed
+to go alone to new or unfamiliar places. And, as can be seen
+in the results of the evaluation, the available standard tools do
+not meet their requirements. Only half of standard navigation
+tool users reached their destination compared to almost all
+participants using the adapted version. Only the time to finish
+the route increased slightly with the adapted tool, which was
+offset by a higher success ratio.
+A dependable, scalable tool that is easy to use and under-
+stand is indispensable for providing assurance to people with
+cognitive disabilities and their relatives in their autonomous
+movements. We consider that the proposed paradigm, with
+atomic tasks, simple instructions, and continuous real photos
+provides a promising approach to accommodate the require-
+ments of these users. The evaluation conducted with users
+with diverse grades of disability confirms this idea, establish-
+ing a focus of research for specifically adapted applications for
+people with cognitive disabilities affecting their mobility.
+Conflict of Interests
+The authors declare that there is no conflict of interests
+regarding the publication of this paper.
+Acknowledgments
+This work has been partially funded by Projects “e-Training
+y e-Coaching para la Integraci´on Socio-Laboral” (TIN2013-
+44586--R) and “eMadrid-CM: Investigaci´on y Desarrollo
+de Tecnolog´ıas Educativas en la Comunidad de Madrid”
+(S2013/ICE-2715).
+References
+[1] E. Foulke, “Perception, cognition and the mobility of blind
+pedestrians,” in Spatial Abilities: Development and Physiological
+Foundations, pp. 55–76, Academic Press, New York, NY, USA,
+1982.
+[2] K. Lynch, The Image of the City, vol. 11, MIT Press, 1960.
+[3] D. R. Montello and C. Sas, “Human factors of wayfinding in
+navigation,” in International Encyclopedia of Ergonomics and
+Human Factors, pp. 2003–2008, CRC Press, Taylor & Francis,
+2006.
+[4] J. M. Loomis, R. L. Klatzky, R. G. Golledge, and J. W. Philbeck,
+“Human navigation by path integration,” in Wayfinding Behav-
+ior: Cognitive Mapping and Other Spatial Processes, pp. 125–151,
+Johns Hopkins University Press, Baltimore, Md, USA, 1999.
+[5] H. Mengue-Topio, Y. Courbois, E. K. Farran, and P. Sockeel,
+“Route learning and shortcut performance in adults with intel-
+lectual disability: a study with virtual environments,” Research
+in Developmental Disabilities, vol. 32, no. 1, pp. 345–352, 2011.
+[6] S. E. Stock, D. K. Davies, M. L. Wehmeyer, and Y. Lachapelle,
+“Emerging new practices in technology to support independent
+community access for people with intellectual and cognitive
+disabilities,” NeuroRehabilitation, vol. 28, no. 3, pp. 261–269,
+2011.
+[7] R. Herv´as, J. Bravo, and J. Fontecha, “An assistive navigation
+system based on augmented reality and context awareness for
+people with mild cognitive impairments,” IEEE Journal of
+Biomedical and Health Informatics, vol. 18, no. 1, pp. 368–374,
+2014.
+[8] H. Holone, G. Misund, and H. Holmstedt, “Users are doing
+it for themselves: pedestrian navigation with user generated
+content,” in Proceedings of the International Conference on
+Next Generation Mobile Applications, Services and Technologies
+(NGMAST ’07), pp. 92–99, September 2007.
+[9] M. Rispoli, W. Machalicek, and R. Lang, “Assistive technology
+for people with acquired brain injury,” in Assistive Technolo-
+gies for People with Diverse Abilities, Autism and Child Psy-
+chopathology Series, pp. 21–52, Springer, New York, NY, USA,
+2014.
+[10] A. K. Beeharee and A. Steed, “A natural wayfinding exploiting
+photos in pedestrian navigation systems,” in Proceedings of the
+8th International Conference on Human-Computer Interaction
+with Mobile Devices and Services (MobileHCI ’06), pp. 81–88,
+Espoo, Finland, September 2006.
+[11] S. Fickas, M. Sohlberg, and P.-F. Hung, “Route-following assis-
+tance for travelers with cognitive impairments: a comparison of
+four prompt modes,” International Journal of Human Computer
+Studies, vol. 66, no. 12, pp. 876–888, 2008.
+[12] A. L. Liu, H. Hile, G. Borriello et al., “Customizing directions
+in an automated wayfinding system for individuals with cog-
+nitive impairment,” in Proceedings of the 11th International
+ACM SIGACCESS Conference on Computers and Accessibility
+(ASSETS ’09), pp. 27–34, Pittsburgh, Pa, USA, October 2009.
+[13] R. Lemoncello, M. Moore Sohlberg, and S. Fickas, “How best
+to orient travellers with acquired brain injury: a comparison of
+three directional prompts,” Brain Injury, vol. 24, no. 3, pp. 541–
+549, 2010.
+[14] H. Kaminoyama, T. Matsuo, F. Hattori, K. Susami, N. Kuwahara
+y, and S. Abe, “Walk navigation system using photographs for
+people with dementia,” in Human Interface and the Management
+of Information. Interacting in Information Environments, vol.
+4558 of Lecture Notes in Computer Science, pp. 1039–1049,
+Springer, Berlin, Germany, 2007.
+[15] A. G. Garc´ıa de Marina, R. M. Carro, and P. Haya, “Where
+should I go?: guiding users with cognitive limitations through
+mobile devices outdoors,” in Proceedings of the 13th Inter-
+national Conference on Interacci´on Persona-Ordenador, Elche,
+Spain, October 2012.
+[16] S. Fickas, R. Lemoncello, and M. Sohlberg, “Where am I: how
+travelers with a cognitive impairment ask for and use help,” in
+Proceedings of the 1st International Workshop on User Modeling
+and Adaptation for Daily Routines: Providing Assistance to
+People with Special and Specific Needs, pp. 5–18, Hawaii, Hawaii,
+USA, June 2010.
+[17] N. Fallah, I. Apostolopoulos, K. Bekris, and E. Folmer, “Indoor
+human navigation systems: a survey,” Interacting with Comput-
+ers, vol. 25, no. 1, pp. 21–33, 2013.
+
+
+Mobile Information Systems
+11
+[18] M. G. Friedman and D. N. Bryen, “Web accessibility design
+recommendations for people with cognitive disabilities,” Tech-
+nology and Disability, vol. 19, no. 4, pp. 205–212, 2007.
+[19] J. Gomez and T. Ojala, “A mobile navigation system based on
+visual cues for pedestrians with cognitive disabilities,” in Assis-
+tive Technologies for Physical and Cognitive Disabilities, pp. 173–
+190, 2014.
+[20] K.-F. Richter and M. Duckham, “Simplest instructions: finding
+easy-to-describe routes for navigation,” in Geographic Informa-
+tion Science, pp. 274–289, Springer, 2008.
+[21] J. Goodman, S. A. Brewster, and P. Gray, “How can we best use
+landmarks to support older people in navigation?” Behaviour &
+Information Technology, vol. 24, no. 1, pp. 3–20, 2005.
+[22] K. Rassmus-Gr¨ohn and C. Magnusson, “Finding the way home-
+supporting wayfinding for older users with memory prob-
+lems,” in Proceedings of the 8th Nordic Conference on Human-
+Computer Interaction: Fun, Fast, Foundational (NordiCHI ’14),
+pp. 247–255, October 2014.
+
+
+Submit your manuscripts at
+http://www.hindawi.com
+Computer Games 
+ Technology
+International Journal of
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Distributed 
+ Sensor Networks
+International Journal of
+Advances in
+Fuzzy
+Systems
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+International Journal of
+Reconfigurable
+Computing
+Hindawi Publishing Corporation 
+http://www.hindawi.com
+Volume 2014
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+ Applied 
+Computational 
+Intelligence and Soft 
+Computing
+ Advances in 
+Artificial 
+Intelligence
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Advances in
+Software Engineering
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Electrical and Computer 
+Engineering
+Journal of
+Journal of
+Computer Networks 
+and Communications
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+ Advances in 
+Multimedia
+ International Journal of 
+Biomedical Imaging
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Artificial
+Neural Systems
+Advances in
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Robotics
+Journal of
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Computational 
+Intelligence and 
+Neuroscience
+Industrial Engineering
+Journal of
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Modelling & 
+Simulation 
+in Engineering
+Hindawi Publishing Corporation 
+http://www.hindawi.com
+Volume 2014
+The Scientific 
+World Journal
+Hindawi Publishing Corporation 
+http://www.hindawi.com
+Volume 2014
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+Human-Computer
+Interaction
+Advances in
+Computer Engineering
+Advances in
+Hindawi Publishing Corporation
+http://www.hindawi.com
+Volume 2014
+
+

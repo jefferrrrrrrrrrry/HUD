@@ -1,0 +1,853 @@
+--- Page 1 ---
+ 
+ 
+ 
+ 
+  
+Abstract—More and more vehicles are being equipped with 
+Automatic Emergency Braking (AEB) systems. These systems 
+intend to help the driver avoid or mitigate accidents by 
+automatically applying the brakes prior to an accident. Initially 
+only rear-end collision were addressed but over time more 
+accident types are incorporated and brakes are applied earlier 
+and stronger, in order to increase the velocity reduction before 
+the accident occurs. This paper describes one of the latest AEB 
+systems called Collision Warning with Full Auto Brake and 
+Pedestrian Detection (CWAB-PD). It helps the driver with 
+avoiding both rear-end and pedestrian accidents by providing a 
+warning and, if necessary, automatic braking using full braking 
+power. A limited set of accident scenarios is selected to illustrate 
+the theoretical and practical performance of this system. It is 
+shown that the CWAB-PD system can avoid accidents up to 35 
+km/h and can mitigate accidents achieving an impact speed 
+reduction of 35 km/h. To the best of the authors knowledge 
+CWAB-PD is the only system on the market that automatically 
+can avoid accidents with pedestrians. 
+I. INTRODUCTION 
+UTOMAKERS are increasingly focusing their safety 
+efforts to the area of active safety. Traditionally the 
+efforts were focused on protecting vehicle occupants and 
+vulnerable road users (VRU's) in case of an accidents, so- 
+called passive safety, but nowadays automakers try to help 
+drivers in avoiding the accident from occurring in the first 
+place. Automakers use active safety technologies that "can 
+detect hazardous traffic situations and actively assist road 
+users in avoiding or mitigating accidents". [1]. The practical 
+application of  these technologies have become possible due 
+to recent advances in the area of exterior sensors such as 
+radar, lidar and vision, in the combination with continuous 
+costs reductions. These advances have opened up many 
+possibilities for customer features like lane departure 
+warning (LDW), forward collision warning (FCW) and 
+adaptive cruise control (ACC). In this paper a particular 
+safety feature will be discussed that is called Collision 
+Warning with Full Auto Brake and Pedestrian Detection 
+(CWAB-PD). This features, as launched on the 2011 MY 
+Volvo S60, combines an FCW function with an Automatic 
+Emergency Braking (AEB) function. The objective of this 
+paper is to describe and compare the theoretical and practical 
+performance of the automatic emergency braking provided 
+ 
+The authors are with Volvo Car Corporation, Active Safety Functions 
+Department, 
+PV4A, 
+SE 
+40531 
+Gothenburg, 
+Sweden 
+(e-mail addresses: ecoeling@volvocars.com, aeidehal@volvocars.com and 
+mbengt19@volvocars.com). 
+by CWAB-PD in commonly used test scenarios. Section II 
+describes the  CWAB-PD system. In section III the selection 
+of test scenarios will be motivated, while section IV provides 
+a theoretical analysis on what typically can be achieved with 
+these types of systems. In section V the practical results are 
+shown and explained and the paper finishes with a discussion 
+in section VI. 
+II. CWAB-PD 
+Collision Warning with Full Auto Brake and Pedestrian 
+Detection is the third generation of the Volvo system that 
+helps drivers to avoid collisions. The first 2 generations [2] 
+provide warning, brake support and partial automatic 
+emergency braking of 5 m/s2 in rear-end accidents with 
+moving and stationary vehicles. The innovations in the third 
+generation are: 
+• 
+Full automatic emergency braking (up to 10 m/s2).  
+• 
+Warning, brake support and automatic emergency 
+braking in pedestrian accidents (refer Fig. 1). 
+• 
+Automatic collision avoidance. 
+ 
+ 
+Fig. 1. Visualization of Pedestrian Detection. 
+ 
+ 
+The system uses a combination of a long-range radar and a 
+forward-sensing wide-angle camera  to continuously monitor 
+the area in front of the vehicle.  
+• 
+A 640 by 480 pixel black and white progressive 
+scan CMOS forward looking camera (FLC), which 
+is mounted behind the windscreen, is used mainly 
+for classifying the objects, e.g. as vehicles or 
+pedestrians, in a 48º field of view (FOV). Since the 
+FLC is used for reporting both vision objects and 
+lane markings, the field of view was chosen to work 
+Collision Warning with Full Auto Brake and Pedestrian Detection 
+- a practical example of Automatic Emergency Braking 
+Erik Coelingh, Andreas Eidehall and Mattias Bengtsson 
+A
+2010 13th International IEEE
+Annual Conference on Intelligent Transportation Systems
+Madeira Island, Portugal, September 19-22, 2010
+MA6.1
+978-1-4244-7659-6/10/$26.00 ©2010 IEEE
+155
+
+--- Page 2 ---
+ 
+ 
+ 
+for both. 
+• 
+A 77 GHz electronically scanning forward looking 
+radar (FLR), which is mounted in the vehicle grille, 
+measures target object information in front of the 
+vehicle in a 60º field of view (FOV), e.g. range, 
+range rate and azimuth angle. 
+ 
+ 
+  
+ 
+ 
+Fig. 2. From top-left: Forward Looking Camera (FLC) mounted behind 
+windscreen, Forward Looking Radar (FLR) installation behind grille and 
+the control unit, forward sensing module (FSM). 
+ 
+Data from these two sensors is fused in a separate control 
+unit, Forward Sensing Module (FSM). Fusing data from two 
+sensors with different characteristics reduces the risk of 
+detecting false targets and increases the confidence and data 
+accuracy of the detected target. This is important to allow for 
+hard and early braking in accidents scenarios while 
+simultaneously keeping the risk of false brake interventions 
+at an acceptably low level. 
+ 
+CWAB-PD will provide a warning and brake support when 
+there is a credible risk for an accident. Additionally, if the 
+driver does not intervene in spite of the warning and the 
+possible collision is about 1 seconds ahead, i.e. the collision 
+threat 
+becomes 
+imminent, 
+intervention 
+braking 
+is 
+automatically applied to slow down the car. In this way it 
+may not always be possible to avoid a collision, but the 
+impact speed can be reduced significantly, and in many low-
+speed scenarios an accident can be avoided completely.  
+ 
+The CWAB-PD system is optional and works in parallel to 
+City Safety [3]. The brake system executes the maximum 
+brake request of the two features in case these are not the 
+same. 
+ 
+ 
+Fig. 3. Collision Warning when there is an accident risk. 
+ 
+III. TEST SCENARIOS 
+A. Positive performance 
+The objective of AEB systems is to automatically avoid or 
+mitigate an accidents in case a driver does not react in time. 
+Most systems that are currently on the market only provide 
+mitigation in rear-end collisions, but in principle AEB can be 
+applied to all collision types. Mitigation is obtained through 
+decreasing the collision impact speed and thereby the risk of 
+injury for the persons involved. In special cases a speed 
+reduction can avoid a collision completely, e.g. in a 
+following situation where the potential speed reduction is 
+larger than the relative speed.  
+ 
+The positive performance of a safety feature refers to 
+performance in case of an accident. To understand what this 
+means one has to look at real-world accident statistics. The 
+development of automotive safety systems at Volvo Cars is 
+based on the so-called "Circle of Life" [4]. This working 
+process starts with analyzing real-world accident statistics to 
+understand the types of collisions, their frequencies and their 
+causes. In the real-world accidents vary in terms of 
+velocities, types of vehicles involved, friction, lighting 
+conditions etc. This information is crucial for selecting the 
+sensors, their field-of-view, brake performance etc. Also 
+understanding the common causes of an accidents is valuable 
+knowledge when designing the human-machine interface that 
+needs to alert the driver when there is an accident risk.  
+ 
+Based on this analysis the positive performance can be 
+predicted, but the actual real-world positive performance can 
+only be estimated once the feature has been on the market for 
+a long period of time. Alternatively, the performance can be 
+estimated using a selected number of scenarios, similar as is 
+being done for passive safety in Euro-NCAP or US-NCAP 
+tests. But, contrary to passive safety there are no well-
+established and widely-applied test and rating scenarios for 
+AEB systems.      
+ 
+ 
+For some active safety features there are some scenarios 
+formally described. E.g. NHTSA in the US has rating 
+methods for Electronic Stability Control (ESC), Lane 
+Departure Warning (LDW) [5] and Forward Collision 
+Warning (FCW) [6] and MLIT in Japan has developed 
+guidelines for several active safety features.  
+ 
+Also for AEB systems, such as CWAB-PD, there are some 
+common test scenarios in which positive performance is 
+estimated: 
+ 
+NHTSA 
+NHTSA [6] has proposed three rear-end collision scenarios 
+156
+
+--- Page 3 ---
+ 
+ 
+ 
+for FCW that can be used for evaluating AEB as well. These 
+scenarios are based in the crash frequency, cost and harm 
+data from GES accident statistics: 
+a) Approach a stationary lead vehicle in 72.4 km/h (45 
+miles/h) 
+b) Follow a lead vehicle in 72.4 km/h at a constant 
+headway distance of 30 m, where the lead vehicle 
+suddenly brakes with constant deceleration of 3 
+m/s2 (0.3 g) within 1.5 seconds. 
+c) Approach a slower lead vehicle in 72.4 km/h. The 
+lead vehicle is moving with a constant speed of 32.3 
+km/h (20 miles/h).  
+ 
+Tatcham 
+In [7] motivates the importance of low-speed collisions, 
+based on statistics from insurance companies. The test 
+scenario that is used in this publication is: 
+• 
+Approach a stationary lead vehicle in 16 km/h. 
+ 
+MLIT 
+MLIT has a number of requirements on AEB systems. 
+Several are related to the risk of misuse of the system. One 
+of these is that the stopping distance of a collision avoidance 
+system has to be less than one meter. 
+ 
+Auto Motor und Sport 
+Also the automotive press shows an increasing interest in 
+AEB system. One of the first tests was performed by the 
+German magazine Auto Motor und Sport [8] and vehicles 
+from different manufacturers were compared in the following 
+scenarios: 
+a) Approach a stationary lead vehicle in 25 km/h. 
+b) Approach a stationary lead vehicle in 50 km/h. 
+c) Follow a lead vehicle in 50 km/h at a constant 
+headway of 15 m, after which the lead vehicle 
+suddenly brakes maximally. 
+ 
+ 
+The scenarios above are all directed towards rear-end 
+collisions. For pedestrian accidents there are, to the best of 
+the authors knowledge, no common test scenarios used for 
+AEB systems. There is an increased focus on pedestrian or 
+Vulnerable Road User (VRU) safety, but most technology is 
+directed towards passive safety systems. Statistics show that, 
+in Sweden, about 16 % of all traffic fatalities are pedestrians 
+[9]  and in the USA it is about 11 % of all traffic fatalities 
+(4,700 people) [10]. It is also known that about 50 % of the 
+pedestrian accidents occur in speeds below 25 km/h [11]. 
+ 
+EuroNCAP carries out a series of passive safety tests to 
+replicate accidents involving child and adult pedestrians, 
+where impacts occur at 40kph (25mph). Impact sites are then 
+assessed and rated fair, weak and poor. This scenario can 
+also be used for testing CWAB-PD.  
+B. Negative  performance 
+Besides the positive performance of AEB systems, i.e. the 
+performance in collision situations, one has to address 
+negative performance as well. The risk of automatic 
+emergency braking has to be minimized in non-collision 
+situations in order to not disturb the driver under normal 
+driving situations. These tests are not in the scope of this 
+paper, but the CWAB-PD system has been extensively tested 
+on public roads in different traffic environments, in different 
+countries and by different drivers and it has been confirmed 
+with sufficient confidence that the risk for false interventions 
+is acceptably low.  
+IV. THE THEORETICAL POTENTIAL OF AEB SYSTEMS 
+To calculate the potential of an AEB system one needs to 
+assume a certain prediction model. Automatic braking has to 
+be applied a certain time before a collision occurs, so one 
+has to estimate how the road users involved will behave 
+during a certain prediction horizon. There are several models 
+that can be used for this, e.g. assume constant acceleration or 
+constant turn radius. Examples are provided in [12], [13] and 
+[14] .  
+ 
+A common measure for calculating the collision risk is time 
+to collision (TTC). Assuming two objects move in the same 
+direction and assuming constant acceleration, the time to 
+collision can be expressed as:  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<
+−
+≥
+≥
+<
+≥
+−
++
+−
+≠
+<
+−
+−
+−
+=
+<
+−
+=
+0
+a~
+p~
+2
+v~
+undefined
+0
+a~
+and
+0
+v~
+undefined
+0
+a~
+and
+0
+v~
+,
+a~
+a~
+p~
+2
+v~
+a~
+v~
+0
+a~
+and
+0
+v~
+,
+a~
+a~
+p~
+2
+v~
+a~
+v~
+0
+a~
+and
+0
+v~
+,
+v~
+p~
+t
+,
+x
+x
+2
+x
+x
+x
+x
+x
+x
+,
+x
+x
+2
+x
+x
+x
+x
+x
+x
+x
+x
+2
+x
+x
+x
+x
+x
+x
+x
+collision
+ 
+ 
+Where
+x
+p~ ,
+x
+v~ and
+xa~ are the relative position, velocity and 
+acceleration, respectively. So, when the host vehicle is 
+approaching a stationary target object with constant velocity, 
+the time to collision is linearly decreasing with the relative 
+position according: 
+0
+v
+,
+v
+p~
+v~
+p~
+t
+target
+,
+x
+host
+,
+x
+x
+x
+x
+collision
+=
+=
+−
+=
+ 
+When approaching a target the driver has can steer around 
+the object, brake before the object or perform a combination 
+of the two.  
+ 
+The time needed to avoid collision by braking can be 
+expressed as: 
+host
+,
+x
+x
+brake
+a
+v~
+t
+−
+=
+ 
+157
+
+--- Page 4 ---
+ 
+ 
+ 
+This is the time needed to reduce the relative velocity to 
+zero. The distance that the host will travel during the braking 
+maneuver is: 
+host
+,
+x
+2
+0
+,
+x
+2
+brake
+host
+,
+x
+brake
+,
+x
+a
+2
+v~
+2
+t
+a
+p~
+−
+=
+−
+=
+ 
+and thus the time to collision at which braking has to be 
+commenced is: 
+0
+,
+x
+brake
+,
+x
+brake
+v~
+p~
+ttc
+−
+=
+ 
+Note that this is the time to collision given that no braking 
+intervention occur. If braking occurs, then the time to 
+collision will be higher, and when collision avoidance is 
+achieved, TTC approaches infinity. The time needed to steer 
+a vehicle around a target can be expressed as: 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++
+±
+=
+2
+w
+w
+y
+a
+2
+min
+ttc
+et
+arg
+t
+host
+0
+host
+,
+y
+steer
+ 
+ 
+where whost and wtarget is the width of the host and the target, 
+and ay,host is the expected maximal lateral acceleration of the 
+host vehicle. Both ttcbrake and ttcsteer can be plotted as a 
+function of the relative velocity, resulting in Fig. 4. 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+Relative velocity (km/h)
+TTC (s)
+ 
+ 
+Braking
+Steering
+ 
+Fig. 4. The time to collision where the accident becomes unavoidable by 
+braking or steering. A conservative AEB system can only intervene below 
+both these curves. 
+ 
+However, the assumptions in this prediction model are very 
+conservative and therefore lead to unnecessarily late braking, 
+especially in low-speed situations. The model has therefore 
+been extended by incorporating: 
+ 
+• 
+Brake system dynamics. A deceleration cannot be 
+achieved instantaneously as the brake system needs 
+to build up brake torque first. 
+• 
+Stop distance. When targeting collision avoidance 
+one needs to incorporate a certain between the 
+target and host vehicle. 
+• 
+Vehicle dynamics. At lower speeds one cannot 
+generate large later acceleration. 
+ 
+These phenomena have been incorporated in the CWAB-PD 
+system, the diagram is shown in Fig. . 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+Relative velocity (km/h)
+TTC (s)
+ 
+ 
+Braking
+Steering
+ 
+Fig. 5. The time to collision where the accident becomes unavoidable by 
+braking or steering using the extended model in CWAB-PD. 
+ 
+Note: Even further advances have been made in [16], but 
+these have not yet tested in practice. 
+ 
+Automatic emergency braking is applied when the driver 
+cannot brake or steer anymore to avoid a collision. The 
+CWAB-PD applies maximum braking power resulting in 
+decelerations of up to 10 m/s2. 
+ 
+The theoretic speed reduction that is achieved based on the 
+TTC curve in Fig. 5 can be obtained using a simple brake 
+model. The brake model that is used here consist of a pure 
+delay of 180 ms and then a deceleration ramp of 20 m/s3. 
+The assumed friction coefficient is set to one. This gives the 
+expected velocity reduction is shown in Fig. 6. 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+Relative velocity (km/h)
+Velocity reduction (km/h)
+ 
+Fig. 6. The theoretical speed reduction based on the ttc curves in Fig. 4 
+and a simple brake model. 
+V. PRACTICAL RESULTS 
+In section III.A a number of scenarios were selected for 
+testing AEB systems. The CWAB-PD was tested in these 
+scenarios and the results are illustrated below. The first test 
+show a scenario where the host vehicle approach a stationary 
+pedestrian, see Fig. 7, which also show the test setup and a 
+snapshot of the vision system. Fig. 8 then shows the achieved 
+speed reduction which is compared to the theoretical curve 
+in section IV. 
+158
+
+--- Page 5 ---
+ 
+ 
+ 
+ 
+ 
+Fig. 7. The test setup used for evaluating pedestrian performance of the 
+CWAB-PD system. 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+Relative velocity (km/h)
+Velocity reduction (km/h)
+ 
+ 
+Theoretical value
+Experimental results
+ 
+Fig. 8. The theoretical speed reduction together with real life 
+performance. The difference between theoretic and experimental results is 
+mainly due to the simple brake model used in the theoretical curve. 
+ 
+NHTSA 
+In the NHTSA test case a) where a stationary lead vehicle is 
+approached in 72.4 km/h the achieved speed reduction of the 
+CWAB-PD system is 25 km/h giving a relative impact speed 
+of 47 km/h. Test case b) has not been run due to limitations 
+in the test equipment. In test case c), approach a slower lead 
+vehicle in 72.4 km/h, where the lead vehicle is moving with a 
+constant speed of 32.3 km/h, the system reduces the impact 
+speed with 35 km/h, giving a relative impact speed of 5 
+km/h. 
+ 
+MLIT 
+MLIT has a number of requirements on AEB systems. 
+Several are related to the risk of misuse of the system. One 
+of these is that the stopping distance of a collision avoidance 
+system has to be less than one meter. The performance in this 
+respect of the CWAB-PD system is shown in Fig. 9. 
+ 
+Thatcham 
+In the scenario where a stationary lead vehicle is approached 
+at 16 km/h, the CWAB-PD system achieves collision 
+avoidance. 
+ 
+Auto Motor und Sport 
+When approaching a stationary lead vehicle at 25 km/h, the 
+CWAB-PD system achieves collision avoidance. When 
+approaching a stationary lead vehicle at 50 km/h, the speed 
+reduction is approximately 30 km/h. For two vehicles 
+traveling 15 m apart at 50 km/h and the leading vehicle 
+suddenly brake maximally, the CWAB-PD system is also 
+able to reduce the impact speed by 30 km/h.  
+ 
+0
+0.5
+1
+1.5
+0
+1
+2
+3
+4
+5
+6
+Stopping distance (m)
+Number of samples
+Max stopping distance
+accoring to MLIT
+requirement: 1 (m)
+ 
+Fig. 9. The stopping distance for a number of pedestrian scenarios of 
+speeds between 5 – 35 km/h. One of the MLIT requirements is that a 
+collision avoidance system has to stop closer to the obstacle than 1 m. 
+VI. DISCUSSION 
+Automatic Emergency Braking is an effective way to 
+decrease the impact speed in rear-end and pedestrian 
+accidents. The Volvo CWAB-PD system is, to the best 
+knowledge of the authors, the only system on the market that 
+automatically can avoid these accidents in vehicle speeds up 
+to 35 km/h. The actual speed reduction is dependent on 
+several factors such as road conditions, tire conditions, 
+traffic situation etc. The system shows very good 
+performance in common test scenario from NHTSA, 
+Tatcham and Auto Motor and Sport. 
+ 
+From research it is known that a reduction of speed before 
+impact with 10 % can reduce fatal injuries in car crashes 
+with approximately 30 % [17] and that lowering the impact 
+speed in pedestrian collisions from 50 to 25 km/h reduces 
+fatality risk by 85 % [11]. This illustrates what the real-life 
+benefit of the CWAB-PD system may be. 
+ 
+References 
+[1] M. Brännström, On Threat Assessment and Decision Making for 
+Avoiding Automotive Vehicle Collisions, Licentiate Thesis, 
+R015/2009, Chalmers University of Technology, Sweden, 2009. 
+[2] E. Coelingh, H. Lind, W. Birk and D. Wetterberg, Collision Warning 
+with Auto Brake, FISITA World Congress, F2006V130, Yokohama 
+Japan, 2006. 
+[3] M. Distner, M. Bengtsson, T. Broberg and L. Jakobsson, City Safety – 
+a system addressing rear-end collisions at low speeds, Paper No. 09-
+0371, 21st ESV Conf. 2009. 
+[4] I. Isaksson-Hellman and H. Norin, 2005, How thirty years of focused 
+safety development has influenced injury outcome in Volvo cars, 
+159
+
+--- Page 6 ---
+ 
+ 
+ 
+Boston, USA: 49th AAAM Annual Scientific Conference, Boston, 
+2005. 
+[5] G.J. Forkenbrock and F.S. Barickman, Lane Departure Warning 
+(LDW) Performance Evaluation, Paper No. 09-0559, 21st ESV Conf. 
+2009. 
+[6] G.J. Forkenbrock and F.S. Barickman, Forward Collision Warning 
+(FCW) Performance Evaluation, Paper No. 09-0561, 21st ESV Conf. 
+2009. 
+[7] Avery M. and A. Weekes, Volvo City Safety –Collision Avoidance 
+Technology and its Potential to reduce Whiplash Injuries, Conf. Neck 
+Injuries in Road Traffic and Prevention Strategies, Munich, 
+Germany, Nov 2008. 
+[8] Bloch, A. "Der club der Roten Lichter" in Auto Motor und Sport, 
+Issue 12, 2009, pp. 114–119. 
+[9] Swedish Road Authorities, Analys av trafiksäkerhetsutvecklingen 
+1997–2007, Report 2008:5, 2008. 
+[10] NHTSA, Traffic Safety Facts 2007, DOT HS 810 994, 2007. 
+[11] E. Rosén and U. Sander, Pedestrian fatality risk as a function of car 
+impact speed, Accident Analysis and Prevention 41 (2009) 536–542, 
+2009 
+[12] J. Jansson, Collision Avoidance Theory with Application to 
+Automotive Collision Mitigation Dissertation No. 950, Sweden, 2005. 
+[13] J. Hillenbrand, A.M. Spieker and K. Kroschel, A Multilevel Collision 
+Mitigation Approach - Its Situation Assessment, Decision Making 
+and Performance Tradeoffs, IEEE Transactions on Intelligent 
+Transportation Systems, Vol. 7, No. 4, pages 528-540, IEEE, 2006. 
+[14] A. Eidehall and L. Petersson, Threat assessment of general road 
+scenes using Monte Carlo sampling, Proceedings of the IEEE 
+Intelligent Transportation Systems, pages 1173-1178, 2006. 
+[15] A. Polychronopoulos et al, Dynamic situation and threat assessment 
+for collision warning systems: the EUCLIDE approach, IEEE  
+Intelligent Vehicles Symposium, Parma, Italy, 2004. 
+[16] M. Brännström, E. Coelingh and J. Sjöberg, "Threat assessment for 
+avoiding collisions with turning vehicles," in Proc. IEEE Intell. Veh. 
+Symp., pp. 663-668, 2009. 
+[17] M. Kraft, A. Kullgren, A. Lie, J. Strandroth and C. Tingvall, The 
+Effects Of Automatic Emergency Braking On Fatal And Serious 
+Injuries, Paper No. 09-0419, 21st ESV Conf. 2009. 
+160

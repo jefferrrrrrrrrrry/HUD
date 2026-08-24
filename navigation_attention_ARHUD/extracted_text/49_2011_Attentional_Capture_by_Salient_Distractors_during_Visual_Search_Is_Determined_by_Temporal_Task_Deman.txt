@@ -1,0 +1,1047 @@
+Attentional Capture by Salient Distractors during Visual
+Search Is Determined by Temporal Task Demands
+Monika Kiss1, Anna Grubert1,2, Anders Petersen3, and Martin Eimer1
+Abstract
+■The question whether attentional capture by salient but task-
+irrelevant visual stimuli is triggered in a bottom–up fashion or
+depends on top–down task settings is still unresolved. Strong sup-
+port for bottom–up capture was obtained in the additional single-
+ton task, in which search arrays were visible until response onset.
+Equally strong evidence for top–down control of attentional cap-
+ture was obtained in spatial cueing experiments in which display
+durations were very brief. To demonstrate the critical role of tem-
+poral task demands on salience-driven attentional capture, we
+measured ERP indicators of capture by task-irrelevant color single-
+tons in search arrays that could also contain a shape target. In
+Experiment 1, all displays were visible until response onset. In
+Experiment 2, display duration was limited to 200 msec. With long
+display durations, color singleton distractors elicited an N2pc com-
+ponent that was followed by a late Pd component, suggesting that
+they triggered attentional capture, which was later replaced by
+location-specific inhibition. When search arrays were visible for
+only 200 msec, the distractor-elicited N2pc was eliminated and
+was replaced by a Pd component in the same time range, indica-
+tive of rapid suppression of capture. Results show that attentional
+capture by salient distractors can be inhibited for short-duration
+search displays, in which it would interfere with target processing.
+They demonstrate that salience-driven capture is not a purely
+bottom–up phenomenon but is subject to top–down control. ■
+INTRODUCTION
+A salient visual stimulus such as a unique red item pre-
+sented among numerous blue items (a feature singleton)
+often elicits rapid shifts of spatial attention. One of the
+most enduring controversies in attention research relates
+to the question whether such shifts can be triggered in a
+purely bottom–up (stimulus-driven) fashion or whether
+they are always mediated by top–down (goal-directed)
+control settings. According to the bottom–up view, the
+initial allocation of attention is determined solely by phys-
+ical stimulus properties: Attention is rapidly and auto-
+matically attracted by the largest local feature contrast
+in a visual array, regardless of current top–down task sets
+(Theeuwes, 2010). The most compelling evidence for
+bottom–up attentional capture comes from the addi-
+tional singleton paradigm developed by Theeuwes
+(1991, 1992). When observers search for a shape single-
+ton target presented among nontarget shapes (e.g., a dia-
+mond among circle distractors), RTs are delayed on trials
+in which a salient but task-irrelevant color singleton is si-
+multaneously present in the visual search array, relative
+to trials without a color distractor. This distractor inter-
+ference effect has been attributed to salience-driven
+bottom–up attentional capture by color singletons that
+is triggered in spite of the fact that color is completely task
+irrelevant.
+The bottom–up account of attentional capture has not
+remained unchallenged. In a series of studies by Folk and
+colleagues (Folk & Remington, 1998; Folk, Remington, &
+Wright, 1994; Folk, Remington, & Johnston, 1992), spatial
+cueing procedures were employed to demonstrate that
+singleton capture is determined by current top–down task
+sets. On each trial, spatially nonpredictive singleton cues
+preceded visual search displays, and attentional capture
+by singleton cues was inferred from the presence of spatial
+cueing effects (i.e., faster RTs in response to visual search
+targets at cued relative to uncued locations). Such spatial
+cueing effects were found only when cues matched the
+current task set (e.g., for color singleton cues in blocks in
+which targets were also color singletons) but not for cues
+with task-irrelevant features. This pattern of results gave
+rise to the contingent involuntary orienting hypothesis
+(Folk et al., 1992), which postulates that attentional capture
+is not an inevitable consequence of bottom–up salience
+but will only be elicited by salient visual stimuli that match
+currently task-relevant attributes.
+The roles of bottom–up and top–down factors in atten-
+tional capture are still debated. In support of the bottom–
+up view, Theeuwes (2010) argued that the presence of
+spatial cueing effects for task-set-matching cues and their
+absence for nonmatching cues, as observed by Folk and
+colleagues, does not provide unequivocal evidence for
+task set contingent attentional capture. His claim is that
+singleton cues will always trigger attention shifts, indepen-
+dently of current task sets, but that attention is then rapidly
+disengaged from stimuli that have no task-set-relevant
+1Birkbeck College London, 2Université de Fribourg, 3University
+of Copenhagen
+© 2012 Massachusetts Institute of Technology
+Journal of Cognitive Neuroscience 24:3, pp. 749–759
+
+
+attributes. Because rapid bottom–up attentional capture is
+immediately followed by rapid disengagement from non-
+matching cues before the presentation of subsequent tar-
+gets, no behavioral spatial cueing effects will be triggered
+by such cues (see also Theeuwes, Atchley, & Kramer, 2000).
+In support of the top–down view, Folk and Remington
+(1998) have argued that the RT costs associated with the
+presence of a salient but irrelevant distractor in the addi-
+tional singleton paradigm does not provide incontro-
+vertible evidence for bottom–up capture. They claim that
+these costs arise as a result of the visual complexity of
+search arrays that contain two singleton stimuli. This ex-
+tends the duration of preattentive processing (preattentive
+filtering costs; see also Kahneman, Treisman, & Burkell,
+1983) and delays shifts of attention to target stimuli, result-
+ing in delayed responses on distractor-present trials that
+are not the result of salience-driven attentional capture
+by distractors.
+It will be obvious that these arguments depend on very
+specific assumptions about the time course of attentional
+capture and attentional target selection, which are diffi-
+cult to test on the basis of behavioral measures alone.
+For this reason, brain ERP markers of selective attentional
+processing now play an increasingly important role in
+current debates about the top–down versus bottom–up
+control of attentional capture. In several recent studies,
+the N2pc component has been employed as a temporally
+precise measure of attentional capture by salient stimuli in
+visual search arrays (e.g., Eimer, Kiss, Press, & Sauter, 2009;
+Eimer & Kiss, 2008; Lien, Ruthruff, Goodin, & Remington,
+2008; Hickey, McDonald, & Theeuwes, 2006). The N2pc is
+an enhanced negativity that is observed over posterior
+scalp electrodes contralateral to the side of an attended
+stimulus, is typically elicited between 200 and 300 msec
+after the onset of a visual search array, and is assumed to
+reflect the attentional selection of potentially relevant items
+among distractors in visual search tasks (Eimer, 1996; Luck
+& Hillyard, 1994). Eimer and Kiss (2008) measured the
+N2pc to spatially uninformative color singleton cues that
+preceded target search arrays. When observers had to re-
+port the orientation of a uniquely colored red target bar
+among gray distractor bars, behavioral spatial cueing effects
+indicative of attentional capture and an N2pc to red single-
+ton cues were observed. In contrast, no behavioral cueing
+effects and no N2pc emerged in response to the same cues
+when observers had to detect a smaller target bar among
+larger distractor bars. The observation that an N2pc was
+elicited by perceptually salient color singleton cues only
+when color was task relevant supports the contingent invol-
+untary attentional capture hypothesis by Folk et al. (1992)
+but is not in line with the view that capture is primarily driven
+by bottom–up salience (see also Eimer et al., 2009; Lien
+et al., 2008, for similar N2pc results in spatial cueing experi-
+ments). The absence of any early-onset N2pc components
+to color singleton cues that did not match the current top–
+down task set also casts doubt on the hypothesis that these
+cues trigger rapid salience-driven attentional capture,
+which is later followed by rapid disengagement (Theeuwes,
+2010; see also Ansorge, Kiss, Worschech, & Eimer, 2011,
+for further ERP evidence against this rapid disengagement
+account).
+Although these ERP experiments provide no support
+for the existence of bottom–up attentional capture that is
+triggered independently of top–down task sets, it is notable
+that all employed variants of the spatial cueing paradigm
+introduced by Folk et al. (1992). In fact, very different find-
+ings were obtained in an ERP study that measured N2pc
+components in the additional singleton paradigm (Hickey
+et al., 2006). In this experiment, in which shape singletons
+served as targets and could be accompanied by salient but
+task-irrelevant color singleton distractors, RTs were de-
+layed in distractor-present relative to distractor-absent
+trials. Most importantly, a reliable N2pc component was
+triggered by color singleton distractors on trials in which
+the target was on the vertical meridian (and therefore did
+not elicit lateralized selection-related ERP components),
+suggesting that these distractors did indeed capture atten-
+tion in spite of the fact that they were known to be task
+irrelevant. Moreover, on trials in which targets and distrac-
+tors were located in opposite hemifields, a small distractor
+N2pc preceded the target N2pc, suggesting that attention
+was initially drawn to the distractor before it was reallo-
+cated to the target. These results appear to provide strong
+support for the bottom–up nature of attentional capture by
+salient visual events and against the hypothesis that atten-
+tional capture is always under top–down control.
+To summarize, recent ERP studies of attentional cap-
+ture have, so far, failed to resolve the impasse between
+top–down and bottom–up accounts of attentional cap-
+ture. Whereas N2pc results from spatial cueing experi-
+ments support the contingent involuntary attention
+hypothesis by Folk et al. (1992), N2pc evidence from
+the additional singleton paradigm points to an important
+and independent role for bottom–up salience in atten-
+tional capture. This is clearly a very unsatisfactory state
+of affairs, which hampers progress in this area. To rectify
+this situation, the factors that are responsible for the dis-
+crepant findings in spatial cueing and additional singleton
+studies need to be identified. One potentially critical and
+hitherto overlooked difference between these two experi-
+mental procedures concerns the specific time demands
+that are imposed on attentional selectivity. In experiments
+that employ the additional singleton paradigm, search dis-
+plays typically remain visible until a response has been
+executed. As a consequence, participants have sufficient
+time to detect, select, and identify a target stimulus even
+when attention is initially drawn to a task-irrelevant but
+salient distractor. In contrast, cue and search arrays in
+spatial cueing experiments are presented very briefly
+and in rapid succession (with typical stimulus durations
+varying between 50 and 200 msec). This imposes much
+stricter temporal demands on attentional target selection,
+as the time window for detecting, selecting, and identify-
+ing a target is very narrow, and attentional capture by a
+750
+Journal of Cognitive Neuroscience
+Volume 24, Number 3
+
+
+distractor will almost certainly result in the target stimulus
+being missed. In short, the allocation of attention to a task-
+irrelevant but salient stimulus will compromise successful
+target detection under conditions of high time pressure
+(short stimulus durations) but much less in tasks in which
+time pressure is low (long stimulus durations). In the for-
+mer, but not in the latter case, efficient task performance
+may require the additional activation of mechanisms that
+prevent capture by salient distractors. The presence of
+salience-driven attentional capture effects in experiments
+with long search display durations (additional singleton
+task) and the presence of task-set-contingent attentional
+capture in experiments in which search display durations
+are short (spatial cueing task) may be the consequence
+of such differences in the time demands on attentional
+selectivity in these two experimental paradigms.
+The aim of the present ERP study was to investigate the
+hypothesis that the presence versus absence of salience-
+driven attentional capture depends on the temporal de-
+mands of an attentional selection task. To test this, we
+employed the additional singleton paradigm. Experimental
+procedures were very similar to the previous ERP study
+by Hickey et al. (2006), which obtained N2pc evidence
+for attentional capture by salient but irrelevant distractors.
+Participants searched for a shape singleton target (a circle
+among diamonds or vice versa in randomly intermixed
+trials) and responded according to the orientation of the
+line within the target shape. Targets appeared with equal
+probability at any of the six array positions (see Figure 1).
+Twenty-five percent of all arrays did not contain a shape
+target singleton. The presence or absence of an additional
+task-irrelevant color singleton was blocked (as in Pinto,
+Olivers, & Theeuwes, 2005; Theeuwes, 1991, 1992). In
+one third of all blocks, no color singletons were presented.
+In the remaining blocks, each search array contained one
+color singleton (randomly red or green), which appeared
+on the left or right side. Two experiments were conducted
+that were identical in all respects except for the duration of
+each search display. In Experiment 1, search arrays re-
+mained visible until a response was registered (as in Hickey
+et al., 2006). In Experiment 2, search display duration was
+limited to 200 msec. Target shape and distractor color
+always varied unpredictably across trials, as distractor-
+induced RT costs indicative of attentional capture are
+much larger under these conditions than in tasks in which
+target and/or distractor features are constant and, there-
+fore, predictable (e.g., Becker, 2007; Pinto et al., 2005).
+If attentional capture by salient but irrelevant color
+singletons is critically dependent on the temporal demands
+imposed on attentional selectivity, ERP evidence for
+salience-driven attentional capture should be observed in
+Experiment 1, but not in Experiment 2. When search arrays
+remained visible until response onset, color singleton dis-
+tractors were expected to trigger an N2pc component in-
+dicative of attentional capture, in line with the results of
+Hickey et al. (2006). However, and critically, when display
+duration was limited to 200 msec, the prediction was that
+salience-driven attentional capture would be prevented by
+top–down control because of its potentially disastrous con-
+sequences for target detection and task performance. If
+this was the case, no N2pc should be triggered by color
+singletons in Experiment 2. Instead, lateralized posterior
+ERPs might provide evidence for the active inhibition of
+attention shifts to distractor singletons.
+Top–down inhibition of attentional capture has recently
+been associated with a lateralized posterior ERP compo-
+nent that resembles the N2pc in terms of its latency and
+topography but shows an inverse polarity. This contra-
+lateral positivity (termed Pd component) was elicited by
+laterally presented color distractors when observers dis-
+criminated the shape of a luminance target on the vertical
+meridian (Hickey, Di Lollo, & McDonald, 2009) and was
+Figure 1. Examples of search
+displays for the five trial types
+used in the N2pc analyses in
+both experiments. The color
+singleton distractor was either
+red or green (depicted here
+in black).
+Kiss et al.
+751
+
+
+interpreted as reflecting the active inhibition of these dis-
+tractors. The Pd was eliminated when observers were only
+required to detect the presence of a target, suggesting that
+distractors are suppressed only when attentional task de-
+mands are high. Sawaki and Luck (2010) reported Pd com-
+ponents to salient color distractors when observers
+searched for nonsalient target letters and proposed that
+salient singletons produce an automatic “attend-to-me
+signal” that can be overridden by active top–down sup-
+pression to avoid attentional capture by these stimuli. A
+Pd component has also been observed in the spatial cueing
+task in response to color singleton cues when participants
+searched for size-defined targets, and color was, therefore,
+task irrelevant (Eimer & Kiss, 2008). If attentional capture
+by irrelevant color distractors in the additional singleton
+task can be prevented by active inhibition when this is re-
+quired by the temporal demands of an attentional selection
+task, a Pd component should be found for these stimuli in
+Experiment 2, in which search displays were presented for
+only 200 msec.
+To test these hypotheses, lateralized posterior ERP
+components were measured in Experiments 1 and 2 for
+five different types of search arrays (see Figure 1). ERP
+components elicited in response to lateral shape target
+singletons were computed separately for arrays without
+an additional color distractor, and for arrays in which a
+color distractor was located on the same side as the target,
+or on the opposite side, respectively. For these arrays,
+strong target N2pc components should be found, but
+these were expected to be modulated by the presence of
+distractor-elicited N2pc or Pd components in Experiments 1
+and 2. ERP components to lateral distractors were com-
+puted separately for target-absent displays, and for search
+arrays, in which targets appeared on the vertical midline
+and, therefore, did not trigger a lateralized N2pc compo-
+nent. The critical question was whether these distractors
+would elicit an N2pc component indicative of attentional
+capture in Experiment 1, and a Pd component indicative
+of suppressed capture in Experiment 2.
+METHODS
+Participants
+Seventeen paid volunteers were recruited to participate
+in Experiment 1, and 16 new volunteers were recruited
+for Experiment 2. Informed consent was obtained from
+all participants before testing. Four participants of Ex-
+periment 1 and three of Experiment 2 were excluded
+from analyses because of excessive eye movements
+(see Methods section). One additional participant was ex-
+cluded from each experiment because of excessive alpha
+activity. The remaining 12 participants in Experiment 1
+(four men) had a mean age of 25.7 years. The 12 par-
+ticipants in Experiment 2 (four men) had a mean age of
+29.1 years. All were right-handed and had normal or cor-
+rected vision.
+Stimuli and Procedure
+Stimulus presentation and response collection were con-
+trolled using E-Prime software (Psychology Software Tools,
+Inc., Sharpsburg, PA). Stimuli were presented on a CRT
+monitor with a 100-Hz refresh rate. Each search array con-
+sisted of six outline shapes placed at regular intervals
+around a central fixation cross at a radial distance of 4.0°.
+One of these shapes was a singleton item (a circle among
+diamonds or a diamond among circles; see Figure 1). Each
+outline shape subtended 1.1° × 1.1° and enclosed a line
+segment whose orientation (horizontal or vertical) was ran-
+domly assigned. All items in the display were light gray
+(Commision Internationale de lʼEclairage [CIE] chromatic-
+ity coordinates, 0.287/0.314) except for the irrelevant color
+singleton, which (when present) was either red (CIE,
+0.619/0.339) or green (CIE, 0.296/0.567). All colors were
+equiluminant (10.3 cd/m2), and all stimuli were presented
+against a black background. In Experiment 1, search arrays
+remained present until a response was registered, up to a
+maximum of 2500 msec. In Experiment 2, each search array
+was presented for 200 msec and was followed by a fixation
+cross display for 2300 msec. In all other respects, stimuli
+and procedure were identical in both experiments.
+Shape singletons (circles among diamonds or vice versa)
+appeared randomly and equiprobably at one of the six
+possible locations in 75% of all trials. In the remaining
+25% of all trials, the shape of all display items was uniform.
+Shape singletons served as targets, and participants were
+instructed to report the orientation of the line (horizontal
+or vertical) within the target shape by pressing one of two
+vertically aligned buttons with their left or right index fin-
+ger. Orientation-to-response-key mapping was counter-
+balanced across participants. No response was required on
+target-absent trials. In one third of all blocks, no color sin-
+gletons were presented. In the other blocks, one color sin-
+gleton (randomly red or green) was present in every trial
+and appeared with equal probability at one of the four lat-
+eral positions (with the exception that target singleton
+shapes were never colored) but never at the top or bottom
+position. A total of 30 blocks with 32 trials per block were
+run. Two successive blocks with color singleton distractors
+alternated with one block without these distractors. Six
+participants started with two distractor-present blocks,
+and the other six started with a distractor-absent block.
+EEG Data Recording and Analysis
+EEG was DC-recoded from 23 electrodes mounted in an
+elastic cap at positions Fpz, Fz, F3, F4, F7, F8, FC5, FC6,
+Cz, C3, C4, T7, T8, CP5, CP6, Pz, P3, P4, P7, P8, PO7, PO8,
+and Oz. EEG data were sampled at 500 Hz, with a digital
+low-pass filter of 40 Hz. All electrodes were referenced to
+the left earlobe and off-line rereferenced to averaged ear-
+lobes. The continuous EEG was segmented from 100 msec
+before to 500 msec after search array onset. Incorrect trials
+and trials containing saccades (horizontal EOG exceeding
+752
+Journal of Cognitive Neuroscience
+Volume 24, Number 3
+
+
+±25 μV), blinks (Fpz exceeding ±60 μV), or muscle arti-
+facts (all other electrodes exceeding ±80 μV) were re-
+moved from further analyses. Three participants were
+excluded because their residual horizontal EOG exceeded
+±4 μV in at least one trial condition. Average waveforms
+were computed separately for five different types of search
+stimulus arrays: (1) lateral target, no distractor; (2) lateral
+target, distractor same side; (3) lateral target, distractor op-
+posite side; (4) lateral distractor, no target; and (5) lateral
+distractor, midline target. Separate averages were com-
+puted for trials in which targets appeared in the left or right
+hemifield. For trials with lateral distractors and absent or
+midline targets, separate averages were computed for left
+and right distractors. To compute lateralized posterior ERP
+components (N2pc, Pd), mean amplitude values were mea-
+sured at lateral posterior electrodes PO7 and PO8. Separate
+repeated measures ANOVAs were conducted to examine
+N2pc/Pd components in response to lateral target stimuli
+(with distractors either absent, on the same side, or on
+the opposite side), and in response to lateral distractors
+(with targets either absent or on the vertical midline). The
+former analyses included the factor Distractor Type (absent
+vs. same side vs. opposite sides), and the latter included
+the factor Target Type (absent vs. midline). Both analyses
+also included the factors Contralaterality (electrode contra-
+lateral vs. ipsilateral to target/distractor location) and Target/
+Distractor Side (left vs. right). Greenhouse–Geisser correc-
+tions were used for main effects and interactions where
+appropriate. Performance differences between conditions
+were assessed with two-tailed t tests.
+RESULTS
+Experiment 1
+Behavioral Results
+Trials in which responses were faster than 200 msec or
+slower than 2400 msec were excluded from analyses (less
+than 0.1% of all trials). The presence of a color singleton
+distractor delayed mean correct RTs to shape targets (993 vs.
+912 msec; t(11) = 6.7, p < .001), and the size of this dis-
+tractor interference effect on distractor-present trials was
+modulated by the relative position of targets and dis-
+tractors. RTs were delayed on trials in which targets and
+distractors appeared in the same hemifield relative to trials
+in which they were in opposite hemifields (1024 msec vs.
+949 msec; t(11) = 7.8, p < .001). Mean RT for targets
+on the vertical meridian in distractor-present blocks was
+1005 msec, that is, intermediate between same-hemifield
+and opposite-hemifield trials (both t(11) > 2.3, both ps <
+.05). RT distractor interference effects were smallest on
+trials in which targets and distractors appeared on opposite
+sides but were still reliable relative to distractor-absent
+blocks (t(11) = 2.6, p < .05). Error rates were higher in
+blocks with color singleton distractors than in blocks in
+which targets were presented without distractors (4.1%
+vs. 2.9%; t(11) = 2.9, p < .05). False alarms occurred on
+0.4% of all target-absent trials.
+ERP Results
+Figure 2 (top row) shows ERPs triggered at electrodes
+PO7/PO8 by lateral shape targets for search arrays repre-
+senting the three levels of the factor distractor type (arrays
+without a color singleton distractor, arrays with a target and
+distractor in the same hemifield, and arrays with a target
+and distractor in opposite hemifields). Figure 2 (bottom
+row) shows ERPs for trials with lateral color distractors,
+which were either presented without target or with a shape
+target on the vertical meridian (representing the two levels
+of the factor target type in the analysis of distractor-elicited
+ERPs). As expected, an N2pc was triggered by lateral shape
+targets. Importantly, an N2pc of smaller amplitude and
+reduced duration was also observed for lateral color single-
+ton distractors, both on target-absent trials and on trials
+with shape targets on the vertical meridian. This distractor
+N2pc was followed by an enhanced positivity contralateral
+to the distractor that started around 300 msec after search
+array onset, indicative of the Pd component. During this
+time interval, target N2pc amplitudes were strongly attenu-
+ated on trials with same-side distractors relative to trials
+with targets and distractors on opposite sides. To capture
+this specific sequence of lateralized posterior ERP compo-
+nents, mean amplitudes at PO7/PO8 were analyzed within
+two successive time windows, one focused on the N2pc
+component (220–300 msec after search array onset) and
+the other one focused on the subsequent Pd component
+(300–340 msec poststimulus).
+Lateralized posterior ERP components triggered by target
+stimuli.
+In the 220–300 msec time window, a main effect
+of Contralaterality was present, F(1, 11) = 30.8, p < .001,
+reflecting the presence of target-elicited N2pc compo-
+nents. There was no interaction between Contralaterality
+and Distractor Type, F < 1.1, because of the fact that
+N2pc amplitudes, triggered by targets during this time in-
+terval, were similar regardless of whether distractor stim-
+uli were absent, appeared on the same side, or appeared
+on the opposite side. In the 300–340 msec time window,
+a main effect of Contralaterality, F(1, 11) = 11.6, p < .01,
+was accompanied by an interaction between Contralateral-
+ity and Distractor, F(2, 22) = 7.1, p < .05. As can be seen in
+Figure 2 (top row), the late phase of the target N2pc was
+strongly attenuated on trials in which targets and distrac-
+tors appeared on the same side relative to opposite side
+and distractor-absent trials, F(1, 11) = 7.7 and 14.2, both
+ps < .05. This was confirmed in follow-up analyses that re-
+vealed the presence of reliable late target N2pc compo-
+nents on distractor-absent trials, F(1, 11) = 10.0, p < .01,
+and on trials in which distractors appeared in the opposite
+hemifield, F(1, 11) = 22.8, p < .001, but not on trials in
+which targets and distractors were located in the same
+hemifield, F < 1.
+Kiss et al.
+753
+
+
+Lateralized posterior ERP components triggered by
+distractor stimuli.
+A main effect of Contralaterality, F(1,
+11) = 5.4, p < .05, was observed in the 220-300 msec
+poststimulus time window, demonstrating that color sin-
+gleton distractors triggered a reliable N2pc component.
+There was no interaction between Contralaterality and
+Target Presence, F < 1.1, suggesting that this distractor
+N2pc was of similar size regardless of whether distractors
+were the only singleton item in the search array or were
+presented together with a shape singleton target on the
+vertical meridian. In the subsequent 300–340 msec post-
+stimulus time window, a reliable main effect of Contra-
+laterality was present, F(1, 11) = 4.8, p < .05, now
+reflecting a contralaterally enhanced positivity (Pd). There
+was no interaction between Contralaterality and Target
+Presence, F < 1, as distractor Pd amplitudes did not differ
+between trials without targets and trials with targets on the
+vertical midline.
+Experiment 2
+Behavioral Results
+Trials in which responses were faster than 200 msec or
+slower than 2400 msec were excluded from analyses (less
+than 0.1% of all trials). As in Experiment 1, mean correct RTs
+to targets were slower in blocks with color singleton dis-
+tractors than in blocks without color distractors (924 msec
+vs. 875 msec; t(11) = 6.5, p < .001). This distractor inter-
+ference effect was again affected by the relative position
+of targets and distractors. Slower RTs were observed for
+trials in which targets and distractors appeared in the
+same hemifield than for trials in which they were located
+in opposite hemifields (959 msec vs. 893 msec; t(11) =
+5.9, p < .001). Mean RT to targets on the vertical meridian
+(and distractors on the left or right side) was 921 msec,
+which was significantly slower than RTs on same-hemifield
+trials and faster than RTs on opposite-hemifield trials
+(both: t(11) > 3.6, p < .01). Importantly, the size of the
+distractor-induced RT interference effect in Experiment 2
+was significantly smaller than in Experiment 1 (49 msec
+vs. 81 msec; F(1, 22) = 4.7, p < .05). As in Experiment 1,
+this effect was smallest on trials in which targets and distract-
+ors appeared on opposite sides, where it only approached
+significance when compared with distractor-absent blocks
+(t(11) = 1.9, p = .09). Error rates on target-present trials
+were higher in blocks with color distractors relative to
+distractor-absent blocks (5.8% vs. 4.6%; t(11) = 2.7, p <
+.05). False alarms occurred on 0.6% of all target-absent
+trials.
+ERP Results
+Figure 3 (top row) shows ERPs elicited at electrodes
+PO7/PO8 in response to search arrays with a shape target
+Figure 2. Grand-averaged
+ERPs at posterior electrodes
+PO7/PO8 contralateral and
+ipsilateral to the location of the
+target (top) when the distractor
+singleton was absent (left),
+when the distractor singleton
+was in the same hemifield
+(middle), and when it was in the
+opposite hemifield (right) and
+to the location of the distractor
+singleton (bottom) in target-
+absent trials (left) and in trials
+when the target was on the
+vertical meridian (right) in
+Experiment 1.
+754
+Journal of Cognitive Neuroscience
+Volume 24, Number 3
+
+
+stimulus on the left or right side, on trials without a color
+singleton distractor, and on trials in which shape targets
+were accompanied by a distractor in the same hemifield
+or on the opposite side. Figure 3 (bottom row) shows
+ERP waveforms to search arrays that included a color sin-
+gleton distractor on the left or right side, on trials in
+which no shape target was present, and on trials in which
+a shape target was located on the vertical meridian. As in
+Experiment 1, a pronounced N2pc was triggered in re-
+sponse to search arrays that contained a lateral target stim-
+ulus. However, and in marked contrast to Experiment 1, no
+N2pc was elicited by lateral color singleton distractors.
+Instead, a contralateral positivity (Pd) was observed in
+the N2pc time interval on trials in which a lateral distractor
+was accompanied by a midline target. These observations
+were confirmed by analyses of ERP mean amplitudes ob-
+tained at PO7/PO8 in the 220–300 msec poststimulus
+interval.
+Lateralized posterior ERP components triggered by target
+stimuli.
+A main effect of Contralaterality was present, F(1,
+11) = 22.8, p < .001, demonstrating the presence of re-
+liable N2pc components in response to target stimuli
+(Figure 3, top row). There was also an interaction between
+Contralaterality and Distractor Type, F(2, 22) = 6.2, p < .01,
+as N2pc amplitudes were smaller on trials in which targets
+and distractors appeared on the same side as compared
+with opposite-side trials and distractor-absent trials. Two
+follow-up analyses compared N2pc amplitudes on same-side
+trials to amplitudes on opposite-side and distractor-
+absent trials, respectively, with the Distractor Type (same-side
+vs. opposite-side trials and same-side vs. distractor-absent
+trials) as additional factor. Interactions between Contra-
+laterality and Distractor Type were found in both analyses,
+F(1, 11) = 8.6 and 7.3, both ps < .05, respectively, confirm-
+ing that the N2pc amplitude on same-side trials was reliably
+reduced relative to opposite-side and distractor-absent
+trials. Analyses conducted separately for each distractor-
+type array revealed that a reliable N2pc was triggered in re-
+sponse to targets not only in trials in which distractors were
+absent, F(1, 11) = 21.4, p < .001, and in trials with a distrac-
+tor in the opposite hemifield, F(1, 11) = 21.4, p < .001, but
+also in trials in which targets and distractors appeared in
+the same hemifield, F(1, 11) = 14.3, p < .01.
+Lateralized posterior ERP components triggered by
+distractor stimuli.
+The analysis of ERP mean amplitudes
+obtained in the 220–300 msec poststimulus time window
+in response to search arrays that contained lateral distrac-
+tors without targets or with targets on the vertical midline
+(Figure 3, bottom row) obtained a significant main effect
+of contralaterality, F(1, 11) = 5.2, p < 05, and, importantly,
+Figure 3. Grand-averaged
+ERPs at posterior electrodes
+PO7/PO8 contralateral and
+ipsilateral to the location of the
+target (top) when the distractor
+singleton was absent (left),
+when the distractor singleton
+was in the same hemifield
+(middle), and when it was in the
+opposite hemifield (right) and
+to the location of the distractor
+singleton (bottom) in target-
+absent trials (left) and in trials
+when the target was on the
+vertical meridian (right) in
+Experiment 2.
+Kiss et al.
+755
+
+
+an interaction between Contralaterality and Target Pres-
+ence, F(1, 11) = 11.6, p < .01. A significant contralaterally
+enhanced positivity (Pd) was triggered in response to dis-
+tractors that were accompanied by a target on the midline,
+F(1, 11) = 11.6, p < .01, whereas no lateralized effect was
+present for lateral color singleton distractors in the absence
+of a target stimulus, F < 1.
+DISCUSSION
+Is rapid attentional capture by salient but task-irrelevant
+singleton stimuli a bottom–up phenomenon that is exclu-
+sively driven by salience signals and is unaffected by cur-
+rent task sets, or is this type of attentional capture
+accessible to top–down control? Although ample behavioral
+and ERP evidence for the task set contingent nature of
+attentional capture has been found in spatial cueing experi-
+ments, results from the additional singleton task have, so
+far, provided apparently robust support for bottom–up
+capture. The results of the present study demonstrate
+that, even in this task, salience-driven singleton capture
+is not triggered in an entirely automatic bottom–up fash-
+ion but can be prevented by top–down control when this
+is required by the temporal demands of an attentional
+task.
+We recorded lateralized posterior ERP components in
+response to visual search arrays that could contain a
+shape-defined singleton target and/or a task-irrelevant
+color singleton. In Experiment 1, search arrays remained
+visible until response onset, whereas display duration was
+limited to 200 msec in Experiment 2. The ERP results of
+Experiment 1 demonstrated that color singletons cap-
+tured attention, although they were known to be task-
+irrelevant. When these singleton distractors appeared on
+the left or right side, an N2pc component was elicited,
+both on trials in which they were accompanied by a
+shape-defined target on the vertical midline and on trials
+in which they were the only singleton in the display. The
+presence of an N2pc to irrelevant color singletons mirrors
+previous findings by Hickey et al. (2006) and confirms that
+these stimuli can capture attention when search displays
+remain visible until response onset. In marked contrast,
+no N2pc was elicited by physically identical color single-
+tons in Experiment 2, in which search arrays were visible
+for only 200 msec. Instead, an enhanced contralateral
+positivity (Pd) was observed in response to these stimuli
+on trials in which they were accompanied by a shape tar-
+get on the vertical midline. The Pd component has pre-
+viously been interpreted as an ERP marker of top–down
+inhibition of attentional capture (Sawaki & Luck, 2010;
+Hickey et al., 2009). Its presence in Experiment 2 there-
+fore suggests that, when the temporal demands on
+attentional selectivity are increased, participants can suc-
+cessfully inhibit attentional capture by salient but task-
+irrelevant singletons. In target-absent trials, no lateralized
+posterior ERP modulation was elicited by color distractors
+in Experiment 2, which again contrasts with Experiment 1,
+in which a reliable N2pc component was observed on
+these trials.
+To confirm the central finding that the pattern of later-
+alized posterior ERP activity triggered by salient color dis-
+tractors in the N2pc time range is determined by temporal
+demands of an additional singleton task, two further ana-
+lyses compared lateralized ERPs obtained at PO7/PO8 in
+the 220–300 msec time window on target-present and
+target-absent trials across both experiments, with the ad-
+ditional between-subject factor display duration (long,
+Experiment 1; short, Experiment 2). A significant inter-
+action between display duration and contralaterality was
+obtained for trials with lateral color distractors and mid-
+line targets, F(1, 22) = 9.4, p < .01, reflecting a distractor-
+triggered N2pc in Expriment 1 and a Pd in Experiment 2.
+This interaction was also reliable for target-absent trials
+with lateral distractors, F(1, 22) = 5.5, p < .05, reflecting
+the presence of a distractor N2pc in Experiment 1 and its
+absence in Experiment 2.
+In Experiment 1, the N2pc to color singleton distractors
+was followed by a lateralized posterior ERP modulation of
+opposite polarity that started 300 msec after search array
+onset (see Figure 2) and is likely to reflect a late-onset Pd
+component. The presence of a Pd that was preceded by
+an N2pc suggests a temporal sequence of attentional cap-
+ture by salient distractors that is followed by active top–
+down inhibition (similar to the scenario suggested by
+Theeuwes, 2010). Notably, a similar pattern of an N2pc
+followed by a Pd component was also present in the study
+by Hickey et al. for search arrays with lateral distractors
+and midline targets (Hickey et al., 2006, Figure 3B),
+although no statistical analyses of time windows beyond
+the N2pc were reported. It is plausible to assume that, after
+the initial distractor-triggered attentional capture under
+conditions of low temporal task demands, the subsequent
+reallocation of attention toward the target location involves
+the active inhibition of distractor locations and that this is
+reflected in a late Pd component that follows the N2pc.
+As expected, lateral shape singleton targets elicited a
+robust N2pc component in both experiments, reflecting
+attentional selection of these task-relevant stimuli. This
+was the case regardless of whether targets appeared with-
+out a color singleton distractor, with a distractor on the
+same side, or with a distractor on the opposite side. Nota-
+bly, even in Experiment 1 in which distractors triggered an
+N2pc indicative of attentional capture on target-absent
+trials and on trials with midline targets, ERPs to search ar-
+rays with a lateral target and a color distractor in the oppo-
+site hemifield revealed no evidence that salience-driven
+attentional capture by color singletons was triggered be-
+fore the attentional selection of shape targets. In contrast
+to previous findings by Hickey et al. (2006), there was no
+early distractor-elicited N2pc that preceded the target
+N2pc, suggesting that even under conditions of low time
+pressure, there was a consistent net attentional bias toward
+the hemifield that contained the shape target. In both
+experiments, there were target N2pc amplitude differences
+756
+Journal of Cognitive Neuroscience
+Volume 24, Number 3
+
+
+between search displays with target and distractor single-
+tons on the same or on different sides, and these can be
+accounted for by the simultaneous presence of an early
+or late Pd to color distractors. Because N2pc and Pd com-
+ponents have opposite polarity, the net lateralized poste-
+rior activity will be smaller on trials in which target and
+distractor singletons are presented on the same side than
+on trials in which they appear in opposite hemifields. This
+was indeed the case in Experiment 2, in which distractors
+triggered a Pd in the N2pc time range on target-present
+trials, and target N2pc amplitude was reduced on same-
+side trials. Similarly, in Experiment 1, in which distractors
+triggered a late-onset Pd that followed the N2pc, the target
+N2pc was less sustained on same-side than on opposite-
+side trials (see Figure 2).
+The presence of systematic differences between distractor-
+triggered lateralized posterior ERP components observed
+in these two experiments demonstrates that temporal de-
+mands on attentional selectivity have a strong impact on the
+processing of salient distractor singletons. These stimuli
+triggered attentional capture with long-duration search dis-
+plays in Experiment 1, as reflected by an N2pc, whereas
+capture was inhibited for the short-duration displays in
+Experiment 2, as indicated by the Pd component. Links be-
+tween inhibitory top–down control and distractor-induced
+attentional capture in the additional singleton paradigm are
+also suggested by the results of a recent fMRI study by
+Leber (2010). In this study, the magnitude of distractor
+interference effects could be predicted by measuring pre-
+trial activation in left middle frontal attentional control re-
+gions, in line with the hypothesis that these areas mediate
+resistance to attentional capture by salient but irrelevant
+visual stimuli.
+If capture was successfully prevented in Experiment 2,
+why was there still a substantial distractor interference
+effect (i.e., an RT difference between distractor-present
+and distractor-absent trials) of nearly 50 msec? Although
+such distractor-elicited RT costs are usually interpreted
+as reflecting bottom–up attentional capture followed by
+the time-consuming process of reallocating attention to
+the target location, the spatial distribution of behavioral
+interference effects does not support this interpretation.
+These effects were strongly modulated by the relative po-
+sitions of target and distractor singletons, as they were
+largest in trials in which both appeared in the same hemi-
+field, intermediate on trials with lateral distractors and
+midline targets, and smallest on trials in which these two
+singletons were located in opposite hemifields (see also
+Mathôt, Hickey, & Theeuwes, 2010; Hickey et al., 2006,
+for analogous results). If behavioral distractor interference
+effects exclusively reflected capture and subsequent re-
+orienting of attention, the opposite pattern should have
+been observed, as attention shifts to the target should re-
+quire less time when attention has already been moved to
+a nearby location in the same hemifield than when it was
+attracted by a distractor on the opposite side. The presence
+of stronger interference by nearby distractors may instead
+reflect competitive interactions between targets and salient
+distractors, which are typically larger for stimuli that are
+in close spatial proximity than for stimuli in opposite
+hemifields (Mathôt et al., 2010; Mounts & Gavett, 2004).
+To enable the selection of task-relevant visual events, this
+competition needs to be resolved by top–down biases in
+favor of targets and/or against distractors (Desimone &
+Duncan, 1995). The observation that distractor inter-
+ference effects were smaller in Experiment 2 than in Experi-
+ment 1, although stimulus arrays were physically identical,
+strongly suggests that such top–down biases were more
+effective when temporal task demands were high, presum-
+ably because of additional location-specific distractor inhi-
+bition. The fact that substantial distractor interference
+effects remained present in Experiment 2 indicates that
+suppression of distractor-elicited capture only attenuated,
+but did not completely eliminate, attentional competition
+between target and distractor singletons. Such considera-
+tions also suggest a modified concept of filtering costs in-
+duced by salient but task-irrelevant singletons. Filtering
+costs have previously been attributed to early stages of
+perceptual encoding before selective attentional pro-
+cessing (Folk & Remington, 1998). If salient singleton dis-
+tractors are subject to inhibition when temporal task
+demands are high, behavioral filtering costs might instead
+arise as a consequence of competitive interactions between
+targets and distractors that are modulated by top–down in-
+hibitory control (see also Becker, 2007, for a more detailed
+discussion of links between filtering costs and distractor
+inhibition).
+One final notable result of the present study was the ob-
+servation that an early-onset Pd component was observed
+in Experiment 2 for search arrays with lateral distractors
+and midline targets, whereas no lateralized posterior ERP
+component was triggered at all on trials in which these
+distractors appeared without a shape target (Figure 3,
+bottom). If high temporal task demands resulted in a rapid
+top–down inhibition of salient color singleton distractors,
+as argued before, one would assume that this process will
+be triggered regardless of whether a shape-defined target is
+also present in the display. The observation that a reliable
+Pd component was only observed on trials with midline tar-
+gets may suggest that distractor inhibition is not triggered
+unconditionally but only after a rapid preattentive analysis
+of the search display has uncovered evidence for the pre-
+sence of a target. Active inhibition would then only be
+applied to distractors in trials in which they compete for
+attention with a simultaneously present target. It should,
+however, be noted that the absence of lateralized posterior
+modulations for averaged target-absent ERPs does not
+prove the absence of distractor capture or distractor inhibi-
+tion on single trials. If these two processes were elicited on
+an approximately equal number of trials, the associated
+N2pc and Pd components would cancel each other out, re-
+sulting in no overall difference in averaged ERP waveforms.
+Although the dependency of an early-onset Pd on the pres-
+ence of a target observed in Experiment 2 is intriguing, the
+Kiss et al.
+757
+
+
+functional significance of this observation will have to be
+clarified in future experiments.
+The conclusion from the present study that the ability of
+salient but currently irrelevant visual stimuli to capture
+attention in the additional singleton paradigm depends
+on temporal task demands is in line with observations from
+other recent experiments. For example, Sawaki and Luck
+(2010) found a distractor-elicited Pd component indicative
+of top–down inhibition under conditions in which search
+display duration was short (200 msec). In a recent behav-
+ioral study of memory-driven attentional capture from our
+laboratory (Dalvit & Eimer, 2011), participants memorized
+a color for subsequent recall before searching for a shape
+singleton target that was presented together with an irrel-
+evant color singleton distractor, which either matched or
+did not match the memorized color. RTs were delayed
+on trials with memory-matching distractors, reflecting
+memory-driven attentional capture. Critically, this effect
+was much larger in blocks in which search displays re-
+mained visible until response onset than in blocks in which
+search arrays were presented for only 200 msec (53 msec
+vs. 17 msec), in line with the hypothesis that search can be
+prioritized and shielded from interactions with working
+memory when this is required by high temporal task de-
+mands. In blocks in which display duration was randomized
+and thus unpredictable, RT costs for trials with memory-
+matching distractors did not differ between long and short
+displays, demonstrating that these costs are not determined
+by display duration as such but, instead, by top–down search
+strategies that are linked to known temporal task demands.
+In summary, the results of the current study provide
+new evidence that, even in the additional singleton task,
+attentional capture by salient but task-irrelevant stimuli is
+not a purely bottom–up phenomenon that is inaccessible
+to top–down processing strategies. Salient distractors will
+indeed capture attention under conditions in which this
+does not prevent the subsequent successful selection of
+task-relevant targets. However, when search arrays are
+presented very briefly, so that distractor-triggered atten-
+tional capture will increase the likelihood that target stim-
+uli are missed, salience-driven capture can be actively
+inhibited by top–down control.
+Acknowledgments
+This research was supported by the Biotechnology and Biological
+Sciences Research Council (U.K.) and the Swiss National Science
+Foundation (PBFRP1-133492).
+Reprint requests should be sent to Martin Eimer, Department
+of Psychological Sciences, Birkbeck College, University of
+London, Malet Street, London WC1E 7HX, United Kingdom,
+or via e-mail: m.eimer@bbk.ac.uk.
+REFERENCES
+Ansorge, U., Kiss, M., Worschech, F., & Eimer, M. (2011).
+The initial stage of visual selection is controlled by top–down
+task set: New ERP evidence. Attention, Perception, &
+Psychophysics, 73, 113–122.
+Becker, S. (2007). Irrelevant singletons in pop-out search:
+Attentional capture or filtering costs? Journal of
+Experimental Psychology: Human Perception and
+Performance, 33, 764–787.
+Dalvit, S., & Eimer, M. (2011). Memory-driven attentional
+capture is modulated by temporal task demands. Visual
+Cognition, 19, 145–153.
+Desimone, R., & Duncan, J. (1995). Neural mechanisms of
+selective visual attention. Annual Review of Neuroscience,
+18, 193–222.
+Eimer, M. (1996). The N2pc component as an indicator of
+attentional selectivity. Electroencephalography and Clinical
+Neurophysiology, 99, 225–234.
+Eimer, M., & Kiss, M. (2008). Involuntary attentional capture
+is determined by task set: Evidence from event-related
+brain potentials. Journal of Cognitive Neuroscience, 20,
+1423–1433.
+Eimer, M., Kiss, M., Press, C., & Sauter, D. (2009). The roles
+of feature-specific task set and bottom–up salience in
+attentional capture: An ERP study. Journal of Experimental
+Psychology: Human Perception and Performance, 35,
+1316–1328.
+Folk, C. L., & Remington, R. W. (1998). Selectivity in
+distraction by irrelevant featural singletons: Evidence for
+two forms of attentional capture. Journal of Experimental
+Psychology: Human Perception and Performance, 24,
+847–858.
+Folk, C. L., Remington, R. W., & Johnston, J. C. (1992).
+Involuntary covert orienting is contingent on attentional
+control settings. Journal of Experimental Psychology:
+Human Perception and Performance, 18,
+1030–1044.
+Folk, C. L., Remington, R. W., & Wright, J. H. (1994). The
+structure of attentional control: Contingent attentional
+capture by apparent motion, abrupt onset, and color.
+Journal of Experimental Psychology: Human Perception
+and Performance, 20, 317–329.
+Hickey, C., Di Lollo, V., & McDonald, J. J. (2009).
+Electrophysiological indices of target and distractor
+processing in visual search. Journal of Cognitive
+Neuroscience, 21, 760–775.
+Hickey, C., McDonald, J. J., & Theeuwes, J. (2006).
+Electrophysiological evidence of the capture of visual
+attention. Journal of Cognitive Neuroscience, 18,
+604–613.
+Kahneman, D., Treisman, A., & Burkell, J. (1983). The
+cost of visual filtering. Journal of Experimental
+Psychology: Human Perception and Performance,
+9, 510–522.
+Leber, A. B. (2010). Neural predictors of within-subject
+fluctuations in attentional control. Journal of Neuroscience,
+30, 11458–11465.
+Lien, M.-C., Ruthruff, E., Goodin, Z., & Remington, R. W. (2008).
+Contingent attentional capture by top–down control
+settings: Converging evidence from event-related potentials.
+Journal of Experimental Psychology: Human Perception
+and Performance, 34, 509–530.
+Luck, S. J., & Hillyard, S. A. (1994). Spatial filtering during
+visual search: Evidence from human electrophysiology.
+Journal of Experimental Psychology: Human Perception
+and Performance, 20, 1000–1014.
+Mathôt, S., Hickey, C., & Theeuwes, J. (2010). From
+reorienting of attention to biased competition: Evidence
+from hemifield effects. Attention, Perception & Psychophysics,
+72, 651–657.
+758
+Journal of Cognitive Neuroscience
+Volume 24, Number 3
+
+
+Mounts, J. R. W., & Gavett, B. E. (2004). The role of salience
+in localized attentional interference. Vision Research, 44,
+1575–1588.
+Pinto, Y., Olivers, C. N. L., & Theeuwes, J. (2005). Target
+uncertainty does not lead to more distraction by singletons:
+Intertrial priming does. Perception & Psychophysics, 67,
+1354–1361.
+Sawaki, R., & Luck, S. (2010). Capture versus suppression
+of attention by salient singletons: Electrophysiological
+evidence for an automatic attend-to-me signal. Attention,
+Perception & Psychophysics, 72, 1455–1470.
+Theeuwes, J. (1991). Cross-dimensional perceptual selectivity.
+Perception & Psychophysics, 50, 184–193.
+Theeuwes, J. (1992). Perceptual selectivity for color and form.
+Perception & Psychophysics, 51, 599–606.
+Theeuwes, J. (2010). Top–down and bottom–up control of
+visual selection. Acta Psychologica, 135, 77–99.
+Theeuwes, J., Atchley, P., & Kramer, A. F. (2000). On the
+time course of top–down and bottom–up control of visual
+attention. In S. Monsell & J. Driver (Eds.), Attention and
+performance XVIII (pp. 105–124). Cambridge, MA:
+MIT Press.
+Kiss et al.
+759
+
+

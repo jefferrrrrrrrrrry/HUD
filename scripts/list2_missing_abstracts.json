@@ -1,0 +1,292 @@
+{
+  "kang2016ttc": {
+    "key": "kang2016ttc",
+    "doi": "10.24230/kjiop.v29i2.257-277",
+    "idx": 70,
+    "title": "Differences in drivers’ pedestrian avoidance response based on Warning timing, stimulus-response compatibility and Drivers’ distraction of auditory pedestrian collision warning system",
+    "year": 2016,
+    "venue": "Korean Journal of Industrial and Organizational Psychology",
+    "authors": [
+      "Hyunmin Kang",
+      "Kwanghee Han",
+      "Jaesik Lee"
+    ],
+    "cited_by": 1,
+    "tldr": "",
+    "cited_by_count": 1,
+    "concepts": [
+      "Distraction",
+      "Pedestrian",
+      "Collision",
+      "Stimulus (psychology)",
+      "Poison control",
+      "Warning system",
+      "Driving simulator",
+      "Psychology"
+    ],
+    "topics": [
+      "Safety Warnings and Signage",
+      "Human-Automation Interaction and Safety",
+      "Traffic and Road Safety"
+    ],
+    "referenced_works_count": 17,
+    "abstract": "In this study, the effects of auditory pedestrian collision warning system’s stimulus-response compatibility (compatible vs. incompatible) and warning timing(TTC: 2sec. vs. 4sec.) and type of driver distraction (control condition vs. auditory distraction vs. visual distraction) on pedestrian avoidance response were examined. The dependent measures were time to initial steering wheel maneuvering, steering wheel rotation angle, clearance distance to the pedestrian, ratio of pedestrian-collision and ratio of lane departure. The experiment used driving simulator and the results was as follows. First, the effects of stimulus-response compatibility appeared to differ as warning timing and types of driver distraction were varied. To be specific, stimulus-response incompatible condition was more suitable for auditory pedestrian collision warning system than stimulus-response compatible condition. Second, compare to 4sec, 2sec TTC condition yielded larger steering wheel rotation angle and higher ratios both in pedestrian-collision and lane departure. Third, among the types of driver distraction, the visual distraction impaired drivers’ ability to avoid the pedestrian most seriously. In conclusion, stimulus-response incompatible warnings which provided 4sec TTC condition seemed to be more reliable and useful in providing pedestrian-collision warning to drivers.",
+    "abstract_source": "crossref"
+  },
+  "attc2025": {
+    "key": "attc2025",
+    "doi": "10.2139/ssrn.6351998",
+    "idx": 73,
+    "title": "A-TTC: A Multimodal Fusion Framework for Personalized Truck Forward Collision Warning via Dynamic Threshold Calibration",
+    "year": 2026,
+    "venue": "",
+    "authors": [
+      "Yibing Wang",
+      "Qi He",
+      "Jingqiu Guo",
+      "Mark Stevenson",
+      "Yan Xu"
+    ],
+    "cited_by": 0,
+    "tldr": "",
+    "cited_by_count": 0,
+    "concepts": [
+      "Collision",
+      "Truck",
+      "Collision avoidance",
+      "Computer science",
+      "Baseline (sea)",
+      "Real-time computing",
+      "Heading (navigation)",
+      "Personalization"
+    ],
+    "topics": [
+      "Autonomous Vehicle Technology and Safety",
+      "Traffic and Road Safety",
+      "Human-Automation Interaction and Safety"
+    ],
+    "referenced_works_count": 0,
+    "abstract": "Heavy trucks experience persistent forward collision risks due to driver heterogeneity and limitations of fixed-threshold Forward Collision Warning (FCW) systems, which fail to adapt to dynamic driving states and multimodal contextual cues. This study assembled a large naturalistic dataset of 9,435 logged FCW triggers from 816 trucks; 3,519 events were video-verified and used for model development. A driver-adaptive FCW framework (A-TTC) is proposed that: i) detects heterogeneous driver states (e.g., distracted, harsh) using a multimodal attention network, ii) predicts driver reaction time and braking distance with a hybrid gradient-boosting plus convolutional-transformer model, and iii) integrates a dynamic time-to-avoidance threshold into FCW decision logic. On naturalistic events, A-TTC increased overall accuracy to 82.67%, and reduced the false-positive rate from 25.16% to 12.21%. In simulations spanning stationary, constant-speed, gradual- and emergency-deceleration scenarios, A-TTC matched or exceeded the best baseline in collision-avoidance success. Overall, adapting FCW thresholds to multimodal, state-aware driver representations substantially reduces nuisance alarms in heavy trucks without sacrificing hazard detection. This research provides a data-driven and driver-adaptive approach to enhancing the safety and personalization of commercial vehicle collision avoidance systems.",
+    "abstract_source": "crossref"
+  },
+  "abe2004": {
+    "key": "abe2004",
+    "doi": "10.1037/e577202012-006",
+    "idx": 75,
+    "title": "The human factors of collision warning systems: System performance, alarm timing, and driver trust",
+    "year": 2004,
+    "venue": "PsycEXTRA Dataset",
+    "authors": [
+      "Genya Abe",
+      "John Richardson"
+    ],
+    "cited_by": 0,
+    "tldr": "",
+    "cited_by_count": 0,
+    "concepts": [
+      "ALARM",
+      "Collision",
+      "Warning system",
+      "Computer science",
+      "False alarm",
+      "Computer security",
+      "Real-time computing",
+      "Engineering"
+    ],
+    "topics": [
+      "Human-Automation Interaction and Safety",
+      "Autonomous Vehicle Technology and Safety",
+      "Traffic and Road Safety"
+    ],
+    "referenced_works_count": 0,
+    "abstract": "",
+    "abstract_source": "none"
+  },
+  "chang2013bus": {
+    "key": "chang2013bus",
+    "doi": "10.4018/978-1-4666-2649-2.ch011",
+    "idx": 85,
+    "title": "The Development of Parameters and Warning Algorithms for an Intersection Bus-Pedestrian Collision Warning System",
+    "year": 2013,
+    "venue": "Implementation and Integration of Information Systems in the Service Sector",
+    "authors": [
+      "Chien-Yen Chang",
+      "Ting-Wei Chang"
+    ],
+    "cited_by": 0,
+    "tldr": "",
+    "cited_by_count": 0,
+    "concepts": [
+      "Intersection (aeronautics)",
+      "Pedestrian",
+      "Warning system",
+      "Collision",
+      "Pedestrian crossing",
+      "Computer science",
+      "Transport engineering",
+      "Engineering"
+    ],
+    "topics": [
+      "Human-Automation Interaction and Safety",
+      "Safety Warnings and Signage",
+      "Traffic and Road Safety"
+    ],
+    "referenced_works_count": 19,
+    "abstract": "This study presents the conceptual design of an intersection bus-pedestrian collision warning system for bus drivers approaching an intersection. The basic parameters of the proposed design concept include the bus drivers’ perception-reaction time, the emergency deceleration rate of the bus, and pedestrian walking speed. A bus driving simulation was designed and conducted to analyze bus drivers’ responses to unexpected pedestrians crossing unsignalized intersections or signalized intersections during a green light interval for parameter analysis. The timings of auditory warnings and visual warnings, the locations for vehicle detectors and pedestrian detectors, and the locations for visual warning devices were also developed after analyzing the experimental results. The experimental results also highlight some important characteristics of bus driving behavior at intersections. Moreover, bus drivers really pay attention to the warning messages. Finally, this study develops and discusses some warning algorithms.",
+    "abstract_source": "crossref"
+  },
+  "sun2023rl": {
+    "key": "sun2023rl",
+    "doi": "10.1061/9780784484869.024",
+    "idx": 91,
+    "title": "A Reinforcement Learning-Based Adaptive Forward Collision Warning System by Considering Drivers’ Reaction Time in Real Time",
+    "year": 2023,
+    "venue": "CICTP 2023",
+    "authors": [
+      "Yi-Han Sun",
+      "Xia Wu",
+      "Si-Yuan Gong",
+      "Rui Yang"
+    ],
+    "cited_by": 0,
+    "tldr": "",
+    "cited_by_count": 0,
+    "concepts": [
+      "Reinforcement learning",
+      "Computer science",
+      "Collision",
+      "Trajectory",
+      "Warning system",
+      "Matching (statistics)",
+      "Real-time computing",
+      "Constant false alarm rate"
+    ],
+    "topics": [
+      "Traffic control and management",
+      "Traffic and Road Safety",
+      "Autonomous Vehicle Technology and Safety"
+    ],
+    "referenced_works_count": 0,
+    "abstract": "This study proposes a reinforcement learning-based adaptive forward collision warning system (RL-AFCWS) with individualized real-time driver reaction time (DRT). Specifically, the curve matching algorithm is presented to obtain the real-time DRT by matching the trajectories of preceding-following vehicle pairs. A deep Q network (DQN) model is constructed to predict the activation state of the collision warning by using trajectory data and DRT as inputs. To improve the accuracy of the RL-AFCWS, real driving data set NGSIM from two different periods is selected for samples. The effectiveness of the proposed study is verified by numerical experiments. The result indicates that the proposed RL-AFCWS can effectively improve the accuracy rate and true positive rate to 94% and 49%, respectively, while greatly reducing the alarm interference, compared to the TTC-based classical model and adaptive model. It also has realized adaptive early warning for drivers with different driving styles.",
+    "abstract_source": "openalex"
+  },
+  "zhangy2023path": {
+    "key": "zhangy2023path",
+    "doi": "10.1109/ictis60134.2023.10243767",
+    "idx": 93,
+    "title": "Research on pedestrian vehicle collision warning based on path prediction",
+    "year": 2023,
+    "venue": "2023 7th International Conference on Transportation Information and Safety (ICTIS)",
+    "authors": [
+      "Yue Zhang",
+      "Xu Wang",
+      "Kaimin Zhuo",
+      "Wenjian Jiao",
+      "Wenxin Yang"
+    ],
+    "cited_by": 5,
+    "tldr": "",
+    "cited_by_count": 7,
+    "concepts": [
+      "Pedestrian",
+      "Collision",
+      "Warning system",
+      "Computer science",
+      "Acceleration",
+      "Path (computing)",
+      "Speed limit",
+      "Position (finance)"
+    ],
+    "topics": [
+      "Autonomous Vehicle Technology and Safety",
+      "Traffic and Road Safety",
+      "Traffic Prediction and Management Techniques"
+    ],
+    "referenced_works_count": 9,
+    "abstract": "The vehicle FCW (forward collision warning) system is supposed to considerable reduce the traffic accidents caused by pedestrian crossing. The pedestrian path prediction method in FCW is studied, and the five-freedom-degree vehicle model is analyzed, the limit condition where whether the maximum barking acceleration can avoid collision effectively is researched. The vehicle coordinate is divided according to the psychological safety distance of pedestrians, and an anti-collision warning system is designed on basis of the pedestrian initial position, the movement speed and path. The test results show that the designed anti-collision warning system can effectively warn the driver before the collision accident occurs and avoid pedestrian traffic accidents caused by the negligence of the drivers.",
+    "abstract_source": "s2"
+  },
+  "joo2024rate": {
+    "key": "joo2024rate",
+    "doi": "10.2139/ssrn.4927850",
+    "idx": 94,
+    "title": "Predictive Safety-Aware Transmit Rate Control Scheme for Real-Time Proactive Forward Collision Warning System",
+    "year": 2024,
+    "venue": "",
+    "authors": [
+      "Yang-Jun Joo",
+      "Dong-Kyu Kim",
+      "Eui-Jin Kim"
+    ],
+    "cited_by": 0,
+    "tldr": "",
+    "abstract": "Forward collision warning systems in connected vehicles are crucial for improving road safety. These systems use V2X communication to frequently capture and broadcast potential rear-end crash risks, issuing warnings via beacon messages. However, V2X-based proactive forward collision warning systems face challenges due to channel congestion and delays between the occurrence of dangerous situations and the reception of warning messages. To address these challenges, this study proposes a predictive safety-aware transmit rate control scheme (PSA-TRC). This scheme predicts crash risk and adaptively adjusts each vehicle’s beaconing rate in a decentralized manner. Upon detecting channel congestion, the system activates a distributed beacon rate adaptation algorithm. This algorithm assigns higher beaconing rates to vehicles with greater predicted crash risk while maintaining the total beaconing demand within the channel’s capacity limits. We evaluated the effectiveness of the proposed PSA-TRC through comprehensive comparisons with benchmark schemes using real-world highway trajectory datasets. Our case study findings suggest that the PSA-TRC significantly enhances the reliability and efficiency of beaconing for proactive forward collision warning systems, especially in scenarios involving high vehicle density.",
+    "abstract_source": "crossref"
+  },
+  "miyoshi2005sae": {
+    "key": "miyoshi2005sae",
+    "doi": "10.4271/2005-08-0554",
+    "idx": 95,
+    "title": "Development of Forward-Collision Avoidance Warning System Adapted for Driver Characteristics",
+    "year": 2005,
+    "venue": "",
+    "authors": [
+      "Noboru Miyoshi",
+      "Masao Nagai",
+      "Takayoshi Kamada",
+      "Hidehisa Yoshida"
+    ],
+    "cited_by": 0,
+    "tldr": "",
+    "cited_by_count": 0,
+    "concepts": [
+      "Collision avoidance",
+      "Collision",
+      "Warning system",
+      "Collision avoidance system",
+      "Computer science",
+      "Computer security",
+      "Telecommunications"
+    ],
+    "topics": [
+      "Autonomous Vehicle Technology and Safety",
+      "Human-Automation Interaction and Safety",
+      "Technology and Data Analysis"
+    ],
+    "referenced_works_count": 0,
+    "abstract": "This DOI is not currently attached to any metadata records. DOIs can’t actually ever be deleted (they’re persistent), but sometimes our members create DOIs in error. We do have a process to approximate deletion which we follow only in rare cases where the DOI has been genuinely created in error, and most crucially, if the DOI has never been published anywhere online or in print and never otherwise distributed to or communicated with anyone (authors, readers, reviewers, etc.",
+    "abstract_source": "openalex"
+  },
+  "saej2400": {
+    "key": "saej2400",
+    "doi": "10.4271/j2400_200308",
+    "idx": 101,
+    "title": "Human Factors in Forward Collision Warning Systems: Operating Characteristics and User Interface Requirements",
+    "year": 2003,
+    "venue": "",
+    "authors": [
+      ""
+    ],
+    "cited_by": 1,
+    "tldr": "",
+    "cited_by_count": 20,
+    "concepts": [
+      "Cruise control",
+      "Truck",
+      "Paragraph",
+      "Interface (matter)",
+      "Collision",
+      "Class (philosophy)",
+      "Warning system",
+      "Computer science"
+    ],
+    "topics": [
+      "Human-Automation Interaction and Safety",
+      "Traffic and Road Safety",
+      "Autonomous Vehicle Technology and Safety"
+    ],
+    "referenced_works_count": 0,
+    "abstract": "&lt;div class=\"section abstract\"&gt; &lt;div class=\"htmlview paragraph\"&gt;Forward Collision Warning (FCW) systems are onboard systems intended to provide alerts to assist drivers in avoiding striking the rear end of another moving or stationary motorized vehicle. This SAE Information Report describes elements for a FCW operator interface, as well as requirements and test methods for systems capable of warning drivers of rear-end collisions.&lt;/div&gt; &lt;div class=\"htmlview paragraph\"&gt;This information report applies to original equipment and aftermarket FCW systems for passenger vehicles including cars, light trucks, and vans. This report does not apply to heavy trucks. Furthermore, this document does not address integration issues associated with adaptive cruise control (ACC), and consequently, aspects of the document could be inappropriate for an ACC system integrated with a FCW system.&lt;/div&gt;&lt;/div&gt;",
+    "abstract_source": "crossref"
+  }
+}

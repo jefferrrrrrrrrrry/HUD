@@ -1,0 +1,342 @@
+# 来源: Jina @ https://doi.org/10.3390/app13106037
+
+Title: Investigation of Text-Background Lightness Combination on Visual Clarity Using a Head-Up Display under Various Surround Conditions and Different Age Groups
+
+URL Source: https://doi.org/10.3390/app13106037
+
+Published Time: 2023-05-14
+
+Markdown Content:
+Logical Operator Operator
+
+Search Text
+
+Search Type
+
+_add\_circle\_outline_
+
+_remove\_circle\_outline_
+
+[![Image 1: applsci-logo](https://pub.mdpi-res.com/img/journals/applsci-logo.png?c706cab522490ca4)](https://www.mdpi.com/journal/applsci)
+
+## Article Menu
+
+Font Type:
+
+_Arial_ _Georgia_ _Verdana_
+
+Font Size:
+
+Aa Aa Aa
+
+Line Spacing:
+
+__ __ __
+
+Column Width:
+
+__ __ __
+
+Background:
+
+Open Access Article
+
+by 
+Hsin-Pou Huang
+
+ 1[](mailto:bobhuang@mail.chihlee.edu.tw), 
+Hung-Chung Li
+
+ 2,*[](mailto:hcli01@mail.cgust.edu.tw)[![Image 2: ORCID](https://pub.mdpi-res.com/img/design/orcid.png?0465bc3812adeb52?1782465688)](https://orcid.org/0000-0003-4143-0050), 
+Minchen Wei
+
+ 3[](mailto:min-chen.wei@polyu.edu.hk) and 
+Guan-Hong Li
+
+ 1[](mailto:10910111@mail.chihlee.edu.tw)
+
+1
+
+Department of Information Management, Chihlee University of Technology, New Taipei City 220305, Taiwan
+
+2
+
+Research Center for Food and Cosmetic Safety, Department of Cosmetic Science, Chang Gung University of Science and Technology, Taoyuan 33303, Taiwan
+
+3
+
+Department of Building Environment and Energy Engineering, The Hong Kong Polytechnic University, Kowloon, Hong Kong
+
+*
+
+Author to whom correspondence should be addressed.
+
+Submission received: 14 April 2023 / Revised: 7 May 2023 / Accepted: 12 May 2023 / Published: 14 May 2023
+
+## Abstract
+
+Up until now, head-up displays (HUDs) have been installed in front of the driver’s seat to provide drivers with auxiliary information. It may be used in various surroundings, ranging from very dark to very bright environments, such as daylight. A suitable text-background lightness combination can improve the driver’s visual clarity and efficiency when identifying displayed information to raise driving safety. Although many kinds of HUDs are designed to improve visual clarity by adjusting brightness, few studies have investigated the influence of the text-background lightness combination of a HUD on visibility, especially as the lighting level of the driving condition changes dramatically. In the study, 60 observers, comprising 20 young, 20 middle-aged, and 20 older participants, evaluated the visual clarity of 20 text-background lightness combinations on a HUD using paired comparison methods under dark and daylight surroundings (i.e., 300, 1500, and 9000 lx conditions). As a result, the combination of white text on a black background and black text on a white background presented the most significant preference and the best visual clarity under dark and daylight surroundings, respectively, improving visual safety when driving.
+
+## 1. Introduction
+
+In recent years, the applications of augmented reality (AR) technologies have been rapidly developed to make our lives more intelligent. The head-up display (HUD) had faster response times to urgent events compared to the head-down display (HDD) [[1](https://doi.org/10.3390/app13106037#B1-applsci-13-06037)]. Thus, the HUD is considered one of the most representative interaction devices applied in the vehicle to assist the driver [[2](https://doi.org/10.3390/app13106037#B2-applsci-13-06037)]. It was beneficial to display visual information (i.e., speed, navigation cues, safety warnings, environment, traffic, travel conditions) on the windshield with a projector when the driver simultaneously views the driving environment. However, there were still some issues that should be further studied to evaluate its practicality and safety [[3](https://doi.org/10.3390/app13106037#B3-applsci-13-06037)]. Due to the intensive variance of the environmental illumination when driving, which has a high dynamic range for human vision, ensuring appropriate visual clarity was the primary purpose of optimizing the HUD. Furthermore, the user experience of the HUD was discussed in lots of research to achieve a better HUD design.
+
+The HUD was a type of see-through display in which the ambient lighting would significantly influence the visual perception of the displayed content. When projecting the information with a lower contrast against the background, it might lead to a higher driving risk. Hence, some studies contributed to enhancing the visibility of the HUD for easier recognition. Previous research suggested that the background transparency levels should be adjusted adaptively based on the illuminance of the outside environment [[4](https://doi.org/10.3390/app13106037#B4-applsci-13-06037)]. With a higher illuminance condition, the visibility of the text could be increased when the transparency of the background was lower, whereas becoming more transparent is applied to the dark or shadow area. Additionally, Moffitt et al. investigated the visibility of color symbology in high ambient environments. Their results recommended using white, yellow, green, and cyan text [[5](https://doi.org/10.3390/app13106037#B5-applsci-13-06037)]. A robust gamut mapping algorithm, including lightness mapping (LM) and chroma reproduction, was proposed by Lee et al. to reduce color distortion for bright ambient light [[6](https://doi.org/10.3390/app13106037#B6-applsci-13-06037)]. Moreover, two approaches, the changes of the color symbols and the addition of color outline to symbols for HUD information, were adopted for visibility enhancement determined by the similarity between HUD information and background colors [[7](https://doi.org/10.3390/app13106037#B7-applsci-13-06037)].
+
+Li et al. discussed the influence of three types of HUDs, including a flag, perspective, and flag and perspective, on experienced and inexperienced drivers with subjective and objective measurements. The results showed that both types of drivers were HUD-dependent, and the flag and perspective display performed better in helping drivers execute simple tasks and complex tasks [[8](https://doi.org/10.3390/app13106037#B8-applsci-13-06037)]. Park et al. studied the impacts of visual enhancements for HUDs on the driver’s performance and workload. The observers had to track information about driving in an automotive simulation. They found that visual enhancements and task difficulties affect tracking errors and subjective workloads, which provided suggestions for interface designers to take visual enhancement into account for HUDs [[9](https://doi.org/10.3390/app13106037#B9-applsci-13-06037)]. Li et al. investigated if the interface complexity of HUDs would influence drivers’ driving performance and self-perception. Their results indicated that too complex and too simple a design of the HUD interface would not provide the best perceived effectiveness and satisfaction for a driver [[10](https://doi.org/10.3390/app13106037#B10-applsci-13-06037)]. Charissis et al. compared three prototypes of HUD interfaces to improve driver safety. The results presented indicate that familiarity with the interface design is a desirable factor [[11](https://doi.org/10.3390/app13106037#B11-applsci-13-06037)]. Wan et al. explored the proper presentation format, including font size and luminance contrast of the text on the dual-plane HUD, to increase the driver’s comfort. The results found that the best legibility could be achieved at a luminance contrast of 7:1 [[12](https://doi.org/10.3390/app13106037#B12-applsci-13-06037)].
+
+Beck et al. conducted a user survey on the usage contexts and design improvement points of the existing automotive HUD systems. In the aspect of visibility, the observers suggested that various colors or large-sized images could provide good visibility of HUD images. Their study also revealed a trade-off between visibility and visual clutter [[13](https://doi.org/10.3390/app13106037#B13-applsci-13-06037)]. Cai et al. discussed the key factors and methods of ergonomic design for HUDs. Their research recommended that visual comfort, information color, character font, font size, brightness, and contrast should be well considered to improve the visual effect of the display and ensure safe driving [[14](https://doi.org/10.3390/app13106037#B14-applsci-13-06037)]. Juch found that the human-technology interaction of HUDs can be optimized by applying the correct enhancement-contrast ratios to minimize visual distraction from visual saliency [[15](https://doi.org/10.3390/app13106037#B15-applsci-13-06037)]. Liu et al. indicated that the projected information on the HUD might interfere with the colors in the background, such as in a lower contrast condition. Therefore, they proposed a saliency method to evaluate the mutual effect of HUDs on various backgrounds. Additionally, it is better to avoid assigning a red color to emergency information on HUDs in vehicles due to the reduction of saliency [[16](https://doi.org/10.3390/app13106037#B16-applsci-13-06037)]. Ohtsuka analyzed the effects of HUD on the human visual system, including color vision deficiency and background illumination. His opinion pointed out that light colors and highly saturated colors might become confused with the translucent driving data and affect data perception [[17](https://doi.org/10.3390/app13106037#B17-applsci-13-06037)]. Currano et al. utilized an AR HUD to investigate the influence of HUD visualizations on drivers’ situation awareness and perceptions. The results showed that situation awareness would reduce with increasing driving context complexity [[18](https://doi.org/10.3390/app13106037#B18-applsci-13-06037)].
+
+Erickson et al. measured two kinds of optical see-through head-mounted displays under various lighting conditions ranging from 0 to 20,000 lx and calculated the contrast ratios between rendered black (transparent) and white imagery to investigate the influence of environmental lighting on the user. Their results suggested that the optical see-through head-mounted displays needed further improvement for contrast when used in environments with higher illuminance levels [[19](https://doi.org/10.3390/app13106037#B19-applsci-13-06037)]. Ryu et al. proposed a gamma-curve-based virtual image-boosting method with a measurement model to solve background color blending. Their model could determine the appropriate gamma value for virtual image boosting to improve image quality [[20](https://doi.org/10.3390/app13106037#B20-applsci-13-06037)]. Zhang et al. carried out a color-matching experiment with background-correlated color temperature (CCT), luminance levels, and two stimulus types to investigate the impact of background CCT on AR color appearance. They found that the matched colors in AR would shift towards the background when the background color was inconsistent with the stimulus. In addition, the study recommended that perceptual weighting on the foreground and background in the additive function be modified to accurately predict the appearance [[21](https://doi.org/10.3390/app13106037#B21-applsci-13-06037)]. Hassani et al. explored the color appearance in a color-matching experiment with combinations of mixed foreground and background colors and tested the applicability of the CAM16 color appearance model in an AR environment. From their results, the prediction of CAM16 was not ideal, and they suggested it should be improved by modifying it with the addition of chromatic simultaneous contrast to produce a better result [[22](https://doi.org/10.3390/app13106037#B22-applsci-13-06037)]. Chien and Sun investigate the preferred tone curves and background lighting geometries of a see-through head-mounted LCD with five psychophysical experiments. They suggested both brightness and contrast should be heightened accordingly to increase the image quality of a see-through head-mounted LCD [[23](https://doi.org/10.3390/app13106037#B23-applsci-13-06037)].
+
+Although some related works focused on improving visibility [[24](https://doi.org/10.3390/app13106037#B24-applsci-13-06037)], studying the characteristics [[25](https://doi.org/10.3390/app13106037#B25-applsci-13-06037)], and finding the preferences of the tone reproduction curve [[26](https://doi.org/10.3390/app13106037#B26-applsci-13-06037)] for transparent LCD and OLED under various ambient lighting conditions, there were still a few studies that aimed for a HUD, whose display theory and application were slightly different from those devices. In our previous study, a psychophysical experiment was conducted to investigate the visual clarity of a HUD with different text-background lightness combinations under dark and 15,000 lx lighting levels. The results suggested the white text with a black background and the black text with a white background could approach the best visual clarity for the two conditions, respectively. To establish a comprehensive study associated with this topic and an evaluation model, more illuminance levels and different age groups needed further investigation [[27](https://doi.org/10.3390/app13106037#B27-applsci-13-06037)]. Based on the above reason, a psychophysical experiment was conducted in this study to investigate the visual clarity of a HUD with the various text-background lightness combinations under daylight and dark conditions for better enhancing its visual perception.
+
+## 2. Methods
+
+A psychophysical experiment is conducted to investigate the visual clarity of a head-up display. When driving on the road, observers from different age groups are asked to read an article displayed on a head-up display with a simulated car windshield and evaluate the visual clarity under a wide range of ambient illuminance levels.
+
+### 2.1. Experimental Setup
+
+The experiment is carried out using a windshield and set up on a tripod. The viewing angle between the windshield and the horizontal is 45° at the observer’s position. A 9.7-inch iPad (6th generation) with a black border is placed on a horizontal table, and the windshield is supported by a floor stand, as shown in [Figure 1](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f001)a. The dimensions of the viewing booth are 60 cm (length) × 60 cm (width) × 60 cm (height), and the interiors are covered with Munsell N7 spectrally neutral paint. [Figure 1](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f001)b shows the experimental setup captured from the observer’s eye position, in which the viewing distance is about 65 cm between the eye and the windshield. The white point of the iPad reaches a peak luminance of approximately 560.8 cd/m 2 with chromaticities of ((x, y) = (0.3152, 0.3323)) after a 30-min stabilization period. Additionally, the viewing booth contains the illumination of a four-channel color-adjustable LED device (SkyPanel S60-C, ARRI, Munich, Germany) to produce uniform light sources. The four-channel color-adjustable LED device is adopted to strictly provide a light source by adjusting the illuminance level to 300, 1500, and 9000 lx with an identical CCT of 6500 K. This was measured by the Konica Minolta Chroma Meter CL-200A at the intersection point directly beneath the light source and eye level. The relative spectral power distributions (SPDs) are shown in [Figure 2](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f002). [Table 1](https://doi.org/10.3390/app13106037#table_body_display_applsci-13-06037-t001) lists the colorimetric characteristics of the lighting conditions measured by a calibrated spectroradiometer (Specbos 1211TM, JETI Technische Instrumente GmbH, Jena, Germany). In addition, the reflection and the transmission for the windshield (with insulation paper) are around 3% and 31.7%, respectively. The luminance of the booth wall as viewed through the windshield under 300 lx, 1500 lx, and 9000 lx is 5.97 cd/m 2, 29.8 cd/m 2, and 178.3 cd/m 2, respectively. For comparing the colorimetric characteristics of the light directly going to the spectroradiometer (i.e., (x, y) = (0.3085, 0.3228)) and the light going through the windshield (i.e., (x, y) = (0.3037, 0.3183)), it indicates that the color bias for the windshield is close to zero.
+
+**Figure 1.** Experimental setup: (**a**) simulation of head-up display; (**b**) an example of viewing field (the chin rest is removed for this photograph).
+
+**Figure 2.** The relative spectral power distribution of the light source (6500 K, 300, 1500, and 9000 lx).
+
+**Table 1.** The colorimetric characteristics of ambient lighting conditions.
+
+A total of 61 observers participates in this study, including 20 young adults aged from 18 to 40 years old (mean = 22.9, std. dev. = 4.8), 20 middle-aged adults aged from 40 to 60 years old (mean = 47.3 years, std. dev. = 5.9), and 21 older adults aged 60 years or above (mean = 66.6, std. dev. = 3.9). All of them hold a driving license. Because one older observer does not pass Ishihara’s test, his data are excluded from the analysis. Therefore, valid data from 60 observers with normal color vision are analyzed.
+
+The RGB values of the iPad are adjusted to produce five achromatic colors for different background lightness. Totally 20 text-background lightness combinations are acquired from these five colors, using one for the text and one of the others for the background. These 20 combinations are presented to observers as paired comparisons for estimation, as shown in [Figure 3](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f003), for a total of 190 pairs. Each observer assesses 20 of the 190 pairs twice for verification. Thus, each observer evaluated the 210 pairs on the head-up display (projected from the iPad) under four illuminance levels. For obtaining accurate colorimetric characteristics under each illuminance level, a calibrated spectroradiometer is placed at the observer’s eye position to measure the five achromatic colors displayed on the head-up display. The colorimetric information for the four illuminance levels and five achromatic colors is listed in [Table 2](https://doi.org/10.3390/app13106037#table_body_display_applsci-13-06037-t002) and [Table 3](https://doi.org/10.3390/app13106037#table_body_display_applsci-13-06037-t003) for dark, 300, 1500, and 9000 lx surround conditions at 6500 K, respectively.
+
+**Figure 3.** A screenshot of the paired comparison presented on the iPad.
+
+**Table 2.** The colorimetric characteristics of the five achromatic colors produced on the iPad under different surround conditions.
+
+**Table 3.** Colorimetric characteristics of the five achromatic colors.
+
+### 2.2. Experimental Procedures
+
+The experiment requires two minutes of dark adaptation before starting. During this time, the observer must fix their viewing distance at 65 cm using a chin rest to ensure a similar viewing geometry for all 60 observers. Once the dark adaptation period is complete, the experimental assistant implements an iOS app on a head-up display for paired comparison, and then the observers are asked to choose the combination that provides better visual clarity. To prevent the effect of a visual afterimage, a neutral gray image is displayed for one second before each new pattern appears. To avoid light/dark adaptation problems, the observers always completed their evaluations under the dark illuminance level first, 300 lx second, 1500 lx third, and then 9000 lx. Each observer compares all 210 combinations in random order under each ambient condition, and the entire experiment takes approximately one hour for each observer.
+
+## 3. Results
+
+### 3.1. Observer Variability
+
+To examine intra-observer variation, the visual task involved estimating 4800 repeated pair comparisons (i.e., 20 pair comparisons × 4 illuminance levels × 60 observers), and the process was repeated twice. For the 4800 pairs evaluated twice, 92% of the patterns were judged identically by the observers on average. This indicates that 4416 samples generated the same response in both evaluations. These results show that the visual responses demonstrated high repeatability, and the experimental data collected from the experiment is reliable.
+
+### 3.2. Visual Clarity
+
+The visual clarity interval scales are determined by the psychophysical experiment results using the Thurstone case V method [[28](https://doi.org/10.3390/app13106037#B28-applsci-13-06037)], and Thurstone Case V scale calculations are conducted separately for each age group. According to the Thurstone case V method, the higher interval scale value corresponds to a stronger sense of clarity among the observers when reading the text-background lightness combination.
+
+As a result of the correlation coefficient in [Table 4](https://doi.org/10.3390/app13106037#table_body_display_applsci-13-06037-t004), the visual clarity in the three age groups is very similar at each illuminance level. Significantly, all observers present better visual clarity with the increase in the difference in lightness between text and background, especially for the 9000 lx surround condition. The result also indicates that the observers perceive higher visual clarity when reading the content with high to low luminance contrast between text and background. Referring to [Figure 4](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f004)a, a text-background lightness combination—white text with black background (i.e., L*background = 1.88; L*text = 100)—is consistently judged the clearest for all ages when the surround is dark. Under the daylight surround (i.e., 300, 1500, and 9000 lx), the text-background combination of black text with a white background (L*background = 100; L*text = 96.19 for 9000 lx) is judged as the clearest for all ages except middle-aged under 1500 lx, as shown in [Figure 4](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f004)b–d. When the ambient lighting is 9000 lx, the observers generally feel clearer about the combinations with a white background than those with a black one under the same difference in lightness. In contrast, combinations with a black background can provide better visual clarity than those with a white one under dark surround conditions.
+
+**Figure 4.** Visual clarity interval scale of the 20 text-background combinations with different age groups under four surround conditions: (**a**) dark; (**b**) 300; (**c**) 1500; and (**d**) 9000 lx.
+
+**Table 4.** Correlation coefficient between different combinations of age groups under each ambient illuminance setting (dark, 300 lx, 1500 lx, and 9000 lx).
+
+## 4. Discussion
+
+The influence of positive and negative contrast on the observers’ response to the visibility is discussed. The results are shown in [Figure 5](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f005). Due to the high correlation and the similar trend of the experimental results between the different age groups, the data with the lowest correlation, in which the illuminance level is 9000 lx, is discussed for the older observers. According to [Figure 5](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f005)a, a higher positive contrast (i.e., the text is darker than the background) is better to improve the visual clarity for the white and light gray backgrounds under the dark surround condition. However, a negative contrast (i.e., the text is brighter than the background) is beneficial to the increase in visual clarity for the rest of the three backgrounds.
+
+**Figure 5.** Visual clarity interval scale of the 20 text-background combinations evaluated by the older observers under dark and 9000 lx surround conditions with positive and negative contrast. The open markers are used to represent positive contrast. (**a**) Dark; (**b**) 6500 K, 9000 lx.
+
+From [Figure 5](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f005)b, a higher positive contrast can approach the highest scale value of visual clarity with the white background under the 9000 lx lighting condition. This finding is much more significant compared to the dark surround condition. Furthermore, it can be found that the positive contrasts are appropriate for backgrounds with higher luminance, such as the white and light gray backgrounds. In comparison, the backgrounds with relatively lower luminance, such as black, dark gray, and medium gray, need apparent negative contrast to increase the legibility of the text under these two ambient lighting conditions.
+
+[Figure 4](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f004)a and [Figure 5](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f005)a illustrate that the visual clarity of the combinations with white backgrounds is slightly worse than that of those with black backgrounds in the dark environment. In contrast to the dark surround, the text with a white background contributes to a much higher visual clarity scale under 9000 lx, as shown in [Figure 5](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f005)b. From [Figure 5](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f005), it is beneficial to improve the visual clarity with a white background over a black background with an increment of ambient lighting levels. Therefore, the use of a higher background luminance is recommended to enhance visual clarity in an extremely bright environment.
+
+According to [Figure 6](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f006), a white background can provide better visual clarity for older observers at an illuminance level of 9000 lx. However, no notable differences in visual clarity are observed among this age group under the other surrounding conditions. The reason for this phenomenon is the effect of age on the transmittance of the crystalline lens. Compared with young observers, older observers have a lower transmittance of the crystalline lens. Thus, the perceived brightness of retinal illuminance may decrease for older observers. It can explain why the older observers tended to feel clearer on the white background than the others when reading on the HUD. Additionally, in a dark environment where the lightness contrast between the text and background is the same, a black background is clearer than a white background. Furthermore, text with a white background is more readable than text with a black background when the contrast decreases.
+
+**Figure 6.** Visual clarity interval scale of the 20 text-background combinations under different surround conditions: (**a**) dark; (**b**) 300; (**c**) 1500; and (**d**) 9000 lx.
+
+## 5. Modeling
+
+In the study, a nonlinear analysis method is utilized to describe the relationship between the input parameters and the visual clarity scale. A third-order polynomial regression model is applied, which can be formulated as Equation (1), where s is the illuminance of the surrounds and b, t, and C A represent the luminance of the backgrounds and text and absolute lightness contrast (abs(t-b)) between the backgrounds and text, respectively. They are selected as the inputs for the training procedure. The number of parameters is 20 for the polynomials. The psychophysical experiment for visual clarity collects 240 datasets. A feature scaling method, Min-Max Normalization, is applied to the input data to improve accuracy and faster convergence.
+
+$$
+V C \left(\right. s , b , t , C_{A} \left.\right) = M_{1 \times 19} \left[\right. s^{3} & b^{3} & t^{3} & C_{A} ^{3} & s^{2} & b^{2} & t^{2} & C_{A} ^{2} & s & b & t & C_{A} & s b & s t & s C_{A} & b t & b C_{A} & t C_{A} & 1 \left]\right.^{Τ} , \\ M = \left[\right. 107.5 & - 2.2 & - 0.1 & 1.2 & - 135.4 & 21.3 & 18.5 & - 23.5 & - 7.3 & - 0.6 & 1.9 & 6.6 & 31.3 & 6.4 & 46.5 & - 38.2 & 1.4 & 0.3 & 1 \left]\right.
+$$
+
+(1)
+
+Three evaluation metrics, including the coefficient of determination (r 2), mean absolute error (MAE), and root mean square error (RMSE), are commonly used to evaluate a machine learning model’s performance for a regression problem. [Figure 7](https://doi.org/10.3390/app13106037#fig_body_display_applsci-13-06037-f007) shows the scatter plot of the predicted values against the ground truth. According to the results, the visual clarity scale obtained from the observers can be well predicted with a high R-squared and low RMSE and MAE, where the values are 0.99, 0.11, and 0.08, respectively. The testing results are listed in [Table 5](https://doi.org/10.3390/app13106037#table_body_display_applsci-13-06037-t005). Additionally, the model shows a high correlation coefficient, and Pearson’s r value is 0.99. The models can be further applied to the AR industry and its manufacturer for developing an advanced HUD with real-time enhancements corresponding to the changes in luminance caused by driving conditions.
+
+**Figure 7.** Scatter plots of prediction for visual clarity.
+
+**Table 5.** Evaluation metrics for the machine learning model.
+
+## 6. Conclusions
+
+In conclusion, a psychophysical experiment is conducted to investigate the visual clarity of different text-background lightness combinations by using a head-up display under a dark surround condition and a bright environment in the study. A total of 190 pairs were tested to find the best visual clarity of different text-background lightness combinations among 13 observers.
+
+From the experimental results, the combination of the white text with a black background (i.e., L*background = 1.88; L*text = 100) presents the clearest under the dark surround. On the other hand, the black text with white background (L*background = 100; L*text = 96.19) is the clearest text-background combination under the bright environment (9000 lx). Furthermore, the judgments of visual clarity under the dark surround show that the combinations of text with a white background provide less visual clarity than those with a black background. Additionally, the observers generally consider that combining with a white background is distinct from those with other backgrounds luminance for 9000 lx. Furthermore, a third-order polynomial regression model is developed based on the visual data, with a high correlation of determination.
+
+When using a head-up display, appropriate lightness combinations for the text and background can improve visual clarity and reduce the time it takes for drivers to accommodate and identify content information. It can ultimately enhance driving safety. The findings of this work can be regarded as guidelines for the head-up display design to enhance drivers’ visual perception and safety, depending on the ambient illuminance level.
+
+## Author Contributions
+
+H.-P.H., concept provider, project administration, conducting experiments, data analysis, and writing—manuscript preparation. H.-C.L., data analysis, modeling, and writing—manuscript preparation. M.W., concept provider, supervision, and writing—review and editing. G.-H.L. conducting experiments. All authors have read and agreed to the published version of the manuscript.
+
+## Funding
+
+This research was funded by National Science and Technology Council (NSTC), grant number NSTC 110-2410-H-263-003.
+
+## Institutional Review Board Statement
+
+This study is exempt from review by the Institutional Review Board (IRB) of National Taiwan University (IRB No: 202105ES131).
+
+## Informed Consent Statement
+
+Informed consent was obtained from all subjects involved in the study.
+
+## Data Availability Statement
+
+The data presented in this study are available upon request from the authors.
+
+## Conflicts of Interest
+
+The authors declare no conflict of interest.
+
+## References
+
+1.   Liu, Y.-C.; Wen, M.-H. Comparison of head-up display (HUD) vs. head-down display (HDD): Driving performance of commercial vehicle operators in Taiwan. Int. J. Hum. Comput. Stud.**2004**, 61, 679–697. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Comparison+of+head-up+display+(HUD)+vs.+head-down+display+(HDD):+Driving+performance+of+commercial+vehicle+operators+in+Taiwan&author=Liu,+Y.-C.&author=Wen,+M.-H.&publication_year=2004&journal=Int.+J.+Hum.+Comput.+Stud.&volume=61&pages=679%E2%80%93697&doi=10.1016/j.ijhcs.2004.06.002)] [[CrossRef](https://doi.org/10.1016/j.ijhcs.2004.06.002)]
+2.   Jose, R.; Lee, G.A.; Billinghurst, M. A comparative study of simulated augmented reality displays for vehicle navigation. In Proceedings of the 28th Australian Conference on Computer-Human Interaction—OzCHI ′16, Launceston, Australia, 29 November–2 December 2016; pp. 40–48. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=A+comparative+study+of+simulated+augmented+reality+displays+for+vehicle+navigation&conference=Proceedings+of+the+28th+Australian+Conference+on+Computer-Human+Interaction%E2%80%94OzCHI+%E2%80%B216&author=Jose,+R.&author=Lee,+G.A.&author=Billinghurst,+M.&publication_year=2016&pages=40%E2%80%9348)]
+3.   Maroto, M.; Caño, E.; González, P.; Villegas, D. Head-up Displays (HUD) in driving. arXiv**2018**, arXiv:1803.08383. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Head-up+Displays+(HUD)+in+driving&author=Maroto,+M.&author=Ca%C3%B1o,+E.&author=Gonz%C3%A1lez,+P.&author=Villegas,+D.&publication_year=2018&journal=arXiv)]
+4.   Riegler, A.; Riener, A.; Holzmann, C. Adaptive dark mode: Investigating text and transparency of windshield display content for automated driving. In Proceedings of the Mensch und Computer 2019—Workshopband, Hamburg, Germany, 8–11 September 2019. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Adaptive+dark+mode:+Investigating+text+and+transparency+of+windshield+display+content+for+automated+driving&conference=Proceedings+of+the+Mensch+und+Computer+2019%E2%80%94Workshopband&author=Riegler,+A.&author=Riener,+A.&author=Holzmann,+C.&publication_year=2019)]
+5.   Moffitt, K.; Browne, M.P. Visibility of color symbology in head-up and head-mounted displays in daylight environments. Opt. Eng.**2019**, 58, 051809. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Visibility+of+color+symbology+in+head-up+and+head-mounted+displays+in+daylight+environments&author=Moffitt,+K.&author=Browne,+M.P.&publication_year=2019&journal=Opt.+Eng.&volume=58&pages=051809&doi=10.1117/1.OE.58.5.051809)] [[CrossRef](https://doi.org/10.1117/1.OE.58.5.051809)]
+6.   Lee, K.K.; Kim, J.W.; Ryu, J.H.; Kim, J.O. Ambient light robust gamut mapping for optical see-through displays. Opt. Express**2020**, 28, 15392–15406. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Ambient+light+robust+gamut+mapping+for+optical+see-through+displays&author=Lee,+K.K.&author=Kim,+J.W.&author=Ryu,+J.H.&author=Kim,+J.O.&publication_year=2020&journal=Opt.+Express&volume=28&pages=15392%E2%80%9315406&doi=10.1364/OE.391447&pmid=32403567)] [[CrossRef](https://doi.org/10.1364/OE.391447)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/32403567)]
+7.   Yoon, H.J.; Park, Y.; Jung, H.-Y. Background Scene Dominant Color Based Visibility Enhancement of Head-Up Display. In Proceedings of the 2017 25th International Conference on Systems Engineering (ICSEng), Las Vegas, NV, USA, 22–24 August 2017; pp. 151–156. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Background+Scene+Dominant+Color+Based+Visibility+Enhancement+of+Head-Up+Display&conference=Proceedings+of+the+2017+25th+International+Conference+on+Systems+Engineering+(ICSEng)&author=Yoon,+H.J.&author=Park,+Y.&author=Jung,+H.-Y.&publication_year=2017&pages=151%E2%80%93156)]
+8.   Li, R.; Chen, Y.V.; Zhang, L.; Shen, Z.; Qian, Z.C. Effects of perception of head-up display on the driving safety of experienced and inexperienced drivers. Displays**2020**, 64, 101962. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Effects+of+perception+of+head-up+display+on+the+driving+safety+of+experienced+and+inexperienced+drivers&author=Li,+R.&author=Chen,+Y.V.&author=Zhang,+L.&author=Shen,+Z.&author=Qian,+Z.C.&publication_year=2020&journal=Displays&volume=64&pages=101962&doi=10.1016/j.displa.2020.101962)] [[CrossRef](https://doi.org/10.1016/j.displa.2020.101962)]
+9.   Park, J.; Im, Y. Visual Enhancements for the Driver’s Information Search on Automotive Head-up Display. Int. J. Hum. Comput. Interact.**2021**, 37, 1737–1748. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Visual+Enhancements+for+the+Driver%E2%80%99s+Information+Search+on+Automotive+Head-up+Display&author=Park,+J.&author=Im,+Y.&publication_year=2021&journal=Int.+J.+Hum.+Comput.+Interact.&volume=37&pages=1737%E2%80%931748&doi=10.1080/10447318.2021.1908667)] [[CrossRef](https://doi.org/10.1080/10447318.2021.1908667)]
+10.   Li, S.; Wang, D.; Zhang, W. Effects of Interface Complexity of Head-up Display on Drivers’ Driving Performance and Self-Perception. In Advances in Human Aspects of Transportation: Part II; AHFE International: New York, NY, USA, 2021; p. 165. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Effects+of+Interface+Complexity+of+Head-up+Display+on+Drivers%E2%80%99+Driving+Performance+and+Self-Perception&author=Li,+S.&author=Wang,+D.&author=Zhang,+W.&publication_year=2021&pages=165)]
+11.   Charissis, V.; Larbi, K.F.B.; Lagoo, R.; Wang, S.; Khan, S. Design Principles and User Experience of Automotive Head-Up Display Development. In Proceedings of the 28th International Display Workshops, Virtual, 1 December 2021–24 January 2022. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Design+Principles+and+User+Experience+of+Automotive+Head-Up+Display+Development&conference=Proceedings+of+the+28th+International+Display+Workshops&author=Charissis,+V.&author=Larbi,+K.F.B.&author=Lagoo,+R.&author=Wang,+S.&author=Khan,+S.&publication_year=2021)]
+12.   Wan, J.; Tsimhoni, O. Effects of luminance contrast and font size on dual-plane head-up display legibility (“The Double 007 Rule for HUDs”). J. Soc. Inf. Disp.**2021**, 29, 328–341. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Effects+of+luminance+contrast+and+font+size+on+dual-plane+head-up+display+legibility+(%E2%80%9CThe+Double+007+Rule+for+HUDs%E2%80%9D)&author=Wan,+J.&author=Tsimhoni,+O.&publication_year=2021&journal=J.+Soc.+Inf.+Disp.&volume=29&pages=328%E2%80%93341&doi=10.1002/jsid.1014)] [[CrossRef](https://doi.org/10.1002/jsid.1014)]
+13.   Beck, D.; Jung, J.; Park, J.; Park, W. A Study on User Experience of Automotive HUD Systems: Contexts of Information Use and User-Perceived Design Improvement Points. Int. J. Hum. Comput. Interact.**2019**, 35, 1936–1946. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=A+Study+on+User+Experience+of+Automotive+HUD+Systems:+Contexts+of+Information+Use+and+User-Perceived+Design+Improvement+Points&author=Beck,+D.&author=Jung,+J.&author=Park,+J.&author=Park,+W.&publication_year=2019&journal=Int.+J.+Hum.+Comput.+Interact.&volume=35&pages=1936%E2%80%931946&doi=10.1080/10447318.2019.1587857)] [[CrossRef](https://doi.org/10.1080/10447318.2019.1587857)]
+14.   Cai, W.; Liu, C.; Zhao, X.; Wei, Y. A summary on ergonomics research of the night vision vehicle head-up display. In Proceedings of the 2017 5th International Conference on Frontiers of Manufacturing Science and Measuring Technology (FMSMT 2017), Taiyuan, China, 24–25 June 2017; pp. 696–702. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=A+summary+on+ergonomics+research+of+the+night+vision+vehicle+head-up+display&conference=Proceedings+of+the+2017+5th+International+Conference+on+Frontiers+of+Manufacturing+Science+and+Measuring+Technology+(FMSMT+2017)&author=Cai,+W.&author=Liu,+C.&author=Zhao,+X.&author=Wei,+Y.&publication_year=2017&pages=696%E2%80%93702)]
+15.   Juch, N.D. Automotive Head-Up Displays (HUDs) are Not yet Saving your Life: A Literature Review of the Human-Technology Interaction Challenges of HUDs. Bachelor’s Thesis, Utrecht University, Utrecht, The Netherlands, 2020. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Automotive+Head-Up+Displays+(HUDs)+are+Not+yet+Saving+your+Life:+A+Literature+Review+of+the+Human-Technology+Interaction+Challenges+of+HUDs&author=Juch,+N.D.&publication_year=2020)]
+16.   Liu, H.; Hiraoka, T.; Hirayama, T.; Kim, D. Saliency difference based objective evaluation method for a superimposed screen of the HUD with various background. IFAC Pap.**2019**, 52, 323–328. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Saliency+difference+based+objective+evaluation+method+for+a+superimposed+screen+of+the+HUD+with+various+background&author=Liu,+H.&author=Hiraoka,+T.&author=Hirayama,+T.&author=Kim,+D.&publication_year=2019&journal=IFAC+Pap.&volume=52&pages=323%E2%80%93328&doi=10.1016/j.ifacol.2019.12.073)] [[CrossRef](https://doi.org/10.1016/j.ifacol.2019.12.073)]
+17.   Ohtsuka, S. Head-up display (HUD) requirements posed by aspects of human visual system. In Proceedings of the 2019 IEEE International Conference on Consumer Electronics (ICCE), Las Vegas, NV, USA, 11–13 January 2019; pp. 1–4. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Head-up+display+(HUD)+requirements+posed+by+aspects+of+human+visual+system&conference=Proceedings+of+the+2019+IEEE+International+Conference+on+Consumer+Electronics+(ICCE)&author=Ohtsuka,+S.&publication_year=2019&pages=1%E2%80%934)]
+18.   Currano, R.; Park, S.Y.; Moore, D.J.; Lyons, K.; Sirkin, D. Little Road Driving HUD: Heads-Up Display Complexity Influences Drivers’ Perceptions of Automated Vehicles. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, Yokohama, Japan, 8–13 May 2021; pp. 1–15. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Little+Road+Driving+HUD:+Heads-Up+Display+Complexity+Influences+Drivers%E2%80%99+Perceptions+of+Automated+Vehicles&conference=Proceedings+of+the+2021+CHI+Conference+on+Human+Factors+in+Computing+Systems&author=Currano,+R.&author=Park,+S.Y.&author=Moore,+D.J.&author=Lyons,+K.&author=Sirkin,+D.&publication_year=2021&pages=1%E2%80%9315)]
+19.   Erickson, A.; Kim, K.; Bruder, G.; Welch, G.F. Exploring the Limitations of Environment Lighting on Optical See-Through Head-Mounted Displays. In Proceedings of the Symposium on Spatial User Interaction, Virtual, 30 October–1 November 2020; pp. 1–8. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Exploring+the+Limitations+of+Environment+Lighting+on+Optical+See-Through+Head-Mounted+Displays&conference=Proceedings+of+the+Symposium+on+Spatial+User+Interaction&author=Erickson,+A.&author=Kim,+K.&author=Bruder,+G.&author=Welch,+G.F.&publication_year=2020&pages=1%E2%80%938)]
+20.   Ryu, J.H.; Kim, J.W.; Kim, J.O. Enhanced reduction of color blending by a gamma-based image boosting method for optical see-through displays. Opt. Eng.**2021**, 60, 083102. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Enhanced+reduction+of+color+blending+by+a+gamma-based+image+boosting+method+for+optical+see-through+displays&author=Ryu,+J.H.&author=Kim,+J.W.&author=Kim,+J.O.&publication_year=2021&journal=Opt.+Eng.&volume=60&pages=083102&doi=10.1117/1.OE.60.8.083102)] [[CrossRef](https://doi.org/10.1117/1.OE.60.8.083102)]
+21.   Zhang, L.; Murdoch, M.J.; Bachy, R. Color appearance shift in augmented reality metameric matching. JOSA A**2021**, 38, 701–710. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Color+appearance+shift+in+augmented+reality+metameric+matching&author=Zhang,+L.&author=Murdoch,+M.J.&author=Bachy,+R.&publication_year=2021&journal=JOSA+A&volume=38&pages=701%E2%80%93710&doi=10.1364/JOSAA.420395&pmid=33983275)] [[CrossRef](https://doi.org/10.1364/JOSAA.420395)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/33983275)]
+22.   Hassani, N.; Murdoch, M.J. Investigating color appearance in optical see-through augmented reality. Color Res. Appl.**2019**, 44, 492–507. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Investigating+color+appearance+in+optical+see-through+augmented+reality&author=Hassani,+N.&author=Murdoch,+M.J.&publication_year=2019&journal=Color+Res.+Appl.&volume=44&pages=492%E2%80%93507&doi=10.1002/col.22380)] [[CrossRef](https://doi.org/10.1002/col.22380)]
+23.   Chien, H.-P.; Sun, P.-L. Preferred Background Lighting and Tone Reproduction Curves of See-Through Displays. In Proceedings of the International Display Workshops, Fukuoka, Japan, 7–9 December 2016; p. 177. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Preferred+Background+Lighting+and+Tone+Reproduction+Curves+of+See-Through+Displays&conference=Proceedings+of+the+International+Display+Workshops&author=Chien,+H.-P.&author=Sun,+P.-L.&publication_year=2016&pages=177)]
+24.   Kim, J.S.; Lee, S.W. Study on how to improve visibility of transparent display for augmented reality under various environment conditions. Opt. Express**2020**, 28, 2060–2069. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Study+on+how+to+improve+visibility+of+transparent+display+for+augmented+reality+under+various+environment+conditions&author=Kim,+J.S.&author=Lee,+S.W.&publication_year=2020&journal=Opt.+Express&volume=28&pages=2060%E2%80%932069&doi=10.1364/OE.378489&pmid=32121904)] [[CrossRef](https://doi.org/10.1364/OE.378489)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/32121904)]
+25.   Lee, S.; Ha, H.; Kwak, Y.; Kim, H.; Seo, Y.-j.; Yang, B. Preferred tone curve characteristics of transparent display under various viewing conditions. In Proceedings of the Color Imaging XX: Displaying, Processing, Hardcopy, and Applications, San Francisco, CA, USA, 9–12 February 2015. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Preferred+tone+curve+characteristics+of+transparent+display+under+various+viewing+conditions&conference=Proceedings+of+the+Color+Imaging+XX:+Displaying,+Processing,+Hardcopy,+and+Applications&author=Lee,+S.&author=Ha,+H.&author=Kwak,+Y.&author=Kim,+H.&author=Seo,+Y.-j.&author=Yang,+B.&publication_year=2015)]
+26.   Kim, H.; Seo, Y.J.; Kwak, Y. Transparent effect on the gray scale perception of a transparent OLED display. Opt. Express**2018**, 26, 4075–4084. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Transparent+effect+on+the+gray+scale+perception+of+a+transparent+OLED+display&author=Kim,+H.&author=Seo,+Y.J.&author=Kwak,+Y.&publication_year=2018&journal=Opt.+Express&volume=26&pages=4075%E2%80%934084&doi=10.1364/OE.26.004075&pmid=29475262)] [[CrossRef](https://doi.org/10.1364/OE.26.004075)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/29475262)]
+27.   Huang, H.P.; Wei, M.; Li, H.C.; Ou, L.C. Optimal Text-background Lightness Combination for Enhancing Visual Clarity Using a Head-up Display under Different Surround Conditions. In Proceedings of the Color and Imaging Conference, Virtual, 4–19 November 2020; pp. 210–214. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=Optimal+Text-background+Lightness+Combination+for+Enhancing+Visual+Clarity+Using+a+Head-up+Display+under+Different+Surround+Conditions&conference=Proceedings+of+the+Color+and+Imaging+Conference&author=Huang,+H.P.&author=Wei,+M.&author=Li,+H.C.&author=Ou,+L.C.&publication_year=2020&pages=210%E2%80%93214)]
+28.   Thurstone, L.L. A law of comparative judgment. Psychol. Rev.**1994**, 101, 266. [[Google Scholar](https://scholar.google.com/scholar_lookup?title=A+law+of+comparative+judgment&author=Thurstone,+L.L.&publication_year=1994&journal=Psychol.+Rev.&volume=101&pages=266&doi=10.1037/0033-295X.101.2.266)] [[CrossRef](https://doi.org/10.1037/0033-295X.101.2.266)]
+
+**Figure 1.** Experimental setup: (**a**) simulation of head-up display; (**b**) an example of viewing field (the chin rest is removed for this photograph).
+
+[![Image 3: Applsci 13 06037 g001](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g001.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g001.png)
+
+**Figure 2.** The relative spectral power distribution of the light source (6500 K, 300, 1500, and 9000 lx).
+
+[![Image 4: Applsci 13 06037 g002](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g002.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g002.png)
+
+**Figure 3.** A screenshot of the paired comparison presented on the iPad.
+
+[![Image 5: Applsci 13 06037 g003](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g003.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g003.png)
+
+**Figure 4.** Visual clarity interval scale of the 20 text-background combinations with different age groups under four surround conditions: (**a**) dark; (**b**) 300; (**c**) 1500; and (**d**) 9000 lx.
+
+[![Image 6: Applsci 13 06037 g004a](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g004a.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g004a.png)[![Image 7: Applsci 13 06037 g004b](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g004b.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g004b.png)
+
+**Figure 5.** Visual clarity interval scale of the 20 text-background combinations evaluated by the older observers under dark and 9000 lx surround conditions with positive and negative contrast. The open markers are used to represent positive contrast. (**a**) Dark; (**b**) 6500 K, 9000 lx.
+
+[![Image 8: Applsci 13 06037 g005](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g005.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g005.png)
+
+**Figure 6.** Visual clarity interval scale of the 20 text-background combinations under different surround conditions: (**a**) dark; (**b**) 300; (**c**) 1500; and (**d**) 9000 lx.
+
+[![Image 9: Applsci 13 06037 g006a](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g006a.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g006a.png)[![Image 10: Applsci 13 06037 g006b](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g006b.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g006b.png)
+
+**Figure 7.** Scatter plots of prediction for visual clarity.
+
+[![Image 11: Applsci 13 06037 g007](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g007.png)](https://www.mdpi.com/applsci/applsci-13-06037/article_deploy/html/images/applsci-13-06037-g007.png)
+
+**Table 1.** The colorimetric characteristics of ambient lighting conditions.
+
+| Illuminance (lx) | CCT (K) | CRI Ra | Duv |
+| --- | --- | --- | --- |
+| 303 | 6502 | 95 | 0.0018 |
+| 1506 | 6509 | 95 | 0.0026 |
+| 9025 | 6493 | 95 | 0.0025 |
+
+**Table 2.** The colorimetric characteristics of the five achromatic colors produced on the iPad under different surround conditions.
+
+| Color | Dark | 300 lx | 1500 lx | 9000 lx |
+| --- | --- | --- | --- | --- |
+| Luminance (cd/m 2) | Lightness (L*) | Luminance (cd/m 2) | Lightness (L*) | Luminance (cd/m 2) | Lightness (L*) | Luminance (cd/m 2) | Lightness (L*) |
+| Black | 0.04 | 1.88 | 5.57 | 56.52 | 27.60 | 82.63 | 165 | 96.19 |
+| Dark gray | 0.82 | 25.98 | 6.34 | 59.71 | 28.50 | 83.69 | 165.8 | 96.37 |
+| Medium gray | 3.26 | 50.50 | 8.76 | 68.33 | 30.90 | 86.41 | 168.40 | 96.95 |
+| Light gray | 8.37 | 75.06 | 13.90 | 82.36 | 36.00 | 91.76 | 173.60 | 98.10 |
+| White | 17.30 | 100 | 22.80 | 100 | 44.90 | 100 | 182.40 | 100 |
+
+**Table 3.** Colorimetric characteristics of the five achromatic colors.
+
+| Color | (R, G, B) | Luminance (cd/m 2) | Lightness (L*) | (x, y) |
+| --- | --- | --- | --- | --- |
+| Black | (0, 0, 0) | 0.7 | 1.2 | (0.2649, 0.2604) |
+| Dark gray | (63, 63, 63) | 25.5 | 25.4 | (0.3154, 0.3314) |
+| Medium gray | (120, 118, 119) | 103.2 | 50.0 | (0.3155, 0.3295) |
+| Light gray | (184, 183, 183) | 269.3 | 74.8 | (0.3151, 0.3313) |
+| White | (255, 255, 255) | 560.8 | 100 | (0.3152, 0.3323) |
+
+**Table 4.** Correlation coefficient between different combinations of age groups under each ambient illuminance setting (dark, 300 lx, 1500 lx, and 9000 lx).
+
+| Correlation Coefficient | Dark | 300 lx | 1500 lx | 9000 lx |
+| --- | --- | --- | --- | --- |
+| Middle-Aged | Older | Middle-Aged | Older | Middle-Aged | Older | Middle-Aged | Older |
+| Young | 0.995 | 0.993 | 0.995 | 0.994 | 0.998 | 0.996 | 0.983 | 0.914 |
+| Middle-Aged | - | 0.997 | - | 0.995 | - | 0.998 | - | 0.964 |
+
+**Table 5.** Evaluation metrics for the machine learning model.
+
+|  | r 2 | RMSE | MAE | Pearson’s r |
+| --- | --- | --- | --- | --- |
+| Visual Clarity | 0.988 | 0.111 | 0.084 | 0.994 |
+
+**Disclaimer/Publisher’s Note:** The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+© 2023 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)).
+
+## [](https://doi.org/10.3390/app13106037)Share and Cite
+
+**MDPI and ACS Style**
+
+Huang, H.-P.; Li, H.-C.; Wei, M.; Li, G.-H. Investigation of Text-Background Lightness Combination on Visual Clarity Using a Head-Up Display under Various Surround Conditions and Different Age Groups. _Appl. Sci._**2023**, _13_, 6037. https://doi.org/10.3390/app13106037
+
+**AMA Style**
+
+Huang H-P, Li H-C, Wei M, Li G-H. Investigation of Text-Background Lightness Combination on Visual Clarity Using a Head-Up Display under Various Surround Conditions and Different Age Groups. _Applied Sciences_. 2023; 13(10):6037. https://doi.org/10.3390/app13106037
+
+**Chicago/Turabian Style**
+
+Huang, Hsin-Pou, Hung-Chung Li, Minchen Wei, and Guan-Hong Li. 2023. "Investigation of Text-Background Lightness Combination on Visual Clarity Using a Head-Up Display under Various Surround Conditions and Different Age Groups" _Applied Sciences_ 13, no. 10: 6037. https://doi.org/10.3390/app13106037
+
+**APA Style**
+
+Huang, H.-P., Li, H.-C., Wei, M., & Li, G.-H. (2023). Investigation of Text-Background Lightness Combination on Visual Clarity Using a Head-Up Display under Various Surround Conditions and Different Age Groups. _Applied Sciences_, _13_(10), 6037. https://doi.org/10.3390/app13106037
+
+Note that from the first issue of 2016, this journal uses article numbers instead of page numbers. See further details [here](https://www.mdpi.com/about/announcements/784).
+
+## [](https://doi.org/10.3390/app13106037)Article Metrics
+
+### Citations
+
+Crossref
+
+Scopus
+
+Web of Science
+
+Google Scholar
+
+### Article Access Statistics
+
+For more information on the journal statistics, click [here](https://www.mdpi.com/journal/applsci/stats).
+
+Multiple requests from the same IP address are counted as one view.

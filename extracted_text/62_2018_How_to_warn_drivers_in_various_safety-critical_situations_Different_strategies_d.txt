@@ -1,0 +1,1898 @@
+--- Page 1 ---
+Contents lists available at ScienceDirect
+Accident Analysis and Prevention
+journal homepage: www.elsevier.com/locate/aap
+How to warn drivers in various safety-critical situations – Diﬀerent
+strategies, diﬀerent reactions
+Susann Winkler⁎, Juela Kazazi, Mark Vollrath
+Technische Universität Braunschweig, Department of Engineering and Traﬃc Psychology, Gaußstraße 23, 38106 Braunschweig, Germany
+A R T I C L E I N F O
+Keywords:
+In-vehicle collision avoidance assistance
+Warning strategy/speciﬁcity
+Head-up display (HUD) visualization
+Hazardous urban incidents
+Driving simulator experiment
+Driver behavior/subjective acceptance
+evaluation
+A B S T R A C T
+Technological advances allow supporting drivers in a multitude of occasions, ranging from comfort enhancement
+to collision avoidance, for example through driver warnings, which are especially crucial for traﬃc safety. This
+psychological driving simulator experiment investigated how to warn drivers visually in order to prevent ac-
+cidents in various safety-critical situations. Collision frequencies, driving behavior and subjective evaluations of
+situation criticality, warning understandability and helpfulness of sixty drivers were measured in two trials of
+eight scenarios each (within-subjects factors). The warning type in the head-up display (HUD) varied (between-
+subjects) in its strategy (attention-/reaction-oriented) and speciﬁcity (generic/speciﬁc) over four warning groups
+and a control group without a warning. The results show that the scenarios diﬀered in their situation criticality
+and drivers adapted their reactions accordingly, which underlines the importance of testing driver assistance
+systems in diverse scenarios. Besides some learning eﬀects over the trials, all warned drivers showed faster and
+stronger brake reactions. Some warning concepts were understood better than others, but all were accepted.
+Generic warnings were eﬀective, yet the warning strategy should adapt to situation requirements and/or driver
+behavior. A stop symbol as reaction generic warning is recommendable for diverse kinds of use cases, leading to
+fast and strong reactions. However, for rather moderate driver reactions an attention generic approach with a
+caution symbol might be more suitable. Further research should investigate multi-stage warnings with adaptive
+strategies for application to various situations including other modalities and false alarms.
+1. Introduction
+Advanced driver assistance systems (ADAS) such as warnings and
+interventions, lateral and longitudinal control or action recommenda-
+tions can contribute to traﬃc safety and driving comfort, as many
+studies have shown (e.g., Bengler et al., 2018; Cicchino, 2017;
+Hanowski et al., 1999; Hofauer et al., 2018; Jones and Hansman, 2007;
+Lee et al., 2002b; Rittger and Götze, 2018; van Driel et al., 2007). Yet,
+many ADAS are tested in very speciﬁc use cases. This makes them
+perfect in these situations, but their adaptation to other use cases is
+limited. Especially in urban areas the variety of situations drivers are
+confronted with increases exponentially. Therefore the human-machine
+interface (HMI) of ADAS should be designed in a way that allows dri-
+vers to understand and handle all kinds of situations successfully
+without further strain due to understanding, prioritizing or diﬀer-
+entiating a number of ADAS at the same time. Thus, integrating all
+ADAS into one HMI solution which adapts its output according to si-
+tuation and driver needs seems ideal. Such an “HMI tool kit” (Drüke
+et al., 2018) or so called “information/warning/intervention strategies”
+(Hesse et al., 2011) were for instance focused in research projects like
+“UR:BAN” (Bengler et al., 2018) or “interactIVe” (Alessandretti
+et al.,2014).
+As part of an integrative HMI, collision warnings would be of
+highest priority, overlaying all other ADAS, in case of a safety-critical
+situation (hazard on collision course with the drivers’ vehicle). They
+support drivers’ reactions by alerting them to impending hazards in
+order to reduce crash rates and severities. By implementing a con-
+tinuum of diﬀerent urgency levels for accident prevention or mitigation
+(multi-stage warning approach), drivers are always provided with ex-
+actly the support they need in the respective safety-critical situations
+(see Campbell et al., 2007; Diederichs et al., 2010; Jones and Hansman,
+2007; Naujoks and Neukum, 2014; Werneke et al., 2014; Winkler et al.,
+2016, 2018a, 2018b; Zarife, 2014). Initially, they might receive an
+unintrusive information or early warning about an upcoming situation.
+With increasing criticality of a situation this might escalate to more
+urgent warnings that ask for stronger driver reactions in later stages.
+Finally, the vehicle might even intervene automatically. Designing col-
+lision warnings is therefore a complex and challenging task of high
+https://doi.org/10.1016/j.aap.2018.01.040
+Received 22 September 2017; Received in revised form 13 January 2018; Accepted 30 January 2018
+⁎ Corresponding author.
+E-mail address: susann.winkler@tu-braunschweig.de (S. Winkler).
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+0001-4575/ © 2018 Elsevier Ltd. All rights reserved.
+Please cite this article as: Winkler, S., Accident Analysis and Prevention (2018), https://doi.org/10.1016/j.aap.2018.01.040
+
+--- Page 2 ---
+signiﬁcance.
+Besides technical and environmental factors, like limited time
+frames and hazard recognition (its type, relevance, anticipated move-
+ment and accuracy), user-centered questions such as how to present the
+crucial information to drivers for maximum beneﬁt also merit con-
+sideration. Environments like urban areas with a maximum of traﬃc
+variance are particularly demanding for drivers and car manufacturers
+(for more information on the interaction of complex traﬃc situations
+and driver assistance in urban areas see the underlying research project
+“UR:BAN”; Bengler et al., 2018). Urban areas bear a lot of distracting
+stimuli for drivers, while high traﬃc and information densities restrict
+decision periods to a minimum. All kinds of road users (e.g., pedes-
+trians, motorists and cyclists) interact at various locations (e.g., at in-
+tersections, straight roads or curves) with diﬀerent speeds, creating a
+multitude of potentially safety-critical situations. Hence, the frequent
+occurrence of hazardous situations makes accidents very likely, espe-
+cially due to driver errors like attention misallocation, wrong ex-
+pectations or distraction, tailgating, speeding or rule violations and loss
+of
+vehicle control
+(Bhatia, 2003; Great
+Britain Department for
+Transport, 2015; National Highway Traﬃc Safety Administration,
+2008; Singh, 2015; Summala, 1996).
+As accident analyses of German road traﬃc show (Statistisches
+Bundesamt, 2014), about three quarters of all police-recorded accidents
+since 1991 are allotted to urban areas. They also account for the main
+part of accidents with personal injuries (ca. 69% in 2011, 2012 and
+2013). With increasing urbanization, urban areas and their complex
+situations come more and more to the fore of current research activities,
+even more so as already existing ADAS are mainly designed for situa-
+tions with higher speed limits like rural roads or highways. Thus, it is
+important to analyze the interaction between safety-critical urban si-
+tuations and ADAS like forward collision warnings (FCW).
+However, each situation has its own requirements on how and in
+which time frame it should be handled by the drivers without resulting
+in a collision. So, the question arises which driver reaction is best in a
+variety of situations. Most drivers show brake reactions in safety-critical
+situations, rather than for example steering reactions (evasive man-
+euvers) or a combination of both maneuvers (Powelleit and Vollrath,
+2018), although steering might be better when braking distances are
+insuﬃcient (Moeller and Frings, 2014; Schneider et al., 2015). More-
+over, not all situations are of the same criticality (for further informa-
+tion on hazard perception and characterization see Borowsky and Oron-
+Gilad, 2013 or Crundall et al., 2012). There are cases when reactions
+from mere attention reallocation (to be ready to react) to speed re-
+duction, gas release or even moderate braking might suﬃce to resolve
+safety-critical situations such as in early warning stages (e.g., in case of
+slow-moving traﬃc in some distance, see Winkler et al., 2016). Hence,
+these warnings could also focus on raising or guiding drivers’ attention
+(gradual behavior adjustment) when there is more time before hazards
+are encountered or situations become even critical (e.g., due to early
+object recognition based on car2x communication technology, see
+Naujoks and Totzke, 2014; Tan and Huang, 2006). Such early warnings
+though could raise the drivers’ attention generally or provide more
+details about the hazard (e.g., its type, location or distance) in order to
+direct the drivers’ attention distinctly. However, the best strategy is yet
+unclear.
+Additionally, driver warnings could specify in safety-critical situa-
+tions whereupon drivers should concentrate their attention in earlier
+warning stages (attention speciﬁc) or how to react in more urgent
+warning stages (reaction speciﬁc; see Cao et al., 2010; Lee et al., 1999).
+Would this information be helpful for drivers or too much under time
+pressure? That is to say, diﬀerentiating the alerts and selecting a
+steering reaction instead of a highly automated brake reaction, as for
+example recommended by reaction speciﬁc warnings, might add to
+drivers’ already high mental workload. Should generic driver warnings
+(reaction/attention generic) thus be favored? On the one hand, generic
+warnings facilitate time-saving automatic driver responses (like alerted
+visual scanning or emergency braking) since they convey less in-
+formation. On the other hand, universal warning cues or master alerts
+for diﬀerent kinds of situations might lack important details for the
+understanding of the situation, which could lead to confusion and
+slower reactions (Campbell et al., 2004). Thus, the question of the
+warning speciﬁcity arises. Furthermore, warning strategy and speciﬁ-
+city might interact, aﬀecting the drivers’ acceptance as well as their
+performance (processing and reaction execution; Zarife, 2014). There-
+fore, the overall aim of this paper is to examine which types of driver
+warnings (varied in strategy and speciﬁcity) suit various safety-critical
+situations optimally.
+A driving simulator study of Naujoks and Neukum (2014) in-
+vestigated the speciﬁcity of driver warnings twofold (conﬂict-speciﬁcity:
+indicating hazard type or not; direction-speciﬁcity: indicating hazard
+direction or not) besides their timing. According to them, the speciﬁcity
+rather inﬂuenced the warning usefulness than the driving behavior.
+However, they concentrated more on attention-oriented driver warn-
+ings at an earlier, advisory level. Whereas the present study excluded
+the timing question by adapting the warning onset to the diﬀerent
+safety-critical situations, but extended the speciﬁcity question to reac-
+tion-oriented warnings at later, more urgent stages.
+Similarly, the video-based experiment of Thoma et al. (2009)
+identiﬁed no diﬀerences due to the warning speciﬁcity in the drivers’
+reaction time to safety-critical situations. Contrary to the present ex-
+periment, their participants did not actually drive themselves, but
+merely watched videos in the driving simulator. This enabled the dri-
+vers to pay much more attention on every detail of the scene than when
+actually driving and thus might have facilitated the hazard detection.
+However, in both mentioned studies and another study of similar re-
+sults by Brown et al. (2017) the warning visualization was accompanied
+by an acoustic warning signal. Despite it being unobtrusive, according
+to Naujoks and Neukum (2014), it might still have masked some eﬀects
+of the speciﬁcity of the warning visualizations. Therefore, the warning
+concepts developed in this study used the visual modality exclusively,
+without additional acoustic or haptic warning modalities.
+On the one hand, the visual modality can transfer very complex and
+detailed information (like diﬀerent levels of speciﬁcity). On the other
+hand, drivers are already visually strained by the driving task itself
+(Scott and Gray, 2008; Powelleit and Vollrath, 2013; Rockwell, 1972;
+van der Horst, 2004). Even more load on the visual channel might be
+critical (especially when higher encoding eﬀort is necessary). Drivers’
+glances might linger for too long on the warning display so that actually
+critical objects or situations might go unnoticed until it is too late.
+Besides, drivers might be distracted by secondary tasks, their gaze di-
+rected away from the road or their eyes even closed (as during saccades
+or when sleepy). In these cases a visual warning might not reach dri-
+vers’ awareness so that an auditory alarm might be preferable. How-
+ever, auditory alarms are more annoying, especially when experienced
+frequently (Campbell et al., 2007; Ho and Spence, 2008; ISO, 2005;
+Lerner et al., 1996b; Marshall et al., 2007), as it was the case in the
+present study and is common in real traﬃc with advanced in-vehicle
+driver warnings of multiple stages. For further research on the speci-
+ﬁcity of acoustic warning signals see Cummings et al. (2007); Klein
+et al. (1992); Spence and Driver (1994); Xiang et al. (2016) or of visual
+and acoustic warnings in comparison see Schwarz and Fastenmeier
+(2017).
+Consequently, it might be best to integrate the advantages of every
+modality in a multi-modal warning approach (see Biondi et al., 2017;
+Cao et al., 2010; Kramer et al., 2007; Liu et al., 1999). Varied combi-
+nations of modalities are thinkable for diﬀerent warning stages. How-
+ever, the scope of this study was to primarily investigate the design of
+visual alerts. To be beneﬁcial, warning visualizations should be rather
+simple, intuitive and easy to understand (Kiefer et al., 1999; Lerner
+et al., 1996a, 1996b) since an increase in the cognitive demand of
+warnings increases drivers’ reaction and detection time (Wolﬀsohn
+et al., 1998). Laughery (2006), Wogalter et al. (2002) and Young (1991)
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+2
+
+--- Page 3 ---
+recommended using color and icons or pictorials to augment the sal-
+ience and thus the noticeability of visual warnings. Moreover, familiar
+traﬃc signs can help drivers to process, understand and in the end
+handle safety-critical situations better (Alves et al., 2013; George et al.,
+2012; Ng and Chan, 2008; Payre and Diels, 2018; Plavsic et al., 2009).
+Therefore, colored traﬃc signs visualized all driver warning concepts.
+Their red color and particular shape were to alert drivers additionally,
+as suggested by Bhatia (2003), Campbell et al. (2004) and Young
+(1991).
+Where to locate in-vehicle driver assistances is also discussed in a lot
+of studies (e.g., Benmimoun et al., 2007; Lee et al., 1999; Tsimhoni
+et al., 2001; Wittmann et al., 2006; Yoo et al., 1999). This study used a
+head-up display (HUD) to visualize all warning symbols. In contrast to
+an instrument panel display or other so called head-down displays
+(HDD), a HUD maintains the drivers’ gaze directed towards the road,
+even when perceiving warnings, as they are projected into the wind-
+shield right above the engine hood and overlap with the road reality in
+their ﬁeld of view (see Hanowski et al., 1999; Horrey et al., 2003; Lee
+et al., 1999; Luoma and Rämä, 2002). This renders drivers more likely
+to see an external event needing their immediate attention, such as a
+vehicle in their path (Alves et al., 2013; Tretten et al., 2011, also see
+Wickens and Long, 1994), unless cognitive capture or visual masking
+occur, for example due to visual clutter or contrast interference (Gish
+and Staplin, 1995; Green et al., 2008; Ward and Parkes, 1994). How-
+ever, if not designed user-friendly or integrated into the driving task
+HUDs might also increase drivers’ work load which in turn might
+narrow their attention (also called cognitive, visual or perceptual tun-
+neling), shrink their ﬁeld of view and thus result in impaired peripheral
+detection (see Dirkin, 1983; Gish and Staplin, 1995; Mackworth, 1965;
+Sanders, 1970; Williams, 1985). In order to avoid such issues, the dis-
+played information should be intuitively understandable so it can be
+processed rapidly without distracting or straining the drivers ad-
+ditionally. Since HUDs merely require eye accommodation, but no eye
+or head movements, using them to present collision warnings can re-
+duce drivers’ response time considerably and thus mean signiﬁcant
+safety beneﬁts (Ablaßmeier et al., 2007; Azuma, 1997; Watanabe et al.,
+1999).
+In order to evaluate the diﬀerent warning concepts, situations cre-
+ated to become safety-critical were implemented in the driving simu-
+lator. According to accident analyses, the three most common accident
+types in urban areas are caused by vehicles turning into a road or
+crossing it (26%), moving along in carriageway (21%) and vehicles
+turning oﬀa road (16%), making up almost two thirds of all traﬃc
+accidents on German urban roads in 2013 (Statistisches Bundesamt,
+2014). However, the most fatalities are entailed by vulnerable road
+users crossing the road (27%), which is why these situations are usually
+rated as very critical. Hence, similar constellations as described in the
+accident analyses were realized. Some were newly elaborated. Others
+were used from previous studies (Kazazi et al., 2016; Muhrer and
+Vollrath, 2010; Powelleit and Vollrath, 2018; Werneke and Vollrath,
+2012). For example, Kazazi et al. (2016) developed and analyzed
+safety-critical incidents with respect to how drivers react and how they
+can be supported by systematic collision warnings. In sum, eight sce-
+narios (each including one safety-critical situation) were implemented
+in the present study. This is a far greater number than in most ADAS
+evaluations. Usually only one type of safety-critical situation is re-
+garded (e.g., Ben-Yaacov et al., 2002; Benmimoun et al., 2007;
+Horowitz and Dingus, 1992; Lee et al., 2002b; Werneke and Vollrath,
+2013), which makes general recommendations, for instance on how to
+design warning concepts, rather diﬃcult (if feasible at all). Kramer
+et al. (2007) actually tested a collision avoidance system (yet in HDD
+not HUD) in diﬀerent driving situations, but focused on higher speeds
+without varying the safety-critical object contrary to this study. How-
+ever, situations in the urban context are much more diverse than on
+highways. This diversity was accounted for in the present driving si-
+mulation, which additionally constrained expectancy eﬀects.
+Drivers were exposed to every scenario twice to control for learning
+eﬀects as repeated event exposure can inﬂuence drivers’ brake reactions
+(Aust et al., 2013). Shinar and Schechtman (2002) and Ben-Yaacov
+et al. (2002) also detected learning eﬀects for drivers using headway
+feedback, leading to safer distances over time. Likewise, Koustanaï et al.
+(2012) found that familiarization with a FCW improved drivers’ system
+interaction and reaction time. Hence, similar eﬀects were expected for
+this study. Besides, experiencing the warning concept in the same sce-
+nario twice, allowed drivers to appraise the warning concept more
+thoroughly for the subjective evaluations.
+Summing up, this driving simulator study used eight safety-critical
+situations (within-subjects factor scenario) in repetition (within-subjects
+factor trial) to evaluate diﬀerent warning concepts (between-subjects
+factor warning type) which support drivers in collision avoidance. The
+aim of the study was to explore whether one warning cue can be used
+for diﬀerent kinds of safety-critical situations, as found in the complex
+environment of urban areas. Driving with a warning was to improve the
+driving behavior over no warning being present. It was assumed that
+the warning type would inﬂuence the drivers’ behavior and subjective
+ratings, while its suitability might vary with the scenario.
+2. Method
+2.1. Driver warning
+The basic aim of the examined warning concepts was to support
+drivers in avoiding and mitigating collisions with safety-critical objects.
+They were conveyed visually without additional acoustic or haptic
+signals to eliminate masking the actual eﬀects of the diﬀerent warning
+visualizations. The warnings were presented driver-centered in a si-
+mulated multicolor HUD right above the engine hood, measuring
+maximum 21 x 21 cm (6° visual angle).
+As Table 1 shows, four diﬀerent warning types were developed ac-
+cording to pilot tests within the HMI experts of the research project
+“UR:BAN” (see Winkler et al., 2018b) and literature reviews (see 1
+Introduction; e.g., Laughery, 2006; Laughery and Wogalter, 2006;
+Naujoks and Neukum, 2014; Thoma et al., 2009; Wogalter et al., 2002).
+They were presented to independent groups of subjects. While two of
+them were to elicit an immediate driver reaction, either braking or
+steering, the other two were to direct the drivers’ attention towards the
+safety-critical objects and enable them to react adequately (warning
+strategy: reaction- vs. attention-oriented). It was found that (red)
+warning triangles attract drivers’ attention, but are of a more in-
+formative than activating character compared to other symbols such as
+stop symbols. Thus, warning triangles were used for an attention-or-
+iented strategy and stop symbols for a reaction-oriented strategy. In
+both strategies, warnings could either be generic or speciﬁc, with the
+Table 1
+Implemented warning types as visualized in the head-up display (HUD).
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+3
+
+--- Page 4 ---
+speciﬁc version giving more information to beneﬁt drivers’ response
+selection, for example by displaying the type of hazardous object for
+more deﬁnite attention allocation (attention speciﬁc) or the kind of
+required reaction for more successful collision avoidance (reaction
+speciﬁc).
+According to that, the reaction speciﬁc (RS) warning advised drivers
+to stop (via a stop sign) or to swerve around the safety-critical object
+(via a “steer symbol”, see Table 1) when an evasive maneuver was
+possible (as indicated in Table 2). The reaction generic (RG) warning
+used a stop sign in all safety-critical situations. While the attention
+generic (AG) warning displayed a red warning triangle with an ex-
+clamation mark (caution sign), the speciﬁc version (AS) depicted the
+relevant safety-critical object within a warning triangle (pedestrian,
+bicyclist, lead vehicle or obstacle, see Table 1). In order to examine the
+overall eﬀect of the diﬀerent warning types, a control group without any
+warning was included as a baseline. For further aspects of the experi-
+mental design, see Table 3.
+In general, it was diﬃcult to agree on reaction-oriented symbols.
+For example, a normal arrow traﬃc sign (mostly white on blue in
+Germany) as “steer symbol” was considered not reaction-prompting
+enough. Therefore, it was combined with a red-striped traﬃc cone to
+display an actual obstacle that has to be avoided like in a slalom course.
+Additionally,
+developing
+a
+completely
+generic
+reaction-oriented
+warning symbol (not speaking of other generic non-symbolic options
+Table 2
+Textual and pictorial depiction of the eight scenarios with the type of the safety-critical object, the location of its encounter and the warning onset.
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+4
+
+--- Page 5 ---
+like LED bars) was challenging, which is why the stop symbol is em-
+ployed in the reaction generic and speciﬁc warning group.
+2.2. Driving simulator and scenarios
+The experiment was conducted in a static medium ﬁdelity driving
+simulator of the Technische Universität Braunschweig (see Fig. 1). It
+comprises a seat box with typical car interiors like car seats, a steering
+wheel with force feedback, accelerator and brake pedals as well as three
+LCD screens serving as rear-view mirrors. Surrounding the seat box at
+about 2.1 m distance from the driver’s seat are three screens (ahead:
+1.85 m x 2.10 m, left and right: 1.85 m x 2.20 m), onto which three
+beamers (1400 × 1050 px resolution) project the virtual scenery, cre-
+ated by the driving simulation software SILAB (from WIVW, Krüger
+et al., 2005; see www.wivw.de). Thus, the drivers are provided with a
+180° ﬁeld of view. Complementing the rather realistic driving im-
+pression comparable to sitting in a real car, acoustical simulations of
+traﬃc sounds like wind and engine noises complete the driving simu-
+lation. Drivers had full lateral and longitudinal control over the vehicle.
+The diﬀerent critical situations were embedded into an urban area
+with a speed limit of 50 km/h. The main part of the track was more or
+less straight, so as to reduce the risk of simulation sickness. Left or right
+turns were indicated by a voice output and an arrow near the speed-
+ometer in the instrument panel. Altogether eight scenarios were im-
+plemented, each containing a safety-critical object. The scenarios dif-
+fered by the object type (pedestrian, bicyclist, lead vehicle or hay bale),
+its behavior dynamics ((crossing) direction and distance) and the lo-
+cation of the encounter (intersection, straight road, curve or hill). Some
+scenarios were adopted from previous studies (Kazazi et al., 2016;
+Muhrer and Vollrath, 2010; Powelleit and Vollrath, 2018; Werneke and
+Vollrath, 2012). Others were newly created according to accident
+analyses (e.g., Great Britain Department for Transport, 2015; National
+Highway Traﬃc Safety Administration, 2008; New Zealand Transport
+Agency, 2014; Statistisches Bundesamt, 2014). Between the scenarios
+drivers went mostly straight in normal urban traﬃc without further
+critical incidents. Table 2 gives an overview of the eight scenarios
+(whereby the vehicle of the participant is referred to as “ego vehicle”).
+It indicates if the situation preferred an evasive maneuver by the dri-
+vers, denoting in which scenario the reaction speciﬁc warning dis-
+played the “steer symbol”. Even though a steering reaction might be
+more advantageous in some critical situations, it is hard to evoke them
+in drivers (see also Powelleit and Vollrath, 2018). Most drivers rather
+brake upon potential hazards (Adams, 1994; Malaterre et al., 1988).
+Nevertheless, this study included scenarios that welcomed evasive
+maneuvers in order to test the speciﬁcity of the reaction-oriented
+strategy.
+Table 2 also speciﬁes when the warnings were activated. The trig-
+gering of the safety-critical object and the warnings was chosen due to
+pilot studies and based upon the ego vehicle crossing speciﬁed land-
+marks. Due to technical constraints, the complexity and the diversity of
+the scenarios, time-to-collision thresholds could not be used in this
+study, but hopefully in future studies. The activation of the safety-cri-
+tical objects (e.g., pedestrian moving, lead vehicle braking etc.) was to
+result in critical situations and thus create a need for warnings in the
+ﬁrst place. The warnings should then help drivers to react adequately in
+order to avoid collisions with a safety-critical object or to keep situa-
+tions from becoming really critical. In order to apply the warning
+concepts to a wide variety of situations, the eight scenarios varied with
+regard to the severity of the situation. For example, scenario PI asked
+drivers for a more immediate de-escalation reaction than scenario OH.
+In general, the scenarios bearing higher risks of fatalities and being
+more time-critical were expected to be of a comparatively high situa-
+tion criticality. However, a rather explorative approach was followed in
+this matter. Achieving similar levels of criticality within a scenario for
+every participant was a challenge in this experiment, as the driver be-
+havior could not be completely controlled. This is especially relevant
+right before the hazard activation. For example, drivers naturally keep
+individual safety-distances to lead vehicles during following, so that a
+sudden braking of a lead vehicle can have varied impacts and thus can
+result in situations of diverse criticality. Even synchronizing the lead
+vehicle’s speed entirely to the ego vehicle’s in pretests did not solve this
+problem. Drivers only decelerated more and more, eventually being
+unnaturally slow. Hence, this knowingly accepted random within-sub-
+jects variation has to be respected when interpreting the results.
+Table 3
+Experimental plan of the within-subjects factors trial (2) and scenario (8), and the between-subjects factor warning type (5).
+Fig. 1. Picture of the static medium ﬁdelity driving simulator.
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+5
+
+--- Page 6 ---
+2.3. Experimental design
+The experiment followed a mixed design with three independent
+variables (see Table 3). In order to examine the eﬀects of the four dif-
+ferent warning types in comparison to a control group (see Table 1), a
+between-subjects design was used for the independent variable warning
+type (5). Thus, all drivers experienced the same kind of warning as as-
+signed to their group (or none in the control group) in every one of the
+eight scenarios (within-subjects factor scenario (8), see Table 2). Each
+scenario was driven twice by every driver (within-subjects factor trial
+(2): T1 and T2). So the drivers encountered critical events sixteen times
+in total. The order of the eight scenarios was randomized to control for
+time eﬀects. According to the warning type the ﬁve driver groups are
+described as no warning (C), reaction-oriented generic (RG), reaction-
+oriented speciﬁc (RS), attention-oriented generic (AG), attention-or-
+iented speciﬁc (AS, see Tables 1 and 3). As for the RS warning, drivers
+received a stop sign in the scenarios PI, BI, BT and OH, but a “steer
+symbol” in the scenarios PS, LI, LS and OC as steering around the safety-
+critical object was deemed more appropriate. The AS warning triangle
+depicted a pedestrian in PI and PS, a bicyclist in BI and BT, a car in LI
+and LS or a traﬃc cone in OC and OH to represent the relevant safety-
+critical object depending on the scenario (see Table 3).
+In order to describe the driver reactions to the warnings, the entire
+driving behavior (e.g., position, speed, pedal and steering wheel ac-
+tivity) was logged at a frequency of 60 Hz by the simulation software
+SILAB (from WIVW; Krüger et al., 2005) of the driving simulator. Three
+of such objective parameters were investigated in this paper (see
+Table 4). With the major aim of the warnings to increase the traﬃc
+safety, the number of collisions (later transformed into percentages),
+the brake reaction time and the maximal applied brake force (brake
+maximum) were analyzed. Contrary to plan, the steering behavior
+could not be examined as drivers hardly showed any steering reactions
+(see 4 Discussion). Moreover, gaze behavior data was recorded via
+Dikablis eye tracking glasses and the according software from Ergo-
+neers (Ergoneers, 2009; see www.ergoneers.com) in order to see what
+drivers ﬁxate when, in which order and for how long (e.g., the road, the
+hazard or the warning). With a view to investigate how the warnings
+supported directing the driver’s attention, the gaze behavior was eval-
+uated with the automated software (D-Lab). However, since the HUD
+often overlaid the safety-critical object in the drivers’ ﬁeld of view and
+even manual evaluation proved to be on the verge of speculation in
+many cases (especially with bigger surface hazards), further analyses of
+the gaze behavior were refrained from for now. Nevertheless, some
+results for the most critical scenario PS (pedestrian crossing a straight
+road) can be found in Winkler et al. (2015).
+In order to measure the acceptance of the warning concepts by the
+drivers, subjective evaluations were conducted, including questions on
+how well the drivers understood the meaning of the warnings and how
+helpful the warnings were (see Table 4). Additionally, drivers rated the
+situations in order to examine to what extent the scenarios diﬀered in
+their criticality (manipulation check). All three subjective ratings fol-
+lowed a two-stage procedure. Drivers ﬁrst chose one out of ﬁve labeled
+categories and then reﬁned their rating by selecting one out of three
+subcategories (-, 0, +) on the 15-point rating scale (see Fig. 2; Heller,
+1982). This rating was then transformed into numbers from 1 to 15
+(“very low” to “very high”). Afterwards a brief interview veriﬁed the
+understanding of the warnings’ meanings.
+2.4. Participants
+Out of sixty-six drivers recruited through ﬂyers, mailing lists and an
+existing pool of simulator drivers, six had to be excluded due to simulation
+sickness in the simulator training required for participation, resulting in a
+total of sixty drivers (27 female, 33 male, M = 23.7 years, SD = 3.7 years)
+completing the test. Their driving experience was on average 5.7 years
+(SD = 3.6 years). Their annual mileage was mainly less than 3000 km
+since a large amount of drivers was university students without a car of
+their own. All participants had normal or corrected-to-normal visual acuity
+and were compensated for successful participation with 12 € or course
+credits (if psychology students).
+2.5. Procedure
+After a welcome, participants were instructed in written form about
+the objectives of the experiment (“investigation of driving and gaze be-
+havior as well as subjective ratings in complex urban situations to derive
+driver assistances”). They provided informed consent by signature and
+ﬁlled in a demographic questionnaire. All participants drove a training
+drive of 15 min to familiarize with the simulator as they would with a
+new car. Then they received two more instructions: (1) indicated that
+critical situations might occur (“You will drive through several urban
+scenarios now, from which critical situations might arise.”) and (2) in-
+troduced the subjective rating procedure. The drivers with warning
+support were additionally instructed that they were assisted by HUD
+collision warnings. The exact design though was not further explained
+to test for intuitive understanding. Then the test drive followed, com-
+prising two ca. 15 min trials of eight scenarios each (T1 and T2), in-
+terrupted only by a short break. After every scenario participants came
+to a short halt (as initiated by a banner on the front screen) to rate three
+subjective items on a touch screen in the center panel at the height of a
+car radio. The experiment concluded with a brief interview to verify the
+actual understanding of the warning symbols. Finally, the drivers were
+thanked and compensated for their participation. The entire experiment
+lasted about one and a half hour.
+2.6. Data analysis
+For the data analysis IBM SPSS Statistics 23 was used. At ﬁrst, the
+subjective ratings of the situation criticality were analyzed by a mixed
+design ANOVA (with post-hoc pairwise comparisons) including the two
+within-subjects factors trial and scenario, and the between-subjects
+factor warning type. This served as manipulation check of whether the
+very low
+rather low
+moderate
+rather high
+very high
+-
+0
++
+-
+0
++
+-
+0
++
+-
+0
++
+-
+0
++
+Fig. 2. Two-stage rating scale by Heller (1982) to measure all subjective vari-
+ables.
+Table 4
+Dependent measures analyzed in this paper.
+Objective variables
+Unit
+Description
+Collision frequency
+%
+Number of times the ego vehicle crashed into the
+safety-critical object on encounter
+Brake reaction time
+s
+Time from warning onset (notional in the control
+group) until the brake pedal is pressed (≥0.2 s,
+including collision incidents)
+Brake maximum
+%
+Maximum pressing of the brake pedal after
+warning onset until the speed is zero or the brake
+pedal is released again (in percent of the sample
+maximum)
+Subjective variables
+Description [1 (very low, -) … 15 (very high, +);
+Heller, 1982]
+Situation criticality
+“How critical was the experienced situation?”
+Warning
+understand-
+ability
+“How understandable was the warning in the
+experienced situation?”
+Warning
+helpfulness
+“How helpful was the warning in the experienced
+situation?”
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+6
+
+--- Page 7 ---
+scenarios actually diﬀered from each other and allowed ordering the
+scenarios in a sensible way. Subsequently, the collision frequency was
+investigated by a binary logistic regression within the framework of
+generalized estimating equations (GEE), in order to analyze possible
+main eﬀects of the three ﬁxed-eﬀect factors trial, scenario and warning
+type. No interaction terms were included in the model (failure to con-
+verge on all criteria). The GEE regarded participants as a random eﬀect
+and applied an exchangeable covariance structure. Compared to a lo-
+gistic regression, the GEE framework allows predicting categorical
+variables (like collision: yes/no) based on repeated-measures data.
+In order to investigate the drivers’ brake behavior, the brake reac-
+tion time and brake maximum were employed. However, in some oc-
+casions decelerating merely by releasing the gas pedal, without actually
+pressing the brake pedal, was a suﬃcient reaction. Hence, in almost
+16% of all safety-critical object encounters the drivers did either not
+initiate a brake reaction or a very late one, so that these data were
+treated as outliers and thus excluded from the data analysis (brake
+reaction time cutoﬀvalue of 2.9 s at a g-level of 3.0). This case occurred
+particularly often in scenario PI, LI and both bicyclist scenarios (see
+Table 5). Other times participants reacted before the warning onset or
+in less than 0.2 s, which was assumed to be the minimum time to brake
+upon the warning presentation. Primarily scenario LI fell into this ca-
+tegory, with half of the data points being lost to these circumstances
+(see Table 5). All of the problematic scenarios featured an intersection.
+That is to say, drivers might have already slowed down in anticipation
+of approaching a complex situation by the time the warning appeared
+or were still driving slowly while crossing the intersection not ne-
+cessitating a (fast) brake reaction. All these cases were excluded from
+the examination of the brake reaction time and brake maximum, re-
+spectively. Overall 77% of all data points were included for both
+parameters (see Table 5). The number of participants (n) included per
+group is hence always given at the bottom of a chart and has to be born
+in mind when interpreting the following results of the brake reaction
+time and brake maximum. Of course, certain scenarios like LI or BT
+could have been excluded from the analysis entirely due to the small
+number of useable data points, but as the eﬀects did not change either
+way, they were further included in favor of a more thorough picture
+over all scenarios.
+Due to the dissimilar numbers of participants in the groups an un-
+balanced model was used for data examination. Therefore, the brake
+reaction time and maximum were analyzed by a linear mixed model
+(based on restricted maximum likelihood (REML) estimations), refer-
+ring to the participants as a random eﬀect. Regarding the two within-
+subjects factors trial and scenario, and the between-subjects factor
+warning type as ﬁxed eﬀects all possible two-/three-way interactions
+and the three main eﬀects were included in the model. Compound
+symmetry was chosen as the repeated covariance type. Finally, like the
+situation criticality the subjective ratings of the warning under-
+standability and helpfulness (comprising only the four groups receiving
+a warning, thus excluding the control group without a warning) were
+analyzed by two mixed design ANOVAs (with post-hoc pairwise com-
+parisons) including all three factors (trial and scenario as within-subjects
+factors; warning type as between-subjects factor).
+All presented means are given with 95% conﬁdence intervals (CI) as
+margins of error. If sphericity was violated, the Greenhouse-Geisser
+corrected degrees of freedom were used. For signiﬁcant results of the
+ANOVA and the GEE, η² or r respectively, are given as measures of the
+eﬀect size. A signiﬁcance level of p ≤.05 was adopted in all statistical
+tests. All post-hoc pairwise comparisons were Bonferroni corrected.
+Finally, the results of all dependent measures are accumulated in a
+descriptive summary to give an overview of the warning type diﬀerences
+over all scenarios.
+3. Results
+3.1. Subjective ratings of the scenarios (situation criticality)
+All results of the 2 × 8 × 5 mixed ANOVA of the subjectively rated
+situation criticality of each scenario for both within-subjects factors trial
+and scenario, and the between-subjects factor warning type are reported
+in Table 6. The analysis showed a signiﬁcant interaction between the
+two factors scenario and trial as well as a signiﬁcant main eﬀect of the
+scenario and a marginally signiﬁcant trial main eﬀect. No further sig-
+niﬁcant main eﬀects or interactions between any factors were found. As
+Fig. 3 shows, scenario PS (pedestrian crossing on straight road) was the
+most critical, being rated very high. It was followed by scenario BI (bi-
+cyclist crossing at left turn) and the ﬁrst trial of scenario PI (pedestrian
+crossing at left turn), both being rated rather high in situation criticality.
+Scenarios of moderate criticality were the second trial of PI, the sce-
+narios BT (bicyclist crossing after right turn), LI (lead vehicle stopping
+at intersection) and OH (obstacle behind a hill) as well as the second
+trial of LS (lead vehicle braking on straight road). Of rather low criti-
+cality was the ﬁrst trial of scenario LS and both trials of scenario OC
+(obstacle blocking road behind curve). The situation criticality changed
+about one scale point over the trials, while the eﬀect direction diﬀered
+with the scenario (see Fig. 3). The results of the multiple comparisons
+for the signiﬁcant factor scenario are displayed in Table A1 in Appendix
+A. All further diagrams order the scenarios according to their described
+situation criticality.
+3.2. Collisions
+The GEE of the collision frequency (including all three main eﬀects
+of the within-subjects factors trial and scenario, and the between-sub-
+jects factor warning type) showed two main eﬀects, for the within-sub-
+jects factors scenario (X²(7) = 118.76, p < .001, r = 0.35) and trial
+(X²(1) = 5.14, p = .023, r = 0.07), but no main eﬀect for the between-
+subjects factor warning type (X²(4) = 5.92, p = .205). Interactions could
+not be analyzed due to statistical constraints (see 2.6 Data analysis).
+Overall, the number of crashes was quite low with about 13%. A total of
+120 collisions at 960 encounters of safety-critical objects was recorded.
+5% less collisions occurred in the second trial compared to the ﬁrst. In
+the most critically rated scenario PS almost half of all event encounters
+resulted in a collision with the pedestrian crossing the straight road.
+The second largest number of collisions, amounting to about a quarter
+of all encounters, occurred in scenario BI (bicyclist crossing at left turn),
+Table 5
+Number of data points perscenario included (valid) and excluded from the brake reaction examination (due to no apparent brake reaction to the warnings (none) or a
+brake reaction time of > 2.9 s or < 0.2 s).
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+7
+
+--- Page 8 ---
+followed by the scenarios PI (pedestrian crossing at left turn) and LI
+(lead vehicle stopping at intersection) with a collision frequency of 12%
+each. No collisions were found in the scenarios BT (bicyclist crossing
+after T-section), OH and OC (obstacle behind hill and curve), and al-
+most none in scenario LS (lead vehicle braking on straight road: 3%).
+These diﬀerences in the collision frequency between the scenarios are
+in line with the above described situation criticality ratings of the dri-
+vers (except for scenario LI).
+3.3. Driving behavior (brake reaction time and brake maximum)
+All results of the linear mixed model analysis of the brake reaction
+time and the brake maximum (including all factorial eﬀects of both
+within-subjects factors trial and scenario, and the between-subjects
+factor warning type) are reported in Table 7. The analysis showed a
+signiﬁcant interaction eﬀect of scenario and warning type as well as
+signiﬁcant main eﬀects of all three factors on the brake reaction time.
+No further interactions became signiﬁcant. Drivers initiated a 0.16 s
+earlier brake reaction in the second trial compared to the ﬁrst trial (T1:
+M = 1.20 s ± 0.05 s, n = 374; T2: M = 1.04 s ± 0.04 s, n = 366). So
+the repeated exposure led to faster driver reactions, but this learning
+eﬀect did not interact with the scenario or the warning type eﬀect. The
+fastest brake reactions across all scenarios were found when a pedes-
+trian crossed a straight road in scenario PS (see Fig. 4), which left the
+least amount of time to react (not accounting for scenario LI – lead
+vehicle stopping at intersection – in which more than half of the drivers
+initiated a brake reaction before the warning onset, see 2.6 Data ana-
+lysis, leading to wide conﬁdence intervals for the small amount of in-
+cluded participants). Scenario PS diﬀered signiﬁcantly from all other
+scenarios (exempt LI) in the shown brake reaction time according to
+post-hoc tests (p≤.001). The results of all post-hoc pairwise compar-
+isons of the brake reaction time and the brake maximum for the
+signiﬁcant factor scenario can be found in Table A1 in Appendix A.
+As Fig. 4 illustrates, warned drivers mostly had faster brake reac-
+tions than drivers without assistance (control: C), reaching signiﬁcance
+in post-hoc pairwise comparisons for the signiﬁcant factor warning type
+(C-RG: p = .001; C-RS: p = .014; C-AG: p = .019; C-AS: p = .007). The
+brake reaction time between the four driver groups who received a
+warning though did not diﬀer signiﬁcantly due to the warning type itself
+in post-hoc tests. Their eﬃcacy and the degree of diﬀerentiation be-
+tween the warning concepts depended on the scenario. As Fig. 4 shows,
+descriptively the attention speciﬁc (AS) and reaction generic (RG)
+warnings often led to the fastest reactions. While the brake reaction
+time over all warning concepts was quite comparable in the most cri-
+tically rated scenario PS, AS warning was more beneﬁcial in very and
+rather critical scenarios like BI and PI, and RG warning more in sce-
+narios of moderate to rather low situation criticality like OH, LS or OC.
+Similar to the brake reaction results, the mixed-model analysis for
+the brake maximum showed a signiﬁcant interaction between the fac-
+tors scenario and warning type. Both factors also led to signiﬁcant main
+eﬀects in the brake maximum, whereas contrary to the brake reaction
+results the factor trial did not (see Table 7). There were no further
+signiﬁcant interactions.
+As Fig. 5 illustrates, drivers’ brake maximum varied widely over the
+warning types, but especially over the scenarios. While some scenarios
+prompted brake maxima within the upper third, other scenarios only
+induced slight braking within the lower third (for results of the multiple
+comparisons between the scenarios see Table A1 in Appendix A). As
+Fig. 5 shows, the RG (reaction generic) warning group mostly reached
+the highest value, aside from scenario LI with the lead vehicle stopping
+at an intersection (highest value from the only two includable data
+points in the control group) and BI (bicyclist crossing at left turn), in
+which the closely following AS (attention speciﬁc) warning group had
+the highest values instead. When comparing the warning types in post-
+hoc tests, only the RG warning diﬀered signiﬁcantly from other warning
+types, namely from the control group and the RS (reaction speciﬁc)
+warning group (RG-C: p = .007; RG-RS: p = .001; see Fig. 5).
+3.4. Subjective ratings of the warnings (understandability and helpfulness)
+All results of the 2 × 8 × 5 mixed ANOVA of the subjectively rated
+warning understandability and helpfulness for the within-subjects fac-
+tors trial and scenario, and the between-subjects factor warning type are
+reported in Table 8. The analysis of the warning understandability
+showed a signiﬁcant interaction eﬀect of the factors scenario and
+warning type. Moreover, each of the three factors itself had a main eﬀect
+on the warning understandability. No further interactions were found.
+Drivers rated the warning concepts more understandable in the
+second trial than in the ﬁrst (T1: M = 9.8 ± 0.4; T2: M = 10.5 ± 0.3),
+but both times the understandability was rather high. As Fig. 6 illus-
+trates, the reaction generic (RG) and the attention speciﬁc (AS) warning
+were understood best in most of the scenarios. Moreover, post-hoc
+Table 6
+ANOVA results for all interaction and main eﬀects of the within-subjects factors
+trial (T) and scenario (S), and the between-subjects factor warning type (W) on
+the subjective ratings of the situation criticality (signiﬁcant p-values in bold).
+Situation criticality
+Eﬀect
+F
+df
+p
+n2
+T
+3.46
+1,55
+0.068
+0.06
+S
+75.58
+5.4,295.6
+< .0001
+0.58
+W
+1.09
+4,55
+0.371
+0.07
+T × S
+2.97
+5.4,295.6
+0.01
+0.05
+T × W
+1.11
+4,55
+0.361
+0.75
+S × W
+0.57
+21.5,295.6
+0.936
+0.04
+T × S × W
+0.87
+21.5,295.6
+0.639
+0.06
+Fig. 3. Mean subjective ratings of the situation criticality (with 95% CI) per trial
+and scenario.
+Table 7
+Linear mixed model results for all interaction and main eﬀects of the within-
+subjects factors trial (T) and scenario (S), and the between-subjects factor
+warning type (W) on the brake reaction time and brake maximum (signiﬁcant p-
+values in bold).
+Brake reaction time
+Brake maximum
+Eﬀect
+F
+df
+p
+F
+df
+p
+T
+23.96
+1,630
+0.068
+0
+1,618
+0.068
+S
+17.8
+7,616
+< .0001
+84.71
+7,611
+< .0001
+W
+4.97
+4,64
+0.371
+4.7
+4,60
+0.371
+T × S
+1.47
+7,615
+0.01
+0.88
+7,611
+0.01
+T × W
+0.47
+4,621
+0.361
+1.6
+4,614
+0.361
+S × W
+1.94
+28,615
+0.936
+2.21
+28,611
+0.936
+T × S × W
+0.95
+27,613
+0.639
+0.47
+27,610
+0.639
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+8
+
+--- Page 9 ---
+pairwise comparisons for the warning type showed that the AS warning
+was understood signiﬁcantly better than the reaction speciﬁc (RS) or
+attention generic (AG) warning (AS-RS and AS-AG: p = .016), while no
+signiﬁcant diﬀerences were found for the RG warning (RG-RS and RG-
+AG: p = .142). Further pairwise comparisons for the factor scenario are
+reported in Table A1 in Appendix A. Mainly scenario LI (lead vehicle
+stopping at intersection) diﬀered signiﬁcantly from the other scenarios.
+Its quite low warning understandability rating though might go along
+with many drivers braking before warning onset and thus not under-
+standing the need for a warning activation in general (as indicated in
+post-hoc interviews).
+Regarding the warning helpfulness there was a signiﬁcant main
+eﬀect of the within-subjects factor scenario and a marginally signiﬁcant
+interaction between the factors trial and scenario. No further main ef-
+fects or interactions were found. Fig. 7 shows that the warning help-
+fulness was averagely rated moderate (8) to rather high (10) in all sce-
+narios, except for scenario LI (lead vehicle stopping at intersection), in
+which the warning helpfulness was the lowest (6, rather low to 7,
+moderate) compared to all other scenarios (LI-PS: p = .054; LI-BI:
+p = .027; LI-PI: p < .001; LI-BT: p < .001; LI-OH: p < .001; LI-LS:
+p = .111; LI-OC: p = .001). This relates to the number of data points
+excluded due to drivers initiating a brake reaction before warning onset
+(being 50%, see 2.6 Data analysis). The scenario main eﬀect might
+hence be strongly correlated to the low helpfulness in scenario LI. As
+can be seen in Fig. 7, except for the two obstacle scenarios (OH and
+OC), the warning helpfulness increased in all scenarios with time. Post-
+hoc driver interviews indicated that the warning in these speciﬁc sce-
+narios was not always necessary as drivers sometimes recognized the
+safety-critical object before the warning was presented.
+3.5. General results
+Table 9 summarizes the results by reporting the mean of every
+measured parameter in each scenario as well as the most and least ef-
+fective warning types. As illustrated, the subjectively rated situation
+criticality was signiﬁcantly aﬀected by the within-subjects factor sce-
+nario, which also interacted with the within-subjects factor trial. All
+scenarios actually diﬀered from each other, allowing ordering them
+according to their situation criticality ratings. As Table 9 shows, sce-
+nario PS clearly bordered the situation criticality rating on the upper
+end (M = 13, very high) and scenario OC on the lower end (M = 6,
+rather low). While most scenarios were rated less critical when experi-
+enced again, this eﬀect was inversed for both bicyclist scenarios (BI and
+BT) and LS (lead vehicle stopping on straight road).
+As can be seen in Table 9, the total crash rate was quite low. It
+decreased signiﬁcantly over time and diﬀered signiﬁcantly with the
+Fig. 4. Mean brake reaction time (with 95% CI) per scenario and warning type (n at the base of each bar).
+Fig. 5. Mean brake maximum (with 95% CI) per scenario and warning type (n at the base of each bar).
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+9
+
+--- Page 10 ---
+factor scenario. The largest number of collisions was found in scenario
+PS (48%), about half as much in scenario BI (27%) and just a fourth of
+that in the scenarios PI and LI each (12%). No collisions were found in
+scenario BT and both obstacle scenarios (OH and OC), while 3% oc-
+curred in LS. The warning type did not aﬀect the collision frequency.
+Nevertheless, Fig. 8 (left) illustrates that descriptively the control group
+(C) was involved in the largest number of collisions (17%) and the
+reaction generic (RG) warning group in the least (8%).
+Besides the between-subjects factor warning type and the within-
+subjects factor scenario interacting signiﬁcantly for the three parameters
+brake reaction time, brake maximum and the subjectively rated
+warning understandability, each of the two factors also had a sig-
+niﬁcant main eﬀect (see Table 9). Thus, there is no clear overall best
+warning type to be identiﬁed as the diﬀerences between the warning
+types varied with the scenarios. However, drivers in the control (C)
+group without warning support almost always showed slower, less
+strong brake reactions than warned drivers (brake reaction time:
+MC = 1.4 s ± 0.1 s; brake maximum: MC = 45% ± 6%). Only the re-
+action speciﬁc (RS) warning group achieved similarly low brake
+maxima (MRS = 46% ± 5%, see Fig. 8, left). As Table 9 and Fig. 8 il-
+lustrate
+descriptively,
+the
+reaction
+generic
+(RG)
+and
+attention
+speciﬁc
+(AS)
+warnings
+led
+to
+the
+fastest
+and
+strongest
+brake
+reactions
+over
+all
+scenarios
+(brake
+reaction:
+MRG
+= 1.03 s ± 0.06 s
+and
+MAS = 1.05 s ± 0.08 s;
+brake
+maximum:
+MRG = 68% ± 4% and MAS = 60 ± 5%), while being understood best
+(both rated rather high, M = 11 ± 0.4). Moreover, there were many
+signiﬁcant pairwise comparisons for the factor scenario in all three
+named parameters (see Table A1 in Appendix A). Scenario LI altogether
+diﬀered clearly from most other scenarios.
+Additionally, the within-subjects factor trial had a signiﬁcant main
+eﬀect on the brake reaction time and the subjectively rated warning
+understandability. Like the collision frequency, the brake reaction time
+decreased in the second trial, whereas the warning understandability
+increased with time. Similar to the situation criticality, the within-
+subjects factors trial and scenario interacted marginally for the sub-
+jectively rated warning helpfulness, with an additional signiﬁcant main
+eﬀect of the factor scenario. It increased towards the second trial in
+almost all scenarios, except for the obstacle scenarios. This might cor-
+relate with the fact that both scenarios were of moderate to rather low
+situation criticality (see Table 9). Additionally, all warnings were
+Table 8
+ANOVA results for all interaction and main eﬀects of the within-subjects factors trial (T) and scenario (S), and the between-subjects factor warning type (W) on the
+warning understandability and helpfulness (signiﬁcant p-values in bold).
+Warning understandability
+Warning helpfulness
+Eﬀect
+F
+df
+p
+r
+F
+df
+p
+r
+T
+14.91
+1,44
+< .0001
+0.25
+2.33
+1,44
+1.34
+0.05
+S
+6.67
+5.0,222.0
+< .0001
+0.13
+5.35
+4.5,197.5
+< .0001
+0.11
+W
+5.32
+3,44
+.003
+0.27
+1.04
+3,44
+.384
+0.07
+T × S
+0.75
+7,308
+.629
+0.02
+2.17
+5.0,219.7
+.058
+0.05
+T × W
+0.53
+3,44
+.665
+0.04
+0.09
+3,44
+.964
+0.01
+S × W
+5.84
+15.1,222.0
+< .0001
+0.29
+1.52
+13.5,197.5
+.110
+0.09
+T × S × W
+0.98
+21,308
+.493
+0.06
+0.81
+15.0,219.7
+.666
+0.05
+Fig. 6. Mean subjective ratings of the warning understandability (with 95% CI) per scenario and warning type.
+Fig. 7. Mean subjective ratings of the warning helpfulness per trial and scenario
+(with 95% CI).
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+10
+
+--- Page 11 ---
+moderately helpful independent of the assigned warning group (see
+Fig. 8, right). A three-way interaction of all three factors was found
+nowhere.
+4. Discussion
+The present driving simulator study investigated how diﬀerent
+concepts of a visual driver warning (warning type) inﬂuence objective
+variables such as collision frequency, brake reaction time and brake
+maximum as well as subjective variables like warning understandability
+and helpfulness in repeated trials of eight safety-critical situations
+(scenario). The aim of these driver warnings was to support drivers in
+various urban situations that might pose hazards to the traﬃc safety
+(accident prevention and mitigation). For example, it should help dri-
+vers to show a very fast and strong brake reaction in a highly critical
+situation of a pedestrian crossing the ego vehicle’s path out of a sudden.
+All scenarios diﬀered clearly in the drivers’ ratings of the situation
+criticality (ranging from rather low to very high), requiring diﬀerent
+driver reactions for collision avoidance. Likewise, all other measured
+parameters (quantitative and qualitative) varied due to the factor
+Table 9
+Overview of the signiﬁcant eﬀects of the factors trial (T), scenario (S) and warning type (W) in the measured parameters (with overall means per scenario and
+descriptively most/least eﬀective warning types by order, if warning type was signiﬁcant).
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+C
+RG
+RS
+AG
+AS
+Brake reaction time [s]
+Collision frequency
+Brake maximum
+Brake reaction time
+1
+3
+5
+7
+9
+11
+13
+15
+RG
+RS
+AG
+AS
+Subjective rating
+[1 (very low, -) ... 15 (very high, +)]
+Warning understandability
+Warning helpfulness
+Fig. 8. Objective variables (n at the bottom, left) and subjective variables (right) per warning type (with 95% CI).
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+11
+
+--- Page 12 ---
+scenario (see Table 9). While the safety-critical situation in scenario PS
+(pedestrian crossing straight road) made emergency braking necessary,
+the same quick and strong brake reaction would have been in-
+appropriate in scenario OC (obstacle behind curve), in which a gas
+pedal release or a moderate brake reaction was suﬃcient. Therefore,
+the scenarios established an appropriate framework to investigate the
+diﬀerent strategies and speciﬁcities of the warning concepts (as varied
+by the warning type) and their general eﬀectiveness. However, it should
+be noted that the used scenarios are not a representative sample of
+typical accident-prone urban scenarios, which is why the results cannot
+serve to estimate safety eﬀects of such warning systems in real-world
+traﬃc. Nevertheless, they allow assessing whether certain warning
+systems are able to cover a wide and typical range of safety-critical
+situations requiring diﬀerent driver reactions.
+However, interpretations in scenario LI (lead vehicle stopping at
+intersection) have to be handled with care due to a quite high variance
+in the driving behavior within the scenario (especially right before
+hazard encounter). On the one hand, there were participants driving
+particularly carefully (e.g., with very low speeds and large safety dis-
+tances), so that some situations did not become critical in the ﬁrst place.
+On the other hand, a few drivers drove rather riskily in this scenario
+and reached a criticality and time frame in which the vehicle might take
+over control intervening for instance with automatic emergency
+braking (Muhrer et al., 2012). Nevertheless, such interventions were
+not focused here. The concerned warning concepts still surrendered the
+vehicle control to the drivers as that way false alarms might be more
+forgivable. However, interventions should be included when the pre-
+sent results are integrated in future multi-stage warning systems. Con-
+cluding, scenario LI would have to be adjusted for further evaluations,
+while the other seven scenarios could be well recommended for such
+purposes. Still, the variation within the individual scenarios due to
+naturally diﬀerent driver behavior was a drawback that has to be ac-
+knowledged.
+As expected, drivers signiﬁcantly reacted slightly faster, avoided
+somewhat more collisions and understood the warning concepts a bit
+better with increasing experience over time, whereas the maximal ap-
+plied brake force stayed unchanged over the two trials. However, in
+general the warning concepts seemed to be intuitively understandable
+from the start and did not need familiarization, except for when the
+reaction speciﬁc (RS) warning instead of the stop symbol displayed the
+“steer symbol”, a cone topped by an arrow pointing sideways (for
+evasive maneuvers in the scenarios PS, LI, LS – lead vehicle stopping on
+straight road – and OC). 42% of the drivers in the reaction speciﬁc (RS)
+warning group could not explain the meaning of the “steer symbol”
+with certainty or had wrong associations in post-hoc interviews (such as
+“steer symbol” for static obstacles, stop symbol for moving ones).
+Additionally, the RS warning resulted in rather low brake maxima
+compared to the other warning types. On the one hand, this makes sense
+as it was to elicit steering reactions rather than brake reactions. On the
+other hand, none but one of the drivers in the whole experiment (who
+was not even assigned to the RS warning group) actually showed an
+evasive maneuver, despite it being a valid alternative.
+So the “steer symbol” should be redesigned and have a more action-
+prompting character to evaluate a RS warning approach including
+evasive maneuvers closer. For example, Maag et al. (2015) found more
+promising results with their “steer symbol” (depicting a road with lanes
+and a steering wheel topped with arrows in the HUD). Yet, in a study
+aimed at only evasive maneuvers drivers might have been generally
+more likely to react by steering than they normally would. Other studies
+showed that drivers universally tend to brake rather than steer in
+safety-critical situations (see Adams, 1994; Malaterre et al., 1988).
+Thus, prompting evasive maneuvers seems hard to achieve through
+visual warnings only. Haptic or multimodal signals or even automatic
+vehicle interventions might be better approaches to evasive maneuvers
+in a later warning stage before an imminent collision (Fricke et al.,
+2015; Maag et al., 2015; Schneider et al., 2015). On the other hand, the
+safety-critical situations themselves might have provided insuﬃcient
+cues to induce steering responses. For example, scenario OC (obstacle
+blocking road behind curve) welcomed a steering reaction as there was
+no oncoming traﬃc, but the early warning onset might also have fa-
+cilitated more familiar (or reliable) brake reactions. Besides, as men-
+tioned before it was diﬃcult to ﬁnd generic warning symbols that elicit
+driver reactions, which is why the stop symbol was used to elicit a
+generic reaction in the reaction generic (RG) warning and a brake re-
+action in the reaction speciﬁc (RS) warning. Thus, the stop symbol in
+RG might not entirely be understood as a generic warning, but it was
+used in a generic way as it did not adapt and was displayed throughout
+every scenario.
+Unfortunately, the collision frequency was not inﬂuenced sig-
+niﬁcantly by the visual driver warnings. Descriptively, the reaction
+generic (RG) warning with the stop symbol though led to the least
+amount of collisions, while the control group without a warning had the
+most. In general, the crash rate was quite low, which also did not leave
+much variance to be explained. This could be due to the frequent en-
+counter of hazards in the experiment. On the one hand, this allowed
+evaluating warning concepts in diverse situations (instead of just one
+use case) to further extend its applicability to various kinds of situa-
+tions. On the other hand, this meant that drivers experienced critical
+incidents in a considerably higher frequency than in everyday traﬃc.
+Thus, they were probably more attentive and careful than they would
+normally be or even stressed, which might have aﬀected the results. The
+fact that the study was situated in the laboratory environment of a
+driving simulator instead of in the ﬁeld (as discussed in Lee et al.,
+2002a) might have also contributed to this. Whether a collision occurs
+highly depends on the dynamics of a vehicle (e.g., speed, lateral and
+longitudinal distances, steering angle) which are often not suﬃciently
+represented in simulators. So collision frequencies measured in the si-
+mulator are limited in their external validity. However, the drivers’
+brake behavior is rather comparable to real driving and is thus con-
+sidered a more reliable measure for generalizations to the real world
+(see Boda et al., 2018).
+Moreover, drivers expected safety-critical situations to occur as they
+were instructed to rate the situation criticality. However, it was diﬃcult
+to anticipate (especially in the ﬁrst trial) what the actual safety-critical
+situations might look like and where they might appear as the situations
+were various and randomized in order. Nevertheless, the actual ex-
+perience of collisions might still have inﬂuenced subjective ratings,
+such as concerning the situation criticality. Besides, driving simulator
+studies are quite complex and have to deal with simulation sickness,
+which is why some participants had to be substituted. Yet, the labora-
+tory environment enabled better to control disturbing factors and
+trigger safety-critical events and warnings, especially without actually
+harming anyone. Still, it would be interesting to see whether similar
+eﬀects could be found if the warning concepts were implemented in real
+traﬃc.
+The results further showed that the drivers’ brake reactions and the
+warning understandability (not its helpfulness) were signiﬁcantly in-
+ﬂuenced by the warning type and its interaction with the scenario. All
+warning concepts were eﬀective in reducing the brake reaction time
+signiﬁcantly, despite it also signiﬁcantly decreasing somewhat over
+time. The reaction generic (RG) warning with a stop symbol ad-
+ditionally increased the maximal applied brake force compared to no
+warning. The RG and the attention speciﬁc (AS) warning (with a
+warning triangle depicting the hazard) were rated highest on the
+warning understandability scale (both M = 11, rather high). Beyond
+that, the AS warning was signiﬁcantly better understood than the re-
+action speciﬁc (RS) warning (M = 9, moderate), which alternated be-
+tween a stop and a “steer symbol”, and the attention generic (AG)
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+12
+
+--- Page 13 ---
+warning (M = 10, rather high) with an exclamation mark in a warning
+triangle. Overall, the warning understandability increased signiﬁcantly
+towards the second trial.
+Still, the eﬃcacy of the diﬀerent warning concepts clearly altered
+with the scenario. This is an important implication for the design of
+warnings as well as for the methodology in future research. It proved
+the assumption that common testing of driver assistance systems in a
+limited number or diversity of use cases is insuﬃcient. Diﬀerent driver
+responses were elicited by various combinations of scenarios and
+warnings. So one and the same warning type can lead to varied driving
+behavior and situation criticality ratings depending on the scenario. Yet,
+driver can also adapt their behavior to diﬀerent warnings in the very
+same safety-critical situation. ADAS thus have to be tested in a wider
+manner.
+Other implications concern the warning design. While the reaction
+generic (RG) and attention speciﬁc (AS) warnings often led to one of the
+fastest and strongest brake reactions, AS warning was somewhat better
+in rather critical scenarios and RG warning in lesser critical scenarios,
+respectively. However, the RG warning always led to one of the highest
+brake maxima by drivers in all scenarios (except for the conspicuous
+scenario LI). As both warning types though did not signiﬁcantly diﬀer
+from each other in any measured parameter, either one might be re-
+commended as overall best warning concept. Yet, the AS warning might
+make comparatively greater demands on the quick identiﬁcation of
+hazards (in terms of accuracy and latency) in order to display the
+correct object type within the warning triangle. This is still work in
+progress though. Detecting safety-critical objects, classifying them and
+especially predicting their future behavior, such as whether there is a
+tree swaying in the wind or a pedestrian bending forward in an attempt
+to cross the road, is still a challenge to current technologies and system
+developers (see Cordts et al., 2017; Diederichs et al., 2018; Schmidt and
+Färber, 2009). An incorrectly displayed warning symbol can be quite
+distracting and cause acceptance problems (Abe and Richardson, 2006;
+Horowitz and Dingus, 1992; Naujoks et al., 2016). Since such false
+alarms might be more likely with the AS warning, the RG warning
+might be preferable due to its generic display (especially in time-critical
+situations). In general, false alarms were not part of this study, which
+should be kept in mind regarding the results. Drivers always associated
+an actual hazard to the situations. This limits the ecological validity of
+the study and should thus be included in a next step.
+A lot of drivers also reacted before the warning was triggered or
+drove in a way that hindered some situations from becoming critical in
+the planned way so that the number of data points included per sce-
+nario and warning group vary more or less. This should be taken into
+account for result interpretation. Furthermore, the warning system
+(with its diﬀerent warning strategies and speciﬁcities) should be tested
+with other driver groups like older, experienced or impaired drivers. On
+the one hand, driving related skills like regarding attention allocation,
+information perception, processing and action execution can deterio-
+rate with increasing age and impairments (e.g., Caird et al., 2007;
+Piersma, 2018; Rackoﬀ, 1974; Schlag, 1993; Yan et al., 2007). On the
+other hand, driving experience can improve drivers’ hazard perception
+and thus their crash involvement (Borowsky and Oron-Gilad, 2013;
+Borowsky et al., 2009; Malone and Brünken, 2016; Pradhan et al.,
+2009). Hence, drivers might need diﬀerent support (by warnings) in
+various hazardous situations depending on factors such as age, ﬁtness
+to drive or driving experience.
+Despite the named limitations, the results of the study contribute to
+a wider knowledge of how to design driver warnings and how drivers
+react when confronted with diﬀerent kinds of hazards. As there was a
+positive eﬀect of the developed assistance (warnings displayed in the
+HUD) on the driving behavior (faster and stronger brake reactions), the
+severity of possible collisions could be reduced. The reaction generic
+(RG) stop symbol and the attention speciﬁc (AS) hazard depiction
+within a warning triangle were most eﬀective in eliciting faster and
+stronger driver reactions. Clear diﬀerences between the individual
+warning concepts though could not be found throughout all measured
+parameters. Descriptively, the RG warning led to the least collisions, the
+RG and AS warning to the fastest brake reactions and RG to the
+strongest ones, while both were understood rather well compared to the
+other warning groups. In general, the reaction generic stop symbol
+warning seems to be optimal considering its generic use allows trig-
+gering it even when the type of safety-critical object is not yet clearly
+identiﬁable. However, such an extreme reaction as elicited by the RG
+warning might surprise following traﬃc, since none of the usual cues to
+anticipate such driving behavior like turning indications are present in
+the case of a collision warning. Thus, the following drivers might not be
+ready to intervene abruptly, which is why they might not react in time
+and crash into the previously warned lead vehicle (see Baldock et al.,
+2005; Muhrer and Vollrath, 2010; Najm et al., 1994). Moreover, drivers
+could feel stressed and annoyed by a reaction demand deemed as too
+intrusive regarding a situation of lower criticality. Therefore, a uni-
+versal warning type does not seem feasible.
+It should be considered to implement the ﬁndings of this study into
+a multi-stage warning system, which displays a stop symbol as reaction-
+oriented generic warning in very critical situations (at a late stage), but
+a diﬀerent warning type in less critical situations (at an earlier stage) to
+prevent them from becoming more critical (Werneke et al., 2014;
+Winkler et al., 2016; Winkler et al., 2018a). As in less critical situations
+drivers need to be more attentive and can take more time to react, an
+attention-oriented warning might be useful. Choosing the generic ver-
+sion of the attention-oriented warning strategy (exclamation mark
+within warning triangle) might be preferred as in the less critical si-
+tuations it leads to similar driver reactions than its speciﬁc counterpart,
+but would allow the warning system more ﬂexibility as it can be used
+for many diﬀerent use cases. Furthermore, generic warnings forgive
+errors in object detection and can thus reduce the potential risk of false
+alarms. Since multi-modal warnings might be even more eﬀective to
+warn drivers (see Kramer et al., 2007), especially in very critical si-
+tuations, a further modality could be implemented in a next research
+step. For example, the stop symbol as reaction generic visual warning in
+more critical situations or later warning stages (compared to less cri-
+tical situations or earlier warning stages) could be accompanied by an
+acoustic signal in order to alert drivers stronger to an increased urgency
+of a situation. Besides, this could support drivers in diﬀerentiating
+better between both warning stages and even activate distracted drivers
+suﬃciently, which might be engaged in a secondary task and thus have
+their gaze directed away from the road. In any case combining some of
+the symbols in a multi-stage warning system should be further in-
+vestigated, as well as the case of false alarms or imperfect warnings.
+Acknowledgements
+This research was supported by the German Federal Ministry for
+Economic Aﬀairs and Energy [grant number 19S12009O] on the basis
+of a decision by the German Bundestag and thus part of the project
+initiative
+“UR:BAN”
+(acronym
+for
+“Urban
+Space:
+User-oriented
+Assistance Systems and Network Management”, see www.urban-online.
+org)
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+13
+
+--- Page 14 ---
+Appendix A
+The post-hoc results of the multiple pairwise comparisons within the signiﬁcant factor scenario for the situation criticality, the brake reaction
+time, brake maximum and the warning understandability can be found in Table A1 of Appendix A. Bonferroni-corrected p-values are reported.
+References
+Abe, G., Richardson, J., 2006. Alarm timing, trust and driver expectation for forward
+collision warning systems. Applied Ergonomics 37, 577–586. http://dx.doi.org/10.
+1016/j.apergo.2005.11.001.
+Ablaßmeier, M., Poitschke, T., Wallhoﬀ, F., Bengler, K., Rigoll, G., 2007. Eye Gaze Studies
+Comparing Head-up and Head-down Displays in Vehicles. In: Proceedings of the IEEE
+International Conference on Multimedia and Expo. Beijing, China. pp. 2250–2252.
+Adams, L.D., 1994. Review of the literature on obstacle avoidance maneuvers (Report No.
+UMTRI-94-19).
+Retrieved from. Transportation Research Institute, Ann Arbor, MI,
+USA: University of Michigan. http://deepblue.lib.umich.edu/bitstream/handle/
+2027.42/1068/86649.0001.001.pdf.
+Alessandretti, G., Amditis, A., Metzner, S., Johannson, E., Fahrenkrog, F., 2014.
+Deliverable D1.9 | Final Report of the project interactIVe (accident avoidance by
+active intervention for Intelligent Vehicles).
+Retrieved from. . http://www.
+interactive-ip.eu/index.dhtml/docs/interactIVe_SP1_20140506v1.2-D19-Final_
+Report.pdf.
+Alves, P.R.J.A., Gonçalves, J., Rossetti, R.J.F., Oliveira, E.C., Olaverri-Monreal, C., 2013.
+Forward Collision Warning Systems Using Heads-Up Displays: Testing Usability of
+Two New Metaphors. In: Proceedings of the IEEE Intelligent Vehicles Symposium.
+Gold Coast City, Australia. http://dx.doi.org/10.1109/IVS.2013.6629438. pp.1-6.
+Aust, M.L., Engström, J., Viström, M., 2013. Eﬀects of forward collision warning and
+repeated event exposure on emergency braking. Transportation Research Part F:
+Traﬃc Psychology and Behaviour 18, 34–46. http://dx.doi.org/10.1016/j.trf.2012.
+Table A1
+Multiple pairwise comparison results for the signiﬁcant factor scenario (signiﬁcant p-values in bold).
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+14
+
+--- Page 15 ---
+12.010.
+Azuma, R.T., 1997. A Survey of Augmented Reality. Presence 6 (4), 355–385. http://dx.
+doi.org/10.1162/pres.1997.6.4.355.
+Baldock, M.R.J., Long, A.D., Lindsay, V.L., Mclean, A.J., 2005. Rear-end crashes. CASR
+Report Series – CASR 018.
+Retrieved from. Centre for Automotive Safety Research,
+University of Adelaide, Australia. http://casr.adelaide.edu.au/publications/
+researchreports/CASR018.pdf.
+Ben-Yaacov, A., Maltz, M., Shinar, D., 2002. Eﬀects of an in-vehicle collision avoidance
+warning system on short- and long-term driving performance. Human Factors 44 (2),
+335–342. http://dx.doi.org/10.1518/0018720024497925.
+Bengler, K., Drüke, J., Hoﬀmann, S., Manstetten, D., Neukum, A., 2018. UR:BAN Human
+Factors in Traﬃc. Approaches for Safe, Eﬃcient and Stress-free Urban Traﬃc.
+Springer, Wiesbaden, Germany.
+Benmimoun, A., Chen, J.C., Suzuki, T., 2007. Design and Practical Evaluation of an
+Intersection Assistant in Real World Tests. In: Proceedings of the IEEE Intelligent
+Vehicles Symposium. Istanbul, Turkey. pp. 606-611.
+Bhatia, P., 2003. Vehicle technologies to improve performance and Safety (UCTC Report
+No. 622).
+Retrieved from. University of California Transportation Center, Berkeley,
+CA, USA. http://escholarship.org/uc/item/4zw4m05k.
+Biondi, F., Strayer, D.L., Rossi, R., Gastaldi, M., Mulatti, C., 2017. Advanced driver as-
+sistance systems: using multimodal redundant warnings to enhance road safety.
+Applied Ergonomics 58, 238–244. http://dx.doi.org/10.1016/j.apergo.2016.06.016.
+Boda, C.-N., Dozza, M., Bohman, K., Thalya, P., Larsson, A., Lubbe, N., 2018. Modelling
+how drivers respond to a bicyclist crossing their path at an intersection: How do test
+track and driving simulator compare? Accident Analysis and Prevention 111,
+238–250. http://dx.doi.org/10.1016/j.aap.2017.11.032.
+Borowsky, A., Oron-Gilad, T., 2013. Exploring the eﬀects of driving experience on hazard
+awareness and risk perception via real-time hazard identiﬁcation, hazard classiﬁca-
+tion, and rating tasks. Accident Analysis and Prevention 59, 548–565. http://dx.doi.
+org/10.1016/j.aap.2013.07.008.
+Borowsky, A., Oron-Gilad, T., Parmet, Y., 2009. Age and skill diﬀerences in classifying
+hazardous traﬃc scenes. Transportation Research Part F: Traﬃc Psychology and
+Behaviour 12 (4), 277–287. http://dx.doi.org/10.1016/j.trf.2009.02.001.
+Brown, J., Morgan, J.F., Campbell, J., Hoover, C., Jerome, C., 2017. Validations of
+Integrated Driver Vehicle Interface (DVI) Conﬁgurations. Proceedings of the Human
+Factors and Ergonomics Society Annual Meeting 61 (1), 1431–1435. http://dx.doi.
+org/10.1177/1541931213601843.
+Caird, J.K., Chisholm, S.L., Edwards, C.J., Creaser, J.I., 2007. The eﬀect of yellow light
+onset time on older and younger drivers' perception response time (PRT) and inter-
+section behavior. Transportation Research Part F: Traﬃc Psychology and Behaviour
+10 (5), 383–396. http://dx.doi.org/10.1016/j.trf.2007.03.002.
+Campbell, J.L., Richard, C.M., Brown, J.L., McCallum, M., 2007. Crash Warning System
+Interfaces: Human Factors Insights and Lessons Learned (Report No. DOT HS-810
+697).
+Retrieved from. National Highway Traﬃc Safety Administration (NHTSA),
+Washington, DC, USA. https://www.nhtsa.gov/DOT/NHTSA/NRD/Multimedia/
+PDFs/Crash%20Avoidance/2007/CWS_HF_Insights_Task_5_Final_Rpt.pdf.
+Campbell, J.L., Richman, J.B., Carney, C., Lee, J.D., 2004. In-Vehicle Display Icons and
+Other Information Elements. Volume I: Guidelines (Report No. FHWA-RD-03-065).
+Retrieved from. Federal Highway Administration (FHWA), Georgetown Pike McLean,
+VA, USA. http://www.fhwa.dot.gov/publications/research/safety/03065/03065.
+pdf.
+Cao, Y., Mahr, A., Castronovo, S., Theune, M., Stahl, C., Müller, C.A., 2010. Local danger
+warnings for drivers: the eﬀect of modality and level of assistance on driver reaction.
+In: Proceedings of the ACM International Conference on Intelligent User Interfaces
+(IUI). Hong Kong, China. pp. 239–248. http://dx.doi.org/10.1145/1719970.
+1720004.
+Cicchino, J.B., 2017. Eﬀectiveness of forward collision warning and autonomous emer-
+gency braking systems in reducing front-to-rear crash rates. Accident Analysis and
+Prevention 99, 142–152. http://dx.doi.org/10.1016/j.aap.2016.11.009.
+Cordts, M., Rehfeld, T., Schneider, L., Pfeiﬀer, D., Enzweiler, M., Roth, S., Pollefeys, M.,
+Franke, U., 2017. The Stixel World: A medium-level representation of traﬃc scenes.
+Image and Vision Computing 68, 40–52.
+Crundall, D., Chapman, P., Trawley, S., Collins, L., van Loon, E., Andrews, B., Underwood,
+G., 2012. Some hazards are more attractive than others: Drivers of varying experience
+respond diﬀerently to diﬀerent types of hazard. Accident Analysis and Prevention 45,
+600–609. http://dx.doi.org/10.1016/j.aap.2011.09.049.
+Cummings, M.L., Kilgore, R.M., Wang, E., Tijerna, L., Kochhar, D.S., 2007. Eﬀects of
+Single Versus Multiple Warnings on Driver Performance. Human Factors 49 (6),
+1097–1106. http://dx.doi.org/10.1518/001872007X249956.
+Diederichs, F., Marberger, C., Hinder, V., 2010. Iterative design and assessment of an
+audio visual warning concept for Car2x communication systems. In: Proceedings of
+the ITS World Congress on Intelligent Transportation Systems. Busan, Korea.
+Diederichs, F., Brouwer, N., Klöden, H., Zahn, P., Schmitz, B., 2018. Application of a
+Driver Intention Recognition Algorithm on a Pedestrian Intention Recognition and
+Collision Avoidance System. In: Bengler, K., Drüke, J., Hoﬀmann, S., Manstetten, D.,
+Neukum, A. (Eds.), UR:BAN Human Factors in Traﬃc. Approaches for Safe, Eﬃcient
+and Stress-free Urban Traﬃc. Springer, Wiesbaden, Germany pp. 267-286.
+Dirkin, G.R., 1983. Cognitive tunnelling-use of visual information under stress. Perceptual
+and Motor Skills 56, 191–198.
+Drüke, J., Semmler, C., Bendewald, L., 2018. The “HMI tool kit” as a Strategy for the
+Systematic Derivation of User-Oriented HMI Concepts of Driver Assistance Systems in
+Urban Areas. In: Bengler, K., Drüke, J., Hoﬀmann, S., Manstetten, D., Neukum, A.
+(Eds.), UR:BAN Human Factors in Traﬃc. Approaches for Safe, Eﬃcient and Stress-
+free Urban Traﬃc. Springer, Wiesbaden, Germany. http://dx.doi.org/10.1007/978-
+3-658-15418-9_4. pp. 53-74.
+Ergoneers, 2009. Dikablis eye tracking system. Ergoneers, Manching, Germany.
+Fricke, N., Griesche, S., Schieben, A., Hesse, T., Baumann, M., 2015. Driver behavior
+following an automatic steering intervention. Accident Analysis and Prevention 83,
+190–196. http://dx.doi.org/10.1016/j.aap.2015.07.018.
+George, P., Thouvenin, I., Frémont, V., Cherfaoui, V., 2012. DAARIA: Driver assistance by
+augmented reality for intelligent automobile. In: Proceedings of the IEEE Intelligent
+Vehicles Symposium. Alcala de Henares, Spain. pp. 1043–1048.
+Gish, K.W., Staplin, L., 1995. Human Factors Aspects of Using Head Up Displays in
+Automobiles: A Review of the Literature (Report No. DOT HS 808 320).
+Retrieved
+from. National Highway Traﬃc Safety Administration (NHTSA), Washington, DC,
+USA. www.mvs.net/pdf/Human_Factors_of_HUDs.pdf.
+Great Britain Department for Transport, 2015. Reported Road Casualties Great Britain:
+2014 Annual Report. Retrieved from. . https://www.gov.uk/government/statistics/
+reported-road-casualties-great-britain-annual-report-2014.
+Green, P., Sullivan, J., Tsimhoni, O., Oberholtzer, J., Buonarosa, M.L., Devonshire, J.,
+Schweitzer, J., Baragar, E., Sayer, J., 2008. Integrated Vehicle-Based Safety Systems
+(IVBSS) - Human Factors and Driver-Vehicle Interface (DVI) (Report No. DOT HS 810
+905).
+Retrieved from. National Highway Traﬃc Safety Administration (NHTSA),
+Washington, DC, USA. https://crashstats.nhtsa.dot.gov/Api/Public/
+ViewPublication/811059.
+Hanowski, R.J., Dingus, T.A., Gallagher, J.P., Kieliszewski, C.A., Neale, V.L., 1999. Driver
+response to in-vehicle warnings. Transportation Human Factors 1 (1), 91–106.
+http://dx.doi.org/10.1207/sthf0101_10.
+Heller, O., 1982. Theorie und Praxis des Verfahrens der Kategorienunterteilung (KU). In:
+Heller, O. (Ed.), Forschungsbericht 1981. Psychologisches Institut der Universität
+Würzburg, Würzburg, Germany pp. 1-15.
+Hesse, T., Engström, J., Johansson, E., Veralda, G., Brockmann, M., Rambaldini, A.,
+Fricke, N., Flemisch, F., Köster, F., Kanstrup, L., 2011. Towards User-Centred
+Development of Integrated Information, Warning, and Intervention Strategies for
+Multiple ADAS in the EU Project interactive. In: Stephanidis, C. (Ed.), Universal
+Access in Human-Computer-Interaction. Design for All and eInclusion. Springer,
+Berlin, Heidelberg, Germany pp. 280–289.
+Ho, C., Spence, C., 2008. The multisensory driver: Implications for ergonomic car inter-
+face design. Human factors in road and rail transport. Ashgate, Aldershot, England &
+Burlington, VT, USA.
+Hofauer, S., Michel, B., Weise, S., Karmann, A.J., Diermeyer, F., Stephan, A., Drüke, J.,
+Semmler, C., Bendewald, L., 2018. HMI Strategy – Lateral and Longitudinal Control.
+In: Bengler, K., Drüke, J., Hoﬀmann, S., Manstetten, D., Neukum, A. (Eds.), UR:BAN
+Human Factors in Traﬃc. Approaches for Safe, Eﬃcient and Stress-free Urban Traﬃc.
+Springer, Wiesbaden, Germany. http://dx.doi.org/10.1007/978-3-658-15418-9_6.
+pp. 105–118.
+Horowitz, A.D., Dingus, T.A., 1992. Warning signal design: a key human factors issue in
+an in-vehicle front-to-rear-end collision warning system. Proceedings of the Human
+Factors Society Annual Meeting. Human Factors and Ergonomics Society, Santa
+Monica, CA, USA pp. 1011-1013.
+Horrey, W.J., Wickens, C.D., Alexander, A.L., 2003. The eﬀects of head-up display clutter
+and in-vehicle display separation on concurrent driving performance. Proceedings of
+the Human Factors and Ergonomics Society Annual Meeting 47 (16), 1880–1884.
+http://dx.doi.org/10.1177/154193120304701610.
+ISO, 2005. Road vehicles – Ergonomic aspects of in-vehicle presentation for transport
+information and control systems – warnings (Technical Report No. ISO/TR 16352).
+ISO, Geneva, Switzerland.
+Jones, E.M., Hansman, R.J., 2007. Approaches to Enhance Driver Situational Assessment
+Aids (Report No. ICAT-2007-3).
+Retrieved from. . http://hdl.handle.net/1721.1/
+38869.
+Kazazi, J., Winkler, S., Vollrath, M., 2016. The inﬂuence of attention allocation and age
+on intersection accidents. Transportation Research Part F: Psychology and Behaviour
+43, 1–14. http://dx.doi.org/10.1016/j.trf.2016.09.010.
+Kiefer, R., LeBlanc, D., Palmer, M., Salinger, J., Deering, R., Shulman, M., 1999.
+Development and validation of functional deﬁnitions and evaluation procedures for
+collision warning/avoidance systems (Report No. DTNH22-95-H-07301).
+Retrieved
+from. National Highway Traﬃc Safety Administration (NHTSA), Washington, DC,
+USA. http://ntl.bts.gov/lib/jpodocs/repts_te/87l01!.pdf.
+Klein, R.M., Kingstone, A., Pontefract, A., 1992. Orienting of visual attention. In: Rayner,
+K. (Ed.), Eye movements and visual cognition: Scene perception and reading.
+Springer-Verlag, New York pp. 46–65.
+Koustanaï, A., Cavallo, V., Delhomme, P., Mas, A., 2012. Simulator Training With a
+Forward Collision Warning System: Eﬀects on Driver-System Interactions and Driver
+Trust. Human Factors 54 (5), 709–721. http://dx.doi.org/10.1177/
+0018720812441796.
+Kramer, A.F., Cassavaugh, N., Horrey, W.J., Becic, E., Mayhugh, J.L., 2007. Inﬂuence of
+Age and Proximity Warning Devices on Collision Avoidance in Simulated Driving.
+Human Factors 49 (5), 935–949. http://dx.doi.org/10.1518/001872007X230271.
+Krüger, H.-P., Grein, M., Kaussner, A., Mark, C., 2005. SILAB – A task-oriented driving
+simulation. In: Proceedings of the Driving Simulator Conference. Iowa City, IA, USA.
+pp. 232-331.
+Laughery, K.R., 2006. Safety communications: Warnings. Applied Ergonomics 37 (4),
+467–478. http://dx.doi.org/10.1016/j.apergo.2006.04.020.
+Laughery, K.R., Wogalter, M.S., 2006. Designing Eﬀective Warnings. Reviews of Human
+Factors and Ergonomics 2 (1), 241–271. http://dx.doi.org/10.1177/
+1557234X0600200109.
+Lee, J.D., Gore, B.F., Campbell, J.L., 1999. Display Alternatives for In-Vehicle Warning
+and Sign Information: Message Style, Location and Modality. Transportation Human
+Factors 1 (4), 347–375. http://dx.doi.org/10.1207/sthf0104_6.
+Lee, J.D., Hoﬀman, J.D., Brown, T.L., McGehee, D.V., 2002a. Comparison of Driver
+Braking Responses in a High Fidelity Driving Simulator and on a Test Track.
+Transportation Research Record 1803 (1), 59–65. http://dx.doi.org/10.3141/
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+15
+
+--- Page 16 ---
+1803-09.
+Lee, J.D., McGehee, D.V., Brown, T.L., Reyes, M.L., 2002b. Collision warning timing,
+driver distraction, and driver response to imminent rear-end collisions in a high-
+ﬁdelity driving simulator. Human Factors 44 (2), 314–334. http://dx.doi.org/10.
+1518/0018720024497844.
+Lerner, N., Dekker, D., Steinberg, G., Huey, R., 1996a. Inappropriate alarm rates and
+driver annoyance (Report No. DTNH22-91-C-07004).
+Retrieved from. National
+Highway Traﬃc Safety Administration (NHTSA), Washington, DC, USA. http://ntl.
+bts.gov/lib/jpodocs/repts_te/3757.pdf.
+Lerner, N., Kotwal, B., Lyons, R., Gardner-Bonneau, D., 1996b. Preliminary human factors
+guidelines for crash avoidance warning devices (Report No. DTNH22-91-C-07004).
+Retrieved from. National Highway Traﬃc Safety Administration (NHTSA),
+Washington, DC, USA. http://ntl.bts.gov/lib/jpodocs/repts_te/5583.pdf.
+Liu, Y.-C., Schreiner, C.S., Dingus, T.A., 1999. Development of Human Factors Guidelines
+for Advanced Traveler Information Systems (ATIS) and Commercial Vehicle
+Operations (CVO): Human Factors Evaluation of the Eﬀectiveness of Multi-Modality
+Displays in Advanced Traveler Information Systems (Report No. FHWA-RD-96-150).
+Retrieved from. Federal Highway Administration (FHWA), Georgetown Pike McLean,
+VA, USA. https://www.fhwa.dot.gov/publications/research/safety/96150/96150.
+pdf.
+Luoma, J., Rämä, P., 2002. Acceptance of traﬃc sign information provided by an in-
+vehicle terminal. 2002 ITS World Congress on Intelligent Transport Systems.
+Retrieved from. virtual.vtt.ﬁ/ﬁts/impacts/Luoma_VTT.pdf.
+Maag, C., Schneider, N., Lübbeke, T., Weisswange, T.H., Goerick, C., 2015. Car Gestures –
+Advisory warning using additional steering wheel angles. Accident Analysis and
+Prevention 83, 143–153. http://dx.doi.org/10.1016/j.aap.2015.07.020.
+Mackworth, N.H., 1965. Visual noise causes tunnel vision. Psychonomic Science 3 (2),
+67–68. http://dx.doi.org/10.3758/BF03343023.
+Malaterre, G., Ferrandez, F., Fleury, D., Lechner, D., 1988. Decision making in emergency
+situations. Ergonomics 31 (4), 643–655.
+Malone, S., Brünken, R., 2016. The role of ecological validity in hazard perception as-
+sessment. Transportation Research Part F: Psychology and Behaviour 40, 91–103.
+Marshall, D.C., Lee, J.D., Austria, P.A., 2007. Alerts for in-vehicle information systems:
+annoyance, urgency, and appropriateness. Hum. Factors 49 (1), 145–157. http://dx.
+doi.org/10.1518/001872007779598145.
+Moeller, B., Frings, C., 2014. Designers beware: Response retrieval eﬀects inﬂuence dri-
+vers' response times to local danger warnings. Transportation Research Part F: Traﬃc
+Psychology and Behaviour 24, 117–132. http://dx.doi.org/10.1016/j.trf.2014.04.
+013.
+Muhrer, E., Reinprecht, K., Vollrath, M., 2012. Driving With a Partially Autonomous
+Forward Collision Warning System: How Do Drivers React? Human Factors 54 (5),
+698–708. http://dx.doi.org/10.1177/0018720812439712.
+Muhrer, E., Vollrath, M., 2010. Expectations while car following – The consequences for
+driving behaviour in a simulated driving task. Accident Analysis and Prevention 42,
+2158–2164. http://dx.doi.org/10.1016/j.aap.2010.07.009.
+Najm, W.G., Koziol, J.S., Tijerina, L., Pierowicz, J.A., Hendricks, D.L., 1994. Comparative
+Assessment of Crash Causal Factors and IVHS Countermeasures. In: Washington D.C.,
+USA: IVHS America. Proceedings of the IVHS America Annual Meeting, vol. 1 pp.
+412-421.
+National Highway Traﬃc Safety Administration, 2008. National Motor Vehicle Crash
+Causation Survey: Report to Congress (Report No. DOT HS 811 059).
+Retrieved
+from. National Highway Traﬃc Safety Administration (NHTSA), Washington, DC,
+USA. https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811059.
+Naujoks, F., Neukum, A., 2014. Timing of in-vehicle advisory warnings based on co-
+operative perception. In: de Waard, D., Brookhuis, K., Wiczorek, R., di Nocera, F.,
+Brouwer, R., Barham, P., Weikert, C., Kluge, A., Gerbino, W., Toﬀetti, A. (Eds.),
+Proceedings of the Human Factors and Ergonomics Society Europe Chapter Annual
+Meeting, (pp. 193-206). Retrieved from. http://www.hfes-europe.org/wp-content/
+uploads/2014/06/Naujoks.pdf.
+Naujoks, F., Totzke, I., 2014. Behavioral adaptation caused by predictive warning systems
+– The case of congestion tail warnings. Transsportation Research Part F: Traﬃc
+Psychology and Behaviour 26, 49–61. http://dx.doi.org/10.1016/j.trf.2014.06.010.
+Naujoks, F., Kiesel, A., Neukum, A., 2016. Cooperative warning systems: The impact of
+false and unnecessary alarms on drivers' compliance. Accident Analysis and
+Prevention 97, 162–175. http://dx.doi.org/10.1016/j.aap.2016.09.009.
+New Zealand Transport Agency, 2014. Motor Vehicle Crashes in New Zealand 2013.
+Yearly Report 2014.
+Retrieved from. . http://www.transport.govt.nz/assets/
+Uploads/Research/Documents/Motor-Vehicle-Crashes-2013/Motor-vehicle-crashes-
+in-New-Zealand-2013.pdf.
+Ng, A.W.Y., Chan, A.H.S., 2008. The eﬀects of driver factors and sign design features on
+the comprehensibility of traﬃc signs. Journal of Safety Research 39, 321–328. http://
+dx.doi.org/10.1016/j.jsr.2008.02.031.
+Payre, W., Diels, C., 2018. Human-Machine Interface Design Development for Connected
+and Cooperative Vehicle Features. In: In: Stanton, N.A. (Ed.), Advances in Human
+Aspects of Transportation, Advances in Intelligent Systems and Computing, vol. 597
+Springer, Cham, Switzerland. http://dx.doi.org/10.1007/978-3-319-60441-1_41. pp.
+415-422.
+Piersma, D., 2018. Fitness to drive of older drivers with cognitive impairments. SWOV-
+Dissertatiereeks, Den Haag, The Netherlands.
+Plavsic, M., Bubb, H., Duschl, M., Tönnis, M., Klinker, G., 2009. Ergonomic Design and
+Evaluation of Augmented Reality Based Cautionary Warnings for Driving Assistance
+in Urban Environments. In: Proceedings of the World Congress on Ergonomics
+(International Ergonomics Association, IEA). Beijing, China. Retrieved from. http://
+campar.in.tum.de/pub/plavsic2009iea/plavsic2009iea.pdf.
+Powelleit, M., Vollrath, M., 2018. Situational inﬂuences on response time and maneuver
+choice: Development of time-critical scenarios. Manuscript submitted for publication.
+Powelleit, M., Vollrath, M., 2013. Konzept zur Bewertung der Nutzbarkeit modalitäts-
+speziﬁscher Warnsignale in zeitkritischen Fahrsituationen (Usability evaluation
+concept for modality-speciﬁc warning signals in time-critical driving situations)
+(Report No. FE 82.0583/2013). Bundesanstalt für Straßenwesen (BASt), Bergisch
+Gladbach, Germany.
+Pradhan, A.K., Pollatsek, A., Knodler, M., Fisher, D.L., 2009. Can younger drivers be
+trained to scan for information that will reduce their risk in roadway traﬃc scenarios
+that are hard to identify as hazardous? Ergonomics 52, 657–673. http://dx.doi.org/
+10.1080/00140130802550232.
+Rackoﬀ, N., 1974. An investigation of age related changes in driver’s visual search pat-
+terns and driving performance and the relation to tests of basic functional capacities
+(Doctoral thesis. The Ohio State University, Columbus, Ohio, USA.
+Rittger, L., Götze, M., 2018. HMI Strategy – Recommended Action. In: Bengler, K., Drüke,
+J., Hoﬀmann, S., Manstetten, D., Neukum, A. (Eds.), UR:BAN Human Factors in
+Traﬃc. Approaches for Safe, Eﬃcient and Stress-free Urban Traﬃc. Springer,
+Wiesbaden, Germany. http://dx.doi.org/10.1007/978-3-658-15418-9_6. pp.
+119–150.
+Rockwell, T., 1972. Skills, Judgment and Information Acquisition in Driving. In: Forbes,
+T.W. (Ed.), Human Factors in Highway Traﬃc Safety Research. John Wiley & Sons.
+Sanders, A.F., 1970. Some aspects of the selective process in the functional visual ﬁeld.
+Ergonomics 13 (1), 101–117. http://dx.doi.org/10.1080/00140137008931124.
+Schlag, B., 1993. Elderly drivers in Germany ﬁtness and driving behavior. Accident
+Analysis and Prevention 25 (1), 47–55. http://dx.doi.org/10.1016/0001-4575(93)
+90095-E.
+Schmidt, S., Färber, B., 2009. Pedestrians at the kerb – Recognising the action intentions
+of humans. Transportation Research Part F: Traﬃc Psychology and Behaviour 12,
+300–310. http://dx.doi.org/10.1016/j.trf.2009.02.003.
+Schneider, N., Purucker, C., Neukum, A., 2015. Comparison of steering interventions in
+time-critical scenarios. Procedia Manufacturing 3, 3107–3114. http://dx.doi.org/10.
+1016/j.promfg.2015.07.858.
+Scott, J.J., Gray, R., 2008. A Comparison of Tactile, Visual, and Auditory Warnings for
+Rear-End Collision Prevention in Simulated Driving. Human Factors 50 (2), 264–275.
+http://dx.doi.org/10.1518/001872008X250674.
+Schwarz, F., Fastenmeier, W., 2017. Augmented reality warnings in vehicles: Eﬀects of
+modality and speciﬁcity on eﬀectiveness. Accident Analysis and Prevention 101,
+55–66. http://dx.doi.org/10.1016/j.aap.2017.01.019.
+Shinar, D., Schechtman, E., 2002. Headway feedback improves intervehicular distance:
+Aﬁeld study. Human Factors 44, 474–481. http://dx.doi.org/10.1518/
+0018720024497682.
+Singh, S., 2015. Critical reasons for crashes investigated in the National Motor Vehicle
+Crash Causation Survey. (Traﬃc Safety Facts Crash Stats. Report No. DOT HS 812
+115). National Highway Traﬃc Safety Administration, Washington, DC.
+Spence, C.J., Driver, J., 1994. Covert spatial orienting in audition: Exogenous and en-
+dogenous mechanisms. Journal of Experimental Psychology: Human Perception and
+Performance 20 (3), 555–574. http://dx.doi.org/10.1037/0096-1523.20.3.555.
+Statistisches Bundesamt, 2014. Traﬃc. Traﬃc accidents 2013 [Verkehr. Verkehrsunfälle
+2013]. Annual Report. Fachserie 8, Reihe 7. (Report No. 2080700137004).
+Retrieved from. Statistisches Bundesamt, Wiesbaden, Germany. https://www.
+destatis.de/DE/Publikationen/Thematisch/TransportVerkehr/Verkehrsunfaelle/
+VerkehrsunfaelleJ2080700137004.pdf?__blob=publicationFile.
+Summala, H., 1996. Accident risk and driver behaviour. Safety Science 22, 103–117.
+http://dx.doi.org/10.1016/0925-7535(96)00009-4.
+Tan, H.-S., Huang, J., 2006. DGPS-Based Vehicle-to-Vehicle Cooperative Collision
+Warning: Engineering Feasibility Viewpoints. IEEE Transactions on Intelligent
+Transportation Systems 7 (4), 415–428. http://dx.doi.org/10.1109/TITS.2006.
+883938.
+Thoma, S., Lindberg, T., Klinker, G., 2009. Evaluation of a generic warning for multiple
+intersection assistance systems. In: de Waard, D., Godthelp, J., Kooi, F.L., Brookhuis,
+K.A. (Eds.), Human Factors, Security and Safety. Shaker Publishing, Maastricht, the
+Netherlands pp. 173-188.
+Tretten, P., Gärling, A., Nilsson, R., Larsson, T.C., 2011. An On-Road Study of Head-Up
+Display: Preferred Location and Acceptance Levels. Proceedings of the Human
+Factors and Ergonomics Society Annual Meeting, vol. 55 (1), 1914–1918. http://dx.
+doi.org/10.1177/1071181311551398.
+Tsimhoni, O., Green, P., Watanabe, H., 2001. Detecting and Reading Text on HUDs:
+Eﬀects of Driving Workload and Message Location. In: Proceedings of the Intelligent
+Transportation Society (ITS) of America Annual Meeting and Exposition. Washington,
+DC, USA.
+van der Horst, R., 2004. Occlusion as a measure for visual workload: an overview of TNO
+occlusion research in car driving. Appl. Ergon. 35, 189–196. http://dx.doi.org/10.
+1016/j.apergo.2003.11.010.
+van Driel, C.J.G., Hoedemaeker, M., van Arem, B., 2007. Impacts of a congestion assistant
+on driving behaviour and acceptance using a driving simulator. Transportation
+Research Part F: Traﬃc Psychology and Behaviour 10, 139–152. http://dx.doi.org/
+10.1016/j.trf.2006.08.003.
+Ward, N.J., Parkes, A., 1994. Head-up displays and their automotive application: an
+overview of human factors issues aﬀecting safety. Accident Analysis and Prevention
+26 (6), 703–717. http://dx.doi.org/10.1016/0001-4575(94)90049-3.
+Watanabe, H., Yoo, H., Tsimhoni, O., Green, P., 1999. The Eﬀect of HUD Warning
+Location on Driver Responses. In: Proceedings of the World Congress on Intelligent
+Transport Systems. Toronto, Canada.
+Werneke, J., Kleen, A., Vollrath, M., 2014. Perfect timing: Urgency, not driving situations,
+inﬂuence the best timing to activate warnings. Human Factors 56 (2), 249–259.
+http://dx.doi.org/10.1177/0018720813490728.
+Werneke, J., Vollrath, M., 2012. What does the driver look at? The inﬂuence of inter-
+section characteristics on attention allocation and driving behavior. Accident
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+16
+
+--- Page 17 ---
+Analysis and Prevention 45, 610–619. http://dx.doi.org/10.1016/j.aap.2011.09.048.
+Werneke, J., Vollrath, M., 2013. How to present collision warnings at intersections? – A
+comparison of diﬀerent approaches. Accident Analysis and Prevention 52, 91–99.
+http://dx.doi.org/10.1016/j.aap.2012.12.001.
+Wickens, C.D., Long, Lt. J., 1994. Conformal symbology, attention shifts, and the head-up
+display. Proceedings of the Human Factors and Ergonomics Society Annual Meeting,
+vol. 38 (1), 6–10. http://dx.doi.org/10.1177/154193129403800103.
+Williams, L.J., 1985. Tunnel vision induced by foveal load manipulation. Human Factors
+27 (2), 221–227. http://dx.doi.org/10.1177/001872088502700209.
+Winkler, S., Kazazi, J., Vollrath, M., 2015. Distractive or supportive – how warnings in the
+head-up display aﬀect drivers’ gaze and driving behaviour. Proceedings of the IEEE
+International Conference on Intelligent Transportation Systems 1035–1040. http://
+dx.doi.org/10.1109/ITSC.2015.172.
+Winkler, S., Werneke, J., Vollrath, M., 2016. Timing of early warning stages in a multi
+stage collision warning system: Drivers' evaluation depending on situational inﬂu-
+ences. Transportation Research Part F 36, 57–68. http://dx.doi.org/10.1016/j.trf.
+2015.11.001.
+Winkler, S., Kazazi, J., Vollrath, M., 2018a. Practice makes better – Learning eﬀects of
+driving with a multi-stage collision warning. Accident Analysis and Prevention.
+http://dx.doi.org/10.1016/j.aap.2018.01.018.
+Winkler, S., Powelleit, M., Kazazi, J., Vollrath, M., Krautter, W., Korthauer, A., Drüke, J.,
+Töpfer, D., Semmler, C., Bendewald, L., 2018b. HMI strategy – Warnings and inter-
+ventions. In: Bengler, K., Drüke, J., Hoﬀmann, S., Manstetten, D., Neukum, A. (Eds.),
+UR:BAN Human Factors in Traﬃc. Approaches for Safe, Eﬃcient and Stress-free
+Urban Traﬃc. Springer, Wiesbaden, Germany. http://dx.doi.org/10.1007/978-3-
+658-15418-9_5. pp. 75-103.
+Wittmann, M., Kiss, M., Gugg, P., Steﬀen, A., Fink, M., Pöppel, E., Kamiya, H., 2006.
+Eﬀects of display position of a visual in-vehicle task on simulated driving. Applied
+Ergonomics 37, 187–199. http://dx.doi.org/10.1016/j.apergo.2005.06.002.
+Wogalter, M.S., Conzola, V.C., Smith-Jackson, T.L., 2002. Research-based guidelines for
+warning design and evaluation. Applied Ergonomics 33, 219–230. http://dx.doi.org/
+10.1016/S0003-6870(02)00009-1.
+Wolﬀsohn, J.S., McBrien, N.A., Edgar, G.K., Stout, T., 1998. The inﬂuence of cognition
+and age on accommodation, detection rate and response times when using a car head-
+up display (HUD). Ophthalmic & Physiological Optics 18 (3), 243–253. http://dx.doi.
+org/10.1016/S0275-5408(97)00094-X.
+Xiang, W., Yan, X., Weng, J., Li, X., 2016. Eﬀect of auditory in-vehicle warning in-
+formation on drivers' brake response time to red-light running vehicles during col-
+lision avoidance. Transportation Research Part F 40, 56–67. http://dx.doi.org/10.
+1016/j.trf.2015.12.002.
+Yan, X., Radwan, E., Guo, D., 2007. Eﬀects of major-road vehicle speed and driver age
+and gender on left turn gap acceptance. Accident Analysis and Prevention 39 (4),
+843–852. http://dx.doi.org/10.1016/j.aap.2006.12.006.
+Yoo, H., Tsimhoni, O., Watanabe, H., Green, P., Shah, R., 1999. Display of HUD Warnings
+to Drivers: Determining an Optimal Location (Report No. UMTRI-99-5). University of
+Michigan, Transportation Research Institute, Ann Arbor, MI, USA.
+Young, S.L., 1991. Increasing the noticeability of warnings, eﬀects of pictorial color,
+signal, icon and border. In: Proceedings of the Human Factors Society 36th Annual
+Meeting. Human Factors Society. Santa Monica, CA. pp. 580–584.
+Zarife, R., 2014. Integrative Warning Concept for Multiple Driver Assistance Systems
+(Doctoral thesis, Julius-Maximilians-Universität Würzburg, Würzburg, Germany).
+Retrieved from. https://opus.bibliothek.uni-wuerzburg.de/ﬁles/10111/Diss_Zarife_
+Rami.pdf.
+S. Winkler et al.
+Accident Analysis and Prevention xxx (xxxx) xxx–xxx
+17

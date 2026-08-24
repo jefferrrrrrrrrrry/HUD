@@ -1,0 +1,2549 @@
+--- Page 1 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+1
+Autonomous Vehicles that Interact with Pedestrians:
+A Survey of Theory and Practice
+Amir Rasouli and John K. Tsotsos
+Abstract—One of the major challenges that autonomous cars
+are facing today is driving in urban environments. To make it a
+reality, autonomous vehicles require the ability to communicate
+with other road users and understand their intentions. Such
+interactions are essential between the vehicles and pedestrians
+as the most vulnerable road users. Understanding pedestrian
+behavior, however, is not intuitive and depends on various factors
+such as demographics of the pedestrians, trafﬁc dynamics, envi-
+ronmental conditions, etc. In this paper, we identify these factors
+by surveying pedestrian behavior studies, both the classical
+works on pedestrian-driver interaction and the modern ones
+that involve autonomous vehicles. To this end, we will discuss
+various methods of studying pedestrian behavior, and analyze
+how the factors identiﬁed in the literature are interrelated. We
+will also review the practical applications aimed at solving the
+interaction problem including design approaches for autonomous
+vehicles that communicate with pedestrians and visual perception
+and reasoning algorithms tailored to understanding pedestrian
+intention. Based on our ﬁndings, we will discuss the open
+problems and propose future research directions.
+Index Terms—Autonomous vehicles, Pedestrian behavior, Traf-
+ﬁc interaction, Survey.
+I. INTRODUCTION
+Ever since the introduction of early commercial automo-
+biles, engineers and scientists have been striving to achieve
+autonomy, that is removing the need for human involvement
+in controlling the vehicles. Apart from the increased level of
+comfort for drivers, autonomous vehicles can positively impact
+society both at micro and macro levels [1], [2].
+Replacing human drivers with autonomous control systems,
+however, comes at he price of creating a social interaction
+void. Besides being a dynamic control task, driving is a social
+phenomenon and requires interactions between all road users
+involved to ensure the ﬂow of trafﬁc and to guarantee the
+safety of others [3].
+Social interaction can play an important role in resolving
+various potential ambiguities in trafﬁc. For example, if a car
+wants to turn at a non-signalized intersection on a heavily
+travelled street, it might wait for another driver’s signal indi-
+cating the right of way. In the case of pedestrians, interaction
+can help them to understand when it is safe for them to cross
+the road, e.g. by receiving a signal from the driver [4] (see
+Fig. 1). Recent ﬁeld studies of autonomous vehicles show how
+the lack of social understanding can result in trafﬁc accidents
+[5] or erratic behaviors towards pedestrians [6].
+Given that autonomous vehicles may commute without any
+passengers on board, they are subject to malicious behavior,
+The
+authors
+are
+with
+the
+Department
+of
+Electrical
+Engineering
+and Computer Science, York University, Toronto, ON, Canada, e-mail:
+{aras,tsotsos}@eecs.yorku.ca
+Fig. 1. The autonomous car is communicating with pedestrians at a crosswalk
+indicating that it is safe to cross. Source: [8].
+similar to those observed against a number of autonomous
+robots used in malls [7]. For example, some people might step
+in front of the autonomous vehicles to force them to change
+their route or interrupt their operation. Understanding the true
+intention of these people can help the vehicles act accordingly.
+A large body of studies in the ﬁeld of behavioral psychology
+have addressed the social aspects of driving and identiﬁed
+numerous factors that can potentially inﬂuence the way road
+users behave [9], [10], [11]. Factors such as pedestrians’
+demographics [12], road conditions [11], social factors [10],
+and trafﬁc characteristics [13] are shown to signiﬁcantly
+inﬂuence pedestrian crossing decisions. However, there is a
+missing component in the literature, namely a holistic view
+of pedestrian crossing behavior to identify the extent of these
+factors and to explain in what ways they are interrelated.
+In the context of intelligent driving, intention estimation
+algorithms have been developed to predict forthcoming actions
+of pedestrians [14] and drivers [15]. Technologies have also
+been introduced that enable autonomous vehicles to communi-
+cate with road users, such as V2V [16] and V2P [17] wireless
+communication mechanisms, and various visual intent displays
+such as LED lights [18] or projectors [19]. The majority
+of these approaches, nonetheless, disregard the theoretical
+ﬁndings of trafﬁc interaction and treat the problem as dealing
+with a rigid dynamic object rather than a social being [20].
+This paper addresses the above shortcomings and establishes
+a connection between studies on trafﬁc interaction from dif-
+ferent disciplines. More speciﬁcally, we ﬁrst discuss various
+methods of studying pedestrian behavior, their efﬁciency and
+popularity in the literature. We then conduct a comprehensive
+review of pedestrian behavior studies including the classical
+studies on driver-pedestrian interactions and the studies that in-
+volve autonomous vehicles. Based on our ﬁndings we present a
+arXiv:1805.11773v1  [cs.RO]  30 May 2018
+
+--- Page 2 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+2
+visualization highlighting past studies of pedestrian behavior
+and how they are connected to one another. In the second
+part of the paper, we focus our attention on the practical
+systems designed for communicating with pedestrians, and
+understanding and predicting their behavior. We conclude our
+paper with discussion of open research problems in the ﬁeld
+of trafﬁc social interaction and proposal for future directions.
+II. METHODS OF STUDY
+The methods of studying human behavior (in trafﬁc scenes)
+have transformed during past decades as new technological
+advancements have emerged. Traditionally, written question-
+naires [21], [22] or direct interviews [23] were widely used
+to collect information from trafﬁc participants or authorities
+monitoring the trafﬁc. Some modern studies still rely on
+questionnaires especially in cases where there is a need to
+measure the general attitudes of people towards various aspects
+of driving, e.g. crossing in front of autonomous vehicles [24].
+These forms of studies, however, have been criticized for
+the bias people have in answering questions, the honesty of
+participants in responding or even how well the interviewees
+are able to recall a particular trafﬁc situation.
+Trafﬁc reports are mainly generated by professionals such
+as police forces after accidents [25]. The advantage of trafﬁc
+reports is that they provide good detail regarding the elements
+involved in a trafﬁc accident, albeit not being able to substan-
+tiate the underlying reasons.
+In addition, behavior can be analyzed via on-site obser-
+vation by the researcher either present in the vehicle [26]
+or standing outside [27] while recording the behavior of the
+road users. Observations can be both naturalistic and scripted.
+In a naturalistic format, normal activities of road users are
+monitored without notifying them of such recording [28]. In
+a scripted setting, the participants, e.g. drivers or pedestrians,
+are instructed to perform certain actions, and then the reactions
+of other parties are observed [29], [30]. A major drawback of
+observation is the strong observer bias, which can be caused
+by both the observers’ misperception of the trafﬁc scenes or
+their subjective judgments.
+New technological developments in the design of sensors
+and cameras have given rise to different modalities of record-
+ing trafﬁc events. Eye tracking devices are one such system
+that can record participants’ eye movements during driving
+[31]. Computer simulations [32] and video recordings of trafﬁc
+scenes [22] are also widely used to study the behavior of
+drivers in laboratory environments. These methods, however,
+have been criticized for not providing realistic driving condi-
+tions, therefore the observed behaviors may not necessarily
+reﬂect the ones exhibited by road users in a real trafﬁc
+scenario.
+Naturalistic recording of trafﬁc scenes (both videos [33] and
+photos [34]), is, perhaps, one of the most effective methods for
+studying trafﬁc behavior. Although the ﬁrst instances of such
+studies date back to almost half a century ago [35], they have
+gained tremendous popularity in recent years. In this method
+of study, a camera (or a network of cameras) are placed either
+inside the vehicles [36], [37], [38] or outside on roadsides [39],
+(a)
+(b)
+Fig. 2. Examples of Wizard of Oz techniques to disguise the driver. a) The
+driver is disguised as a car seat [30] and b) the driver is driving the car from a
+right-hand steering wheel while a dummy driver is sitting in the actual driver’s
+seat [18].
+[40]. Since the objective is to record the natural behavior of
+the road users, the cameras are located in inconspicuous places
+not visible to the observees. In the context of recording driving
+habits, although the presence of the camera might be known
+to the driver, it does not alter the driver’s behavior in the long
+run. In fact, studies show that the presence of cameras may
+only inﬂuence the ﬁrst 10-15 minutes of the driving, hence the
+beginning of each recording is usually discarded at the time of
+analysis [26]. An added advantage of recording compared to
+on-site observation is the possibility of revising the observation
+and using multiple observers to minimize bias [35].
+Naturalistic recording, similar to on-site observation, may
+also be affected by observer bias. Moreover, in some cases, it is
+hard to recognize certain behaviors or underlying motives, e.g.
+whether a pedestrian notices the presence of the car or looks
+at the trafﬁc signal in the scene and why. To remedy this issue,
+it is common to employ a hybrid approach where recordings
+or observations are combined with on-site interviews [41].
+Using this method, after recording a behavior, the researcher
+approaches the corresponding road user and asks questions
+regarding their experience, for example, whether they looked
+at the signal prior to crossing. Overall, the hybrid approach can
+help resolve the ambiguities observed in certain behaviors.
+In the context of autonomous driving research, the Wizard
+of Oz technique [18] is common in which the experimenters
+simulate the behavior of an intelligent system to observe
+the reaction of subjects. Using this technique, experimenters
+may disguise themselves as a car seat [30] or control the
+vehicle from a hidden place inside the vehicle [18] that is
+not observable by the participants (see Fig. 2).
+Figures 3 and 4 summarize the works presented in this paper
+and their methods of study. Note that in this ﬁgure literature
+survey refers to expert studies that generate new ﬁndings based
+on past works.
+III. PEDESTRIAN BEHAVIOR STUDIES
+We divide pedestrian behavior studies into two categories,
+classical studies and ones involving autonomous vehicles.
+Compared to studies with autonomous vehicles, the classical
+studies focus on pedestrian behavior while interacting with
+human drivers instead of vehicles. All the factors identiﬁed in
+the literature are italicized in the text.
+
+--- Page 3 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+3
+Observation
+Classical methods
+Hamed (2001)
+Moore (1953)
+Sjostedt (1969)
+Dolphin (1970)
+Henderson (1972)
+Harrell (1991)
+Harrell (1991a)
+Harrell (1992)
+Cohen (1955)
+Sun (2002)
+Tom (2011)
+Sucha (2017)
+Wolf (2016)
+Varhelyi (1998)
+Risser (1985)
+Rosenbloom (2004)
+Rosenbloom (2009)
+Sisiopiku (2003)
+Mortimer (1973)
+Hyman (2010)
+Crompton (1979)
+Schioldborg (1976)
+O’Flaherty (1972)
+Gheri (1963)
+Lam (1995)
+Lavalette (2009)
+Herwig (1965)
+Lefkowitz (1955)
+Police report
+Jacobs (1967)
+Johnston (1973)
+Video recording
+Hemistra (1969)
+Willis (2004)
+Walker (2007)
+Wang (2010)
+CYingzi Du (2015)
+Rasouli (2017)
+Sucha (2017)
+Risto (2017)
+Dey (2017)
+Sucha (2014)
+Das (2005)
+Oudejans (1996)
+Goldhammer (2014)
+Tian (2013)
+Lam (1995)
+Photography
+DiPietro (1970)
+Simulation
+Caird (1994)
+Sun (2002)
+Das (2005)
+Wiedemann (1994)
+Scripted observation
+Nowicki (1994)
+Gueguen (2015)
+Ren (2016)
+Schmidt (2009)
+Questionnaire
+Clay (1995)
+Evans (1998)
+Yagil (2000)
+Holland (2007)
+Sucha (2017)
+Sisiopiku (2003)
+Lindgren (2008)
+Bjorklund (2005)
+Literature survey
+Ishaque (2008)
+Gupta (2016)
+Wilde (1980)
+Interview
+Risser (1985)
+Risto (2017)
+Sun (2015)
+Sucha (2014)
+Chu (2004)
+Fig. 3.
+Data collection methods used in the classical pedestrian behavior
+studies.
+Observation
+Chang (2017)
+Lagstorm (2015)
+Video recording
+Beggiato (2017)
+Matthews (2017)
+Mahadevan (2017)
+Dey (2017)
+Zimmermann (2016)
+Rothenbucher (2016)
+Photography
+Yang (2017)
+Dey (2017)
+Simulation
+Beggiato (2017)
+Jayaraman (2018)
+Chang (2017)
+Scripted observation
+Clamann (2017)
+Dey (2017)
+Questionnaire
+Deb (2017)
+Hulse (2018)
+Dey (2017)
+Yang (2017)
+Matthews (2017)
+Mahadevan (2017)
+Chang (2017)
+Zimmermann (2016)
+Jayaraman (2018)
+Rothenbucher (2016)
+Lagstorm (2015)
+Literature survey
+Prakken (2017)
+Meeder (2017)
+Millard (2016)
+Muller (2016)
+Wang (2018)
+Interview
+Mahadevan (2017)
+Bikeleague (2014)
+Yang (2017)
+Chang (2017)
+Lagstorm (2015)
+Wizard of Oz
+Autonomous
+driving methods
+Matthews (2017)
+Mahadevan (2017)
+Dey (2017)
+Rothenbucher (2016)
+Lagstorm (2015)
+Fig. 4.
+Data collection methods used in the pedestrian behavior studies
+involving autonomous vehicles.
+A. Classical Studies
+The early works in pedestrian behavior studies come from
+early 1950s, and since then there has been a tremendous
+amount of research done on various factors that impact pedes-
+trian behavior. Given the magnitude of the work in this area,
+an exhaustive survey of all the literature would be prohibitive.
+As a result, only a subset of major works will be presented.
+We divide the factors that inﬂuence pedestrian behavior into
+two groups, the ones that directly relate to pedestrians (e.g. de-
+mographics) and environmental ones (e.g. trafﬁc conditions).
+A summary of these factors and how they are interrelated can
+be found in Fig. 5.
+1) Pedestrian Factors: Social Factors. Among the social
+factors, perhaps, group size is one of the most inﬂuential
+ones. Heimstra et al. [35] conducted a naturalistic study to
+examine the crossing behavior of children and found that they
+commonly (in more than 80% of the cases) tend to cross as
+a group rather than individually. Group size changes both the
+behavior of the drivers with respect to the pedestrians and the
+way the pedestrians act at crosswalks. For instance, it is shown
+that drivers more likely yield to groups of pedestrians (3 or
+more) than individuals [39], [42].
+When crossing as a group, pedestrians tend to be more
+careless, and pay less attention at crosswalks and often accept
+shorter gaps between the vehicles to cross [40], [43], [11] or
+do not look for approaching trafﬁc [41]. Group size is also
+found to impact the way pedestrians comply with the trafﬁc
+laws, i.e. group size exerts some form of social control over
+individual pedestrians [44]. It is observed that individuals in
+a group are less likely to follow a person who is breaking the
+law, e.g. crossing on the red light [28].
+In addition, group size, for obvious reasons, inﬂuences
+pedestrian ﬂow which determines how fast pedestrians cross
+the street. Wiedemann [45] indicates that if there is no inter-
+action between the pedestrians, there is a linear relationship
+between pedestrian ﬂow and pedestrian speed. This means, in
+general, pedestrians walk slower in denser groups.
+Social norms, or as some experts refer to as “informal rules”
+[46], play a signiﬁcant role in how trafﬁc participants behave
+and how they predict each other’s intention [21]. Social norms
+also inﬂuence how acceptable a particular action is in a given
+trafﬁc situation [47]. The difference between social norms
+and legal norms (or formal rules) can be illustrated using the
+following example: formal rules deﬁne the speed limit of a
+street, however, if the majority of drivers exceed this limit,
+the social norm is then quite different [21].
+The inﬂuence of social norms is so signiﬁcant that merely
+relying on formal rules does not guarantee safe interaction
+between trafﬁc participants. This fact is highlighted in a study
+by Johnston [48] in which he describes the case of a 34-year
+old married woman who was extremely cautious (and often
+hesitant) when facing yield and stop signs. In a period of four
+years, this driver was involved in 4 accidents, none of which
+she was legally at fault. In three out of four cases the driver was
+hit from behind, once by a police car. This example illustrates
+how disobeying social norms, even if it is legal, can disrupt
+trafﬁc ﬂow.
+Social norms even inﬂuence the way people interpret the
+law. For example, the concept of “psychological right of way”
+or “natural right of way” has been studied [21]. This concept
+describes the situation in which drivers want to cross a non-
+
+--- Page 4 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+4
+Fig. 5. Factors involved in pedestrian decision-making process at the time of crossing. The circles refer to the factors, the branches with solid lines indicate
+the sub-factors of each category and the dashed lines show the interconnection between different factors and arrows show the direction of inﬂuence.
+signalized intersection. The law requires the drivers to yield
+to the trafﬁc from the right. However, in practice drivers
+may do quite the opposite depending on the social status (or
+conﬁguration) of the street. It is found that factors such as
+street width, lighting conditions or the presence of shops may
+determine how the drivers would behave [49].
+Imitation is another social factor that deﬁnes the way
+pedestrians (as well as drivers [50]) would behave. A study
+by Yagil [51] shows that the presence of a law-adhering
+(or law-violating) pedestrian increases the likelihood of other
+pedestrians to obey (or disobey) the law. This study shows that
+the impact is more signiﬁcant when law violation is involved.
+The probability of imitation occurrence may depend on the
+social status of the person who is being imitated. In the study
+by Leftkowitz et al. [28] a confederate was asked by the
+experimenter to cross or stand on the sidewalk. The authors
+observed that when the research confederate was wearing a
+fancy outﬁt, there was a higher chance that other pedestrians
+imitate his actions (either breaking the law or complying).
+This idea, however, is challenged by Dolphin et al. [52] whose
+ﬁndings indicate that social status and gender have no effect
+on imitation. The authors claim that group size is a better
+predictor for the likelihood of imitation, which means the
+larger the size of the group, the lower the chance of pedestrians
+imitating others.
+Demographics. Arguably, gender is one of factors that in-
+ﬂuences pedestrian behavior the most [35], [53], [54]. Studies
+show that women in general are more cautious than men [35],
+[53], [51] and demonstrate a higher degree of law compliance
+[27], [13].
+Furthermore, gender differences affect the motives of pedes-
+trians when complying with the law. Yagil [51] argues that
+crossing behavior in men is mainly predicted by normative
+motives (the sense of obligation to the law) whereas in women
+it is better predicted by instrumental motives (the perceived
+danger or risk). He adds that women are inﬂuenced by social
+values, e.g. what other people think about them, while men are
+mainly concerned with physical conditions, e.g. the structure
+
+--- Page 5 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+5
+of the street.
+Men and women also differ in the way they pay attention to
+the environment before or during crossing. For instance, Tom
+and Granie [27] show that prior to and during a crossing event,
+men more frequently look at vehicles whereas women look
+at trafﬁc lights and other pedestrians, i.e. they have different
+attention patterns. Women also tend to change their gazing
+pattern according to road structure, show a higher behavior
+variability [53], and cross with a lower speed compared to
+men [9].
+Age impacts pedestrian behavior in obvious ways. Gener-
+ally, elderly pedestrians are physically less capable compared
+to adults, and as a result, they walk slower [9], have a more
+varied walking pattern (e.g. do not have steady velocity) [55]
+and are more cautious in terms of gap acceptance [39], [56].
+Being more cautious means older pedestrians, compared to
+adults and children, spend a longer time paying attention to
+the trafﬁc prior to crossing [38]. Furthermore, the elderly and
+children are found to have a lesser ability to correctly assess
+the speed of vehicles, hence are more vulnerable [31]. It is also
+interesting to note that there is a higher variability observed in
+younger pedestrians’ behavior, making them less predictable
+[53].
+State. The speed of pedestrians is thought to inﬂuence
+their visual perception of dynamic objects. Oudejans et al.
+[57] argue that while walking, pedestrians have better optical
+ﬂow information, and consequently, a better sense of speed
+and distance estimation. Thus walking pedestrians are less
+conservative to cross compared to standing ones.
+Pedestrian speed may vary depending on the conditions such
+as road structure. For instance, pedestrians tend to walk faster
+during crossing compared to when they walk on sidewalks [58]
+or walk faster on wider sidewalks as the density of pedestrians
+can be lower [54]. When vehicles have the right of way or
+pedestrians’ trajectory is towards the vehicles, they tend to
+cross faster [58]. In addition, road structure impacts crossing
+speed. For example, Crompton [59] reports pedestrian mean
+speed at different crosswalks as follows: 1.49 m/s at zebra
+crossings, 1.71 m/s as crossing with pedestrian refuge island
+and 1.74 m/s at pelican crossings.
+Other factors that have been shown to affect pedestrian
+speed include group size, generally slower in larger groups,
+[34], [60], [10], age, pedestrians tend to get slower as they
+age, [61], [10], time of day, generally walk faster in early
+morning rush, and road structure, if there is more space for
+pedestrians, they tend to walk faster [10].
+The effect of attention on trafﬁc safety has been extensively
+studied in the context of driving [62], [63], [64], [65]. As
+for pedestrians, it is shown that the majority of pedestrians
+tend to pay attention prior to crossing, the frequency of which
+may vary depending on the crosswalk delineation such as the
+presence of trafﬁc signals or zebra crossing lines [38]. Some
+ﬁndings suggest that when pedestrians make eye contact with
+drivers, the drivers are more likely to slow down and yield to
+the pedestrians [66].
+Hymann et al. [67] investigate the effect of attention on
+pedestrian walking trajectory. They show that pedestrians who
+are distracted by the use of electronics, such as mobile phones,
+are 75% more likely to display inattentional blindness (not
+noticing the elements in the scene). Distracted pedestrians
+often change their walking direction and, on average, walk
+slower than undistracted pedestrians.
+Trajectory or pedestrian walking direction is another factor
+that plays a role in the way pedestrians make a crossing
+decision. Schmidt and Farber [29] argue that when pedestrians
+are walking in the same direction as the vehicles, they tend to
+make riskier decisions regarding whether to cross. According
+to the authors, walking direction can alter the ability of
+pedestrians to estimate speed. In fact, pedestrians have a
+more accurate speed estimation when the approaching cars
+are coming from the opposite direction.
+Characteristics. Among different pedestrian characteristics,
+culture plays an important role. It deﬁnes the way people
+think and behave, and forms a common set of social norms
+they obey [68]. Variations in trafﬁc culture exist not only
+between different countries but also within the same country,
+e.g. between towns and countrysides or between different cities
+[69].
+A number of studies connect culture to the types of behavior
+that road users exhibit. Lindgren et al. [68] compare the
+behaviors of Swedish and Chinese drivers and show that they
+assign different levels of importance to various trafﬁc problems
+such as speeding or jaywalking. Schmidt and Farber [29] point
+out the differences in gap acceptance of Indians (2-8s) versus
+Germans (2-7s). Clay [31] indicates the way people from
+different culture perceive and analyze a situation. She notes
+that Americans judge trafﬁc behavior based on characteristics
+of the pedestrians whereas Indians rely more on contextual
+factors such as trafﬁc condition, road structure, etc.
+Some researchers go beyond culture and study the effect of
+faith or religious beliefs on pedestrian behavior. Rosenbloom
+et al. [70] gather that ultra-orthodox (in a religious sense)
+pedestrians in an ultra-orthodox setting are three times more
+likely to violate trafﬁc laws than secular pedestrians.
+Generally speaking, pedestrian level of law compliance
+deﬁnes how likely they would break the law (e.g. crossing at
+red light). In addition to demographics, law compliance can
+be inﬂuenced by physical factors, for instance, the location of
+a designated crosswalk inﬂuences the decision of pedestrians
+whether to jaywalk [71].
+Another factor that characterizes a pedestrian is his/her
+past experience. For example, non-driver female pedestrians
+generally tend to be more cautious when making crossing
+decision [53].
+Abilities. The ability to estimate speed and distance, can
+inﬂuence the way pedestrians perceive the environment and
+consequently the way they react to it. In general, pedestrians
+are better at judging vehicle distance than vehicle speed [72].
+For instance, they can correctly estimate vehicle speed when
+the vehicle is moving below the speed of 45 km/h, whereas
+vehicle distance can be correctly estimated when the vehicle
+is moving up to a speed of 65 km/h.
+2) Environmental Factors: Physical context. The pres-
+ence of street delineations, including trafﬁc signals or zebra
+crossings, has a major effect on the way trafﬁc participants
+behave [54], or on their degree of law compliance [73]. Some
+
+--- Page 6 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+6
+scholars distinguish between the way trafﬁc signals and zebra
+crossings inﬂuence yielding behavior. For example, trafﬁc
+signals (e.g. trafﬁc light) prohibit vehicles to go further and
+force them to yield to crossing pedestrians. At non-signalized
+zebra crossings, however, drivers usually yield if there are
+pedestrians present at the curb who either clearly communicate
+their intention of crossing (often by eye contact) or start
+crossing (by stepping on the road) [41].
+Signals alter pedestrians level of cautiousness as well [38].
+In a study by Tom and Granie [27], it is shown that pedestrians
+look at vehicles 69.5% of the time at signalized and 86% of
+the time at unsignalized intersections. In addition, the authors
+point out that pedestrians’ trajectory differs at unsignalized
+crossings, i.e. they tend to cross diagonally when no signal is
+present.
+Some studies discuss the likelihood of pedestrians to use
+dedicated zebra crossing. In general, women and children use
+dedicated zebra crossings more often [54], [13]. Trafﬁc volume
+and the presence of law enforcement personnel near crossing
+lines are also shown to induce pedestrians to use designated
+crossing lines. The effect of law enforcement, however, is
+much stronger on men than women [54].
+In terms of crossing speed, pedestrians tend to walk faster
+at signalized crosswalks [74], [73]. The presence of signals
+also induces pedestrians to comply with the law, although this
+effect seems to be opposite for one-way streets [75].
+Road structure (e.g. crossing type and road geometry) and
+street width impact the level of crossing risk (or affordance)
+[57]. For example, pedestrians pay more attention prior to
+crossing in wide streets [38] and accept a smaller gap in
+narrow streets [29], [38]. Road structure is also believed to
+alter the way drivers behave, which subsequently can inﬂuence
+pedestrians’ expectations [69].
+With respect to law compliance, contradictory ﬁndings have
+been reported. While some researchers claim larger street
+width can increase the chance of compliance [76], others report
+the opposite and show it can increase crossing violation [75].
+Weather or lighting conditions affect pedestrian behavior
+in many ways [11]. For instance, in bad weather conditions
+pedestrians’ speed estimation is poor, therefore they become
+conservative while crossing [72]. Pedestrians (especially the
+elderly and women) are found to be more cautious in warm
+weather than cold [11]. Moreover, lower illumination level
+(e.g. nighttime) reduces pedestrians’ major visual functions
+(e.g. resolution acuity, contrast sensitivity and depth percep-
+tion), causing them to make riskier decisions. Another direct
+effect of weather would be on road conditions, such as
+slippery roads due to rain, that can impact movements of both
+drivers and pedestrians [77], [54].
+Dynamic factors. One of the key dynamic factors is gap
+acceptance or how much gap in trafﬁc (typically in time)
+pedestrians consider safe to cross. Gap acceptance depends
+on two dynamic factors, vehicle speed and vehicle distance
+from the pedestrian. The combination of these two factors
+deﬁnes Time To Collision (or Contact) (TTC), or how far the
+approaching vehicle is from the point of impact [78], [79],
+[38]. The average pedestrian gap acceptance is between 3-7s,
+i.e. usually pedestrians do not cross when TTC is below 3s
+[34] and very likely cross when it is higher than 7s [29]. As
+mentioned earlier, gap acceptance may highly vary depending
+on social factors (e.g. demographics [40], [80], group size [34],
+culture [29]), level of law compliance [9], and the street width.
+For instance, women and the elderly generally accept longer
+gaps [12] and people in groups accept a shorter time gap [80].
+The effects of vehicle speed and vehicle distance are also
+studied in isolation. It is shown that increase in vehicle speed
+deteriorates pedestrians’ ability to estimate speed [31] and
+distance [72]. In addition, pedestrians are found to rely more
+on distance when crossing, i.e. within the same TTC, and they
+cross more often when the speed of the approaching vehicle
+is higher [29].
+Some scholars look at the relationship between pedestrian
+waiting time prior to crossing and gap acceptance. Sun et al.
+[39] argue that the longer pedestrians wait, the more frustrated
+they become and, as a result, their gap acceptance lowers.
+The impact of waiting time on crossing behavior, however, is
+controversial. Wang et al. [40] dispute the role of waiting time
+and claim that in isolation waiting time does not explain the
+changes in gap acceptance. They add that to be considered
+effective, waiting time should be studied in conjunction with
+other factors such as pedestrians’ personal characteristics.
+Pedestrian waiting time can be inﬂuenced by a number
+of factors such as age, gender, road structure, location (e.g.
+how close to one’s destination) and pedestrian walking speed.
+Females are generally have longer waiting time compared to
+men [34], [81]. Pedestrians who can walk faster (which is
+affected also by age) tend to spend less time waiting prior to
+crossing [81]. In terms of road structure, studies show that,
+when crossing a road with a refuge island, pedestrians cross
+faster from one side to the island than the island to the other
+side.
+Although trafﬁc ﬂow is a byproduct of vehicle speed and
+distance, on its own it can also be a predictor of pedestrian
+crossing behavior [29]. By observing the overall pattern of
+trafﬁc, pedestrians might form an expectation about what
+approaching vehicles might do next.
+The role of communication (often nonverbal) in resolving
+trafﬁc ambiguities is emphasized by a number of scholars [21],
+[31], [41]. In this context, any kind of signal between road
+users constitutes communication. In trafﬁc scenes, communi-
+cation is particularly precarious because, ﬁrstly, there exists no
+ofﬁcial set of signals and most of them are ambiguous, and
+secondly, the type of communication may change depending
+on the atmosphere of the trafﬁc situation, e.g. city or country
+[26].
+The lack of communication or miscommunication can
+greatly contribute to trafﬁc conﬂicts. It is shown that more
+than a quarter of trafﬁc conﬂicts is due to the absence of
+effective communication between road users. In particular,
+pedestrians heavily rely on communication when making
+crossing decisions and report feeling uncomfortable when the
+communication is non-existent and certain vehicle behaviors
+are not observed [82].
+Trafﬁc participants use different methods to communicate
+with each other. For example, pedestrians use eye contact
+(gazing/staring), a subtle movement in the direction of the
+
+--- Page 7 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+7
+road, handwave, smile or head wag. Drivers, on the other
+hand, ﬂash lights, wave hands or make eye contact [41].
+Some researchers also point out that the speed changes of
+the vehicle can be an indicator of the driver’s intention [38].
+For example, in a case study by Varhelyi [83] it is shown that
+drivers maintain their speed or accelerate to communicate their
+intention of not yielding to pedestrians. This means pedestrian
+reaction (or intention of crossing) may vary depending on
+the behavior of drivers. The stopping behavior of vehicles
+may also contain a communicational cue. Studies show when
+drivers stop their cars far shorter than where they legally must
+stop, they are signaling their intention of giving the right of
+way to others [84].
+Among different forms of nonverbal communication, eye
+contact is particularly important. Pedestrians often establish
+eye contact with drivers to make sure they are seen [3].
+Drivers also often make eye contact and gaze at the face of
+other road users to assess their intentions [85]. It is found
+that the presence of eye contact between road users increases
+compliance with instructions and rules [86]. For instance,
+drivers who make eye contact with pedestrians will more likely
+yield right of way at crosswalks [86].
+According to a study by Dey et al. [84], the majority of
+communication in trafﬁc is implicit (e.g. walking behavior)
+rather than explicit (e.g. hand gestures). They report that nearly
+97% of pedestrians do not engage in any form of explicit
+communication with drivers. About 63% of pedestrians claim
+their right of way simply by stepping on the road.
+The authors of [84] argue that pedestrians treat vehicles
+as entities and do not care about the state of the driver
+when making crossing decision. Even though at the time of
+crossing pedestrians look towards the approaching vehicles,
+they do not engage in eye contact and rather observe the
+state of the vehicle. These ﬁndings, however, are questionable.
+Overall, there is much stronger support for the role of eye
+contact in crossing actions (refer to attention), with the authors
+themselves admitting that during their study they had no way
+of accurately tracking pedestrians’ (or drivers’) gaze.
+When speaking of communication, two additional factors
+should be considered, namely culture and social norms which
+determine the type and the meaning of communication signals
+used by road users [4]. For example, Gupta et al. [87] show
+how in Germany raising one hand by a police ofﬁcer means
+the attention command, whereas in India the same command
+is communicated by raising both hands.
+Trafﬁc characteristics. Trafﬁc volume or density affects
+pedestrian [50] and driver behavior [29] signiﬁcantly. Essen-
+tially, the higher the density of trafﬁc, the lower the chance
+of pedestrians to cross [9]. This is particularly true when it
+comes to law compliance, i.e. pedestrians are less likely to
+cross against the signal (e.g. red light) if the trafﬁc volume
+is high. The effect of trafﬁc volume, however, is stronger on
+male pedestrians than women [51].
+The effects of vehicle characteristics such as vehicle size and
+vehicle color on pedestrian behavior have been investigated.
+Although vehicle color has not shown to have a measurable
+effect, vehicle size can inﬂuence crossing behavior in two
+ways. First, pedestrians tend to be more cautious when facing
+a larger vehicle [79]. Second, the size of the vehicle impacts
+pedestrian speed and distance estimation abilities. In an ex-
+periment involving 48 men and women, Caird and Hancock
+[88] reveal that as the size of the vehicle increases, there is a
+higher chance that people will underestimate its arrival time.
+When making a crossing decision, the vehicle type matters
+and can inﬂuence different genders differently. For example,
+compared to women, men are generally better in judging the
+type of vehicles and are more accurate at estimating the arrival
+time of vans and motorcycles [88]. In addition, pedestrians
+exhibit different waiting time when facing different types of
+vehicles, e.g. they tend to cross faster in front of passenger
+vehicles [81].
+A summary of the factors from the classical literature is
+illustrated in Fig. 6. Here we can see that more studies have
+been conducted on factors such as gender, group size, age
+and gap acceptance, compared to culture, vehicle size, right of
+way, and faith. Due to the emergence of intelligent transporta-
+tion systems and the availability of technology for collecting
+data, studies on factors such as communication, attention,
+pedestrian trajectory and culture have gained popularity in the
+past few years. However, a number of factors such as lighting,
+road conditions, vehicle type, past experience, social status,
+and pedestrian ﬂow are left unaddressed in recent works.
+B. Studies in the Context of Autonomous Driving
+Similar to classical studies, we divide behavioral studies
+involving autonomous vehicles into two groups of pedestrian
+and environmental factors. A summary of these factors and
+their connections can be found in Fig. 7.
+Studies concerning the social aspects of autonomous driving
+generally focus on two major factors, namely communication
+and attention. Regarding the necessity of communication, the
+autonomous driving community is divided. Millard [89] argues
+that the interaction between pedestrians and autonomous ve-
+hicles resembles, what he refers to as the game of “crosswalk
+chicken”. In a normal situation involving a human driver, if a
+pedestrian chooses to cross, they accept a large risk because,
+the norms permits not yielding to pedestrians, the driver might
+be distracted or assume the pedestrian would not intend to
+cross. According to Millard, in the case of autonomous driving
+the perceived risk of crossing is almost nonexistent because the
+pedestrian knows that the autonomous vehicle will stop, and
+as a result there is no need for any form of communication
+to reach an agreement with the vehicle. Using ﬁeld studies,
+Rothenbucher et al. [90] support the same argument and
+show that without communication and attention (the need
+for establishing eye contact), when facing an autonomous
+vehicle, pedestrians eventually adjust their behavior and cross
+the street. The result of this study, however, is questionable
+because the trials took place on a university campus where the
+speed limit was very low and the vehicle posed minimal threat
+to pedestrians. The subjects who were observed or participated
+in the interviews may also have heard about the experiment,
+or in general, had higher acceptance compared to general
+population for autonomous driving technologies.
+Overall, arguments in favor of communication necessity in
+autonomous driving are stronger. A number of studies relate
+
+--- Page 8 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+8
+Social Factors
+Imitation
+Sucha (2014)
+Dolphin (1970)
+Yagil (2000)
+Lefkowitz (1955)
+Social status
+Gheri (1963)
+Lefkowitz (1955)
+Group size
+Herwig (1965)
+Hemistra (1969)
+DiPietro (1970)
+Dolphin (1970)
+O’Flaherty (1972)
+Schioldborg (1976)
+Harrell (1991a)
+Harrell (1992)
+Yagil (2000)
+Sun (2002)
+Willis (2004)
+Rosenbloom (2009)
+Lefkowitz (1955)
+CYingzi Du (2015)
+Pedestrian flow
+O’Flaherty (1972)
+Wiedemann (1994)
+Lam (1995)
+Moore (1953)
+Social norms
+Johnston (1973)
+Wilde (1980)
+Evans (1998)
+Bjorklund (2005)
+Lindgren (2008)
+Gheri (1963)
+Risto (2017)
+Demographics
+Age
+Hamed (2001)
+Moore (1953)
+Jacobs (1967)
+Sjostedt (1969)
+Dolphin (1970)
+Harrell (1991)
+Harrell (1991a)
+Harrell (1992)
+Clay (1995)
+Evans (1998)
+Cohen (1955)
+Sun (2002)
+Willis (2004)
+Holland (2007)
+Ishaque (2008)
+Wang (2010)
+CYingzi Du (2015)
+Rasouli (2017)
+Jacobs (1967)
+Gender
+Hemistra (1969)
+DiPietro (1970)
+Dolphin (1970)
+Henderson (1972)
+Harrell (1991a)
+Caird (1994)
+Nowicki (1994)
+Evans (1998)
+Yagil (2000)
+Hamed (2001)
+Sun (2002)
+Willis (2004)
+Holland (2007)
+Walker (2007)
+Ishaque (2008)
+Wang (2010)
+Tom (2011)
+Gueguen (2015)
+Ren (2016)
+Moore (1953)
+Cohen (1955)
+Ped. State
+Trajectory
+Sucha (2017)
+Tian (2013)
+Hyman (2010)
+Schmidt (2009)
+Attention
+Sucha (2017)
+Rasouli (2017)
+Dey (2017)
+Ren (2016)
+Tom (2011)
+Wang (2010)
+Hyman (2010)
+Harrell (1991a)
+Harrell (1991)
+Schioldborg (1976)
+Hemistra (1969)
+Pedestrian speed
+Moore (1953)
+Tian (2013)
+Ishaque (2008)
+Willis (2004)
+Hamed (2001)
+Oudejans (1996)
+Wiedemann (1994)
+Crompton (1979)
+O’Flaherty (1972)
+DiPietro (1970)
+Sjostedt (1969)
+CYingzi Du (2015)
+Walking pattern
+Goldhammer (2014)
+Hyman (2010)
+Waiting time
+Wang (2010)
+Sun (2002)
+Hamed (2001)
+DiPietro (1970)
+Ped. Chars.
+Law compliance
+Sisiopiku (2003)
+Ishaque (2008)
+Chu (2004)
+Tom (2011)
+Rosenbloom (2009)
+Yagil (2000)
+Mortimer (1973)
+Jacobs (1967)
+Culture
+Risto (2017)
+Lindgren (2008)
+Clay (1995)
+Gupta (2016)
+Bjorklund (2005)
+Past experience
+Holland (2007)
+Hamed (2001)
+Nowicki (1994)
+Faith
+Rosenbloom (2004)
+Ped. Abilities
+Speed estimation
+Oudejans (1996)
+Sun (2015)
+Caird (1994)
+Distance estimation
+Oudejans (1996)
+Caird (1994)
+Sun (2015)
+Physical Context
+Road structure
+Risto (2017)
+Moore (1953)
+Jacobs (1967)
+Crompton (1979)
+Hamed (2001)
+Sisiopiku (2003)
+Willis (2004)
+Bjorklund (2005)
+Lavalette (2009)
+Tom (2011)
+Sucha (2014)
+CYingzi Du (2015)
+Weather
+Sucha (2017)
+Harrell (1991a)
+Sun (2015)
+Zebra crossing
+Sucha (2017)
+Moore (1953)
+Crompton (1979)
+Varhelyi (1998)
+Dey (2017)
+Signal
+Sucha (2017)
+Mortimer (1973)
+Lam (1995)
+Yagil (2000)
+Sisiopiku (2003)
+Ishaque (2008)
+Lavalette (2009)
+Tom (2011)
+Risto (2017)
+Street width
+Gheri (1963)
+Harrell (1991a)
+Oudejans (1996)
+Chu (2004)
+Ishaque (2008)
+Lavalette (2009)
+Rasouli (2017)
+Lighting
+Gheri (1963)
+Harrell (1991a)
+Ishaque (2008)
+Road conditions
+Harrell (1991)
+Harrell (1991a)
+Bjorklund (2005)
+Time of day
+Harrell (1991a)
+Hamed (2001)
+Willis (2004)
+Location
+Hamed (2001)
+Sisiopiku (2003)
+Right of way
+Tian (2013)
+Dynamic Factors
+Communication
+Risser (1985)
+Sucha (2017)
+Risto (2017)
+Rasouli (2017)
+Dey (2017)
+Wolf (2016)
+Gupta (2016)
+Gueguen (2015)
+Sucha (2014)
+Walker (2007)
+Varhelyi (1998)
+Nowicki (1994)
+Vehicle distance
+Sucha (2017)
+Sun (2015)
+Schmidt (2009)
+Caird (1994)
+Cohen (1955)
+Moore (1953)
+Vehicle speed
+Sucha (2017)
+Sun (2015)
+Hamed (2001)
+Clay (1995)
+DiPietro (1970)
+Cohen (1955)
+Moore (1953)
+Gap acceptance
+Rasouli (2017)
+Sucha (2014)
+Wang (2010)
+Schmidt (2009)
+Ishaque (2008)
+Das (2005)
+Sun (2002)
+Oudejans (1996)
+Harrell (1992)
+Henderson (1972)
+DiPietro (1970)
+Cohen (1955)
+Moore (1953)
+CYingzi Du (2015)
+Traffic Chars.
+Law enforcement
+Moore (1953)
+Gupta (2016)
+Vehicle size
+Das (2005)
+Traffic volume
+Jacobs (1967)
+DiPietro (1970)
+Harrell (1991)
+Harrell (1991a)
+Harrell (1992)
+Yagil (2000)
+Moore (1953)
+Sucha (2014)
+Sucha (2017)
+Vehicle type
+Caird (1994)
+Hamed (2001)
+Das (2005)
+Vehicle color
+Das (2005)
+Fig. 6. A circular dendrogram of the factors inﬂuencing pedestrian behavior and the classical studies that identiﬁed them. Leaf nodes represent the individual
+studies (identiﬁed by the ﬁrst author and year of publication) and internal nodes represent minor and major factors.
+to existing literature and past experience to support the role
+of communication [91], [92], [93], [94]. Muller [91] argues
+that identifying autonomous vehicles in trafﬁc is not always
+intuitive. Road users might recognize an autonomous vehicle
+as a traditional vehicle and expect certain behaviors from it. As
+for the need for communication, the author describes a busy
+pedestrian crossing where a driver might communicate his
+intention by moving forward slowly into the crowd. The author
+then raises concern regarding how an autonomous vehicle
+would behave in such a situation.
+The communication necessity can also be seen from a dif-
+ferent perspective. Prakken [93] emphasizes the importance of
+understanding communicational cues in obeying trafﬁc laws.
+He mentions that the current technology does not distinguish
+between the type of pedestrians which can be problematic
+when a law enforcement ofﬁcer is present in the scene for
+directing the trafﬁc. According to Prakken autonomous vehi-
+cles should be able to interpret and distinguish communication
+messages produced by law enforcement personnel and regular
+pedestrians.
+There are a number of empirical studies that support the
+role of communication and attention in autonomous driving.
+A survey conducted by the League of American Bicyclists
+[95] shows that besides issues related to technological ad-
+
+--- Page 9 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+9
+Fig. 7. Factors involved in pedestrian decision-making process when facing autonomous vehicles. The circles refer to the factors, the branches with solid lines
+indicate the sub-factors of each category and the dashed lines show the interconnection between different factors and arrows show the direction of inﬂuence.
+Fig. 8. Driver’s conditions used in the experiments conducted in [18].
+vancements, inability to communicate and establishing eye
+contact are among major reasons that increase pedestrians and
+bicyclists perceived risk when interacting with autonomous
+vehicles.
+Lagstrom and Lundgren [18], and, in a later study, Yang [96]
+evaluate the role of driver behavior when the vehicle is running
+autonomously. The authors used several scenarios of driver
+behavior when crossing an intersection including the driver
+making eye contact, staring straight at the front road, talking
+on the phone, reading a newspaper and sleeping (see Fig. 8). In
+these experiments, the vehicles were operated by drivers (who
+were hidden from the view of pedestrians) using a right-hand
+steering wheel. Observing pedestrians’ reactions, Lagstrom
+and Lundgren show that when the vehicle was stopping and
+the driver paid attention (made eye contact) to pedestrians,
+all pedestrians crossed the street. However, when the driver
+was busy on the phone, 20% of pedestrians did not cross and
+when the driver was reading a newspaper or not present in the
+vehicle, 60% of the pedestrians did not cross. In both studies
+surveys were conducted to measure the pedestrians’ level of
+perceived risk in each situation. The results show that when a
+form of attention (eye contact) was present, the pedestrians felt
+most comfortable. Yang [96] also adds that vehicle appearance
+impacts the level of pedestrians’ comfort. Her ﬁndings indicate
+that when the pedestrians could not see the driver (due to dark
+windows), they felt most uncomfortable.
+Matthews et al. [97] measure the importance of using
+an intent display in communication with pedestrians. The
+authors used a remotely controlled golf cart with and without
+an intent display mechanism. They observed that when the
+vehicle equipped with a display was encountering pedestrians,
+there was 38% improvement in resolving deadlocks. The
+authors show that the improvement can increase based on the
+pedestrians’ past experience. The group of participants who
+were familiarized with the communication technology prior to
+the experiment exhibited more trust in the vehicle.
+Although intent displays have been shown to improve the
+overall experience of pedestrians during interaction [97], [98],
+they don’t always seem to be very effective. In her studies,
+Yang [96] used a display to show “Safe to Cross” message
+to pedestrians. When interviewed by the experimenter, the
+participants responded that the display did not have a sig-
+niﬁcant effect on their crossing decision. In another study,
+Clamann et al. [99] found that pedestrians still focus on
+legacy factors such as vehicle speed and distance when making
+crossing decision. The use of the display only inﬂuenced
+12% of the participants’ decisions and overall increased the
+time of decision-making. In this context, however, the authors
+show that informative displays (e.g. with information about
+vehicle’s speed) compared to advisory displays (e.g. cross or
+not to cross signal) are more effective. The authors add that
+the traditional social and environmental factors such as age,
+gender road structure, waiting time and trafﬁc volume are still
+very important in the context of autonomous driving.
+Other forms of intention communication methods have also
+been examined. Chang et al. [100] propose the use of moving
+eyes installed at the front of the vehicles. Using experimental
+data collected from 15 participants, the authors show that more
+than 66% of participants made street crossing decision faster
+in the presence of eyes, and if the eyes were looking at the
+participants, this number rose to more than 86%. The empirical
+evaluation of this study, however, is limited to virtual reality
+
+--- Page 10 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+10
+Fig. 9. The vehicles used in [30], an aggressive looking BMW (left) and a
+friendly looking Renault (right).
+environment without any direct risk of accident.
+Mahadevan et al. [101] investigate various modalities of
+communication such as audio, visual, motion, etc. The authors
+note that in the absence of an explicit intent display mecha-
+nism, pedestrians rely on vehicle speed and distance to make
+crossing decision. As for different means of communication,
+pedestrians generally prefer LED sequence signals to LCD dis-
+plays and other modalities of communication such as auditory
+and physical cues. The authors show that the use of human-
+like features for communication such as animated faces on
+displays was not well-received by the participants. Overall, the
+authors recommend that a combination of modalities including
+visual, physical and auditory should be considered. They point
+out that there is no limit on where the informative cues are
+located and can be either on the vehicle or in the environment.
+It should be noted that although this study is very thorough in
+terms of evaluating different design approaches, its scope is
+very limited. Only 10 subjects participated in the ﬁnal phase
+of the study (Wizard of Oz phase) and the participants were all
+North American. Furthermore, the authors admit that culture
+can play a very important role in the modality and type of
+communication preference.
+Implicit forms of communication such as vehicle’s motion
+pattern (speed and distance) have also been investigated.
+Zimmerman et al. [98] show that abrupt acceleration behavior
+and short stopping distance by autonomous vehicles can be
+perceived as erratic behavior by pedestrians and negatively
+inﬂuence their crossing decision. The authors suggest that
+to be effective, a well-balanced acceleration and deceleration
+with sufﬁcient distance to other road users should be used
+by autonomous vehicles. In another study Beggiato et al.
+[102] examine the effect of vehicle’s braking action whereby
+the vehicle can communicate its intention to pedestrians. The
+authors argue that the interpretation of the signal may vary
+with respect to other factors such as time of day, vehicle
+speed, and age. For instance, older pedestrians generally make
+more conservative crossing decisions when the vehicle speed
+is lower.
+Moving away from communication, Deb et al. [24], and
+similarly Hulse et al. [103], argue that the perceived risk of
+autonomous vehicles may vary depending on pedestrians’ age,
+gender, past experience, level of law compliance, location, and
+social norms. For example, younger male pedestrians, people
+with higher acceptance for innovation and people living in
+urban environments are more receptive of autonomous driving
+technology. People with trafﬁc violation history also tend to
+be more comfortable when crossing in front of autonomous
+vehicles.
+Dey et al. [30] evaluate the impact of vehicle type on
+the perceived risk of autonomous vehicles. The authors use
+two different types of vehicles, a BMW with an aggressive
+look and a Renault with a friendlier look (see Fig. 9). They
+report that the vehicle speed and distance compared to vehicle
+size and appearance play a more dominant role in crossing
+decision. Apart from dynamic factors, roughly 30% of the
+participants claimed that they merely relied on the behavior
+of the car when making crossing decision, whereas the rest
+mentioned that vehicle size was important to them rationalizing
+that the smaller the vehicle, the higher their chance of moving
+out of its way. The majority of the participants agreed that
+the friendliness of the vehicle design did not factor in their
+decision-making process.
+Evaluating the impact of autonomous vehicle behavior on
+pedestrian crossing, Jayaraman et al. [104], argue that the
+presence of trafﬁc signals at crosswalks has little impact
+on pedestrian crossing decision and is highly determined by
+autonomous vehicle’s driving behavior. The implication of
+these ﬁndings, however, is limited because the evaluation was
+performed only in a virtual reality environment.
+Fig. 10 summarizes all of our ﬁndings on pedestrian behav-
+ior studies involving autonomous vehicles. At ﬁrst glance, we
+can see that, compared to classical studies, pedestrian behavior
+in the context of autonomous driving is fairly understudied.
+The majority of research currently focuses on the role of
+communication, intent display, perceived risk and attention,
+while factors such as signal, location, road structure, gap
+acceptance, and social norms are rarely addressed. More
+importantly, some of the factors widely studied in classical
+works, namely group size, pedestrian speed, and street width,
+have not been evaluated in the context of autonomous driving.
+IV. INTERACTION BETWEEN PEDESTRIANS AND
+AUTONOMOUS VEHICLES: PRACTICAL APPROACHES
+A. Communicating with Pedestrians
+As mentioned in the previous section, the changes in motion
+can be used as one of the means of communication between
+pedestrian and autonomous vehicles [98], [82]. Here, however,
+we focus on explicit forms of communication some of which
+were discussed earlier.
+One way of direct communication with trafﬁc is via radio
+signals. Vehicle to Vehicle (V2V) and Vehicle to Infrastruc-
+ture (V2I), which are collectively known as V2X (or Car2X
+in Europe), are examples of such technologies [16], [105].
+These methods are essentially a real-time short-range wireless
+data exchange between the entities allowing them to share
+information regarding their pose, speed, and location [106].
+Recent developments extend the idea of V2X communica-
+tion to connect Vehicles to Pedestrians (V2P). For instance,
+Honda proposes to use pedestrians’ smartphones to broadcast
+their whereabouts as well as to receive information regarding
+the vehicles in their proximity. Using this method, both smart
+vehicles and pedestrians are aware of each other’s movements,
+and if necessary, receive warning signals when an accident
+is imminent [107]. Hussein et al. [17] propose the use of
+a smartphone application that broadcasts the position of the
+pedestrian and receives the location of nearby autonomous
+
+--- Page 11 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+11
+Demographics
+Age
+Clamann (2017)
+Hulse (2018)
+Beggiato (2017)
+Deb (2017)
+Gender
+Clamann (2017)
+Deb (2017)
+Hulse (2018)
+Dynamic Factors
+Vehicle
+speed
+Dey (2017)
+Mahadevan (2017)
+Clamann (2017)
+Beggiato (2017)
+Zimmermann (2016)
+Communication
+Jayaraman (2018)
+Yang (2017)
+Prakken (2017)
+Meeder (2017)
+Matthews (2017)
+Mahadevan (2017)
+Bikeleague (2014)
+Clamann (2017)
+Chang (2017)
+Beggiato (2017)
+Zimmermann (2016)
+Millard (2016)
+Muller (2016)
+Rothenbucher (2016)
+Wang (2018)
+Vehicle
+distance
+Mahadevan (2017)
+Dey (2017)
+Clamann (2017)
+Zimmermann (2016)
+Gap
+acceptance
+Beggiato (2017)
+Ped. Chars.
+Past
+experience
+Deb (2017)
+Matthews (2017)
+Hulse (2018)
+Law
+compliance
+Prakken (2017)
+Deb (2017)
+Culture
+Mahadevan (2017)
+Ped. State
+Waiting time
+Clamann (2017)
+Attention
+Bikeleague (2014)
+Lagstorm (2015)
+Yang (2017)
+Chang (2017)
+Rothenbucher (2016)
+Muller (2016)
+Millard (2016)
+Perceived
+risk
+Dey (2017)
+Jayaraman (2018)
+Hulse (2018)
+Deb (2017)
+Millard (2016)
+Lagstorm (2015)
+Bikeleague (2014)
+Physical
+Context
+Signal
+Jayaraman (2018)
+Lighting
+Beggiato (2017)
+Road structure
+Clamann (2017)
+Location
+Deb (2017)
+Social Factors
+Social norms
+Deb (2017)
+Traffic Chars.
+Intent display
+Yang (2017)
+Lagstorm (2015)
+Zimmermann (2016)
+Chang (2017)
+Clamann (2017)
+Mahadevan (2017)
+Matthews (2017)
+Traffic volume
+Clamann (2017)
+appearance
+Vehicle
+Dey (2017)
+Yang (2017)
+Vehicle size
+Dey (2017)
+Law
+enforcement
+Prakken (2017)
+Fig. 10. A circular dendrogram of the factors inﬂuencing pedestrian behavior and the autonomous driving studies that identiﬁed them. Leaf nodes represent
+the individual studies (identiﬁed by the ﬁrst author and year of publication) and internal nodes represent minor and major factors.
+vehicles. The application then calculates and predicts the
+location and time of the collision, and if the pedestrian is in
+danger, sends a warning signal. Gordon et al. [108] patented a
+wearable sensor technology for pedestrians to receive warning
+signals from autonomous vehicles.
+In spite of their effectiveness in preventing accidents, V2P
+technologies raise a number of concerns one of which is the
+privacy issues associated with sharing road users’ personal
+information [109]. Moreover, studies show that a large number
+of pedestrians are reluctant to use V2P technologies claiming
+that these shift the responsibility of potential accidents to
+pedestrians and away from autonomous vehicles [95].
+Recent research has been focusing on different modalities of
+communication. The use of displays is a common technique
+to transmit a message [110], [98], [101]. Such displays can
+either transmit informative messages, for instance, the speed
+of the vehicle [99] or intention of the vehicle [97], or they can
+be advisory, meaning that they suggest a course of action to
+pedestrians, e.g. a sign indicating cross/not to cross [99], [8]
+(see Fig. 11e).
+In [18] the authors recommend the use of an array of
+LED lights on top of the windshield (Fig. 11c) to transmit
+messages. For example, when the middle lights are on, it
+means the vehicle is in autonomous mode, and various lighting
+up patterns indicate whether the car is yielding or is about
+to move. An LED-like display, called AutonoMI, is proposed
+by Graziano [111]. When the vehicle encounters a pedestrian,
+the part of the LED array closest to the pedestrian lights up,
+acknowledging that the pedestrian is recognized. When the
+pedestrian begins crossing, the array follows the pedestrian to
+assure them that they are still being seen (see Fig. 11d).
+A combination of LEDs with other communication modal-
+ities have been investigated. Florentine et al. [112] use color
+LEDs in conjunction with an audio module to cast warning
+signals. Siripanich [113] combines LED lights with advisory
+signs to simultaneously inform and advise pedestrians. In
+addition to LED lights and audio signals, Mahadevan et al.
+[101] recommend the use of a physical signal such as a moving
+
+--- Page 12 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+12
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+Fig. 11.
+Different concepts of communication for autonomous vehicles. a)
+Mercedes-Benz zebra crossing projection [19], b) Mitsubishi forward indicator
+[115], c) LEDs indicating yield [18], d) AutonoMI pedestrian detection and
+tracking indicator [111], e) advisory display [99], and f) AEVITA moving eye
+concept [116] (source [46]).
+robotic hand attached to the vehicle.
+Informative signals regarding the intention of the vehicle
+can also be displayed on the road surface using projectors
+[114], [115]. Mitsubishi [115] introduces road-illuminating
+directional indicator which projects large, easy-to-understand
+animated illuminations on road surfaces indicating the in-
+tention of the vehicle such as forward or reverse driving
+(see Fig. 11b). Mercedes-Benz, in their most recent concept
+autonomous vehicle (as illustrated in Fig. 11a), uses a combi-
+nation of techniques including series of LED lights at the rear
+end of the car to ask other vehicles to stop/slow or inform them
+if a pedestrian is crossing, a set of LED ﬁelds at the front to
+indicate whether the vehicle is in autonomous or manual mode
+and a projector that can project zebra crossing on the ground
+for pedestrians [19].
+To make the communication with pedestrians more human-
+like, some researchers propose the use of human-like eyes on
+vehicles [100], [116]. For example, a moving-eyes approach
+is used in [116] in which the vehicle is able to detect the
+gaze of the pedestrians, and, using rotatable front lights, it
+establishes (the feeling of) eye contact with the pedestrians
+and follow their gaze (see Fig. 11f). Some researchers also go
+so far as suggesting to use a humanoid robot in the driver seat
+to perform human-like gestures or body movements during
+communication [117].
+Roadways can also be used to transmit the intentions and
+whereabouts of the road users. During recent years, the con-
+cept of smart roads has been gaining popularity in the ﬁeld of
+intelligent driving. Smart roads are equipped with sensors and
+lighting equipment, which can sense events such as vehicle or
+pedestrian crossing, changes in weather conditions or various
+hazards that can potentially result in accidents. Through the
+use of visual effects, the roads then inform the road users about
+the potential threats [120].
+Today, a few instances of smart roads have been imple-
+mented. Last year Umbrellium unveiled a new interactive
+crossing in London equipped with LEDs which ﬂash various
+warning signals to distracted road users or display zebra
+crossing lines for pedestrians [118]. Studio Rosegaarde [119]
+implemented various types of smart roads in Netherlands such
+as the Van Gogh path which highlights traversable paths for
+pedestrians or glowing lines which highlights the boundaries
+of highways at night (see Fig. 12).
+B. Understanding Pedestrians’ Intentions
+In intelligent driving systems, intention estimation tech-
+niques have been widely used for predicting the behavior of
+the drivers [121], [15], other drivers [122], [123], pedestrians
+[124], [125] or combinations of any of these three [126], [127]
+(for a more detailed list of these techniques see [128]). In
+this section, however, we only discuss the pedestrian intention
+estimation methods in the context of intelligent transportation
+systems mentioning a few techniques used in mobile robotics.
+Typically, intention estimation algorithms are very similar
+to object tracking systems. One’s intention can be estimated
+by looking at their past and current behavior including their
+dynamics, current activity and context.
+There are a number of works that purely rely on data mean-
+ing that they attempt to model pedestrian walking direction
+with the assumption that all relevant information is known
+to the system. These models either base their estimation on
+dynamic information such as the position and velocity of
+pedestrians [20], or in addition, take into account the contex-
+tual information of the scene such as pedestrian signal state,
+whether the pedestrian is walking alone or in a group, and their
+distance to the curb [129]. In a work by Brouwer et al. [130],
+the authors investigate the role of different types of informa-
+tion in collision estimation. More speciﬁcally, they consider
+the following four factors: dynamics (directions pedestrian can
+potentially move to and time to collision), physical elements
+(pedestrian’s moving direction and distance to the car and
+velocity), awareness (in terms of head orientation towards the
+vehicle), and obstacles. The authors show that, in isolation,
+physical elements and awareness are the best predictors of
+collisions, and combining all four factors together, the best
+prediction results can be achieved.
+Vision-based intention estimation algorithms often treat
+the problem as tracking a dynamic object by taking into
+account the changes in the position, velocity and orientation
+of pedestrians [55], [131] or by considering the changes in
+their 3D pose [132]. For instance, in [133], the authors use
+a neural network architecture to make a binary ‘stop/go’
+decision given the current position of pedestrians. Kooij et
+al. [124] employ a dynamical Bayesian model, which takes
+as input the current position of the pedestrian and, based on
+their motion history, infers in which direction the pedestrian
+might move next. In addition to pedestrian position, Volz et
+al. [134] use information regarding the pedestrian’s distance
+to the curb and the car as well as the pedestrian’s velocity at
+the time. This information is fed into an LSTM network to
+infer whether the pedestrian is going to cross the street.
+
+--- Page 13 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+13
+Fig. 12. Examples of smart road concept. from left to right Umbrellium smart crossing [118], and Studio Rosegaarde Van Gogh path and highway glowing
+lines [119].
+In robotics, intention prediction algorithms are used as
+a means of improving trajectory selection and navigation.
+Besides dynamic information, these techniques assume a po-
+tential goal for pedestrians based on which their trajectories
+are predicted [135], [136].
+Merely relying on pedestrian trajectory and dynamic factors
+in estimation one’s intention is subject to error. For example,
+pedestrians may start walking suddenly, change their direction
+abruptly or stop. Moreover, observed pedestrians may be
+stationary or even walk alongside the street while checking on
+trafﬁc to cross. In such scenarios, a trajectory-based algorithm
+may ﬂag the pedestrians as no collision threat even though
+they might be crossing shortly [29].
+In some recent works, social context is exploited to esti-
+mate intention and deal with shortcomings of trajectory-based
+approaches. For instance, pedestrian awareness is measured
+by pedestrians’ head orientation relative to the vehicle [140],
+[144], [147]. Kooij et al. [140] employ a graphical model
+that takes into account factors such as pedestrian trajectory,
+distance to the curb and awareness (see Fig. 13). Here, they
+argue that the pedestrian looking towards the car is a sign that
+they noticed the car and is less likely to cross the street. This
+model, however, is based on data collected from a scripted
+experiment which means that the participants were instructed
+to perform certain actions, and all videos were recorded in a
+narrow non-signalized street.
+For intention estimation, social forces, which refer to peo-
+ple’s tendency to maintain a certain distance from one another,
+are also considered. In their simplest form, social forces can be
+treated as a dynamic navigation problem in which pedestrians
+choose the path that minimizes the likelihood of colliding
+with others [137]. Social forces also reﬂect the relationship
+between pedestrians, which in turn can be used to predict
+their future behavior. For instance, Madrigal et al. [141] deﬁne
+two types of social forces: repulsion and attraction. In this
+interpretation, for example, if two pedestrians are walking
+close to one another for a period of time, it is more likely
+that they are interacting, therefore the tracker estimates their
+future states close together.
+Apart from the explicit tracking of pedestrian behavior, a
+number of works try to solve the intention estimation problem
+using various classiﬁcation approaches. Kohler et al. [125],
+via an SVM algorithm, classify pedestrian posture as ‘about to
+cross’ or ‘not crossing’. The postures are extracted in the form
+of silhouette body models from motion images generated by
+background subtraction. In the extensions of this work [138],
+[142], the authors use a HOG-based detection algorithm to
+Fig. 13. An example of pedestrian intention estimation using contextual cues.
+Source: [140].
+ﬁrst localize the pedestrian, and then, using stereo information,
+to extract the body silhouette from the scene. To account
+for the previous action, they perform the same process for
+N consecutive frames and superimpose all silhouettes into a
+single image. The ﬁnal image is used to classify whether the
+pedestrian is going to cross.
+Rangesh et al. [148] estimate the pose of pedestrians in
+the scene, and identify whether they are holding cell phones.
+The combination of the pedestrians’ pose and the presence
+of a cellphone is used to estimate the level of pedestrians
+engagement in their devices. In [14], the authors use various
+contextual information such as characteristics of the road, the
+presence of trafﬁc signals and zebra crossing lines in conjunc-
+tion with pedestrians’ state to estimate whether they are going
+to cross. In this method, two neural network architectures
+are used. One network is responsible for detecting contextual
+elements in the scene and the other for identifying whether the
+pedestrian is walking/standing and looking/not-looking. The
+scores from both networks are then fed to a linear SVM to
+classify the intention of the pedestrians. The authors report
+that by taking into account the context, intention estimation
+accuracy can be improved by up to 23%.
+Schneemann et al. [146] consider the structure of the street
+as a factor inﬂuencing crossing behavior. The authors generate
+an image descriptor in the form of a grid which contains the
+following information: street-zones in the scene including ego-
+zone (the vehicle’s lane), non-ego lanes (other street lanes),
+sidewalks, and mixed-zones (places where cars may park),
+crosswalk occupancy (the position of scene elements with
+respect to the current position of the pedestrians), and waiting
+area occupancy (occupancy of waiting areas such as bus stops
+with respect to the pedestrian’s orientation and position). Such
+descriptors are generated for a number of consecutive frames
+
+--- Page 14 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+14
+TABLE I
+A SUMMARY OF INTENTION ESTIMATION ALGORITHMS. ABBREVIATIONS: Factors: PP = PEDESTRIAN POSITION, PV = PEDESTRIAN VELOCITY, SC =
+SOCIAL CONTEXT, PPS = PEDESTRIAN POSE, SS = STREET STRUCTURE, MH = MOTION HISTORY, HO = HEAD ORIENTATION, G = GOAL, GS =
+GROUP SIZE, SI = SIGNAL, DC = DISTANCE TO CURB, DCR = DISTANCE TO CROSSWALK, DV = DISTANCE TO VEHICLE, VD = VEHICLE DYNAMICS,
+Inference: GD = GRADIENT DESCENT, PF = PARTICLE FILTER, GP = GAUSSIAN PROCESS, NN = NEURAL NETWORK, Prediction Type: TRAJ =
+TRAJECTORY, CROSS = CROSSING, Data Type: IMG = IMAGE, COL = COLOR, VID = VIDEO, GR = GREY, ST = STEREO, I = INFRARED, Camera Position:
+F = FRONT VIEW, BEV = BIRD’S EYE VIEW, MULT = MULTIPLE VIEWS, FP = FIXED POSITION ON-SITE.
+Model
+Year
+Factors
+Inference
+Pred. Type
+Data Type
+Cam Position
+LTA [137]
+2009
+PP,PV,G,SC
+GD
+Traj
+Vid+Col
+BeV+FP
+Early-Det [125]
+2012
+PPs
+SVM
+Cross
+Img+Col
+F+FP
+IAPA [135]
+2013
+PP,PV,G
+MDP
+Traj,Cross
+Vid+Col
+F
+Evasive [138]
+2013
+PPs,MH
+SVM
+Cross
+St+Vid+Gr
+F+FP
+Early-Pred [139]
+2014
+PP,PV
+SVM
+Traj
+Vid+Gr
+Mult+FP
+Veh-Perspective [124]
+2014
+PP,PV,VD
+BN
+Traj
+Vid+Gr
+F
+Context-Based [140]
+2014
+PP,SS,HO,VD
+BN
+Cross
+Vid+Gr
+F
+Intent-Aware [141]
+2014
+PP,PV,SC
+BN
+Traj
+Vid+Col
+F
+Path-Predict [132]
+2014
+PP,PV,PPs
+BN
+Traj,Pose
+Vid+Col
+F
+MMF [20]
+2015
+PP,PV,SC
+CRF
+Traj
+Vid+Gr
+F
+Intend-MDP [136]
+2015
+PP,PV,G,VD
+MDP
+Traj
+Vid+Col+L
+F
+SVB [142]
+2015
+PPs,MH
+SVM
+Cross
+St+Vid+Gr
+F+FP
+PE-PC [129]
+2015
+PP,PV,GS,SI
+BN
+Traj,Cross
+Vid+Gr
+F
+Traj-Pred [131]
+2015
+PP,PV
+PF
+Traj
+Vid+Col
+F
+FRE [143]
+2015
+PV,DC,DCr,DV,VD
+SVM
+Cross
+Vid+L
+F
+Eval-PMM [130]
+2016
+PP,PV,HO
+BN
+Traj
+Vid+Col
+F
+ECR [144]
+2016
+PP,PV,HO
+BN
+Collision
+Vid+Col+Gr
+F
+HI-Robot [145]
+2016
+MH
+GP
+Collision
+Vid+L
+F
+CBD [146]
+2016
+PP,SS,MH
+SVM
+Cross
+Vid+Col
+F
+DDA [134]
+2016
+DC,DCr,DV,VD
+NN
+Cross
+Vid+L
+F
+DFA [147]
+2017
+PP,PV,MH
+DFA
+Cross
+Vid+I
+F
+Cross-Intent [14]
+2017
+PPs,SS,HO
+NN,SVM
+Cross
+Vid+Col
+F
+Proxy-Learn [133]
+2017
+PP
+NN
+Collision
+Img+Col
+F
+Ped-Phones [148]
+2018
+PPs
+SVM,BN
+Pose
+Vid+Col
+F
+and concatenated to form the ﬁnal descriptor. At the end,
+an SVM model is used to decide how likely the pedestrian
+is to cross. Despite its sophistication for exploiting various
+contextual elements, this algorithm does not perform any
+perceptual tasks to identify the aforementioned elements and
+simply assumes they are all known in advance.
+In the context of robotic navigation, Park et al. [145] classify
+observed pedestrian trajectories to measure the imminence of
+collisions. The authors recorded over 2.5 hours of videos of the
+pedestrians who were instructed to engage in various activities
+with the robot (e.g. approaching the robot for interaction or
+simply blocking its way). Using a Gaussian process, the tra-
+jectories were then classiﬁed into blocking and non-blocking.
+Table I gives a summary of the papers discussed in this
+section. Overall, there is no particular trend in the type of
+information (e.g. pedestrian dynamics or contextual informa-
+tion) utilized for estimating pedestrian crossing decision. One
+possible reason could be the availability and type of data used
+for training intention estimation algorithms.
+To date, there are very few publicly available datasets
+that are tailored to pedestrian intention estimation applica-
+tions. Pedestrian detection datasets such as Caltech [149] or
+KITTI [150] are often used for predicting crossing behavior.
+These datasets contain a large number of pedestrian samples
+with bounding box annotations and temporal correspondences
+allowing one to detect and track pedestrians in multiple
+frames. Some datasets also have added contextual information
+particularly for pedestrian crossing behavior understanding.
+For instance, Daimler-Path [151] and Daimler-Intent [140]
+contain pedestrian head orientation information. A more recent
+dataset, JAAD [38], in addition to a large number of pedestrian
+samples (over 2700) with bounding boxes, is annotated with
+detailed contextual information, e.g. weather condition, street
+structure, and delineation, as well as pedestrian characteristics
+and behavioral information, e.g. demographics, group size,
+pedestrian state and communication cues.
+V. WHAT’S NEXT
+In this section, we will discuss open problems mentioned
+in the paper thus far.
+1) Classical studies of pedestrian behavior: We identiﬁed
+38 factors that can potentially impact the way pedestrians
+behave. Some of these factors have been studied more than
+the others (see Fig. 6) such as age, gender, group size and
+gap acceptance. In the literature, there is a consensus about
+the inﬂuence of the majority of these factors, for example,
+how group size inﬂuences gap acceptance or how individuals
+behave based on their demographics.
+However, often the results presented by these studies are
+contradictory especially the ones on topics such as communi-
+cation, the inﬂuence of imitation, the role of attention, waiting
+time inﬂuence on gap acceptance, etc. Although some of
+these contradictions can be explained by the differences in
+the methods of studies, we believe that the main reason is
+the variations in culture, time of study and interrelationships
+between the factors.
+Culture can inﬂuence pedestrian behavior in many ways.
+The studies often are conducted in different geographical
+locations where culture and social norms can be quite different.
+This means a number of these studies have to be reproduced
+in different regions to account for cultural differences.
+
+--- Page 15 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+15
+Changes in socioeconomic and technological factors also
+inﬂuence trafﬁc behavior. For example, compared to the 1950s
+or 1960s, today vehicles are much safer, roads are built and
+maintained better, the number of vehicles and pedestrians have
+increased signiﬁcantly, and trafﬁc laws have been changed, all
+of which change trafﬁc dynamics. To account for modern time
+pedestrian behavior, some of these studies have to be repeated.
+As illustrated in Fig. 5, there is a strong interrelationship
+between factors that inﬂuence pedestrian behavior. This means
+that only studying a small subset of these factors may not
+capture the true underlying reasons behind pedestrian crossing
+decision. Therefore to avoid fallacies when reasoning about
+pedestrian behavior, studies have to be multi-modal and ac-
+count for chain effects that factors might have on each other.
+2) Pedestrian behavior and autonomous vehicles: In recent
+years behavioral studies in the context of autonomous vehicles
+have gained momentum resulting in a number of published
+works on pedestrian behavior towards autonomous cars. The
+number of these studies, however, is still relatively small,
+compared to classical studies. Although classical studies have
+a number of implications for autonomous driving systems, it is
+reasonable to expect that pedestrians might behave differently
+when facing autonomous vehicles. This means more studies
+of similar nature to classical studies have to be conducted
+involving autonomous vehicles.
+The scope of the majority of behavioral studies involving
+autonomous vehicles is also very limited, both in terms of
+sample size (often less than 100) and demographics of par-
+ticipants (e.g. university students). As a result, some of these
+studies have reported very contradictory ﬁndings. To be useful
+for the design of autonomous vehicles, these works have to be
+conducted on a much larger scale, and of course, follow the
+same considerations as classical behavior studies.
+3) Communicating with road users: Designing interfaces
+for autonomous vehicles in order to communicate with pedes-
+trians is an ongoing research problem. One of the main
+questions to answer is what modality of communication is
+most effective. Unfortunately, the majority of the research in
+this ﬁeld fails to address this issue. For example, some studies
+focus on whether any form of communication is important
+or compare different strategies within the same modality (e.g.
+informative vs advisory LCDs or how to light up LED lights).
+There are very few studies addressing communication mech-
+anisms across different modalities, and if so, their empirical
+evaluation is limited to a sample size of no more than 10
+participants. This points to the need for studies in a larger
+scale using human participants with diverse background.
+4) Understanding pedestrians’ intention: The current in-
+tention estimation algorithms are very limited in terms of
+using various contextual information and often do not involve
+necessary visual perception algorithms to analyze the scenes.
+In addition, data used in these algorithms is either scripted or
+not sufﬁciently diverse to include various trafﬁc scenarios. To
+be effective, these algorithms should be able to, ﬁrst, identify
+the relevant elements in the scene, second, reason about the
+interconnections between these elements, and third, infer the
+upcoming actions of the road users.
+In addition, these systems should be universal in a sense
+that they can be used in various trafﬁc scenarios with different
+street structures, trafﬁc signals, crosswalk conﬁgurations, etc.
+To facilitate this objective, the ﬁrst step is to collect behav-
+ioral data under various trafﬁc conditions and from different
+geographical locations.
+ACKNOWLEDGMENT
+This work was supported by the Natural Sciences and En-
+gineering Research Council of Canada (NSERC), the NSERC
+Canadian Field Robotics Network (NCFRN), the Air Force
+Ofﬁce for Scientiﬁc Research (USA), and the Canada Research
+Chairs Program through grants to JKT.
+REFERENCES
+[1] T. Winkle, “Safety beneﬁts of automated vehicles: Extended ﬁndings
+from accident research for development, validation and testing,” in
+Autonomous Driving, 2016, pp. 335–364.
+[2] T. Litman, “Autonomous vehicle implementation predictions,” Victoria
+Transport Policy Institute, vol. 28, 2014.
+[3] A. Rasouli, I. Kotseruba, and J. K. Tsotsos, “Understanding pedestrian
+behavior in complex trafﬁc scenes,” IEEE Transactions on Intelligent
+Vehicles, vol. 3, no. 1, pp. 61–70, 2018.
+[4] I. Wolf, “The interaction between humans and autonomous agents,” in
+Autonomous Driving, 2016, pp. 103–124.
+[5] S.
+E.
+Anthony,
+“The
+trollable
+self-driving
+car,”
+On-
+line,
+2017-05-30.
+[Online].
+Available:
+http://www.slate.com/
+articles/technology/future tense/2016/03/google self driving cars
+lack a human s intuition for what other drivers.html
+[6] M.
+Richtel,
+“Google’s
+driverless
+cars
+run
+into
+problem:
+Cars
+with
+drivers,”
+Online,
+2017-05-30.
+[Online].
+Available:
+https:
+//www.nytimes.com/2015/09/02/technology/personaltech/google-says-
+its-not-the-driverless-cars-fault-its-other-drivers.html? r=2
+[7] M. McFarland, “Robots hit the streets – and the streets hit back,”
+Online, 2017-05-30. [Online]. Available: http://money.cnn.com/2017/
+04/28/technology/robot-bullying/
+[8] Daimler, “Autonomous concept car smart vision EQ fortwo: Welcome
+to the future of car sharing,” Online, 2014, 2017-06-3. [Online].
+Available:
+http://media.daimler.com/marsMediaSite/en/instance/ko/
+Autonomous-concept-car-smart-vision-EQ-fortwo-Welcome-to-the-
+future-of-car-sharing.xhtml?oid=29042725
+[9] M. M. Ishaque and R. B. Noland, “Behavioural issues in pedestrian
+speed choice and street crossing behaviour: A review,” Transport
+Reviews, vol. 28, no. 1, pp. 61–85, 2008.
+[10] A. Willis, N. Gjersoe, C. Havard, J. Kerridge, and R. Kukla, “Human
+movement behaviour in urban spaces: Implications for the design
+and modelling of effective pedestrian environments,” Environment and
+Planning B: Planning and Design, vol. 31, no. 6, pp. 805–828, 2004.
+[11] W. A. Harrell, “Factors inﬂuencing pedestrian cautiousness in crossing
+streets,” The Journal of Social Psychology, vol. 131, no. 3, pp. 367–
+372, 1991.
+[12] J. Cohen, E. Dearnaley, and C. Hansel, “The risk taken in crossing a
+road,” Journal of the Operational Research Society, vol. 6, no. 3, pp.
+120–128, 1955.
+[13] G. Jacobs and D. G. Wilson, “A study of pedestrian risk in crossing
+busy roads in four towns,” Rrl Reports, Road Research Lab/UK/, 1967.
+[14] A. Rasouli, I. Kotseruba, and J. K. Tsotsos, “Are they going to cross?
+A benchmark dataset and baseline for pedestrian crosswalk behavior,”
+in International Conference on Computer Vision (ICCV), 2017.
+[15] P. Molchanov, S. Gupta, K. Kim, and K. Pulli, “Multi-sensor system for
+driver’s hand-gesture recognition,” in IEEE International Conference
+and Workshops on Automatic Face and Gesture Recognition (FG),
+vol. 1, 2015, pp. 1–8.
+[16] L. Hobert, A. Festag, I. Llatser, L. Altomare, F. Visintainer, and
+A. Kovacs, “Enhancements of V2X communication in support of
+cooperative autonomous driving,” IEEE Communications Magazine,
+vol. 53, no. 12, pp. 64–70, 2015.
+[17] A. Hussein, F. Garc´ıa, J. M. Armingol, and C. Olaverri-Monreal,
+“P2V and V2P communication for pedestrian warning on the basis
+of autonomous vehicles,” in ITSC, 2016, pp. 2034–2039.
+[18] T. Lagstrom and V. M. Lundgren, “AVIP-autonomous vehicles in-
+teraction with pedestrians,” Master’s thesis, Chalmers University of
+Technology, Gothenborg, Sweden, 2015.
+
+--- Page 16 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+16
+[19] “Overview:
+Mercedes-Benz
+F
+015
+luxury
+in
+motion,”
+Online, 2017-06-30. [Online]. Available: http://media.daimler.com/
+marsMediaSite/en/instance/ko/Overview- Mercedes- Benz- F- 015-
+Luxury-in-Motion.xhtml?oid=9904624
+[20] A. T. Schulz and R. Stiefelhagen, “A controlled interactive multiple
+model ﬁlter for combined pedestrian intention recognition and path
+prediction,” in ITSC, 2015, pp. 173–178.
+[21] G. Wilde, “Immediate and delayed social interaction in road user
+behaviour,” Applied Psychology, vol. 29, no. 4, pp. 439–460, 1980.
+[22] J. M. Price and S. J. Glynn, “The relationship between crash rates
+and drivers’ hazard assessments using the connecticut photolog,” in
+The Human Factors and Ergonomics Society Annual Meeting, vol. 44,
+no. 20, 2000, pp. 3–263.
+[23] D. Crundall, “Driving experience and the acquisition of visual infor-
+mation,” Ph.D. dissertation, University of Nottingham, 1999.
+[24] S. Deb, L. Strawderman, D. W. Carruth, J. DuBien, B. Smith, and T. M.
+Garrison, “Development and validation of a questionnaire to assess
+pedestrian receptivity toward fully autonomous vehicles,” Transporta-
+tion Research Part C: Emerging Technologies, vol. 84, pp. 178–195,
+2017.
+[25] J. M. Sullivan and M. J. Flannagan, “Differences in geometry of pedes-
+trian crashes in daylight and darkness,” Journal of Safety Research,
+vol. 42, no. 1, pp. 33–37, 2011.
+[26] R. Risser, “Behavior in trafﬁc conﬂict situations,” Accident Analysis &
+Prevention, vol. 17, no. 2, pp. 179–197, 1985.
+[27] A. Tom and M.-A. Grani´e, “Gender differences in pedestrian rule com-
+pliance and visual search at signalized and unsignalized crossroads,”
+Accident Analysis & Prevention, vol. 43, no. 5, pp. 1794–1801, 2011.
+[28] M. Lefkowitz, R. R. Blake, and J. S. Mouton, “Status factors in
+pedestrian violation of trafﬁc signals.” The Journal of Abnormal and
+Social Psychology, vol. 51, no. 3, p. 704, 1955.
+[29] S. Schmidt and B. F¨arber, “Pedestrians at the kerb–recognising the
+action intentions of humans,” Transportation Research Part F: Trafﬁc
+Psychology and Behaviour, vol. 12, no. 4, pp. 300–310, 2009.
+[30] D. Dey, M. Martens, B. Eggen, and J. Terken, “The impact of
+vehicle appearance and vehicle behavior on pedestrian interaction with
+autonomous vehicles,” in International Conference on Automotive User
+Interfaces and Interactive Vehicular Applications, 2017, pp. 158–162.
+[31] D. Clay, “Driver attitude and attribution: implications for accident
+prevention,” Ph.D. dissertation, Cranﬁeld University, 1995.
+[32] M. Reed, “Intersection kinematics: a pilot study of driver turning
+behavior with application to pedestrian obscuration by a-pillars,” Uni-
+versity of Michigan, Tech. Rep., 2008.
+[33] I. Kotseruba, A. Rasouli, and J. K. Tsotsos, “Joint attention in au-
+tonomous driving (JAAD),” arXiv:1609.04741, 2016.
+[34] C. M. DiPietro and L. E. King, “Pedestrian gap-acceptance,” Highway
+Research Record, no. 308, 1970.
+[35] N. W. Heimstra, J. Nichols, and G. Martin, “An experimental method-
+ology for analysis of child pedestrian behavior,” Pediatrics, vol. 44,
+no. 5, pp. 832–838, 1969.
+[36] V. L. Neale, T. A. Dingus, S. G. Klauer, J. Sudweeks, and M. Goodman,
+“An overview of the 100-car naturalistic study and ﬁndings,” National
+Highway Trafﬁc Safety Administration, no. 05-0400, 2005.
+[37] R. Eenink, Y. Barnard, M. Baumann, X. Augros, and F. Utesch,
+“UDRIVE: The European naturalistic driving study,” in Proceedings
+of Transport Research Arena, 2014.
+[38] A. Rasouli, I. Kotseruba, and J. K. Tsotsos, “Agreeing to cross: How
+drivers and pedestrians communicate,” in IV, 2017, pp. 264–269.
+[39] D. Sun, S. Ukkusuri, R. F. Benekohal, and S. T. Waller, “Modeling of
+motorist-pedestrian interaction at uncontrolled mid-block crosswalks,”
+Urbana, vol. 51, p. 61801, 2002.
+[40] T. Wang, J. Wu, P. Zheng, and M. McDonald, “Study of pedestrians’
+gap acceptance behavior when they jaywalk outside crossing facilities,”
+in ITSC, 2010, pp. 1295–1300.
+[41] M. Sucha, D. Dostal, and R. Risser, “Pedestrian-driver communication
+and decision strategies at marked crossings,” Accident Analysis &
+Prevention, vol. 102, pp. 41–50, 2017.
+[42] B. Herwig, “Verhalten von kraftfahrern und fussgangern an zebras-
+treifen,” Zeitschrift f¨ur Verkehrssicherheit, vol. 11, pp. 189–202, 1965.
+[43] P. Schioldborg, “Children, trafﬁc and trafﬁc training: analysis of the
+children’s trafﬁc club,” The Voice of the Pedestrian, vol. 6, pp. 12–19,
+1976.
+[44] T. Rosenbloom, “Crossing at a red light: Behaviour of individuals
+and groups,” Transportation Research Part F: Trafﬁc Psychology and
+Behaviour, vol. 12, no. 5, pp. 389–394, 2009.
+[45] R. Wiedemann, “Simulation des straßenverkehrsﬂusses. schriftenreihe
+heft 8,” Institute for Transportation Science, University of Karlsruhe,
+Germany, 1994.
+[46] B. F¨arber, “Communication and communication problems between
+autonomous vehicles and human drivers,” in Autonomous Driving.
+Springer, 2016, pp. 125–144.
+[47] D. Evans and P. Norman, “Understanding pedestrians’ road crossing
+decisions: an application of the theory of planned behaviour,” Health
+Education Research, vol. 13, no. 4, pp. 481–489, 1998.
+[48] D. Johnston, “Road accident casuality: A critique of the literature
+and an illustrative case,” Ontario: Grand Rounds. Department of Psy
+chiatry, Hotel Dieu Hospital, 1973.
+[49] M. Gheri, “ ¨Uber das blickverhalten von kraftfahrern an kreuzungen,”
+Kuratorium f¨ur Verkehrssicherheit, Kleine Fachbuchreihe Bd, vol. 5,
+1963.
+[50] M.
+ˇSucha, “Road users’ strategies and communication: driver-
+pedestrian interaction,” Transport Research Arena (TRA), 2014.
+[51] D. Yagil, “Beliefs, motives and situational factors related to pedestri-
+ans’ self-reported behavior at signal-controlled crossings,” Transporta-
+tion Research Part F: Trafﬁc Psychology and Behaviour, vol. 3, no. 1,
+pp. 1–13, 2000.
+[52] J. Dolphin, L. Kennedy, S. O’Donnell, and G. Wilde, “Factors inﬂuenc-
+ing pedestrian violations,” Unpublished manuscript, Queens University,
+Kingston, Ontario, 1970.
+[53] C. Holland and R. Hill, “The effect of age, gender and driver status on
+pedestrians’ intentions to cross the road in risky situations,” Accident
+Analysis & Prevention, vol. 39, no. 2, pp. 224–237, 2007.
+[54] R. L. Moore, “Pedestrian choice and judgment,” OR, vol. 4, no. 1, pp.
+3–10, 1953.
+[55] M. Goldhammer, A. Hubert, S. Koehler, K. Zindler, U. Brunsmann,
+K. Doll, and B. Sick, “Analysis on termination of pedestrians’ gait at
+urban intersections,” in ITSC, 2014, pp. 1758–1763.
+[56] W. A. Harrell, “Precautionary street crossing by elderly pedestrians,”
+The International Journal of Aging and Human Development, vol. 32,
+no. 1, pp. 65–80, 1991.
+[57] R. R. Oudejans, C. F. Michaels, B. van Dort, and E. J. Frissen, “To cross
+or not to cross: The effect of locomotion on street-crossing behavior,”
+Ecological psychology, vol. 8, no. 3, pp. 259–267, 1996.
+[58] R. Tian, E. Y. Du, K. Yang, P. Jiang, F. Jiang, Y. Chen, R. Sherony, and
+H. Takahashi, “Pilot study on pedestrian step frequency in naturalistic
+driving environment,” in IV, 2013, pp. 1215–1220.
+[59] D. Crompton, “Pedestrian delay, annoyance and risk: preliminary
+results from a 2 years study,” in Proceedings of PTRC Summer Annual
+Meeting, 1979, pp. 275–299.
+[60] C. O’Flaherty and M. Parkinson, “Movement on a city centre footway,”
+Trafﬁc engineering and control, vol. 13, no. 10, pp. 434–438, 1972.
+[61] L. Sj¨ostedt, Behaviour of pedestrians at pedestrian crossings, 1969.
+[62] G. Underwood, P. Chapman, N. Brocklehurst, J. Underwood, and
+D. Crundall, “Visual attention while driving: Sequences of eye ﬁxations
+made by experienced and novice drivers,” Ergonomics, vol. 46, no. 6,
+pp. 629–646, 2003.
+[63] S. G. Klauer, V. L. Neale, T. A. Dingus, D. Ramsey, and J. Sudweeks,
+“Driver inattention: A contributing factor to crashes and near-crashes,”
+in The Human Factors and Ergonomics Society Annual Meeting,
+vol. 49, no. 22, 2005, pp. 1922–1926.
+[64] G. Underwood, “Visual attention and the transition from novice to
+advanced driver,” Ergonomics, vol. 50, no. 8, pp. 1235–1249, 2007.
+[65] Y. Barnard, F. Utesch, N. Nes, R. Eenink, and M. Baumann, “The
+study design of UDRIVE: The naturalistic driving study across Europe
+for cars, trucks and scooters,” European Transport Research Review,
+vol. 8, no. 2, pp. 1–10, 2016.
+[66] Z. Ren, X. Jiang, and W. Wang, “Analysis of the inﬂuence of pedes-
+trians’ eye contact on drivers’ comfort boundary during the crossing
+conﬂict,” Procedia Engineering, vol. 137, pp. 399–406, 2016.
+[67] I. E. Hyman, S. M. Boss, B. M. Wise, K. E. McKenzie, and J. M.
+Caggiano, “Did you see the unicycling clown? Inattentional blindness
+while walking and talking on a cell phone,” Applied Cognitive Psy-
+chology, vol. 24, no. 5, pp. 597–607, 2010.
+[68] A. Lindgren, F. Chen, P. W. Jordan, and H. Zhang, “Requirements for
+the design of advanced driver assistance systems-the differences be-
+tween Swedish and Chinese drivers,” International Journal of Design,
+vol. 2, no. 2, 2008.
+[69] G. M. Bj¨orklund and L. ˚Aberg, “Driver behaviour in intersections:
+Formal and informal trafﬁc rules,” Transportation Research Part F:
+Trafﬁc Psychology and Behaviour, vol. 8, no. 3, pp. 239–253, 2005.
+
+--- Page 17 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+17
+[70] T. Rosenbloom, H. Barkan, and D. Nemrodov, “For heaven’s sake keep
+the rules: Pedestrians’ behavior at intersections in ultra-orthodox and
+secular cities,” Transportation Research Part F: Trafﬁc Psychology and
+Behaviour, vol. 7, pp. 395–404, 2004.
+[71] V. P. Sisiopiku and D. Akin, “Pedestrian behaviors at and percep-
+tions towards various pedestrian facilities: an examination based on
+observation and survey data,” Transportation Research Part F: Trafﬁc
+Psychology and Behaviour, vol. 6, no. 4, pp. 249–274, 2003.
+[72] R. Sun, X. Zhuang, C. Wu, G. Zhao, and K. Zhang, “The estimation
+of vehicle speed and stopping distance by pedestrians crossing streets
+in a naturalistic trafﬁc environment,” Transportation Research Part F:
+Trafﬁc Psychology and Behaviour, vol. 30, pp. 97–106, 2015.
+[73] R. Mortimer, “Behavioral evaluation of pedestrian signals,” Trafﬁc
+Engineering, vol. 44, no. 2, pp. 22–26, 1973.
+[74] W. H. Lam, J. F. Morrall, and H. Ho, “Pedestrian ﬂow characteristics
+in hong kong,” Transportation Research Record, no. 1487, 1995.
+[75] B. C. de Lavalette, C. Tijus, S. Poitrenaud, C. Leproux, J. Bergeron, and
+J.-P. Thouez, “Pedestrian crossing decision-making: A situational and
+behavioral approach,” Safety Science, vol. 47, no. 9, pp. 1248–1253,
+2009.
+[76] X. Chu, M. Guttenplan, and M. Baltes, “Why people cross where they
+do: the role of street environment,” Transportation Research Record:
+Journal of the Transportation Research Board, no. 1878, pp. 3–10,
+2004.
+[77] P.-S. Lin, Z. Wang, and R. Guo, “Impact of connected vehicles and
+autonomous vehicles on future transportation,” Bridging the East and
+West, pp. 46–53, 2016.
+[78] E. CYingzi Du, K. Yang, F. Jiang, P. Jiang, R. Tian, M. Luzetski,
+Y. Chen, R. Sherony, and H. Takahashi, “Pedestrian behavior analysis
+using 110-car naturalistic driving data in USA,” Online, 2017-06-
+3. [Online]. Available: https://www-nrd.nhtsa.dot.gov/pdf/Esv/esv23/
+23ESV-000291.pdf
+[79] S. Das, C. F. Manski, and M. D. Manuszak, “Walk or wait? an empirical
+analysis of street crossing decisions,” Journal of Applied Econometrics,
+vol. 20, no. 4, pp. 529–548, 2005.
+[80] W. A. Harrell and T. Bereska, “Gap acceptance by pedestrians,”
+Perceptual and Motor Skills, vol. 75, no. 2, pp. 432–434, 1992.
+[81] M. M. Hamed, “Analysis of pedestrians’ behavior at pedestrian cross-
+ings,” Safety science, vol. 38, no. 1, pp. 63–82, 2001.
+[82] M. Risto, C. Emmenegger, E. Vinkhuyzen, M. Cefkin, and J. Hollan,
+“Human-vehicle interfaces: The power of vehicle movement gestures
+in human road user coordination,” in the Ninth International Driving
+Symposium on Human Factors in Driver Assessment, 2017, pp. 186–
+192.
+[83] A. Varhelyi, “Drivers’ speed behaviour at a zebra crossing: a case
+study,” Accident Analysis & Prevention, vol. 30, no. 6, pp. 731–743,
+1998.
+[84] D. Dey and J. Terken, “Pedestrian interaction with vehicles: roles
+of explicit and implicit communication,” in International Conference
+on Automotive User Interfaces and Interactive Vehicular Applications,
+2017, pp. 109–113.
+[85] I. Walker, “Drivers overtaking bicyclists: Objective data on the effects
+of riding position, helmet use, vehicle type and apparent gender,”
+Accident Analysis & Prevention, vol. 39, no. 2, pp. 417–425, 2007.
+[86] N. Gu´eguen, S. Meineri, and C. Eyssartier, “A pedestrian’s stare
+and drivers’ stopping behavior: A ﬁeld experiment at the pedestrian
+crossing,” Safety science, vol. 75, pp. 87–89, 2015.
+[87] S. Gupta, M. Vasardani, and S. Winter, “Conventionalized gestures
+for the interaction of people in trafﬁc with autonomous vehicles,”
+in International Workshop on Computational Transportation Science,
+2016, pp. 55–60.
+[88] J. Caird and P. Hancock, “The perception of arrival time for different
+oncoming vehicles at an intersection,” Ecological Psychology, vol. 6,
+no. 2, pp. 83–109, 1994.
+[89] A. Millard-Ball, “Pedestrians, autonomous vehicles, and cities,” Jour-
+nal of Planning Education and Research, pp. 6–12, 2016.
+[90] D. Rothenb¨ucher, J. Li, D. Sirkin, B. Mok, and W. Ju, “Ghost driver:
+A ﬁeld study investigating the interaction between pedestrians and
+driverless vehicles,” in International Symposium on Robot and Human
+Interactive Communication (RO-MAN), 2016, pp. 795–802.
+[91] L. M¨uller, M. Risto, and C. Emmenegger, “The social behavior of
+autonomous vehicles,” in International Joint Conference on Pervasive
+and Ubiquitous Computing: Adjunct, 2016, pp. 686–689.
+[92] M. Meeder, E. Bosina, and U. Weidmann, “Autonomous vehicles:
+Pedestrian heaven or pedes-trian hell?” in 17th Swiss Transport Re-
+search Conference (STRC 2017), 2017.
+[93] H. Prakken, “On the problem of making autonomous vehicles conform
+to trafﬁc law,” Artiﬁcial Intelligence and Law, vol. 25, no. 3, pp. 341–
+363, 2017.
+[94] J. Wang, J. Lu, F. You, and Y. Wang, “Act like a human: Teach an
+autonomous vehicle to deal with trafﬁc encounters,” in International
+Conference on Intelligent Human Systems Integration, 2018, pp. 537–
+542.
+[95] Bikeleauge,
+“Autonomous
+and
+connected
+vehicles:
+Implications
+for
+bicyclists
+and
+pedestrians,”
+Online,
+2014,
+2017-06-3.
+[Online]. Available: http://bikeleague.org/sites/default/ﬁles/Bike Ped
+Connected Vehicles.pdf
+[96] S. Yang, “Driver behavior impact on pedestrians’ crossing experience
+in the conditionally autonomous driving context,” Master’s thesis, KTH
+Royal Institute of Technology, 2017.
+[97] M. Matthews, G. Chowdhary, and E. Kieson, “Intent communica-
+tion between autonomous vehicles and pedestrians,” arXiv preprint
+arXiv:1708.07123, 2017.
+[98] R. Zimmermann and R. Wettach, “First step into visceral interaction
+with autonomous vehicles,” in The 9th International Conference on
+Automotive User Interfaces and Interactive Vehicular Applications,
+2017, pp. 58–64.
+[99] M. Clamann, M. Aubert, and M. L. Cummings, “Evaluation of vehicle-
+to-pedestrian communication displays for autonomous vehicles,” Tech.
+Rep., 2017.
+[100] C.-M. Chang, K. Toda, D. Sakamoto, and T. Igarashi, “Eyes on a car:
+An interface design for communication between an autonomous car
+and a pedestrian,” in International Conference on Automotive User
+Interfaces and Interactive Vehicular Applications, 2017, pp. 65–73.
+[101] K. Mahadevan, S. Somanath, and E. Sharlin, “Communicating aware-
+ness and intent in autonomous vehicle-pedestrian interaction,” Univer-
+sity of Calgary, Tech. Rep., 2017.
+[102] M. Beggiato, C. Witzlack, S. Springer, and J. Krems, “The right
+moment for braking as informal communication signal between auto-
+mated vehicles and pedestrians in crossing situations,” in International
+Conference on Applied Human Factors and Ergonomics, 2017, pp.
+1072–1081.
+[103] L. M. Hulse, H. Xie, and E. R. Galea, “Perceptions of autonomous
+vehicles: Relationships with road users, risk, gender and age,” Safety
+Science, vol. 102, pp. 1–13, 2018.
+[104] S. Jayaraman, C. Creech, L. Robert, D. Tilbury, J. Yang, A. Pradhan,
+K. Tsui, et al., “Trust in av: An uncertainty reduction model of av-
+pedestrian interactions,” in Human Robot Interaction, 2018.
+[105] X. Cheng, M. Wen, L. Yang, and Y. Li, “Index modulated OFDM with
+interleaved grouping for V2X communications,” in ITSC, 2014, pp.
+1097–1104.
+[106] S. R. Narla, “The evolution of connected vehicle technology: From
+smart drivers to smart cars to... self-driving cars,” Institute of Trans-
+portation Engineers Journal, vol. 83, no. 7, p. 22, 2013.
+[107] W. Cunningham, “Honda tech warns drivers of pedestrian presence,”
+Online,
+2017-06-30.
+[Online].
+Available:
+https://www.cnet.com/
+roadshow/news/honda-tech-warns-drivers-of-pedestrian-presence/
+[108] M. S. Gordon, J. R. Kozloski, A. Kundu, P. K. Malkin, and C. A. Pick-
+over, “Automated control of interactions between self-driving vehicles
+and pedestrians,” US Patent US 9 483 948, 11 1, 2016.
+[109] T. Schmidt, R. Philipsen, and M. Zieﬂe, “From V2X to control2trust,”
+in Proceedings of the Third International Conference on Human
+Aspects of Information Security, Privacy, and Trust, 2015, pp. 570–
+581.
+[110] C. P. Urmson, I. J. Mahon, D. A. Dolgov, and J. Zhu, “Pedestrian
+notiﬁcations,” US Patent US 9 196 164B1, 11 24, 2015.
+[111] L. Graziano, “Autonomi autonomous mobility interface,” Online,
+2014, 2018-02-3. [Online]. Available: https://vimeo.com/99160686
+[112] E. Florentine, M. A. Ang, S. D. Pendleton, H. Andersen, and M. H.
+Ang Jr, “Pedestrian notiﬁcation methods in autonomous vehicles for
+multi-class mobility-on-demand service,” in The Fourth International
+Conference on Human Agent Interaction, 2016, pp. 387–392.
+[113] S.
+Siripanich,
+“Crossing
+the
+road
+in
+the
+world
+of
+autonomous cars,” Online, 2017, 2018-02-3. [Online]. Available:
+https://medium.com/teague-labs/crossing-the-road-in-the-world-of-
+autonomous-cars-e14827bfa301
+[114] W. D. Hillis, K. I. Williams, T. A. Tombrello, J. W. Sarrett, L. W.
+Khanlian, A. L. Kaehler, and R. Howe, “Communication between
+autonomous vehicle and external observers,” US Patent US 9 475 422,
+10 25, 2016.
+[115] “Mitsubishi
+electric
+introduces
+road-illuminating
+directional
+indicators,”
+Online,
+2017-06-30.
+[Online].
+Available:
+http:
+//www.mitsubishielectric.com/news/2015/1023.html?cid=rss
+
+--- Page 18 ---
+THIS WORK HAS BEEN SUBMITTED TO THE IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS.
+18
+[116] N. Pennycooke, “AEVITA: Designing biomimetic vehicle-to-pedestrian
+communication protocols for autonomously operating & parking on-
+road electric vehicles,” Master’s thesis, Massachusetts Institute of
+Technology, 2012.
+[117] N. Mirnig, N. Perterer, G. Stollnberger, and M. Tscheligi, “Three
+strategies for autonomous car-to-pedestrian communication: A survival
+guide,” in International Conference on Human-Robot Interaction, 2017,
+pp. 209–210.
+[118] J. Mairs, “Umbrellium develops interactive road crossing that only
+appears when needed,” Online, 2017, 2018-02-3. [Online]. Available:
+https://www.dezeen.com/2017/10/12/umbrellium-develops-interactive-
+road-crossing-that-only-appears-when-needed-technology/
+[119] “Smart highway,” Online, 2017-06-30. [Online]. Available: https:
+//www.studioroosegaarde.net/projects/#smog-free-project
+[120] A. Sieß, K. H¨ubel, D. Hepperle, A. Dronov, C. Hufnagel, J. Aktun, and
+M. W¨olfel, “Hybrid city lighting-improving pedestrians’ safety through
+proactive street lighting,” in International Conference on Cyberworlds
+(CW), 2015, pp. 46–49.
+[121] E. Ohn-Bar, S. Martin, A. Tawari, and M. M. Trivedi, “Head, eye,
+and hand patterns for driver activity recognition,” in International
+Conference on Pattern Recognition (ICPR), 2014, pp. 660–665.
+[122] C. Laugier, I. E. Paromtchik, M. Perrollaz, M. Yong, J.-D. Yoder,
+C. Tay, K. Mekhnacha, and A. N`egre, “Probabilistic analysis of
+dynamic scenes and collision risks assessment to improve driving
+safety,” IEEE Intelligent Transportation Systems Magazine, vol. 3,
+no. 4, pp. 4–19, 2011.
+[123] B. Li, T. Wu, C. Xiong, and S.-C. Zhu, “Recognizing car ﬂuents from
+video,” in Computer Vision and Pattern Recognition (CVPR), 2016, pp.
+3803–3812.
+[124] J. F. Kooij, N. Schneider, and D. M. Gavrila, “Analysis of pedestrian
+dynamics from a vehicle perspective,” in Intelligent Vehicles Sympo-
+sium (IV), 2014, pp. 1445–1450.
+[125] S. K¨ohler, M. Goldhammer, S. Bauer, K. Doll, U. Brunsmann, and
+K. Dietmayer, “Early detection of the pedestrian’s intention to cross
+the street,” in ITSC, 2012, pp. 1759–1764.
+[126] M. T. Phan, I. Thouvenin, V. Fremont, and V. Cherfaoui, “Estimating
+driver unawareness of pedestrian based on visual behaviors and driving
+behaviors,” HAL, Tech. Rep., 2013.
+[127] M. Bahram, C. Hubmann, A. Lawitzky, M. Aeberhard, and D. Wollherr,
+“A combined model-and learning-based framework for interaction-
+aware maneuver prediction,” IEEE Transactions on Intelligent Trans-
+portation Systems, vol. 17, no. 6, pp. 1538–1550, 2016.
+[128] E. Ohn-Bar and M. M. Trivedi, “Looking at humans in the age of
+self-driving and highly automated vehicles,” IEEE Transactions on
+Intelligent Vehicles, vol. 1, no. 1, pp. 90–104, 2016.
+[129] Y. Hashimoto, Y. Gu, L.-T. Hsu, and S. Kamijo, “Probability estimation
+for pedestrian crossing intention at signalized crosswalks,” in Interna-
+tional Conference on Vehicular Electronics and Safety (ICVES), 2015,
+pp. 114–119.
+[130] N. Brouwer, H. Kloeden, and C. Stiller, “Comparison and evaluation of
+pedestrian motion models for vehicle safety systems,” in ITSC, 2016,
+pp. 2207–2212.
+[131] M. M. Trivedi, T. B. Moeslund, et al., “Trajectory analysis and
+prediction for improved pedestrian safety: Integrated framework and
+evaluations,” in IV, 2015, pp. 330–335.
+[132] R. Quintero, I. Parra, D. F. Llorca, and M. Sotelo, “Pedestrian path
+prediction based on body language and action classiﬁcation,” in ITSC,
+2014, pp. 679–684.
+[133] J. ˇCerm´ak and A. Angelova, “Learning with proxy supervision for end-
+to-end visual learning,” in IV, 2017, pp. 1–6.
+[134] B. V¨olz, K. Behrendt, H. Mielenz, I. Gilitschenski, R. Siegwart, and
+J. Nieto, “A data-driven approach for pedestrian intention estimation,”
+in ITSC, 2016, pp. 2607–2612.
+[135] T. Bandyopadhyay, C. Z. Jie, D. Hsu, M. H. Ang Jr, D. Rus, and
+E. Frazzoli, “Intention-aware pedestrian avoidance,” in Experimental
+Robotics, 2013, pp. 963–977.
+[136] H. Bai, S. Cai, N. Ye, D. Hsu, and W. S. Lee, “Intention-aware online
+pomdp planning for autonomous driving in a crowd,” in ICRA, 2015,
+pp. 454–460.
+[137] S. Pellegrini, A. Ess, K. Schindler, and L. Van Gool, “You’ll never walk
+alone: Modeling social behavior for multi-target tracking,” in ICCV,
+2009, pp. 261–268.
+[138] S. K¨ohler, B. Schreiner, S. Ronalter, K. Doll, U. Brunsmann,
+and
+K.
+Zindler,
+“Autonomous
+evasive
+maneuvers
+triggered
+by
+infrastructure-based detection of pedestrian intentions,” in IV, 2013,
+pp. 519–526.
+[139] M. Goldhammer, M. Gerhard, S. Zernetsch, K. Doll, and U. Brun-
+smann, “Early prediction of a pedestrian’s trajectory at intersections,”
+in ITSC, 2013, pp. 237–242.
+[140] J. F. P. Kooij, N. Schneider, F. Flohr, and D. M. Gavrila, “Context-based
+pedestrian path prediction,” in European Conference on Computer
+Vision (ECCV), 2014, pp. 618–633.
+[141] F. Madrigal, J.-B. Hayet, and F. Lerasle, “Intention-aware multiple
+pedestrian tracking,” in ICPR, 2014, pp. 4122–4127.
+[142] S. K¨ohler, M. Goldhammer, K. Zindler, K. Doll, and K. Dietmeyer,
+“Stereo-vision-based pedestrian’s intention detection in a moving ve-
+hicle,” in ITSC, 2015, pp. 2317–2322.
+[143] B. V¨olz, H. Mielenz, G. Agamennoni, and R. Siegwart, “Feature
+relevance estimation for learning pedestrian behavior at crosswalks,”
+in ITSC, 2015, pp. 854–860.
+[144] J. Hariyono, A. Shahbaz, L. Kurnianggoro, and K.-H. Jo, “Estimation
+of collision risk for improving driver’s safety,” in Annual Conference
+of Industrial Electronics Society (IECON), 2016, pp. 901–906.
+[145] C. Park, J. Ondˇrej, M. Gilbert, K. Freeman, and C. O’Sullivan, “HI
+Robot: Human intention-aware robot planning for safe and efﬁcient
+navigation in crowds,” in International Conference on Intelligent
+Robots (IROS), 2016, pp. 3320–3326.
+[146] F. Schneemann and P. Heinemann, “Context-based detection of pedes-
+trian crossing intention for autonomous driving in urban environments,”
+in International Conference on Intelligent Robots (IROS), 2016, pp.
+2243–2248.
+[147] J.-Y. Kwak, B. C. Ko, and J.-Y. Nam, “Pedestrian intention prediction
+based on dynamic fuzzy automata for vehicle driving at nighttime,”
+Infrared Physics & Technology, vol. 81, pp. 41–51, 2017.
+[148] A. Rangesh and M. M. Trivedi, “When vehicles see pedestrians with
+phones: A multi-cue framework for recognizing phone-based activities
+of pedestrians,” arXiv:1801.08234, 2018.
+[149] P. Doll´ar, C. Wojek, B. Schiele, and P. Perona, “Pedestrian detection:
+A benchmark,” in Computer Vision and Pattern Recognition (CVPR),
+June 2009.
+[150] A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, “Vision meets robotics:
+The KITTI dataset,” International Journal of Robotics Research (IJRR),
+2013.
+[151] N. Schneider and D. M. Gavrila, “Pedestrian path prediction with
+recursive bayesian ﬁlters: A comparative study,” in German Conference
+on Pattern Recognition, 2013, pp. 174–183.
+Amir Rasouli received his B.Eng. degree in Com-
+puter Systems Engineering at Royal Melbourne In-
+stitute of Technology in 2010 and his M.A.Sc.
+degree in Computer Engineering at York University
+in 2015. He is currently working towards the PhD
+degree in Computer Science at the Laboratory for
+Active and Attentive Vision, York University. His
+research interests are autonomous robotics, computer
+vision, visual attention, autonomous driving and
+related applications.
+John K. Tsotsos is Distinguished Research Profes-
+sor of Vision Science at York University. He received
+his doctorate in Computer Science from the Univer-
+sity of Toronto. After a postdoctoral fellowship in
+Cardiology at Toronto General Hospital, he joined
+the University of Toronto on faculty in Computer
+Science and in Medicine. In 1980 he founded the
+Computer Vision Group at the University of Toronto,
+which he led for 20 years. He was recruited to York
+University in 2000 as Director of the Centre for
+Vision Research. His current research focuses on a
+comprehensive theory of visual attention in humans. A practical outlet for
+this theory embodies elements of the theory into the vision systems of mobile
+robots.

@@ -1,0 +1,830 @@
+International Journal of Automotive Technology, Vol. 15, No. 2, pp. 333−340 (2014)
+DOI 10.1007/s12239−014−0034−6
+Copyright © 2014 KSAE/ 076−16
+pISSN 1229−9138/ eISSN 1976−3832
+333
+IN-VEHICLE TECHNOLOGY FOR SELF-DRIVING CARS: 
+ADVANTAGES AND CHALLENGES FOR AGING DRIVERS
+J. YANG1)* and J. F. COUGHLIN2)
+1)Department of Automotive Engineering, Kookmin University, Seoul 136-702, Korea
+2)Engineering Systems Division, Massachusetts Institute of Technology, Cambridge, MA 02139, USA
+(Received 31 October 2013; Revised 20 December 2013; Accepted 29 January 2014)
+ABSTRACT−The development of self-driving cars or autonomous vehicles has progressed at an unanticipated pace.
+Ironically, the driver or the driver–vehicle interaction is a largely neglected factor in the development of enabling technologies
+for autonomous vehicles. Therefore, this paper discusses the advantages and challenges faced by aging drivers with reference
+to in-vehicle technology for self-driving cars, on the basis of findings of recent studies. We summarize age-related
+characteristics of sensory, motor, and cognitive functions on the basis of extensive age-related research, which can provide a
+familiar to better aging drivers. Furthermore, we discuss some key aspects that need to be considered, such as familar to
+learnability, acceptance, and net effectiveness of new in-vehicle technology, as addressed in relevant studies. In addition, we
+present research-based examples on aging drivers and advanced technology, including a holistic approach that is being
+developed by MIT AgeLab, advanced navigation systems, and health monitoring systems. This paper anticipates many
+questions that may arise owing to the interaction of autonomous technologies with an older driver population. We expect the
+results of our study to be a foundation for further developments toward the consideration of needs of aging drivers while
+designing self-driving vehicles. 
+KEY WORDS : In-vehicle technology, Self-driving cars, Aging drivers, Navigation systems, Health monitoring systems 
+NOMENCLATURE
+AARP : american association of retired persons
+ACC
+: adaptive cruise control
+ADAS : advanced driver assistance system
+AGNES: age gain now empathy system
+ATIS
+: advanced traveler information system
+FCW
+: forward collision warning
+HUD
+: head-up display
+IEEE
+: institute of electrical and electronics engineers
+IT
+: interaction time
+IVNS
+: in-vehicle navigation system
+LKAS
+: lane keeping assistance system
+NT
+: neglect time
+NVE
+: night vision enhancement
+SPAS
+: smart parking assistance system
+UAV
+: unmanned aerial vehicle 
+1. INTRODUCTION
+The Institute of Electrical and Electronics Engineers
+(IEEE) predicts that by the year 2040, highways will have
+designated lanes for autonomous vehicles (Read, 2013).
+Semi-autonomous features, such as the smart parking
+assistance system (SPAS), lane keeping assistance system
+(LKAS), and adaptive cruise control (ACC), have already
+been commercialized, and fully autonomous vehicles will
+probably become available within the next 10–20 years.
+The development of self-driving cars or autonomous
+vehicles has progressed at an unanticipated pace in recent
+years. A few years ago, state legislators had not even
+considered autonomous cars; currently, however, three
+states have enacted legislation on operating self-driving
+cars and several more states are considering it. Despite the
+speed of technological development, people will probably
+accept and adapt to this new technology in the same
+manner as they did with other intelligent systems. 
+Ironically, the driver or the driver–vehicle interaction is a
+largely neglected factor in the development of enabling
+technologies for autonomous vehicles. For example, some
+vehicle automation features cause considerable confusion
+and frustration in the driver, which is typically associated
+with poorly integrated systems (Norman, 2003). Despite
+humans being adaptable, several critical issues related to
+human–vehicle automation become noticeable with
+advancements in technology. For example, the term “self-
+driving” or “autonomous” can easily mislead people into
+thinking that the driver’s role in vehicle operation will
+become insignificant with the arrival of advanced vehicles.
+In fact, the role of humans in driving is changing from
+conventional manual control to supervisory control with an
+*Corresponding author. e-mail: yangjh@kookmin.ac.kr
+
+
+334
+J. YANG and J. F. COUGHLIN
+increase in the level of vehicle automation. Several issues
+pertaining to human–automation interaction are gaining
+research attention, and autonomous vehicles are no
+exception.
+Researchers 
+have 
+extensively 
+studied 
+human–
+automation issues in the field of aviation, where automated
+features such as altitude and speed holds were introduced
+several decades ago. In aviation, studies on automation and
+mode selection have focused mainly on problems in pilot–
+autopilot interaction, such as mode awareness or mode
+confusion (e.g., Johnson and Pritchett, 1995; Bredereke
+and Lankenau, 2002).
+In the past decade, the military has actively used several
+different unmanned aerial vehicles (UAVs) such as the
+ScanEagle and Raven. As the number of issues in human
+interaction for UAV operation increases, the importance of
+these issues from the viewpoint of human control of
+unmanned systems becomes increasingly prominent. For
+example, mental workload is a limiting factor in deciding
+the number of UAVs that an operator can control or
+supervise. Previously, researchers attempted to model the
+operator capacity for demonstrating the temporal
+constraints associated with the UAV system. The
+complexity of such work progressed from measuring the
+operator capacity in scenarios with homogenous UAVs
+controlled by one operator (Olsen and Wood, 2004;
+Cummings and Mitchell, 2008; Crandall and Cummings,
+2007; Nehme et al., 2008) to scenarios wherein one
+operator supervised teams of heterogeneous UAVs
+(Nehme, 2009). The first equation developed to predict
+operator capacity in homogeneous UAVs suggested that the
+operator capacity is a function of the neglect time (NT)—
+which is the duration for which the UAV operates
+independently—and of the interaction time (IT)—which is
+the time for which the operator is busy interacting,
+monitoring, and making decisions with the system (Olsen
+and Wood, 2004). The mental workload, situational
+awareness, and human operators’ trust in automation differ
+for different automation levels in human–UAV teams, and
+selection of appropriate operation modes is a critical factor
+in the successful and efficient completion of missions.
+Similarly, we can benchmark human–automation issues
+in ground transportation. Aerial and ground transportations
+are similar in that vehicles are operated in both these
+domains. However, these domains have several key
+differences. For example, road traffic has a relatively high
+hazard density and probability of two-dimensional
+collisions, whereas aerial traffic has a low hazard density
+and probability of three-dimensional collisions. The threat
+response times for road and aerial transportations are on the
+order of seconds and minutes, respectively. Practically
+anyone can become a vehicle driver, whereas only highly
+trained personnel can become pilots, and the latter need to
+maintain their skill through continuous training. When
+highly automated systems such as UAVs are introduced
+into the aviation domain, the operators will most likely be
+active military officers with sufficient expertise in terms of
+flight hours, instructor experience, and certified training. In
+the case of ground vehicles, the elderly will very likely
+encounter the most advanced functionalities of autonomous
+vehicles, considering their purchasing power (Coughlin,
+2001); in other words, they can afford top-of-the-line and
+expensive vehicles, which will have the most advanced
+functionality. Population aging has caused an increase in
+the number of licensed drivers over the age of 40 (Eby and
+Molnar, 2012). Nearly 77 million baby boomers in the
+USA (i.e., people born between the years 1946 and 1964)
+can be categorized as the automobile generation (Coughlin
+and Reimer, 2006). With one of these baby boomers
+turning 68 years old every seven seconds, they encounter
+new vehicle features that they previously never used or
+even imagined. Although the common assumption is that
+older people are reluctant to interact with new technology,
+research has shown that older adults are actually motivated
+to use technologically advanced products upon being
+advised about their benefits (Melenhorst et al., 2001).
+Then, this paper discusses issues with respect to aged
+drivers in terms of the development and use of in-vehicle
+technologies in self-driving vehicles, and introduces
+ongoing research projects in industry and academia. The
+rest of this paper is organized as follows. Section 2
+summarizes the characteristics of aging drivers, and
+Section 3 discusses key issues in the interaction of aging
+drivers with in-vehicle technology. Section 4 introduces
+limited examples of research on the relevant area, and
+Section 5 provides concluding remarks.
+2. CHARACTERISTICS OF AGING DRIVERS
+Advanced age obviously distinguishes aging or older
+drivers from other drivers. Several studies have
+demonstrated systematic differences between drivers as a
+function of age, although they are ambiguous about the
+exact age at which a person becomes an older driver
+(Meyer, 2004; Coughlin, 2001). For example, Meyer
+(2004) summarized four reasons for differences between
+age groups: (a) cohort effects, which consider generational
+effects such as progressive motorization and gender
+difference; (b) changing lifestyles, which acknowledge that
+aging is also a social process; (c) disease and medication,
+wherein both chronic and acute diseases can impair driving
+ability; and (d) age-related changes, which are due to the
+physiological aging process itself. The literature on age-
+related sensory, cognitive, and motor changes is
+comprehensive and vast. Therefore, in this paper, we cite
+only some recent works and those that concern driving
+(e.g., Planek, 1972; Llaneras et al., 2000; Hakamies-
+Blomqvist, 1996; Shaheen and Niemeier, 2001; Meyer,
+2004).
+In this section, based on the extensive review conducted
+by Meyer (2004), we briefly discuss some key age-related
+changes in each of the above-listed four categories that
+
+
+IN-VEHICLE TECHNOLOGY FOR SELF-DRIVING CARS: ADVANTAGES AND CHALLENGES
+335
+affect driving, in order to gain a better understanding of
+issues in the interaction of aging drivers with in-vehicle
+technology.
+2.1. Age-related Changes in Sensory and Motor Functions
+Vision may be the most important sensory function that
+affects driving because visual information largely guides
+driving. In fact, research has suggested that 85%–95% of
+the sensory cues in driving are visual (Malfetti and Winter,
+1986). Through the course of normal aging, all visual
+functions deteriorate, including static and dynamic visual
+acuities, contrast sensitivity, night vision, peripheral vision,
+visual scan, and glare resistance. Regardless of the well-
+established work done on age-related vision degradation in
+driving, the exact role of each visual parameter in driving is
+not very clear (Groeger, 1999).
+Another sensory function that declines with age is
+hearing. The loss of hearing ability is much more marked
+in the case of high-frequency stimuli (Corso, 1981).
+Further, older people show lower sensitivity to touch and
+vibration (Gescheider et al., 1994; Harkins and Chapman,
+1977). Odor sensitivity also diminishes with age. Although
+the deterioration of these sensory functions does not
+necessarily affect driving, designers should consider them
+when designing new in-vehicle technology, since auditory/
+haptic/olfactory stimuli can be used for multiple, effective
+warning modalities.
+Muscular strength, speed of muscle contraction, and
+flexibility also decrease with aging. These changes can
+result in delayed responses, and hence, they require greater
+power-assisted braking or steering. Approximately half of
+the U.S. population over the age of 75 years experiences
+some degree of arthritis (Blocker, 1972), and in Korea, 36
+% of the population over the age of 65 reportedly has
+arthritis (Statistics Korea, 2004). These statistics are
+significant because arthritis limits a person’s ability to turn
+the head and trunk, and therefore, it makes vehicle ingress
+and egress difficult.
+2.2. Age-related Changes in Cognitive Function
+Cognitive abilities, such as attention, memory, information
+processing, and decision-making, are critical for safe
+driving. Several cognitive abilities decline as an individual
+ages, although the degree of decline varies considerably
+with advancing age. Research has shown that a correlation
+exists between selective attention and the accident rates of
+drivers aged 45–64 years (Mihal and Barrett, 1976) and
+that older adults have greater difficulty in dividing attention
+effectively than do younger adults (Brouwer et al., 1990).
+The ability to divide attention declines with age (Ponds et
+al., 1988), and spatial cognition, which affects navigation,
+also tends to decline with age (Salthouse, 1987). Memory
+problems can occur at any age, but they become
+increasingly common in older adults; specifically, older
+adults encounter problems such as short-term memory,
+encoding, and retrieval of information from long-term
+memory (Jacoby and Hay, 1998). Despite the generally
+held negative view of aging and memory, research has
+shown that semantic memory (memory for facts or general
+knowledge) (Cattell, 1963) remains relatively robust
+during a person’s lifetime (Morrow et al., 2000).
+Fozard et al. (1994) showed that simple response times
+were relatively unaffected by age but choice response times
+were affected more severely by it. Thus, we can infer a
+general slowdown of the speed of information processing
+with aging. Some studies have also shown that executive
+functioning, or the metacognitive ability that enables a
+person to effectively plan, organize, strategize, reason, and
+self-regulate (National Center for Learning Disabilities,
+2010) tends to decline in aging adults (Mayr et al., 2001;
+Zelazo et al., 2004; Eby and Molnar, 2012). Executive
+control, which refers to a number of cognitive abilities
+related to the maintenance and update of cognitive and
+behavioral goals, planning and sequencing of actions,
+problem solving, and inhibition of automatic responses
+(Boot et al., 2012), tends to decline substantially with age
+(Resnick et al., 2003). Poor cognitive functions can affect
+safe driving in several ways, including when a person is
+engaging in unsafe self-regulated driving, has difficulty in
+navigating and gets lost, and responds appropriately to
+quickly changing traffic information (Eby and Molnar,
+2012). However, many people begin to adjust their driving
+as they age: research has shown that elder drivers
+strategically avoid dangerous driving situations, such as
+night driving, poor weather, and periods of peak traffic, and
+they drive more carefully so that they can compensate for
+their declined sensory, cognitive, and motor functions
+(Waller, 1991; Rudi and Ingrid, 2000). While many see
+self-regulation as a success in promoting safety, it could
+result in lost mobility.
+3. KEY ASPECTS TO CONSIDER FOR NEW 
+IN-VEHICLE TECHNOLOGY
+3.1. Learnability and Acceptance of New In-vehicle
+Technology
+Older drivers represent an innovation paradox when
+purchasing vehicles. The majority of new in-vehicle
+systems are part of the product packaging of higher-end
+premium vehicles, which older drivers with purchasing
+power often purchase. Older consumers may be less likely
+to rapidly learn and use these systems than the natively
+digital younger generation. Studies have reported that older
+drivers take much longer to learn how to use new in-
+vehicle technology (AAA Foundation for Traffic Safety,
+2008; Caird, 2004). However, this learnability issue does
+not mean that older people are reluctant to learn new
+technology. Instead, research shows that older adults are
+motivated to use products upon being advised about their
+benefits (Melenhorst et al., 2001). Furthermore, experience
+with new technologies may increase their willingness to
+use them (Boot et al., 2012). Therefore, it is important to
+
+
+336
+J. YANG and J. F. COUGHLIN
+design a method that clearly describes the potential benefits
+of in-vehicle technology, which would make aging drivers
+willing to use the new interface or functions. Once older
+drivers gain knowledge of how to interact with the in-
+vehicle technology and its benefits, they will be more
+motivated to use it. This will help the industry to
+appropriately create a new future for driving that
+successfully includes their premium customers (Boot et al.,
+2012).
+Older drivers probably have well over 30 years of
+driving experience, which makes them among the safest
+and most expert drivers on the road. Ironically, the same
+experience can make their learning and ability to use the
+new in-vehicle technology a challenge. Research suggests
+that younger and older drivers learn to use new technology
+differently (Coughlin and Reimer, 2006). If the older, more
+experienced drivers are to use the features of new self-
+driving or advanced driver assistance systems (ADASs),
+such as SPAS, LKAS, ACC, head-up display (HUD), and
+brake assist system, they will have to update their driving
+skills, after having driven for more than three decades
+without these automated features. The industry cannot
+expect older drivers to learn and use the new in-vehicle
+technology without any training. Lifelong driver education
+and training may be one approach. For example,
+technology training can be combined with driver education
+and training programs, as is done in the American
+Association of Retired Persons (AARP) Driver Safety
+Program (Coughlin and Reimer, 2006).
+3.2. Net Effectiveness of Use of New In-vehicle Technology
+Research has shown that older drivers get distracted from
+driving when the cause of triggering of a warning system is
+not evident. Their accumulated expertise and judgment
+cause them to “second-guess” their trust in the authenticity
+of the warning, further leading them to look for clear
+reasons for the triggering of an alarm. In contrast, younger
+operators, who have less experience by definition, have
+greater trust in warning systems, often choosing to rely on
+the system alone, rather than using it as a driver assist
+system (Yick, 2003; Cottè et al., 2001). When drivers
+distrust automation, either because of its ambiguity or
+complexity or because of its true level of reliability, a
+failure of trust calibration occurs, and such an automated
+feature will possibly remain unutilized by the drivers
+(Wickens et al., 2008). The issue of mistrust of automation
+or false alarms has several solutions. One of them is to
+allow systems to express their confidence in the signaled
+warning at more than one level, which creates an increased
+sensitivity in the driver–vehicle system.
+Poorly designed in-vehicle technology could increase
+distractions and the driving workload for older users,
+thereby reducing driving safety. A number of studies have
+shown that older drivers often use new technology
+differently from younger drivers (Caird, 2004). As
+summarized by Eby and Molnar (2012), Gish et al. (2002)
+found that older drivers used night vision enhancement
+(NVE) systems less commonly than did drivers of other
+ages but the former reported being satisfied with the
+systems. Older drivers viewed the forward collision
+warning (FCW) more favorably (Maltz and Shinar, 2004)
+and used navigation assistance frequently; further, despite
+reporting some distraction from the system, they
+experienced increased feelings of safety and confidence
+(e.g., Vrkljan and Polgar, 2007). Studies also reported that
+drivers of all ages observed that driver workload and stress
+reduced when using ACC, and that the drivers trusted the
+system (Rudin-Brown and Parker, 2004; Stanton and
+Young, 2005). 
+Meyer (2004) also provided four reasons why the
+benefits of advanced technology could be less than
+expected. First, users may not use the device correctly and
+may fail to derive safety benefits. Second, drivers may take
+a greater risk upon the introduction of an advanced
+technology than they might without the technology, as
+proposed in Wilde’s (1988) risk homeostasis theory. Third,
+older drivers, who tend to drive more cautiously than
+younger drivers, will possibly experience an unacceptably
+high false alarm rate, which can lead to them rejecting the
+system. Fourth, drivers may develop new behavioral
+patterns following the use of the new autonomous
+technology.
+4. SOME RESEARCH-BASED EXAMPLES OF 
+AGING DRIVERS
+4.1. Holistic Approach to Designing Vehicles for Older
+Drivers 
+The MIT AgeLab introduced a concept vehicle designed to
+optimize the driving safety and wellness of older adults
+(Coughlin et al., 2009; Reimer et al., 2009). They realized
+this concept as the AwareCar, which is based on the idea
+that crashes can be mitigated by exploiting the interactive
+and overlapping roles of the vehicle, environment, and
+drivers. The AwareCar is an instrumented vehicle built for
+evaluating new models and methods of monitoring driver
+state through physiology, visual attention, and driving
+performance in the field. A key feature of the AwareCar is
+its ability to acquire context-sensitive information on the
+driver, environment, and vehicle. A variety of studies have
+used this vehicle to assess hands-free cellular phone usage,
+provide surrogate measures of visual and cognitive
+distractions, and improve driver health and wellness. This
+vehicle has also been used to develop functional methods
+for assessing age-related changes due to workload, arousal,
+and stress.
+AGNES (Age Gain Now Empathy System) is another
+tool that has been developed and used to gain a deeper
+understanding of the friction points in the transportation
+system for older adults that can help system designers and
+engineers identify barriers to accessibility for older
+pedestrians and drivers. Research groups attempted to
+
+
+IN-VEHICLE TECHNOLOGY FOR SELF-DRIVING CARS: ADVANTAGES AND CHALLENGES
+337
+provide examples of the aging population in the
+transportation domain. For example, Coughlin and Reimer
+(2006) presented a modified Haddon matrix (Haddon,
+1972) that identified key product development, design, and
+liability issues challenging the automobile industry and
+related stakeholders. Further, Reimer et al. (2010)
+evaluated driver reactions to new vehicle parking assist
+technologies. Mehler et al. (2012) assessed the sensitivity
+of the heart rate and skin conductance level for
+discriminating between levels of cognitive demand under
+driving conditions across different age groups. Reimer et
+al. (2013) evaluated the effects of age and cognitive
+demand on lane choice and lane changing behavior from an
+on-road study.
+4.2. Advanced Navigation Systems for Aging Drivers
+Researchers have focused on in-vehicle navigation systems
+(IVNSs) because these systems are expected to maintain
+the mobility of older people, for example, by reducing visual
+processing and attentional demands, reducing navigational
+errors, and improving overall driving performance (Dingus
+et al., 1997; Llaneras et al., 2000). Below, we discuss some
+research-based examples of aging drivers.
+Baldwin (2002) applied sensory–cognitive interaction
+theory and discussed its implications for the design of in-
+vehicle technologies, such as advanced traveler information
+systems (ATISs). The sensory–cognitive interaction theory
+states that sensory abilities account for substantial amounts
+of variance in cognitive performance among older adults,
+and can be a better predictor of cognitive performance than
+age alone (Lindenberger and Baltes, 1994). Baldwin (2002)
+stated that in-vehicle technologies that provide essential
+navigational information can greatly improve driver safety
+among older adults, but stressed that the interaction
+between sensory and cognitive functions clearly needs to
+be investigated further, e.g., the potential of sensory
+augmenting designs.
+May et al. (2005) described an empirical, road-based
+investigation of the benefits of providing landmarks within
+the instructions presented by an IVNS to both older and
+younger drivers. Their study showed that both younger and
+older drivers benefited significantly from the incorporation
+of landmarks in the turn-by-turn instructions provided by
+the IVNS. The design recommendations regarding future
+navigation systems that older drivers may possibly use are
+that they should not rely on distance-to-turn information to
+locate forthcoming maneuvers. Their study also showed
+that these systems would be useful for older drivers and
+received positively if they met a perceived need and were
+designed effectively.
+Kim et al. (2010) examined older and younger adults’
+perceptions regarding a set of 28 motor vehicle features
+and aspects, to determine the extent to which the
+participants believed that the individual features might help
+their safe driving. Their study did not focus on advanced
+in-vehicle technologies; rather, it examined the potential
+benefits of existing vehicle features such as dashboard,
+side-view mirrors, indicators, and controls. Kim et al.
+(2010) compared two different in-vehicle navigation
+systems, and on the basis of a focus group interview, they
+proposed a configuration of the navigation menu for the
+best readability and transmissibility.
+Emmerson et al. (2012) reported findings of six focus
+groups with older drivers; the findings revealed that older
+drivers have a navigation need that is currently not being
+fulfilled. The majority of older drivers responded positively
+toward the use of in-vehicle technology; yet, it was evident
+that they lacked the ability to fully utilize this technology.
+Even the older drivers who were more traditional in their
+navigation approach used modern pre-trip planning tools to
+assist them, indicating an awareness among aging drivers
+about how the new in-vehicle technology can assist them.
+Consequently, their subsequent maintained mobility could
+have far-reaching effects on society upon the removal of
+known barriers (e.g., a complex screen). 
+4.3. In-vehicle Health Monitoring Systems 
+Like the IVNS, in-vehicle health monitoring systems have
+been developed and studied actively in both academia and
+industry. For example, Ford has developed a car seat that
+can check the driver’s heart rate and could warn of an
+impending heart attack, and GM has begun offering
+emergency healthcare instruction through the OnStar
+(Naughton, 2011). The Philips Chair of Medical
+Information Technology, in a cooperation project with the
+Ford Research Center in Aachen, developed and evaluated
+a capacitive electrocardiogram measurement system
+integrated into the driver seat (Eilebrecht et al., 2011).
+SYNC, the voice-activated technology developed by Ford,
+allows drivers to access their smartphone applications, and
+a growing number of those applications are related to
+healthcare (English, 2013). A steering wheel developed at
+the Munich Technical University in collaboration with
+BMW has a built-in sensor and is capable of measuring the
+heart rate, blood-oxygen level, and blood pressure (Trei,
+2011). Long since driver health-monitoring systems
+received research attention, the integration of advanced
+collision notification systems (ACNSs) into new cars has
+undergone substantial development, and this is only the
+beginning. Current applications use an array of sensors to
+detect the location of an accident and then notify
+emergency services. More recently, an extended view of an
+ACNS includes detection of driver/occupant weight,
+distance from wheel, and other features that enable the
+vehicle to play an active role in adjusting the force of
+airbag deployment (Coughlin and Reimer, 2006). The car,
+in addition to aiding a rapid deployment of emergency
+services to the scene, could become a platform for helping
+organize the emergency room and trauma resources before
+help arrives. 
+
+
+338
+J. YANG and J. F. COUGHLIN
+5. CONCLUSION
+Transportation is critical to everyday life, and it involves
+more than simply getting from point A to point B. The
+worldwide aging population poses a number of new safety-
+and technology-based challenges to the automobile
+industry, as well as to related stakeholders in the
+government, insurance, and health industries. This paper
+reviewed the effects of aging on sensory, motor, and
+cognitive functions, and discussed the learnability,
+acceptance, and net effectiveness of new in-vehicle
+technology by aging drivers. Extensive research in this
+field indicates a potential increasing demand for in-vehicle
+technology for aging drivers. This paper anticipates many
+questions that may arise from the interaction of
+autonomous technologies with an older driver population,
+and we expect the results of our exploration to be a
+foundation 
+for 
+further 
+developments 
+toward 
+the
+consideration of needs of aging drivers while designing
+self-driving vehicles. 
+ACKNOWLEDGEMENT–This work was supported in part by
+the Technology Innovation Program (1004761, Development of
+connectivity-based personalized intelligent integration cockpit
+module with analysis function of driver’s condition and driving
+environment) funded by Ministry of Trade, Industry and Energy,
+the new faculty research program of Kookmin University, Korea,
+the US Department of Transportation New England University
+Transportation Center, and Santos Family Foundation. We are
+grateful to Hyung Joon Kim for supporting us organizing the
+references. 
+REFERENCES
+AAA Foundation for Traffic Safety (2008). Use of
+Advanced In-Vehicle Technology by Young and Older
+Early Adopters. AAA Foundation for Traffic Safety
+Report. DOT-HS-810-828.
+Baldwin, C. L. (2002). Designing in-vehicle technologies
+for older drivers: Application of sensory-cognitive
+interaction theory. Theoretical Issues in Ergonomics
+Science 3, 4, 307−329. 
+Blocker Jr, W. P. (1992). Maintaining functional independence
+by mobilizing the aged. Geriatrics 47, 1, 42, 48−50, 53.
+Boot, W. R., Nichols, T. A., Rogers, W. A. and Fisk, A. D.
+(2012). Design for aging. in Salvendy, G., Handbook of
+Human Factors and Ergonomics. 4th edn. John Wiley &
+Sons. New York. 1409−1471.
+Bredereke, J. and Lankenau, A. (2002). A rigorous view of
+mode confusion. Proc. 21st Safecomp Int. Conf., 19−31.
+Brouwer, W., Ickenroth, J., Ponds, R. and Van Wolffelaar,
+P. (1990). Divided attention in old age: Difficulty in
+integrating skills. European Perspectives in Psychology,
+2, 335−348.
+Caird, J. (2004). In-vehicle intelligent transportation
+systems: Safety and mobility of older drivers. Proc. 27,
+TRB Conf., 236−258.
+Cattell, R. B. (1963). Theory of fluid and crystallized
+intelligence: A critical experiment. J. Educational
+Psychology 54, 1, 1−22.
+Corso, J. F. (1981). Aging Sensory Systems and Perception.
+Praeger. New York.
+Cotté, N., Meyer, J. and Coughlin, J. F. (2001). Older and
+younger drivers' reliance on collision warning systems.
+Proc. HFES Annual Meeting 45, 4, 277−280.
+Coughlin, J. F. (2001). Beyond Health and Retirement:
+Placing Transportation on the Aging Policy Agenda.
+MIT AgeLab Tech Report.
+Coughlin, J. F. and Reimer, B. (2006). New demands from
+an older population: An integrated approach to defining
+the future of older driver safety. Proc. SAE Convergence
+Conf., Detroit, Michigan.
+Coughlin, J. F., Reimer, B. and Mehler, B. (2009). Driver
+Wellness, Safety & the Development of an Awarecar.
+MIT AgeLab Tech Report.
+Crandall, J. W. and Cummings, M. L. (2007). Identifying
+predictive metrics for supervisory control of multiple
+robots. IEEE Trans. Robotics 23, 5, 942−951. 
+Cummings, M. L. and Mitchell, P. J. (2008). Predicting
+controller capacity in supervisory control of multiple
+UAVs. IEEE-Part A: Systems and Humans 38, 2, 451−
+460. 
+Dingus, T. A., Hulse, M. C., Mollenhauer, M. A.,
+Fleischman, R. N., Mcgehee, D, V. and Manakkal, N.
+(1997). Effects of age, system experience, and navigation
+technique on driving with an advanced traveler
+information system. Human Factors 39, 2, 177−199. 
+Eby, D. W. and Molnar, L. J. (2012). Cognitive impairment
+and driving safety. Accident Analysis & Prevention, 49,
+261−262.
+Eilebrecht, D. I. B., Wartzek, D. I. T., Lem, D. I. J. and
+Vogt, P. D. R. (2011). Capacitive electrocardiogram
+measurement system in the driver seat. ATZ Worldwide
+eMagazines 113, 3, 50−55. 
+Emmerson, C., Guo, A. W., Blythe, P. and Namdeo, A.
+(2012). In-vehicle navigation systems and older drivers.
+19th ITS World Cong., Vienna, Austria. 
+English, A. (2013). Cars that can monitor your health.
+http://www.telegraph.co.uk/motoring/road-safety/
+10013373/Cars-that-can-monitor-your-health.html
+Fozard, J. L., Vercryssen, M., Reynolds, S. L., Hancock, P.
+A. and Quilter, R. E. (1994). Age differences and
+changes in reaction time: The baltimore longitudinal
+study of aging. J. Gerontology 49, 4, 179−189.
+Gescheider, G. A., Bolanowski, S., Hall, K., Hoffman, K.
+and Verrillo, R. (1994). The effects of aging on
+information-processing channels in the sense of touch: I.
+Absolute 
+sensitivity. 
+Somatosensory 
+and 
+Motor
+Research 11, 4, 345−357. 
+Gish, K. W., Shoulson, M. and Perel, M. (2002). Driver
+behavior and performance using an infrared night vision
+enhancement system. 81st TRB Meeting, Washington,
+DC.
+
+
+IN-VEHICLE TECHNOLOGY FOR SELF-DRIVING CARS: ADVANTAGES AND CHALLENGES
+339
+Groeger, J. A. (1999). Expectancy and Control: Perceptual
+and Cognitive Aspects of the Driving Task., in Hancock,
+P. A., Human Performance and Ergonomics. Academic
+Press. 243−264.
+Haddon Jr, W. (1972). A logical framework for
+categorizing highway safety phenomena and activity. J.
+Trauma and Acute Care Surgery 12, 3, 193−207. 
+Hakamies-Blomqvist, L. (1996). Research on older drivers:
+A review. IATSS Research, 91−101. 
+Harkins, S. W. and Chapman, C. R. (1977). The perception
+of induced dental pain in young and elderly women. J.
+Gerontology 32, 4, 428−435. 
+Jacoby, L. L. and Hay, J. F. (1998). Age-related deficits in
+memory: Theory and application. Theories of Memory,
+2, Psychology Press, 111−134.
+Johnson, E. N. and Pritchett, A. R. (1995). Experimental
+Study of Vertical Flight Path Mode Awareness. ICAT
+Report No. ASL-95-3. 
+Kim, S., Wogalter, M. S. and Mayhorn, C. B. (2010). Older
+and younger drivers' beliefs about motor vehicle features
+to benefit their safe driving. Proc. HFES Annual
+Meeting 54, 2, 160−164. 
+Lindenberger, U. and Baltes, P. B. (1994). Sensory
+functioning and intelligence in old age: A strong
+connection. Psychology and Aging 9, 3, 339−355.
+Llaneras, R., Lerner, N., Dingus, T. and Moyer, J. (2000).
+Attention demand of IVIS auditory displays: An on-road
+study under freeway environments. Proc. HFES Annual
+Meeting 44, 20, 238−241. 
+Malfetti, J. L. and Winter, D. J. (1986). Drivers 55 plus:
+Test your own performance. AAA Foundation for
+Traffic Safety, Washington, DC.
+Maltz, M. and Shinar, D. (2004). Imperfect in-vehicle
+collision avoidance warning systems can aid drivers.
+Human Factors 46, 2, 357−366. 
+May, A., Ross, T. and Osman, Z. (2005). The design of
+next generation in-vehicle navigation systems for the
+older driver. Interacting with Computers 17, 6, 643−659.
+Mayr, U., Spieler, D. and Kliegl, R. (2001). Ageing and
+executive control: Introduction to this special issue.
+European J. Cognitive Psychology 13, 1/2, 1−4. 
+Mehler, B., Reimer, B. and Coughlin, J. F. (2012).
+Sensitivity of physiological measures for detecting
+systematic variations in cognitive demand from a
+working memory task an on-road study across three age
+groups. Human Factors 54, 3, 396−412. 
+Melenhorst, A., Rogers, W. A. and Caylor, E. C. (2001).
+The use of communication technologies by older adults:
+Exploring the benefits from the user's perspective. Proc.
+HFES Annual Meeting 45, 3, 221−225.
+Meyer, J. (2004). Personal vehicle transportation. The
+National Academies Press. 253−281. 
+Mihal, W. L. and Barrett, G. V. (1976). Individual
+differences in perceptual information processing and
+their relation to automobile accident involvement. J.
+Applied Psychology 61, 2, 229−233.
+Morrow, D., Carver, L. M., Leirer, V. O. and Tanke, E. D.
+(2000). Medication schemas and memory for automated
+telephone messages. Human Factors 42, 4, 523−540.
+Naughton, K. (2011). Ford Sees Sales Surge With New
+Diabetes-to-Heart 
+Dashboard: 
+Cars. 
+http://
+www.bloomberg.com/news/2011-05-26/ford-sees-sales-
+surge-with-new-diabetes-to-heart-dashboard-cars.html
+Nehme, C. E. (2009). Modeling Human Supervisory Control
+in Heterogeneous Unmanned Vehicle Systems. Ph.D.
+Dissertation. Massachusetts Institute of Technology.
+Nehme, C. E., Crandall, J. W. and Cummings, M. L.
+(2008). Using discrete-event simulation to model
+situational awareness of unmanned-vehicle operators.
+Proc. Virginia Modeling, Analysis and Simulation
+Center Capstone Conf.
+Norman, D. A. (2003). Interaction design for automobile
+interiors. 
+http://www.jnd.org/dn.mss/inter 
+action_
+design_f.html
+Olsen Jr., D. R. and Wood, S. B. (2004). Fan-out:
+Measuring human control of multiple robots. Proc.
+SIGCHI Conf. Vienna, Austria, 231−238.
+Planek, T. W. (1972). The aging driver in today's traffic: A
+critical review. North Carolina Symp. Highway Safety,
+Chapel Hill, NC.
+Ponds, R. W., Brouwer, W. H. and Van Wolffelaar, P. C.
+(1988). Age differences in divided attention in a
+simulated driving task. J. Gerontology 43, 6, 151−156. 
+Read, R. (2012). IEEE Says That 75% Of Vehicles Will Be
+Autonomous By 2040. http://www.thecarconnection.
+com/news/1079261_ieee-says-that-75-of-vehicles-will-
+be-autonomous-by-2040 
+Reimer, B., Coughlin, J. F. and Mehler, B. (2009).
+Development of a driver aware vehicle for monitoring,
+managing & motivating older operator behavior. ITS-
+America’s 2009 Annual Meeting, Washington, DC.
+Reimer, B., Donmez, B., Lavallière, M., Mehler, B.,
+Coughlin, J. F. and Teasdale, N. (2013). Impact of age
+and cognitive demand on lane choice and changing
+under actual highway conditions. Accident Analysis &
+Prevention, 52, 125−132. 
+Reimer, B., Mehler, B. and Coughlin, J. F. (2010). An
+Evaluation of Driver Reactions to New Vehicle Parking
+Assist Technologies Developed to Reduce Driver Stress.
+MIT AgeLab Tech Report. 
+Reimer, B., Puleo, R., D'Ambrosio, L., Coughlin, J.
+Cichon, J. and Griffith, D. (2006). Driver Flexibility:
+The Impact of Age on Rotation. Currently under
+Review, MIT AgeLab Tech Report. 
+Resnick, S. M., Pham, D. L., Kraut, M. A., Zonderman, A.
+B. and Davatzikos, C. (2003). Longitudinal magnetic
+resonance imaging studies of older adults: a shrinking
+brain. J. Neuroscience 23, 8, 3295−3301.
+Rudi, D. R. and Ingrid, P. K. (2000). The relationship
+between cognitive/neuropsychological factors and car
+driving performance in older adults. J. American
+Geriatrics Society 48, 12, 1644−1668.
+
+
+340
+J. YANG and J. F. COUGHLIN
+Rudin-Brown, C. M. and Parker, H. A. (2004). Behavioural
+adaptation to adaptive cruise control (ACC): Implications
+for preventive strategies. Transportation Research Part F
+7, 2, 59−76. 
+Salthouse, T. A. (1987). Adult age differences in
+integrative spatial ability. Psychology and Aging 2, 3,
+254−260. 
+Salvendy, G. (2012). Handbook of Human Factors and
+Ergonomics. 4th edn. John Wiley & Sons. New York.
+Shaheen, S. A. and Niemeier, D. A. (2001). Integrating
+vehicle design and human factors: minimizing elderly
+driving constraints. Transportation Research Part C:
+Emerging Technologies 9, 3, 155−174. 
+Stanton, N. A. and Young, M. S. (2005). Driver behaviour
+with adaptive cruise control. Ergonomics 48, 10, 1294−
+1313. 
+Statistics Korea (2004). Elderly Statistics, Statistics Korea
+Technical Report.
+Trei, M. (2011). Smart steering wheel checks your vital
+signs as you drive. http://www.dvice.com/archives/2011/
+11/smart_steering.php
+Vrkljan, B. H. and Polgar, J. M. (2007). Linking
+occupational participation and occupational identity: An
+exploratory study of the transition from driving to
+driving cessation in older adulthood. J. Occupational
+Science 14, 1, 30−39.
+Waller, P. F. (1991). The older driver. Human Factors 33, 5,
+499−505. 
+Wickens, C. D., Lee, J. D., Liu, Y. and Gordon, S. E.
+(2008). An Introduction to Human Factors Engineering.
+2nd edn. Pearson. Upper Saddle River. New Jersey. 
+Wilde, G. J. (1988). Risk homeostasis theory and traffic
+accidents: propositions, deductions and discussion of
+dissension in recent reactions.  Ergonomics 31, 4, 441−
+468. 
+Yick, K. (2003). Design and Test of Intersection Collision
+Avoidance Systems for Automobiles. M.S. Thesis.
+Massachusetts Institute of Technology. 
+Zelazo, P. D., Craik, F. I. and Booth, L. (2004). Executive
+function across the life span. Acta Psychologica 115, 2,
+167−183.
+
+

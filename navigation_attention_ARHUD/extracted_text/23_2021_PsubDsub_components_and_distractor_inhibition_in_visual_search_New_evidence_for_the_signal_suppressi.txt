@@ -1,0 +1,1118 @@
+Psychophysiology. 2021;00:e13878.	
+wileyonlinelibrary.com/journal/psyp	
+   |   1 of 12
+https://doi.org/10.1111/psyp.13878
+© 2021 Society for Psychophysiological Research
+1  | 
+INTRODUCTION
+The question whether salient but irrelevant objects capture 
+attention automatically remains the subject of intense debate. 
+Stimulus-­driven models propose that such objects always 
+attract attention, regardless of current selection intentions 
+(Franconeri & Simons, 2003; Theeuwes, 1991, 1992; Yantis 
+& Jonides, 1984), while goal-­dependent models assume that 
+this is only the case when they have at least one features that 
+is relevant in the current task context (Folk et al., 1992; Lien 
+et al., 2008). While this controversy is ongoing, there is some 
+recent progress toward a resolution (see Luck et al., 2021). 
+For example, Sawaki and Luck (2010) have proposed a signal 
+suppression account that contains elements of both stimulus-­
+driven and goal-­dependent models. In line with stimulus-­
+driven models, this account postulates that salient objects 
+such as feature singletons automatically generate saliency 
+signals. However, and in line with goal-­dependent accounts, 
+these signals can be suppressed if they do not match a cur-
+rently active task set, thereby preventing attentional capture.
+Received: 27 January 2021  | 
+Revised: 6 April 2021  | 
+Accepted: 14 May 2021
+DOI: 10.1111/psyp.13878  
+O R I G I N A L  A R T I C L E
+PD components and distractor inhibition in visual search: New 
+evidence for the signal suppression hypothesis
+Brandi Lee Drisdelle
+  |   Martin Eimer
+Department of Psychological Sciences, 
+Birkbeck, University of London, London, 
+UK
+Correspondence
+Brandi Lee Drisdelle, Department of 
+Psychological Sciences, Birkbeck, 
+University of London, Malet Street, London 
+WC1E 7HX, UK.
+Email: b.drisdelle@bbk.ac.uk
+Funding information
+This work was supported by grant ES/
+R003459/1 and ES/V002708/1 from the 
+Economic and Social Research Council 
+(ESRC), United Kingdom, as well as by 
+postdoctoral fellowships from the Natural 
+Sciences and Engineering Research Council 
+of Canada and the Fonds de Recherche du 
+Québec—­Nature et technologies, Canada 
+(awarded to B. Drisdelle). For reprints 
+e-mail Brandi Lee Drisdelle at b.drisdelle@
+bbk.ac.uk.
+Abstract
+The hypothesis that salient distractors in visual search are actively suppressed is sup-
+ported by the fact that these objects elicit PD components believed to be associated 
+with inhibition. This account was challenged by researchers who found that a PD to 
+lateral color singleton distractors was followed by a contralateral negativity, which 
+they interpreted as an N2pc indicative of attentional capture. As this would be at odds 
+with successful distractor suppression, they proposed an alternative lateral-­first serial 
+scanning hypothesis, which assumes that the PD might actually be an N2pc elicited 
+when a lateral context item is selected. We tested this hypothesis by measuring lat-
+eralized ERP components to search displays with two lateral and two vertical mid-
+line items, including a color singleton and a shape-­defined target. Color singletons 
+triggered PD components not only in blocks where attention was unfocused because 
+target location was unpredictable, but critically also in blocks where targets only ap-
+peared on the midline and participants had no reason to attend to lateral items. This 
+is inconsistent with the serial scanning hypothesis and supports the idea that the PD 
+reflects signal suppression. PD components to singleton distractors were followed 
+by a contralateral negativity, which we interpreted as a second PD elicited by non-
+salient distractors on the opposite side. Our sequential inhibition account reconciles 
+conflicting results of recent studies and emphasizes the role of inhibitory processes 
+during attentional target selection in visual search.
+K E Y W O R D S
+attentional capture, event-­related brain potentials (ERP), inhibition, PD component, signal 
+suppression hypothesis
+
+
+2 of 12  | 
+   
+DRISDELLE and EIMER
+This signal suppression hypothesis is supported by be-
+havioral (Gaspelin et al., 2015; Vatterott & Vecera, 2012), 
+oculomotor (Gaspelin et al., 2017; Gaspelin & Luck, 2018b; 
+Ipata et al., 2006), and ERP (Gaspelin & Luck, 2018a) stud-
+ies. For example, using an oculomotor search task, Gaspelin 
+et al. (2017) demonstrated that gaze was less likely to be di-
+rected to a task-­irrelevant color singleton than to other nons-
+ingleton distractor objects, indicating that the singleton was 
+actively suppressed. Analogous results were obtained by 
+Gaspelin et al. (2015) in experiments using a capture-­probe 
+paradigm with interleaved search and probe trials. More di-
+rect evidence for the active suppression of salient distractors 
+was obtained on the basis of ERP components measured in 
+response to visual search displays that contained a lateral 
+color singleton distractor. Gaspelin and Luck (2018a) found 
+that these singletons triggered an enhanced positivity at con-
+tralateral posterior electrodes (PD component), which has 
+previously been associated with the inhibition of distractor 
+processing (Gaspar & McDonald, 2014; Hickey et al., 2009; 
+Jannati et al., 2013). Importantly, the magnitude of this com-
+ponent was correlated with the magnitude of behavioral 
+suppression effects, supporting the hypothesis that the PD 
+component is an electrophysiological signature of active sup-
+pression of salience signals during visual search.
+However, this interpretation of the PD has recently been 
+challenged by results reported by Kerzel and Burra (2020). 
+Using four-­item search displays with a task-­irrelevant color 
+singleton similar to Gaspelin and Luck (2018a), but with-
+out interleaved probe trials, they confirmed the presence of 
+an early positivity contralateral to a lateral color singleton 
+in search displays where the target appeared on the vertical 
+midline and thus did not elicit any lateralized ERP compo-
+nents. However, and critically, this positivity was followed by 
+a contralateral negativity, similar to the N2pc component ob-
+served in many previous studies of visual search. The N2pc 
+is triggered by search targets and other objects with target-­
+defining features, and is generally assumed to be a marker 
+of the deployment of attention to these objects (Eimer, 1996; 
+Luck & Hillyard, 1994a, 1994b). Kerzel and Burra (2020) 
+interpreted the contralateral negativity triggered by color sin-
+gleton distractors in their study as an N2pc reflecting atten-
+tional capture by these singletons. This pattern of results is 
+difficult to reconcile with the idea that the preceding contra-
+lateral positivity (PD) reflects active singleton suppression, 
+since it is unclear why a singleton should still be able capture 
+attention after it has been suppressed.
+Kerzel and Burra (2020) concluded that their results are 
+incompatible with the signal suppression hypothesis, and that 
+the apparent PD was actually an N2pc that was triggered as 
+a result of deploying attention to the lateral item opposite to 
+the color singleton. They claimed that when search display 
+set size is small (e.g., two items on the horizontal and two on 
+the vertical midline), participants will adopt a serial scanning 
+strategy (see also Liesefeld & Müller, 2019; see also Wang 
+& Theeuwes, 2020) where lateral items are scanned prior to 
+vertical items, even when the target appears vertically. Kerzel 
+and Burra (2020) argued that the PD-­N2pc sequence observed 
+in their study reflects the initial allocation of attention to the 
+lateral context item (early N2pc) followed by the deployment 
+of attention to the color singleton on the opposite side (late 
+N2pc). In support of this serial scanning account, they found 
+generally shorter RTs to lateral as compared to vertically lo-
+cated search targets.
+This argument by Kerzel and Burra (2020) is import-
+ant for current debates about stimulus-­driven versus goal-­
+dependent attentional capture. If the contralateral positivity 
+observed by Gaspelin and Luck (2018a) is not a PD compo-
+nent triggered by the proactive suppression of salient single-
+ton distractors, this would remove a central piece of evidence 
+in support of the signal suppression hypothesis. However, as 
+acknowledged by Kerzel and Burra (2020), there is no direct 
+data-­driven way to distinguish a PD associated with singleton 
+suppression from an N2pc associated with the deployment 
+of attention to the context item on the opposite side, since 
+both lateralized components have very similar scalp distribu-
+tions and only differ in their polarity. In the current study, we 
+therefore used an alternative approach to adjudicate between 
+the suggestions by Kerzel and Burra (2020) and the original 
+interpretation of the PD as a marker of active suppression pro-
+posed by Gaspelin and Luck (2018a). We measured PD/N2pc 
+components in one search task that was similar to the one em-
+ployed in these previous studies, and in another task that was 
+modified in order to make it highly improbable that observers 
+would adopt a lateral-­first serial search strategy.
+Search displays were similar to Kerzel and Burra (2020) 
+and Gaspelin and Luck (2018a). They included two lateral 
+items to the left and right of fixation and two items on the 
+vertical midline (above and below fixation), and one of these 
+could be a salient color singleton distractor. In one task con-
+dition (unfocused attention), all four locations (including the 
+two lateral positions) were equally likely to contain the search 
+target, as in the two previous studies. Here, participants could 
+in principle have adopted the serial search strategy postulated 
+by Kerzel and Burra (2020). In another condition (focused 
+attention [midline]), search targets only ever appeared at one 
+of the two vertical locations, but never laterally. Here, partic-
+ipants could focus their attention entirely on the vertical mid-
+line and had no incentive to attend to or start scanning either 
+of the two lateral locations. The critical question was whether 
+lateral color singletons would elicit a contralateral positivity 
+only with unfocused attention, or also in the focused [mid-
+line] condition where lateral locations were entirely task-­
+irrelevant. If the PD was actually an N2pc to the context 
+element, as suggested by Kerzel and Burra (2020), it should 
+only be found in the unfocused attention condition where lat-
+eral locations were potential target locations, but not in the 
+
+
+      | 
+3 of 12
+DRISDELLE and EIMER
+focused attention [midline] condition. In contrast, if the PD 
+was linked to distractor suppression, as proposed by Gaspelin 
+and Luck (2018a), it should also be elicited by lateral color 
+singletons when attention is focused on the midline, since at-
+tentional capture by these singletons might interfere with the 
+processing of vertical search targets. In this case, the question 
+remains whether these PD components would still be smaller 
+in the focused attention [midline] compared to the unfocused 
+attention condition, as inhibition might be stronger for salient 
+distractors at potentially task-­relevant locations.
+To maximize the number of trials available for ERP 
+analyses, we used a multiple frames procedure, where four 
+visual search displays were presented sequentially on each 
+trial, and participants were subsequently prompted to indi-
+cate the number of frames containing a target (e.g., Aubin & 
+Jolicoeur, 2016; Drisdelle & Jolicoeur, 2018). Using small 
+display sizes is advantageous for EEG studies that employ a 
+lateralized ERP marker of suppression (e.g., PD component), 
+as they result in a large number of trials where the target is 
+presented on the midline and the salient distractor laterally, 
+thereby improving the signal-­to-­noise ratio. Moreover, four 
+unique shapes were presented in each frame (encouraging 
+feature search mode rather than singleton search mode; Bacon 
+& Egeth, 1994), and the color of the singleton distractor was 
+held constant (Vatterott & Vecera, 2012). These two factors 
+are critical for observing distractor suppression rather than 
+attentional capture by an irrelevant color singleton (see Luck 
+et al., 2021, for discussion). In addition to the unfocused and 
+focused attention [midline] conditions, we also ran a focused 
+attention [lateral] condition, where search targets could only 
+appear at the two lateral positions and never on the vertical 
+midline. This condition was included to equate possible target 
+locations across the whole experimental session, and to allow 
+for additional control analyses (see below). Each attention 
+condition was presented in consecutive blocks, with order of 
+conditions counterbalanced across participants. Prior to the 
+first block of each condition, participants were explicitly in-
+formed about possible target locations.
+2  | 
+METHOD
+2.1  |  Participants
+Twenty-­four (24) participants were recruited. Sample 
+size selection was based on Experiment 1 of Gaspelin and 
+Luck (2018a), which had 20 participants, and Experiment 2 
+of Kerzel and Burra (2020), which had 22 participants. In 
+Kerzel and Burra (2020), the critical t-­test showing the pres-
+ence of a PD component for a lateral distractor with a midline 
+target had a Cohen's dz of 1.39. To replicate this effect with a 
+power of 0.95, a minimum sample size of 9 is necessary (de-
+termined using G*power; Faul et al., 2007). Six participants 
+were removed from our initial sample due to excessive eye 
+movements (a combination of rejected epochs and/or ex-
+ceeding HEOG deflection cut-­off; see EEG recording and 
+analysis for details), resulting in a final sample of 18 partici-
+pants (age: M = 30.28 years, SD = 8.28 years, 10 female). 
+This sample size allowed for a full counterbalancing of all 
+between-­subject factors (see Procedures for a breakdown). 
+All participants had normal or corrected-­to-­normal vision. 
+Methods were approved by the departmental ethics commit-
+tee at Birkbeck, University of London.
+2.2  |  Stimuli and procedures
+Stimuli were presented using a 24-­inch BenQ monitor 
+(1920  ×  1080 screen resolution) attached to a SilverStone 
+PC. Participant viewing distance was approximately 80 cm. 
+The experiment was programmed using E-­prime 3.0 software 
+(Psychology Software Tools, Pittsburgh, PA). Figure 1 illus-
+trates the experimental setup, including possible target loca-
+tions (attentional focus; A), the time course of a trial (B), and 
+the different types of visual search displays (C). Participants 
+searched for a predefined target shape among heterogeneous 
+distractor shapes, presented on a black background with a 
+gray fixation cross at the center of the screen (Figure 1c). On 
+each trial, four visual search displays (frames) were presented 
+sequentially (see Figure  1b). Each display contained four 
+items, two on the vertical midline (above and below fixation) 
+and two on the horizontal midline (to the left and right of 
+fixation). The centre of each item was 2° from fixation. The 
+target was a diamond (1.6° × 1.6°), a circle (0.7° in radius) or 
+a hexagon (1.5° × 1.5°; counterbalanced between-­subjects), 
+which could either be present or absent in any given search 
+display. A salient distractor (a color singleton square; 1.2° 
+× 1.2°) was present in most search displays (see below for 
+details). For half of the participants, this color singleton was 
+red (CIE coordinates: 0.629/0.333, luminance: 47.2 cd/m2) 
+and all other search display items were green (0.306/0.615, 
+47.3  cd/m2). This color assignment was reversed for the 
+other half of participants. In target-­absent displays, the color 
+singleton square was always present, and appeared together 
+with two nontarget shapes (e.g., a diamond and a hexagon 
+for participants who searched for circles) and a third shape (a 
+gate stimulus that did not serve as target for any participant; 
+1.2° × 1.2°). In most target-­present displays, the target was 
+presented together with the color singleton square and two 
+randomly selected nontarget shapes. In a minority of target-­
+present displays, the color singleton square was absent, and 
+the target appeared together with the other three nontarget 
+shapes, all in the same color.
+Trials began with a fixation cross, which remained pres-
+ent until participants were prompted to respond following the 
+last search display on each trial. After 500 ms, the first of 
+
+
+4 of 12  | 
+   
+DRISDELLE and EIMER
+the four search displays (frames) appeared. Each frame was 
+presented for 200 ms, with an interframe-­interval of 500 ms 
+(± 100 ms jitter). After the presentation of the last frame, fix-
+ation remained until participants responded. Their task was to 
+report the number of frames with a target (possible responses: 
+1, 2, 3, or 4 target frames) by pressing the “z”, “x”, “n”, or 
+“m” key on a computer keyboard with their left/right middle/
+index finger. Participants were informed about the color and 
+shape of the target at the start of the experiment. They were 
+instructed to ignore salient color singleton distractors when 
+present, and to respond as quickly and as accurately as possi-
+ble at the end of each trial. The next trial was initiated once 
+a response was registered. For incorrect trials in the practice 
+block, a red fixation cross was presented after response exe-
+cution. In experimental trials, no trial-­by-­trial feedback was 
+provided, and a gray fixation cross was presented immedi-
+ately after response execution. Participants received block-­
+by-­block feedback on accuracy at the end of all experimental 
+blocks and the practice block.
+There were 16 experimental blocks (25 trials in each 
+block), resulting in 400 experimental trials with four frames 
+(1600 frames in total). A practice block (5 trials; 20 frames) 
+was completed by all participants prior to the first experi-
+mental block. A target was present in 62.5% of all frames and 
+absent in the remaining 37.5% frames. Seventy-­five percent 
+(75%) of all target-­present frames included a color singleton 
+distractor. The color singleton was always present in target-­
+absent frames. Thus, a color singleton distractor was present 
+in 84.4% of all frames ([0.75 × 62.5%] target-­present frames 
++37.5% target-­absent frames). It was presented with equal 
+probability at any nontarget location.
+The critical manipulation concerned possible target loca-
+tions (attentional focus; Figure 1a). In eight successive blocks 
+(200 trials/800 frames), the target could be presented with 
+equal probability in all four possible locations (unfocused at-
+tention). In four successive blocks (100 trials/400 frames), it 
+could only appear on the vertical midline (focused attention 
+[midline]), and in the remaining four blocks, only at one of 
+the two lateral positions (focused attention [lateral]). As there 
+were more possible stimuli configurations in the unfocused 
+attention condition, twice as many blocks were included for 
+the focused attention conditions. In the practice block, atten-
+tion was unfocused.
+Frames were randomly sorted into trials, with the restric-
+tion that there was an equal overall number of trials with 1, 2, 
+3, or 4 targets. These four types of trials were then presented 
+in random order within blocks of 25 trials. This was done 
+separately for each attentional focus condition. The order of 
+FIGURE 1 
+Illustration of the stimuli and procedure of Experiment 1. (a) Possible target locations in the three blocked attention conditions. (b) 
+Time course of the multiple-­frames presentation procedure. On each trial, four successive frames were presented. (c) Spatial configuration of search 
+displays (target: hexagon). Different display included a color singleton distractor and a target (left), a color singleton distractor without the target 
+(middle), or the target without a color singleton distractor (right). Stimuli are not to scale and for visualization purposes only (see Methods for exact 
+dimensions)
+
+
+      | 
+5 of 12
+DRISDELLE and EIMER
+the three blocked attentional focus conditions was counter-
+balanced between-­subjects using a Latin square. The order 
+was either (a) unfocused, focused [midline], focused [lateral], 
+(b) focused [midline], focused [lateral], and unfocused, or (c) 
+focused [lateral], unfocused, focused [midline]. The between-­
+subject counterbalancing of color assignment (green target/
+distractors and red singleton distractor, or vice versa), target 
+shape (diamond, circle, or hexagon), and block order resulted 
+in 18 possible combinations, which were each assigned to 
+one participant.
+2.3  |  EEG recording and analysis
+An electroencephalogram was DC-­recorded from 27 scalp 
+electrodes mounted on an elastic cap at the following 
+sites according to the international 10/20 system: Fpz, F7, 
+F8, F3, F4, Fz, FC5, FC6, T7, T8, C3, C4, Cz, CP5, CP6, 
+P9, P10, P7, P8, P3, P4, Pz, PO7, PO8, PO9, PO10, and 
+Oz (Sharbrough,  1991). Data were recorded using Brain 
+Products software and sampled at 500 Hz with an online low-­
+pass filer of 40 Hz. Channels were referenced online to an 
+electrode placed on the left earlobe and re-­referenced offline 
+to the average of both earlobes. Data were analysed using 
+BrainVision Analyzer 2 (Brain Products GmbH, Gilching, 
+Germany). The horizontal electrooculogram (HEOG) was 
+calculated offline as the voltage difference between elec-
+trodes lateral to the external canthi (placed using the elastic 
+cap) and used to measure horizontal eye movements. Frames 
+were segmented from 100 prestimulus to 500 ms poststim-
+ulus (600  ms epochs). Segmentations were then baseline 
+corrected by subtracting the average voltage of the 100 ms 
+prestimulus period from the entire epoch. Frames with ac-
+tivity considered blinks or vertical eye movements (exceed-
+ing ±60 µV at Fpz) or horizontal eye movements (exceeding 
+±30 µV in the HEOG channel) were automatically rejected. 
+To detect any systematic residual eye movements toward lat-
+eral targets that remained after automated artifact rejection, 
+lateralized HEOG differences for frames with left or right 
+targets were examined (averaged across all other conditions). 
+Averaged lateralized HEOG deflections remained below 
+3 µV for all 18 participants included in the sample, indicating 
+that they maintained reasonable fixation. Other artifacts, such 
+as movement related artifacts, were identified and automati-
+cally rejected using a cut-­off of ±80 µV for all other chan-
+nels. Trials with incorrect responses were not excluded from 
+EEG analysis, given the overall high accuracy (96%), and be-
+cause responses were provided only after four visual search 
+frames, which implies that response errors do not indicate a 
+failure to detect any target (e.g., on trials with 4 targets, a “3” 
+response is categorized as error).
+Averaged ERP waveforms were computed for different 
+frames, as a function of whether the target (T) or singleton 
+distractor (D) was presented laterally (L), on the vertical mid-
+line (M), or was absent (0). For the unfocused attention con-
+dition, ERPs were separately averaged for four different 
+frame types (TM –­ DL, TL –­ DM, TL –­ D0, T0 –­ DL). For the 
+focused attention [lateral] condition, ERPs were averaged for 
+three frame types (TL –­ DM, TL –­ D0, T0 –­ DL). For the 
+focused attention [midline] condition, ERPs were averaged 
+for two frame types (TM –­ DL, T0 –­ DL). ERPs were always 
+computed separately for frames with lateral targets/singleton 
+distractors on the left or right side. No ERPs were computed 
+for frames that could not trigger any lateralized activity (T0 
+–­ DM, TM –­ DM, and TM –­ D0), and for frames that con-
+tained a lateral target and a lateral singleton distractor on op-
+posite sides (TL –­ DL), because it is difficult to dissociate 
+target-­ and distractor-­induced lateralized activity for these 
+frames. To isolate lateralized activity associated either with 
+the target or salient distractor, ERPs recorded at electrodes 
+PO7/PO8 ipsilateral to the item of interest were subtracted 
+from contralateral ERPs. Lateralized components were quan-
+tified using the collapsed localizer method, as described by 
+Luck and Gaspelin (2017). All frames containing either a lat-
+eral color singleton or a lateral target were averaged sepa-
+rately. For lateral singletons, a contralateral positivity was 
+observed from 110 to 260 ms and a contralateral negativity 
+from 260 to 330 ms. For lateral targets, no contralateral posi-
+tivity was observed, but a negativity (N2pc component) was 
+present from 200 to 350 ms.1
+Analyses of variance (ANOVA) and t-­tests were used to 
+evaluate ERP results statistically. Reported effect sizes for 
+ANOVA results were determined using partial eta squared (휂2
+p
+; Keppel, 1991) and for t-­test results were determined using 
+Cohen's dz (t/√n; Lakens, 2013; Rosenthal, 1994). As our 
+study focused on lateralized components, only effects con-
+taining the laterality factor are reported. Lateralized ERP ef-
+fects are quantified as contralateral minus ipsilateral 
+differences (C –­ I Δ).
+3  | 
+RESULTS
+3.1  |  Behavioral data
+Accuracy was very high across all three attention conditions 
+(M = 95.9%, SD = 3.1%), and also within each condition (fo-
+cused attention [midline]: M = 96.3%, SD = 3.1%; focused 
+ 1These time windows are consistent with the previous literature. For 
+example, Gaspelin and Luck (2018a) used a 100–­300 ms measurement 
+window to quantify the PD and a 200–­400 ms window to quantify the N2pc 
+(calculated using the technique described in Sawaki et al., 2012). Kerzel 
+and Burra (2020), employed 50 ms measurement windows that were 
+centered at the peak latencies of positive and negative lateralized activity 
+(210 and 290 ms, respectively).
+
+
+6 of 12  | 
+   
+DRISDELLE and EIMER
+attention [lateral]: M = 96.3%, SD = 4.0%; unfocused atten-
+tion: M = 95.2%, SD = 4.3%). Although accuracy was nu-
+merically higher across the two focused attention conditions 
+relative to the unfocused attention condition, this difference 
+not reliable, t(17) = 1.33, p = .20, dz = 0.31. Because a re-
+sponse was only required following the prompt at the end 
+of each trial and not for individual frames, no response time 
+data are reported.
+3.2  |  Electrophysiological data
+3.2.1  |  Main analyses
+To assess whether a PD is elicited by lateral salient distrac-
+tors that are presented at task-­irrelevant locations, and thus 
+outside the focus of attention, we compared lateralized ERP 
+waveforms obtained in response to search displays with 
+a lateral color singleton between the unfocused attention 
+condition and the focused attention [midline] condition. 
+Figure 2 shows these ERPs, separately for displays where a 
+target was either absent or present on the vertical midline. It 
+suggests a PD was elicited by these lateral color singletons, 
+not only with unfocused attention but also in blocks where 
+targets could only appear on the vertical midline. PD mean 
+amplitudes (measured from 110 to 260 ms) were submitted 
+to a repeated-­measures ANOVA with the factors Attentional 
+focus (unfocused vs. focused [midline]), Midline target (pre-
+sent vs. absent), and Laterality (electrode ipsilateral vs. con-
+tralateral to the side of the color singleton).
+A main effect of Laterality was present, F(1, 17) = 34.5, p 
+< .0001, 휂2
+p = 0.67, reflecting an enhanced contralateral pos-
+itivity (C –­ I Δ = 0.44 µV), and indicating that lateral color 
+singletons did indeed elicit a PD component. Laterality inter-
+acted with Attentional focus, F(1, 17) = 7.97, p = .01, 휂2
+p = 
+0.32. As can be seen in Figure 2, PD components were larger 
+in the unfocused attention condition (C –­ I Δ = 0.58 µV) than 
+FIGURE 2 
+Top panels: Grand-­averaged ERPs measured in the focused [midline] and unfocused attention conditions at electrodes PO7/8 
+contralateral and ipsilateral to a lateral color singleton distractor. ERPs are shown separately for displays with a midline target (red lines) and 
+without a target (black lines). Bottom panels: Corresponding contralateral minus ipsilateral difference waveforms. PD components are visible for 
+all conditions, followed by a contralateral negativity that was most pronounced for target-­present displays in the unfocused attention condition. 
+Waveforms were low-­pass filtered at 15 Hz for visualization purposes
+
+
+      | 
+7 of 12
+DRISDELLE and EIMER
+in the focused attention [midline] condition (C –­ I 
+Δ = 0.31 µV). However, paired t-­tests comparing contralat-
+eral and ipsilateral ERPs confirmed that a PD component was 
+reliably present not only with unfocused attention t(17) = 
+6.04, p < .0001, dz = 1.42, but also, critically, when attention 
+was focused on the vertical midline t(17) = 3.69, p = .002, dz 
+= 0.87. There was no interaction between Laterality and 
+Midline Target (F(1, 17) = 0.24, p = .63, 휂2
+p = 0.01), indicat-
+ing that the presence versus absence of a midline target in the 
+same search display did not affect PD amplitudes. Finally, 
+there was also no three-­way interaction between Laterality, 
+Attentional Focus, and Midline target (F(1, 17) = 2.66, p = 
+.12, 휂2
+p = 0.14).2
+As can be seen in Figure 2, PD components were followed 
+by an enhanced contralateral negativity, which was most pro-
+nounced in the unfocused attention condition for displays that 
+contained a midline target. This contralateral negativity 
+(measured from 260 to 330 ms) was analysed in an additional 
+ANOVA with the same three factors described above. There 
+was a main effect of Laterality, F(1, 17) = 10.87, p = .004, 휂2
+p 
+= 0.39, reflecting the presence of a negativity contralateral to 
+the color singleton (C –­ I Δ = −0.4 µV). Laterality interacted 
+with Midline target, F(1, 17) = 11.64, p = .003, 휂2
+p = 0.41, 
+and marginally with Attentional focus, F(1, 17) = 3.6, p = 
+.07, 휂2
+p = 0.18. Importantly, there was also a reliable three-­
+way interaction between all factors, F(1, 17) = 10.37, p = 
+.005, 휂2
+p = 0.38. To decompose this interaction, separate 2-­
+way ANOVAs (Midline target × Laterality) were conducted 
+for the unfocused attention and focused attention [midline] 
+conditions. With unfocused attention, a main effect of 
+Laterality, F(1, 17) = 12.87, p = .002, 휂2
+p = 0.43, was accom-
+panied by an interaction between Midline target and 
+Laterality, F(1, 17) = 27.53, p < .0001, 휂2
+p = 0.62. Paired t-­
+tests confirmed that a significant contralateral negativity was 
+elicited for displays where a target was present on the mid-
+line, t(17) = 5.53, p < .0001, dz = 1.30, but not when the 
+target was absent, t < 1. When attention was focused on the 
+midline, a marginal effect of Laterality, F(1, 17) = 4.4, p = 
+.05, 휂2
+p = 0.21 was observed, suggesting the presence of a 
+small negativity contralateral to the color singleton distractor 
+(C –­ I Δ = −0.27 µV). There was no interaction between 
+Laterality and Midline target, F < 1.
+3.2.2  |  Additional analyses
+Our main analyses showed that although a PD component to 
+lateral color singleton distractors was reliably present when 
+attention was focused on the midline, this component was 
+larger with unfocused attention. This difference may be a re-
+sult of the fact that lateral locations were task-­relevant in un-
+focused attention blocks but not in focused attention [midline] 
+blocks. Alternatively, it could be due to the difference in the 
+total number of attended locations between unfocused and 
+focused attention conditions (four vs. two). To disentangle 
+these two possibilities, we compared PD components elicited 
+by lateral color singleton distractors in the unfocused atten-
+tion condition and in the focused attention [lateral] condition. 
+In both conditions, distractors now appeared at task-­relevant 
+locations, but the number of attended task-­relevant locations 
+still differed. If PD amplitudes were sensitive to this factor, 
+they should again be smaller with two attended locations in 
+the focused attention [lateral] condition than with four at-
+tended locations in the unfocused attention condition. If the 
+PD amplitude difference between focused and unfocused 
+[midline] blocks was due to the task-­relevance of singleton 
+distractor locations, no such difference should be observed. 
+Figure  3 shows contralateral—­ipsilateral difference waves 
+for target-­absent displays with lateral color singletons in 
+these two conditions. PD mean amplitudes (measured from 
+110 to 260 ms) were submitted to an ANOVA with the fac-
+tors Laterality and Attentional focus (unfocused vs. focused 
+[lateral]). There was a main effect of Laterality, F(1, 17) = 
+33.56, p < .0001, 휂2
+p = 0.66, reflecting an enhanced contralat-
+eral positivity indicative of the PD component (C –­ I 
+Δ = 0.68 µV). Critically, there was no interaction between 
+Laterality and Attentional focus, F < 1, indicating that de-
+spite the difference between attended task-­relevant locations, 
+this component was similar in size in both attention 
+conditions.
+Because the absence of a significant effect does not con-
+stitute as evidence for the null hypothesis, the nonsignificant 
+interaction between Laterality and Attentional focus was sup-
+plemented by the calculation of a Bayes Factor in favor of the 
+null hypothesis (BF01) using JASP (0.14.0). For simplicity, 
+we first calculated the difference between contralateral and 
+ipsilateral activity (Laterality difference) to isolate activity 
+associated with the PD component. A paired t-­test comparing 
+both attention conditions (unfocused vs. focused [lateral]) for 
+the Laterality difference was conducted. Because we had no 
+a priori expectation, a default prior was used (Cauchy scale 
+of 0.707). The Bayes factor provided strong support for the 
+null (BF01 = 3.78).
+In the final analysis, we examined whether N2pc compo-
+nents to lateral targets were affected by the number of at-
+tended task-­relevant locations in unfocused and focused 
+ 2Mixed-­model ANOVAs including color assignment (2 levels) and block 
+order (3 levels) as between-­subject factors were also conducted. For the PD, 
+color interacted with laterality, where a larger PD was observed when the 
+color singleton was red compared with green, as previously reported (see 
+Fortier–­Gauthier et al., 2013), F(1, 12) = 5.62, p = .04, 휂2
+p = 0.32. For the 
+N2pc, a 3-­way interaction between block order, attentional focus, and 
+laterality was observed, F(2, 12) = 7.35, p = .008, 휂2
+p = 0.55.
+
+
+8 of 12  | 
+   
+DRISDELLE and EIMER
+[lateral] blocks. More efficient attentional guidance with 
+fewer possible target locations could result in larger and/or 
+earlier target N2pc components with focused attention. 
+Figure  4 shows N2pc components based on contralateral-­
+ipsilateral difference waves for unfocused and focused [lat-
+eral] conditions (averaged across displays where a midline 
+singleton distractor was either present or absent). No clear 
+N2pc differences between these conditions were apparent. 
+An ANOVA of N2pc mean amplitudes (measured from 200 
+to 350  ms post-­stimulus) with the factors Laterality and 
+Attentional focus (unfocused vs. focused [lateral]) revealed a 
+main effect of Laterality, F(1, 17) = 32.24, p < .0001, 휂2
+p = 
+0.66, confirming the existence of target N2pc components (C 
+–­ I Δ = −1.45 µV). However, there was no interaction be-
+tween Laterality and Attentional focus, F < 1, suggesting that 
+target N2pc amplitudes did not differ between the two atten-
+tion conditions. Likewise, a comparison of N2pc onset laten-
+cies based on the jackknife-­based method described by Miller 
+and colleagues (Miller et al., 1998) found no evidence for any 
+target N2pc onset difference between focused and unfocused 
+attention, F < 1.
+4  | 
+DISCUSSION
+The question whether salient but task-­irrelevant signals cap-
+ture attention reflexively or can be actively suppressed is a 
+central topic in current debates about the scope of top-­down 
+attentional control. One key piece of evidence supporting the 
+signal suppression hypothesis is that salient distractors in 
+visual search elicit PD components assumed to be associated 
+with active inhibition (Gaspelin & Luck, 2018a). However, 
+this interpretation has recently been challenged by Kerzel and 
+Burra (2020), who claimed that the distractor PD observed by 
+Gaspelin and Luck (2018a) was actually an N2pc in response 
+to a lateral context item in the opposite visual field as a result 
+of observers employing a lateral-­first serial search strategy.
+We tested this alternative account proposed by Kerzel 
+and Burra (2020) by measuring PD components in a visual 
+search task where attention was initially unfocused because 
+targets could be presented at any of four display locations, 
+and in a task where targets could only appear on the verti-
+cal midline but never at lateral positions. If the PD observed 
+with unfocused attention was in fact an N2pc associated with 
+the attentional selection of lateral context objects, it should 
+not be found in this focused attention [midline] task, because 
+participants had no reason to allocate attention to these ob-
+jects. The critical finding of this study was that PD compo-
+nents to search displays with a lateral color singleton were 
+not only observed in unfocused attention blocks, but were 
+also reliably present in focused attention blocks where lat-
+eral locations were completely task-­irrelevant, thus removing 
+any incentive for participants to actively scan (i.e., allocate 
+attention to) these locations. The presence of a PD to color 
+singletons at irrelevant locations does show that these distrac-
+tors were preattentively registered and presumably triggered 
+an attend-­to-­me signal (Sawaki & Luck, 2010), but were then 
+proactively suppressed, thereby preventing attentional cap-
+ture. It is also notable that the onset of the PD to a lateral 
+color singleton (Figure 2) was much earlier than the onset 
+FIGURE 3 
+Difference waveforms obtained by subtracting ERPs 
+at electrodes PO7/8 ipsilateral to a color singleton distractor from 
+contralateral ERPs in response to target-­absent displays in the focused 
+[lateral] and unfocused attention conditions. PD components of similar 
+size were present in both conditions. Waveforms were low-­pass 
+filtered at 15 Hz for visualization purposes
+FIGURE 4 
+Difference waveforms obtained by subtracting 
+ERPs at electrodes PO7/8 ipsilateral to a lateral target from the 
+corresponding contralateral ERPs in response to target-­present 
+displays in the focused [lateral] and unfocused attention conditions 
+(collapsed across displays with and without a singleton distractor on 
+the vertical midline). Target N2pc components did not differ between 
+these two conditions. Waveforms were low-­pass filtered at 15 Hz for 
+visualization purposes
+
+
+      | 
+9 of 12
+DRISDELLE and EIMER
+of the N2pc component to a lateral target (Figure 4), indicat-
+ing that the suppression of the color singleton occurs prior 
+to any allocation of attention. This is inconsistent with the 
+alternative serial scanning account (Kerzel & Burra, 2020), 
+since it is unclear why attention should be allocated earlier 
+to a context item opposite to the color singleton than to the 
+search target. Overall, these results are incompatible with 
+the proposal by Kerzel and Burra (2020) but are fully in line 
+with the original hypothesis by Gaspelin and Luck (2018a) 
+that the PD is a marker of active distractor suppression. They 
+are also in line with previous work demonstrating the pres-
+ence of PD components to salient distractors in search dis-
+plays with larger set sizes (e.g., Gaspar & McDonald, 2014; 
+Sawaki & Luck, 2010), where it is unlikely that participants 
+would adopt a lateral-­first serial scanning strategy (see also 
+Gaspelin et al., 2017, for evidence of oculomotor suppression 
+in such displays).
+Notably, the PD to a lateral color singleton was reduced 
+in size in blocks where attention was focused on the midline 
+relative to unfocused attention blocks, suggesting that inhibi-
+tion was stronger when color singletons appeared at potential 
+task-­relevant locations. Alternatively, this PD amplitude dif-
+ference could be linked to the total number of attended task-­
+relevant locations in these two task conditions (two vs. four). 
+Our additional observation that PD amplitudes in response to 
+search displays with lateral color singleton did not differ be-
+tween the unfocused and the focused attention [lateral] con-
+dition rules out this alternative interpretation. Thus, active 
+distractor inhibition, as reflected by the PD component, ap-
+pears to be scaled with the potential task relevance of distrac-
+tor locations, presumably because distractors at relevant and 
+thus attended locations are likely to interfere more strongly 
+with target processing. The observation that the magnitude 
+of the PD and the magnitude of behavioral suppression are 
+correlated (Gaspelin & Luck, 2018a) is also in line with this 
+suggestion.
+Kerzel and Burra (2020) reported additional behavioral 
+evidence for their proposed lateral-­first serial search strategy, 
+as RTs in their study tended to be faster for lateral relative to 
+midline targets. Here, we assumed that when observers knew 
+that targets could only appear on the vertical midline, they 
+should not adopt such a strategy, and would allocate attention 
+only to the two midline locations. However, it remains theo-
+retically possible that even under these conditions, they would 
+still always attend to lateral items first. Because our ERP 
+study used a multiple-­frames procedure where no responses 
+to individual search displays were required, this possibility 
+could not be ruled out with behavioral data. We therefore ran 
+an additional behavioral control experiment with 18 partic-
+ipants, using the same search display types and attentional 
+focus conditions as our ERP experiment, except that trials 
+with and without a color singleton distractor were equiprob-
+able, and a speeded response was required after each search 
+display. Participants' task was to localize the position of a dot 
+within the target shape (similar to Gaspelin & Luck, 2018a; 
+Kerzel & Burra, 2020). If participants were prioritizing mid-
+line locations in the focused attention [midline] condition, 
+RTs to midline targets should be faster for this condition rel-
+ative to the unfocused attention task. If lateral locations are 
+always scanned first, even when they are task-­irrelevant, no 
+such RT difference should be found. As predicted, responses 
+to midline targets were indeed substantially faster when at-
+tention was focused on the midline than in the unfocused 
+attention condition (focused [midline]: M = 509 ms, SE = 
+17 ms; unfocused [midline]: M = 581 ms, SE = 20 ms; t(17) 
+= 6.36, p < .0001, dz = 1.5), indicating that irrelevant lateral 
+locations were not prioritized.
+This result leaves open the possibility that when targets 
+can appear at any of four possible locations, observers adopt a 
+lateral-­first serial search strategy, as suggested by Kerzel and 
+Burra (2020). To assess this, we compared RTs to lateral tar-
+gets obtained in the same control experiment in blocks where 
+attention was either unfocused or focused on the two lateral 
+locations. RTs for lateral targets with focused lateral attention 
+(M = 536 ms, SE = 18 ms) were faster than with unfocused 
+attention (M = 578 ms, SE = 20 ms; t(17) = 2.99, p = .008, 
+dz = 0.70), which is not in line with the hypothesis that at-
+tention is by default always directed to lateral locations first. 
+It should be noted that both sets of comparisons are between 
+tasks where either two or all four display locations could con-
+tain the target, and that slower RTs in the unfocused attention 
+task could in part reflect this difference in effective search set 
+size. This factor should have little effect if participants were 
+scanning lateral locations first on all or on a large majority of 
+trials regardless of task instructions (as suggested by Kerzel 
+& Burra, 2020), but would become relevant if this strategy 
+was adopted only on some trials.
+Faster RTs to lateral targets with focused lateral rela-
+tive to unfocused attention in this control experiment may 
+appear inconsistent with the observation that N2pc compo-
+nents to these targets measured in our ERP experiment did 
+not differ in amplitude or onset latency between these two 
+task conditions (Figure 4). This was indeed unexpected, as 
+attentional target selection, as reflected by N2pc compo-
+nents, should presumably have been more efficient with 
+focused attention. The absence of any N2pc differences 
+suggests that when search displays contain only four items 
+and a shape-­defined target is therefore relatively easy to 
+locate, the initial rapid deployment of attention is not af-
+fected by information about possible target location. In this 
+case, the RT difference observed in our control experiment 
+was likely to be produced by processes that follow this ini-
+tial deployment, such as target identification and response 
+selection.
+While the presence of a PD component in the focused 
+attention [midline] condition strongly suggests that this 
+
+
+10 of 12  | 
+   
+DRISDELLE and EIMER
+component is associated with distractor suppression, one 
+other aspect of our ERP results may seem difficult to reconcile 
+with this interpretation. Similar to Kerzel and Burra (2020), 
+we also found that the PD in response to search displays with 
+lateral color singletons was followed by a contralateral nega-
+tivity. This negativity was most pronounced for target-­present 
+displays in the unfocused attention condition, but was also 
+nearly significant in the focused attention [midline] condi-
+tion. If this contralateral negativity was an N2pc reflecting 
+attentional capture by the color singleton, as suggested by 
+Kerzel and Burra (2020), this would call into question the 
+link between the PD and distractor suppression, since sup-
+pression should presumably prevent attentional capture. One 
+possible explanation is that successful distractor suppression 
+and attentional capture occur on different trials, with capture 
+the result of incomplete or failed inhibition. Averaging across 
+trials with effective and ineffective suppression could result 
+in a pattern of a PD followed by an N2pc component (see also 
+Gaspar & McDonald, 2014, for similar suggestions). While 
+this possibility cannot be ruled out entirely on the basis of the 
+current results, it is unlikely for two reasons. First, if the color 
+singleton had captured attention on a substantial number of 
+trials, this should result in overall performance costs, with 
+slower target RTs for search displays where this singleton 
+was present relative to displays when it was absent. In fact, 
+both Kerzel and Burra (2020) and Gaspelin and Luck (2018a) 
+observed the opposite effect, with RTs actually being faster 
+for singleton-­present displays. This was confirmed in the un-
+focused attention task of our behavioral control experiment, 
+where responses were also faster when a singleton was pres-
+ent in a search display (present: M = 573 ms, SE = 19 ms; 
+absent: M = 592 ms, SE = 22 ms; t(17) = 4.04, p = .0008, dz 
+= 0.95), suggesting that instead of inducing attentional cap-
+ture, the presence of the singleton reduced effective display 
+set size. Second, the hypothesis that the singleton captured 
+attention on a proportion of trials also cannot account for our 
+observation that the contralateral negativity in the unfocused 
+attention was much larger when search displays contained a 
+midline target than when the target was absent (Figure 2). It 
+is unclear why the presence of a target should increase rather 
+than decrease the ability of a color singleton distractor to cap-
+ture attention.
+For these reasons, we propose an alternative account of 
+this contralateral negativity. We suggest that this negativity 
+is not an N2pc associated with attentional capture by lateral 
+color singletons, but instead a PD that is elicited as a result 
+of inhibiting the nonsalient context element on the oppo-
+site side. Previous research on lateralized ERP components 
+elicited during target selection in visual search displays has 
+shown that lateral distractor objects elicit a contralateral pos-
+itivity linked to inhibition that can be triggered simultane-
+ously with a contralateral negativity to targets (Hickey et al., 
+2009; see also Gaspar & McDonald, 2014, for related results). 
+Importantly, this contralateral positivity is triggered by lateral 
+distractors in a search display even when these are not more 
+salient than other display items (Hickey et al., 2009). In the 
+four-­item search displays used in the present study (as well 
+as by Kerzel & Burra, 2020), search displays that triggered 
+a contralateral positivity followed by a negativity always in-
+cluded a lateral color singletons and a nonsingleton distractor 
+on the opposite side. Because this distractor was the only other 
+lateralized item apart from the singleton, its inhibition should 
+trigger a PD component, whereas any parallel inhibition of 
+nonlateralized vertical distractors would not elicit any later-
+alized activity. In other words, we propose that the temporal 
+pattern of a positivity followed by a negativity contralateral to 
+the color singleton reflects two successive distractor inhibition 
+processes reflected by two successive PD components. Due to 
+its salience, the color singleton is registered (without being 
+attended) and suppressed first, followed by the suppression of 
+all nonsalient distractors in the search display.
+This alternative account can explain why the contralateral 
+negativity (nonsingleton distractor PD) was larger for target-­
+present displays in the unfocused attention condition, because 
+registering the presence of the target should trigger stronger 
+distractor suppression in order to facilitate target selection. It 
+can also explain why this contralateral negativity was smaller 
+and only marginally significant when lateral locations never 
+contained a target and thus could be ignored. As stated ear-
+lier, distractor inhibition may generally be less pronounced 
+for task-­irrelevant locations. Moreover, this interpretation 
+can also account for the puzzling fact that Gaspelin and Luck 
+(2018a) only found a positivity but no subsequent negativity 
+contralateral to a color singleton distractor in their first two 
+experiments where search and probe trials were interleaved. 
+In contrast, both lateralized components were clearly present 
+in Experiment 3 where no probe trials were included. Because 
+all four display locations were task-­relevant on probe trials, 
+the inclusion of these trials is likely to have prevented the ac-
+tive suppression of locations occupied by nonsalient distrac-
+tors, as reflected by the absence of PD components triggered 
+by these distractors. Our account of the two successive lat-
+eralized components as reflecting two successive distractor 
+suppression processes provides a consistent and theoretically 
+plausible explanation of the current results as well as of the 
+findings of Kerzel and Burra (2020) and Gaspelin and Luck 
+(2018a). However, it remains a conjecture at present, and thus 
+requires confirmation in future studies.
+It is also important to note that the pattern of distractor 
+suppression effects observed in these studies may be specific 
+to search displays that contain relatively few objects. For ex-
+ample, Wang and Theeuwes (2020) showed that behavioral 
+probe suppression effects can only be found with small dis-
+play set sizes, but not for search displays with 10 items, and 
+no PD to singleton distractors was found when search displays 
+contained eight instead of four items (Barras & Kerzel, 2016). 
+
+
+      | 
+11 of 12
+DRISDELLE and EIMER
+There is also evidence that suppression may be modulated by 
+the proximity of singleton distractors and targets (Gaspar & 
+McDonald, 2014). Understanding the role of active distrac-
+tor suppression processes in visual search will require further 
+work to elucidate more systematically how these processes 
+are affected by factors such as display set size, spatial param-
+eters, and the task-­relevance of distractor locations.
+4.1  |  Conclusion
+We demonstrated that PD components were elicited by lateral 
+color singleton distractors even when these distractors ap-
+pear at known task-­irrelevant locations. These results support 
+the signal suppression hypothesis (Gaspelin & Luck, 2018a) 
+by confirming that the PD is indeed associated with active 
+distractor inhibition, but are inconsistent with the alterna-
+tive lateral-­first serial scanning strategy account proposed by 
+Kerzel and Burra (2020).
+CONFLICTS OF INTEREST
+There are no conflicts of interest to report.
+AUTHOR CONTRIBUTIONS
+Brandi Lee Drisdelle: Conceptualization; Formal analy-
+sis; Funding acquisition; Investigation; Methodology; 
+Visualization; Writing-­original draft. Martin Eimer: 
+Conceptualization; 
+Funding 
+acquisition; 
+Investigation; 
+Methodology; 
+Resources; 
+Software; 
+Supervision; 
+Visualization; Writing-­review & editing.
+ORCID
+Brandi Lee Drisdelle 
+ https://orcid.
+org/0000-0003-2794-6106 
+REFERENCES
+Aubin, S., & Jolicoeur, P. (2016). Early and late selection modulate 
+competition for representation: Evidence from the N2pc in a multi-
+ple frame procedure. Psychophysiology, 53(5), 611–­622. https://doi.
+org/10.1111/psyp.12606
+Bacon, W. F., & Egeth, H. E. (1994). Overriding stimulus-­driven atten-
+tional capture. Perception & Psychophysics, 55(5), 485–­496. https://
+doi.org/10.3758/BF032​05306
+Barras, C., & Kerzel, D. (2016). Active suppression of salient-­but-­
+irrelevant stimuli does not underlie resistance to visual interference. 
+Biological Psychology, 121, 74–­83. https://doi.org/10.1016/j.biops​
+ycho.2016.10.004
+Drisdelle, B. L., & Jolicoeur, P. (2018). Early and late selection pro-
+cesses have separable influences on the neural substrates of at-
+tention. International Journal of Psychophysiology, 127, 52–­61. 
+https://doi.org/10.1016/j.ijpsy​cho.2018.03.004
+Eimer, M. (1996). The N2pc component as an indicator of attentional 
+selectivity. Electroencephalography and Clinical Neurophysiology, 
+99(3), 225–­234. https://doi.org/10.1016/0013-­4694(96)95711​-­9
+Faul, F., Erdfelder, E., Lang, A.-­G., & Buchner, A. (2007). G* Power 3: 
+A flexible statistical power analysis program for the social, behav-
+ioral, and biomedical sciences. Behavior Research Methods, 39(2), 
+175–­191. https://doi.org/10.3758/bf031​93146
+Folk, C. L., Remington, R. W., & Johnston, J. C. (1992). Involuntary co-
+vert orienting is contingent on attentional control settings. Journal 
+of Experimental Psychology: Human Perception and Performance, 
+18(4), 1030–­1044. https://doi.org/10.1037/0096-­1523.18.4.1030
+Fortier-­Gauthier, U., Dell'Acqua, R., & Jolicœur, P. (2013). The “red-­
+alert” effect in visual search: Evidence from human electrophysi-
+ology. Psychophysiology, 50(7), 671–­679. https://doi.org/10.1111/
+psyp.12050
+Franconeri, S. L., & Simons, D. J. (2003). Moving and looming stimuli 
+capture attention. Perception & Psychophysics, 65(7), 999–­1010. 
+https://doi.org/10.3758/BF031​94829
+Gaspar, J. M., & McDonald, J. J. (2014). Suppression of salient objects 
+prevents distraction in visual search. Journal of Neuroscience, 34(16), 
+5658–­5666. https://doi.org/10.1523/JNEUR​OSCI.4161-­13.2014
+Gaspelin, N., Leonard, C. J., & Luck, S. J. (2015). Direct evi-
+dence for active suppression of salient-­but-­irrelevant sensory 
+inputs. Psychological Science, 26(11), 1740–­1750. https://doi.
+org/10.1177/09567​97615​597913
+Gaspelin, N., Leonard, C. J., & Luck, S. J. (2017). Suppression of 
+overt attentional capture by salient-­but-­irrelevant color singletons. 
+Attention, Perception, & Psychophysics, 79(1), 45–­62. https://doi.
+org/10.3758/s1341​4-­016-­1209-­1
+Gaspelin, N., & Luck, S. J. (2018a). Combined electrophysiological 
+and behavioral evidence for the suppression of salient distractors. 
+Journal of Cognitive Neuroscience, 30(9), 1265–­1280. https://doi.
+org/10.1162/jocn_a_01279
+Gaspelin, N., & Luck, S. J. (2018b). Distinguishing among potential 
+mechanisms of singleton suppression. Journal of Experimental 
+Psychology: Human Perception and Performance, 44(4), 626–­644. 
+https://doi.org/10.1037/xhp00​00484
+Hickey, C., Di Lollo, V., & McDonald, J. J. (2009). Electrophysiological 
+indices of target and distractor processing in visual search. Journal 
+of Cognitive Neuroscience, 21(4), 760–­775. https://doi.org/10.1162/
+jocn.2009.21039
+Ipata, A. E., Gee, A. L., Gottlieb, J., Bisley, J. W., & Goldberg, M. 
+E. (2006). LIP responses to a popout stimulus are reduced if it is 
+overtly ignored. Nature Neuroscience, 9(8), 1071–­1076. https://doi.
+org/10.1038/nn1734
+Jannati, A., Gaspar, J. M., & McDonald, J. J. (2013). Tracking target and 
+distractor processing in fixed-­feature visual search: Evidence from 
+human electrophysiology. Journal of Experimental Psychology: 
+Human Perception and Performance, 39(6), 1713–­1730. https://doi.
+org/10.1037/a0032251
+Keppel, G. (1991). Design and analysis: A researcher's handbook (3rd 
+ed.). Prentice-­Hall Inc.
+Kerzel, D., & Burra, N. (2020). Capture by context elements, not atten-
+tional suppression of distractors, explains the PD with small search 
+displays. Journal of Cognitive Neuroscience, 32(6), 1170–­1183. 
+https://doi.org/10.1162/jocn_a_01535
+Lakens, D. (2013). Calculating and reporting effect sizes to fa-
+cilitate cumulative science: A practical primer for t-­tests and 
+ANOVAs. Frontiers in Psychology, 4, 863. https://doi.org/10.3389/
+fpsyg.2013.00863
+Lien, M.-­C., Ruthruff, E., Goodin, Z., & Remington, R. W. (2008). 
+Contingent attentional capture by top-­down control settings: 
+
+
+12 of 12  | 
+   
+DRISDELLE and EIMER
+Converging evidence from event-­related potentials. Journal of 
+Experimental Psychology: Human Perception and Performance, 
+34(3), 509–­530. https://doi.org/10.1037/0096-­1523.34.3.509
+Liesefeld, H. R., & Müller, H. J. (2019). Distractor handling via di-
+mension weighting. Current Opinion in Psychology, 29, 160–­167. 
+https://doi.org/10.1016/j.copsyc.2019.03.003
+Luck, S. J., & Gaspelin, N. (2017). How to get statistically significant effects 
+in any ERP experiment (and why you shouldn't). Psychophysiology, 
+54(1), 146–­157. https://doi.org/10.1111/psyp.12639
+Luck, S. J., Gaspelin, N., Folk, C. L., Remington, R. W., & Theeuwes, 
+J. (2021). Progress toward resolving the attentional capture de-
+bate. Visual Cognition, 29(1), 1–­21. https://doi.org/10.1080/13506​
+285.2020.1848949
+Luck, S. J., & Hillyard, S. A. (1994a). Electrophysiological correlates of 
+feature analysis during visual search. Psychophysiology, 31(3), 291–­
+308. https://doi.org/10.1111/j.1469-­8986.1994.tb022​18.x
+Luck, S. J., & Hillyard, S. A. (1994b). Spatial filtering during vi-
+sual search: Evidence from human electrophysiology. Journal of 
+Experimental Psychology: Human Perception and Performance, 
+20(5), 1000–­1014. https://doi.org/10.1037/0096-­1523.20.5.1000
+Miller, J., Patterson, T., & Ulrich, R. (1998). Jackknife-­based method for 
+measuring LRP onset latency differences. Psychophysiology, 35(1), 
+99–­115. https://doi.org/10.1111/1469-­8986.3510099
+Rosenthal, R. (1994). Parametric measures of effect size. In H. Cooper 
+& L. V. Hedges (Eds.), The hand-­book of research synthesis (pp. 
+231–­244). : Sage.
+Sawaki, R., Geng, J. J., & Luck, S. J. (2012). A common neural 
+mechanism for preventing and terminating the allocation of atten-
+tion. Journal of Neuroscience, 32(31), 10725–­10736. https://doi.
+org/10.1523/JNEUR​OSCI.1864-­12.2012
+Sawaki, R., & Luck, S. J. (2010). Capture versus suppression of attention 
+by salient singletons: Electrophysiological evidence for an automatic 
+attend-­to-­me signal. Attention, Perception, & Psychophysics, 72(6), 
+1455–­1470. https://doi.org/10.3758/APP.72.6.1455
+Sharbrough, F. (1991). American Electroencephalographic Society 
+guidelines 
+for 
+standard 
+electrode 
+position 
+nomenclature. 
+Journal of Clinical Neurophysiology, 8, 200–­202. https://doi.
+org/10.1097/00004​691-­19910​4000-­00007
+Theeuwes, 
+J. 
+(1991). 
+Cross-­dimensional 
+perceptual 
+selectiv-
+ity. Perception & Psychophysics, 50(2), 184–­193. https://doi.
+org/10.3758/BF032​12219
+Theeuwes, J. (1992). Perceptual selectivity for color and form. Perception 
+& Psychophysics, 51(6), 599–­606. https://doi.org/10.3758/BF032​
+11656
+Vatterott, D. B., & Vecera, S. P. (2012). Experience-­dependent atten-
+tional tuning of distractor rejection. Psychonomic Bulletin & Review, 
+19(5), 871–­878. https://doi.org/10.3758/s1342​3-­012-­0280-­4
+Wang, B., & Theeuwes, J. (2020). Salience determines attentional ori-
+enting in visual selection. Journal of Experimental Psychology: 
+Human Perception and Performance, 46(10), 1051–­1057. https://
+doi.org/10.1037/xhp00​00796
+Yantis, S., & Jonides, J. (1984). Abrupt visual onsets and selective 
+attention: Evidence from visual search. Journal of Experimental 
+Psychology: Human Perception and Performance, 10(5), 601–­621. 
+https://doi.org/10.1037/0096-­1523.10.5.601
+How to cite this article: Drisdelle BL, Eimer M. PD 
+components and distractor inhibition in visual search: 
+New evidence for the signal suppression hypothesis. 
+Psychophysiology. 2021;00:e13878. https://doi.
+org/10.1111/psyp.13878
+
+

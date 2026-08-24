@@ -1,0 +1,1478 @@
+--- Page 1 ---
+ 
+ 
+ 
+ 
+Abstract—This paper describes a pedestrian collision 
+warning system with crosswalk detection feature based 
+on sensor fusion of a monocular camera and a millimeter 
+wave radar. The method to decide about the presence of a 
+pedestrian is based on the assumption that objects 
+moving along a crosswalk can be interpreted as 
+pedestrians under certain circumstances. The advantage 
+of the described solution is its robustness and 
+effectiveness since it is limited to crosswalks. The camera 
+can be used to detect the crosswalk. Data from both 
+sensors can then be used to infer about the presence of a 
+pedestrian. The sensor fusion algorithm which combines 
+data from the sensors is explained. Then the paper 
+describes a warning concept which provides auditory 
+alarm and visual information about the presence of a 
+crosswalk as well as pedestrians to a driver, depending on 
+the estimated collision probability. Finally, test drives on 
+an experimental vehicle are presented and the results 
+verify that the proposed warning system is running in 
+practice. 
+I. INTRODUCTION 
+ccording to statistical data of accidents, pedestrian 
+fatalities are a particular priority in Europe and Japan, as 
+shown in Figure 1 and Figure 2 [1-2]. Recently, 
+researches on driving assistance systems which are method of 
+technical solutions for accident prevention have been 
+conducted extensively [3]. To detect pedestrians, existing 
+researches make use of stereo camera, monocular camera, 
+infrared camera and LIDARs as described in the survey by 
+Gandhi and Trivedi [4]. Cameras have advantages of wide 
+view range and high resolution power, so cameras can 
+recognize attributes of objects by image processing. However 
+there are some problems of image processing that, the 
+algorithm is so complex, the computational cost is high, and 
+the distance to target might be inaccurate. On the other hand, 
+a LIDAR is not suitable to recognize attributes of objects, but 
+it can measure the distance accurately. For development of 
+pedestrian 
+protection 
+system 
+in 
+the 
+situation 
+of 
+car-to-pedestrian accidents it needs calculation of the 
+collision probability, therefore it is important for the system 
+ 
+Manuscript received January 16, 2010. This work was supported in part by 
+Department of Mechanical Systems Engineering Tokyo University of 
+Agriculture and Technology(2-24-16 Naka-cho, Koganei, Tokyo Japan) 1)･
+2)･3)･4). and Continental, Division Chassis and Safety(Kemptener Strasse 
+99,88131,Lindau Germany) 5)  
+ 
+to measure the pedestrian position accurately. So a sensor 
+fusion of camera and radar is a promising solution in order to 
+get high reliability of the system.  
+In addition, the data of accidents in Japan reveals that 50% 
+of pedestrian accidents have occurred near crosswalk, and 
+most of them were in the situation that the vehicles were 
+moving straight forward [2]. So this paper focuses on the 
+situation when a vehicle approaches a crosswalk with a 
+pedestrian on it. This approach has the advantage of high 
+robustness, low false alarm rate and cost efficient 
+implementation. The experimental vehicle detects the 
+pedestrian near the crosswalk and estimates the collision 
+probability, and then, supplies drivers with warnings in the 
+case of danger situation. The rest of the paper is organized as 
+follows. Section II gives the description of the test vehicle. 
+Section III introduces the pedestrian collision warning system 
+design. Section IV presents the experimental results. Finally, 
+Section V provides some conclusions. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.1  Statistical data of pedestrian fatalities in Japan [2] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.2 Location of pedestrian accidents (ITARDA 2007) [2] 
+Sensor Fusion-Based Pedestrian Collision Warning System with 
+Crosswalk Detection 
+Shigetaka Suzuki1)   Pongsathorn Raksincharoensak2)   
+ Ikuko Shimizu3)   Masao Nagai４)      Rolf Adomat5) 
+A 
+19,678
+2,467
+272
+18,790
+0
+5,000
+10,000
+15,000
+20,000
+25,000
+Crosswalk
+Near
+crosswalk
+Near
+pedestrian
+bridge
+Other
+locations
+etc.0.2%
+Pedestrians
+33.8%
+Motorcycles
+9.7%
+Passengers
+8.1%
+Motorized
+bicycles
+8.2%
+Bicycles
+13.0%
+Automobile
+drivers
+27.0%
+Traffic accident 
+fatalities
+5,744
+etc.0.2%
+Pedestrians
+33.8%
+Motorcycles
+9.7%
+Passengers
+8.1%
+Motorized
+bicycles
+8.2%
+Bicycles
+13.0%
+Automobile
+drivers
+27.0%
+Traffic accident 
+fatalities
+5,744
+2010 IEEE Intelligent Vehicles Symposium
+University of California, San Diego, CA, USA
+June 21-24, 2010
+TuE1.17
+978-1-4244-7868-2/10/$26.00 ©2010 IEEE
+355
+
+--- Page 2 ---
+ 
+ 
+II. EXPERIMENTAL VEHICLE  
+The experimental vehicle used in this study was equipped 
+with a millimeter wave radar, a monocular CMOS camera, 
+PC, and a sensor cluster which gets the information of vehicle 
+speed and yaw rate. The millimeter wave radar and the 
+camera used in the study are Continental ARS300 and 
+CSF200 respectively. The sensors and the measurement 
+system configuration on the experimental vehicle are shown 
+in Figure 3. 
+ The 77GHz millimeter wave radar has two ranges. One is a 
+long distance scanning range which has a measurement angle 
+of 18 degree, and a detection range of 200 meters. The other 
+is a short distance scanning range which has a measurement 
+angle of 56 degree, and a detection range of 60 meters. On 
+this sensor an algorithm for object detection and tracking is 
+implemented. This algorithm segments feature points which 
+are recognized by millimeter wave radar, and outputs the 
+position data by tracking with Kalman filter. Thus, the 
+position and the relative velocity of detected objects can be 
+obtained by the millimeter wave radar. These data are input 
+into a PC via a CAN-bus device and can be monitored in real 
+time. The image from the monocular camera is captured by a 
+measurement interface in real-time and the image is then 
+delivered into the PC for the image processing task. The field 
+of view of the camera is 42 deg (H) x 26 deg (V) with the 
+resolution of 752 x 480 pixels, and its update rate is 40 
+milliseconds. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.3  Experimental vehicle equipped with CMOS camera, 
+millimeter wave radar, measurement system and display 
+ 
+III. PEDESTRIAN DETECTION AND WARNING SYSTEM DESIGN  
+The architecture of the pedestrian collision warning system 
+is shown in Figure 4. This system consists of three 
+algorithms: a crosswalk detection algorithm, a sensor fusion 
+algorithm of camera and millimeter wave radar, and an 
+algorithm for calculation of the probability of pedestrian 
+collision. A warning is provided to the driver when the 
+pedestrian collision reaches a certain level. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.4  Flowchart of pedestrian detection and collision warning 
+(ROC stands for “Region of Crosswalk”.) 
+A. Crosswalk detection algorithm 
+For a crosswalk detection, a feature called “cross ratio” of 
+four collinear points is utilized. Since the cross ratio is 
+invariant under the perspective projection, the cross ratio of 
+the crosswalk in 3D space is the same as that of its image, 
+shown in Figure 5. Here, the cross ratio [abcd] of four points 
+a,b,c,d are calculated as follows: where the symbol written as 
+ab refer to the distance between the point a and the point 
+b . 
+[
+]
+ac bd
+abcd
+bc ad
+
+
+        (1) 
+The flow of our crosswalk detection algorithm is shown in 
+Figure 6. First, to extract boundaries of the white lines on a 
+road, an image captured by the camera is processed by two 
+algorithms: binarization and edge detection. To extract edges 
+from the input image, the Canny’s algorithm is used. Next, 
+the logical product of two outputs are calculated to reduce the 
+errors due to shadow casted on the road. Then, vertical edges 
+are classified into two kinds: the boundaries where the 
+intensity changes from dark to bright or from bright to dark. 
+Finally, the cross ratio of the two pairs of boundaries are 
+calculated. Because it is assumed that the car is going straight 
+ahead, four points ( , , ,
+a b c d in Figure 5) which have the same 
+vertical height in the image are extracted. In this step, the 
+candidates of crosswalk in the image are reduced by using the 
+knowledge of the periodicity of the crosswalk by checking 
+the number of boundaries at the same height in the image and 
+the width between two edges. Then, we calculate the cross 
+ratios [ abcd ] of four points , , ,
+a b c d as indicated in Eq.(1). 
+If three pairs edges extracted from the calculation results are 
+adjusted to cross ratio of crosswalk. The extracted edges are 
+regarded as a crosswalk. 
+PC
+Measurement 
+Interface
+Sensor cluster
+CMOS camera
+Millimeter wave radar
+On-cabin display
+Test vehicle
+Pedestrian Crosswalk
+detection algorithm
+Pedestrian Crosswalk
+detection algorithm
+Pixel data of 
+crosswalk 
+border
+Bird’s eye view
+Warning algorithm
+Warning algorithm
+Object list
+Sensor Fusion algorithm
+Sensor Fusion algorithm
+Object position data 
+near crosswalk
+Camera
+Radar
+Object list
+Visual and Auditory warning
+Sensor cluster
+Vehicle 
+velocity
+Crosswalk 
+existence
+Image sequence
+Pedestrian Crosswalk
+detection algorithm
+Pedestrian Crosswalk
+detection algorithm
+Pixel data of 
+crosswalk 
+border
+Bird’s eye view
+Warning algorithm
+Warning algorithm
+Object list
+Sensor Fusion algorithm
+Sensor Fusion algorithm
+Object position data 
+near crosswalk
+Camera
+Radar
+Object list
+Visual and Auditory warning
+Sensor cluster
+Vehicle 
+velocity
+Crosswalk 
+existence
+Image sequence
+356
+
+--- Page 3 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.5  Description of cross ratio 
+ 
+B. Sensor fusion algorithm 
+The flow diagram of the sensor fusion algorithm and the 
+example of the information processing by this algorithm are 
+shown in Figure 7. The algorithm is based on the assumption 
+that the vehicle is running straight and the vehicle direction is 
+perpendicular to the crosswalk. The pixel coordinates of the 
+boundary of the crosswalk detected from the image 
+processing unit and the forward object position data with 
+respect to the host vehicle obtained from the millimeter wave 
+radar are used to detect moving objects near a crosswalk. The 
+following procedures of the sensor data fusion algorithm are 
+conducted for pedestrian detection task. 
+ 
+1) The pixel coordinates of the Region-of-Crosswalk  
+boundary from the camera image are projected into the 
+coordinate system of a bird’s eye view. According to Figure 8. 
+the relationship of the coordinates system of camera ( , )
+u v 
+and the coordinate system, the bird’s eye view, of 
+radar (
+,
+,
+)
+r
+r
+r
+X
+Y Z
+ can be expressed as follows: 
+11
+12
+13
+14
+21
+22
+23
+24
+31
+32
+33
+34
+1
+1
+r
+r
+r
+X
+u
+p
+p
+p
+p
+Y
+v
+p
+p
+p
+p
+Z
+p
+p
+p
+p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  (2) 
+where 
+11
+12
+13
+34
+,
+,
+p
+p
+p
+p
+…
+ are the elements of the 
+perspective projection matrix for coordinate transformation. 
+The matrix coefficients are determined based on the 
+relationship between the position of a reference object 
+information of the camera images and the measured position 
+with the radar (calibration). In the calculation process, Zr is 
+set as a constant which corresponds to the sensor height with 
+respect to the road plane height. In this paper, 78 different 
+positions are used to determine the perspective projection 
+matrix by Least Square Method. 
+ 
+2) The objects which are on or nearby a crosswalk are 
+selected as candidates of a pedestrian. Here, the region of 
+crosswalk is extended with a margin of 1 meter at each side in 
+order to detect pedestrians nearby the crosswalk.  
+3) From the previous step, the radar data (
+,
+)
+X Z which 
+indicates candidates of pedestrians are projected into the 
+coordinate system of the camera ( , )
+u v , and the group of 
+pixel corners (
+,
+)
+i
+i
+u v
+ are connected as a rectangle. The 
+written rectangle size is determined by width W and height 
+H . The rectangular box becomes the Region-of-Interest 
+(ROI). If an appearance-based pedestrian algorithm is 
+available for advanced detection, the algorithm could be done 
+in the candidate rectangular block regions instead of the 
+whole region of an image to reduce the computational cost.  
+However, this paper does not include that in the algorithm, as 
+the moving objects data from the millimeter wave radar are 
+used instead. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.6  Flowchart of crosswalk detection algorithm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.7 Flowchart of sensor fusion algorithm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.8  Camera and radar coordinate systems 
+ 
+ 
+ZC
+XC
+YC
+u
+v
+A
+B
+C
+D
+a
+b
+c
+d
+l
+L
+Image coord
+Camera coord.
+O
+o
+camera image
+ZC
+XC
+YC
+u
+v
+A
+B
+C
+D
+a
+b
+c
+d
+l
+L
+Image coord
+Camera coord.
+O
+o
+camera image
+Camera
+Radar
+camera image
+rX
+rY
+rZ
+u
+v
+Radar coord.
+(
+, ,
+)
+r
+r
+r
+X Y Z
+image coord.
+( , )
+u v
+Ty = const
+Camera
+Radar
+camera image
+rX
+rY
+rZ
+u
+v
+Radar coord.
+(
+, ,
+)
+r
+r
+r
+X Y Z
+image coord.
+( , )
+u v
+Ty = const
+Camera Image
+Auto binarization
+Edge extraction
+Two kinds of vertical 
+edge lines extraction
+Calculation of cross ratio 
+Crosswalk detection
+Verification of 
+previous frames
+“AND” operation
+Classification of Edge 
+Direction
+Input image
+“AND” operated image
+Calculation of cross ratio
+Crosswalk detected
+Camera Image
+Auto binarization
+Edge extraction
+Two kinds of vertical 
+edge lines extraction
+Calculation of cross ratio 
+Crosswalk detection
+Verification of 
+previous frames
+“AND” operation
+Classification of Edge 
+Direction
+Input image
+“AND” operated image
+Calculation of cross ratio
+Crosswalk detected
+Object 
+list
+Pixel data of 
+crosswalk border
+(1)
+Crosswalk border
+projection on bird’s eye view
+(1)
+Crosswalk border
+projection on bird’s eye view
+(3)  ROI extraction on image 
+(3)  ROI extraction on image 
+(2) Selection of interested object data
+(2) Selection of interested object data
+Object position data
+Camera
+Radar
+Crosswalk border in 
+3D
+Pedestrian detection 
+results
+Object 
+list
+Pixel data of 
+crosswalk border
+(1)
+Crosswalk border
+projection on bird’s eye view
+(1)
+Crosswalk border
+projection on bird’s eye view
+(3)  ROI extraction on image 
+(3)  ROI extraction on image 
+(2) Selection of interested object data
+(2) Selection of interested object data
+Object position data
+Camera
+Radar
+Crosswalk border in 
+3D
+Pedestrian detection 
+results
+Zr
+Xr
+(u1, v1)
+(u2, v2)
+(Xr1, Zr1)
+(Xr2, Zr2)
+(1)
+(2)
+u
+v
+Zr
+Xr
+Zr
+Xr
+(u1, v1)
+(u2, v2)
+(Xr1, Zr1)
+(Xr2, Zr2)
+(1)
+(u1, v1)
+(u2, v2)
+(Xr1, Zr1)
+(Xr2, Zr2)
+(1)
+(2)
+(2)
+u
+v
+u
+v
+Zr
+Xr
+Zr
+Xr
+(u1, v1)
+(u2, v2)
+(Xr1, Zr1)
+(Xr2, Zr2)
+(1)
+(u1, v1)
+(u2, v2)
+(Xr1, Zr1)
+(Xr2, Zr2)
+(1)
+(2)
+(2)
+(u, v)
+W
+H
+(3)
+(Xr , Zr)
+(u, v)
+W
+H
+(3)
+(u, v)
+W
+H
+(u, v)
+W
+H
+(3)
+(Xr , Zr)
+u
+v
+u
+v
+357
+
+--- Page 4 ---
+ 
+ 
+C. Warning algorithm 
+This algorithm provides a visual and an auditory warning 
+in real time to a driver depending on a collision risk to the 
+pedestrian. The warning algorithm estimates the collision risk 
+from the predicted position of the pedestrian, and the host 
+vehicle velocity and the crosswalk information explained in 
+the previous section. Conventional warning system proposed 
+in [5] used a simple index such as Time-to-Collision (TTC) as 
+a criterion whether the warning should be issued or not. 
+However, TTC is the index which considers the relative 
+speed between two vehicles in identical directions, so TTC 
+may not be suitable to indicate the risk when the object 
+approaches to the host vehicle in lateral direction. Until now, 
+the systems based on the current pedestrian longitudinal 
+position have been proposed to estimate the collision risk [6]. 
+Therefore, the systems based on TTC index might give 
+inappropriate warning to drivers since they  do not  take the 
+lateral position of the pedestrian into account. Therefore, this 
+research presents the collision risk estimation which 
+combines TTC with the prediction of pedestrian position for 
+critical warning to driver. The pictorial diagram is shown in 
+Figure 9. First, the pedestrian motion direction  is defined, 
+and then the predicted time (
+p
+T ) for the host vehicle to reach 
+this axis is calculated. Predicted pedestrian position is the 
+position that a pedestrian moves for the time (
+p
+T ). The 
+following assumptions are made for the calculation. 
+Pedestrians and the host vehicle will continue moving with 
+constant velocity (
+,
+ped
+car
+V
+const V
+const
+
+
+). 
+Host vehicle is running straight and the vehicle direction is 
+perpendicular to the crosswalk (
+0
+ca
+Y
+
+). 
+The pedestrians move along the moving axis defined above 
+with a constant average walking speed (
+ped
+X
+const
+
+). 
+The predicted time (
+p
+T ) according to these conditions can 
+be expressed as follows: 
+( )
+( )
+( )
+ped
+car
+p
+car
+X
+t
+X
+t
+T
+t
+V
+
+
+           (3) 
+And then the predicted pedestrian position can be 
+calculated as follows: 
+(
+( ))
+( )
+( )
+( )
+ped
+p
+ped
+ped
+p
+Y
+t
+T
+t
+Y
+t
+V
+t
+T
+t
+
+
+
+
+      (4) 
+where, 
+( )
+( )
+ped
+car
+X
+t
+X
+t
+
+, 
+( )
+ped
+Y
+t are position measured by 
+millimeter wave radar. The pedestrian crossing speed (
+ped
+V
+) 
+is calculated by the differentiated value of the lateral position 
+(
+ped
+Y
+) and then the smoothing preprocessing for the 
+differentiated signal are conducted by moving average filter. 
+From the pedestrian current position and the vehicle speed 
+acquired by sensors, the pedestrian predicted position can be 
+calculated in real time. 
+This paper utilizes the position, the lateral velocity of the 
+detected pedestrian in the design of the visual indication, in 
+order to inform the driver about the presence of a crosswalk 
+or a pedestrian. The interest region for detection is 
+determined as shown in Figure 10. The top border of the  
+interest region is set to be proportional to the vehicle speed 
+tc
+T
+ indicates the parameter for setting the range of 
+longitudinal top in the pedestrian detection which is 
+equivalent to time-to-collision, and 
+car
+V
+indicates the vehicle 
+speed. The proportional relationship between the vehicle and 
+longitudinal range 
+tc
+T is set to the constant value of 4.0 
+seconds. This value is based on Ueda’s report which 
+addresses that the warning of pedestrian protection algorithm 
+is effective at time-to-collision of 4.0 seconds [7]. Visualized 
+hazardous region is separated into the probability of 
+pedestrian collision by every 1.0 seconds. Then, to check the 
+data processing output of the system, a red/yellow/green light 
+indicator in a vehicle–mounted display is built up to show the 
+presence of crosswalk or a pedestrian as shown in Figure 11. 
+Depending on the condition of the pedestrian position and the 
+walking speed, the collision warning which consists of 
+auditory warning, the color of the visual warning on the 
+vehicle display is changed according to the following rules, 
+and an auditory warning is issued to the driver when the 
+situation becomes more critical as shown in Figure 12 and 13:  
+a) If a crosswalk and pedestrians are not detected, the color is 
+GREEN. 
+b) If a crosswalk or static objects near the crosswalk is 
+detected the color is YELLOW and the yellow color 
+message “CROSSWALK DETECTED” is shown on the 
+display.  
+c) If a crosswalk and moving objects on the crosswalk are 
+detected and the predicted position is under the value of 
+car
+tc
+V
+T
+
+, the color is RED and the red color message 
+“CROSSWALK OCCUPIED” is shown on the display, 
+and if the value of 
+tc
+T is under 2.0 seconds, the auditory 
+warning will be provided to the driver. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.9  Description of predicted pedestrian protection 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.10 Definition of interest region and hazardous level 
+ 
+Y
+X
+V (t)
+V (t)
+Vped(t)
+(Xcar(t), Ycar(t))
+(Xped(t), Yped(t))
+Yped(t+Tp)
+Collision axis
+Current position
+Predicted position
+O
+)
+0.4
+(
+max
+_
+max
+_
+
+
+tc
+tc
+T
+V
+T
+Y
+X
+sec
+4
+
+tc
+T
+sec
+3
+
+tc
+T
+sec
+2
+
+tc
+T
+sec
+1
+
+tc
+T
+V (t)
+hazardous
+level
+high
+low
+)
+0.4
+(
+max
+_
+max
+_
+
+
+tc
+tc
+T
+V
+T
+Y
+X
+sec
+4
+
+tc
+T
+sec
+3
+
+tc
+T
+sec
+2
+
+tc
+T
+sec
+1
+
+tc
+T
+V (t)
+V (t)
+hazardous
+level
+high
+low
+358
+
+--- Page 5 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.11 Information presentation on the display 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.12  Pedestrian collision warning when the situation is critical  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.13  Description of pedestrian collision warning interfaces 
+ 
+IV. EXPERIMENTAL RESULTS 
+Experiments using the test vehicle were conducted to 
+confirm whether the proposed pedestrian collision avoidance 
+system can work in principle. The vehicle was running at the 
+constant speed of 20 km/h in perpendicular to a crosswalk. As 
+shown in Figure 14, the experimental condition was that a 
+pedestrian starts walking on the crosswalk if the 
+time-to-collision 
+tc
+T is under 3.0 seconds and that the test 
+vehicle does not slow down. We replaced a real pedestrian 
+with puppet to secure the safety of the experiment. The 
+experimental result is indicated in Figure 15 and 16. When 
+the pedestrian entered the region of interest, the artificial 
+traffic light on the display was changed from yellow to red. 
+The trajectory of puppet with respect to the host vehicle 
+position during the experiment is shown in Figure 17. 
+According to Figure 17, the trajectory of puppet entered the 
+region of interest (warning region). Therefore, the validity of 
+the proposed pedestrian detection and warning system 
+algorithm was verified. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.14  Experimental condition 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.15 Experimental result of pedestrian detection 
+ 
+Red
+Yellow
+Green
+Crosswalk
+car
+V
+4 s
+x
+tc
+car
+R
+T
+V
+
+
+2 s
+tc
+T 
+Visual Warning
+Auditory  Warning
+Rx
+car
+V
+car
+V
+CROSSWALK DETECTED
+(OCCUPIED)
+Crosswalk
+car
+V
+4 s
+x
+tc
+car
+R
+T
+V
+
+
+2 s
+tc
+T 
+Visual Warning
+Auditory  Warning
+Rx
+car
+V
+car
+V
+CROSSWALK DETECTED
+(OCCUPIED)
+y
+Hazardous region
+x
+Current position
+Predicted position
+V (t)
+In-car visual warning
+y
+Hazardous region
+x
+Current position
+Predicted position
+Current position
+Predicted position
+V (t)
+V (t)
+In-car visual warning
+359
+
+--- Page 6 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.16  Snapshots of pedestrian collision warning experiment 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.17  Transition of predicted pedestrian position (bird’s eye view) 
+V. CONCLUSIONS 
+This paper described an algorithm for implementing a 
+pedestrian detection and collision warning system for an 
+experimental vehicle, limited to locations nearby crosswalks. 
+The described system is promising since it is also easy to 
+understand for the driver. The design principle used here to 
+handle the pedestrian detection problem is based on the 
+assumption that objects moving along a crosswalk can be 
+inferred as pedestrians under certain circumstances. As a 
+method for pedestrian collision prevention, visual and 
+auditory warning systems are issued to drivers in real time 
+based on the pedestrian position and movement, with respect 
+to the host vehicle motion. The sensor setup on the 
+experimental vehicle for pedestrian detection was presented 
+and experimental results reveal that the proposed sensor 
+fusion approach for pedestrian collision warning system can 
+work in practice. 
+Further investigations in public road driving will be 
+conducted by using the same experimental setup indicated in 
+this paper, and the evaluation of false alarm rates and missing 
+detections in real-world driving will be conducted. 
+REFERENCES 
+[1] 
+“Pedestrian Crossing Surveys in Europe”, 2005  
+        (http://www.fiafoundation.org/Documents/) 
+[2] 
+“Pedestrian accidents”, ITARDA Statistical data, Japan, 2007.
+ (http://www8.cao.go.jp/koutu/taisaku/h20kou_haku/pdffiles/honpen/
+gh1_112.pdf) 
+[3] 
+Yonekawa T., “The future prospects of Active Safety Technology” , 
+JSAE Symposium text, No.01-07, p.1-5, 2007 
+[4] 
+Gandhi, T. and Trivedi, M.M, “Pedestrian protection Systems : Issue, 
+Survey, 
+and 
+Challenges” 
+IEEE 
+Transaction 
+on 
+Intelligent 
+Transportation Systems, Vol.8, No.3, p.413-423, 2007 
+[5] 
+Ito M. and Inagaki T. “Adapting alarm Thresh hold to Driver Behavior”, 
+JSME 16th Transportation and Logistics Division, No.07-51, p.301-304, 
+2007 
+[6] 
+Takimoto, Y., Muroi, H., Raksincharoensak, P., Shimizu, I., Nagai, M., 
+Darms, M., Adomat, R., “Development of Avoid Pedestrian Collision 
+System by Using Monocular Camera and Millimeter Wave Radar”, 
+JSME 17th Transportation and Logistics Division, No.08-68, p.273-276, 
+2008 
+[7] 
+Ueda S., Takahashi, A., Kimata, A., Kobari, H,. “A Study on 
+Effectiveness of the Pedestrian Warning at Inattentive Driving”, JSAE 
+Transactions, Vol.38, No.2 March p.231-236, 2007 
+Object ID No.8
+Tracking ID No.8 count 1
+Lat speed 0.00 m/s
+Object ID No.8
+Tracking ID No.8 count 1
+Lat speed 0.00 m/s
+ 
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+0
+5
+10
+15
+20
+25
+30
+Predicted position [m]
+Distance [m]
+Predicted position [m]
+(V = 20 km/h)
+sec
+1
+0
+sec
+2
+1
+sec
+3
+2
+sec
+4
+3
+*
+*
+*
+*
+
+
+
+
+
+
+
+
+tc
+tc
+tc
+tc
+T
+T
+T
+T
+sec
+1
+0
+sec
+2
+1
+sec
+3
+2
+sec
+4
+3
+*
+*
+*
+*
+
+
+
+
+
+
+
+
+tc
+tc
+tc
+tc
+T
+T
+T
+T
+360

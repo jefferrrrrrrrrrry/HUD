@@ -1,0 +1,302 @@
+(cid:19)(cid:17)(cid:19)(cid:17)(cid:1)(cid:42)(cid:38)(cid:38)(cid:38)(cid:1)(cid:36)(cid:80)(cid:79)(cid:71)(cid:70)(cid:83)(cid:70)(cid:79)(cid:68)(cid:70)(cid:1)(cid:80)(cid:79)(cid:1)(cid:55)(cid:74)(cid:83)(cid:85)(cid:86)(cid:66)(cid:77)(cid:1)(cid:51)(cid:70)(cid:66)(cid:77)(cid:74)(cid:85)(cid:90)(cid:1)(cid:66)(cid:79)(cid:69)(cid:1)(cid:20)(cid:37)(cid:1)(cid:54)(cid:84)(cid:70)(cid:83)(cid:1)(cid:42)(cid:79)(cid:85)(cid:70)(cid:83)(cid:71)(cid:66)(cid:68)(cid:70)(cid:84)(cid:1)(cid:34)(cid:67)(cid:84)(cid:85)(cid:83)(cid:66)(cid:68)(cid:85)(cid:84)(cid:1)(cid:66)(cid:79)(cid:69)(cid:1)(cid:56)(cid:80)(cid:83)(cid:76)(cid:84)(cid:73)(cid:80)(cid:81)(cid:84)(cid:1)(cid:9)(cid:55)(cid:51)(cid:56)(cid:10)
+
+Evaluating Automotive Augmented Reality Head-up Display Effects on 
+Driver Performance and Distraction
+
+Nayara de Oliveira Faria*
+
+Virginia Polytechnic Institute and State University
+
+ABSTRACT
+
+As the automotive industry progresses towards the car of the future, 
+we  have  seen  increasing  interest  using  augmented  reality  (AR) 
+head-up  displays  (HUD)  in  driving.  AR  HUDs  provide  a 
+fundamentally new driving experience in which drivers still have 
+to  respond  to  both  the  road  and  the  information  provided  by  the 
+system, creating the perfect atmosphere for potentially unsafe and 
+distracting interfaces.  As  we start fielding and designing for new 
+AR  HUDs  displays,  the  complexities  of  interface  design  and  its 
+impacts on driver performance must be further understood before 
+AR  HUDs  can  be  broadly  and  safely  incorporated  into  vehicles. 
+Nevertheless,  existing  methods  for  assessing  the  usefulness  of 
+computer-based  user  interfaces  may  not  be  sufficiently  rich  to 
+measure  the  overall  impact  of  AR  HUD  interfaces  on  human 
+performance.  Therefore,  in  my  Ph.D.  research,  I  focus  on 
+developing and testing methods to evaluate AR HUDs' effects on 
+driver  distraction  and performance.  My  primary  goal  is  to  assess 
+glance allocation and visual capabilities of drivers with AR HUDs 
+and  apply  this  knowledge  to  inform  new  methods  of  AR  HUD 
+assessment  that  account  for  inattentional  blindness  and  cognitive 
+tunneling.  
+
+Keywords: Augmented Reality, Head-Up Display, Driving. 
+Index  Terms:  H.5.1:  Multimedia  Information  Systems  — 
+Artificial, Augmented, and Virtual Realities; H.5.2: User Interfaces 
+—  Ergonomics,  Evaluation  / Methodology,  Screen  Design,  Style 
+Guides 
+
+1 INTRODUCTION
+
+The role of Augmented Reality (AR) in the automotive industry has 
+increased  considerably  over  the  last  decades. Vehicles  with  AR 
+graphics  delivered  via  head-up  displays  (HUDs)  are  nearing 
+mainstream  commercial  feasibility,  and  very  shortly, we  expect 
+increasingly large AR HUD field of views at varying depths. This 
+technological  advance will  allow  information  to  be  placed  in 
+several  locations, from  windshield-fixed  positions  to  conformal 
+graphics  which  appear  to be  linked  to  real-world  objects.  The 
+cognitive and perceptual separation between AR graphics and real-
+world visual stimuli will, therefore, be more difficult to quantify.
+
+Quantifying the visual and cognitive requirements of AR HUDs 
+is  crucial  for  assessing  whether  the  technology  is  hazardous  and 
+distracting  for  use  in  transportation  applications.  Nevertheless, 
+current methods for evaluating user interfaces in this space do not 
+account  for  the  fact  that  AR  HUDs  are  not  merely  in  the 
+environment, but are instead an integrated part of the environment. 
+Specifically,  AR  HUD  interfaces  exist  within  the  line  of  sight 
+
+* nfaria@vt.edu 
+
+needed to perform the primary visual driving task; moreover, these 
+AR interfaces may be present independent of whether or not drivers 
+should be attending them.  
+
+In this context, this work herein aims to address the following 
+question:  When  AR  HUD  user  interfaces  are  visually  integrated 
+into the primary task space, what are the best methods to assess AR 
+HUD’s effect on driver performance? To examine the uniqueness 
+of attention management in visually integrated environments, I will 
+explore two crucial psychological perceptual phenomena: cognitive 
+tunneling  and  inattentional  blindness.  Such  definitions  will  be 
+clarified in the next section.  
+
+2 BACKGROUND
+
+Without attention, people fail to perceive important visual features 
+of  the  environment  they  are  looking  at  [1].  This  phenomenon  is 
+known as inattentional blindness [2], that in simple words, means 
+looking without seeing. Because the primary task of driving poses 
+high  cognitive  demand  on  the  driver,  the  visual  information 
+presented  in  the  user’s  field  of  view  by  AR  HUDs  could  be 
+overlooked if the person’s attention is focused on another activity
+or  the  environment.  It  is, therefore, essential to  examine  and 
+consider  how  AR  HUDs  affect  these  perception  breakdowns in 
+dangerous driving situations in which drivers must respond quickly 
+to centralized road hazards, such as other vehicles and pedestrians.
+In  this  study,  I  will  use  the  Central  Detection  Task  (CDT)  to 
+examine inattentional blindness. CDT is a well-established method 
+for  examining inattentional  blindness  of  important  real-world 
+events  while  performing  secondary  AR  HUD 
+In 
+transportation  research,  CDT  has  been  used  to  investigate 
+inattentional blindness in terms of drivers’ ability to perceive a shift 
+in traffic light color [3, 4] and a lead car’s brake [5].
+
+tasks. 
+
+tunneling 
+
+Cognitive 
+
+is  a  phenomenon 
+
+in  which  people 
+involuntary fix mental resources on one aspect of the interface at 
+the expense of other sources of information [6]. This effect is often 
+studied using the peripheral detection task (PDT) method in which 
+drivers’ visual distraction in driving can be assessed by measuring 
+the cognitive selectivity of attention [7]. In this study, the PDT task 
+will  place targets directly on the road scene at different levels of 
+eccentricity, as used by Huisingh et al. [8].  
+
+3 PROPOSED WORK
+
+The proposed work will be carried out in four major phases, which 
+will be described below. To accomplish the goals outlined in this 
+paper, I will be working at the Virginia Polytechnic Institute and 
+State  University  with  my  dissertation  advisor,  Dr.  Joseph  L. 
+Gabbard.  I  will  collect  empiric  human-factor  data  for  each  step 
+through a series of carefully designed user studies, using a fixed-
+based, medium-fidelity driving simulator at the Cogent Lab. This 
+simulator is composed of the front half of a 2014 Mini Cooper cab 
+fitted with a curved projection with 94 degrees of view displaying 
+a simulated road scene and contains both side and rear-view mirrors 
+that allow participants to view their surrounding environment. The 
+simulator also contains a 7" Lilliput USB monitor mounted directly 
+behind  the  steering  wheel  to  convey  vehicle  speed  information. 
+
+(cid:26)(cid:24)(cid:25)(cid:14)(cid:18)(cid:14)(cid:24)(cid:19)(cid:25)(cid:18)(cid:14)(cid:23)(cid:22)(cid:20)(cid:19)(cid:14)(cid:22)(cid:16)(cid:19)(cid:17)(cid:16)(cid:5)(cid:20)(cid:18)(cid:15)(cid:17)(cid:17)(cid:1)(cid:165)(cid:19)(cid:17)(cid:19)(cid:17)(cid:1)(cid:42)(cid:38)(cid:38)(cid:38)
+(cid:37)(cid:48)(cid:42)(cid:1)(cid:18)(cid:17)(cid:15)(cid:18)(cid:18)(cid:17)(cid:26)(cid:16)(cid:55)(cid:51)(cid:56)(cid:22)(cid:17)(cid:18)(cid:18)(cid:22)(cid:15)(cid:19)(cid:17)(cid:19)(cid:17)(cid:15)(cid:17)(cid:17)(cid:18)(cid:19)(cid:25)
+
+(cid:22)(cid:22)(cid:20)
+
+Authorized licensed use limited to: to IEEExplore provided by University Libraries | Virginia Tech. Downloaded on August 18,2020 at 21:57:04 UTC from IEEE Xplore.  Restrictions apply. 
+
+ 
+ 
+Additionally, the simulator is equipped with a Pioneer Cyber Navi 
+HUD with conformal AR graphics capabilities. The area displayed 
+on HUD is 780x260 pixels, FOV is 15 degrees and the virtual image 
+position is approximately 3m away from the eyepoint. The driving 
+simulator  software  is  integrated  with  customized  software, 
+developed using X3D and Python, so that the AR HUD can provide 
+real-time 3D AR graphics perceptually overlaid into the dynamic 
+CG-generated  driving  scene.  That  is,  unlike  other  studies  that 
+render AR directly into a simulated environment (e.g. using virtual 
+reality), our testbed renders AR graphics onto an aftermarket HUD, 
+calibrated to a projected road scene to produce a more ecologically 
+valid driver experience 
+
+Figure 1: Lab’s AR HUD can be display graphics that are both 
+screen-relative and conformal to the simulated world (top 
+left). Top view (right) and side view (bottom right) of driving
+simulator
+
+Phase 1:  Establishing thresholds for AR HUD glance duration. We 
+conducted  three  human-factors  user  studies  in  which  we  have 
+employed generic psychophysical and ecologically-valid AR HUD 
+tasks  to  systematically  examine  the  effects  of  extended  single 
+glance durations on driver performance. In this phase, we aimed to 
+answer two main questions (1) How long can a driver safely glance 
+at an AR HUD? (2) How long will a driver safely glance at an AR 
+HUD?  
+
+For question 1, recent work by Gabbard  [9] suggested that AR 
+HUDs  can  afford  more  prolonged  glances  with  no  decrement  in 
+driver performance; thus, the current upper threshold standard of 
+20 seconds [10] may not be applicable for AR HUDs.  Therefore, 
+we  used  a  random  letter  reveal  technique  to  examine  longer 
+sustained AR HUD glance durations (e.g., 2, 5, 10, 15, 20, 30, 40, 
+and  50  seconds)  on  driver  performance  and  distraction.  For 
+question  2,  we  developed  two  ecologically-valid  secondary  tasks 
+(e.g.,  incoming  text  messaging  and  picking  from  a  list)  to 
+investigate how long drivers choose to glance at an AR HUD.  The 
+findings of this process are still at the analysis level. 
+
+Phase 2:  Developing Central Detection Task (CDT) methods and 
+metrics  to  assess  the  effects  of  AR  HUD  visual  demand  on 
+inattentional blindness. Phase 3:  Developing Peripheral Detection 
+Task  (PDT)  methods  and  metrics  to  evaluate  the  effects  of  AR 
+HUD visual demand on cognitive tunneling.  
+
+For these two stages, I need to understand better how to create an 
+experimental task that engages participants in the driving task while 
+attending to HUD graphics. I will welcome input and insight into 
+the  AR  tasks  to  be  used,  the theoretical  nature of  both  CDT  and 
+PDT  tasks,  and  the  complexities  of  the  simulation  system  to  be 
+designed. 
+
+Phase 4:  Validating combined CDT and PDT methods - We plan 
+to  conduct  a  final human  factors  user  study  to  test  our  CDT  and 
+PDT methods on an actual roadway (Virginia Smart Road). Here 
+an open question to be discussed: How can real-world variables be 
+mitigated when using AR is used in open environments to test AR 
+interfaces built-in a close environement driving simulator? 
+
+(cid:22)(cid:22)(cid:21)
+
+4 CONCLUSION
+
+We  still  have  much  to  learn  on  how  attending  to  integrated  AR 
+HUD  graphics  affects  driving  performance,  how  well  we  can 
+leverage  AR  graphics to guide visual attention to important real-
+world hazards, and to what extent the visual onset of HUD graphics 
+draws attention away from the driving scene. Because this work is 
+still in its infancy, I would like to highlight some of the questions 
+that could be discussed during the consortium that will better shape 
+my work:a) Is inattentional blindness and cognitive tunneling the 
+best measures of distraction when using AR HUDs?  b) Are there 
+any other AR perceptual considerations that I should include in the 
+context of my work? (c) What are the best methods for assessing 
+the  ecological  validity  of  the  AR  tasks  used  in  this  research? 
+Finally,  I  am  also  seeking  feedback  on  the  design  of  the  user 
+studies, and on the metrics that will be used to evaluate these new 
+methods. 
+
+5 ACKNOWLEDGMENTS
+
+This material is based upon work supported by the National Science 
+Foundation under Grant No. 1816721 
+
+REFERENCES
+
+[1]  
+
+[2]  
+
+[3]  
+
+[4]  
+
+[5]  
+
+D.  J.  Simons  And  C.  F.  Chabris,  "Gorillas  In  Our  Midst: 
+Inattentional  Blindness  For  Dynamic  Events," 
+
+Sustained 
+Perception, Vol. 28, Pp. 1059 - 1074, 1999.  
+
+U.  Neisser,  "The  Control  Of  Information  Pickup  In  Selective 
+Looking.,"  In  Perception  And  Its  Development:  A  Tribute  To 
+Eleanor Gibson, Hillsdale, Nj, Erlbaum, 1979, Pp. 201-219. 
+
+J.  Caird,  S.  Chisholm  And  J.  Lockhart,  "Do  In-Vehicle 
+Advanced  Signs  Enhance  Older  And  Younger  Drivers' 
+Intersection Performance? Driving Simulaton And Eye Moveent 
+Results," International Journal Of Human-Computer Studies, Vol. 
+66, Pp. 132-144, 2008.  
+
+C. Olaverri-Montreal, P. Gomes, M. Silveria And M. Ferreira, 
+"In-Vehicle  Virtual  Traffic  Lights:  A  Graphical  User  Interface," 
+In Information Systems And Technologies (Cisti), 2012.  
+
+J.  Wolffsohn,  N.  Mcbrien,  G.  Edgar  And  T.  Stout,  "The 
+Influence  Of  Cognition  And  Age  On  Accomodation,  Detection 
+Rate And Response Times When Using A Car Head-Up Display 
+(Hud)," Ophthalmic And Physiological Optics, Vol. 18, Pp. 243-
+253, 1998.  
+
+[6]  
+
+P.  Ververs  And  C.  Wickens,  "Designing  Head-Up  Displays 
+(Huds)  To  Support  Flight  Path  Guidance  While  Minimizing 
+Effects  Of  Cognitive  Tunneling,"  In  Iea  2000/Hfes  2000 
+Congress, 2000.  
+
+[7]   M. Martens And W. Van Winsum, "Measuring Distraction: The 
+
+Peripheral Detection Task," Tno Human Factors, 2000.  
+
+[8]  
+
+C.  Huisingh,  G.  Mcgwin,  J.  Wood  And  C.  Owsley,  "The 
+Driving Visual Field And A History Of Motor Vehicle Collision 
+Involvement In Older Drivers: A Population-Based Examination 
+Driving Visual Field And Motor Vehicle Collision," Investigative 
+Ophthalmology And Visual Science, Pp. 23-26, 2003.  
+
+[9]   M.  Smith,  J.  Gabbard,  G.  Burnett  And  N.  Doutcheva,  "The 
+Effects Of Augmented Reality Head-Up Displays On Drivers' Eye 
+Scan  Patterns,  Performance  And,  Perceptions,"  International 
+Journal Of Mobile Human Computer Interaction (Ijmhci), Vol. 9, 
+Pp. 1-17, 2017.  
+
+[10]  U.S.  Department  Of  Transportation’s  National  Highw, 
+"USDOT  Releases  2016  Fatal  Traffic  Crash  Data,"  06  October 
+2017. 
+
+[11]  Driver  Focus  -  Telematics  Working  Group,  "Statement  Of 
+Principles,  Criteria  And  Verification  Procedures  On  Driver 
+Interactions  With  Advanced 
+Information  And 
+Communication Systems," Washington, DC, 2006. 
+
+In-Vehicle 
+
+Authorized licensed use limited to: to IEEExplore provided by University Libraries | Virginia Tech. Downloaded on August 18,2020 at 21:57:04 UTC from IEEE Xplore.  Restrictions apply. 
+
+ 
+ 
+

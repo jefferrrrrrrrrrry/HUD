@@ -1,0 +1,1062 @@
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+1
+Road Scene Content Analysis for Driver Assistance
+and Autonomous Driving
+Melih Altun, Member, IEEE, and Mehmet Celenk, Member, IEEE
+Abstract—This paper aims to develop a vision-based driver
+assistance system for
+scene awareness
+using video frames
+obtained from a dashboard camera. A saliency image map
+is devised with features pertinent to the driving scene. This
+saliency map mimics the human contour and motion sensitive
+visual perception by extracting spatial, spectral, and temporal
+information from the input frames and applying entropy driven
+image-context-feature data fusion. The resultant fusion output
+comprises high-level descriptors for still segment boundaries and
+non-stationary object appearance. Following the segmentation
+and foreground object detection stage, an adaptive maximum
+likelihood classiﬁer selects road surface regions. The proposed
+scene driven vision system improves the driver’s situational
+awareness by enabling adaptive road surface classiﬁcation.
+As experimental results demonstrate, context-aware low-level to
+high-level information fusion based on human vision model pro-
+duces superior segmentation, tracking, and classiﬁcation results
+that lead to high- level abstraction of driving scene.
+Index Terms—Road scene, content analysis, saliency map,
+entropy-driven context-feature fusion.
+I. INTRODUCTION
+S
+CENE understanding has found growing applications
+in intelligent transportation with driver assistance and
+autonomous driving systems. Presently, there are many auto-
+mobile models with driver assistance systems such as park-
+ing assistance, lane departure warnings, emergency brake
+assistance, adaptive cruise control, etc. [1], leading toward
+the development of autonomous vehicles and transportation.
+These vehicles are equipped with various different sensors
+including global positioning system (GPS), radio detection and
+ranging (Radar), and light detection and ranging (LIDAR).
+Autonomous cars are being designed in a manner that they can
+communicate with other autonomous vehicles in their vicinity
+and, in turn, form underlying sensor networks [2].
+Intelligent vehicles’ research has started more than two
+decades ago and it has rapidly grown in the last ﬁfteen years.
+Majority of intelligent vehicle research in the literature is in
+line with the current autonomous vehicle design trends, which
+involve multiple sensors and associated networks. Studies such
+as [3] and [4] provide frameworks for combining a variety
+of sensors such as LIDAR, radar, and GPS. Detection rate
+in drivers’ surrounding can beneﬁt from using a variety of
+Manuscript received April 10, 2016; revised November 26, 2016 and
+February 24, 2017; accepted March 15, 2017. The Associate Editor for this
+paper was J. Zhang.
+The authors are with Ohio University, Athens, OH 45701 USA (e-mail:
+celenk@ohio.edu).
+Color versions of one or more of the ﬁgures in this paper are available
+online at http://ieeexplore.ieee.org.
+Digital Object Identiﬁer 10.1109/TITS.2017.2688352
+sensors in expense of higher costs as the number of built in
+sensors increases. These sensors usually work independently
+from each other and they generate warnings and notiﬁcations
+at different time instances. Wagh et al. [5] argue that some
+of these notiﬁcations may not be of much signiﬁcance for the
+driver and proposes a sensor data fusion method that generates
+more informative warnings and notiﬁcations. Works such
+as [6] and [7] focus on sensor networks and multivehicle coop-
+erative driving. Such approaches enable trajectory planning
+to avoid collision. However, researchers in [1] contemplate
+that, with vehicles and sensors being produced by various
+manufacturers, sensor interoperability will be a challenge for
+sensor networks. Some computer vision methods detect and
+track objects such as moving vehicles [8]–[11] with varying
+degrees of success. Others including [12] and [13] detect and
+track road lines, pedestrians [14] and trafﬁc lights [15].
+Substantial studies have been published on segmentation
+and scene understanding. However, few of them focus on
+feature fusion and incorporation of temporal attributes. For
+instance, the approach in [16] uses fusion of directional spatial
+features such as eigenvectors, gradients and temporal saliency
+for vehicle detection from air. In [15], optical ﬂow and a pixel
+based similarity metric are utilized to segment road scenes.
+Work in [16] also utilizes optical ﬂow for trafﬁc analysis using
+a ﬁxed camera directed at an intersection. Color clustering
+and local binary patterns as a texture descriptor are employed
+for road scene segmentation in [17]. The method presented
+in [18] outputs large feature vectors using motion boundary
+histograms to classify road scenes. Some of these methods
+such as the latter case would be inefﬁcient for video processing
+due to the size of their feature space. The approach undertaken
+in [19] makes use of texture anisotropy as a feature for
+detecting road segments. They combine multiple pixels into
+large super pixels to reduce complexity.
+Previous works explored combining pairs of these three
+information sources such as spatial and spectral [17], spa-
+tial and
+temporal [14] or spectral and temporal [15].
+There are also methods that integrate texture and motion
+with color information which is a spatial-temporal spectral
+feature [20], [21]. These methods use structural tensors to
+extract texture and motion information and attempt to segment
+the image based on feature vectors obtained for all pixels.
+These are parametric models and they require a-priori infor-
+mation such as number of segments and class means. These
+requirements make unsupervised clustering a difﬁcult task.
+In most cases, they can only segment the image into two
+regions. Furthermore, none of the previously applied fusion
+1556-6013 © 2017 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+2
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+methods are based on a human perception model. The fusion
+result of our work emulates the visual stimulus formed by the
+retinal receptor layer in order to yield better segmentation and
+scene understanding by utilizing all three visual information
+cues: spatial, spectral and temporal.
+Despite the promising progress in autonomous vehicular
+technology, humans are still largely in control of operating
+vehicles using their eyes to perceive the surrounding envi-
+ronment and to encapsulate the driving scenery through all
+visually available information as a whole entity. Therefore,
+a camera only system should be able to extract context from
+scenery in a similar manner without needing extra sensors, if it
+utilizes all available visual information.
+Human eyes are able to cluster similar colors and intensities
+in spontaneous vision. Neurons connected to receptors that
+receive similar hue and intensity levels ﬁre at the same rate and
+what captures our attention the most are the transitions in color
+and intensity. The regions with high contrast form the region
+boundaries or contours of an object. The importance of con-
+tours in human perception can be conceded from the tendency
+of drawing the contours ﬁrst when asked to sketch an object.
+This phenomenon was ﬁrst observed by Ernst Mach. Accord-
+ing to his theory, the perceived image is the actual image
+minus the Laplacian of the image multiplied with a coefﬁcient.
+This has a sharpening effect on the perceived image [22].
+In fact, ﬁnding zero crossings of an image Laplacian is an
+effective edge detection method in image processing literature.
+Humans also detect textures and texture changes easily. One
+of the most signiﬁcant works on texture segmentation [23]
+lists texture components as periodicity, directionality, and
+randomness. When our eyes detect small changes in contrast
+in a periodic, directional or random manner, we recognize that
+as a texture. Over a large region these contrast changes add
+up and become easy to recognize. Although texture properties
+are mainly spectral rather than spatial, our perception clusters
+textures the same way it clusters color and intensity, and ﬁnds
+boundaries between different textures. Boundaries of textures
+are added to our contour vision.
+Another observational cue emphasized frequently in human
+vision is motion. There are tracking neurons in visual system
+that ﬁre upon detection of motion. The faster the observed
+object moves the more exhibited these neurons become [22].
+This explains why moving objects immediately catch our
+attention.
+Detected contours from colors, intensity, texture, and motion
+are synthesized to become our visual stimulus. The combined
+output of these visual features forms a map showing where
+most of our attention focuses in a scene. Continuous long
+curves in this map depict the boundaries of regions, whereas
+blobs with high concentration of contours or motion deﬁne
+foreground objects.
+With computer vision methods, similar to human eye, spec-
+tral (color, intensity) and spatial-spectral (texture) information
+can be extracted. Moreover, motion detection algorithms such
+as optical ﬂow can ﬁnd temporal changes similar to the tracker
+neurons in our eyes. When these data are combined using
+the image fusion methods mentioned earlier, the result is a
+saliency map [24] showing object and region contours as
+well as objects in motion. This saliency map models the
+visual stimulus after synthesis of spatial, spectral and temporal
+information. By using the contours in the saliency map, better
+semantic information can be captured. In turn, visually distinct
+semantically meaningful regions in an image can be captured
+as a result of the gross overall segmentation of the scene being
+processed.
+The proposed system is able to identify road surface and
+background as well as the foreground objects. It is a vision
+only approach as opposed to other methods that rely on other
+sensors such as LIDAR. Segmentation of context descriptive
+objects is achieved herein by combining low level spatial,
+spectral and temporal data obtained from video stream into
+higher level descriptors. An error minimizing method ensures
+high accuracy and robust detection even under adverse condi-
+tions such as very low SNR. Utilization of such camera only
+systems that uses all available visual information, simpliﬁes
+the implementation of intelligent cars and driver assistance
+framework.
+The remainder of this paper is organized as follows.
+In section II, details of the proposed information fusion system
+is explained. In section III, the results are presented. The last
+chapter contains conclusions and future work.
+II. PROPOSED VISUAL INFORMATION FUSION METHOD
+In computer science terms, incorporating data from multiple
+sources into a single output is called information fusion or data
+fusion [25], [26]. The purpose of data fusion is to generate
+information that surpasses the individual sources used for
+fusion. Image fusion methods ﬁnd applications in military tar-
+get detection and tracking [27], surveillance [28], [29], remote
+sensing [30], medical imaging [31], etc. Fusion needs a basis,
+which is a set of shared attributes used as a guide to merge
+the information content into one meaningful representation.
+Among other methods [25], fusion can be based on entropy,
+fuzzy logic, wavelets and principal component analysis results.
+Image fusion involves images obtained from two or more
+different sources.
+In this study, fusion operation is carried out with images
+obtained from a single camera. Each video frame goes through
+three different analysis procedures, namely, spatial, spectral
+and temporal analysis. These analysis procedures produce
+various low level image features such as color clustering,
+local variance, texture energy, and optical ﬂow. In order to
+produce an image with higher information content, these low-
+level features are combined in such a way that the images
+with higher information contents are assigned higher weights.
+A sample frame sequence used for feature extraction is given
+in Fig. 1.
+A. Extraction of Spatial-Domain Information
+Spatial features are obtained by analyzing the video frames
+based on color and intensity. The ﬁrst step in extracting spatial
+information is by ﬁnding pixels with similar colors and cluster-
+ing them. In order to group pixels of similar color into clusters,
+a fast clustering algorithm needs to be formulated. Although
+k-Means Clustering [32] is a commonly used method, selection
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+ALTUN AND CELENK: ROAD SCENE CONTENT ANALYSIS FOR DRIVER ASSISTANCE AND AUTONOMOUS DRIVING
+3
+Fig. 1.
+Original image sequence.
+Fig. 2.
+Color clustering and cluster contours.
+of optimal number of clusters (k) requires multiple calls to
+this method, which increases computational workload. Instead,
+a fast converging histogram based thresholding method is
+adopted in this work. The selected clustering method is a
+variation of work presented in [33]. Having this method as a
+base, the Otsu threshold is iterated recursively over the image
+histogram in process. In this strategy, Otsu’s method [34]
+ﬁnds an optimal threshold and divides the image into a dark
+and a light class pattern. The optimal threshold is selected in
+such a way that it minimizes the within the cluster deviation
+and maximizes the between class scatter value. Each time a
+histogram is separated into a lower and a higher histogram
+variable range, the Otsu algorithm is called on these lower
+and higher histograms and the segment is divided into further
+smaller segments until termination conditions occur. Results of
+color clustering applied to sample frame can be seen in Fig 2.
+Local variance appears to be a strong contour descriptor.
+In regions where image intensity changes abruptly, local vari-
+ance is much higher as compared to uniform regions. Although
+local variance is listed as a spatial feature, it also contains some
+texture information. In uniform image regions local variance is
+close to zero. In regions with texture, local variance has high
+value due to the variations in pixel intensities. In that sense,
+it can be considered as a hybrid feature but the contributions
+from edges are much higher than the contributions from
+texture. Fig.3 depicts the local variance of the sample scene.
+B. Extraction of Spectral-Domain Information
+A possible approach to localize different textures is to
+ﬁnd different energy levels in local regions, which can be
+carried out via one of the methods for computing image
+energies. Transform energies are chosen in this research due to
+their easy and fast calculation. Parseval’s theorem and energy
+relationship of cosine transform indicate that signal energy is
+preserved after discrete Fourier transform (DFT) and discrete
+cosine transform (DCT) [35]. Moreover, by separating the DC
+component, energy due to gray level intensities can be ignored
+and energy due to transitions can be detained. Fig. 4 shows the
+result of texture based gross overall road scene segmentation
+toward context manifestation.
+Fig. 3.
+Local variance.
+Fig. 4.
+Texture features from local cosine transform energy, clusters based
+on texture and their contours.
+C. Extraction of Temporal Information With Optical Flow
+Temporal analysis is performed by calculating the optical
+ﬂow of video sequence. Optical ﬂow is a powerful tool
+for detecting motion in a video. Regions containing moving
+objects in video frames can be identiﬁed with optical ﬂow.
+In addition to motion detection, the direction and magnitude of
+the motion can be calculated with optical ﬂow. Many methods
+have been proposed for computation of optical ﬂow [36]–[38].
+For real time performance constraint, we devise a method
+with low computational cost, which is similar to the approach
+for optical ﬂow proposed in [39]. Figure 5 demonstrates the
+optical ﬂow output of sample frames given in Fig. 1.
+D. Information Fusion
+The process of combining multiple sources of data into
+a more informative form is called data fusion. When these
+data sources are images, the process is called image data
+fusion or image fusion in short. There are various approaches
+for fusion [25]. In view of context aware scene partitioning in
+the domain of spatial, spectral and temporal image attributes,
+the approach undertaken in this research is feature level fusion.
+In selection of the fusion method, ideally the features with
+higher information must have more contribution to the fused
+output compared to other features with less information. In this
+work, starting with two images I1 and I2, we combine the
+associated information of I1 and I2 by scaling one of them in
+such a way that the fusion outcome emphasizes their common
+information.
+Let us assume that two inputs X and Y have common
+information and information exclusive to one of them (i.e.,
+mutual information and conditional entropy). Starting with two
+sources, if we want to emphasize the redundant information in
+our fused output, we maximize mutual information, namely,
+HM(X, Y). If we want to emphasize information speciﬁc to
+individual sources, we need to maximize the union of the
+conditional entropies; i.e., H(X|Y)UH(Y|X) where U is the
+union. This suggests that mutual information between images
+that represent different features should be maximized to ﬁnd
+the best combination of those images.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+4
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+Fig. 5. Optical ﬂow of the 2 frame sequence. Notice the color wheel indicates
+direction and saturation represents magnitude of motion.
+Assume that there are two inputs with the histograms shown
+in Fig. 6. The fused image will be combination of the two:
+I f = aI 1 + bI 2
+(1)
+Finding optimal I f becomes equivalent to ﬁnding the ratio of
+a and b coefﬁcients for I1 and I2. Since the output will be
+normalized, this can be further reduced to:
+I f = αI 1 + I2
+(2)
+Next, we need to select which of the two inputs should
+be scaled. Mutual information will be maximum when the
+two images are most similar, which, in most cases, means
+when their histograms are most similar. In the selected case
+without losing generality, I1 has more variance compared to I2.
+Therefore, we can pick α < 1 and use it to scale I1 and shrink
+its histogram or we can pick α > 1 and use it to stretch the
+histogram of I2. If we use α > 1, then some of the pixels in I2
+will be scaled beyond the maximum brightness level allowed.
+We are going to either lose those pixels or limit them to the
+maximum attainable value (e.g., 1 or 255). Either case will
+introduce non-linearity and result in information loss. Thus,
+we should select α < 1 and scale I1 (the one with the larger
+variance) to shrink its histogram and make it look like I2. Our
+aim is to maximize mutual information HM(αI1, I2 ) with
+respect to α. Hence,
+∂
+∂α HM (αI1, I2) = 0
+(3)
+∂
+∂α
+
+i1
+
+i2 p (αI1, I2)log2
+p (αI1, I2)
+p (αI1) p (I2) = 0
+(4)
+where p(αI1, I2) is the joint histogram of two images. If we
+go through the math from here, we would see that ﬁnding a 2D
+distribution as a function of I1 and I2 without loss of generality
+is quite difﬁcult. Moreover, as Eqn. (5) shows, multivariate
+mutual information calculation is complicated.
+HM (I1, . . . , IN ) = HM (I1, . . . , IN−1)
+−HM (I1, . . . , IN−1|IN)
+(5)
+To mitigate the underlined complications, we utilize the
+mean square error (MSE) between feature maps. In [40],
+it is stated that there is a differential relation between mutual
+information and minimum MSE. The same reference [40]
+investigates input and output of transmission channels with
+Gaussian noise. Although the analysis is pertinent to a subject
+area, there are considerable similarities and they basically
+claim mutual information and MSE become very relevant.
+Fig. 6.
+Two sample histograms.
+They derive the equations below which deﬁne the relation
+between MSE and mutual information.
+d
+dSN R HM (X, Y) = 1
+2 MSE (X|Y)
+(6)
+HM (X, Y) = 1
+2
+ snr
+0
+MSE (γ ) dγ
+(7)
+What is claimed in this research is, for a speciﬁc scaling
+factor, the difference between two images to be fused needs
+to be minimal. Consequently, the redundancy between images
+should be maximized.
+I2 = α∗I1 + Error
+(8)
+In accordance with the approach in [40], given an input X a
+communication channel and an output Y, output will be some
+noise plus X scaled by signal to noise ratio (SNR).
+Y =
+√
+SN RX + N
+(9)
+The two approaches are parallel in this aspect. Therefore, min-
+imizing MSE between feature map histograms can generate
+similar results to mutual information approach.
+MSE = 1
+T
+ 1
+k=0
+[pαI1 (k) −pI2 (k)]2 dk
+(10)
+We can model probability distributions as Gaussian mixtures
+and set T = 1 since histograms are normalized:
+MSE =
+ 1
+k=0
+×
+
+iciN (k|αμi, ασi) −
+
+jd jN
+
+k|μ j, σ j
+2
+dk
+(11)
+Now, we minimize MSE w.r.t. α, subject to 
+i ci = 1 and
+
+j d j = 1.
+∂
+∂α
+ 1
+k=0
+⎡
+⎣
+i
+ciN (k|αμi, ασi) −
+
+j
+d jN k|μ j, σ j
+
+⎤
+⎦
+2
+dk
+−λ1
+∂
+∂α
+
+i ci −1
+
+−λ2
+∂
+∂α
+
+j d j −1
+
+= 0
+(12)
+Notice that the constraints are not dependent on α so they
+drop out. Also, note that the second Gaussian mixture is not
+dependent on α as well.
+ 1
+k=0
+∂
+∂α
+
+iciN (k|αμi, ασi)−
+
+jd jN
+
+k|μ j, σ j
+2
+dk = 0
+(13)
+Replacing Gaussian mixtures with the symbol G yields:
+ 1
+k=0
+∂
+∂α [G1 (k, α) −G2 (k)]
+2
+dk = 0
+(14)
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+ALTUN AND CELENK: ROAD SCENE CONTENT ANALYSIS FOR DRIVER ASSISTANCE AND AUTONOMOUS DRIVING
+5
+Eqn. (14) becomes (15) when chain rule is applied.
+ 1
+k=0
+2 [G1 (k, α) −G2 (k)] ∂
+∂α G1 (k, α) dk = 0
+(15)
+This suggests two solutions:
+[G1 (k, α) −G2 (k)] = 0
+(16)
+or
+ 1
+k=0
+∂
+∂α G1 (k, α) dk = 0
+(17)
+Eqn. (16) dictates that G1 and G2 are identical, which is highly
+unlikely. Solving Eqn. (17) is more likely to produce results.
+Eqn. (17) is sufﬁcient for computational evaluation. However,
+it can be expanded to (18):
+ 1
+k=0
+∂
+∂α
+
+i ci
+1
+ασi
+√
+2π
+exp
+
+−1
+2
+k −αμi
+σi
+2
+dk = 0
+(18)
+Eqn. (19) is obtained when (18) is solved for the partial
+derivative of α.
+ 1
+k=0
+
+i ci
+−1
+α4σ 3
+i
+√
+2π
+exp
+
+−1
+2
+k −αμi
+σi
+2
+·
+
+α2σ 2
+i + αkμi −k2
+dk = 0
+(19)
+The ﬁrst part of Eqn. (19) is a set of scaled Gaussians. Due
+to the negative sign it is negative for all values of α.
+−ci
+α4σ 3
+i
+√
+2π
+exp
+
+−0.5
+k −αμi
+σi
+2
+< 0
+(20)
+which leads to:
+ 1
+k=0
+
+i
+
+α2σ 2
+i + αkμi −k2
+dk = 0
+(21)
+This is an alternative to Eqn. (17). That is, Gaussians can be
+ﬁtted to histogram data and α can be directly calculated. For
+a single Gaussian α evaluates to:
+α = μk ±
+
+μ2 + 4σ 2
+2σ
+(22)
+The histograms of the features we extracted are indeed uni-
+modal almost all the experiments undertaken. By interpreting
+the mean and variance, α can be computed. Setting partial
+derivative w.r.t α to zero will give us the critical points; i.e.,
+α∗. Local minima are negative to positive zero crossings of
+the ﬁrst derivative at α∗location.
+To demonstrate the feature fusion method, it is applied to
+two feature maps extracted from the sample frames given
+in Fig. 1. Figs. 7 and 8 depict the features used for fusion.
+Since I1 has greater variance, it is scaled with alpha coef-
+ﬁcient to match I2 histogram. The plot in Fig. 9 shows MSE
+of their histograms versus alpha:
+Fig. 9 and Fig 10. show MSE and mutual information are
+closely related as it is claimed by the derivations. The peaks
+in HM vs. α plot correspond to the local minimums of the
+MSE vs. α plot. By selecting the minimum MSE generating
+Fig. 7.
+Local variance of sample frame and its histogram taken as I1.
+Fig. 8.
+Color cluster contours and its histogram taken as I2.
+Fig. 9.
+MSE{p(α I1)| p(I2) } vs. α.
+Fig. 10.
+HM(α I1, I2) vs. α.
+α we can ﬁnd the optimal ratio that generates the highest
+information content.
+The example demonstrates how the two images are com-
+bined by ﬁnding an optimal scaling coefﬁcient. However,
+we combine more than two images. As mentioned earlier, this
+would complicate operational procedures if mutual informa-
+tion was used for fusion. With the minimum MSE approach,
+we keep the image with smaller variance constant and scale
+the intensity of the other image. By extending this approach,
+we can select the image with the minimum variance (among
+local variance, colors, optical ﬂow, spectral energy, etc.) and
+ﬁnd a scaling factor for the others.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+6
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+Fig. 11. Fused Saliency image and segmentation result after region separation
+and growing.
+Fig. 12.
+Overall feature extraction and fusion.
+This, in turn, gives a scaling rate (α∗) for each feature map
+and the scaling rate for the one with the minimum variance
+will be 1. The fused image can be given by
+I f = Imin_var +
+
+i αi · Ii
+(23)
+where Ii ̸= Imin_var.
+Resulting fused image obtained from the combined saliency
+features is illustrated in Fig. 11. Fig.12 depicts overall feature
+extraction and fusion scheme. Notice that the colors of regions
+are assigned arbitrarily and do not signify any meaning.
+III. RESULTS
+A. Road Surface Detection
+A set of experiments was carried out on a data set from [41].
+Some video frames in this dataset are manually segmented to
+form a ground truth for validation. Although this sort of ground
+truth formation can be considered subjective, as long as sub-
+jects who do the segmentation abide certain set of rules based
+on their spontaneous vision, results will be consistent with
+small variations within statistical error margins. The ground
+TABLE I
+ROAD DETECTION ACCURACY RESULTS
+Fig. 13. Sample frames (row 1), their saliency (row 2), segmentation (row 3),
+road detection (row 4), ground truth (row 5), ground truth of road surface (row
+6) and comparison of road detection to ground truth(row 7).
+truth images are color coded. Purple tones indicate road and
+lane markings. Red regions are used for buildings, yellow
+is for vegetation, and gray is for the sky. By searching the
+purple colors on the ground truth images, road surfaces can
+be reached as the driving platform.
+The images segmented with our method do not have such
+color coding. Colors only indicate label numbers which are
+arbitrary. The road surfaces are found by a maximum likeli-
+hood classiﬁer using ontological features. These ontological
+features include properties such as shape, position and color.
+For instance, road is expected to be seen on the bottom half of
+the image. Therefore, position becomes an important indicator.
+Also, roads are in general straight or curved segments, warped
+by the visual perspective. Hence, we can use shapes as another
+important ontological feature for road surface detection.
+Class models are constantly updated by new features.
+Emphasis of older features on class models is reduced over
+time in order to achieve adaptive learning.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+ALTUN AND CELENK: ROAD SCENE CONTENT ANALYSIS FOR DRIVER ASSISTANCE AND AUTONOMOUS DRIVING
+7
+Fig. 14. Sample frames (row 1), their saliency (row 2), segmentation (row 3),
+road detection (row 4), ground truth (row 5), ground truth of road sur-
+face (row 6) and comparison of road detection to ground truth (row 7).
+Fig. 15.
+Segmentation and road detection results of original image
+(1st
+column)
+and
+images
+degraded
+with
+Gaussian
+noise
+(images
+in
+columns 2, 3 and 4).
+Figs. 13 and 14 demonstrate the results obtained from the
+aforementioned dataset, which contains four different video
+sequences. Two sample frames from each are shown here. The
+ﬁrst row is the input scene. The second row is the saliency
+frame extracted with the new information fusion method. The
+3rd row is the segmentation result. The 4th row contains the
+extracted road surface from segmented image. The next row
+shows the ground truth for the input frame. It is followed
+Fig. 16.
+Segmentation and road detection results of samples degraded with
+Gaussian noise (images in columns 2, 3, and 4).
+Fig. 17.
+Segmentation and road detection results of samples degraded with
+Gaussian noise (images in columns 2, 3, and 4).
+by the road surface extracted from the ground truth. The last
+overlays road detection results on top of road surface ground
+truth images.
+The accuracy of road detection is obtained by comparing the
+road elements in ground truth image (road and lane markers) to
+the extracted road surface from segmentation image. Measured
+accuracy is given by
+DetectionAccuracy =
+1
+M N
+M−1
+i=0
+N−1
+j=0 f (i, j)
+(24)
+where M and N are image dimension and f is expressed as:
+f (i, j) =
+
+1, if IR (i, j) = IG (i, j)
+0, otherwise
+(25)
+Here, IR is the segmented road binary image and IG is the
+ground truth for road surface. Accuracy measurements are
+taken for a series of frames in each video and averaged to
+give the overall accuracy. Table I summarizes the road surface
+extraction accuracy on four videos.
+As seen in Figs. 13 and 14, the detected road surfaces
+(4th row) and ground truth (6th row) show great resemblance.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+8
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+Fig. 18.
+Accuracy of road detections versus image SNR.
+The last row demonstrates the segmentation results and ground
+truth overlaid. White regions are the parts marked as road on
+both segmented image and ground truth. Black regions are
+the non-road segments in both images. The gray parts show
+mismatches. The gray regions constitute a very small part of
+the entire overlaid image.
+B. Noise Immunity Measurements
+To measure how well the method performs under noisy
+conditions, we introduced pseudo Gaussian noise into a sam-
+ple frame and measured segmentation accuracy with varying
+degrees of noise. Total of 11 copies of the original frame
+are created with progressively worsening noise. There is
+approximately 5 dB SNR drop on each example. Figs.15–17
+display the frames in question and segmentation results along
+with the comparison to ground truth. The ﬁrst image is the
+original frame, followed by noisy frames. The second row is
+the segmentation and the 3rd row is the road surface detection
+result. The last row compares road extraction to the ground
+truth.
+Each test image except for the ﬁrst one is degraded by a
+Gaussian white noise of varying strength. The signal to noise
+ratio (SNR) is calculated by
+SN R = 10log10
+ PS
+PN
+
+(26)
+where PN and PS represent noise and signal power, respec-
+tively. Signal power is given by the mean square of the image
+intensity.
+PS =
+1
+M N
+M−1
+i=0
+N−1
+j=0 I 2(i, j)
+(27)
+For a zero mean Gaussian noise, its power is given by its
+variance:
+PN = var (N) = σ 2
+N
+(28)
+Fig. 18 and Table II show the SNR of each noisy frame and
+the respective accuracy of road detection on these frames.
+TABLE II
+NOISE IMMUNITY RESULTS
+Image 1 and its reduced SNR versions listed in Table II are
+shown in Fig. 15 through Fig. 17. As the results indicate,
+even with a 50dB overall drop in SNR, accuracy decreases
+only by about 25%. There are some variations in accuracy
+due to random nature of noise. However, these ﬂuctuations and
+overall drop in accuracy is small. Even when the segmentation
+suffers from extreme noise injected into the frames, the road
+surface extraction is still generating plausible perception
+results.
+IV. CONCLUSION AND FUTURE WORK
+The motivation behind this research is to cohesively inte-
+grate multiple approaches for an image context understanding
+problem effectively with robust performance. The proposed
+method stems from the human visual perception of a scene in
+its spatial, spectral and temporal attributes as a whole entity.
+To this end, instead of using one source, we can combine all of
+the available information yielding better results in mimicking
+human perception and cognition. In turn, this beneﬁts com-
+puter vision and machine learning systems as demonstrated
+throughout the work presented herein. Forming an approach to
+a problem based on the conﬂicts and agreements of different
+methods can generate solutions that are much more general
+than solutions obtained with a single method. The research
+aims formation of a computer vision approach that produces
+higher level image descriptors by fusing low level image
+features together. These high-level descriptors can close the
+semantic gap in image understanding problems. Utilization of
+high level features lead to better segmentation, better track-
+ing and eventually better scene understanding. Experimental
+results of this work indicate mimicking human vision to
+achieve a computer vision based driver assistance system pro-
+duces very promising results. Presented results demonstrate the
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+ALTUN AND CELENK: ROAD SCENE CONTENT ANALYSIS FOR DRIVER ASSISTANCE AND AUTONOMOUS DRIVING
+9
+effectiveness of combining multiple visual features together
+in order to acquire more informative features. As the ground
+truth comparisons indicate, the road surface detection accuracy
+is over 90%. Moreover, the proposed method performs well
+under noise, not losing much accuracy even after SNR drops
+of 50dB.
+All experimentation in this research is carried out with
+daytime driving videos. As a future work, the algorithm
+presented here will be extended toward nighttime driving
+scenarios. Integration of infrared cameras can further improve
+the nighttime performance of the system. Another possible
+extension is the use of stereo cameras to obtain depth percep-
+tion. Stereo vision can signiﬁcantly increase the information
+content of the video frames.
+REFERENCES
+[1] L. Li, J. Song, F.-Y. Wang, W. Niehsen, and N.-N. Zheng, “IVS 05:
+New developments and research trends for intelligent vehicles,” IEEE
+Intell. Syst., vol. 20, no. 4, pp. 10–14, Jul./Aug. 2005.
+[2] M. M. Nabeel, M. F. El-Deen, and S. El-Kader, “Intelligent vehicle
+recognition based on wireless sensor network,” Int. J. Comput. Sci.,
+vol. 10, no. 4, pp. 164–174, 2013.
+[3] M. Bertozzi et al., “GOLD: A framework for developing intelligent-
+vehicle vision applications,” IEEE Intell. Syst., vol. 23, no. 1, pp. 69–71,
+Jan./Feb. 2008.
+[4] T. X. P. Diem and M. Pasquier, “From operational to tactical driving:
+A hybrid learning approach for autonomous vehicles,” in Proc. IEEE
+10th Int. Conf. Control, Autom., Robot. Vis. (ICARC), vol. 8. Dec. 2008,
+pp. 285–290.
+[5] A. Wagh, X. Li, J. Wan, C. Qiao, and C. Wu, “Human centric
+data fusion in vehicular cyber-physical systems,” in Proc. IEEE Conf.
+Comput. Commun. Workshops (INFOCOM WKSHPS), Apr. 2011,
+pp. 684–689.
+[6] C. Garcia-Costa, E. Egea-Lopez, J. B. Tomas-Gabarron, J. Garcia-Haro,
+and Z. J. Haas, “A stochastic model for chain collisions of vehicles
+equipped with vehicular communications,” IEEE Trans. Intell. Transp.
+Syst., vol. 13, no. 2, pp. 503–518, Jun. 2012.
+[7] H.-S. Tan and J. Huang, “DGPS-based vehicle-to-vehicle cooperative
+collision warning: Engineering feasibility viewpoints,” IEEE Trans.
+Intell. Transp. Syst., vol. 7, no. 4, pp. 415–428, Dec. 2006.
+[8] M. B. Van Leeuwen and F. C. A. Groen, “Vehicle detection with a
+mobile camera: Spotting midrange, distant, and passing cars,” IEEE
+Robot. Autom. Mag., vol. 12, no. 1, pp. 37–45, Mar. 2005.
+[9] X. Clady, F. Collange, F. Jurie, and P. Martinet, “Object tracking with
+a pan-tilt-zoom camera: Application to car driving assistance,” in Proc.
+Int. Conf. Robot. Autom., vol. 2. 2001, pp. 1653–1658.
+[10] S. Nedevschi et al., “A sensor for urban driving assistance systems based
+on dense stereovision,” in Proc. IEEE Intell. Veh. Symp., Jun. 2007,
+pp. 276–283.
+[11] G. Lefaix, T. Marchand, and P. Bouthemy, “Motion-based obstacle
+detection and tracking for car driving assistance,” in Proc. 16th Int.
+Conf. Pattern Recognit., vol. 4. 2002, pp. 74–77.
+[12] A. Amditis et al., “A situation-adaptive lane-keeping support system:
+Overview of the SAFELANE approach,” IEEE Trans. Intell. Transp.
+Syst., vol. 11, no. 3, pp. 617–629, Sep. 2010.
+[13] A. Polychronopoulos, C. Koutsimanis, M. Tsogas, and A. Amdi-
+tis, “Prediction of unintentional lane departure using evidence the-
+ory,” in Proc. IEEE 8th Int. Conf. Inf. Fusion, vol. 2. Jul. 2005,
+pp. 1396–1403.
+[14] X. Zhao, Z. He, S. Zhang, and D. Liang, “Robust pedestrian detection
+in thermal infrared imagery using a shape distribution histogram feature
+and modiﬁed sparse representation classiﬁcation,” Pattern Recognit.,
+vol. 48, no. 6, pp. 1947–1960, 2015.
+[15] M. Diaz-Cabrera, P. Cerri, and P. Medic, “Robust real-time trafﬁc light
+detection and distance estimation using a single camera,” Expert Syst.
+Appl., vol. 42, no. 8, pp. 3911–3923, 2015.
+[16] K. Palaniappan et al., “Efﬁcient feature extraction and likelihood fusion
+for vehicle tracking in low frame rate airborne video,” in Proc. 13th
+Conf. Inf. Fusion (FUSION), Jul. 2010, pp. 1–8.
+[17] O. Miksik, D. Munoz, J. A. Bagnell, and M. Hebert, “Efﬁcient temporal
+consistency for streaming video scene analysis,” in Proc. IEEE Int. Conf.
+Robot. Autom. (ICRA), May 2013, pp. 133–139.
+[18] Y. Yang, J. Liu, and M. Shah, “Video scene understanding using multi-
+scale analysis,” in Proc. IEEE 12th Int. Conf. Comput. Vis., Sep. 2009,
+pp. 1669–1676.
+[19] J. M. Alvarez, T. Gevers, Y. LeCun, and A. M. Lopez, “Road scene
+segmentation from a single image,” in Computer Vision—ECCV. Berlin,
+Germany: Springer, 2012, pp. 376–389.
+[20] C. Kotsiourou and A. Amditis, “Dynamic road scene classiﬁcation:
+Combining motion with a visual vocabulary model,” in Proc. 16th Int.
+Conf. Inf. Fusion (FUSION), Jul. 2013, pp. 1151–1158.
+[21] C. Fernández, R. Izquierdo, D. F. Llorca, and M. A. Sotelo, “A com-
+parative analysis of decision trees based classiﬁers for road detection in
+urban environments,” in Proc. IEEE 18th Int. Conf. Intell. Transp. Syst.,
+Sep. 2015, pp. 719–724.
+[22] T. Brox, M. Rousson, R. Deriche, and J. Weickert, “Unsupervised
+segmentation incorporating colour, texture, and motion,” in Computer
+Analysis of Images and Patterns. Berlin, Germany: Springer, 2003,
+pp. 353–360.
+[23] T. Brox, M. Rousson, R. Deriche, and J. Weickert, “Colour, texture,
+and motion in level set based segmentation and tracking,” Image Vis.
+Comput., vol. 28, no. 3, pp. 376–390, 2010.
+[24] S. Watanabe, Pattern Recognition: Human and Mechanical. Hoboken,
+NJ, USA: Wiley, 1985.
+[25] F. Liu and R. W. Picard, “Periodicity, directionality, and randomness:
+Wold features for image modeling and retrieval,” IEEE Trans. Pattern
+Anal. Mach. Intell., vol. 18, no. 7, pp. 722–733, Jul. 1996.
+[26] L. Itti, C. Koch, and E. Niebur, “A model of saliency-based visual atten-
+tion for rapid scene analysis,” IEEE Trans. Pattern Anal. Mach. Intell.,
+vol. 20, no. 11, pp. 1254–1259, Nov. 1998.
+[27] J. R. Raol, Multi-Sensor Data Fusion With MATLAB. Boca Raton, FL,
+USA: CRC Press, 2009.
+[28] H.
+B.
+Mitchell,
+Multi-Sensor
+Data
+Fusion.
+Berlin,
+Germany:
+Springer-Verlag, 2007.
+[29] A. C. Muller and S. Narayanan, “Cognitively-engineered multisensor
+image fusion for military applications,” Inf. Fusion, vol. 10, no. 2,
+pp. 137–149, 2009.
+[30] M. Altun and M. Celenk, “Image fusion based video content enhance-
+ment for surveillance and tracking,” J. Graph., Vis. Image Process.,
+vol. 12, no. 2, pp. 9–14, 2012.
+[31] Z. Liu and R. Laganière, “Context enhancement through infrared vision:
+A modiﬁed fusion scheme,” Signal, Image Video Process., vol. 1, no. 4,
+pp. 293–301, 2007.
+[32] M. Aguilar, D. A. Fay, W. D. Ross, A. M. Waxman, D. B. Ireland,
+and J. P. Racamato, “Real-time fusion of low-light CCD and uncooled
+IR imagery for color night vision,” Proc. SPIE, vol. 3364, no. 124,
+pp. 124–135, 1998.
+[33] A. Kano, K. Doi, H. MacMahon, D. Hassell, and M. Giger, “Digital
+image subtraction of temporally sequential chest images for detec-
+tion of interval change,” Med. Phys., vol. 21, no. 3, pp. 453–461,
+1994.
+[34] C. M. Bishop, Pattern Recognition and Machine Learning. New York,
+NY, USA: Springer, 2006.
+[35] M. Cheriet, J. N. Said, and C. Y. Suen, “A recursive thresholding
+technique for image segmentation,” IEEE Trans. Image Process., vol. 7,
+no. 6, pp. 918–921, Jun. 1998.
+[36] N. Otsu, “A threshold selection method from gray-level histograms,”
+IEEE
+Trans.
+Syst.,
+Man,
+Cybern.,
+vol.
+9,
+no.
+1,
+pp.
+62–66,
+Jan. 1979.
+[37] J.
+S.
+Lim,
+Two-Dimensional
+Signal
+and
+Image
+Processing.
+Englewood Cliffs, NJ, USA: Prentice-Hall, 1990.
+[38] B. Lucas and T. Kanade, “An iterative image registration technique with
+an application to stereo vision,” in Proc. 7th Int. Joint Conf. Artif. Intell.,
+1981, pp. 674–679.
+[39] B. K. P. Horn and B. G. Schunck, “Determining optical ﬂow,” Artif.
+Intell., vol. 17, nos. 1–3, pp. 185–203, Aug. 1981.
+[40] D. Sun, S. Roth, J. Lewis, and M. J. Black, “Learning optical ﬂow,” in
+Proc. Eur. Conf. Comput. Vis., vol. 3. 2008, pp. 83–97.
+[41] Z. Wei, D.-J. Lee, B. E. Nelson, J. K. Archibald, and B. B. Edwards,
+“FPGA-based embedded motion estimation sensor,” Int. J. Reconﬁger-
+able Comput., vol. 2008, Jul. 2008, Art. no. 636145.
+[42] D. Guo, S. Shamai, and S. Verdú, “Mutual information and minimum
+mean-square error in Gaussian channels,” IEEE Trans. Inf. Theory,
+vol. 51, no. 4, pp. 1261–1282, Apr. 2005.
+
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+10
+IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+[43] G. J. Brostow, J. Fauqueur, and R. Cipolla, “Semantic object classes in
+video: A high-deﬁnition ground truth database,” Pattern Recognit. Lett.,
+vol. 30, no. 2, pp. 88–97, 2009.
+Melih Altun (M’15) received the B.Sc. degree
+in
+electrical
+engineering
+from
+Koc
+University,
+Istanbul, Turkey, in 2005; the M.Sc. degree in com-
+puter science from Ege University, Izmir, Turkey,
+in 2009; and the Ph.D. degree in electrical engineer-
+ing from Ohio University with a focus on image
+processing and computer vision topics. From 2005 to
+2008, he was with the Research and Development
+Department, Vestel Electronics, and designed laptop
+computer motherboards. He carried out research
+assistantship duties and was a recipient of the
+Stocker and NSF fellowships. Since 2014, he has been with Maxim Integrated,
+San Jose, CA, as an Algorithm Developer. His research interests include image
+processing, pattern recognition, and data fusion.
+Mehmet Celenk (M’85) received the B.S. and M.S.
+degrees in electrical and communications engineer-
+ing from Istanbul Technical University in 1974 and
+1976, respectively, and the Ph.D. degree in electri-
+cal engineering and computer science (EECS) from
+Stevens Institute of Technology in 1983. He was the
+Robert Crook Stanley Graduate Fellow with Stevens
+Institute of Technology in 1985. He served in the
+Turkish Army from 1984 to 1985, as a Lieutenant.
+He joined Ohio University (OU) in 1985, where he
+is currently a Professor with the School of EECS.
+He has authored 300 articles, received $600K hypercube processor grant,
+participated in $450K Tubitak Autonomous Vehicle Design and Development
+grant, and secured $120K fund for visiting scholars’ research and development
+projects. His research area includes image/video processing, computer vision,
+pattern recognition, multi-sensory networking and data-fusion, distributed
+computing, multimedia, medical imaging, and digital systems. He is a member
+of Eta Kappa Nu and a former member of SPIE, IS&T, ACM, ASEE, and OE.
+He received the Certiﬁcate of Appreciation by SPIE’s Journal of Electronic
+Imaging and Optical Engineering for his review services in 2012 and 2013. He
+received the distinguished service award from the Signal School in Ankara for
+his research and development work and launching Communications Journal.
+He was a recipient of the 1988 Fritz & Dolores Russ Research Award of
+the Russ College of ENT, OU, and received the OU Avionics Academic
+Challenge Faculty Fellowship from 1988 to 1992. He was a recipient of
+the Best Associate Award of the IEEE SMC Society in 2010. He chaired
+35 M.S./Ph.D. theses/dissertations with the School of EECS, OU. He has been
+an active Reviewer for numerous professional societies, such as the IEEE,
+the IET, the SPIE, the IS&T, and the IAPR, journals/transactions, publishers,
+and funding agencies, such as NSF, NYSTAR 2002-07, and NIS. He has
+been an AE of IEEE TRANSACTIONS ON SMCA (currently SMC: Systems)
+since 2005. He has been an Associate Editor of IET Electronic Letters and
+an Associate Editor of EURASIP Journal on Advances in Signal Processing
+since 2015. He has served on the Editorial Board of Journal of Recent Patents
+on Signal Processing since 2008, Journal of Biometrics and its Applications
+since 2014, and on TCM of numerous refereed conferences.
+
+

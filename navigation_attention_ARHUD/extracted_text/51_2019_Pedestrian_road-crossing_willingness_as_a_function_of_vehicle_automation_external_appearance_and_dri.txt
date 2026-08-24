@@ -1,0 +1,1037 @@
+Pedestrian road-crossing willingness as a function of vehicle
+automation, external appearance, and driving behaviour
+Debargha Dey ⇑, Marieke Martens, Berry Eggen, Jacques Terken
+Eindhoven University of Technology, Eindhoven, the Netherlands
+a r t i c l e
+i n f o
+Article history:
+Received 20 September 2018
+Received in revised form 23 July 2019
+Accepted 30 July 2019
+Keywords:
+Automated vehicle
+Autonomous vehicle
+Pedestrian interaction
+Vulnerable road users
+Behaviour
+Appearance
+a b s t r a c t
+This paper discusses whether the knowledge of the driving mode of an approaching vehicle
+(manual vs. automated) inﬂuences pedestrians’ decisions while crossing a street.
+Additionally, the paper explores how different appearances and driving behaviours of vehi-
+cles interact with driving mode in affecting pedestrians’ road-crossing behaviours. In a
+video-based experiment with sixty participants, two vehicles with different appearances
+(a BMW 3 and a Renault Twizy) were presented as either manually-driven or automated
+vehicles. Both vehicles displayed either yielding or non-yielding behaviour on a straight
+road devoid of other trafﬁc. Participants were asked to indicate whether they would cross
+the street in front of the approaching vehicle, at different distances ranging from 45 m to
+1.5 m. The results showed that there was no signiﬁcant inﬂuence of the knowledge of
+the driving mode (manually-driven vs automated) on pedestrians’ willingness to cross
+the street at any distance. The vehicle’s behaviour (whether it is maintaining speed or
+yielding) played a dominant role in pedestrians’ decision to cross a road, and this was sim-
+ilar for both modes and both vehicles, at all distances. However, results suggested that in si-
+tuations and at distances when the intent of the vehicle was not fully clear by the
+behaviour of the car alone, there were differences between the two vehicles at certain dis-
+tances, which could be attributed to the differences in their appearance such as size,
+aggressiveness and novelty. A futuristic-looking vehicle inspired less conﬁdence in road-
+crossing situations compared to an ordinary-looking vehicle. Additionally, a novel and
+futuristic-looking vehicle appeared to make it easier for people to believe that it is an auto-
+mated vehicle. We conclude by discussing design implications for the development of
+external HMIs automated vehicles.
+ 2019 Elsevier Ltd. All rights reserved.
+1. Introduction
+Rapid changes in automotive technology are resulting in drastic changes in the driving task, by which the decisions and
+control over what the vehicle does are increasingly shifted from the driver to the system. Much attention is already being
+devoted to what this means for the driver, in terms of trust, transparency, and how the interface can be adjusted to support-
+ing non-driving-related tasks (Kun, 2018). Recently, research and development in academia and industry has also started to
+give attention to the question of what vehicle automation means for the interaction with other road users (Lundgren et al.,
+2016; Merat, Louw, Madigan, Wilbrink, & Schieben, 2018; Mirnig, Perterer, Stollnberger, & Tscheligi, 2017). There have been
+https://doi.org/10.1016/j.trf.2019.07.027
+1369-8478/ 2019 Elsevier Ltd. All rights reserved.
+⇑Corresponding author.
+E-mail address: d.dey@tue.nl (D. Dey).
+Transportation Research Part F 65 (2019) 191–205
+Contents lists available at ScienceDirect
+Transportation Research Part F
+journal homepage: www.elsevier.com/locate/trf
+
+
+numerous studies and reports which highlight the general lack of trust and acceptance of automated vehicles among people.
+Bazilinskyy, Kyriakidis, and De Winter (2015) found from their crowdsourcing study that opinions on trust concerning auto-
+mated vehicles were vastly divided, while other reports showed that people are generally not receptive to the idea of auto-
+mated driving, and are cautious and hesitant to the idea of sharing road spaces with driverless vehicles (Hutson, 2017;
+Nordhoff, De Winter, Kyriakidis, Van Arem, & Happee, 2018; Smith & Anderson, 2017). Recently, Hulse, Xie, and Galea
+(2018) found that automated cars were perceived as a ‘‘somewhat low risk” form of transport. Another interview study of
+pedestrians who had interacted with Uber automated vehicles found that an ‘innocent until proven guilty’ mentality is
+prevalent with respect to automated vehicles and trust (Reig, Norman, Morales, Das, Steinfeld, & Forlizzi, 2018). However,
+the authors also note that there was a sizeable number of participants yet to be convinced: the belief that automated driving
+technology is not yet mature, or a general lack of knowledge about what automated driving technology is, lead to mistrust in
+several participants. People also associated automated vehicles with artiﬁcial intelligence (AI), and both are perceived by
+some to be detrimental to society. This was particularly observed in the incidents involving vandalism and harassment of
+Waymo automated vehicles in Arizona amidst the general mistrust towards automated vehicles (Kautonen, 2019;
+Romero, 2018). Given these split opinions, an interesting question is how pedestrians will behave in the interaction with
+automated vehicles as compared to manually driven vehicles in the context of a speciﬁc task such as crossing a street in view
+of an approaching vehicle.
+When pedestrians want to cross the street while a vehicle is approaching, they need to decide whether to cross the street
+in front of the approaching vehicle or wait until it has passed. When the vehicle in question is being driven in an automated
+manner, the question arises whether the perceptions that factor into a pedestrian’s decision-making differ from when inter-
+acting with a manually-driven vehicle. Given the novelty of automated driving and automated vehicles not being main-
+stream, we anticipate a certain hesitation around automated vehicles born out of lack of trust or familiarity.
+A few studies conducted in this direction show some preliminary results. Rothenbücher, Li, Sirkin, Mok, and Ju (2016)
+tested their ‘‘ghost driver” platform by hiding a human driver inside a seat suit in a car labelled as an automated vehicle.
+At pedestrian crossings and roundabouts, they found that the Wizard-of-Oz automated vehicle did not alter the interactions
+and road-crossing behaviour of pedestrians as long as the vehicle did not behave in an unpredictable manner. Furthermore, a
+study conducted by Rodríguez Palmeiro et al. (2018) reported similar results: when pedestrians interacted with Wizard-of-
+Oz automated vehicles where drivers were distracted by other activities or when a car was clearly marked as self-driving,
+pedestrians’ willingness to cross did not change. However, since the manipulations in these studies were done by addition
+of stickers to passenger cars that were otherwise normal in appearance, the question arises whether the participants read the
+stickers or achieved enough immersion in the studies.
+Furthermore, apart from pedestrian-related factors such as mobility, assertiveness, culture, and possibly the context
+(being in a hurry or not, as well as location on the road), vehicle-related factors, both behavioural (distance, speed and accel-
+eration) and appearance (size, colour, and styling as inﬂuenced by outer looks that hint at the vehicle’s sociability and power)
+play a role in pedestrians’ crossing decisions (Klatt, Chesham, & Lobmaier, 2016; Windhager et al., 2008, 2012). Speciﬁcally,
+the appearance of a vehicle can lend itself to stereotypes about the kind of people who own them, and their driving beha-
+viour (Davies & Patel, 2005; Davies, 2009). Studies have shown that in the case of manually-driven vehicles, this, in turn, may
+affect pedestrians’ crossing behaviours in front of cars (Klatt et al., 2016). In case of manually-driven vehicles, the appearance
+of a vehicle can also lend itself to stereotypes about the kind of people who own them, and their driving behaviour (Davies &
+Patel, 2005; Davies, 2009). This, in turn, affects pedestrians’ crossing behaviours in front of cars (Klatt et al., 2016). A pedes-
+trian may look at a vehicle and instantly make assumptions about the vehicle’s behaviour based on a complex combination
+of vehicle and driver characteristics, in terms of its assertiveness, potential to yield, etc., and consequently determine how to
+interact with it. Contrarily, given that an automated vehicle is driven by computer algorithms and not a human driver, the
+question arises whether vehicle appearance at all matters in the context of pedestrian interactions with it, since stereotypes
+may not apply to a robotic system as it does to humans. It is thus also interesting to investigate how signiﬁcantly different
+appearances and driving behaviours of vehicles interact with the driving mode of the vehicle.
+From these considerations, we derive the following main hypotheses:
+H1. The perceived driving mode of the vehicle (manual vs automated) affects the willingness of pedestrians to cross the
+street in favour of a manually-driven car – pedestrians may be more hesitant to cross around an automated vehicle at the
+same distance due to a novelty effect, lack of trust, or other factors.
+H2. The driving behaviour of the vehicle affects the willingness of pedestrians to cross the street in favour of a vehicle
+demonstrating yielding behaviour, all other factors remaining constant.
+H3. The effect of the appearance of a vehicle will depend on its automation status:
+H3a. The appearance of a manually-driven vehicle will affect the road-crossing willingness of pedestrians in favour of
+a smaller, friendlier appearance, all other factors remaining constant.
+H3b. The appearance of automated vehicles will not have a signiﬁcant effect on the road-crossing willingness of pedes-
+trians, all other factors remaining constant.
+The hypotheses were evaluated in a study deploying video clips of approaching vehicles. While a video-based study takes
+away the dynamics of the interaction between the pedestrian and the vehicle, it ensures for solid experimental control. Fur-
+thermore, it has been shown that time arrival estimates do not differ between video clips and real-life situations (Recarte,
+192
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+Conchillo, & Nunes, 2005), which justiﬁed that a video-based study in this context preserves the ecological validity of the
+insights.
+2. Method
+2.1. Selection of vehicles
+The scope of the experiment was limited to the interaction between vehicles and pedestrians (and not cyclists or non-
+automated, human-driven vehicles), in which we measured a pedestrian’s willingness to cross the road in the presence of
+the approaching vehicle, whether automated or manually driven. Besides quantitative data, the experiment also aimed to
+get qualitative insights on people’s reaction and behaviour to an automated vehicle in contrast to a manually-driven vehicle.
+The main manipulation was through instructions to participants: they were told that the approaching vehicle was either an
+automated vehicle or a manually-driven vehicle.
+The project which this study is a part of focuses on creating an automated vehicle and using it to study different aspects of
+vehicle automation, including technological and human factors issues. The carrier for the project is a Renault Twizy. A
+Renault Twizy has a rather extraordinary appearance, and, by virtue of its appearance, may already interfere with the mental
+models of pedestrians and cause some uncertainty in road-crossing situations. Therefore, a second car had to be chosen that
+opposed the appearance-related characteristics of the Twizy for inclusion in the experiment, so that the results of diamet-
+rically opposite dimensions within vehicles’ appearances can be compared, and their interactions with vehicle driving beha-
+viour and driving mode studied.
+In order to assess how the Renault Twizy was perceived, and how it compared to other vehicles regarding its ‘‘sociability”
+and ‘‘power” as explained in the work of Windhager et al. (2008, 2012), a few other commonly available vehicles were cho-
+sen that varied across these dimensions. Thus, an inventory of 8 different vehicles was created based on parameters such as
+corners of windshield, extremes of headlight position, dimensions of grill (Windhager et al., 2008) regarding cars that we
+believed represented different degrees of sociability and power, as well as novelty of appearance (BMW 3 series F30, Google
+self-driving car, Nissan 370z, Renault Twizy, Toyota Prius XW30, Volkswagen Beetle A5, Volkswagen Golf MK6, and Volkswa-
+gen Golf MK7). We sought conﬁrmation of our impressions of the perceptions of the sociability and power, and additionally,
+the novelty and futuristic-ness of the vehicles’ appearance through a survey. Images of the front view of these 8 vehicles
+juxtaposed with a picture of a pedestrian for scale of size were shown in a randomized order in the survey, and the respon-
+dents were asked to rate the vehicles on various external-appearance-related dimensions using scales (Table 1). To explore
+the perception of each of these dimensions, six scales were formulated with semantic anchors speciﬁcally chosen to repre-
+sent two extremes of the three appearance-related dimensions (sociability, power, and novelty). This was done by framing
+questions in a manner that oriented the participants towards the scenario of a pedestrian facing the vehicle. The responses
+revealed general perception towards the different vehicles in the context of a pedestrian’s road-crossing situation in the
+presence of the corresponding approaching vehicle.
+In the cars shown, any visible logos on the car that identiﬁed the vehicle as a particular make or model were purposefully
+and carefully hidden. This was done to achieve a general sense of anonymity about the vehicles and prevent bias based on
+brand prejudice. While this would not have deterred well-seasoned car enthusiasts from recognizing the car from its general
+shape and appearance, this was a general precaution applied within the practical limitations of the experiment to mitigate
+any confounding inﬂuence. Furthermore, according to Davies and Patel (2005), white as a colour in cars score relatively neu-
+tral in perception of aggressiveness of a vehicle. Since the objective was to elicit judgements about the cars strictly by the
+design/appearance of the vehicle, variation of colour was removed to eliminate a possible confounding factor. Hence, all
+the cars shown were white in colour (except for the Renault Twizy, which had white body panels and black bumpers) to
+prevent further implicit prejudice based on car colour. The survey was distributed over professional and social networks
+and allowed to run until at least 100 responses were received (ﬁnal sample size N = 102). We used the survey results to cal-
+ibrate the appearance of the different cars in order to have an objective measure of how friendly and futuristic the vehicles
+looked. The responses were collected on a 10-point scale based on perceptions of various attributes of the vehicles. Among
+the vehicles evaluated in the survey, the vehicle that was rated as the most ‘‘different” in appearance-related dimensions
+from the Twizy was selected, which was a BMW 3 series. Thus, the vehicles ﬁnally used for the study were:
+Table 1
+Mean and standard deviation of survey responses for various attributes of the selected vehicles, N = 102.
+Scales
+BMW 3 series (mean, sd)
+Renault Twizy (mean, sd)
+t(101), p
+1
+Cute – Aggressive (1–10)
+7.31, 1.9
+3.29, 2.05
+13.989, <0.000
+2
+Submissive – Dominant (1–10)
+7.85, 1.64
+3.29, 1.94
+17.501, <0.000
+3
+Friendly – Angry (1–10)
+7.24, 1.89
+3.72, 2.04
+12.378, <0.000
+4
+Yielding – Assertive (1–10)
+7.58, 1.62
+3.78, 2.12
+13.878, <0.000
+5
+Ordinary – Futuristic (1–10)
+4.71, 1.9
+7.8, 1.99
+10.937, <0.000
+6
+Commonplace – Alternative (1–10)
+4.27, 1.89
+7.98, 2.11
+12.744, <0.000
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+193
+
+
+ Vehicle V1 – BMW 3 series: Representative of a commonplace and ordinary, but aggressive and angry-faced vehicle.
+ Vehicle V2 – Renault Twizy: Representative of a futuristic and alternative, but cute and friendly-faced vehicle.
+The mean and standard deviation of the responses in the survey for the selected cars are summarized in Table 1.
+2.2. Video-based experiment
+2.2.1. Task
+At its simplest, the core task in this experiment was for a participant assuming the role of a pedestrian to watch a number
+of randomized video segments of an approaching vehicle on an unmarked, otherwise-empty road when the vehicle was at
+predetermined distances away from them, and indicate their willingness to cross the road at speciﬁc moments.
+2.2.2. Materials
+Recognizing the difﬁculty in controlling the parameters of the moving car and the timing of the pedestrian’s decision, the
+experiment was carried out as a video-based study instead of in the ﬁeld. Videos were captured where the two vehicles
+exhibited two different behaviours, and showed two different driving modes, as explained below.
+ Behaviour B1: Steady driving at a speed of 50 km/h
+This behaviour is an indication that the car is going at a constant speed and does not intend to slow down or yield. This
+is representative of a non-yielding behaviour.
+ Behaviour B2: Deceleration from 50 km/h to a full stop in front of the pedestrian
+This behaviour indicates that the car has spotted the pedestrian and is intentionally stopping. The braking was gentle
+and purposeful (deceleration rate of 1.8 m/s2, braking started 54 m away from the pedestrian). This is representative of
+yielding behaviour.
+To enhance the effect of the primary manipulation, by which participants were told that the vehicle they saw was either
+manually driven or automated, each vehicle was also manipulated in a manner to enhance the illusion that they were in one
+of two driving modes (see Fig. 1):
+ Driving mode D1: Manual driving – the car is operated manually by a clearly visible human driver.
+ Driving mode D2: Automated driving – the car is driving autonomously in the absence of a clearly visible human operator.
+The automated driving mode was created through equipping the vehicles with a Wizard of Oz prototype, applying the
+Ghost Driver approach (Rothenbücher et al., 2016). In this approach, the driver wears a ‘‘seat suit” while driving the vehicle,
+giving the appearance from the outside that the vehicle has no driver in it. Apart from this, there were no other markings or
+stickers on the vehicle to call it out as an experimental vehicle. Furthermore, there were no additional sensors on the vehicle
+that would call attention to it as an automated vehicle, other than the fact that it appeared that the car was driving itself
+without anyone being present inside the vehicle. To further distinguish the manual driving mode from the automated
+Fig. 1. The Ghost Driver prototype - a ‘‘seat suit” was developed for the driver to give the illusion that the vehicle is driving in an automated manner. The
+vehicle, with and without the seat costume, emulating an automated and manually-driven vehicle respectively, are shown.
+194
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+one, in the former scenario, the driver wore a high visibility jacket. This made it more easily apparent from outside the vehi-
+cle that the vehicle had a human driver. In the other case, the black seat suit, combined with the black interior of the vehicles
+made the vehicle appear convincingly from outside that it was driving in an automated manner (Fig. 1).
+Once the vehicles were equipped with the testing platform, each test vehicle was driven on a straight, otherwise empty
+road in the university campus. Videos of the approaching car were captured from the perspective of a pedestrian situated on
+the side of the road (but not at a pedestrian crossing), who has a full view of the road and the vehicle. The camera was
+mounted on a tripod at eye-level for an average pedestrian (eye height approximately 160 cm). The capturing of the video
+was started with the vehicles being 100 m away from the pedestrian.
+The rationale behind choosing a point on a road in the university campus without a pedestrian crossing was that such
+crossing behaviour in presence of vehicles is extremely common in this context. Additionally, in The Netherlands – the coun-
+try where this experiment was conducted, crossing a road in the absence of a pedestrian crossing is not prohibited, nor is the
+vehicle obliged to give right of way. Pedestrians are simply advised to use caution and discretion while crossing. This setup
+thus allows for testing the perception of the intention of the approaching test vehicle in this open and ﬂexible environment
+and context. The pedestrian-perspective view used in the video is shown in Fig. 2.
+Eight video footages (2 behaviours from 2 cars with 2 driving modes each) were recorded, as shown in Table 2 below.
+The willingness of the pedestrians to cross the road in front of the approaching vehicle was measured at 5 speciﬁc points
+of distances from the pedestrian, the distances being 45 m, 30 m, 15 m, 5 m, and 1.5 m from the pedestrian. Each of the 8
+videos of the approaching car was clipped at speciﬁc timestamps corresponding to when the vehicle was at these 5 measur-
+ing points, which yielded 40 small video segments (8  5) as the stimuli for the experiment. Each video segment stimulus
+thus showed the approaching car with the video starting by showing the vehicle approaching from 100 m away, and until the
+point the video was clipped with the vehicle at the measuring point. The video segments were between 4 and 13 s long,
+allowing participants to form an opinion of the external-appearance-related characteristics and driving behaviour of the
+vehicle. The relative positions of the pedestrian (camera placement) and the corresponding distances of the 5 measuring
+points are shown in Fig. 3.
+2.2.3. Participants
+The experiment was conducted as a between-subjects study between the two driving modes, with 30 participants per
+condition (M1 through M30 for manually-driven mode, and A1 through A30 for the automated mode). To minimize variabil-
+ity, the target demographic was ﬁxed on people who had normal agility/mobility (as this might affect their decision to cross
+the road at a given time). Sixty participants between 20 and 55 years in age were recruited for the experiment (mean = 27.6,
+standard deviation = 6.53). Each participant had either normal or corrected-to-normal vision. Care was taken that the par-
+ticipants recruited were among the students and staff of the university (from an internal participant database) and were
+familiar with the setting. Since the setting chosen was one without a pedestrian crossing where an approaching car does
+not necessarily have to yield to a pedestrian, it was important to ensure that the participants had the same knowledge of
+the area and familiarity with the customary practice of accepting an invitation to cross the road when an approaching vehicle
+yields the right-of-way.
+Only people who did not have experience with automated driving systems were chosen to participate in the automated
+driving condition. The participants were asked beforehand whether they were involved in any way with work or research in
+the domain of automated vehicles, or if they had ever interacted with a car with self-driving or advanced automation capa-
+bilities. Only if they answered ‘‘no” to these questions, they were considered eligible to participate in the condition with the
+automated driving mode. Otherwise, they participated in the manual mode. This was done to get an even assessment of peo-
+ple’s interaction with automated vehicle speciﬁcally from people who had no background or previous experience with such
+vehicles.
+2.2.4. Procedure
+In each experiment condition, the participant was informed in advance that they will be providing their feedback regard-
+ing crossing an unmarked road in the presence of an approaching vehicle. Additionally, the participants were not informed
+Fig. 2. Screenshots of video stimuli of approaching cars from a pedestrian’s perspective as used in the experiment.
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+195
+
+
+whether or not the vehicles were equipped with emergency-braking system in order to deter reckless behaviour. After sign-
+ing an informed consent form, the participant was asked to sit in front of a 2900 widescreen monitor as the video of the
+approaching car from the pedestrian point-of-view was played full-screen to them. The participants were instructed to imag-
+ine that they were standing at the edge of an unmarked road with the intention to cross the road. In the experiment condi-
+tion involving the Driving mode D2 (automated driving), the participants were explicitly informed in advance that the cars
+they would be encountering in the video are automated vehicles: that the vehicle drove itself, and that there was no human
+driver controlling it. No participant who participated in the automated driving condition was given any additional informa-
+tion about the safety of the vehicle. Before starting the actual experiment, the participant was asked to practice with 5 ran-
+dom stimuli to familiarize themselves with the setup. Subsequently, each video clip corresponding to the 5 measuring points
+for one particular driving condition (manual or automated driving), showing 2 cars of different appearances (BMW 3 series
+or Renault Twizy), exhibiting 2 different behaviours (assertive or yielding) were presented 2 times in a randomized order to
+the participant. Thus, each participant was presented with 40 stimuli (5  2  2  2). The order of the presentation of the
+stimuli was randomized to counterbalance any learning effects. After each video segment completed playing, the partici-
+pants were requested to express their willingness to cross the road at the moment the video had stopped playing on a 5-
+point Likert scale, with 1 being no willingness and 5 being total willingness by pressing the corresponding key (1–5) on a
+keyboard.
+The willingness to cross the road was chosen as the single measure in this study as is a suitable substitute measure of the
+feeling of safety or trust of a pedestrian in crossing the road (Walker, Dey, Martens, Pﬂeging, Eggen, & Terken, 2019). A pedes-
+trian will likely not cross a road if they do not feel safe and have enough conﬁdence that a vehicle will stop for them.
+After the experiment, the participants were asked to answer a few questions regarding themselves, and their experience
+during the experiment. A validated assertiveness questionnaire was applied to gauge the participants’ personality and their
+overall assertiveness, with the conjecture that an individual who is assertive in general might also demonstrate an assertive
+attitude while crossing a road as a pedestrian. For this purpose, the 30-item schedule for assessing assertive behaviour
+Table 2
+The combination of video footages used to compare the vehicles, behaviours, and driving modes. In Manual Driving, the driver
+wearing a high-visibility jacket was clearly visible inside the car. In (unsupervised) Automated Driving, the Ghost driver platform
+was used, and participants were explicitly instructed that they will encounter an AV.
+Vehicle
+Behaviour
+Driving Mode
+V1: BMW 3 series
+Commonplace and ordinary-looking
+B1: Non-yielding
+D1: Manual driving
+D2: Automated driving
+B2: Yielding
+D1: Manual driving
+D2: Automated driving
+V2: Renault Twizy
+Futuristic and alternative-looking
+B1: Non-yielding
+D1: Manual driving
+D2: Automated driving
+B2: Yielding
+D1: Manual driving
+D2: Automated driving
+Fig. 3. Relative positions of pedestrian and measuring points.
+196
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+(Rathus, 1973) was adapted and augmented with a few related questions regarding behaviour in trafﬁc situations to contex-
+tualize the responses. Additionally, a small semi-structured interview was conducted where the participants were asked
+questions about their general opinion about automated vehicles. In the experiment condition involving manually-driven
+vehicles, they were asked to speculate if and how they would expect their responses to change if the vehicle in question
+was automated. In the experiment condition involving automated vehicles, they were asked to reﬂect how the knowledge
+that the vehicle is automated affected their decision to cross the road. The entire process including the instruction, the exper-
+iment, and the post-experiment interview ran for a total duration of 30–35 min. Each participant was compensated for their
+time with a €5 gift card.
+3. Results
+3.1. Quantitative
+The experiment dealt with 3 different independent variables across two groups of participants in a mixed design: vehicle
+appearance (BMW 3 Series, Renault Twizy), vehicle behaviour (non-yielding, yielding) as within-subjects manipulations, and
+vehicle driving mode (manual, automated) as a between-subjects manipulation. The dependent variable was the willingness
+of a pedestrian to cross the road in the presence of the oncoming vehicle. An inspection of descriptive statistics showed that
+the behaviour of an approaching vehicle had a profound effect in pedestrian willingness to cross in front of it. The mean
+scores of pedestrian willingness to cross in Table 3, and the graphs in Fig. 4 show the impact of the three different aspects
+of the vehicle (appearance, behaviour, and driving condition) on the pedestrian willingness to cross, at different distances.
+It is observed that the general pattern of pedestrians’ willingness to cross does not change substantially between the two
+different vehicles (BMW 3 series vs. Renault Twizy), or between the two different driving modes (manual vs. automated), but
+rather conforms based on the behaviour of the vehicles. In the case of a vehicle exhibiting non-yielding driving behaviour,
+the willingness to cross the road diminishes steadily as the vehicle comes closer, which is an expected response. When a
+vehicle exhibits yielding behaviour, the willingness of the pedestrians to cross diminishes as the vehicle comes closer until
+a certain point. When the vehicle is close enough that the pedestrian can be relatively sure that the car is stopping, or when
+the car has come to a complete stop, the willingness to cross increases again.
+Analyses of variances (Mixed ANOVA) were conducted for each measuring point (45 m, 30 m, 15 m, 5 m, and 1.5 m), with
+behaviour and vehicle appearance as within-subjects factors, and driving condition as a between-subjects factor, and the
+pedestrians’ willingness to cross as the dependent variable, to evaluate the main effects and the two-way interactions
+and the three-way interaction between the independent variables. In each case (distance of vehicle from the pedestrian),
+the assumption of sphericity (veriﬁed by Mauchly’s Sphericity Test signiﬁcance value >0.05) holds when looking at the F-
+statistics. For the sake of brevity, only the main effects are reported in Tables 4 and 5, as the interactions were not signiﬁcant.
+Results show a highly statistically signiﬁcant main effect of vehicle behaviour on a pedestrian’s willingness to cross at
+every measuring point (Table 4). We see a clear difference in the willingness of the pedestrians to cross in front of the vehicle
+as it approaches closer between the assertive and yielding behaviours. Pedestrians consistently showed a higher willingness
+to cross in front of an approaching vehicle which demonstrated a yielding behaviour, when compared to one demonstrating
+an assertive behaviour, which is intuitive and expected behaviour.
+Table 3
+Pedestrian willingness to cross across variations of vehicle driving condition, appearance, and behaviour. 1 = Totally unwilling to cross; 3 = undecided (neutral);
+5 = Totally willing to cross Top: Mean score; Bottom (small italics): Standard deviation.
+Vehicle
+Behaviour
+Driving Mode
+Vehicle distance from pedestrian
+45 m
+30 m
+15 m
+5 m
+1.5 m
+BMW 3 series
+Non-yielding
+Manual
+3.683
+2.933
+1.817
+1.450
+1.25
+1.141
+0.907
+0.782
+0.723
+0.583
+Automated
+3.2
+2.35
+1.533
+1.2
+1.083
+0.702
+0.789
+0.434
+0.484
+0.296
+Yielding
+Manual
+3.733
+3.617
+3.467
+3.617
+4.567
+0.935
+0.962
+0.964
+1.142
+0.907
+Automated
+3.667
+3.633
+3.75
+3.733
+4.667
+0.735
+0.798
+0.998
+0.989
+0.592
+Renault Twizy
+Non-yielding
+Manual
+3.433
+2.567
+1.633
+1.5
+1.317
+1.158
+1.023
+0.765
+0.841
+0.676
+Automated
+3.15
+2.4
+1.517
+1.183
+1.05
+0.939
+0.855
+0.663
+0.482
+0.153
+Yielding
+Manual
+3.85
+3.45
+3.167
+3.383
+4.533
+0.984
+0.864
+0.874
+0.971
+0.850
+Automated
+3.683
+3.1
+3.2
+3.717
+4.733
+0.759
+0.904
+1.087
+1.023
+0.521
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+197
+
+
+Inspection of the descriptive statistics in Table 3 and the graphs from Fig. 4 does not show a consistent pattern of inﬂu-
+ence of pedestrians’ road-crossing willingness based on the driving mode of the vehicle. Additionally, the mixed ANOVA
+results (Table 4) failed to show a statistically signiﬁcant difference in pedestrian responses between the manual and auto-
+mated driving conditions at any measuring point. The tests also show that the driving mode gained a very small effect size,
+which further corroborates the inference that knowledge of the driving mode of the vehicle did not affect the way pedestri-
+ans interacted with the vehicle.
+Fig. 4. Mean scores of pedestrian willingness to cross the street (1 = Totally unwilling to cross; 3 = undecided (neutral); 5 = Totally willing to cross) in the
+presence of the oncoming vehicles exhibiting different behaviours and driving modes at various distances from the pedestrian.
+Table 4
+Main effects of the diving mode and behaviour of a vehicle on pedestrian willingness
+to cross.
+Vehicle Distance
+F (1, 58)
+Signiﬁcance
+Effect Size (g2)
+Behaviour: Yielding vs. Non-yielding
+45 m
+20.349
+<0.000
+0.260
+30 m
+92.832
+<0.000
+0.615
+15 m
+282.638
+<0.000
+0.830
+5 m
+349.248
+<0.000
+0.858
+1.5 m
+1306.303
+<0.000
+0.957
+Informed Driving Condition: Manual vs. Automated
+45 m
+1.462
+0.232
+0.025
+30 m
+2.385
+0.128
+0.039
+15 m
+0.017
+0.896
+<0.000
+5 m
+0.030
+0.862
+0.001
+1.5 m
+0.099
+0.754
+0.002
+Table 5
+Main effects of the vehicle appearance on pedestrian willingness to cross.
+Vehicle Appearance: Renault Twizy vs. BMW 3 series
+Vehicle Distance
+F (1, 58)
+Signiﬁcance
+Effect Size (g2)
+45 m
+0.351
+0.556
+0.006
+30 m
+7.419
+0.009
+0.113
+15 m
+4.732
+<0.000
+0.203
+5 m
+0.830
+0.366
+0.014
+1.5 m
+0.116
+0.735
+0.002
+198
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+The effects of the different vehicles are statistically signiﬁcant only within a certain range of distance from the pedestrian
+(Table 5). This is seen as a marked difference in the participants’ responses at the measuring point of 30 and 15 m from the
+pedestrian. This difference may be attributed to the contrasting appearances of the vehicles. In this range of distance (mea-
+suring points of 30 m and 15 m), pedestrians appeared more willing to cross in front of the BMW 3 series compared to the
+Renault Twizy. This was observed nearly consistently in both manual and automated driving modes.
+It was also investigated whether the individual assertiveness of the participants had any role to play in their willingness
+to cross the street, in order to account for the role of assertiveness as a potential covariate. The assertiveness scores of each
+participant (Rathus, 1973), were assessed against their responses, and the results of the Spearman’s q is shown in Table 6.
+Analysis shows that in each measuring point, the assertiveness of the pedestrian had either negligible or weak correlation,
+and in all but one scenario (manual driving, measuring distance of 45 m), the correlations were not statistically signiﬁcant.
+As a result, it can be inferred that for practical considerations, individual assertiveness did not play an active role in deter-
+mining the willingness of the pedestrian to cross, and the attributes of the vehicle were more signiﬁcant determinants of
+pedestrian behaviour.
+3.2. Qualitative
+While quantitative data shows how people acted, it does not explain the subjective reasons behind those actions. Addi-
+tionally, the way people act is often different from how people think they act, so it is still important to capture an account of
+conscious rationale behind the perceptual and behavioural characteristics of a user. To this end, the qualitative data from the
+post-experiment semi-structured interviews with the participants were subjected to thematic analysis and categorized. We
+looked for various elements in the participant responses that alluded to factors that inﬂuenced their decisions to cross the
+road in the presence of the oncoming vehicles. The themes that emerged from the analysis are discussed below and are addi-
+tionally furnished with a few selected quotes by the participants which exemplify the insights.
+3.2.1. Behaviour of the vehicle is the most critical determinant of willingness to cross
+When asked the open-ended question of what factors inﬂuenced their willingness to cross the road in front of the
+approaching vehicle in the experiment, every participant stated that the distance of the car played the most crucial role
+while deciding to cross the road. This is an expected response: if the car is still far away, pedestrians will simply cross
+the road. However, the situation becomes increasingly ambiguous as the car comes closer. The participant responses were
+also unanimous across both driving modes (manual vs. automated) that apart from the distance, the vehicle speed and beha-
+viour played a primary role in determining their willingness to cross the road. The movement patterns of the car (whether
+the car seemed to be slowing down, or continuing to drive at speed) impacted their decision-making process, as revealed in
+the following relevant participant quotes:
+[M4]: ‘‘I ﬁrst focused on the speed at which the car is approaching. If I feel that the speed is reducing and it is coming to a stop, I
+decided to cross the road, otherwise not. The speed, acceleration, and deceleration were important. In the videos, I wasn’t able to
+see the driver very well. But in real-life scenarios, at whatever speed the car is approaching, if I am able to see the driver and
+establish eye contact, I will cross the road. But that is a secondary conﬁrmation. The primary factor is the speed and the beha-
+viour of the vehicle. If I am conﬁdent that the speed is decreasing, I will cross the road.”
+[M22]: ‘‘I was looking at the speed of the car and how far it is from me. If the car is too far away, I would just cross and I don’t
+even need to look at the speed.”
+[A2]: If the car stops before me, I will cross, otherwise I will be reluctant. I don’t trust the car while it is still in motion. If the car is
+far away, I look at the speed of the car. Even if the car is far away, if the car is driving quickly, I will just wait.
+[A28]: ‘‘When the car came across the ﬁrst time, I looked inside and saw that there was no one driving the car. Since then, I
+realized that ‘‘oh, I don’t need to look for the driver if they see me or not”, so I was just looking at the speed of the car”.
+3.2.2. Size matters: the perceived importance of vehicle size in the crossing decision
+When the participants were asked if the difference in the cars they encountered had any effect on their crossing decisions,
+the majority responded that the appearance of the car did play a role in their decisions. Within this group of participants, a
+majority in both driving modes highlighted the size of the vehicle as being a factor in making a decision. The observable size
+Table 6
+Spearman’s correlation coefﬁcient between participant assertiveness and their willingness
+to cross.
+Manual
+Automated
+45 m
+q = 0.171, p = 0.031
+q = 0.096, p = 0.147
+30 m
+q = 0.010, p = 0.457
+q = 0.109, p = 0.118
+15 m
+q = 0.055, p = 0.274
+q = 0.009, p = 0.462
+5 m
+q = 0.103, p = 0.132
+q = 0.005, p = 0.478
+1.5 m
+q = 0.069, p = 0.228
+q = 0.017, p = 0.425
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+199
+
+
+difference between the Renault Twizy and the BMW 3 Series, played a conscious role for most people, and they rationalized
+that with a smaller car, they can cross and get out of the car’s way more quickly, so they were more likely to cross in front of a
+small car compared to a big car. Alternatively, in the worst case if they get hit by the car, a smaller car would cause less dam-
+age. There was a clearly higher perceived risk in interacting with larger vehicles. The subjective consideration of vehicle size
+is evidenced by some of the representative participant quotes below:
+[A1]: ‘‘I was thinking about the looks of the car. I think that when I saw the bigger car, I inherently responded with a little more
+caution. I feel like ‘I see a bigger car, I need to be more careful’. I feel that the bigger car has more respect (presence) on the road.
+At the same speed, I would feel more afraid to cross in front of the bigger car.”
+[A3]: ‘‘I felt more scared around the bigger car. I felt that the bigger car was driving faster than the smaller car. Also, if the car is
+small, I can avoid it by moving quickly.”
+[M3]: ‘‘If the car is large, I think it would take a longer time to slow down, so I feel more threatened by it, even if it is farther
+away. I also feel that if the smaller car hits me, maybe I’ll get a bruise, but if the bigger car hits me, I’ll probably be dead.”
+[M26]: ‘‘I know that theoretically, the difference in the vehicles shouldn’t matter. But the fact that the BMW was a bigger car
+made me want to keep a safer distance from it when compared to the other car. I was being more cautious around the BMW.”
+However, it is interesting to note that this contrasts the actual responses made by the participants, as found in the quan-
+titative analysis. The actual willingness to cross was not affected by the perceived risk. We revisit this in the discussion.
+3.2.3. Stereotypes matter: mental models and preconceived ideas about vehicles and their driving styles inﬂuence crossing decisions
+Stereotypes of vehicles based on their external appearance, and subsequently, their expected behaviours did play a role in
+the conscious reasoning of some participants. While these preconceived notions of various participants did not necessarily
+concur with each other, or conform to the truth, they sometimes had a conscious effect on the participants. This, paired with
+the quantitative results indicated that the appearance of the vehicle and associated stereotypes and prejudices might play a
+role in pedestrians’ crossing decisions.
+[M9]: ‘‘I feel that the Twizy is an odd vehicle. That’s not something you would encounter regularly on the road. I would consider
+the BMW to be a more ‘normal’ vehicle. . . I don’t necessarily ﬁnd the Twizy cute or friendly. Moreover, if it’s going fast and it hits
+you, it is still going to be a threat. But if both the vehicles are traveling at the same speed, I’d trust that the BMW would brake
+better than the Twizy. . . I don’t think whether a car looks cute matters. However, it also interferes with the thought that the
+Twizy being smaller is easier to avoid if I move quickly, while the BMW might still hit me because it is a wider, bigger car.
+At the end of the day, it depends on how fast the car is coming, and how far they are. I was weighing those options to determine
+if it was safe for me to cross.”
+[A14]: . . . for the different look (speaking about the Renault Twizy), I didn’t feel conﬁdent every time as I didn’t know how to
+react around it.
+[A25]: ‘‘The small car (the Renault Twizy) looked more sophisticated, intelligent, and futuristic, so I thought it might stop sooner
+or be better equipped with handling an emergency braking situation. So, I might be bolder to cross the road.”
+[A27]: ‘‘The BMW made me more reluctant to cross. BMWs are normally driven by people who drive aggressively, and they drive
+faster. I didn’t think differently because this was an automated car. I wanted to be careful.”
+[A29]: ‘‘I actually found the small car a little more unpredictable because it’s a car I am not familiar with seeing. It reminds me of
+a brommobiel (mini car), and the people who drive those things are in my experience more unpredictable than people driving
+normal cars.”
+3.2.4. Unique and futuristic looks make a car more believable as an automated vehicle
+In the majority of the cases, a futuristic or unique external appearance in a vehicle did lend itself to the idea that the vehi-
+cle is equipped with advanced technology and is capable of automated driving, as expected and desired in our experiment
+design. In the automated driving condition, some participants indicated that it was easier for them to believe that the
+Renault Twizy was an automated vehicle because it was more futuristic and ‘‘robotic-looking” [A15]. Even in the experiment
+condition involving the manual driving mode, one participant [M1] commented that the uniqueness of the Renault Twizy
+made them think that the vehicle was driven by a robot (thus self-driving), despite it being driven by the human driver
+in a high-visibility jacket. On the other hand, the BMW was a familiar vehicle and conformed to people’s idea of an ordinary
+car, so it was less obvious as a self-driving car.
+[A8]: ‘‘When I saw the smaller car (the Renault Twizy), I really thought that it was a self-driving car. I don’t know why. But in my
+mind, the ﬁrst impression was that the other (BMW) did not look like a self-driving car.”
+[A9]: ‘‘The small car looked like it was equipped with new technology and innovation. The normal one (the BMW 3 series) – it
+looked like cars with drivers in it. As it was said that they are both self-driving cars, it didn’t inﬂuence my decision to cross the
+road. But if I just look at the car, the small one looked more hi-tech.”
+[A15]: ‘‘The big car didn’t really look like a self-driving car. The other car was remarkably smaller than you are used to seeing. It
+looked a bit more robotic; I think. A bit more mechanical than the big car.”
+[A25]: ‘‘The small car looked more sophisticated, intelligent, and futuristic, so I thought it might stop sooner or be better
+equipped with handling an emergency braking situation. So, I might be bolder to cross the road. I caught myself thinking that
+200
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+the BMW was just an ordinary car with someone driving it, and not an automated car. The small car was more believable as an
+automated car for me.”
+[M1]: ‘‘The small car (Renault Twizy) looks like one that is used for experiments. I wouldn’t want to drive around in that car
+because it will be difﬁcult to be seen in. As the car looked a little strange, I didn’t know its behaviour and I couldn’t predict
+how it was going to slow down or stop. For the bigger car (the BMW 3 series) – I have seen such cars around and I know what
+to expect. But with the small car, I couldn’t be sure. Somehow, it felt that instead of a person, there was a robot inside the car
+because in my mind I associated the car with experimental prototypes. That’s also why I wasn’t entirely sure if the car would
+really stop for me”
+3.2.5. Explicit knowledge of the self-driving nature of a vehicle has little impact on crossing behaviour
+As a response to whether the knowledge of the vehicle being automated consciously affected their decision, a few par-
+ticipants reﬂected that the knowledge that a vehicle is automated would either ﬁll them with hesitation, or contrarily, con-
+ﬁdence. However, a majority of the participants denied the self-driving nature of the vehicles to have had any impact on their
+crossing decision.
+[A1]: ‘‘If it is an automated car, I would not like to step in even if it is slowing down. But in this case, I didn’t think about it too
+much. I think I tuned out of the fact that these were automated cars”.
+[A8]: When I saw the smaller car (the Renault Twizy), I looked inside and saw that there was no driver inside. Then I realized
+that it was a more hi-tech self-driving car, and it made me feel more conﬁdent around it. (This participant also said that the
+BMW did not look like a self-driving car in their opinion – see quote above).
+[A2]: I imagined myself in a world where automated cars have been tested and approved to be on the road, so they must be safe.
+I didn’t think I acted any differently as opposed to a normal (manually-driven) car.
+[A12]: I was just basing my decision on the speed and distance of the cars, so I don’t think that the fact that they were self-
+driving mattered.
+Subjective opinion was split regarding the perceived safety of automated vehicles. However, the actual road-crossing
+willingness was not affected by individual differences in regards to perception towards automated vehicles, as seen from
+the quantitative analysis: the unaided knowledge of the driving mode did not cause a signiﬁcant departure in the pedestrian
+willingness to cross. This strongly points to the inference that simply introducing a reference frame that a vehicle is auto-
+mated does not adversely impact pedestrians’ attitude towards such vehicles.
+4. Discussion
+In this experiment, the effects of a vehicle’s driving mode (automated vs manual), external appearance, and driving beha-
+viour (yielding vs not yielding) on the willingness of pedestrians to cross a road in its path were studied. The primary aim
+was to identify whether pedestrians behave differently with automated vehicles as compared to manually-driven vehicles.
+4.1. Driving mode
+No evidence was found that the knowledge whether a car is self-driving or manually-driven inﬂuences pedestrian inter-
+actions with the vehicle. Evidence from the post-experiment interviews is in alignment with this insight. Based on this, we
+reject our hypothesis H1 (The perceived driving mode of the vehicle: manual vs automated, affects the willingness of pedestrians
+to cross the street). This ﬁnding conﬁrms the outcomes of an earlier study reported in the literature (Rodríguez Palmeiro et al.,
+2018), and suggests that people are not more uncertain about whether to cross in front of an automated vehicle, or – on the
+contrary – have more trust that an automated vehicle will halt.
+4.2. Vehicle driving behaviour
+On the other hand, the results showed that overall, the behaviour and driving dynamics of the vehicle play a signiﬁcant
+role in implicitly communicating the intent of the vehicle to pedestrians. When a vehicle exhibited non-yielding driving
+behaviour, the response was unsurprisingly and consistently a decrease in the pedestrians’ willingness to cross as the vehicle
+came closer. In contrast, when the vehicle exhibited yielding behaviour, it was observed that the pedestrians’ willingness
+dropped as the car came closer until a certain point, and then the willingness increased again. This is explained by the fact
+that when the vehicle is far away, the distance of the vehicle inspires enough conﬁdence for the pedestrian to cross. As the
+vehicle gradually slows down when approaching the pedestrian, the situation becomes increasingly ambiguous and the
+pedestrian becomes less conﬁdent that it is safe to cross. When the vehicle still gets closer and reduces speed further, the
+pedestrian’s conﬁdence that the vehicle will stop and that it is safe to cross, begins to increase again. This is in alignment
+with hypothesis H2 that the driving behaviour of the vehicle plays a signiﬁcant role in pedestrians’ road-crossing decisions.
+The qualitative data also indicate that pedestrians rely on the vehicle’s driving dynamics and movement patterns substan-
+tially to inform their road-crossing decisions.
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+201
+
+
+In previous work, Zimmermann and Wettach (2017) conducted an exploratory study in which suggested that a vehicle’s
+motion behaviour was able to evoke certain emotions, which in turn lead to rational decisions within the participants. The
+authors argued that this can be seen as a form of mutual communication. Similar ﬁndings are observed in the research by
+Risto, Emmenegger, Vinkhuyzen, Cefkin, and Hollan (2017), which show that drivers in manually-driven vehicles often
+choose to exaggerate their behaviour in trafﬁc, such as stopping short, to explicitly show intention through motion patterns.
+Other work has shown that braking patterns and subsequent time-to-arrival estimates can act as a basis of communication
+of intent for vehicles towards pedestrians (Ackermann, Beggiato, Bluhm, & Krems, 2018; Ackermann, Beggiato, Bluhm, Löw,
+& Krems, 2019; Beggiato, Witzlack, & Krems, 2017; Beggiato, Witzlack, Springer, & Krems, 2017). The ﬁndings in this study
+corroborate the earlier insights: the motion patterns and driving behaviours of a vehicle have profoundly signiﬁcant effects
+in communicating the vehicle’s intention, and emerges to be the biggest determinant of pedestrians’ willingness to cross,
+especially when the vehicle clearly exhibits yielding and non-yielding behaviour. Further research is required to investigate
+pedestrian interaction with a variety of different vehicle motion patterns to validate whether the movement behaviour of the
+vehicle is a signiﬁcant contributor of pedestrian road-crossing decision in every scenario.
+4.3. Effect of external appearance
+The main effect of appearance showed small but statistically signiﬁcant differences at measuring points in the interme-
+diate distance range (30 m, and 15 m). Research with conventional (manually-driven) vehicles has shown that the external
+appearance of the vehicle reﬂects the temperament and driving style of the driver and lends itself to stereotyping (Davies &
+Patel, 2005; Davies, 2009). One might assume that since automated vehicles are driven by computer algorithms and not by
+people, the vehicle appearance will cease to have an effect on pedestrians’ willingness to cross a road in its presence. How-
+ever, evidence from this study suggests otherwise. At the measuring points where the vehicle appearance becomes signiﬁ-
+cant (30 m and 15 m), in both manual and automated driving modes, we notice that the pedestrian willingness to cross is
+lower in front of the Renault Twizy compared to the BMW 3 series.
+One aspect of the vehicles’ appearances that may have played a role in the pedestrians’ willingness to cross is the size
+difference of the vehicles. From the qualitative results, it also emerged that pedestrians consciously felt the need to be more
+cautious around a larger car compared to a smaller car. However, we observe from the quantitative data that in reality, the
+opposite happens, and that pedestrians are less willing to cross in front of the Twizy compared to the BMW. This might be
+explained by the size-arrival effect, which holds that smaller vehicles are perceived to be farther away than larger vehicles,
+so that the estimated time to arrival for smaller vehicles is later than for larger vehicles (DeLucia, 1991, 2013; Levulis,
+DeLucia, & Jupe, 2015; Smith, Flach, Dittman, & Stanard, 2001).
+A second aspect may have been the vehicles’ perceived sociability. A priori, pedestrians were expected to have a lower
+willingness to cross in front of the BMW 3 series, compared to the Renault Twizy, at the same distance and driving condition.
+The underlying reasoning was that the BMW scored as a more aggressive, angry-looking vehicle than the comparatively cute
+and friendly-looking Twizy. Existing research suggests that the exterior appearance of a vehicle, speciﬁcally, the shape of its
+headlights and grills, plays a signiﬁcant role in the perception of the vehicle’s sociability and power, or friendliness vs.
+aggressiveness (Landwehr, McGill, & Herrmann, 2011; Windhager et al., 2008, 2012) This, in turn, was expected to affect
+pedestrians’ crossing behaviours in front of cars (Klatt et al., 2016) by lowering the willingness to cross in front of
+aggressive-looking vehicles. However, as mentioned above, the results showed that pedestrians were more willing to cross
+in front of the approaching BMW than the Renault Twizy.
+Combined, these lead us to reject hypothesis H3a – the smaller size or friendlier appearance of a vehicle did not inspire a
+higher willingness for pedestrians to cross. Furthermore, we also observe that pedestrians’ responses were similar across
+both manual and automated driving modes. Thus, we reject hypothesis H3b – the vehicle appearance still played a role
+for automated vehicles.
+This brings us to the third dimension of the appearance of the vehicles: their novelty and uniqueness. The BMW was per-
+ceived as a commonplace, ordinary-looking vehicle, as opposed to the Twizy, which was perceived as an alternative,
+futuristic-looking vehicle. While the unconventional appearance (uniqueness, conspicuity, and futuristic-ness) of the Twizy
+settled into the belief for many participants that the car is equipped with advanced technology and capable of automated
+driving (as evidenced by the participant interviews discussed in the qualitative analysis), the results suggest that subcon-
+sciously, the peculiarity and the unfamiliarity of the appearance of the Renault Twizy may have adversely affected the par-
+ticipants’ trust in its technical capabilities. People felt more conﬁdent in determining the behaviour of the more familiar,
+albeit aggressive-looking BMW that was more believable as an ordinary, manually-driven vehicle.
+4.4. Vehicle appearance as an indicator of self-driving capability
+An interesting aspect of the general propensity of people to consider the BMW 3 series as an ordinary car, and contrarily,
+the Renault Twizy as a more believable automated vehicle, is the fact that this behaviour transpired despite the participants
+having explicitly been informed of the vehicles’ automated nature in the experiment instructions. We infer that when a car is
+commonplace in looks, and does not have markers or external artefacts that explicitly draw attention to its automated driv-
+ing capabilities (e.g. stickers proclaiming that it is an automated vehicle, or sensors clearly visible on the vehicle that mark
+the car out as a departure from the norm), people may lose a conscious cognizance of the fact that the car is self-driving, and
+202
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+regard it as any other normal, human-driven vehicle. The question arises whether the outcome would have been different if
+the ‘‘ordinary” vehicle in the experiment (BMW) was marked or equipped with sensors in a manner that called attention to
+its self-driving nature.
+In a prior study on the perceptions of an automated shuttle to be used for public transport, Schieben, Wilbrink, Madigan,
+Louw, and Merat (2018) conducted face-to-face interviews, an onsite-survey and two focus groups resulting in several
+design considerations. In the context of the perception of a vehicle as having automated driving capabilities, their partici-
+pants pointed out that it is important for the design of the vehicle to look unlike normal public transport systems to be
+clearly identiﬁed as an automated vehicle. Their ﬁndings suggested that being able to identify the shuttle as an automated
+vehicle helps to build up the right expectations on the behaviour and next manoeuvres of the vehicle. However, taking into
+account the evidence from our study, we question whether vastly different exterior designs in vehicles is a good in all cir-
+cumstances. Rather than helping pedestrians to build the right expectations, a futuristic exterior may make them actually
+less conﬁdent about how the vehicle will behave.
+4.5. Implications
+The biggest takeaway of this study is that all other factors remaining constant, pedestrians do not experience a signiﬁcant
+change in their willingness to cross in front of an automated vehicle as opposed to a manual vehicle. The external appearance
+of the vehicle has a small modulating effect on willingness to cross. A futuristic appearance seemingly reinforces the instruc-
+tion to the participants that a vehicle is automated.
+Our results show an impact of vehicles’ external appearances on pedestrians’ perception of a vehicle as automated, and
+their willingness to cross a road. The patterns that emerge out of this data – particularly regarding the novelty and futuris-
+ticness of a vehicle’s appearance – lay the foundations of further research investigating the effect of vehicle appearance in
+more scenarios for automated vehicle deployment. These lead to a major design insight. Given that car manufacturers are
+already choosing to follow different schools of thought in the matter of how the design of an automated vehicle can play
+a role in conveying the subtle messages behind a car’s personality, capability, and power, this research informs the commu-
+nity of future design decisions. Volvo has chosen to make their ﬁrst test automated vehicles look inconspicuous and like any
+other ordinary vehicle, to address the concern of invoking abusive or bullying behaviour from other road users – the knowl-
+edge that a vehicle is automated by its special appearance, coupled with the assumption that it is programmed for defensive
+behaviour might embolden pedestrians to take advantage of it by stepping in its front even in the absence of the right of way
+without any fear of consequences (Connor, 2016). In contrast, the Google self-driving car was purposefully designed to look
+cute and friendly in order to help pedestrians regard it as a harmless entity, as well as impart the sense that it is not a high-
+speed vehicle (D’Onfro, 2014; Korosec, 2016). Other car manufacturers employ special design techniques to help their con-
+cept vehicles stand out. Faraday Future, for instance, calls out its vehicle FF91’s design and draws attention to its futuristic
+features (Faraday Future, 2016). This research suggests that an overly odd and unfamiliar exterior design of vehicles might
+interfere with the cognitive models of pedestrians and make them more hesitant in a road-crossing context, at least until the
+novelty wears off. Especially in the early stages of introduction of automated vehicles, in order to ensure a smooth introduction
+and integration into society, it might be important to not make automated vehicles too conspicuous by design.
+Furthermore, we found evidence that the behaviour and movement patterns of a car play the most important role in
+determining pedestrian crossing behaviour. The impact of their outer appearance is not trivial, but less substantial in com-
+parison. This points towards the design implication that ways to augment the implicit communication that takes place
+through the movement patterns of a vehicle should be explored for the most effective method to communicate vehicle
+intent. The most intuitive way to express the intention of a vehicle is through behaviour and movement. Augmenting the
+vehicle’s natural behaviour may be a more effective way to demonstrate vehicle intent than augmenting vehicle appearance
+using lights, messages, and projections. Communication via deliberate exaggeration of movement patterns is perhaps a bet-
+ter communicator of intent, and more research needs to be conducted on how this can be accomplished.
+4.6. Limitations and future work
+One consideration of the study is that we manipulated the belief of our participants regarding the self-driving nature of
+the car in the autonomous driving condition by instruction in the automated driving condition. We did not do an explicit
+manipulation check to validate whether the belief was affected. In the semi-structured interview after the study, participants
+were asked how their road-crossing willingness was affected as a result of the vehicles’ automated nature. Although no par-
+ticipants mentioned doubting the automation status of the vehicle, we cannot be certain how well the manipulation worked
+for each participant.
+Another limitation of this study was the video-based nature of the experiment as opposed to a real-world ﬁeld investi-
+gation. Due to the lack of the immediate danger of physical harm, participants might have given responses that would have
+entailed riskier behaviour than they would actually display in real life scenarios. Also, the video-based nature of the exper-
+iment limits the dynamic situation of road-crossing behaviour in real life, where the driver/vehicle also reacts to the beha-
+viour of the pedestrian. However, the requirement of a high level of control in the environment and the independent
+variables made it realistically impossible to conduct this study in the ﬁeld, as ensuring consistency in the driving behaviour,
+environmental conditions, and other dynamic attributes are extremely difﬁcult in this context. Therefore, a deliberate judg-
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+203
+
+
+ment was made to use videos as a medium for this experiment as a calculated trade-off between realism and control.
+Another concern was whether the approach of the vehicle and perception of the arrival time of a vehicle in real-life holds
+in a video. However, a previous study found that time arrival estimates do no differ between video and real-life situation
+(Recarte et al., 2005), which retains the ecological validity of this study. Furthermore, in road-crossing situations, pedestrians
+usually walk up to the edge of the road, make an immediate judgement based on the environment and the approaching car,
+and decide whether or not to cross the road. Looking at an oncoming vehicle for a prolonged period of time and then indi-
+cating road-crossing willingness is not natural behaviour in this context. However, it was important to study pedestrians’
+interactions with oncoming vehicles over the entire approach of the vehicle as a function of the vehicle’s distance. Thus, this
+limitation was acknowledged within the study design as a trade-off for a longitudinal evaluation of pedestrians’ road-
+crossing willingness.
+Prior research points out that pedestrians’ road-crossing behaviour depends on several factors such as the structure of the
+street, the driver’s reaction to the communication or time to collision (Rasouli, Kotseruba, & Tsotsos, 2017). Subsequent work
+also proposed that there is a strong interrelationship between factors that inﬂuence pedestrian behaviour (Rasouli & Tsotsos,
+2018). This means that only studying a small subset of these factors may not capture the true underlying reasons behind
+pedestrian crossing decisions. The study was conducted in a controlled setting, on a very speciﬁc scenario that involved
+the interaction of pedestrians with one car at a time, in a simple trafﬁc situation (straight road; daytime conditions; no other
+trafﬁc). While the scope for the current study was chosen deliberately to study people’s reactions to automated vehicles in
+regular, predictable, and non-emergency situations, the results might differ in situations involving more complex intersec-
+tions, mixed trafﬁc, and unpredictable behaviours. Future work must involve investigations in more complex conditions to
+validate the impact of these effects.
+5. Conclusion
+Within the scope of the simple and predictable trafﬁc situation in which this study was modelled, the ﬁndings in this
+study indicate the patterns of pedestrian behaviour in relation to a vehicle’s perceived driving mode, external appearance,
+and driving behaviour. This information can give direction to the development of automated vehicles. The results suggest
+a pattern in pedestrian behaviour in relation to vehicle driving behaviours and external appearance in normal, non-
+critical and non-emergency conditions. The overarching insight is that in interactions in relatively simple trafﬁc conditions,
+the knowledge of the driving mode of a vehicle does not appear to impact pedestrian interaction with vehicles signiﬁcantly:
+pedestrians are not overly hesitant of automated vehicles. The behavioural dynamics and movement patterns of a vehicle
+play a critical role in implicitly conveying the intentions of a vehicle to pedestrians. This can be thought of as the ‘‘body lan-
+guage” of a vehicle, which is the primary cue of vehicle intent in trafﬁc. This insight leads to a practical recommendation of
+focusing design efforts of automated vehicle human factors in the direction of using the vehicles’ behavioural dynamics as
+the foundation of a communication platform. Furthermore, we found that at a range of distance from a pedestrian when a car
+is neither too far away nor close enough, the appearance of the car can play a small but signiﬁcant role in decision-making.
+The results suggest that the novelty aspect of a car’s design plays a role in affecting the mental model of pedestrians and
+leads them to draw conclusions regarding whether a car is automated, and this, in turn, has the potential to affect their deci-
+sion to cross a road in its presence at a certain range of distance. On the other hand, we found evidence that when the exter-
+nal appearances of automated vehicles correspond to people’s ideas or expectations of any ordinary, manually-driven
+vehicle, people may forget that they are interacting with automated vehicles even if they are explicitly primed with this
+knowledge in advance. This insight may be valuable to consider in the design of automated vehicles in the future in the nas-
+cent stages of the introduction of self-driving cars when interactions between automated vehicles and vulnerable road users
+may be impeded by mistrust of new technology.
+Acknowledgement
+This research is supported by the Dutch Domain Applied and Engineering Sciences, which is part of the Netherlands
+Organisation for Scientiﬁc Research (NWO), and which is partly funded by the Ministry of Economic Affairs (project number
+14896).
+References
+Ackermann, C., Beggiato, M., Bluhm, L.-F., & Krems, J. (2018). Vehicle movement and its potential as implicit communication signal for pedestrians and
+automated
+vehicles
+Retrieved
+from.
+Proceedings
+of
+the
+6th
+humanist
+conference.
+Netherlands:
+The
+Hague
+http://www.humanist-vce.
+eu/ﬁleadmin/contributeurs/humanist/TheHague2018/3-Ackerman.pdf.
+Ackermann, C., Beggiato, M., Bluhm, L.-F., Löw, A., & Krems, J. F. (2019). Deceleration parameters and their applicability as informal communication signal
+between pedestrians and automated vehicles. Transportation Research Part F: Trafﬁc Psychology and Behaviour, 62, 757–768. https://doi.org/10.1016/j.
+trf.2019.03.006.
+Bazilinskyy, P., Kyriakidis, M., & De Winter, J. (2015). An international crowdsourcing study into people’s statements on fully automated driving. Procedia
+Manufacturing, 3(3), 2534–2542. https://doi.org/10.1016/j.promfg.2015.07.540.
+Beggiato, M., Witzlack, C., & Krems, J. F. (2017). Gap acceptance and time - to - arrival estimates as basis for informal communication between pedestrians
+and vehicles. In AutomotiveUI ’17 ACM 9th international conference on automotive user interfaces and interactive vehicular applications (pp. 50–57). https://
+doi.org/10.1145/3122986.3122995.
+204
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+
+
+Beggiato, M., Witzlack, C., Springer, S., & Krems, J. (2017). The right moment for braking as informal communication signal between automated vehicles and
+pedestrians in crossing situations. International conference on applied human factors and ergonomics AHFE 2017: advances in human aspects of
+transportation (Vol. 597, pp. 1072–1081). . https://doi.org/10.1007/978-3-319-60441-1.
+Connor, S. (2016). First self-driving cars will be unmarked so that other drivers don’t try to bully them | Technology | The Guardian Retrieved from. The
+Guardian https://www.theguardian.com/technology/2016/oct/30/volvo-self-driving-car-autonomous.
+D’Onfro, J. (2014). Google self-driving car: Why it’s so cute - business insider Retrieved March 9, 2017, from http://www.businessinsider.com/google-self-
+driving-car-why-its-so-cute-2014-12?international=true&r=US&IR=T.
+Davies, G. M. (2009). Estimating the speed of vehicles: The inﬂuence of stereotypes. Psychology, Crime & Law, 15(4), 293–312. https://doi.org/10.1080/
+10683160802203971.
+Davies, G. M., & Patel, D. (2005). The inﬂuence of car and driver stereotypes on attributions of vehicle speed, position on the road and culpability in a road
+accident scenario. Legal and Criminological Psychology, 10, 45–62. https://doi.org/10.1348/135532504X15394.
+DeLucia, P. R. (1991). Pictorial depth cues and motion-based information for depth perception Retrieved from. Journal of Experimental Psychology: Human
+Perception and Performance, 17, 738–748 https://www.researchgate.net/proﬁle/Patricia_Delucia/publication/21320770_Pictorial_and_Motion-Based_
+Information_for_Depth_Perception/links/57a1461b08aeb1604832ba9d/Pictorial-and-Motion-Based-Information-for-Depth-Perception.pdf.
+DeLucia, P. R. (2013). Effects of size on collision perception and implications for perceptual theory and transportation safety. Current Directions in
+Psychological Science, 22(3), 199–204. https://doi.org/10.1177/0963721412471679.
+Faraday Future (2016). Explore FF 91 - captivate Retrieved from https://www.ff.com/en/ff-91/captivate/.
+Hulse, L. M., Xie, H., & Galea, E. R. (2018). Perceptions of autonomous vehicles: Relationships with road users, risk, gender and age. Safety Science, 102, 1–13.
+https://doi.org/10.1016/j.ssci.2017.10.001.
+Hutson, M. (2017). People don’t trust driverless cars. Researchers are trying to change that. https://doi.org/10.1126/science.aar7402.
+Kautonen, A. (2019). Waymo self-driving cars face attacks in Arizona. Retrieved March 5, 2019, from https://www.autoblog.com/2019/01/02/waymo-self-
+driving-vehicle-attacks/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=
+AQAAAN0mHXEwzuPrPgWvT07WywwfZ8z8YzEK5zEDOqL_PlXk84mcJNvqI1jpU7gE_2yKkmim59DT4Fo-nA1ZFNWUhsi4oSrtMVOCa8_y6K.
+Klatt, W. K., Chesham, A., & Lobmaier, J. S. (2016). Putting up a big front: Car design and size affect road-crossing behaviour. PLoS ONE, 11(7). https://doi.org/
+10.1371/journal.pone.0159455.
+Korosec, K. (2016). Google’s self-driving car designer YooJung Ahn Discusses Her Design | Fortune.com. Retrieved March 9, 2017, from http://fortune.com/
+2016/10/12/google-yoojung-ahn-car-designer/.
+Kun, A. L. (2018). Human-machine interaction for vehicles: Review and outlook. Foundations and Trends in Human-Computer Interaction, 11(4), 201–293.
+Landwehr, J. R., McGill, A. L., & Herrmann, A. (2011). It’s got the look: The effect of friendly and aggressive ‘‘facial” expressions on product liking and sales.
+Journal of Marketing, 75(3), 132–146. https://doi.org/10.1509/jmkg.75.3.132.
+Levulis, S. J., DeLucia, P. R., & Jupe, J. (2015). Effects of oncoming vehicle size on overtaking judgments. Accident Analysis and Prevention, 82, 163–170. https://
+doi.org/10.1016/j.aap.2015.05.024.
+Lundgren, V. M., Habibovic, A., Andersson, J., Lagström, T., Nilsson, M., Sirkka, A., ... Saluäär, D. (2016). Will there be new communication needs when
+introducing automated vehicles to the urban context? In 7th international conference on applied human factors and ergonomics. https://doi.org/10.1007/
+978-3-319-41682-3_41.
+Merat, N., Louw, T., Madigan, R., Wilbrink, M., & Schieben, A. (2018). What externally presented information do VRUs require when interacting with fully
+Automated Road Transport Systems in shared space? Accident Analysis and Prevention, 0–1. https://doi.org/10.1016/j.aap.2018.03.018.
+Mirnig, N., Perterer, N., Stollnberger, G., & Tscheligi, M. (2017). Three strategies for autonomous car-to-pedestrian communication. In Proceedings of the
+companion of the 2017 ACM/IEEE international conference on human-robot interaction - HRI ’17 (pp. 209–210). https://doi.org/10.1145/3029798.3038402.
+Nordhoff, S., De Winter, J., Kyriakidis, M., Van Arem, B., & Happee, R. (2018). Acceptance of driverless vehicles: Results from a large cross-national
+questionnaire study. Journal of Advanced Transportation. https://doi.org/10.1155/2018/5382192.
+Rasouli, A., Kotseruba, I., & Tsotsos, J. K. (2017). Agreeing to cross: How drivers and pedestrians communicate. In IEEE Intelligent Vehicles Symposium,
+Proceedings (pp. 264–269). Redondo Beach, CA. https://doi.org/10.1109/IVS.2017.7995730.
+Rasouli, A., & Tsotsos, J. K. (2018). Autonomous vehicles that interact with pedestrians: A survey of theory and practice, (May). Retrieved from http://arxiv.
+org/abs/1805.11773.
+Rathus, S. A. (1973). A 30-item schedule for assessing assertive behavior. Behavior Therapy, 4(3), 398–406. https://doi.org/10.1016/S0005-7894(73)80120-0.
+Recarte, M. Á., Conchillo, Á., & Nunes, L. M. (2005). Estimation of arrival time in vehicle and video. Psicothema, 17(1), 112–117.
+Reig, S., Norman, S., Morales, C. G., Das, S., Steinfeld, A., & Forlizzi, J. (2018). A ﬁeld study of pedestrians and autonomous vehicles. In Proceedings of the 10th
+International Conference on Automotive User Interfaces and Interactive Vehicular Applications - AutomotiveUI ’18 (pp. 198–209). Toronto, Canada.
+https://doi.org/10.1145/3239060.3239064.
+Risto, M., Emmenegger, C., Vinkhuyzen, E., Cefkin, M., & Hollan, J. (2017). Human-vehicle interfaces: The power of vehicle movement gestures in human
+road user coordination. In Driving assessment: The ninth international driving symposium on human factors in driver assessment, training and vehicle
+design. Manchester Village, Vermont.
+Rodríguez Palmeiro, A., van der Kint, S., Vissers, L., Farah, H., de Winter, J. C. F., & Hagenzieker, M. (2018). Interaction between pedestrians and automated
+vehicles: A Wizard of Oz experiment. Transportation Research Part F: Trafﬁc Psychology and Behaviour, 58, 1005–1020. https://doi.org/10.1016/j.
+trf.2018.07.020.
+Romero, S. (2018). Wielding rocks and knives, arizonans attack self-driving cars. The New York Times. Chandler, Arizona. Retrieved from https://www.
+nytimes.com/2018/12/31/us/waymo-self-driving-cars-arizona-attacks.html.
+Rothenbücher, D., Li, J., Sirkin, D., Mok, B., & Ju, W. (2016). Ghost driver: A ﬁeld study investigating the interaction between pedestrians and driverless
+vehicles. In 25th IEEE international symposium on robot and human interactive communication, RO-MAN 2016 (pp. 795–802). https://doi.org/10.1109/
+ROMAN.2016.7745210.
+Schieben, A., Wilbrink, M., Madigan, C. K. R., Louw, T., & Merat, N. (2018). Designing the interaction of automated vehicles with other trafﬁc participants: A
+design framework based on human needs and expectations. Cognition, Technology & Work (August). https://doi.org/10.1007/s10111-018-0521-z.
+Smith, A., & Anderson, M. (2017). Automation in Everyday Life: Americans express more worry than enthusiasm about coming developments in automation.
+Retrieved September 11, 2018, from http://www.pewinternet.org/2017/10/04/automation-in-everyday-life/.
+Smith, M. R. H., Flach, J. M., Dittman, S. M., & Stanard, T. (2001). Monocular optical constraints on collision control. Journal of Experimental Psychology: Human
+Perception and Performance, 27(2), 395–410. https://doi.org/10.1037//0096-1523.27.2.395.
+Walker, F., Dey, D., Martens, M., Pﬂeging, B., Eggen, B., & Terken, J. (2019). Feeling-of-safety slider : A platform for measuring pedestrian comfort in ﬁeld
+interactions with vehicles. In Proceedings of the 2019 CHI conference on human factors in computing systems (pp. 1–6). Glasgow, UK. https://doi.org/
+10.1145/3290607.3312880.
+Windhager, S., Bookstein, F. L., Grammer, K., Oberzaucher, E., Said, H., Slice, D. E., ... Schaefer, K. (2012). ‘‘Cars have their own faces”: Cross-cultural ratings of
+car shapes in biological (stereotypical) terms. Evolution and Human Behavior, 33(2), 109–120. https://doi.org/10.1016/j.evolhumbehav.2011.06.003.
+Windhager, S., Slice, D. E., Schaefer, K., Oberzaucher, E., Thorstensen, T., & Grammer, K. (2008). Face to face: The perception of automotive designs. Human
+Nature, 19(4), 331–346. https://doi.org/10.1007/s12110-008-9047-z.
+Zimmermann, R., & Wettach, R. (2017). First Step into visceral interaction with autonomous vehicles. In Proceedings of the 9th international conference on
+automotive user interfaces and interactive vehicular applications - AutomotiveUI ’17 (pp. 58–64). https://doi.org/10.1145/3122986.3122988.
+D. Dey et al. / Transportation Research Part F 65 (2019) 191–205
+205
+
+

@@ -1,0 +1,447 @@
+{
+  "_meta": {
+    "数据来源": "JCR 2023 / Web of Science / SCImago / 期刊官网 (基于 google_search 检索结果，2026年6月)；三刊 IF 于 2026-08 由 WoS 官方镜像与出版商官网补核，见 _verified_2026",
+    "_": "对于会议论文，给出 CCF / CORE 排名等替代评价；新刊 JCR 暂未收录则标注"
+  },
+  "venues": {
+    "IEEE Transactions on Visualization and Computer Graphics": {
+      "jcr": "Q1",
+      "if": 6.8,
+      "if_5y": 6.8,
+      "percentile": "92.2%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q1 (IF 6.5)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    },
+    "International Journal of Human-Computer Interaction": {
+      "jcr": "Q1",
+      "if": 6.1,
+      "if_5y": 7.0,
+      "percentile": "91.7%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q1 (IF 4.9)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    },
+    "Sensors": {
+      "jcr": "Q2",
+      "if": 4.0,
+      "category": "Instruments & Instrumentation",
+      "ccf": "-",
+      "note": "MDPI"
+    },
+    "Applied Sciences": {
+      "jcr": "Q2",
+      "if": 2.5,
+      "category": "Engineering, Multidisciplinary",
+      "ccf": "-",
+      "note": "MDPI"
+    },
+    "Electronics": {
+      "jcr": "Q2",
+      "if": 2.9,
+      "category": "Engineering, Electrical & Electronic",
+      "ccf": "-",
+      "note": "MDPI"
+    },
+    "Sustainability": {
+      "jcr": "Q2",
+      "if": 4.1,
+      "category": "Environmental Studies",
+      "ccf": "-",
+      "note": "MDPI"
+    },
+    "Safety": {
+      "jcr": "未收录JCR (新刊)",
+      "if": "2.4",
+      "category": "-",
+      "ccf": "-",
+      "note": "MDPI 新刊"
+    },
+    "Frontiers in Public Health": {
+      "jcr": "Q2",
+      "if": 3.5,
+      "category": "Public, Environmental & Occupational Health",
+      "ccf": "-",
+      "note": "Frontiers"
+    },
+    "Frontiers in Robotics and AI": {
+      "jcr": "Q2",
+      "if": 3.61,
+      "category": "Robotics / Artificial Intelligence",
+      "ccf": "-",
+      "note": "Frontiers"
+    },
+    "Frontiers in Virtual Reality": {
+      "jcr": "未收录JCR (新刊)",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "Frontiers 新刊，2020年创刊"
+    },
+    "ETRI Journal": {
+      "jcr": "Q3",
+      "if": 2.0,
+      "category": "Telecommunications",
+      "ccf": "-",
+      "note": "Wiley"
+    },
+    "IEEE Access": {
+      "jcr": "Q2",
+      "if": 4.2,
+      "category": "Engineering, Electrical & Electronic / Computer Science",
+      "ccf": "-",
+      "note": ""
+    },
+    "IEEE Transactions on Systems Man and Cybernetics Part B (Cybernetics)": {
+      "jcr": "Q1 (历史)",
+      "if": "-",
+      "category": "已停刊重组为 SMC: Cybernetics",
+      "ccf": "CCF B",
+      "note": "现为 IEEE TCYB"
+    },
+    "Human Factors The Journal of the Human Factors and Ergonomics Society": {
+      "jcr": "Q1",
+      "if": 3.4,
+      "category": "Behavioral Sciences / Psychology, Applied / Engineering, Industrial",
+      "ccf": "-",
+      "note": "人因工程顶刊"
+    },
+    "Journal of Safety Research": {
+      "jcr": "Q1",
+      "if": 4.3,
+      "category": "Public Health",
+      "ccf": "-",
+      "note": "Elsevier"
+    },
+    "Advanced Materials": {
+      "jcr": "Q1",
+      "if": 29.1,
+      "category": "Materials Science / Multidisciplinary",
+      "ccf": "-",
+      "note": "Wiley 顶刊"
+    },
+    "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies": {
+      "jcr": "Q1",
+      "if": 6.2,
+      "category": "Computer Science / HCI",
+      "ccf": "CCF A (UbiComp)",
+      "note": "顶级会议 UbiComp 论文"
+    },
+    "Human-Centric Intelligent Systems": {
+      "jcr": "未收录JCR (新刊)",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "Springer 新刊 (2021年创刊)"
+    },
+    "Proceedings of the Human Factors and Ergonomics Society Annual Meeting": {
+      "jcr": "会议论文集",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "HFES 年会论文集"
+    },
+    "Proceedings of the International Conference on Information Economy, Data Modeling and Cloud Computing, ICIDC 2022, 17-19 June 2022, Qingdao, China": {
+      "jcr": "会议论文集",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "EAI ICIDC 2022 会议"
+    },
+    "IEEE ITSC (Intelligent Transportation Systems)": {
+      "jcr": "会议",
+      "if": "-",
+      "category": "-",
+      "ccf": "CCF C",
+      "note": "ITSC 国际智能交通会议"
+    },
+    "IEEE VR (Virtual Reality)": {
+      "jcr": "会议",
+      "if": "-",
+      "category": "-",
+      "ccf": "CCF A",
+      "note": "VR 顶级会议"
+    },
+    "IEEE ICCE (Consumer Electronics)": {
+      "jcr": "会议",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "消费电子会议"
+    },
+    "ACM AutomotiveUI": {
+      "jcr": "会议",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "AutoUI 汽车 UI 会议"
+    },
+    "EAI ADDT 2024": {
+      "jcr": "会议",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "EAI ADDT 会议"
+    },
+    "arXiv preprint": {
+      "jcr": "预印本",
+      "if": "-",
+      "category": "-",
+      "ccf": "-",
+      "note": "未经同行评审"
+    },
+    "Annals of the New York Academy of Sciences": {
+      "jcr": "Q1",
+      "if": 4.5,
+      "if_5y": 6.3,
+      "category": "Multidisciplinary Sciences (SCIE)",
+      "percentile": "82.9%",
+      "ccf": "-",
+      "note": "百分位 82.9% → Q1（JCR 分位界 75/50/25）；本轮更正：旧记 Q2 有误",
+      "source": "wos-journal.info/journalid/4886（WoS 官方数据镜像）；类目排名第 22 位由 ooir.org 交叉印证；Wiley 与 Wikipedia 均载 JIF 4.5"
+    },
+    "Transportation Research Interdisciplinary Perspectives": {
+      "jcr": "Q2",
+      "if": 4.8,
+      "if_5y": 5.2,
+      "category": "Transportation (ESCI)",
+      "percentile": "71.2%",
+      "ccf": "-",
+      "note": "ESCI 自 JCR 2023 起与 SCIE/SSCI 同样按 JIF 排名；百分位 71.2% → Q2；全开放获取",
+      "source": "wos-journal.info/journalid/23861"
+    },
+    "International Journal of Vehicle Design": {
+      "jcr": "Q4",
+      "if": 0.7,
+      "if_5y": 0.9,
+      "jci": 0.15,
+      "citescore": 1.5,
+      "category": "Transportation Science & Technology / Engineering, Mechanical",
+      "percentile": "-",
+      "ccf": "-",
+      "note": "JIF 0.7 远低于两类目中位数，Q4 为按 JIF 推定（出版商未公示分位）；2009 年 JCR 曾为 Q3（IF 0.48，19/26）",
+      "source": "inderscience.com/jhome.php?jcode=ijvd 官网公示的 Clarivate 2025 指标"
+    },
+    "Applied Ergonomics": {
+      "jcr": "Q2",
+      "if": 3.5,
+      "if_5y": 4.2,
+      "percentile": "70.4%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q1 (IF 3.8)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    },
+    "IEEE Transactions on Intelligent Transportation Systems": {
+      "jcr": "Q1",
+      "if": 9.1,
+      "if_5y": 10.4,
+      "percentile": "95.9%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q1 (IF 7.9)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    },
+    "IET Intelligent Transport Systems": {
+      "jcr": "Q3",
+      "if": 2.7,
+      "if_5y": 3.1,
+      "percentile": "49.6%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q2 (IF 2.5)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    },
+    "Journal of the Society for Information Display": {
+      "jcr": "Q3",
+      "if": 2.0,
+      "if_5y": 2.1,
+      "percentile": "44.2%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q3 (IF 2.2)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    },
+    "Human Factors": {
+      "jcr": "Q1",
+      "if": 3.6,
+      "if_5y": 5.5,
+      "percentile": "86%",
+      "index": "SCIE",
+      "note": "本轮据 WoS 更正：旧记 Q1 (IF 3.4)",
+      "source": "wos-journal.info（Web of Science / JCR 数据镜像），2026-08 核验"
+    }
+  },
+  "paper_venue_mapping": {
+    "1": {
+      "venue": "IEEE Transactions on Visualization and Computer Graphics",
+      "ref_str": "TVCG 2018"
+    },
+    "2": {
+      "venue": "IEEE ITSC (Intelligent Transportation Systems)",
+      "ref_str": "ITSC 2016"
+    },
+    "3": {
+      "venue": "IEEE VR (Virtual Reality)",
+      "ref_str": "IEEE VR 2016"
+    },
+    "4": {
+      "venue": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+      "ref_str": "HFES 2016"
+    },
+    "5": {
+      "venue": "IEEE ITSC (Intelligent Transportation Systems)",
+      "ref_str": "ITSC 2014"
+    },
+    "6": {
+      "venue": "Sensors",
+      "ref_str": "Sensors (MDPI) 2024"
+    },
+    "7": {
+      "venue": "International Journal of Human-Computer Interaction",
+      "ref_str": "IJHCI 2024"
+    },
+    "8": {
+      "venue": "Sustainability",
+      "ref_str": "Sustainability (MDPI) 2024"
+    },
+    "9": {
+      "venue": "Electronics",
+      "ref_str": "Electronics (MDPI) 2025"
+    },
+    "10": {
+      "venue": "Applied Sciences",
+      "ref_str": "Applied Sciences (MDPI) 2021"
+    },
+    "11": {
+      "venue": "IEEE ICCE (Consumer Electronics)",
+      "ref_str": "IEEE ICCE 2020"
+    },
+    "12": {
+      "venue": "International Journal of Human-Computer Interaction",
+      "ref_str": "IJHCI 2024"
+    },
+    "13": {
+      "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+      "ref_str": "Human Factors 2019"
+    },
+    "14": {
+      "venue": "Journal of Safety Research",
+      "ref_str": "J. Safety Research 2017"
+    },
+    "15": {
+      "venue": "IEEE ITSC (Intelligent Transportation Systems)",
+      "ref_str": "ITSC 2015"
+    },
+    "16": {
+      "venue": "IEEE ITSC (Intelligent Transportation Systems)",
+      "ref_str": "ITSC 2015"
+    },
+    "17": {
+      "venue": "IEEE Access",
+      "ref_str": "IEEE Access 2023"
+    },
+    "18": {
+      "venue": "ETRI Journal",
+      "ref_str": "ETRI Journal 2013"
+    },
+    "19": {
+      "venue": "International Journal of Human-Computer Interaction",
+      "ref_str": "IJHCI 2025"
+    },
+    "20": {
+      "venue": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies",
+      "ref_str": "ACM IMWUT 2025"
+    },
+    "21": {
+      "venue": "Frontiers in Virtual Reality",
+      "ref_str": "Frontiers VR 2025"
+    },
+    "22": {
+      "venue": "ACM AutomotiveUI",
+      "ref_str": "AutoUI 2018"
+    },
+    "23": {
+      "venue": "Applied Sciences",
+      "ref_str": "Applied Sciences (MDPI) 2023"
+    },
+    "24": {
+      "venue": "Applied Sciences",
+      "ref_str": "Applied Sciences (MDPI) 2025"
+    },
+    "25": {
+      "venue": "Frontiers in Robotics and AI",
+      "ref_str": "Frontiers Robotics & AI 2019"
+    },
+    "26": {
+      "venue": "Applied Sciences",
+      "ref_str": "Applied Sciences (MDPI) 2021"
+    },
+    "27": {
+      "venue": "IEEE Access",
+      "ref_str": "IEEE Access 2021"
+    },
+    "28": {
+      "venue": "IEEE Transactions on Systems Man and Cybernetics Part B (Cybernetics)",
+      "ref_str": "IEEE TSMC-B 2008"
+    },
+    "29": {
+      "venue": "Frontiers in Public Health",
+      "ref_str": "Frontiers Public Health 2023"
+    },
+    "30": {
+      "venue": "International Journal of Human-Computer Interaction",
+      "ref_str": "IJHCI 2019"
+    },
+    "31": {
+      "venue": "Safety",
+      "ref_str": "Safety (MDPI) 2022"
+    },
+    "32": {
+      "venue": "Advanced Materials",
+      "ref_str": "Advanced Materials 2022"
+    },
+    "33": {
+      "venue": "Human-Centric Intelligent Systems",
+      "ref_str": "HCIS (Springer) 2022"
+    },
+    "34": {
+      "venue": "Proceedings of the International Conference on Information Economy, Data Modeling and Cloud Computing, ICIDC 2022, 17-19 June 2022, Qingdao, China",
+      "ref_str": "EAI ICIDC 2022"
+    },
+    "35": {
+      "venue": "EAI ADDT 2024",
+      "ref_str": "EAI ADDT 2024"
+    },
+    "36": {
+      "venue": "IEEE Access",
+      "ref_str": "IEEE Access 2023"
+    },
+    "37": {
+      "venue": "arXiv preprint",
+      "ref_str": "arXiv 1612.06558"
+    },
+    "38": {
+      "venue": "arXiv preprint",
+      "ref_str": "arXiv 2009.10868"
+    },
+    "39": {
+      "venue": "arXiv preprint",
+      "ref_str": "arXiv 2112.09074"
+    }
+  },
+  "_verified_2026": {
+    "说明": "此三刊此前只查到分区、未取得可靠 IF，曾在 CSV 中填 'Q? (IF -)' 并注「IF 未核验」。本轮由 WoS 官方数据镜像与出版商官网补核，未采用 resurchify / research.com / journalseeker 等聚合站的自造指标（同一刊在这些站上给出 2.6/3.8/4.55/4.87/5.69 五个互斥数值）。",
+    "分位判定规则": "JCR 以 JIF 百分位 75/50/25 为 Q1/Q2/Q3/Q4 界；无百分位者按 JIF 与类目中位数推定并在 note 中注明。",
+    "补核条目": [
+      "Annals of the New York Academy of Sciences",
+      "Transportation Research Interdisciplinary Perspectives",
+      "International Journal of Vehicle Design"
+    ],
+    "据 WoS 更正的条目": {
+      "Applied Ergonomics": "本轮据 WoS 更正：旧记 Q1 (IF 3.8) → Q2 (IF 3.5)",
+      "International Journal of Human-Computer Interaction": "本轮据 WoS 更正：旧记 Q1 (IF 4.9) → Q1 (IF 6.1)",
+      "IEEE Transactions on Intelligent Transportation Systems": "本轮据 WoS 更正：旧记 Q1 (IF 7.9) → Q1 (IF 9.1)",
+      "IET Intelligent Transport Systems": "本轮据 WoS 更正：旧记 Q2 (IF 2.5) → Q3 (IF 2.7)",
+      "Journal of the Society for Information Display": "本轮据 WoS 更正：旧记 Q3 (IF 2.2) → Q3 (IF 2.0)",
+      "IEEE Transactions on Visualization and Computer Graphics": "本轮据 WoS 更正：旧记 Q1 (IF 6.5) → Q1 (IF 6.8)",
+      "Human Factors": "本轮据 WoS 更正：旧记 Q1 (IF 3.4) → Q1 (IF 3.6)"
+    }
+  }
+}

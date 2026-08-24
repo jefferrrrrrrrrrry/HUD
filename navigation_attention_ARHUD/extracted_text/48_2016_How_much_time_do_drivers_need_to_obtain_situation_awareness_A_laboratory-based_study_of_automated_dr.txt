@@ -1,0 +1,1563 @@
+How much time do drivers need to obtain situation awareness? A
+laboratory-based study of automated driving
+Zhenji Lu*, 1, Xander Coster 1, Joost de Winter
+Department of BioMechanical Engineering, Faculty of Mechanical, Maritime and Materials Engineering, Delft University of Technology, Mekelweg 2, 2628
+CD, Delft, The Netherlands
+a r t i c l e i n f o
+Article history:
+Received 6 June 2016
+Received in revised form
+28 November 2016
+Accepted 4 December 2016
+Keywords:
+Scene perception
+Spatial memory
+Eye tracking
+Hazard perception
+a b s t r a c t
+Drivers of automated cars may occasionally need to take back manual control after a period of inat-
+tentiveness. At present, it is unknown how long it takes to build up situation awareness of a trafﬁc
+situation. In this study, 34 participants were presented with animated video clips of trafﬁc situations on a
+three-lane road, from an egocentric viewpoint on a monitor equipped with eye tracker. Each participant
+viewed 24 videos of different durations (1, 3, 7, 9, 12, or 20 s). After each video, participants reproduced
+the end of the video by placing cars in a top-down view, and indicated the relative speeds of the placed
+cars with respect to the ego-vehicle. Results showed that the longer the video length, the lower the
+absolute error of the number of placed cars, the lower the total distance error between the placed cars
+and actual cars, and the lower the geometric difference between the placed cars and the actual cars.
+These effects appeared to be saturated at video lengths of 7e12 s. The total speed error between placed
+and actual cars also reduced with video length, but showed no saturation up to 20 s. Glance frequencies
+to the mirrors decreased with observation time, which is consistent with the notion that participants ﬁrst
+estimated the spatial pattern of cars after which they directed their attention to individual cars. In
+conclusion, observers are able to reproduce the layout of a situation quickly, but the assessment of
+relative speeds takes 20 s or more.
+© 2016 Elsevier Ltd. All rights reserved.
+1. Introduction
+Over the past few decades, an increasing number of automated
+driving systems have become available, both for research and
+consumer purposes. Automated driving systems in which the
+driver can opt to be ‘out-of-the-loop’ by engaging in non-driving
+tasks such as reading or resting are expected within a decade
+(Kyriakidis et al., 2015; Underwood, 2014). When the automation
+malfunctions or reaches its functional limits, control has to be
+handed back to the driver. In such cases, the automation typically
+issues a warning signal (also called a take-over request, see Lu et al.,
+2016 for a review) after which the driver has to resume the driving
+task (SAE International, 2014).
+A critical design parameter in the development of automated
+driving system is the available time for taking over control,
+sometimes referred to as ‘lead time’, ‘time buffer’, or ‘time
+budget’ (Gasser and Westhoff, 2012; SAE International, 2014;
+Zeeb et al., 2016). If drivers do not have sufﬁcient time to
+assess the situation prior to taking control, an accident may
+result (Mok et al., 2015). Drivers may prefer long lead times to
+prepare for the upcoming transition of control, but in reality, this
+is not always technologically feasible. For example, limitations in
+sensors (e.g., the limited range of a forward-facing radar) pose
+barriers regarding the maximum lead time that is feasible. In
+summary, it is important to understand how much time drivers
+need for gaining situation awareness (SA), because this sets de-
+mands on the automated driving technology.
+Various studies have previously examined the effects of lead
+time on drivers' behaviour after resuming control (Clark and Feng,
+2015; Gold et al., 2013; Mok et al., 2015). For example, a driving
+simulator study by Gold et al. (2013) found that the less time is
+available until colliding with a stationary object (5 s vs. 7 s), the
+more abrupt are the drivers' braking and steering inputs after
+receiving a take-over request. This study reported an average gaze
+reaction time (i.e., the time between the take-over request and the
+eye-gaze moving away from the non-driving task) of 0.5 s, an
+* Corresponding author.
+E-mail address: z.lu@tudelft.nl (Z. Lu).
+1 Joint ﬁrst authors.
+Contents lists available at ScienceDirect
+Applied Ergonomics
+journal homepage: www.elsevier.com/locate/apergo
+http://dx.doi.org/10.1016/j.apergo.2016.12.003
+0003-6870/© 2016 Elsevier Ltd. All rights reserved.
+Applied Ergonomics 60 (2017) 293e304
+
+
+average hands-on-steering-wheel time of 1.5 s, and an average
+mirror-scan time of about 3 s (for similar results see Kerschbaum
+et al., 2015). Van den Beukel and Van der Voort (2013) found a
+decrease in the number of accidents and higher self-reported SA
+scores when more time was available. Mok et al. (2015) found that
+only few participants in a 2 s lead-time condition safely negotiated
+a hazardous situation, while the 5 s and 8 s conditions yielded
+considerably safer driver behaviours. A driving simulator study by
+Samuel et al. (2016) compared 4, 6, 8, and 12 s lead times, and found
+that participants needed a lead time of at least 8 s in order to detect
+a latent pedestrian hazard with the same accuracy as they did when
+being in control of the vehicle. Driving simulator research by Merat
+et al. (2014) and by Desmond et al. (1998) suggests that it may take
+up to 20 s or 40 s before vehicle control is fully stabilised after
+reclaiming control. Although the above studies provide valuable
+knowledge, they do not offer much insight into the cognitive pro-
+cesses of how drivers are able to build SA of a trafﬁc situation as a
+function of the available time.
+Over the last 25 years, the topic of SA has been extensively
+investigated (Endsley, 2015). The Situation Awareness Global
+Assessment Technique (SAGAT) is one of the standard in-
+struments for measuring SA (Garland and Endsley, 1995). In this
+method, the screens of a simulator are temporarily blanked, and
+participants subsequently have to answer queries about objects
+and unfolding events in the simulation. Although SAGAT has
+been criticized for the fact that it measures SA intermittently
+rather than continuously, and for relying heavily on memory
+skills (for discussion see Durso et al., 2006; Gutzwiller and Clegg,
+2013; Stanton et al., 2015), there is now a sound body of litera-
+ture showing that SAGAT scores exhibit criterion validity with
+respect to task performance (Durso et al., 1995; Gardner et al.,
+2015; Loft et al., 2015; Salmon et al., 2009). Various promising
+alternative methods have been proposed for measuring SA, such
+as real-time probing (e.g., Loft et al., 2013; Martelaro et al., 2015;
+Pierce, 2012) and physiological techniques (e.g., Crundall et al.,
+2003; Gugerty, 2011), but at present SAGAT still appears to be
+the most widely applied and validated SA assessment tool (see
+also Endsley, 2000, 2015).
+The answer categories in SAGAT are usually discrete or dis-
+cretised values of the state of the virtual environment (e.g.,
+Salmon et al., 2006; Loft et al., 2015). Gugerty (1997) used a
+similar technique as SAGAT for measuring participants' dynamic
+spatial memory by means of continuous values. Speciﬁcally,
+participants watched animations of trafﬁc situations that lasted
+18e35 s, and after each video, they indicated the positions of
+surrounding cars from a top-down view. Participants' level of SA
+was operationalized by comparing the positions of the placed
+cars with the actual positions of the cars in the animation.
+Gugerty found that the more cars are to be recalled, the poorer
+the performance on the SA task. Furthermore, he found that
+when the number of cars was larger, participants showed a pri-
+oritization
+effect
+whereby
+the
+most
+hazardous
+cars
+were
+remembered best.
+In the present research, we reﬁned the method used by Gugerty
+(1997) for determining the effect of time on SA scores. Speciﬁcally,
+we investigated the effect of viewing time (i.e., video length) with
+two levels of trafﬁc density, namely 4 or 6 cars in surrounding
+trafﬁc. The use of 4 and 6 cars is in approximate agreement with
+Pylyshyn and Storm (1988), who found that people can track up to
+ﬁve moving objects in a perceptual task, and with Gugerty (1997)
+who used 3 to 8 cars in his research. In our study, six different
+video lengths were adopted, ranging between 1 s and 20 s. The
+video lengths were based partly on a pilot study conducted prior to
+the present study (Coster, 2015). In this pilot, seven participants
+watched videos of animated trafﬁc scenes and pressed the spacebar
+when they had assessed the situation to such an extent that they
+would feel safe to take over control. The results showed that a
+viewing time of 12 s was generally deemed sufﬁcient, with an
+overall minimum of 3 s. In visual processing research, it has been
+found that participants can recognize the gist of a scene when
+having viewed it for only 20 ms (Thorpe et al., 1996). Oestmann
+et al. (1988) found that radiologists were able to detect ‘subtle
+cancers’ and ‘obvious cancers’ from a radiograph in 0.25 s with true
+positive rates of 30% and 70%, respectively (cf. 74% and 98%,
+respectively, for unlimited viewing times). However, sub-second
+viewing times are probably too short for processing dynamic
+trafﬁc scenes that require visual search by means of multiple ﬁxa-
+tions and saccades (see Rayner, 2009 for a review on eye move-
+ments and visual search). Lead times that are typically used in
+driving simulator research range between 2 s and 12 s (Gold et al.,
+2013; K€orber et al., 2015, 2016; Melcher et al., 2015; Mok et al.,
+2015; Samuel et al., 2016). In summary, our range of video
+lengths encompasses lead times that are commonly used, and
+range from extremely short (1 s) to longer than has been studied
+before (20 s).
+The dependent measures in this study were: (1) self-reported
+task difﬁculty and time sufﬁciency, (2) the absolute error be-
+tween the number of placed cars and the actual number of cars,
+(3) the error between the positions and indicated speeds of the
+placed cars relative to the actual positions/speeds of the cars,
+making use of an algorithm that globally selects a match between
+placed and actual cars by minimizing the positional difference,
+(4) the geometric difference between the positions of the placed
+and actual cars, and (5) eye-gaze activity. We expected that when
+the viewing time is longer, participants would ﬁnd the task easier
+and have a better reproduction performance. Our corresponding
+aim was to explore at which video length these effects would
+saturate.
+The geometric difference method is an innovation in SA
+assessment. It is based on a method for comparing polygons pre-
+viously introduced by Arkin et al. (1991), which was said to be
+“invariant
+under
+translation,
+rotation,
+and
+change
+of
+scale,
+reasonably easy to compute, and intuitive” (p. 209). We applied this
+technique to obtain a generic index of difference that avoids the use
+of arbitrary parameters, such as correction factors related to the fact
+that people have a tendency to underestimate the distance to ob-
+jects in virtual environments.
+Eye tracking is widely used in studies of hazard perception, a
+term often equated with SA (Horswill and McKenna, 2004; Hosking
+et al., 2010; Underwood et al., 2002, 2013). We used eye tracking to
+gain a deeper understanding of how participants build SA as a
+function of time. It is well known that eye movements are corre-
+lated with bottom-up and top-down attention (Borji and Itti, 2013;
+Henderson, 2003; Itti and Koch, 2001) and memory of visual ob-
+jects (Irwin and Zelinsky, 2002; Moore and Gugerty, 2010). For
+example, using a SAGAT method, Moore and Gugerty (2010) found
+that the more participants ﬁxated on an aircraft in an air trafﬁc
+control task, the higher their SA (i.e., responses to state queries) for
+that aircraft. Unema et al. (2005) and Over et al. (2007) found that
+in visual search tasks, participants exhibit a course-to-ﬁne eye-
+movement strategy, whereby the ﬁrst ﬁxations and saccades had a
+short duration and large amplitude, respectively, and later ﬁxations
+became longer-lasting with smaller-amplitude saccades in be-
+tween the ﬁxations. In this paper, we measured whether partici-
+pants glanced at the road or at the mirrors, and how frequently they
+glanced at the mirrors, as a function of observation time. We
+explored whether these measures of attention distribution and
+glance frequency exhibit similar saturation proﬁles as the objective
+task scores.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+294
+
+
+2. Method
+2.1. Hardware
+The videos and graphical user interface (GUI) were presented on
+a 24-inch widescreen HD monitor of the Smart Eye DR120 remote
+eye tracking system. The videos were programmed using PreScan
+7.0 (Tass International, 2015) and had a resolution of 1920  1080
+pixels. The participants reproduced the trafﬁc situations using a
+standard Dell mouse.
+2.2. Videos
+Each video began with a 5 s crosshair display for participants to
+focus on, after which the trafﬁc situation from an ego-centric
+viewpoint was presented for 1, 3, 7, 9, 12, or 20 s. At the end of
+the video, a black screen was displayed for 0.5 s. The rear view
+mirror and left wing mirror were positioned in such a way as to
+resemble real positions. Due to geometric constraints, this was not
+possible for the right wing mirror, which was therefore placed at
+the right edge of the video (Fig. 1).
+In real driving, sound cues may aid in the formation of SA. For
+example, a driver may infer the location and speed of a nearby car
+through the sounds of that car's engine and tires. In our study, we
+decided to eliminate sound cues and make the SA task visual-only.
+Therefore, during each video, a standard sound of driving on a
+highway was played that was unrelated to the trafﬁc in the video.
+2.3. Participants
+Thirty-four participants (5 female, 29 male) with a valid
+driver's license, aged between 20 and 31 years (M ¼ 24.6,
+SD ¼ 2.6 years) participated in this study. The mean participants'
+age when obtaining the ﬁrst driver's license was 19.2 years
+(SD ¼ 2.4), and the mean number of years of licensure (i.e.,
+current age minus the age when obtaining the ﬁrst driver's li-
+cense) was 5.41 years (SD ¼ 2.92). On a scale of 0 (every day), 1
+(4e6 days a week), 2 (1e3 days a week), 3 (once a month to once a
+week), 4 (less than once a month), and 5 (never), the mean answer
+to “On average, how often did you drive a car or motorcycle
+during the last 12 months?” was 2.62 (SD ¼ 1.04, min ¼ 0,
+max ¼ 4). Furthermore, on a scale from 0 (0 km), 1 (1e1000 km), 2
+(1001e5000 km), 3 (5001e10,000 km), 4 (10,000e15,000 km) to 10
+(more than 100,000 km), the answer to “About how many kilo-
+metres did you drive during the last 12 months?” was on average
+2.59 (SD ¼ 1.79, min ¼ 1, max ¼ 9).
+All participants read and signed a consent form, explaining the
+purpose and procedures of the experiment. Participants received
+V5 for their participation. They were split into two groups based on
+their recruitment number (i.e., group A if the participant number
+was odd, and group B if it was even). These two groups viewed 24
+test videos, whereby each video in one group maps to a video in the
+other group, with these videos featuring the same trafﬁc and the
+same ending moment, but a different starting moment. Both groups
+consisted of 17 participants: 3 females, 14 males, aged between 21
+and 31 (M ¼ 25.0, SD ¼ 2.8 years) for group A; 2 females, 15 males,
+aged between 20 and 29 (M ¼ 24.2, SD ¼ 2.4 years) for group B. The
+mean number of years of licensure was 5.65 (SD ¼ 3.32) and 5.18
+(SD ¼ 2.56) for groups A and B, respectively. For groups A and B, the
+mean driving frequency on the scale from 0 to 5 was 2.88
+(SD ¼ 0.93) and 2.35 (SD ¼ 1.69), respectively, and the mean
+mileage on the scale from 0 to 10 was 2.35 (SD ¼ 1.14) and 2.82
+(SD ¼ 1.91), respectively. According to an independent-samples t-
+test, groups A and B were not statistically signiﬁcantly different
+with regard to age, gender, license age, years of licensure, driving
+frequency, and mileage (p ¼ 0.361, 0.641, 0.672, 0.646, 0.142, &
+0.453, respectively).
+2.4. Situations
+Participants viewed videos of trafﬁc situations on a three-lane
+highway, on which the ego-vehicle was driving in the middle
+lane with a constant speed of 28 m/s. The training videos lasted
+12 s and featured three cars of surrounding trafﬁc, whereas the
+test videos incorporated four or six surrounding cars. Both trafﬁc
+densities were used 12 times. The test videos lasted 1, 3, 7, 9, 12
+or 20 s.
+Each video length occurred twice per trafﬁc density and four
+times in 24 test videos. The test videos were shown to each
+participant in randomized order.
+All trafﬁc in each video met the following criteria. Each car was
+- within a range of 80 m behind to 120 m ahead of the ego-vehicle
+during the full length of the video.
+- visible during the full length of the video, except when driving
+through the blind spot. This visibility criterion had the effect
+that there could be only one car directly in front of and/or
+behind the ego-vehicle on the middle lane.
+- starting and ending outside of the blind spot.
+- driving at one of ﬁve constant speeds: 25.5, 26.75, 28, 29.25 or
+30.5 m/s.
+- staying in its own lane during the full length of the video.
+- at least 5 m in front of or behind other cars at all times.
+The model and colour of each car were randomly assigned out of
+13 possible colours and 10 possible models. Averaged across the 24
+scenarios, 57% of the cars were in front of the ego-vehicle at the end
+of the scenarios (58% at the beginning of the scenarios). In groups A
+and B, an overtaking event of the ego-vehicle occurred in 6 and 8 of
+the 24 scenarios, respectively.
+2.5. Procedure
+Prior to the test, the participants ﬁlled out a questionnaire about
+their driving experience. Participants were asked to adjust the chair
+in order to face the monitor mid-front, with the hind legs of the
+chair within a demarcation on the ﬂoor, approximately 65 cm away
+from the monitor. The height of the monitor was adjusted to the
+participant's height, after which the eye tracker was calibrated.
+Participants were given 2 training trials, followed by 24 test trials,
+viewing videos of trafﬁc situations on a three-lane highway. After
+Fig. 1. Screenshot of a video that includes six surrounding cars.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+295
+
+
+each video, participants reproduced the ﬁnal positions of the sur-
+rounding cars by placing a minimum of 1 and a maximum of 8
+vehicles without time restriction. Participants also indicated the
+speeds of the placed cars in relation to the ego-vehicle (Fig. 2).
+After
+reproducing
+a
+situation,
+a
+two-item
+questionnaire
+measured the subjective task difﬁculty (‘The task was difﬁcult’) and
+time sufﬁciency (‘I had sufﬁcient time to perform the task’) on a
+scale from 0 (completely disagree) to 100 (completely agree). Par-
+ticipants received oral instructions during the training trials about
+(1) how to place the cars and use the slider bars, (2) how to
+interpret the time sufﬁciency question as ‘the video was long
+enough for me to perform the task’, and (3) that surrounding trafﬁc
+would not necessarily follow trafﬁc rules (e.g., cars could overtake
+on the right). The trafﬁc was not constrained by trafﬁc rules,
+because we wanted to retain symmetry in the videos by letting all
+cars drive with constant speeds without changing lanes. For
+example, when preventing the trafﬁc from overtaking the partici-
+pant on the right, the mean speed on the left lane would be higher
+than the mean speed on the right lane. Such asymmetric videos
+would have complicated the analyses and interpretation of how
+well participants were able to place cars.
+After each trial, the placed cars and the actual cars were shown
+side by side in two top-down views, providing feedback to the
+participant. This feedback was provided to enhance participants'
+engagement in the task, and to prevent misunderstandings and
+biases that may occur when participants have to map the three-
+dimensional video to a two-dimensional representation. The
+duration of the experiment was approximately 60 min including
+preparation time.
+2.6. Dependent measures
+The following dependent measures were used:
+1. Self-reported time sufﬁciency (%)
+2. Self-reported task difﬁculty (%)
+3. Absolute error of the number of placed cars, deﬁned as the ab-
+solute error of the number of placed cars, calculated according
+to Eq. (1), where np is the number of cars that were placed and na
+is the actual number of cars in the video.
+S1 ¼
+np  na
+
+(1)
+4. Total distance error between the placed cars and actual cars. First,
+the placed and actual cars were matched to each other. A
+particular combination of matches caðm1; m2; :::; mmaxðnp;naÞÞ
+connects placed and actual cars, where a match m is between a
+placed car and an actual car. The number of possible combina-
+tions N(c) of matches between placed and actual cars is given
+according to Eq. (2).
+NðcÞ ¼ Smaxnp; na
+; minnp; na
+minnp; na
+!
+(2)
+where Sðn; kÞ is the Stirling number of the second kind. For
+example, if np ¼ 6 and na ¼ 6, then N(c) ¼ 720, if np ¼ 5 and na ¼ 6,
+then N(c) ¼ 1,800, and if np ¼ 6 and na ¼ 4, then N(c) ¼ 1560. When
+one
+placed
+car
+pðiÞ ¼ ðpi;x; pi;y; pi;vÞ
+and
+one
+actual
+car
+aðjÞ ¼ ðaj;x; aj;y; aj;vÞ are matched, the distance error and speed error
+between these two cars are given by Eqs. (3) and (4), respectively
+dEðmðpðiÞ; aðjÞÞÞ ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+
+pi;x  aj;x
+2
+þ
+
+pi;y  aj;y
+2
+r
+(3)
+sEðmðpðiÞ; aðjÞÞÞ ¼
+pi;v  aj;v
+
+(4)
+Here, ðpi;x; pi;yÞ and ðaj;x; aj;yÞ are the lateral and longitudinal posi-
+tions of the placed car pi and actual car aj, where the centre of the
+ego-vehicle is the coordinate origin. pi;v and aj;v are the speeds of
+the placed car pi and actual car aj, respectively. For both the placed
+car pi and actual car aj, pi;v and aj;v are equal to 1, 0, or þ1, when
+their speeds are slower than, equal to, or faster than the ego-
+vehicle, respectively.
+The total distance error of one combination of matches is
+DEðcaÞ ¼
+X
+maxðNp;NaÞ
+k¼1
+
+dEðmkÞjmk2ca
+
+(5)
+Fig. 2. Reproduction of a trafﬁc situation. Red cars represent the surrounding cars. The
+green car represents the ego-vehicle. The slider bars were used to set the positions of
+surrounding vehicles. The radio buttons were used to indicate the relative speed.
+Placed cars could be deleted by pressing the ‘Delete Car’ button, and deleted cars could
+be placed again by pressing the ‘Reset Car’ button. Additional cars could be placed by
+pressing the ‘New Car’ button (only visible when no cars were deleted). The ‘Done’
+button was pressed when a participant had ﬁnished the reproduction. (For interpre-
+tation of the references to colour in this ﬁgure legend, the reader is referred to the web
+version of this article.)
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+296
+
+
+The total distance error is DEðcminÞ, where cmin is the combi-
+nation that gives the minimal distance among all N(c) combinations
+(Eq. (6))
+DEðcminÞ ¼ min
+n
+DEðc1Þ; DEðc2Þ; :::; DE
+
+cNðCÞ
+o
+(6)
+5. Total speed error. This measure is calculated based on the mini-
+mal distance for combination match cminðm1; m2; :::; mmaxðnp;naÞÞ
+(Eq. (7))
+SEðcminÞ ¼
+X
+maxðNp;NaÞ
+k¼1
+
+sEðmkÞjmk2cmin
+
+(7)
+6. Geometric difference. The turning function algorithm (Arkin
+et al., 1991) is widely used in computer vision to calculate the
+difference between two polygons. It maps a two-dimensional
+shape to a one-dimensional function. The ﬁrst step is to
+construct polygons that represent the positions of placed and
+actual cars. Fig. 3a provides an example of P with all its nodes,
+where each node represents the centre of the placed car pi. The
+following 10 possible nodes can be used to construct P:
+The polygon is constructed with a sequence from node 1 to 10. A
+node can be skipped if it does not exist, or if it is the same node as a
+neighbouring node in front. The same process is applied to the
+actual cars ai that compose polygon A (Fig. 3b). The second step is to
+represent the polygon as a turning function. As illustrated in Fig. 3c,
+the turning function measures the external angle of the clockwise
+tangent as a function of the arc-length s from the starting node of P.
+The function decreases with right-hand turns and increases with
+left-hand turns. The perimeter length is scaled to 1 to make a
+comparison possible. The function always starts at (0, 2p) and al-
+ways ends at (1, 0). Fig. 3d shows the turning function for A. The
+third and ﬁnal step is to calculate the distance between the two
+turning functions (Eq. (8), Fig. 3e).
+LðP; AÞ ¼
+Z1
+0
+jTPðsÞ  TAðsÞjds
+(8)
+2.7. Eye-tracking analysis
+Participants' eye movements were analysed in order to un-
+derstand how participants distributed their attention while
+watching the video. Four equally sized rectangular areas were
+deﬁned, namely (1) road centre, (2) rear view mirror, (3) left
+wing mirror, and (4) right wing mirror. We deﬁned the net dwell
+time percentage across all situations of all participants, as a
+function of observation time in bins of 1 s. Furthermore, in order
+to obtain a measure of visual search and gaze activity, we
+measured how often per second participants glanced at one of
+the three mirrors. For this latter analysis, a glance was counted if
+the dwell time to the mirror was at least 200 ms. This 200 ms
+threshold corresponds to typical measures of ﬁxation duration
+(e.g., Velichkovsky et al., 2002). Note that our Smart Eye eye-
+tracker did not have the precision and accuracy to be able to
+distinguish between cars within an area of interest (see Funke
+et al., 2016 for an assessment of eye trackers).
+2.8. Statistical analyses
+Three types of statistical analyses were conducted. First, a one-
+way repeated measures ANOVA after rank-transformation was
+performed (Conover and Iman, 1981), with the video length as the
+repeated-measures factor. Pairwise comparisons between video
+lengths were conducted by means of paired-samples t tests fol-
+lowed by a Bonferroni correction, which effectively means that the
+signiﬁcance level (a) was set to 0.00333 (¼ 0.05/15). Effect sizes for
+the pairwise comparisons were expressed in terms of Cohen's dz for
+assessing within-subject effects (Faul et al., 2007).
+Second, we performed a between-subjects comparison between
+the participants in group A versus the participants in group B. These
+two groups had viewed the same videos with the same endpoint;
+only the video length was different. We assessed in how many of
+the 24 situations the longer videos yielded higher scores on the
+dependent measures than the shorter videos.
+Third, at the level of the 24 situations, we assessed Spearman
+rank-order correlations between video length and the scores on the
+dependent measures. An objective measure of task difﬁculty,
+deﬁned as the distance from the ego-vehicle to the actual car
+summed across all 4 or 6 cars, was partialled out in order to
+determine whether the effects between video length and task
+performance were robust to situation-speciﬁc effects.
+3. Results
+Some data had to be excluded due to quality issues, see Table 1
+for an overview. A small number of trials were excluded due to
+technical malfunctions (e.g., video not shown, data storage error) or
+because the participant initially misunderstood the task. The data
+for two participants were excluded entirely because the experi-
+menter's log ﬁles revealed that they had used mnemonics (hands,
+ﬁngers) to enhance their task performance. Moreover, for the eye-
+tracking analysis, data could be used from 21 out of 34 participants.
+Figs. 4e9 show the results for the self-reported time sufﬁciency,
+self-reported difﬁculty, mean absolute error of the number of
+placed cars, mean total distance error, mean total speed error, and
+the mean geometric difference score, respectively, for each of the
+24 videos. The means of group A and group B are connected by a
+line.
+3.1. Subjective measures
+Self-reported
+time
+sufﬁciency
+and
+self-reported
+difﬁculty
+showed consistent effects of video length (Figs. 4 and 5). The
+pairwise comparisons between video lengths indicate that self-
+reported time sufﬁciency has statistically signiﬁcant effects for
+almost all pairs of video lengths (Table 2), with an improvement
+even from 12 s to 20 s videos. The effects were less strong for task
+difﬁculty than for time sufﬁciency (Table 2).
+1) ð3:5; minðpi;y
+
+pi;y > 0∩pi;x¼3:5ÞÞ
+2) ð3:5; maxðpi;y
+
+pi;y > 0∩pi;x¼3:5ÞÞ
+3) ð0; maxðpi;y
+
+pi;y > 0∩pi;x¼0ÞÞ
+4) ð0; minðpi;y
+
+pi;y > 0∩pi;x¼0ÞÞ
+5) ð3:5; maxðpi;y
+
+pi;x¼3:5ÞÞ
+6) ð3:5; minðpi;y
+
+pi;x¼3:5ÞÞ
+7) ð0; minðpi;y
+
+pi;y < 0∩pi;x¼0ÞÞ
+8)
+
+0; max
+
+pi;y
+
+pi;y < 0∩pi;x¼0
+	 	
+9)
+
+ 3:5; min
+
+pi;y
+
+pi;y < 0∩pi;x¼3:5
+	 	
+10)
+
+ 3:5; max
+
+pi;y
+
+pi;y < 0∩pi;x¼3:5
+	 	
+:
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+297
+
+
+3.2. Tasks performance measures
+Task performance in terms of the error in the number of placed
+cars (Fig. 6) and the total distance error (Fig. 7) shows a clear
+improvement with video length. In 20/21 of the 24 group A versus
+group B comparisons, the longer videos featured better task per-
+formance (Table 2). However, there appears to be a saturation effect
+of video length, whereby for the error in the number of placed cars
+there was no statistically signiﬁcant difference anymore between
+7 s and 20 s videos. Similarly, for the total distance error, there was
+no signiﬁcant difference between 12 s and 20 s videos.
+The total speed error shows a qualitatively different pattern
+than the total distance error, with no apparent saturation as a
+function of increasing video length (Fig. 8). A statistically signiﬁcant
+improvement is observed even from 12 s videos to 20 s videos.
+Moreover, the effects of video length are robust: in the group A
+versus group B comparison, 23 out of 24 videos with the same
+endpoint showed a better score for the longer video (Table 2).
+The geometric difference score shows a weaker overall effect
+size (h2) than the other measures, which may be because these
+scores exhibit strong situation-speciﬁc effects, with some situations
+yielding a notably better score than others (Fig. 9). Nonetheless, the
+A versus B comparison are consistent in the sense that longer-
+lasting videos yielded a lower difference score in 20 out of 24 sit-
+uations. There was also no statistically signiﬁcant difference
+anymore between 7 s and 20 s videos (Table 2).
+3.3. Eye tracking
+The distribution across the four areas of interest (i.e., a measure
+Fig. 3. Procedure to determine the geometric difference between actual and placed cars. The lane width was 3.5 m.
+Table 1
+Overview of excluded trials, number of participants for which trials were excluded, and types of data that were excluded.
+Malfunction/behaviour/limited conditions
+Number of participants for which data
+were excluded
+Total number of
+erroneous trials
+Data not included for erroneous trials
+Used hands/ﬁngers as memory support
+2
+2*24
+Reconstruction data, and self-report
+data
+Video malfunction (video did not show)
+1
+1
+Data storage error
+6
+6
+Reconstruction data
+Misunderstanding of GUI controls
+1
+1
+Reconstruction data and self-report
+data
+Reconstructed beginning (instead of ending) of the video 2
+5
+Accidentally pressed ‘Done’ button
+1
+1
+Misunderstood the meaning of ‘time sufﬁciency'
+1
+24
+Self-report data of the ‘time sufﬁciency
+question’
+Did not answer the two questions
+1
+24
+Self-report data
+Participant wore glasses, Software crashed, tracking/
+calibration problems
+13
+13*24
+Eye-tracking data
+Note. Reconstruction data encompasses positions and speeds of placed cars.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+298
+
+
+of attention distribution) and the glance frequency to the mirrors
+(i.e., a measure of gaze activity) as a function of observation time
+are shown in Fig. 10. It can be seen that at the beginning (2e4 s),
+participants distributed their attention approximately equally be-
+tween the front view and the mirrors. Near the end (7e20 s),
+however, participants were more likely to glance at the road than at
+the mirrors. Furthermore, in agreement with Over et al. (2007) and
+Unema et al. (2005), we found a decrease of glance frequency with
+increasing observation time.
+3.4. Correlation between video length and dependent measures,
+partialling out objective scenario difﬁculty
+For all dependent measures, differences occurred between
+situations, even when the video length and trafﬁc density were the
+same (Figs. 4e9). Several characteristics of surrounding trafﬁc
+might inﬂuence task performance. In particular, participants
+underestimated the distance to objects, and had more difﬁculty in
+estimating the position and speed of a car that is further away.
+For this reason, we calculated an objective index of difﬁculty of
+the video, by summing the distances between the endpoints of 4/6
+cars and the ego-vehicle. Table 3 shows the Spearman rank-order
+correlations between the mean score on the dependent measure
+per situation and the objective difﬁculty of the situation (N ¼ 24). It
+can be seen that objective difﬁculty accounts for some of the
+situation-speciﬁc effects, in particular for the total distance error
+and total speed error. Furthermore, Table 3 shows the correlations
+between the dependent measures and video length. It can be seen
+Fig. 5. Mean self-reported difﬁculty across the participants, for each of the 24 situa-
+tions. The A and B groups are connected by a line.
+Fig. 7. Mean total distance error, for each of the 24 situations. The A and B groups are
+connected by a line.
+Fig. 4. Mean self-reported time sufﬁciency across the participants, for each of the 24
+situations. The A and B groups are connected by a line.
+Fig. 6. Mean absolute error of the number of placed cars, for each of the 24 situations.
+The A and B groups are connected by a line.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+299
+
+
+that the strongest effect was observed for self-reported time
+sufﬁciency, whereas the weakest effect occurred for the geometric
+similarity, essentially mirroring the ﬁndings in Table 2. The third
+column of Table 3 shows again the correlations between the
+dependent measures and video length, but now after partialling
+out the objective difﬁculty. It can be seen that the partial corre-
+lations are slightly stronger than the zero-order correlations, in
+particular for the total distance error and total speed error. These
+ﬁndings indicate that when removing the effect of objective sit-
+uation difﬁculty, the effects of video length becomes even
+stronger.
+3.5. Effect of personal characteristics and driving experience
+Previous research showed that in situations of transitions of
+Fig. 9. Mean geometric difference score, for each of the 24 situations. The A and B
+groups are connected by a line.
+Table 2
+Result of the repeated measures ANOVA, and effect sizes (dz) of paired comparisons between video lengths.
+Measure
+df
+Fa
+h2
+Paired comparisons between video lengths
+1
+vs.
+3
+1
+vs.
+7
+1
+vs.
+9
+1
+vs.
+12
+1
+vs.
+20
+3
+vs.
+7
+3
+vs.
+9
+3
+vs.
+12
+3
+vs.
+20
+7
+vs.
+9
+7
+vs.
+12
+7
+vs.
+20
+9
+vs.
+12
+9
+vs.
+20
+12
+vs.
+20
+A
+vs.
+Bb
+Time sufﬁciency
+5,145
+146.4
+0.835
+¡1.69
+¡2.41
+¡2.35
+¡2.95
+¡4.93
+¡1.04
+¡1.44
+¡1.82
+¡3.01
+¡0.65
+¡1.27
+¡2.91
+0.48
+¡1.39
+¡1.07
+24
+Difﬁculty
+5,150
+24.9
+0.454
+0.56
+0.95
+1.12
+1.32
+1.33
+0.51
+0.87
+0.90
+1.03
+0.34
+0.65
+0.79
+0.26
+0.45
+0.33
+1
+Error in the number of placed cars
+5,155
+20.5
+0.398
+0.68
+0.96
+1.37
+1.54
+1.58
+0.11
+0.54
+0.67
+0.69
+0.44
+0.59
+0.54
+0.15
+0.09
+0.07
+3
+Total distance error
+5,155
+11.4
+0.269
+0.39
+0.88
+0.95
+1.46
+1.19
+0.16
+0.18
+0.58
+0.52
+0.05
+0.58
+0.36
+0.60
+0.32
+0.19
+4
+Total speed error
+5,155
+30.9
+0.499
+0.55
+0.74
+0.74
+1.38
+2.40
+0.26
+0.19
+0.66
+1.69
+0.03
+0.56
+1.47
+0.49
+1.43
+0.78
+1
+Geometric difference
+5,155
+6.8
+0.181
+0.01
+0.45
+0.74
+0.61
+0.51
+0.56
+0.71
+0.76
+0.66
+0.12
+0.20
+0.04
+0.10
+0.06
+0.15
+4
+Boldface ¼ the effect between these two video lengths was statistically signiﬁcant according to a paired-samples t-test with Bonferroni correction (a ¼ 0.05/15).
+a p < .001 for each of the six measures according to a repeated measures ANOVA.
+b This column shows for how many of the 24 situations the mean score in the longer video is greater than the mean score in the shorter video. This comparison was made for the participants of group A versus the participants of
+group B. The videos of groups A and B had identical endpoints of the cars.
+Fig. 8. Mean total speed error, for each of the 24 situations. The A and B groups are
+connected by a line.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+300
+
+
+control, experienced drivers are quicker to achieve SA than novices
+do (Wright et al., 2016). It has also been found that experienced
+drivers perform better than novices when asked to estimate the
+number of cars around them (Baumann et al., 2008).
+We performed a correlational analysis to explore whether
+driving experience relates to performance at the SA task. Table 4
+shows that participants who drive more frequently had a statisti-
+cally signiﬁcantly lower total distance and speed error. It is further
+interesting to observe that the subjective measures (time sufﬁ-
+ciency and difﬁculty) exhibited a statistically signiﬁcant correlation
+with each other, but did not correlate signiﬁcantly with any of the
+objective measures. This indicates that participants who thought
+they did not have enough time or reported that the task was
+difﬁcult did not necessarily perform poorly at the reproduction
+task. Finally, the eye-scanning measures were not signiﬁcantly
+correlated with the performance measures.
+4. Discussion and conclusion
+The aim of this research was to assess the effect of viewing time
+on SA operationalized as reproduction performance of a trafﬁc
+situation. We applied three complementary types of statistical
+analyses: (1) a main effect of video length, (2) a between-subjects
+comparison of participants; the videos for these two groups were
+identical except that one of the two videos started earlier than the
+other, and (3) a correlation between video length and task perfor-
+mance while removing the effect of objective situation difﬁculty.
+The ﬁrst analysis is useful for gauging the overall effect of video
+length, whereas the latter two methods account for situation-
+speciﬁc variance that may exist and thus serve as a conﬁrmation.
+The self-report measures conﬁrmed that participants found the
+task more demanding if less time was available. This manipulation
+check validates our experiment and shows that the amount of time
+was manipulated in a range for which participants experience
+strong and consistent effects in time and difﬁculty.
+Concerning the accuracy of the number of cars and the positions
+of the placed cars, the largest effects of video length were obtained
+up to 7 s and 12 s, respectively. A 7 s threshold is in line with
+previous driving simulator research on take-over requests, in which
+Fig. 10. Average net dwell time proportion across four areas of interest (road centre,
+rear view mirror, left wing mirror, right wing mirror) in 1 s increments. Also shown is
+the glance frequency towards one of the three mirrors. Note that these averages get
+noisier with increasing observation time because less and less data are available. That
+is, for the ﬁrst second, data are available for 1, 3, 7, 9, 12, and 20 s videos. For the last
+8 s, only data from 20 s videos are available.
+Table 3
+Spearman rank-order correlations between dependent measures, and measures of objective situation difﬁculty and video length (N ¼ 24 situations).
+Measure
+r
+with objective difﬁculty (group A/group B)
+r
+with video length (group A/group B)
+Partial r
+with video length (group A/group B)
+Time sufﬁciency (%)
+0.10/0.05
+0.91/0.93
+0.90/0.93
+Difﬁculty (%)
+0.42/0.43
+0.66/0.40
+0.70/0.49
+Error in the number of placed cars (#)
+0.20/0.52
+0.51/0.52
+0.49/0.62
+Total distance error (m)
+0.67/0.78
+0.35/0.23
+0.46/0.69
+Total speed error ()
+0.52/0.31
+0.51/0.57
+0.68/0.73
+Geometric difference ()
+0.35/0.28
+0.25/0.39
+0.32/0.45
+Table 4
+Spearman rank-order correlation matrix among personal characteristics and dependent measures.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+1. Age (years)
+2. Gender (0 ¼ female, 1 ¼ male)
+-0.03
+3. License age (years)
+0.26
+0.11
+4. Licensure (years)
+0.56
+-0.15
+-0.48
+5. Driving Frequency (0 ¼ Every day, 5 ¼ never)
+0.26
+-0.23
+-0.12
+0.38
+6.Yearly mileage (0 ¼ 0 km, 10 ¼ more than 100,000 km)
+-0.06
+0.09
+0.28
+-0.29
+-0.57
+7. Time sufﬁciency (%)
+0.08
+0.14
+0.30
+-0.08
+0.20
+-0.06
+8. Difﬁculty (%)
+-0.22
+-0.32
+-0.24
+-0.14
+0.09
+0.00
+-0.55
+9. Error in the number of placed cars (#)
+0.29
+-0.25
+0.21
+0.07
+0.32
+0.03
+-0.07
+0.13
+10. Total distance error (m)
+0.08
+-0.32
+-0.13
+0.11
+0.41
+-0.03
+-0.14
+0.21
+0.57
+11. Total speed error ()
+0.30
+-0.21
+-0.20
+0.33
+0.35
+-0.35
+-0.21
+0.10
+0.25
+0.32
+12. Geometric difference ()
+0.06
+-0.16
+-0.07
+0.21
+0.34
+-0.09
+0.19
+-0.14
+-0.01
+0.35
+0.37
+13. Mean mirror glance frequency (Hz)
+-0.24
+-0.40
+-0.05
+0.09
+0.23
+-0.14
+-0.13
+-0.05
+0.13
+0.25
+0.10
+0.17
+14. Road centre gaze proportion (0e1)
+0.26
+0.40
+0.08
+-0.03
+-0.01
+-0.18
+0.23
+-0.21
+-0.16
+-0.31
+0.09
+-0.22
+-0.79
+Note. Correlations that are signiﬁcantly (p < 0.05) different from 0 are indicated in boldface. N ¼ 34 for measures 1e6, N ¼ 30 for measure 7, N ¼ 31 for measure 8, N ¼ 32 for
+measures 9e12, N ¼ 21 for measures 13 and 14.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+301
+
+
+a lead time of 7 s was found to be sufﬁcient for taking over control
+in a basic trafﬁc scenario (e.g., Gold et al., 2013). Improvements in
+relative speed perception, on the other hand, were obtained up to
+20 s. The apparent lack of saturation of the accuracy of the speed
+estimation can be explained by the fact that humans have to deduce
+speed from changes in a scene. In other words, people ﬁrst need
+time to scan the environment to establish where the cars are, and
+only then can use their time for tracking these cars. This pattern
+was also reﬂected in the eye-tracking data, showing a decrease of
+glance frequency with viewing time. Future research may explore
+this aspect further; for example, in our study the video lengths
+were presented in randomized order; if participants know how
+much time they have on beforehand, they may exhibit a different
+viewing behaviour (Huebner and Gegenfurtner, 2010).
+Additionally, we applied a measure of geometric difference be-
+tween the placed and actual cars. This method establishes the ac-
+curacy of placed cars in relative terms and may be particularly
+suited for assessing whether participants have perceived the
+overall layout of a situation. One possible weakness of the geo-
+metric difference method as well as the total distance error may be
+that longitudinal distance dominates lateral distance, and so these
+methods are not particularly sensitive to mistakes whereby the
+participant placed a car in the wrong lane. Gugerty (1997) solved
+this issue by applying more weight to lateral errors than to longi-
+tudinal errors. The uniqueness of our approach as compared to
+Gugerty's is that it did not make use of any such weighting factors;
+therefore, we expect that our non-parametric method can be
+applied to other spatial memory or SA studies without adjustment.
+A follow-up analysis showed a statistically signiﬁcant difference
+between 1 s and 3 s videos regarding the total lateral distance error,
+but no further improvements for 3 s videos and beyond. The lack of
+statistically signiﬁcant effects beyond 3 s can be explained by the
+fact that once a participant has identiﬁed a car, he/she can easily
+remember whether this car was in the left, middle, or right lane,
+because these are only three discrete categories.
+Endsley's model of SA includes (1) perception, (2) comprehen-
+sion, and (3) projection as three ascending levels (Endsley, 2015).
+One may argue that our experiment focused predominantly on
+level 1 SA. Indeed, participants were asked to reproduce the situ-
+ation without having to comprehend the relevance of the cars in
+the environment. In reality, certain cars may be more relevant than
+others when it comes to safety margins and controllability. For
+example, in real trafﬁc, cars in the back may often be safely ignored,
+whereas cars in front could be on a collision course or bear direct
+consequence for future action. Moreover, participants in our
+experiment did not perform driving-related decisions or actions,
+which may normally be performed simultaneously with the
+assessment of the situation and therefore interact with the time
+required to obtain SA. For example, Gugerty (1997) found that if
+drivers were in control of the driving task (with keyboard arrows)
+they remembered hazardous car better as compared to when they
+were in passenger mode, whereas Mackenzie and Harris (2015)
+showed that participants were slower to detect hazards when
+driving themselves as opposed to passively viewing a video.
+Even though our experiment emphasized level 1 SA, a unique
+aspect of our research is that it also measured an important facet of
+level 3 SA by means of the assessment of relative speed. In fact, by
+having knowledge of the distance and speeds of objects, it is
+possible to project how a situation will unfold. Recent research
+indicates that queries regarding level 3 SA awareness (‘what hap-
+pens next’) may be particularly valid in the sense that they
+discriminate between inexperienced and experienced drivers
+(Jackson et al., 2009). These observations are in line with our re-
+sults, which showed that participants who drove more frequently
+performed better at the distance and speed estimation tasks
+(Table 4). However, our study was of a simple and highly controlled
+design in which cars did not change lanes or speed, and level 3 SA
+was probed indirectly; participants were not directly asked what
+would happen next. Follow-up research could assess such aspects
+of level 2 and 3 SA in greater depth. For example, it is possible to use
+eye tracking in scenarios involving transfer of control to measure
+the detection of latent hazards (Samuel et al., 2016; Wright et al.,
+2016) or hazard precursors, which are cues in the environment
+that place critical demands on the driver's understanding of an
+unfolding situation (Garay-Vega and Fisher, 2005; Underwood
+et al., 2011). Moreover, research could include lane changes, and
+vehicle acceleration and deceleration, such as cars who are braking
+for an emergency. It should be noted, however, that humans are
+unable to perceive acceleration directly but rather infer accelera-
+tion from changes in speed over time (Brouwer et al., 2002;
+Gottsdanker et al., 1961).
+For all dependent measures, large differences were found be-
+tween situations, even if these situations had the same video length
+(see Figs. 4e9). Several characteristics of the trafﬁc might inﬂuence
+task performance. As illustrated by the results in Table 3, inter-
+preting the behaviour of a car that is further away becomes
+increasingly harder as distance increases. Moreover, we showed
+that the higher the trafﬁc density, the harder it is to reproduce the
+trafﬁc situation. These results indicate that it is not possible to give
+a generic recommendation of the lead time that is required for
+issuing a take-over request; the required time strongly depends on
+the complexity of the trafﬁc situation. This ﬁnding is in line with
+Gold et al. (2016) who showed that the higher the trafﬁc density,
+the longer the take-over time, deﬁned as the ﬁrst measurable
+steering or braking response after receiving a take-over request.
+However, the difference between our study and most of the avail-
+able empirical research on this topic is that we obtained systematic
+insight into the cognitive aspects of building up SA as a function of
+time. With a few notable exceptions (e.g., Samuel et al., 2016;
+Wright et al., 2016), most of the available research adopts a
+behaviourist approach by quantifying reaction times and steering/
+braking responses in take-over situations (e.g., Gold et al., 2013; see
+De Winter et al., 2014; for a review).
+Several limitations have to be taken into account when inter-
+preting the results. First, the trafﬁc situations were relatively simple
+and did not involve features such as lane changes, curves, or
+decelerating vehicles. Second, the monitor provided a small ﬁeld of
+view and low immersion. The experiment did not allow for head
+movement, and certain monocular and binocular depth cues were
+lacking in the computer animations. These hardware features may
+affect both task performance and eye activity. Third, this study was
+conducted with participants at an engineering university. Engi-
+neering students are not representative of the general population
+and are known to have above-average spatial skills (Wai et al.,
+2009). It has been previously shown that older drivers showed
+similar take-over times as younger drivers (K€orber et al., 2016),
+despite the fact that biological age has a strong negative correlation
+with memory and spatial task performance (Salthouse, 2009).
+Possibly, having many years of driving experience may protect
+against age-related cognitive decline. The topic of individual dif-
+ferences in SA awareness is a promising topic of further research
+(Gugerty and Tirre, 2000). Fourth, in our experiment participants
+were not sitting in an actual automated car and knew they would
+be required to reproduce the trafﬁc layout. Furthermore, no
+drowsiness or secondary tasks were induced, which are conditions
+that may have important effects on how quickly drivers gain SA,
+and how effectively they take-over control (Borowsky and Oron-
+Gilad, 2016; Feldhütter et al., 2016; Gibson et al., 2016; Neubauer
+et al., 2014; Schmidt et al., 2016; Sch€omig et al., 2015; Zeeb et al.,
+2016). Because of these factors, our results may underestimate the
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+302
+
+
+time required for obtaining SA. However, despite the obvious dif-
+ferences between an automated driving task and the present
+experiment, it should be noted that the tasks are similar: In auto-
+mated driving, the driver may also be prompted to monitor the
+trafﬁc situation (without necessarily touching the steering wheel)
+to regain SA. Fifth, inherent to SAGAT-type methods, participants
+might have started to forget the driving situation when completing
+the reproduction task. For example, an analysis by Gugerty (1998)
+showed that participants tended to forget the location of cars
+during the time it took them to report the locations of the cars. One
+improvement would be to replace the slider bars with a less time-
+consuming interface where participants can drag the cars directly
+with the use of a mouse or by touch.
+In conclusion, this research showed that participants need a few
+seconds in order to estimate the basic topology of a situation, but
+substantial improvements in speed estimation were still achieved
+between 12 and 20 s videos. These ﬁndings may have important
+consequences for the development of automated cars, in particular
+automated driving systems for which evidence starts to grow that
+humans are not well adapted to a task where they have to be able to
+regain control in a limited time frame (Casner et al., 2016; Norman,
+2015; Poulin et al., 2015; U.S. Senate Committee on Commerce,
+Science and Transportation, 2016). Future research could use the
+method applied in this study in an interactive driving simulator or
+head-mounted display with integrated eye-tracker.
+Acknowledgements
+The research presented in this paper is supported by the Marie
+Curie Initial Training Network (ITN) HFAuto e Human Factors of
+Automated Driving (PITN-GA-2013-605817).
+References
+Arkin, E.M., Chew, L.P., Huttenlocher, D.P., Kedem, K., Mitchell, J.S., 1991. An efﬁ-
+ciently computable metric for comparing polygonal shapes. IEEE Trans. Pattern
+Anal. Mach. Intell. 13, 209e216.
+Baumann, M., Franke, T., Krems, J.F., 2008. The Effect of Experience, Relevance, and
+Interruption Duration on Drivers' Mental Representation of a Trafﬁc Situation.
+Human Factors for Assistance and Automation. Shaker Publishing, Maastricht,
+The Netherlands, pp. 141e152.
+Borji, A., Itti, L., 2013. State-of-the-art in visual attention modelling. IEEE Trans.
+Pattern Anal. Mach. Intell. 35, 185e207.
+Borowsky, A., Oron-Gilad, T., 2016. The effects of automation failure and secondary
+task on drivers' ability to mitigate hazards in highly or semi-automated vehi-
+cles. Adv. Transp. Stud. 1, 59e70.
+Brouwer, A.M., Brenner, E., Smeets, J.B., 2002. Perception of acceleration with short
+presentation
+times:
+can
+acceleration
+be
+used
+in
+interception?
+Percept.
+Psychophys. 64, 1160e1168.
+Casner, S.M., Hutchins, E.L., Norman, D., 2016. The challenges of partially automated
+driving. Commun. ACM 59, 70e77.
+Clark, H., Feng, J., 2015. Semi-autonomous vehicles examining driver performance
+during the take-over. Proc. Hum. Factors Ergonomics Soc. Annu. Meet. 59,
+781e785.
+Conover, W.J., Iman, R.L., 1981. Rank transformations as a bridge between para-
+metric and nonparametric statistics. Am. Statistician 35, 124e129.
+Coster, X.A., 2015. A Method for Determining How Much Time People Need to
+Understand Trafﬁc Situations (MSc thesis). Delft University of Technology, The
+Netherlands.
+Crundall, D., Chapman, P., Phelps, N., Underwood, G., 2003. Eye movements and
+hazard perception in police pursuit and emergency response driving. J. Exp.
+Psychol. Appl. 9, 163e174.
+Desmond, P., Hancock, P., Monette, J., 1998. Fatigue and automation-induced im-
+pairments in simulated driving performance. Transp. Res. Rec. J. Transp. Res.
+Board 1628, 8e14.
+De Winter, J.C.F., Happee, R., Martens, M., Stanton, N.A., 2014. Effects of adaptive
+cruise control and highly automated driving on workload and situation
+awareness: a review of the empirical evidence. Transp. Res. Part F Trafﬁc Psy-
+chol. Behav. 27, 196e217.
+Durso, F.T., Truitt, T.R., Hackworth, C.A., Crutchﬁeld, J.M., Nikolic, D., Moertl, P.M.,
+Manning, C.A., 1995. Expertise and chess: a pilot study comparing situation
+awareness methodologies. In: Garland, D., Endsley, M. (Eds.), Proceedings of the
+International Conference on Experimental Analysis and Measurement of Situ-
+ation Awareness, pp. 295e303.
+Durso, F.T., Bleckley, M.K., Dattel, A.R., 2006. Does situation awareness add to the
+validity of cognitive tests? Hum. Factors 48, 721e733.
+Endsley, M.R., 2000. Direct measurement of situation awareness: validity and use of
+SAGAT. In: Endsley, M.R., Garland, D.J. (Eds.), Situation Awareness Analysis and
+Measurement. Lawrence Erlbaum Associates, Mahwah, NJ, pp. 147e174.
+Endsley, M.R., 2015. Situation awareness: operationally necessary and scientiﬁcally
+grounded. Cognition, Technol. Work 17, 163e167.
+Faul, F., Erdfelder, E., Lang, A.G., Buchner, A., 2007. G* Power 3: a ﬂexible statistical
+power analysis program for the social, behavioral, and biomedical sciences.
+Behav. Res. Methods 39, 175e191.
+Feldhütter, A., Gold, C., Schneider, S., Bengler, K., 2016. How the duration of auto-
+mated driving inﬂuences take-over performance and gaze behavior. In Gesell-
+schaft für Arbeitswissenschaft e. V. (Hrsg.), 62. Kongress der Gesellschaft für
+Arbeitswissenschaft. GfA Press, Dortmund, Germany.
+Funke, G., Greenlee, E., Carter, M., Dukes, A., Brown, R., Menke, L., 2016. Which eye
+tracker is right for your research? Performance evaluation of several cost
+variant eye trackers. Proc. Hum. Factors Ergonomics Soc. Annu. Meet. 60,
+1240e1244.
+Garay-Vega, L., & Fisher, D. L. (2005). Can novice drivers recognize foreshadowing
+risks as easily as experienced drivers. Proceedings of 3rd International Driving
+Symposium on Human Factors in Driver Assessment, Training and Vehicle
+Design. Rockport, ME.
+Gardner, A.K., Kosemund, M., Martinez, J., 2015. Examining the feasibility and
+predictive validity of the SAGAT tool to assess situational awareness among
+surgical trainees. J. Am. Coll. Surg. 221, e9ee10.
+Garland, D.J., Endsley, M.R., 1995. Experimental Analysis and Measurement of Sit-
+uation Awareness. EmbryRiddle: Aeronautical University Press, Daytona Beach,
+FL.
+Gasser, T., Westhoff, D., 2012. BASt-study: Deﬁnitions of Automation and Legal Is-
+sues in Germany. TRB Road Vehicle Automation Workshop, Irvine, CA, USA.
+Retrieved
+from.
+http://onlinepubs.trb.org/onlinepubs/conferences/2012/
+Automation/presentations/Gasser.pdf.
+Gibson, M., Lee, J., Venkatraman, V., Price, M., Lewis, J., Montgomery, O., Foley, J.,
+2016. Situation awareness, scenarios, and secondary tasks: measuring driver
+performance and safety margins in highly automated vehicles. SAE Int. J. Pas-
+seng. Cars-Electronic Electr. Syst. 9, 237e242.
+Gold, C., Damb€ock, D., Lorenz, L., Bengler, K., 2013. “Take over!” How long does it
+take to get the driver back into the loop? Proc. Hum. Factors Ergonomics Soc.
+Annu. Meet. 57, 1938e1942.
+Gold, C., K€orber, M., Lechner, D., Bengler, K., 2016. Taking over control from highly
+automated vehicles in complex trafﬁc situations: the role of trafﬁc density.
+Hum. Factors J. Hum. Factors Ergonomics Soc. 58, 642e652.
+Gottsdanker, R., Frick, J.W., Lockard, R.B., 1961. Identifying the acceleration of visual
+targets. Br. J. Psychol. 52, 31e42.
+Gugerty, L.J., 1997. Situation awareness during driving: explicit and implicit
+knowledge in dynamic spatial memory. J. Exp. Psychol. Appl. 3, 42e66.
+Gugerty, L., 1998. Evidence from a partial report task for forgetting in dynamic
+spatial memory. Hum. Factors J. Hum. Factors Ergonomics Soc. 40, 498e508.
+Gugerty, L.J., Tirre, W.C., 2000. Individual difference in situation awareness. In:
+Endsley, M.R., Garland, D.J. (Eds.), Situation Awareness Analysis and Measure-
+ment. Lawrence Erlbaum Associates, Mahwah, NJ, pp. 249e276.
+Gugerty, L., 2011. Situation awareness in driving. In: Lee, J., Rizzo, M., Fischer, D.,
+Caird, J. (Eds.), Handbook for Driving Simulation in Engineering, Medicine and
+Psychology. CRC Press, Boca Roca, FL (pp. 19e265e19-272).
+Gutzwiller, R.S., Clegg, B.A., 2013. The role of working memory in levels of situation
+awareness. J. Cognitive Eng. Decis. Mak. 7, 141e154.
+Henderson, J.M., 2003. Human gaze control during real-world scene perception.
+Trends Cognitive Sci. 7, 498e504.
+Horswill, M.S., McKenna, F.P., 2004. Drivers' hazard perception ability: situation
+awareness on the road. In: Banbury, S., Tremblay, S. (Eds.), A Cognitive Approach
+to Situation Awareness. Ashgate, Aldershot, United Kingdom, pp. 155e175.
+Hosking, S.G., Liu, C.C., Bayly, M., 2010. The visual search patterns and hazard re-
+sponses of experienced and inexperienced motorcycle riders. Accid. Anal. Prev.
+42, 196e202.
+Huebner, G.M., Gegenfurtner, K.R., 2010. Effects of viewing time, ﬁxations, and
+viewing strategies on visual memory for brieﬂy presented natural objects. Q. J.
+Exp. Psychol. 63, 1398e1413.
+Irwin, D.E., Zelinsky, G.J., 2002. Eye movements and scene perception: memory for
+things observed. Percept. Psychophys. 64, 882e895.
+Itti, L., Koch, C., 2001. Computational modelling of visual attention. Nat. Rev. Neu-
+rosci. 2, 194e203.
+Jackson, L., Chapman, P., Crundall, D., 2009. What happens next? Predicting other
+road users' behaviour as a function of driving experience and processing time.
+Ergonomics 52, 154e164.
+Kerschbaum, P., Lorenz, L., & Bengler, K. (2015). A transforming steering wheel for
+highly automated cars. Proceedings of the 2015 IEEE Intelligent Vehicles Sym-
+posium (IV) (pp. 1287e1292). Seoul.
+K€orber, M., Weißgerber, T., Kalb, L., Blaschke, C., Farid, M., 2015. Prediction of take-
+over time in highly automated driving by two psychometric tests. Dyna 82,
+195e201.
+K€orber, M., Gold, C., Lechner, D., Bengler, K., 2016. The inﬂuence of age on the take-
+over of vehicle control in highly automated driving. Transp. Res. Part F Trafﬁc
+Psychol. Behav. 39, 19e32.
+Kyriakidis, M., Happee, R., De Winter, J.C.F., 2015. Public opinion on automated
+driving: results of an international questionnaire among 5000 respondents.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+303
+
+
+Transp. Res. Part F Trafﬁc Psychol. Behav. 32, 127e140.
+Loft, S., Morrell, D.B., Huf, S., 2013. Using the situation present assessment method
+to measure situation awareness in simulated submarine track management. Int.
+J. Hum. Factors Ergonomics 2, 33e48.
+Loft, S., Bowden, V., Braithwaite, J., Morrell, D.B., Huf, S., Durso, F.T., 2015. Situation
+awareness measures for simulated submarine track management. Hum. Factors
+J. Hum. Factors Ergonomics Soc. 57, 298e310.
+Lu, Z., Happee, R., Cabrall, C.D.D., Kyriakidis, M., De Winter, J.C.F., 2016. Human
+factors of transitions in automated driving: A general framework and literature
+survey. Transp. Res. Part F Trafﬁc Psychol. Behav. 43, 183e198.
+Mackenzie, A.K., Harris, J.M., 2015. Eye movements and hazard perception in active
+and passive driving. Vis. Cogn. 23, 736e757.
+Martelaro, N., Sirkin, D., & Ju, W. (2015). DAZE: a real-time situation awareness
+measurement tool for driving. Adjunct Proceedings of the 7th International
+Conference on Automotive User Interfaces and Interactive Vehicular Applica-
+tions, 158e163.
+Melcher, V., Rauh, S., Diederichs, F., Bauer, W., 2015. Take-over requests for auto-
+mated driving. Procedia Manuf. 3, 2867e2873.
+Merat, N., Jamson, A.H., Lai, F.C., Daly, M., Carsten, O.M., 2014. Transition to manual:
+driver behaviour when resuming control from a highly automated vehicle.
+Transp. Res. Part F Trafﬁc Psychol. Behav. 27, 274e282.
+Mok, B., Johns, M., Lee, K. J., Miller, D., Sirkin, D., Ive, P., & Ju, W. (2015). Emergency,
+automation off: Unstructured transition timing for distracted drivers of auto-
+mated vehicles. Proceedings of the 2015 IEEE 18th International Conference on
+Intelligent Transportation Systems.
+Moore, K., Gugerty, L., 2010. Development of a novel measure of situation aware-
+ness: the case for eye movement analysis. Proc. Hum. Factors Ergonomics Soc.
+Annu. Meet. 54, 1650e1654.
+Neubauer, C., Matthews, G., Saxby, D., 2014. Fatigue in the automated vehicle do
+games and conversation distract or energize the driver? Proc. Hum. Factors
+Ergonomics Soc. Annu. Meet. 58, 2053e2057.
+Norman, D.A., 2015. The human side of automation. In: Road Vehicle Automation,
+vol. 2. Springer International Publishing, pp. 73e79.
+Oestmann,
+J.W.,
+Greene,
+R.,
+Kushner,
+D.C.,
+Bourgouin,
+P.M.,
+Linetsky,
+L.,
+Llewellyn, H.J., 1988. Lung lesions: correlation between viewing time and
+detection. Radiology 166, 451e453.
+Over, E.A.B., Hooge, I.T.C., Vlaskamp, B.N.S., Erkelens, C.J., 2007. Coarse-to-ﬁne eye
+movement strategy in visual search. Vis. Res. 47, 2272e2280.
+Pierce, R.S., 2012. The effect of SPAM administration during a dynamic simulation.
+Hum. Factors J. Hum. Factors Ergonomics Soc. 54, 838e848.
+Poulin, C., Stanton, N.A., Cebon, D., Epple, W., 2015. Responses to: autonomous
+vehicles. Ingenia 62, 8e11.
+Pylyshyn, Z.W., Storm, R.W., 1988. Tracking multiple independent targets: evidence
+for a parallel tracking mechanism. Spat. Vis. 3, 179e197.
+Rayner, K., 2009. Eye movements and attention in reading, scene perception, and
+visual search. Q. J. Exp. Psychol. 62, 1457e1506.
+SAE International, 2014. Taxonomy and Deﬁnitions for Terms Related to On-road
+Motor Vehicle Automated Driving Systems (Standard No. J3016). SAE Interna-
+tional. Retrieved from. http://standards.sae.org/j3016_201401/.
+Salmon, P., Stanton, N., Walker, G., Green, D., 2006. Situation awareness measure-
+ment: a review of applicability for C4i environments. Appl. Ergon. 37, 225e238.
+Salmon, P.M., Stanton, N.A., Walker, G.H., Jenkins, D., Ladva, D., Rafferty, L.,
+Young,
+M.,
+2009.
+Measuring
+situation
+awareness
+in
+complex
+systems:
+comparison of measures study. Int. J. Industrial Ergonomics 39, 490e500.
+Salthouse, T.A., 2009. When does age-related cognitive decline begin? Neurobiol.
+Aging 30, 507e514.
+Samuel, S., Borowsky, A., Zilberstein, S., Fisher, D.L., 2016. Minimum Time to Situ-
+ation Awareness in Scenarios Involving Transfer of Control from Automated
+Driving Suite. Transportion Research Board 95th Annual Meeting, 16e3788.
+Schmidt, J.S., Stolzmann, W., Karrer-Gauß, K., 2016. Experimental Evaluation of
+Different Request Intervals for a Driver Alertness Device for Conditionally
+Automated
+Driving
+with
+Induced
+Drowsiness.
+Automatisierungs-,
+Assis-
+tenzsysteme und eingebettete Systeme für Transportmittel.
+Sch€omig, N., Hargutt, V., Neukum, A., Petermann-Stock, I., Othersen, I., 2015. The
+interaction between highly automated driving and the development of
+drowsiness. Procedia Manuf. 3, 6652e6659.
+Stanton, N.A., Salmon, P.M., Walker, G.H., 2015. Let the reader decide: a paradigm
+shift for situation awareness in socio-technical systems. J. Cognitive Eng. Decis.
+Mak. 9, 44e50.
+Tass International, 2015. PreScan: Simulation of ADAS & Active Safety. Retrieved
+from. https://www.tassinternational.com/prescan.
+Thorpe, S., Fize, D., Marlot, C., 1996. Speed of processing in the human visual system.
+Nature 381, 520e522.
+Underwood, G., Chapman, P., Bowden, K., Crundall, D., 2002. Visual search while
+driving: skill and awareness during inspection of the scene. Transp. Res. Part F
+Trafﬁc Psychol. Behav. 5, 87e97.
+Underwood, G., Crundall, D., Chapman, P., 2011. Driving simulator validation with
+hazard perception. Transp. Res. Part F Trafﬁc Psychol. Behav. 14, 435e446.
+Underwood, G., Ngai, A., Underwood, J., 2013. Driving experience and situation
+awareness in hazard detection. Saf. Sci. 56, 29e35.
+Underwood, S.E., 2014. Automated Vehicles Forecast Vehicle Symposium Opinion
+Survey. Presentation at the 2014 Automated Vehicles Symposium, San Fran-
+cisco, CA.
+Unema, P.J., Pannasch, S., Joos, M., Velichkovsky, B.M., 2005. Time course of infor-
+mation processing during scene perception: the relationship between saccade
+amplitude and ﬁxation duration. Vis. Cogn. 12, 473e494.
+U.S. Senate Committee on Commerce, Science, & Transportation, 2016, March 15.
+Hands off: the Future of Self-driving Cars (Testimony of M. L. Cummings).
+Van den Beukel, A.P., Van der Voort, M.C., 2013. The Inﬂuence of Time-criticality on
+Situation Awareness when Retrieving Human Control after Automated Driving,
+16th International IEEE Annual Conference on Intelligent Transportation Sys-
+tem, The Hague, the Netherlands, pp. 2000e2005.
+Velichkovsky, B.M., Rothert, A., Kopf, M., Dornh€ofer, S.M., Joos, M., 2002. Towards an
+express-diagnostics for level of processing and hazard perception. Transp. Res.
+Part F Trafﬁc Psychol. Behav. 5, 145e156.
+Wai, J., Lubinski, D., Benbow, C.P., 2009. Spatial ability for STEM domains: aligning
+over 50 years of cumulative psychological knowledge solidiﬁes its importance.
+J. Educ. Psychol. 101, 817e835.
+Wright, T., Samuel, S., Borowsky, A., Zilberstein, S., Fisher, D.L., 2016. Experienced
+drivers are quicker to achieve situation awareness than inexperienced drivers
+in situations of transfer of control within a Level 3 autonomous environment.
+Proc. Hum. Factors Ergonomics Soc. Annu. Meet. 60, 270e273.
+Zeeb, K., Buchner, A., Schrauf, M., 2016. Is take-over time all that matters? The
+impact of visual-cognitive load on driver take-over quality after conditionally
+automated driving. Accid. Anal. Prev. 92, 230e239.
+Z. Lu et al. / Applied Ergonomics 60 (2017) 293e304
+304
+
+

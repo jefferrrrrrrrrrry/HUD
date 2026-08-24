@@ -1,0 +1,858 @@
+--- Page 1 ---
+applied  
+sciences
+Article
+An Augmented Warning System for Pedestrians: User Interface
+Design and Algorithm Development
+Yourui Tong
+, Bochen Jia *
+and Shan Bao
+
+
+Citation: Tong, Y.; Jia, B.; Bao, S. An
+Augmented Warning System for
+Pedestrians: User Interface Design
+and Algorithm Development. Appl.
+Sci. 2021, 11, 7197. https://doi.org/
+10.3390/app11167197
+Academic Editor: Marco Guerrieri
+Received: 26 June 2021
+Accepted: 2 August 2021
+Published: 4 August 2021
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright: © 2021 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+Industrial and Manufacturing Systems Engineering, University of Michigan-Dearborn, Dearborn, MI 48127, USA;
+tongy@umich.edu (Y.T.); shanbao@umich.edu (S.B.)
+* Correspondence: bochenj@umich.edu
+Featured Application: This study designed a warning system for pedestrians with an obstructed
+view or low situation awareness. Furthermore, it can extend into the autonomous driving envi-
+ronment, giving a warning to a pedestrian when a malfunction happens inside an autonomous
+vehicle.
+Abstract: Warning pedestrians of oncoming vehicles is critical to improving pedestrian safety. Due to
+the limitations of a pedestrian’s carrying capacity, it is crucial to ﬁnd an effective solution to provide
+warnings to pedestrians in real-time. Limited numbers of studies focused on warning pedestrians
+of oncoming vehicles. Few studies focused on developing visual warning systems for pedestrians
+through wearable devices. In this study, various real-time projection algorithms were developed
+to provide accurate warning information in a timely way. A pilot study was completed to test
+the algorithm and the user interface design. The projection algorithms can update the warning
+information and correctly ﬁt it into an easy-to-understand interface. By using this system, timely
+warning information can be sent to those pedestrians who have lower situational awareness or
+obstructed view to protect them from potential collisions. It can work well when the sightline is
+blocked by obstructions.
+Keywords: augmented reality; graphical user interface; pedestrian safety; warning design
+1. Introduction
+Compared to vehicle drivers, other road users such as pedestrians or cyclists are more
+vulnerable when sharing the road with vehicles. Each year, 1.35 million fatalities and 20–50
+million injuries worldwide are reported due to trafﬁc accidents [1], and the overall number
+increases yearly [2]. Among these injuries and deaths, the rate of pedestrian deaths remains
+high and keeps rising [3], which can be linked to many moderating factors. For example,
+pedestrian injuries due to phone distraction increased more than three times from 2007 to
+2010 [4]. Further, decreasing situational awareness could also lead to a pedestrian engaging
+in risky behavior during road sharing [5]. Due to the limited sensor accuracy and reliability,
+the rapid implementation of autonomous vehicles may lead to even higher pedestrian
+casualties [6]. It is necessary to develop a solution to reduce the potential threats from
+these known factors, especially when the pedestrian’s view is blocked by a truck, bus, or
+building or when the pedestrian’s situation awareness is low due to fatigue, distraction, etc.
+Due to such visual blockages, it could be very beneﬁcial to have a visual-based warning
+system to make up for the information missed by the pedestrians. As a warning system, the
+information must be carried out in real-time. Moreover, due to the limitation of pedestrian’s
+capacity, the warning system must be light in weight and easy to carry while the pedestrian
+is walking in public.
+Different methods were developed to improve pedestrian safety and warn road users,
+though most of them focused on detecting the collision rather than warning the pedestrian
+Appl. Sci. 2021, 11, 7197. https://doi.org/10.3390/app11167197
+https://www.mdpi.com/journal/applsci
+
+--- Page 2 ---
+Appl. Sci. 2021, 11, 7197
+2 of 14
+of the potential risks [7]. Limited methods were developed to carry out warning pedestrians
+when a potential collision was detected. Smartphone audio [8] and vibration [9] were used
+to provide warning information to pedestrian users, however, they could not provide
+the multimodal cues as a graphically based information system can [10]. Dhondge [8]
+proposed a phone-based visual warning system for distracted pedestrians at intersections.
+Such a system, however, requires real-time interaction between the pedestrian and the
+mobile phone to deliver the warning message.
+A visual system could present the warning information more directly and compre-
+hensively compared with auditory- and tactile-based systems, which made it the best
+media to deliver an immediate warning to the pedestrians while giving them more time
+to respond [11]. However, pedestrians have limited carrying capability during walking,
+which limits the types of visual systems they can carry. It is also not safe to forcibly shift
+the pedestrian’s attention from surrounding trafﬁc to the visual system while sharing the
+road with other road users. Due to these limitations of pedestrians, traditional visual-
+based warning system designs using a large screen or a mobile phone are not feasible for
+pedestrians.
+Augmented reality (AR) is a state-of-the-art technology that can “augment” the real
+world with virtual information so that users can perceive the augmented virtual informa-
+tion without losing their sense of the surrounding environment. Current devices that can
+display AR information include eyeglasses [12], heads-up displays (HUD) [13], contact
+lenses [14], handheld devices (e.g., smartphones) [15], etc. Since some of these AR devices
+could be carried with minimal effort (e.g., eyeglasses), they could be used as a feasible
+choice to present a visual warning system for pedestrians.
+AR technologies are applied in the design of vehicle-based warning systems. Kim [16]
+developed an in-vehicle HUD user interface for crash warning systems. Plavsic [17]
+evaluated different AR warning systems for the driver in an urban environment. Among
+these existing studies of warning system design, the research mainly focused on warning
+drivers rather than pedestrians. In addition, most of these existing studies rely on a
+mounted HUD rather than on a wearable display. Such mounted displays could not be
+transferred to pedestrian application.
+Handheld devices such as smartphones are smaller, portable, and could support touch
+screen inputs [14], which are more commonly used for the scenarios when mounted HUD
+is not available. However, it is infeasible for pedestrians to hold their smartphones while
+walking in public constantly. Since the warning needs to be carried out promptly, it is
+infeasible to design a system that requires the pedestrian to check on their phone even
+when they are not holding it to receive the warning information.
+Compared with HUD devices and handheld deceives, wearable AR devices are usually
+lightweight enough for pedestrians to use without interrupting their normal walking. By
+using wearable AR devices, pedestrians can perceive both warning information and real-
+world information without taking their eyes off the road for long. As a common wearable
+AR device, AR glasses may cause the least interruption for pedestrians during walking.
+Although HoloLens, the platform used in this paper, was still too bulky and heavy to wear
+daily, the fast evolution of the AR glasses could lead to the development of future wearable
+AR solutions. For example, a newer version of the AR glasses, Glass Enterprise Edition 2,
+was only 46 g and was designed to wear all day [18]. Overall, AR glasses are lightweight,
+can constantly be worn, and there is no need to hold them in hand or pay constant attention
+as with other AR devices. These potential advantages of AR glasses make them a perfect
+candidate to carry out the warning information for pedestrians in public with minimal
+interference. However, the visual ﬁeld of wearable AR devices is usually superimposed
+at the center of the user’s ﬁeld of view all the time, which may cause extra distraction or
+block the user’s view. Therefore, it is important to ensure that such AR devices activate the
+warning interface only when needed. To the authors’ knowledge, no research was done to
+develop an augmented visual-based warning system to deliver warning information about
+potential risks to pedestrians in real-time.
+
+--- Page 3 ---
+Appl. Sci. 2021, 11, 7197
+3 of 14
+Therefore, the objective of this study was to develop an AR-based wearable interface
+to deliver warning information to pedestrians after a potential collision is detected. A
+HoloLens setup was used as an experimental platform to develop the user interface, and a
+series of projection algorithms were used to carry out the warning information in real-time.
+2. Materials and Methods
+There are several commercial AR glasses in the market, for example, Microsoft
+HoloLens and Sony smart glasses. In this study, AR structure and parameters from the
+Microsoft HoloLens were used to design the warning system to deliver location-based
+warning information. To ensure that the interface can provide accurate warning informa-
+tion in a timely way, a series of projection algorithms were developed to provide real-time
+updates of the warning information based on the spatial data collected from the vehicle
+and the pedestrian. As shown in Figure 1, series of data were required from the vehicle
+and the pedestrian to identify vehicle position, pedestrian position, and distance between
+the vehicle and the pedestrian. The corresponding warning information was then gener-
+ated and presented to the pedestrian through a wearable AR device. Different projection
+algorithms were used for different vehicle–pedestrian interaction scenarios.
+Figure 1. Warning system summary.
+2.1. Interface Development
+Since the AR glasses can be worn by a pedestrian during normal walking in public, it is
+important to deactivate the warning system while no conﬂict is detected. Moreover, the AR
+interface should not be so complicated [19] that it interrupts the pedestrians perceiving the
+real-world information. Redundant information in the interface may increase the mental
+workload and the response time for the pedestrians when perceiving the warnings [20].
+Thus, only necessary information should be shown in the warning interface. Since the
+warning system is designed for the pedestrian when their view is obstructed or situation
+awareness is low, the information the pedestrian cannot perceive, such as the direction and
+the expected path of the oncoming vehicle, the conﬂict point, as well as the time to the
+collision, should be shown to the pedestrian. With such information present, the pedestrian
+is able to identify the location of the oncoming vehicle and the level of the risk. Since
+there are no well-built guidelines for the AR interface design, the smartphone and the
+human–computer interface designs were used to match the top-down human perception
+
+--- Page 4 ---
+Appl. Sci. 2021, 11, 7197
+4 of 14
+process [21]. A sidebar design was used to show the oncoming vehicle direction based on
+smartphone and human–computer interface designs [22,23]. Moreover, general warning
+information design rules, such as color code [24] or a warning symbol, were adapted in
+the current design of the warning information to match the existing mental models for the
+general public [25,26]. Further details about interface design can be found in the previous
+study [27].
+Derived from the previous research [27], the warning window was deﬁned as a
+60◦× 30◦rectangular area on the projection plane, where the center of this rectangle was
+located at the center of the pedestrian’s sight. AR information was projected on the virtual
+projection plane in front of the eyes. The distance between the eyes and the projection
+plane was deﬁned as the projected distance. According to the design of the HoloLens AR
+display, the optimal projected distance was 2 m, which minimized the discomfort from
+the vergence–accommodation conﬂict and ensured the optimal overlap of the two display
+lenses that a HoloLens has [28]. Based on the projection rules, the warning window size
+was proportionally adjusted to 2.31 m and 1.16 m from 2 m away.
+After the size and the position of the warning window were deﬁned, the detailed
+components inside the warning window were designed. The vehicle location, the expected
+vehicle path, the expected conﬂict point, the collision time, the warning symbol, and
+the attention-leading component (i.e., a sidebar and an arrow to attract and lead the
+pedestrian’s attention to the hazard) were included in the warning interface, derived from
+the previous study [27]. Figure 2 shows the layout of all these components presented in the
+warning window.
+ 
+Figure 2. Components in the warning window.
+Figure 3 shows an example of the user interface overlaid on the real-world view in
+which a vehicle was coming from the left and crossing straight in front of the pedestrian.
+ 
+Figure 3. User interface overlapped with a real-world view.
+
+--- Page 5 ---
+Appl. Sci. 2021, 11, 7197
+5 of 14
+As shown in Figure 3, an arrow sign was used to indicate that a vehicle was coming
+from the left side of the road. The location of the sidebar matched the location of the
+oncoming vehicle, and the arrow sign on the sidebar indicated that more information
+was available along the arrow direction. In this example, the sidebar with the left arrow
+on the left side of the warning window indicated that the upcoming vehicle was coming
+from the left side and could be seen by turning the head to the left. The conﬂicting time,
+16 s, indicated that the vehicle was due to reach the red dot position in 16 s. The sidebar
+disappeared after the conﬂicting vehicle appeared in the warning window. The arrow
+position and the conﬂicting time updated in real-time based on the pedestrian heading
+direction. The related warning information was updated (i.e., appeared or disappeared)
+based on pedestrian instant facing direction.
+2.2. Projection Algorithms Development
+To ensure that the interface provided instant warning information to the pedestrian
+based on his/her location, an algorithm was developed to determine the projection of
+the vehicle’s path on the AR interface based on the instant pedestrian position. Global
+positioning system (GPS) data and inertial measurement unit (IMU) data from the vehicle
+were used to determine the vehicle pathway using the perspective projection method [29].
+The GPS and the IMU from AR glasses can be used to track the pedestrian’s instant
+location and their head rotation/facing direction, respectively. It is assumed that the
+pedestrian does not look to the side without rotating their head, thus the pedestrian’s head
+rotation can be used to represent their viewing direction. This system would be activated
+after the potential conﬂict is detected and the conﬂict point is identiﬁed.
+The algorithms for conﬂict detection and pedestrian/vehicle positioning are not
+introduced here because they are beyond the scope of this study. The focus of this study
+was developing algorithms and interfaces to correctly and efﬁciently present relevant
+warning information on the AR display. Overall, the data used in the system included
+vehicle position and orientation, pedestrian’s position and orientation, pedestrian’s facing
+direction, predicted conﬂict position if no action was taken, and predicted turning position.
+Predicted conﬂict position and predicted turning position were assumed already known
+from conﬂict detecting algorithms. In detail, a two-step algorithm was developed to ﬁrst
+convert and synchronize the vehicle position, the conﬂict position, as well as the vehicle
+turning position into the pedestrian’s local coordinates and further project the localized
+information on the projection plane using perspective projection methods.
+The local coordinates used the pedestrian’s position as the origin (0,0), the pedestrian’s
+facing direction as +z, and the pedestrian’s right-hand direction as +x. After the coordinates’
+transformation, the warning information needed to be projected on the projection plane.
+Different methods can be used to project the 3D world onto a 2D plane. However, many of
+these methods may lose the depth cue during the projection and confuse the audience when
+they read the projected information. For example, the orthographic projection method
+uses orthogonal projection lines to project 3D items onto a 2D plan [30], which means
+the projected image on the 2D plane is the same size no matter the distance of the 3D
+item from the 2D plane. However, the human visual system needs such a depth cue to
+understand the distance between objects. It can confuse the audience if the depth cue is
+lost during the projection. In this study, the depth cue was necessary for the projection
+not to lose the accuracy of the warning information. The weak perspective projection
+method uses a similar concept to the orthographic projection methods [31], thus it loses
+the depth cue when doing the projection as well and thus also could not be used in this
+study. Perspective projection, on the other hand, is a method that can project a 3D object
+onto a 2D plane and not lose the depth cue [29] because the projection line it uses is the
+line connecting the 3D item to human eyes rather than orthogonal projection lines. Thus,
+the perspective projection method was used in this study to do the projection. The basic
+perspective projection matrix is shown in Equation (1) [32]:
+
+--- Page 6 ---
+Appl. Sci. 2021, 11, 7197
+6 of 14
+
+
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+1
+d
+0
+
+×
+
+
+x
+y
+z
+1
+
+=
+
+
+x
+y
+z
+z
+d
+
+
+(1)
+The
+
+
+x
+y
+z
+
+represents the 3D coordinates of a point needing to be projected, and d is
+the distance from the point to the projecting plane. Here, (x, y, z) represents the transformed
+3D position of pedestrian, vehicle, and conﬂict point in the pedestrian’s local coordinates.
+In summary, the pedestrian’s 3D local coordinates use the pedestrian’s head location as
+origin; positive x represents the direction toward the right lateral of the pedestrian, positive
+y represents the pedestrian’s cranial direction, and z represents the pedestrian’s facing
+direction. All positions mentioned above were projected to the projection plane by using
+Equation (1). The location of the projected point on the projection plane was (x × d/z,
+y × d/z). However, the coordinates needed to be updated in real-time based on where
+the pedestrian was looking so that the projection could have an accurate rotation angle.
+As mentioned above, it was assumed that pedestrians do not look to either side without
+turning their heads. Thus, a real-time coordinates rotation was needed for the projection
+matrix to cooperate with the pedestrian’s head rotation so that the projection could be
+updated in real-time. After using a rotation matrix on
+
+
+x
+y
+z
+
+,
+
+
+Cx
+Cy
+Cz
+
+could be found for
+the point that needed to be projected. Then, the projection matrix could be used as follows:
+
+
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+1
+d
+0
+
+×
+
+
+Cx
+Cy
+Cz
+1
+
+=
+
+
+Px
+Py
+Pz
+Pw
+
+
+(2)
+
+
+Px
+Py
+Pz
+Pw
+
+is the vector calculated after the perspective projection matrix was performed.
+As mentioned in Equation (2), the projected vehicle point’s coordinates located on the
+projection plane should be (Px/Pw, Py/Pw). The perspective projection method was also
+used to project the conﬂict position. After projecting these two positions on the projection
+plane, the vehicle’s path could be formed by connecting the vehicle point and the conﬂict
+point. Figure 4 shows an example of forming the vehicle path based on the projected
+vehicle and conﬂict points.
+ 
+Figure 4. An example of forming an arrow based on projected points.
+
+--- Page 7 ---
+Appl. Sci. 2021, 11, 7197
+7 of 14
+A vehicle turning situation is a special situation that needed to be considered. To
+form the vehicle turning path, the vehicle turning position needed to be converted into the
+pedestrian’s local coordinates and then projected to the projection plane using the same
+methods mentioned earlier. The projection methods may not always be able to project all
+the points within the warning window size based on the vehicle’s and the pedestrian’s
+instant locations. In this study, ﬁve speciﬁc scenarios were studied. One basic scenario
+was when the vehicle, the vehicle turning position, and the conﬂict point were all in front
+of the projection plane and could be projected inside the warning window. The vehicle
+path could be formed by simply connecting all three projected points. Figure 5 shows an
+example of the basic scenario.
+Figure 5. Basic turning scenario.
+However, there were four other scenarios in which a simple connection of the points
+was not feasible, i.e., not all the points could be projected on the projection plane, as shown
+in Figure 6.
+Figure 6. Four scenarios in which perspective projection did not work well.
+In scenario 1, the vehicle turning position and the conﬂict position were in front of
+the projection plane, while the vehicle location was behind the projection plane, and the
+projected vehicle turning point was outside the warning window. In this scenario, the
+vehicle position was not projectable to the projection plane since it was behind the plane,
+and the projected vehicle turning point was outside the warning window, which made it
+infeasible to simply connect the projected points to show the vehicle path. To solve this
+problem, an adjusted turning point was used. The original projected vehicle turning point
+
+--- Page 8 ---
+Appl. Sci. 2021, 11, 7197
+8 of 14
+and the projected conﬂict point were connected to form a line, and the adjusted turning
+point was found by using the intersecting point of this line and the warning window
+boundary line. This adjusted turning point was used to ensure the vehicle turning point
+inside the warning window. The vehicle position in this scenario was represented using
+one of the corners of the warning window based on the vehicle position (e.g., the lower-left
+corner for vehicles coming from the left side behind the pedestrian). The adjusted turning
+point, the projected conﬂict point, and one of the warning window corners were used to
+form the vehicle path arrow. Figure 7 shows an example of scenario 1.
+ 
+Figure 7. Example of scenario 1: Turning point and vehicle point could not be projected.
+As shown in Figure 8, scenario 2 presents the situation in which the vehicle turning
+position and the conﬂict position were in front of the projection plane, and their projected
+points were both inside the warning window. However, the vehicle position was behind
+the projection plane and was not able to be projected on the plane. Similar to scenario 1,
+one corner of the warning window was used as the vehicle point based on the vehicle’s
+position.
+ 
+Figure 8. Example of scenario 2: Vehicle point could not be projected.
+Scenario 3 described the situation in which only the vehicle turning position was in
+front of the projection plane and was able to be projected. As shown in Figure 9, a curved
+arrow centrally anchored at the projected vehicle turning point was generated to illustrate
+the direction of the upcoming vehicle.
+Scenario 4 presented a situation in which the conﬂict position was behind the projec-
+tion plane. Only the vehicle’s heading direction was used to show the vehicle’s path for
+such a situation. Two consecutive vehicle points were used to project two vehicle points on
+the projection plane, and the line connecting these two points was extended toward the
+direction the vehicle was heading to form the vehicle path. Figure 10 shows an example of
+scenario 4.
+
+--- Page 9 ---
+Appl. Sci. 2021, 11, 7197
+9 of 14
+ 
+Figure 9. Example of scenario 3: Only the turning point could be projected in the warning window.
+ 
+Figure 10. Example of scenario 4: Conﬂict position could not be projected.
+2.3. Evaluation
+The interface was evaluated in the previous study, and the results showed that the
+participants could understand the user interface well and could react correctly to avoid
+an accident [27]. To test the performance and the accuracy of the developed projection
+algorithm, two experimenters simulated a vehicle–pedestrian conﬂict scenario at a campus
+parking lot, and data from both simulated pedestrian and vehicle were collected to evaluate
+the performance of the developed algorithm. In detail, an experimenter simulating a
+pedestrian walked toward the footpath. The experimenter stopped when a signal was
+received and turned to look at the vehicle driven by another experimenter. A smartphone
+ﬁxed at the experimenter’s eye level was used to collect the pedestrian’s GPS data, IMU
+data, and video of the instant view of the pedestrian. A vehicle was driven by another
+experimenter, and the vehicle data were collected using the same type of device ﬁxed on the
+dashboard of the vehicle. The vehicle was located by the simulated pedestrian’s left side of
+the road. When the simulated pedestrian approached the crosswalk, the vehicle received a
+signal and started driving toward the crosswalk to simulate the vehicle–pedestrian conﬂict.
+The initial sampling rate of GPS and IMU data was 600 Hz. Once the data were
+cleaned, GPS and IMU were down-sampled to 1 Hz to feed in the projection algorithm. As
+mentioned in Equation (2), the projected point (Px/Pw, Py/Pw) was calculated for every
+input point. If the projected point was outside of the warning window, the intersection
+of the vehicle path and the warning window boundary was used as the projected point.
+An ideal vehicle path was visually identiﬁed and manually drawn on the video image
+based on the location of the vehicle and the direction of the road. To check the accuracy
+of the algorithm, the average distance between the projected points and the ideal vehicle
+path was calculated. The smaller the distance between the projected points and the ideal
+vehicle path was, the more accurate the algorithm was. The vehicle path was formed by
+connecting the vehicle point and the conﬂict point. The slope of the projected and the ideal
+
+--- Page 10 ---
+Appl. Sci. 2021, 11, 7197
+10 of 14
+vehicle path was calculated based on these two points to test the vehicle path direction.
+The closer the projected slope was to the ideal slope, the more accurate the vehicle path
+direction was.
+3. Result
+A total of 8 s of data were used to test the algorithm. The projected points inside the
+warning window were calculated for each second of the data. Table 1 shows the projected
+vehicle and conﬂict points inside the warning window. For each second, the x-axis and the
+y-axis locations for the points were calculated.
+Table 1. Vehicle projection points and conﬂict projection points.
+Time
+Vehicle Point
+Conﬂict Point
+x-Axis
+y-Axis
+x-Axis
+y-Axis
+1 s
+0.000
+0.542
+1.155
+0.460
+2 s
+−0.834
+0.580
+1.155
+0.218
+3 s
+−1.155
+0.523
+1.155
+−0.078
+4 s
+−1.155
+0.288
+0.171
+−0.091
+5 s
+−1.155
+0.255
+0.089
+−0.107
+6 s
+−1.155
+0.175
+−0.108
+−0.143
+7 s
+−1.155
+0.063
+−0.355
+−0.194
+8 s
+−1.155
+0.272
+0.029
+−0.278
+Once the projected points were calculated, the vehicle path was formed and was
+overlaid on the video images based on the x and the y locations in the warning window.
+An ideal vehicle path was visually identiﬁed and manually drawn on the video image
+based on the location of the vehicle in the image and the direction of the road. Figure 11
+shows an example of the projected vehicle path and the ideal vehicle path in the video at
+1 s, 3 s, 5 s, and 7 s.
+ 
+ 
+(a) 
+(b) 
+ 
+ 
+(c) 
+(d) 
+Figure 11. Projected video path (red) and ideal vehicle path (green) in the video image. (a) Vehicle
+path at 1 s; (b) vehicle path at 3 s; (c) vehicle path at 5 s; (d) vehicle path at 7 s.
+
+--- Page 11 ---
+Appl. Sci. 2021, 11, 7197
+11 of 14
+The distances from the projected vehicle and conﬂict points to the ideal path were
+calculated for each second of the data. The average of these two distances was calculated as
+well. An overall average among all 8 s of the data was then calculated. As shown in Table 2,
+two distances from the projected vehicle path to the ideal vehicle path and the average of
+these two distances were calculated. The overall average of the calculated distance was
+0.253.
+Table 2. Distance between projected points and ideal points.
+Time
+Distance from Projected
+Vehicle Points to the Ideal
+Path
+Distance from Projected
+Conﬂict Points to the Ideal
+Path
+Average Distance
+1 s
+0.526
+0.504
+0.515
+2 s
+0.418
+0.315
+0.367
+3 s
+0.086
+0.065
+0.076
+4 s
+0.142
+0.188
+0.165
+5 s
+0.174
+0.223
+0.199
+6 s
+0.227
+0.292
+0.259
+7 s
+0.176
+0.298
+0.237
+8 s
+0.088
+0.333
+0.210
+Mean
+0.253
+As described above, the slope of the vehicle path was calculated based on vehicle
+points and conﬂict points for both the projected vehicle path and the ideal vehicle path.
+The difference between the projected slope and the ideal slope was calculated to measure
+the accuracy of the projected vehicle path direction. Table 3 shows the result of the slope
+and the differences. Overall, both projected and ideal paths had slopes less than 0.3. The
+largest slope was observed from the projected vehicle path at 8 s, which also caused the
+largest slope difference between the projected and the ideal path.
+Table 3. Differences between projected and ideal slopes.
+Time
+Projected Slope
+Ideal Slope
+Difference
+1 s
+−0.071
+−0.052
+0.019
+2 s
+−0.182
+−0.130
+0.052
+3 s
+−0.260
+−0.251
+0.009
+4 s
+−0.286
+−0.251
+0.035
+5 s
+−0.291
+−0.251
+0.040
+6 s
+−0.304
+−0.240
+0.065
+7 s
+−0.322
+−0.167
+0.154
+8 s
+−0.465
+−0.251
+0.214
+Mean
+0.074
+4. Discussion
+The purpose of this study was to design an AR-based system to carry visual warn-
+ing information to pedestrians who are walking in a public area. The interface and the
+projection algorithm developed in this study show the possibility of providing real-time
+visual-based warning information to pedestrians using wearable devices. The warning
+information carried through the interface includes vehicle position, vehicle path, conﬂict
+point, collision time, and sidebar. Different pedestrian–vehicle interaction scenarios were
+studied, and corresponding algorithms were developed.
+Overall, the developed interface and algorithms presented a reasonable performance
+that could be used to carry out timely warning information to the pedestrians. The
+interface was easy to understand for the majority of the participants with minimal learning
+requirements. All the participants were able to give correct reactions after seeing the
+warning information. In addition to the interface, the projection algorithm could project
+
+--- Page 12 ---
+Appl. Sci. 2021, 11, 7197
+12 of 14
+the vehicle path and show the warning information correctly in real time. As shown in
+Figure 11, only the ﬁrst projected vehicle path from the beginning of the data collection
+was away from the ideal path; all other projected paths were closer to the ideal path and
+provided the correct vehicle information to the pedestrians. Although the ﬁrst projected
+vehicle path was away from the ideal path, the slope of the projected path matched the
+ideal path, which meant, even though the projected path was not overlaid on the correct
+lane of the road, the vehicle direction was still projected correctly. The slopes between the
+projected path and the ideal path were compared, and the average difference was only
+0.074, which was small enough to give the pedestrian correct information. Among all the
+data, the lowest difference between the ideal slope and the projected slope was 0.009, and
+the largest difference was 0.214. On average, the closer the vehicle was to the pedestrian,
+the higher was the observed difference in slope. When the vehicle was getting closer to
+the pedestrian, the distance between vehicle point and conﬂict point was shorter, and the
+slope difference got larger, even with a small mismatch between projected points and ideal
+points. It was acceptable when the slope difference was getting larger when the vehicle was
+getting closer to the pedestrians, since pedestrians could more easily identify the vehicle
+and the vehicle path regardless of the potential projection errors, as the vehicle was near
+the conﬂict point. The distances between the projected path and the ideal vehicle path were
+also compared. The average distance between projected points to the ideal vehicle path
+was 0.253. Considering the overall size of the screen was 2.31 by 1.16, the error of 0.253
+was acceptable. In general, the error from slope was smaller, which meant the direction of
+the vehicle path was correct, and the distance between the two paths was larger, which
+meant the vehicle path may not have been overlaid on the exact lane in which the vehicle
+was coming. The errors may have been due to an error from the GPS signal. Better GPS
+hardware may be able to reduce such errors. Overall, the projection algorithms projected
+the information in the warning window correctly.
+In summary, the developed warning system can clearly show the necessary infor-
+mation. As a system designed based on AR glasses, no extra carry effort is needed from
+pedestrians. The pedestrian still can see the real world while the warning system is on.
+Compared with a phone screen-based system [8], it could cause less distraction for pedes-
+trians to receive real world information. Additionally, since it is a graphic warning system,
+pedestrians can receive more visual information compared with audio or vibration warning
+systems [9]. Such a system has the potential to deliver an effective warning to pedestrians
+who have lower situational awareness or are distracted and protect them from potential
+conﬂict. It can also give pedestrians information about an oncoming vehicle when the
+oncoming vehicle is blocked by other objects or buildings on the street. Moreover, this
+warning system can be applied in other situations. Since the input of this warning system
+only requires GPS and IMU of the vehicle and the pedestrian as well as the expected conﬂict
+location, it can integrate with any system that has such outputs. This design could be
+further extended into the autonomous driving environment, where it can give a warning
+to the pedestrian when there is some malfunction happening in an autonomous vehicle
+and the autonomous vehicles have potential to collide with the pedestrian.
+A few limitations in this study should be acknowledged. First, the interface was
+not designed for situations in which multiple conﬂicts are detected. Future work could
+focus on the scalability of the designed system to include multiple conﬂicts simultaneously.
+Additionally, since current AR glasses are still too bulky and heavy to wear daily, the
+whole system is not supported by the existing hardware. In addition, current commercial
+AR glasses have a limitation on their ﬁeld of view as well. The ﬁeld of view of AR
+glasses is small; for example, the Microsoft HoloLens has only about a 35◦by 17◦ﬁeld of
+view, and the Sony glasses are even smaller at 19◦by 6◦[33]. Thus, the designed size of
+the warning window, which is 60◦by 30◦, cannot be fully shown in current AR glasses.
+Lastly, no quantitative evaluation was done for the user interface design. The reliability
+of the subjective evaluation is a concern, and objective measures could provide further
+information regarding the performance of the design. Objective evaluations, such as the
+
+--- Page 13 ---
+Appl. Sci. 2021, 11, 7197
+13 of 14
+subject’s response time, accuracy, correct body physical response, etc., could be done
+further to quantify the effectiveness and the accuracy of the warning system.
+Author Contributions: Conceptualization, Y.T. and B.J.; methodology, Y.T. and B.J.; software, Y.T.;
+validation, Y.T.; formal analysis, Y.T.; investigation, Y.T.; resources, B.J.; data curation, Y.T.; writing—
+original draft preparation, Y.T.; writing—review and editing, B.J. and S.B.; visualization, Y.T.; supervi-
+sion, B.J.; project administration, B.J.; funding acquisition, B.J. All authors have read and agreed to
+the published version of the manuscript.
+Funding: Research was funded by Michigan Mobility Transformation Center under grant number
+AWD001508.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: The data presented in this study are available on request from the
+corresponding author. The data are not publicly at this time due to sponsor agreement and as the
+data also forms part of an ongoing study.
+Acknowledgments: The author would like to express very great appreciation to Sang-Hwan Kim
+and Di Ma from the University of Michigan-Dearborn, who provided insight and expertise that
+greatly assisted the research.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+References
+1.
+World Health Organization. Road Trafﬁc Injuries. 27 April 2020. Available online: https://www.who.int/health-topics/road-
+safety#tab=tab_1 (accessed on 26 June 2021).
+2.
+Peden, M.; Scurﬁeld, R.; Sleet, D.; Mathers, C.; Jarawan, E.; Hyder, A.A.; Hyder, A.A.; Mohan, D.; Jarawan, E. World Report on
+Road Trafﬁc Injury Prevention; World Health Organization: Geneva, Switzerland, 2004.
+3.
+Retting, R.; Schwartz, S. Pedestrian Trafﬁc Fatalities by State: 2017 Preliminary Data; Governors Highway Safety Association:
+Washington, DC, USA, 2017.
+4.
+Basch, C.H.; Ethan, D.; Rajan, S.; Basch, C.E. Technology-related distracted walking behaviours in Manhattan’s most dangerous
+intersections. Inj. Prev. 2014, 20, 343–346. [CrossRef] [PubMed]
+5.
+Nasar, J.L.; Troyer, D. Pedestrian injuries due to mobile phone use in public places. Accid. Anal. Prev. 2013, 57, 91–95. [CrossRef]
+[PubMed]
+6.
+National Transportation Safety Board. Preliminary Report Highway HWY18MH010; National Transportation Safety Board: Wash-
+ington, DC, USA, 2018.
+7.
+Dollar, P.; Wojek, C.; Schiele, B.; Perona, P. Pedestrian Detection: An Evaluation of the State of the Art. IEEE Trans. Pattern Anal.
+Mach. Intell. 2012, 34, 743–761. [CrossRef] [PubMed]
+8.
+Dhondge, K.; Song, S.; Choi, B.-Y.; Park, H. WiFiHonk: Smartphone-Based Beacon Stuffed WiFi Car2X-Communication System
+for Vulnerable Road User Safety. In Proceedings of the 2014 IEEE 79th Vehicular Technology Conference (VTC Spring), Seoul,
+Korea, 18–21 May 2014; pp. 1–5. [CrossRef]
+9.
+Wang, T.; Cardone, G.; Corradi, A.; Torresani, L.; Campbell, A.T. WalkSafe: A pedestrian safety app for mobile phone users who
+walk and talk while crossing roads. In Proceedings of the Twelfth Workshop on Mobile Computing Systems & Applications-
+HotMobile ’12, San Diego, CA, USA, 28–29 February 2012; pp. 1–6. [CrossRef]
+10.
+Sarter, N.B. Multimodal information presentation: Design guidance and research challenges. Int. J. Ind. Ergon. 2006, 36, 439–445.
+[CrossRef]
+11.
+Wang, M.; Liao, Y.; Lyckvi, S.L.; Chen, F. How drivers respond to visual vs. auditory information in advisory trafﬁc information
+systems. Behav. Inf. Technol. 2019, 39, 1308–1319. [CrossRef]
+12.
+Costanza, E.; Inverso, S.A.; Pavlov, E.; Allen, R.; Maes, P. eye-q: Eyeglass peripheral display for subtle intimate notiﬁcations. In
+Proceedings of the 8th Conference on Human-Computer Interaction with Mobile Devices and Services-MobileHCI ’06, Helsinki,
+Finland, 12–15 September 2006; p. 211. [CrossRef]
+13.
+Caudell, T.P.; Mizell, D.W. Augmented reality: An application of heads-up display technology to manual manufacturing processes.
+In Proceedings of the Twenty-Fifth Hawaii International Conference on System Sciences, Kauai, HI, USA, 7–10 January 1992; pp.
+659–669. [CrossRef]
+14.
+Carmigniani, J.; Furht, B.; Anisetti, M.; Ceravolo, P.; Damiani, E.; Ivkovic, M. Augmented reality technologies, systems and
+applications. Multimed. Tools Appl. 2011, 51, 342–377. [CrossRef]
+15.
+Henrysson, A.; Ollila, M.; Billinghurst, M. Mobile phone based AR scene assembly. In Proceedings of the 4th International
+Conference on Mobile and Ubiquitous Multimedia-MUM ’05, Christchurch, New Zealand, 8–10 December 2005; p. 95. [CrossRef]
+
+--- Page 14 ---
+Appl. Sci. 2021, 11, 7197
+14 of 14
+16.
+Kim, H.; Wu, X.; Gabbard, J.L.; Polys, N.F. Exploring head-up augmented reality interfaces for crash warning systems. In Proceed-
+ings of the 5th International Conference on Automotive User Interfaces and Interactive Vehicular Applications-AutomotiveUI’13,
+Eindhoven, The Netherlands, 28–30 October 2013; pp. 224–227. [CrossRef]
+17.
+Plavsic, M.; Bubb, H.; Duschl, M.; Tonnis, M.; Klinker, G. Ergonomic Design and Evaluation of Augmented Reality Based
+Cautionary Warnings for Driving Assistance in Urban Environments. Presented at the 17th World Congress on Ergonomics
+(International Ergonomics Association, IEA), Beijing, China, 9–14 August 2009.
+18.
+Google. GLASS ENTERPRISE EDITION 2 Tech Specs. 22 July 2021. Available online: https://www.google.com/glass/tech-specs/
+(accessed on 26 June 2021).
+19.
+Dünser, A.; Grasset, R.; Seichter, H.; Billinghurst, M. Applying HCI Principles to AR Systems Design. Presented at the 2nd
+International Workshop at the IEEE Virtual Reality 2007, Charlotte, NC, USA, 11 March 2007.
+20.
+Boff, K.R.; Lincoln, J.E. Engineering Data Compendium: Human Perception and Performance; John Wiley and Sons: New York, NY,
+USA, 1986.
+21.
+Gregory, R.L. The Intelligent Eye; Weidenfeld & Nicolson: London, UK, 1970.
+22.
+Galitz, W.O. The essential Guide to User Interface Design; Wiley: Indianapolis, IN, USA, 1997.
+23.
+Clifton, I.G. Android user Interface Design: Turning Ideas and Sketches into Beautifully Designed Apps; Addison-Wesley: Upper Saddle
+River, NJ, USA, 2013.
+24.
+Wogalter, M.S.; Conzola, V.C.; Smith-Jackson, T.L. Research-based guidelines for warning design and evaluation. Appl. Ergon.
+2002, 33, 219–230. [CrossRef]
+25.
+Wogalter, M.S.; Desaulniers, D.R.; Brelsford, J.W. Consumer Products: How are the Hazards Perceived? Proc. Hum. Factors Soc.
+Annu. Meet. 1987, 31, 615–619. [CrossRef]
+26.
+Wogalter, M.S.; Godfrey, S.S.; Fontenelle, G.A.; Desaulniers, D.R.; Rothstein, P.R.; Laughery, K.R. Effectiveness of Warnings. Hum.
+Factors J. Hum. Factors Ergon. Soc. 1987, 29, 599–612. [CrossRef]
+27.
+Tong, Y.; Jia, B. An Augmented-reality-based Warning Interface for Pedestrians: User Interface Design and Evaluation. Proc. Hum.
+Factors Ergon. Soc. Annu. Meet. 2019, 63, 1834–1838. [CrossRef]
+28.
+Turner, A.; Zeller, M.; Cowley, E.; Bray, B. Hologram stability. Microsoft, 3 July 2018. Available online: https://docs.microsoft.
+com/en-us/windows/mixed-reality/hologram-stability (accessed on 26 June 2021).
+29.
+Redert, A.; Hendriks, E.; Biemond, J. Correspondence estimation in image pairs. IEEE Signal Process. Mag. 1999, 16, 29–46.
+[CrossRef]
+30.
+Maynard, P. Drawing Distinctions: The Varieties of Graphic Expression; Cornell Univ. Press: Ithaca, NY, USA, 2005.
+31.
+Horaud, R.; Dornaika, F.; Lamiroy, B.; Christy, S. Object Pose: The Link between Weak Perspective, Paraperspective and Full
+Perspective. Int. J. Comput. Vis. 1997, 22, 173–189. [CrossRef]
+32.
+Sonka, M.; Hlavac, V.; Boyle, R. Image Processing, Analysis, and Machine Vision, 2nd ed.; PWS Pub.: Paciﬁc Grove, CA, USA, 1999.
+33.
+Sony. Smarteyeglass-Sed-E1 Speciﬁcations. 2018. Available online: https://developer.sony.com/develop/smarteyeglass-sed-e1
+/speciﬁcations (accessed on 26 June 2021).

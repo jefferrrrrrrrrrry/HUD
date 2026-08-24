@@ -1,0 +1,334 @@
+--- Page 1 ---
+ 
+A. Marcus (Ed.): DUXU/HCII 2013, Part III, LNCS 8014, pp. 393–400, 2013. 
+© Springer-Verlag Berlin Heidelberg 2013 
+Efficient Information Representation Method  
+for Driver-Centered AR-HUD System 
+Hyesun Park and Kyong-ho Kim  
+Electronics and Telecommunication Research Institute(ETRI),  
+Daejeon, Korea 
+{hspark78,kkh}@etri.re.kr 
+Abstract. Providing a suitable and efficient representation of a driver’s pers-
+pective is a way to reduce traffic accidents. In this paper, we first introduce a 
+driver-centered AR (augmented-reality) HUD (head-up-display) system that su-
+perimposes augmented virtual objects onto a real scene under all types of driv-
+ing situations including unfavorable weather (such as rainy, foggy, overcast, 
+and snowy) conditions. We next explain the scenario and method used in our 
+comparative experiments on a method for improving both the cognitive usabili-
+ty and visibility of drivers. For this, we comparatively analyzed not only infor-
+mation display locations but also information representation for six information 
+types using a driving simulator with thirty subjects. For the effects on safety, 
+the situational driver awareness of safety-related road events was measured. To 
+determine the differences in the visual cognitive workload placed upon drivers, 
+we tracked their eye movements. The subjective workload of the participants 
+was assessed using the RSME (Rating Scale Mental Effort). 
+Keywords: Efficient Information Providing Method, Information Representa-
+tion, Information Display Location, Driver Centered System, AR(augmented 
+reality), HUD(head up display), Vehicle Simulator, Cognitive Usability, Visi-
+bility, Subjective Workload. 
+1 
+Introduction 
+1.1 
+Motivation 
+Necessity for the development of AR-HUD for Driving Safety. Popular vehicle man-
+ufacturers around the world are currently commercializing HUD technologies as a 
+part of their premium strategies. In 2001, the first HUD system was mounted into a 
+GM Cadillac [1, 2]. Thereafter, HUD systems have been equipped mainly in  
+advanced vehicles. BMW developed an LED-based HUD, which displays various 
+information for driving safety such as the vehicle speed, driving direction, cruise con-
+trol information, and a variety of warning messages [3,4]. However, all developed 
+commercial HUDs do not provide by superimposing information between the real 
+world and virtual ‘safety driving information’ like AR-HUD. Such HUD systems 
+have a problem in terms of cognitive workload caused by a mismatch between virtual 
+
+--- Page 2 ---
+394 
+H. Park and K.-h. Kim 
+ 
+objects and the real scene. To solve this problem, GM has started the development of 
+a full-windshield HUD system, which provides an augmented lane or road signs by 
+superimposing virtual objects onto the real world seen through the windshield under 
+conditions of poor nighttime visibility [5]. 
+ 
+Importance of Information Type Provided. In an AR-HUD system, it is important to 
+not only provide information suitable to the driver's field of vision, it is also very 
+important to provide necessary information to the driver through an efficient informa-
+tion representation. To improve driving safety and minimize the driving workload, the 
+information provided should be represented in such a way that it is more easily un-
+derstood and imposing less cognitive load onto the driver. It is therefore necessary to 
+classify the characteristics of the information given, and find a way to represent the 
+information according to these characteristics. In addition, research needs to be con-
+ducted into both the amount of information that can minimize a driver's cognitive load 
+and the types of representation that can minimize the driver’s visual load. 
+1.2 
+Hypothesis and Goals 
+Hypothesis. The representation method used for each type of information differs de-
+pending on the characteristics of the information. Therefore, we need to research a 
+type of representation that allows for a faster recognition that is easy to understand. 
+Thus, we divided the provided augmented safety information in the AR-HUD system 
+into six categories, and displayed the various representation methods to suit the cha-
+racteristics. In this case, we comparatively analyzed the experimental results of the 
+driving performance, information comprehension, and driving workload based on the 
+measured driver cognitive reaction rate, simulator-based driving variables (steering 
+angle, brake, etc.), and driving workload. 
+ 
+Goals. The goals we are trying to achieve in this work are as follows: 
+─ How information representation in the AR-HUD affects driver performance. 
+─ How information representation in the AR-HUD affects driver understanding. 
+─ How information representation in the AR-HUD affects driver workload. 
+2 
+Driver-Centered AR (Augmented-Reality) HUD (Head-Up-
+Display) System 
+2.1 
+Overview 
+Figure 1 shows an overview of the proposed system, and figure 2 provides a system 
+flowchart. The results in figure 1 show a detected lane, vehicle, and obstacle. The 
+system is composed of five main modules: vehicle position estimation, 3D object 
+recognition, view tracking of the driver, registration, and projection and display. 
+ 
+
+--- Page 3 ---
+ Efficient Information Representation Method for Driver-Centered AR-HUD System 
+395 
+ 
+ 
+Fig. 1. System overview (unseen situations under unfavorable weather conditions) 
+2.2 
+Description of the Sub-module  
+Vehicle Position Estimation Module. This module estimates the 3D location of the 
+vehicle using a GPS and an IMU. It then utilizes a 3D map DB from the 3D map ex-
+traction sub-module. We use a modified Kalman filter to increase the rate of correct 
+information provided [6].  
+3D Object Recognition Module. This module detects ground-plane based obstacles 
+from an input stereo image, and thereafter classifies the detected obstacles into pede-
+strians or cars using an HOG (Histogram of Oriented Gradients) based SVM (Support 
+Vector Machine) [7,8], and provides their distances during daytime conditions. Oth-
+erwise, during the nighttime, it tracks obstacles out of visual range using a fusion 
+between night-vision and radar technologies. This module then conducts a preprocess-
+ing procedure, such as edge detection and noise elimination, from the input image 
+sequence. 
+Driver-view Tracking Module. This model detects the driver’s head location, esti-
+mates the driver’s gaze, and thereafter calculates the driver’s viewpoint using a cam-
+era equipped on the display housing device. For this module, it is assumed that the 
+driver’s eyes are aimed in the same direction as their head. 
+Registration Module. This module matches the 3D objects generated according to the 
+driver’s perspective. To do so, this module receives 3D data integrated from the out-
+put of each module, which are transformed into coordinates of the real world as 
+viewed by the driver. 
+Projection and Display Module. This module displays safety-warning and useful 
+traffic information to the driver using a see-through HUD with an interactive design. 
+ 
+
+--- Page 4 ---
+396 
+H. Park and K.-h. Kim 
+ 
+ 
+Fig. 2. System flowchart 
+3 
+Comparative Experimental Design of an Efficient 
+Information Representation Method for the Proposed  
+AR-HUD System 
+Experimental Design. We designed two objective experiments for the driving  
+performance and cognitive usability, and one subjective assessment for driving satis-
+faction. The first experiment was conducted to determine the effects on the driving 
+performance and cognitive usability, and was implemented using a high-fidelity  
+driving simulator. The second experiment was conducted to find the effects on the 
+driver’s cognitive reaction when various types of information are provided. The sub-
+jective satisfaction of each driver was measured using a psychology-based traffic 
+questionnaire. 
+Driving Simulator and Peripherals. A 3DOF motion-based, high-fidelity driving 
+simulator was used in the experiment. The simulator provides force feedback and a 
+rich 3D audio environment. Three channel displays for the front, left, and right 
+screens provide a 130 deg. x 40 deg. full-scale field of view. The fully textured graph-
+ics were generated using SCANNeRTM software, which delivers a 60 Hz frame rate 
+at a 1024*768 resolution. The software can simulate various kinds of traffic scenarios 
+such as the motion of nearby vehicles and pedestrians, and changes in traffic signals. 
+Various kinds of vehicle data including the location, motion, velocity, acceleration, 
+RPM, braking, and steering were collected by vehicle sensors at a rate of 50 Hz. A 
+face LAB4.6TM eye-tracking system was installed on the dashboard of the simulation 
+
+--- Page 5 ---
+ Efficient Information Representation Method for Driver-Centered AR-HUD System 
+397 
+ 
+vehicle to track the driver’s head and eye movements. Figure 3 shows the experimen-
+tal environment used. 
+Dependent Variables. During the experiments, vehicle data, eye-tracking data, and 
+video data were collected. The vehicle data were collected from the simulator and 
+include the velocity, steering-wheel angle, accelerator and brake angle, and vehicle 
+position and motion. Eye-tracking data include the head position and orientation, gaze 
+orientation, gazing region, fixation time, and PERCLOSE. For verification of the 
+data, video images from the camera were recorded. 
+ 
+ 
+Fig. 3. Experimental Environment 
+Scenario and Procedure. Each of the thirty participants drove the in-vehicle simula-
+tor from start to destination for each information type provided in the AR-HUD sys-
+tem, the order of which was counter balanced. During the experiment, the subjects 
+were encouraged to adhere to the following guidelines: observe the traffic signals, 
+maintain the speed limit indicated by the road signs, and avoid collisions with other 
+vehicles or pedestrians. The driving route for the experiment was planned based on a 
+real road in a 3D graphic scene database. We designed a total of fifty events for four 
+types of routes. Table 1 describes the information type and representation of the de-
+signed events. 
+Subjective Assessment. Using multiple-choice questionnaires and RSME (Rating 
+Scale Mental Effort) [9], the subjective satisfaction and preference for the information 
+provided, and the cognitive workload were measured. 
+Experimental Method for the Comparative Analysis. The representation of each type 
+of information was determined based on the information attributes, driving situation, 
+and driver characteristics. These predefined representations were divided into non-
+representations and 3D visualization, and were analyzed using a pairwise comparison 
+between the two. Figure 4 shows the A-route, which is one of the four routes used. In 
+figure 4, E and the number listed next to it are an event and its sequential occurrence, 
+respectively. The route used in the experiments is built using a 3D map. This route in-
+cludes both an 80 km/h roadway and a footpath. S and F are the starting and final driv-
+ing points, respectively. To perform each event, all participants drove down the same 
+
+--- Page 6 ---
+398 
+H. Park and K.-h. Kim
+ 
+path several different times
+driving orientation and driv
+type. Thus, E4, E9, E10, an
+formation. In figure 4, the dr
+Table 1. Informati
+Information Type 
+Ev
+(Rou
+Route 
+(A
+(A
+Vehicle 
+(A
+(A
+Pedestrian 
+(C
+(C
+Lane Change 
+(B
+(B
+POI 
+(Point of Interest) 
+(A
+(A
+.Traffic Sign 
+(B
+(B
+                                            
+1 We described the events of t
+ing to the information type. 
+m 
+s. The arrow and number next to each event represent 
+ving order. Events with the same color share the same ev
+nd E15 are the same event type, i.e., pedestrian warning
+riving starting point is E1, and route A finishes at E16. 
+ion Type and Representation of the Designed Events1 
+vent No. 
+ute Type) 
+Representation 
+Attribute 
+E1 
+A-route) 
+only audio 
+Default 
+E12 
+A-route) 
+3D Visualization 
+(short upper arrow) 
+E2 
+A-route) 
+3D Visualization 
+(rectangle) 
+E5 
+A-route) 
+Non-representation 
+Default 
+E4 
+C-route) 
+Non-representation 
+Default 
+E5 
+C-route) 
+3D Visualization 
+(arrow at head position) 
+E5 
+B-route) 
+3D Visualization 
+(under arrow) 
+E8 
+B-route) 
+Non-representation 
+Default 
+E3 
+A-route) 
+Non-representation 
+Default 
+E4 
+A-route) 
+3D Visualization 
+(rectangle) 
+E6 
+B-route) 
+Non-representation 
+Default 
+E6.5 
+B-route) 
+3D Visualization 
+(rectangle) 
+              
+the representative comparison-pairs for the representation acc
+the 
+vent 
+g in-
+ord-
+
+--- Page 7 ---
+ Efficient Information Representation Method for Driver-Centered AR-HUD System 
+399 
+ 
+ 
+Fig. 4. Experimental Scenario 
+4 
+Conclusions and Future Directions 
+To provide traffic information to drivers using an efficient method, we defined an 
+information representation by considering both the driving situation and the drivers 
+themselves. To prove the suitability of the representation, we also described the expe-
+rimental design. The results of this experiment will support the effectiveness and va-
+lidity of the AR-HUD system in the future as an effective representation method 
+based on driver characteristics under complex roads or unseen environments such as 
+those occurring during unfavorable weather conditions. For this, we will further ana-
+lyze three different methods according to the experimental design described in this 
+paper. The first method is a paired t-test, which compares the differences between 
+non-representation and 3D visualization. The next method is a graph analysis to de-
+termine the average distribution of the 30 subjects. Finally, a subjective preference 
+and cognitive load will be measured through questionnaires. 
+ 
+Acknowledgments. This work was supported by the Industrial Strategic technology 
+development program, Development of Driver-View based in-Vehicle AR Display 
+System Technology Development(10040927), funded by the Ministry of Knowledge 
+Economy (MKE, Korea). 
+References 
+1. General Motors, http://www.gm.com/ 
+2. Cadillac-Motor Trend Blog,  
+ http://blogs.motortrend.com/manufacturer/cadillac/ 
+3. BMW HUD (2009), http://Youtube.com  
+
+--- Page 8 ---
+400 
+H. Park and K.-h. Kim 
+ 
+4. BMW_Blog (2011), http://www.bmwblog.com/2011/10/10/ 
+video-bmw-head-up-display-simulation-augmented-reality/  
+5. GM’s full-windshield HUD technology (2010), http://Youtube.com  
+6. Brown, R.G., Hwang, P.Y.C.: Introduction to Random Signals and Applied Kalman Filter-
+ing, 2nd edn. John Wiley & Sons, Inc. (1992) 
+7. Xu, Y., Xu, L., Li, D., Wu, Y.: Pedestrian Detection Using Background Subtrac-tion As-
+sisted Support Vector Machine. In: 2011 11th International Conference on Intelligent Sys-
+tems Design and Applications (ISDA), pp. 837–842 (2011) 
+8. Boser, B., Guyon, I., Vapnik, V.: A training algorithm for optimal margin classifiers. In: 
+Fifth Annual Workshop on Computational Learning Theory. ACM Press (1992) 
+9. Zijlstra, F.R.H., van Doorn, L.: The construction of a scale to measure subjective effort. 
+Technical Report, Delft University of Technology, Department of Philosophy and Social 
+Sciences (1985) 

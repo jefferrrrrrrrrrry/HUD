@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""Validate repository-level Nature Skills metadata and README consistency.
+
+This lightweight check intentionally avoids optional runtime dependencies. It is
+safe to run locally and in CI to catch stale skill counts, broken README index
+links, and missing per-skill metadata before a documentation or skill change is
+merged.
+"""
+
+from __future__ import annotations
+
+import pathlib
+import re
+import sys
+from dataclasses import dataclass
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+SKILLS_DIR = ROOT / "skills"
+README_FILES = (ROOT / "README.md", ROOT / "README_EN.md")
+SKILL_LINK_RE = re.compile(r"\[`(nature-[^`]+)`\]\(skills/([^/)]+)/README(?:_EN)?\.md\)")
+BADGE_RE = re.compile(r"badge/skills-(\d+)-")
+EXCLUDED_INDEX_DIRS = {"nature-shared"}
+EXCLUDED_LINK_DIRS = {"nature-shared", "nature-<topic>"}
+
+
+@dataclass
+class ValidationError:
+    path: pathlib.Path
+    message: str
+
+    def __str__(self) -> str:
+        rel = self.path.relative_to(ROOT) if self.path.is_absolute() else self.path
+        return f"{rel}: {self.message}"
+
+
+def skill_dirs() -> list[pathlib.Path]:
+    return sorted(path for path in SKILLS_DIR.iterdir() if path.is_dir())
+
+
+def validate_skill_layout(skills: list[pathlib.Path]) -> list[ValidationError]:
+    errors: list[ValidationError] = []
+    required_files = ("SKILL.md", "README.md", "README_EN.md", "manifest.yaml")
+    for skill in skills:
+        for filename in required_files:
+            if not (skill / filename).is_file():
+                errors.append(ValidationError(skill, f"missing required file {filename}"))
+    return errors
+
+
+def validate_readme(readme: pathlib.Path, skills: list[pathlib.Path]) -> list[ValidationError]:
+    errors: list[ValidationError] = []
+    text = readme.read_text(encoding="utf-8")
+    expected = {path.name for path in skills if path.name not in EXCLUDED_INDEX_DIRS}
+
+    badges = BADGE_RE.findall(text)
+    if not badges:
+        errors.append(ValidationError(readme, "missing skills count badge"))
+    elif int(badges[0]) != len(skills):
+        errors.append(
+            ValidationError(
+                readme,
+                f"skills badge says {badges[0]}, but skills/ contains {len(skills)} directories",
+            )
+        )
+
+    linked = {
+        match.group(2)
+        for match in SKILL_LINK_RE.finditer(text)
+        if match.group(2) not in EXCLUDED_LINK_DIRS
+    }
+    missing = sorted(expected - linked)
+    extra = sorted(linked - expected)
+    if missing:
+        errors.append(ValidationError(readme, "skill index missing: " + ", ".join(missing)))
+    if extra:
+        errors.append(ValidationError(readme, "skill index references unknown dirs: " + ", ".join(extra)))
+
+    broken = []
+    for _label, dirname in SKILL_LINK_RE.findall(text):
+        if dirname in EXCLUDED_LINK_DIRS:
+            continue
+        if not (ROOT / "skills" / dirname / "README.md").is_file():
+            broken.append(dirname)
+    if broken:
+        errors.append(ValidationError(readme, "broken skill README links: " + ", ".join(sorted(set(broken)))))
+
+    return errors
+
+
+def main() -> int:
+    if not SKILLS_DIR.is_dir():
+        print(f"ERROR: skills directory not found: {SKILLS_DIR}", file=sys.stderr)
+        return 1
+
+    skills = skill_dirs()
+    errors = validate_skill_layout(skills)
+    for readme in README_FILES:
+        if readme.is_file():
+            errors.extend(validate_readme(readme, skills))
+        else:
+            errors.append(ValidationError(readme, "README file is missing"))
+
+    if errors:
+        print("Repository validation failed:", file=sys.stderr)
+        for error in errors:
+            print(f"- {error}", file=sys.stderr)
+        return 1
+
+    print(f"Repository validation passed: {len(skills)} skill directories checked.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

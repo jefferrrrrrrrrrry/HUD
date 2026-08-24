@@ -1,0 +1,431 @@
+ 
+A Field Study to Collect Expert 
+Knowledge for the Development of AR 
+HUD Navigation Concepts 
+ 
+ 
+Abstract 
+A promising advancement of conventional head-up dis-
+plays in vehicles is the implementation of augmented re-
+ality. By projecting the content onto the vehicle’s wind-
+shield, information can be displayed in a contact ana-
+logue way in the real world. Two major challenges for 
+concept developers are to reduce masking caused by 
+augmented reality content and to create concepts that 
+are suitable for the limited field of view. To approach 
+these challenges, we designed two contact analogue 
+navigation concepts and evaluated them in a field study 
+with a prototype car that contained a complete AR HUD 
+testing environment. The subjects were experts in inter-
+action design, AR, HUD and sales. First results of the ex-
+perts’ suggestions for improvements are given in this ex-
+tended abstract. 
+Author Keywords 
+Augmented reality; head-up display; field study; con-
+tact analogue; navigation; masking  
+CCS Concepts 
+• Human-centered computing~Field studies   • Human-
+centered computing~Mixed / augmented reality 
+ 
+Permission to make digital or hard copies of part or all of this work for 
+personal or classroom use is granted without fee provided that copies are 
+not made or distributed for profit or commercial advantage and that cop-
+ies bear this notice and the full citation on the first page. Copyrights for 
+third-party components of this work must be honored. For all other uses, 
+contact the Owner/Author. 
+AutomotiveUI '19 Adjunct, September 21–25, 2019, Utrecht, Netherlands 
+© 2019 Copyright is held by the owner/author(s). 
+ACM ISBN 978-1-4503-6920-6/19/09. 
+https://doi.org/10.1145/3349263.3351339 
+Matthias Schneider 
+Media Informatics Group, 
+University of Regensburg, GER 
+Daimler AG, Stuttgart, GER 
+Matthias.sc.schneider@daimler.com 
+Anna Bruder 
+Daimler AG, Stuttgart, GER 
+Anna.bruder@daimler.com 
+Marc Necker 
+Daimler AG, Stuttgart, GER 
+Marc.necker@daimler.com 
+Tim Schluesener 
+Daimler AG, Stuttgart, GER 
+Tim.schluesener@daimler.com 
+Niels Henze 
+Media Informatics Group, 
+University of Regensburg, GER 
+Niels.henze@ur.de 
+Christian Wolff 
+Media Informatics Group, 
+University of Regensburg, GER 
+Christian.wolff@ur.de 
+AutomotiveUI '19 Adjunct, September 21-25, 2019, Utrecht, Netherlands
+358
+
+
+ 
+Introduction 
+Today’s cars are equipped with a large number of driving 
+assistance systems (DAS) to support the driver in chal-
+lenging traffic situations [2]. One example for current 
+DAS technologies are conventional head-up  displays 
+(HUDs). This technology makes it possible to display 
+driving-related information in the driver’s primary field 
+of view (FOV) through a virtual image that is mirrored in 
+the windshield. The next step in the development pro-
+cess of HUDs is the integration of augmented reality (AR) 
+[1]. This allows the combination of virtual and real infor-
+mation in the driver’s primary FOV and is called aug-
+mented reality head-up display (AR HUD). This was re-
+alized in a car for the first time by Bubb in 1975 [4]. The 
+AR HUD is supposed to support drivers through a more 
+intuitive way of displaying driving assistance information 
+[3]. There are still several challenges to master before 
+an AR HUD can be realized in a production vehicle. One 
+of those is the correct superimposition of virtual infor-
+mation onto the real environment. Another challenge is 
+that, due to technical limitations, AR content can only be 
+displayed in a small area of the windshield. Therefore, it 
+is necessary to design for more complex traffic situa-
+tions, such as curves, because the virtual information 
+might be cut off. Additionally, superimposing virtual in-
+formation onto the real traffic environment can lead to 
+driver distraction, annoyance, and masking of other road 
+users [10]. Thus, a further challenge in concept devel-
+opment for AR HUD is to reduce masking effects while 
+ensuring that the same level of information is provided.  
+In this field study, two contact analogue navigation con-
+cepts for AR HUD are compared in terms of their degree 
+of masking the real environment and how appropriate 
+they are for the use case navigation. The goal is to ex-
+amine whether masking effects can be reduced while 
+maintaining a consistent interpretability of the naviga-
+tion cues by the integration of Gestalt Principles. Fur-
+thermore, we want to collect expert knowledge to derive 
+guidelines for AR HUD navigation concept design. This 
+experiment is one of the first to utilise a prototype car 
+with a complete AR HUD environment that includes real 
+sensor and road map data. 
+Navigation Concept Design 
+Based on guidelines from research, especially from 
+Pfannmüller [10] and Israel [6], and focus groups with 
+experts in the field of AR HUD concept design, two navi-
+gation concepts for AR HUD have been created. For both 
+concepts a light blue colour was chosen: RGB (102, 153, 
+230) with a transparency of 0. 
+The Solid Fishbone Concept 
+The solid fishbone concept consists of two basic ele-
+ments, entry marker and middle marker. Both compo-
+nents are in the shape of a fishbone as recommended by 
+e.g. Israel [6], to result in a smoother cut when leaving 
+the FOV as well as less masking of the real world. The 
+entry marker consists of a curved fishbone that virtually 
+lies on the street in a contact analogue way while show-
+ing the upcoming turn (see Figure 1). When the driver 
+approaches a manoeuvre point, the entry marker fades 
+in 90 meters in advance with an initial slanted position 
+(tilt = 15°) to achieve a better visibility. While getting 
+closer to the manoeuvre, the tilt is reduced to 0° in a 
+steady manner and the entry marker fades out. Next, 
+the middle marker fades in resembling a wall of upright 
+fishbones that is placed in the centre of the road the up-
+coming manoeuvre points into (see Figure 2). The mid-
+dle marker is longer than the FOV and is also shown dur-
+ing turning. The fade in and out time is 0.5 seconds for 
+both of the elements. 
+ 
+Figure 1: The entry marker of the 
+solid fishbone concept. 
+ 
+ 
+Figure 2: The middle marker of the 
+solid fishbone concept. 
+ 
+ 
+Figure 3: The middle marker of the 
+dotted fishbone concept. 
+AutomotiveUI '19 Adjunct, September 21-25, 2019, Utrecht, Netherlands
+359
+
+
+ 
+The Dotted Fishbone Concept 
+The components and their behaviour are the same for 
+both of the navigation concepts with the only difference 
+that the core element of the dotted fishbone concept is 
+a fishbone consisting of dots (see Figure 3). The idea 
+behind that is that the driver should still recognize the 
+fishbone shape with the help of Gestalt Principles, espe-
+cially Principle of Proximity and Principle of Good Contin-
+uation. At the same time, the dotted design should lead 
+to a lower degree of masking. However, it might happen 
+that the mental workload of the driver is higher while 
+using the dotted fishbones because its elements might 
+be harder to recognize and interpret than the solid ones 
+[8]. 
+Experiment 
+In this section information about study participants, the 
+test track, the test environment, and the procedure is 
+given. 
+Participants 
+To get valuable expert knowledge about masking effects 
+and the development of future navigation concepts, only 
+experts in fields relevant for the development of an AR 
+HUD were chosen as subjects. In total, 26 participants 
+took part in the study. Two datasets had to be excluded 
+from the analysis due to technical problems. Of the re-
+maining 24 participants, five were female and 19 male, 
+ages ranging from 22 to 51 years. Every driver had used 
+a static HUD before but only one participant had one in 
+his private car. The participants’ attitude toward HUD in 
+general was positive. All subjects gave written consent 
+to participate in the study. 
+Test Track 
+An important factor for the test track was a consistent 
+traffic density during the drives were conducted (be-
+tween 9:00 am and 4:00 pm). The chosen test track (see 
+Figure 4) mainly consisted of streets with a speed limit 
+of 30 kph. With the help of predefined waypoints, the 
+test vehicle showed the manoeuvres of the test track 
+even though a free navigation or redirection would have 
+been possible with this system as well. 
+Test Environment 
+As the test vehicle, a prototype with integrated AR HUD 
+was used. Figure 5 shows an image of the interface of 
+the prototype car which shows the middle marker of the 
+dotted fishbones. Furthermore, a predevelopment envi-
+ronment software was created for the car. It includes the 
+so-called Robot Operating System (ROS) that is used to 
+synchronize the vehicle’s sensor and bus data (GPS, ac-
+celerometer, gyroscope, and FlexRay). Also, a map in-
+terface by HERE maps was included to access current 
+map data online. With the help of the toolkit QT, a graph-
+ical user interface for AR HUD was created and addition-
+ally, the Open Graphics Library (Open GL) was used as 
+rendering pipeline. For the AR content creation, the 3D 
+tool Autodesk Maya was used.  
+Procedure 
+After getting an introduction to the test vehicle, the par-
+ticipants followed a short practice route to familiarise 
+themselves with the test vehicle. Next, the subjects 
+stopped at a parking area next to the starting point of 
+the track. The HUD was calibrated along the y-axis with 
+the help of a fixed point. While the examiner started the 
+test environment, the drivers filled out a questionnaire 
+covering demographical data, driving experience, expe-
+rience with HUD, and the weather conditions. Next, the 
+ 
+Figure 4: The track had a length of 2.5 
+km and contained nine right as well as 
+nine left turns and one straight manoeu-
+vre crossing a street. Also, a little 
+roundabout was on the test track. 
+ 
+ 
+Figure 5: Interface of the test vehicle. 
+Votes 
+Positive feedback 
+7 
+notifications are pleasant in 
+terms of their colour scheme 
+5 
+contact analogue positioning 
+5 
+fade-in timing of the fishbones 
+3 
+eyes-off-the-road time was de-
+creasing 
+Table 1: Positive feedback related to 
+both concept variants. 
+AutomotiveUI '19 Adjunct, September 21-25, 2019, Utrecht, Netherlands
+360
+
+
+ 
+subjects were asked to think aloud during the drives. 
+Every participant completed the test track twice with 
+identical test procedures for both AR HUD concepts. The 
+order in which the concept variants were tested was 
+counterbalanced across participants to mitigate the in-
+fluence of training effects on the performance measures 
+used. The examiner was seated next to the driver while 
+a second person was sitting in the back to log special 
+incidents like navigational errors. Additionally, a GoPro 
+dashcam was integrated in the test vehicle to record au-
+dio and video data. If subjects were insecure about in-
+terpreting the navigational cues, they were asked to tell 
+the examiner in which direction the navigational cue 
+pointed. This was done to avoid possible rerouting incon-
+sistencies. After finishing the route, participants filled out 
+the User Experience Questionnaire (UEQ) [5] and the 
+Driving Activity Load Index (DALI), a tool designed to 
+evaluate the driver’s mental workload [9]. In addition, a 
+self-designed questionnaire based on Pfannmüller [10] 
+to assess design, degree of masking, distraction, and po-
+sitioning accuracy was used. An open questions part was 
+included to find out what the drivers liked or disliked 
+about the navigation concepts and what they would im-
+prove. After the second drive, the subjects were asked 
+to compare the concepts, state their favourite and to ex-
+plain their decision. Also, they stated ideas on how to 
+combine static and contact analogue elements. 
+ 
+First Results 
+First results of the open questions asked are given in this 
+section. The evaluation was conducted according to the 
+qualitative content analysis by Mayring et al. [7]. There 
+was positive and negative feedback that was valid for 
+both concepts which is listed in Table 1 and 2 respec-
+tively. In addition, the subjects made suggestions for im-
+provements concerning both concepts (see Table 3). 
+When asked which concept they preferred and for what 
+main reasons, the results showed a slight preference for 
+the solid fishbones. In total, the solid fishbones got 12 
+votes, the dotted fishbones got nine, and three experts 
+had no favourite. In case of the solid fishbone concept, 
+six subjects mentioned that it is easier to interpret, es-
+pecially when the AR content is cut off strongly due to 
+the limited FOV and only parts of the fishbones remain 
+visible. Three participants thought the solid fishbones 
+had a better design. For the dotted fishbone concept, six 
+participants mentioned less masking as one of their main 
+reason for preferring it. Two experts said that their cog-
+nitive load was lower and also, the design was preferred 
+two times. 
+Discussion and Conclusion 
+In this study, an open questions part was included to 
+collect expert knowledge in terms of navigation concepts 
+for AR HUD which can be used for future concept devel-
+opment. First results have been given already and fur-
+ther findings can be looked up in Schneider et al. [11] 
+together with the results of the evaluated masking ef-
+fects. Even though the concepts were only evaluated in 
+one specific car, this study can be seen as one of the first 
+approaches to investigate navigation concepts for an AR 
+HUD in the real traffic. We used experts in the field of AR 
+HUD development as subjects to get detailed information 
+on what a suitable navigation concept for AR HUD should 
+look like and on how critical the caused masking effects 
+are. Future studies should also focus on participants 
+without expert knowledge to transfer the results to the 
+general population. Also, masking effects could be ex-
+amined further by integrating objective measurements 
+like physical targets placed on a private test track. 
+Votes 
+Negative feedback 
+18 
+imprecise positioning of the nav-
+igation cues 
+7 
+transition between entry and 
+middle marker is too abrupt 
+6 
+entry marker should be dis-
+played longer 
+3 
+Entry marker too small 
+2 
+Entry marker appears too late 
+Table 2: Negative feedback which is re-
+lated to both concept variants. 
+ 
+ 
+Votes 
+Suggestions for improvements 
+9|15 
+Include possibility to adjust con-
+cept concerning size, number of 
+elements, and colour 
+7|9 
+Improve positioning in general 
+6|4 
+Integration of pre-indication 
+2|2 
+Integrate permanent notification 
+to show that system is running 
+3|1 
+Extend display time of entry 
+marker 
+2|0 
+Make brightness adjustable 
+Table 3: Suggestions for improvements 
+which are related to both concept vari-
+ants. The votes on the left side have been 
+given for the solid fishbones, the votes on 
+the right side for the dotted ones. 
+AutomotiveUI '19 Adjunct, September 21-25, 2019, Utrecht, Netherlands
+361
+
+
+ 
+ References 
+1. 
+Ronald T. Azuma. 1997. A Survey of Augmented 
+Reality. Teleoperators and Virtual Environments 6, 
+4: 355-385. 
+https://doi.org/10.1162/pres.1997.6.4.355 
+2. 
+Klaus Bengler, Klaus Dietmayer, Berthold Faerber, 
+Markus Maurer, Christoph Stiller, and Hermann 
+Winner. 2014. Three Decades of Driver Assistance 
+Systems: Review and Future Perspectives. IEEE In-
+telligent Transportation Systems Magazine 6, 4: 6–
+22. https://doi.org/10.1109/MITS.2014.2336271 
+3. 
+Klaus Bengler, Martin Götze, Lisa Pfannmüller, and 
+Albert Zaindl. 2015. To See or not to See - Innova-
+tive Display Technologies as Enablers for Ergo-
+nomic Cockpit Concepts. Ergonomic Requirements, 
+Future Mobility, Future Functionality. In Proceed-
+ings of the electronic displays Conference. 
+4. 
+Heiner Bubb. 1975. Untersuchungen über die An-
+zeige des Bremsweges im Fahrzeug. Doctoral Dis-
+sertation. Technical University of Munich, Munich, 
+GER. 
+5. 
+Andreas Hinderks, Martin Schrepp, and Joerg 
+Thomaschewski. 2018. UEQ – User Experience 
+Questionnaire. Retrieved September 12, 2018 from 
+http://www.ueq-online.org/ 
+6. 
+Boris Israel. 2013. Potenziale eines kontaktanalo-
+gen Head-up Displays für den Serieneinsatz. Doc-
+toral Dissertation. Technical University of Munich, 
+Munich, GER. 
+7. 
+Philipp Mayring and Thomas Fenzl. 2014. Qualita-
+tive Inhaltsanalyse. In Handbuch Methoden der 
+empirischen Sozialforschung, Nina Baur and Joerg 
+Blasius (eds.). Springer VS, Wiesbaden, GER, 543-
+556. https://doi.org/10.1007/978-3-531-18939-
+0_38 
+8. 
+Wolfgang Narzt, Gustav Pomberger, Alois Ferscha, 
+Dieter Kolb, Reiner Mueller, Jan Wieghardt, Horst 
+Hoertner, and Christopher Lindinger. 2006. Aug-
+mented reality navigation systems. Universal Ac-
+cess in the Information Society 4, 3: 177-187. 
+https://doi.org/10.1007/s10209-005-0017-5 
+9. 
+Annie Pauzié. 2008. A method to assess the driver 
+mental workload: The driving activity load index 
+(DALI). IET Intelligent Transport Systems 2, 4: 
+315-322. https://doi.org/10.1049/iet-its:20080023 
+10. Lisa Pfannmüller. 2017. Anzeigekonzepte für ein 
+kontaktanaloges Head-up Display. Doctoral disser-
+tation. Technical University of Munich, Munich, 
+GER. 
+11. Matthias Schneider, Anna Bruder, Marc Necker, Tim 
+Schluesener, Niels Henze, and Christian Wolff. 
+2019. A real-world driving experiment to collect ex-
+pert knowledge for the design of AR HUD naviga-
+tion that covers less. In Mensch und Computer 
+2019 – Workshopband, Wolf and Steinicke (eds.). 
+Bonn: Gesellschaft für Informatik e.V..  
+ 
+ 
+AutomotiveUI '19 Adjunct, September 21-25, 2019, Utrecht, Netherlands
+362
+
+

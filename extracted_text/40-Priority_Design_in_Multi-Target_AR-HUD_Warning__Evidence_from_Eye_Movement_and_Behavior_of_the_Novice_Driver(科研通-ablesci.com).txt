@@ -1,0 +1,1721 @@
+--- Page 1 ---
+International Journal of Human–Computer Interaction
+ISSN: 1044-7318 (Print) 1532-7590 (Online) Journal homepage: www.tandfonline.com/journals/hihc20
+Priority Design in Multi-Target AR-HUD Warning:
+Evidence from Eye Movement and Behavior of the
+Novice Driver
+Wanting Chen, Chenyang Song, Jing Luo, Zilong Xu, Hongting Li, Shu Ma,
+Qijun Wang & Zhen Yang
+To cite this article: Wanting Chen, Chenyang Song, Jing Luo, Zilong Xu, Hongting Li, Shu Ma,
+Qijun Wang & Zhen Yang (2025) Priority Design in Multi-Target AR-HUD Warning: Evidence from
+Eye Movement and Behavior of the Novice Driver, International Journal of Human–Computer
+Interaction, 41:17, 10923-10939, DOI: 10.1080/10447318.2024.2439572
+To link to this article:  https://doi.org/10.1080/10447318.2024.2439572
+Published online: 10 Dec 2024.
+Submit your article to this journal 
+Article views: 354
+View related articles 
+View Crossmark data
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=hihc20
+
+--- Page 2 ---
+Priority Design in Multi-Target AR-HUD Warning: Evidence from Eye Movement 
+and Behavior of the Novice Driver
+Wanting Chena, Chenyang Songa, Jing Luoa, Zilong Xua, Hongting Lib, Shu Maa 
+, Qijun Wanga, and  
+Zhen Yanga 
+aDepartment of Psychology, Zhejiang Sci-Tech University, Hangzhou, China; bInstitute of Applied Psychology, College of Education, Zhejiang 
+University of Technology, Hangzhou, China 
+ABSTRACT 
+Technically, Augmented Reality Head-Up Display (AR-HUD) technology can augment multiple tar­
+gets in the scene. However, existing literature predominantly focuses on scenarios involving sin­
+gle-target augmentation. The understanding of multi-target augmentation and studies exploring 
+effective presentation methods under such conditions are notably scarce. This study evaluates the 
+efficacy of integrating color-based warning priority design across multi-target scenarios. 45 
+Participants in different warning modes (Equivalent, Hierarchical, and Baseline) view AR-aug­
+mented driving videos and respond to risky targets. Their behavioral performance and eye-track­
+ing data are compared. Findings indicate that the equivalent warning mode, lacking in priority 
+design, adversely affects driver performance, prolongs reaction times, and elevates saccade counts, 
+and gaze entropy. Conversely, the hierarchical warning mode significantly ameliorates driver reac­
+tion times and the time to first fixation, while also reducing saccade counts and gaze entropy, 
+demonstrating the efficacy of the warning priority design. The findings provide insight into the 
+design of AR-HUD with multi-target augmentation.
+KEYWORDS 
+AR-HUD; multi-target 
+augmentation; target 
+number; warning priority 
+design   
+1. Introduction
+Vehicles equipped with Augmented Reality Head-up Display 
+(AR-HUD) technology are increasingly entering the market 
+(Coleman Merenda et al., 2018). AR-HUD is an advanced 
+driving assistance system that integrates real and virtual ele­
+ments within the driver’s line of sight (Karatas et al., 2020), 
+facilitating the direct perception of artificial information 
+superimposed on physical reality (Kim et al., 2016). A key 
+advantage of AR-HUD is its ability to align virtual warnings 
+with the direction and location of hazards (Yontem et al., 
+2021), communicate spatially relevant information about 
+potential dangers (Currano et al., 2021), direct drivers’ 
+attention to critical situations (Kim et al., 2016; 2018), and 
+enhance safety by avoiding potential risks without diverting 
+the driver’s gaze from the road (Herbert et al., 2017; Minh 
+Tien et al., 2016). Studies have demonstrated the effective­
+ness of AR warnings, such as improving situational and spa­
+tial awareness (e.g., Kim & Hwang, 2016; Ng-Thow-Hing 
+et al., 2013) and reducing response times (e.g., Wang et al., 
+2023), through visual cues.
+However, most of these studies focus on scenarios with a 
+single risky target (Wu et al., 2022), while more complex sit­
+uations involving multiple road users and objects (i.e., 
+multi-target scenarios) are rarely addressed. In reality, driv­
+ing often involves a multitude of objects in the scene (Faure 
+et al., 2016), and the typical semantic segmentation used in 
+Advanced Driver Assistance Systems (ADAS) assumes that 
+all objects are equally important and aims to segment them 
+accurately (Chen et al., 2019). Based on existing detection 
+algorithms, such as Deep Convolutional Neural Networks 
+(DCNNs), AR-HUD systems would augment all target infor­
+mation detected by vehicle sensors and analytical systems 
+(Currano et al., 2021). Current prototype interfaces for in- 
+vehicle AR-HUDs also predominantly utilize multi-target 
+augmentation. It is conceivable that future AR-HUD interfa­
+ces will augment multiple targets in the driving environ­
+ment, including pedestrians, vehicles, traffic lights, and street 
+signs within a certain range, rather than focusing solely on 
+risky targets.
+Compared to single-target augmentation, multi-target 
+augmentation could have a significantly different impact on 
+drivers’ visual patterns and situational awareness. While it 
+may aid in focusing attention on relevant driving-related 
+targets, it could also distract drivers and potentially diminish 
+the effectiveness of AR warnings. In particular, novice driv­
+ers often have difficulty scanning the area ahead effectively 
+(Underwood et al., 2003) and have limited attentional 
+resources (van Leeuwen et al., 2015), so multi-target aug­
+mentation may have a more pronounced effect on them. It 
+is crucial to explore the potential trade-offs of multi-target 
+augmentation and to investigate how to effectively present 
+CONTACT Qijun Wang 
+wqj-zstu@zstu.edu.cn; Zhen Yang 
+yangzhen@zstu.edu.cn 
+Department of Psychology, Zhejiang Sci-Tech University, Qiantang 
+District, Hangzhou, Zhejiang, China 
+ß 2024 Taylor & Francis Group, LLC
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+2025, VOL. 41, NO. 17, 10923–10939 
+https://doi.org/10.1080/10447318.2024.2439572
+
+--- Page 3 ---
+AR warnings that assist these drivers in identifying risky tar­
+gets amidst a multi-target environment.
+1.1. Multi-target augmentation in AR-HUD and potential 
+impacts
+The integration of AR-HUD with multi-target augmentation 
+may have a profound influence on drivers’ visual attention 
+and situational awareness. On the one side, the multi-target 
+augmentation in AR-HUD can, to a certain extent, help 
+drivers allocate their visual attention to recognize numerous 
+targets in the scene. Specifically, driving is inherently a com­
+plex activity, necessitating the perception of various traffic 
+targets (Chung et al., 2022; Herbert et al., 2017). 
+Pedestrians, vehicles, and traffic signals (e.g., road signs and 
+traffic lights), are crucial targets for aiding in the compre­
+hension of road conditions (Chen et al., 2019; Herbert et al., 
+2017). A primary task for drivers is to detect, recognize, and 
+allocate attention to these pertinent targets (Arexis et al., 
+2017; Colley et al., 2021). Neglecting to do so can lead to 
+oversight of route details or even collisions with other 
+vehicles or pedestrians (Luo et al., 2008). Scholars have pro­
+posed that the user interface of Advanced Driver Assistance 
+Systems (ADAS) should alert drivers to significant signs and 
+obstacles by sensing external scene targets (Kastner et al., 
+2011; Wu et al., 2022). Consequently, the integration of AR- 
+HUD with object annotation technology serves to enhance 
+the visual perception of most targets within a specific area 
+(Cavanagh & Alvarez, 2005; Ohn-Bar & Trivedi, 2017). By 
+emphasizing relevant objects and guiding the gaze in a man­
+ner that respects the process of information acquisition 
+(Eyraud et al., 2015), this approach facilitates drivers’ per­
+ception of scene elements. Prior research has already proto­
+typed an AR-HUD interface that highlights traffic objects 
+like vehicles, pedestrians, and road signs, confirming its effi­
+cacy in enhancing situational awareness (Colley et al., 2021).
+However, multi-target augmentation in AR-HUD interfa­
+ces could also negatively impact visual attention and situ­
+ational awareness. Human attention capacity is inherently 
+limited (Lee et al., 2024), and it is not feasible to attend to 
+every simultaneous target (Broadbent, 1957; Sanocki et al., 
+2015). Multiple targets may compete for attention, increase 
+the cognitive load (Merenda et al., 2018; Zhang & Lee, 
+2021), and hinder the allocation of attention to critical tar­
+gets (Currano et al., 2021; Lee et al., 2024). Recognizing crit­
+ical objects surrounded by numerous objects can be 
+challenging (Albonico et al., 2018; Chaney et al., 2014; Levi, 
+2008). Traditional psychological studies have shown that the 
+presence of nearby objects affects the identification of criti­
+cal objects (Xia et al., 2020), and the perception of a target 
+can be significantly compromised in the presence of similar 
+flanking elements (Chicherov & Herzog, 2015; Levi, 2008; 
+Pichlmeier & Pfeiffer, 2021; Sanocki et al., 2015). When 
+employing multiple AR graphics to augment various targets 
+in the driving environment, such as pedestrians, vehicles, 
+traffic signals, and road signs, these graphics act as multiple 
+information sources. While AR-HUD is designed to capture 
+attention, an increase in the number of augmented targets 
+could exacerbate attention competition. For instance, Muela 
+et al. (2021), using two bounding boxes to simultaneously 
+augment two types of hazards (i.e., potential and developing 
+hazards), found that the presence of dual targets significantly 
+impaired drivers’ performance. Similarly, Kim et al. (2016) 
+augmented all detected pedestrians within the sensor’s field 
+and observed that drivers needed to exert additional effort 
+to discern dangerous pedestrians among cluttered bounding 
+boxes. It has been suggested that an overload of information 
+in the line of sight could impair driving performance 
+(Tretten et al., 2009). In particular, there is a consistent dis­
+crepancy in distance between the projected AR graphics and 
+real-world objects when utilizing an AR-HUD. The distance 
+of AR graphics remains constant, whereas real-world objects 
+are situated at varying distances. This discrepancy can 
+impact the eye’s optical power, leading to an accommoda­
+tion-convergence conflict (Kang et al., 2019, Ng-Thow-Hing 
+et al., 2013). Prior research indicates that accommodation- 
+convergence conflict correlates with visual fatigue (Shibata 
+et al., 2011) and diminished attentiveness (Kang et al., 
+2019). For instance, Kang et al. (2019) demonstrated that 
+the distance disparity between AR images and real objects 
+affects the accuracy of object recognition. Consequently, we 
+hypothesize that when viewing multiple AR-augmented 
+graphics and external objects simultaneously, a driver’s vis­
+ual attention may be more significantly compromised than 
+when a single target is augmented, potentially increasing the 
+difficulty in recognizing critical targets.
+Overall, while some studies have examined the impact of 
+multiple AR graphics on visual attention and shown that an 
+increase in AR graphics can lead to perceived visual com­
+plexity (Currano et al., 2021; Lee et al., 2024), they have 
+largely focused on static screen-fixed graphics. It has been 
+suggested that dynamic stimuli may result in greater per­
+formance decrements than static stimuli in visual vigilance 
+tasks (Koelega et al., 1990). Given the dynamic and world- 
+fixed graphical nature of multi-target augmentation, these 
+dynamic AR graphics may have more pronounced effects on 
+visual attention than static AR graphics. Furthermore, in 
+dynamic driving contexts, the application of multi-target 
+augmentation, which includes pedestrians, vehicles, road 
+signs, and traffic lights, may impact drivers’ perception of 
+the significance of these environmental elements and their 
+overall situational awareness. Particularly, when environ­
+mental cues are ambiguous, individuals are required to per­
+form diagnostic procedures to ascertain the underlying 
+issues (Orasanu et al., 1993). The potential blurring effect of 
+such augmentation on situational awareness warrants further 
+investigation.
+1.2. Priority design in multi-target augmentation 
+condition
+The preceding discussion suggests that multi-target augmen­
+tation in AR-HUD can be a double-edged sword, particu­
+larly for novice drivers. Novice drivers often struggle with 
+identifying traffic targets (Koelega et al., 1990; van Leeuwen 
+et al., 2015), making multi-target augmentation a potentially 
+10924
+W. CHEN ET AL.
+
+--- Page 4 ---
+essential aid. However, these drivers also have limited spare 
+attentional resources (Duncan et al., 1991; van Leeuwen 
+et al., 2015), which may exacerbate the visual attention com­
+petition effects associated with multi-target augmentation. 
+Moreover, to a certain extent, the similarity in multi-target 
+augmentation can blur the significance of these pieces of 
+information. Without discerning the significance of various 
+pieces of information, individuals might erroneously believe 
+they are focusing on the most critical data (Endsley & 
+Endsley, 1995). In particular, novices may acquire less infor­
+mation due to their inability to differentiate between similar 
+inputs (Endsley & Endsley, 1995). Therefore, while sufficient 
+AR warnings were present in this condition, the difficulty in 
+determining their relevance to important goals ultimately 
+makes it difficult to focus on the most important one 
+promptly as well. Since situational awareness encompasses a 
+comprehensive understanding of all elements (Endsley & 
+Endsley, 1995; Teichmann & Motus, 2021), this could affect 
+drivers’ comprehension of the dynamic driving environment. 
+Improperly arranged additional information could over­
+shadow its potential benefits, especially in interfaces that 
+must support time-critical tasks (Beck et al., 2010). To 
+ensure the effectiveness of AR-HUD for the majority of 
+drivers, including novice drivers, we focus on exploring an 
+effective interface design from the perspective of multi-target 
+augmentation. We propose integrating the concept of warn­
+ing priority with multi-augmentation.
+The Intelligent Transport Systems (ITS) of the United 
+Nations Economic Commission for Europe (UNECE) has 
+clearly defined the concept of warning priority as the estab­
+lishment of relative importance among multiple pieces of 
+information and their ranking in the presentation emphasis. 
+It is undeniable that not all targets in the driving environ­
+ment are equally important (Chen et al., 2019; Ohn-Bar & 
+Trivedi, 2017). Wu et al. (2022) has delineated the impor­
+tance levels of driving-related targets based on the risk they 
+pose to driving, advocating for a high importance level for 
+targets that present a direct crash risk or induce serious traf­
+fic violations, and a medium importance level for those that 
+influence future driving decisions but do not pose an imme­
+diate crash risk. For instance, a road sign indicating a turn 
+is considered a medium-importance target; it may necessi­
+tate a prompt response from the driver, but missing this sig­
+nal does not necessarily result in dangerous consequences. 
+Multi-target augmentation involves world-fixed graphics, 
+which closely tie the nature of the warnings to the nature of 
+the targets themselves, facilitating the establishment of warn­
+ing priorities in the AR-HUD interface. Prior research has 
+suggested that advanced driver assistance systems should 
+provide drivers with alerts corresponding to their impor­
+tance (risk) levels, focusing more on risky targets closely 
+related to safety (Chen et al., 2019) to ensure that informa­
+tion is presented within the bounds of available attention 
+resources (Herbert et al., 2017; Pankok & Kaber, 2018). We 
+posit that a warning prioritization design, predicated on tar­
+get risk levels, can optimize the utilization of world-fixed 
+graphics in AR-HUDs. Such a design can enhance drivers’ 
+focus on critical driving information, particularly during 
+emergencies, by facilitating rapid identification of risky tar­
+gets and thereby mitigating the visual attention competition 
+induced by multiple targets. Concurrently, discerning critical 
+environmental cues is imperative for achieving a high level 
+of situational awareness (Endsley & Endsley, 1995). From a 
+design standpoint, the rational interpretation of presented 
+elements to clarify what requires the operator’s attention 
+and understanding is fundamental to enhancing situational 
+awareness (Endsley & Endsley, 1995). In this context, a 
+warning priority design that categorizes the importance of 
+warning graphics can aid drivers in comprehending the risk 
+levels among various warnings, preventing confusion over 
+ambiguous importance levels, and fostering situational 
+awareness, which is vital in the complex and dynamic driv­
+ing environment.
+Furthermore, concerning the aspect of the implementation 
+of warning priority, the ITS has advocated that high-priority 
+warnings can be distinguished from others by altering visual 
+characteristics. For example, This recommendation is sup­
+ported by conventional multi-target tracking studies, which 
+have found that a significant difference in the description 
+between the critical target and non-critical targets leads to 
+efficient search (Herbert et al., 2017), and that stimuli with 
+high visual saliency are prioritized for attentional selection in 
+cluttered scenes (Herbert et al., 2017; Jung et al., 2020). It has 
+been reported that visual separation between critical targets 
+and other elements, facilitated by surface features or semantic 
+information, can enhance tracking performance (Kamkar 
+et al., 2020; Wei et al., 2016). As such, color could be an 
+effective means as it can differentiate visual saliency and con­
+vey different semantic meanings. Some researchers have sug­
+gested that the most critical target could be presented in a 
+salient color to reduce the detrimental effects of clutter, as 
+color is a crucial factor in determining visual search efficiency 
+(Beck et al., 2010; Breslow et al., 2009; Rosenholtz et al., 
+2007). It is logical to use different colors to represent multiple 
+targets based on their importance (risk level) to the driving 
+task. The color contrast would aid drivers in identifying and 
+quickly focusing on the risky target among multiple AR 
+warnings.
+However, AR-HUD systems may encounter hue-shifting 
+issues due to ambient brightness, background color, and 
+other factors (Gabbard et al., 2022; Merenda et al., 2016). 
+The dynamic nature of AR graphics might also impact the 
+effectiveness of detecting warnings based on color differenti­
+ation. Therefore, while previous researchers have attempted 
+to use different colored AR bounding boxes for cueing dif­
+ferent types of targets (Muela et al., 2021), the effectiveness 
+of warning priority, differentiated by color, on visual alloca­
+tion still requires validation.
+1.3. Motivation
+In summary, as previous research on AR-HUD has predom­
+inantly focused on single-target augmentation scenarios, this 
+study endeavors to explore the significance of multi-target 
+augmentation and assess the efficacy of prioritization warn­
+ings differentiated by color within this context. Especially 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10925
+
+--- Page 5 ---
+for novice drivers, who frequently face difficulties in effect­
+ively scanning the forward area (Underwood et al., 2003), 
+tend to focus their attention within a limited scope 
+(Chapman et al., 2002), and are inclined to exhibit error- 
+prone search behaviors (Twisk, 1995), there is an urgent 
+need for real-time multi-target augmentation. However, their 
+constrained attentional resources (Kerruish et al., 2022), 
+inexperience (Xiang et al., 2024), and incapacity to accur­
+ately evaluate potential risks (Twisk, 1995) render them 
+more vulnerable to the impact of multiple AR warnings. 
+Therefore, this study also aims to provide valuable insights 
+from the perspective of novice drivers for the enhancement 
+of future AR-HUD interface designs.
+Additionally, while most existing research has concentrated 
+on behavioral metrics, there is a dearth of studies examining 
+the influence of AR-HUD interfaces on eye movement meas­
+ures. This study aims to delve into visual attention using a 
+broader range of eye-movement metrics, encompassing time 
+to first fixation, saccade count, and gaze entropy (both sta­
+tionary gaze entropy and gaze transition entropy). These 
+entropy metrics provide direct assessments of the overall dis­
+tribution of eye movements and the predictability of spatial 
+transitions (Krejtz et al., 2015), thereby reflecting the com­
+plexity of eye movements (Schieber & Gilland, 2008) and the 
+visual search strategies employed by participants (van 
+Maarseveen et al., 2018). By integrating gaze entropy with 
+conventional eye-tracking metrics, this study aims to augment 
+the findings of previous eye movement studies and enable a 
+quantitative analysis of variations in eye movement patterns 
+across different warning modalities.
+2. Method
+2.1. Participants
+Due to the limitations in G Power’s ability to handle mixed- 
+design analyses, an a priori power analysis was conducted 
+using MorePower 6 (Campbell & Thompson, 2012). The 
+analysis was set with a significance level of 0.05, a power of 
+0.8, and an effect size of 0.2. The findings suggested that a 
+total sample size exceeding 42 is necessary to achieve the 
+desired statistical power. Consequently, this study included 
+45 participants (23 males and 22 females), all of whom were 
+students from Zhejiang Sci-Tech University in Hangzhou, 
+China. The average age of the participants was 22.7 years 
+(SD ¼ 2.76). All participants reported having normal vision 
+or vision that was corrected to normal, and they all pos­
+sessed a valid Chinese driver’s license. The average driving 
+experience was 1065 kilometers and 2.7 years, respectively. 
+Written informed consent was obtained from each partici­
+pant, following the approved research protocol of the 
+Institutional Review Board at the Department of Psychology, 
+Zhejiang Sci-Tech University. Upon completion of the 
+experiment, all participants were compensated.
+2.2. Experimental equipment
+The experimental environment, as referred to Wang et al. 
+(2023), comprised a 72-inch high-definition liquid crystal 
+display (LCD) screen (Huayin Vision Technology Co., CN), a 
+desktop eye-tracking device (SMI iView Red-M, SensoMotoric 
+Instruments, Berlin, Germany) and a chin support. This 
+monitor, featuring a resolution of 1920 by 1080 pixels, served 
+as the medium for presenting driving video clips. The eye- 
+tracking device was capable of calibration at nine points, 
+ensuring recordings had a spatial error of less than 0.8 deg in 
+both x and y directions. It operates at a sampling rate of 
+120 Hz with a latency of less than 20 milliseconds. The sys­
+tematic error is 0.5 and the spatial resolution is 0.1. The 
+screen was positioned at a vertical distance of 1.7 meters from 
+the participants, equating to a visual angle of 41.64 by 24.15 
+degrees. The eye tracker was situated on a table, 65 centi­
+meters distant from the participants. A chin support was used 
+to stabilize participants’ heads to eliminate movement (Wang 
+et al., 2016). Furthermore, a keyboard linked to the host com­
+puter facilitated the collection of behavioral response times. 
+The configuration of the experimental setup is depicted in 
+Figure 1. In addition, the scenarios depicted in the video clips 
+were constructed using a driving simulator, which incorpo­
+rated driving simulator software (STISIMDRIVE M100K, Sys­
+tems Technology, Inc., Hawthorne, CA, USA), a steering 
+wheel, an accelerator, and a brake pedal (Logitech MOMO, 
+Newark, CA, USA). The driving simulation software was used 
+to build the driving scenarios, while the steering wheel, accel­
+erator, and brake pedals were used to control the ego-vehicle’s 
+movement within the scenario when recording videos.
+2.3. Materials
+Previous research has demonstrated the efficacy of brief 
+video clips in assessing situation awareness in driving studies 
+(Currano et al., 2021) and in examining drivers’ hazard per­
+ception (Crundall et al., 2012). Crundall and Underwood 
+(2011) have highlighted the advantage of this method, 
+wherein each participant is exposed to identical traffic con­
+ditions. To maintain experimental control, we elected to 
+emulate prior studies by utilizing video clips as the experi­
+mental stimuli. We initially constructed driving scenarios 
+using medium-fidelity driving simulation software, which 
+facilitated a first-person perspective and a dynamic driving 
+environment. Subsequently, an operator maneuvered a 
+vehicle through a pre-constructed driving scenario and 
+recorded the corresponding driving footage using the soft­
+ware. During the drive, the operator controlled the vehicle’s 
+movements through the steering wheel, accelerator, brake 
+pedal, and other devices within the control system, executing 
+operations such as acceleration and deceleration at appropri­
+ate moments. This procedure was primarily designed to pro­
+vide a more authentic and immersive driving experience. A 
+total of 20 videos were developed, each depicting a six-lane 
+highway with traffic flowing in both directions. Vehicles, 
+pedestrians, traffic lights, and road signs, including direc­
+tional and speed limit indicators, were integrated into the 
+highway scenes, with all elements appearing at random 
+intervals. In each video, the vehicle is shown navigating the 
+highway, encountering other vehicles, pedestrians, road 
+signs, and traffic lights.
+10926
+W. CHEN ET AL.
+
+--- Page 6 ---
+Drawing from the study by Cheng et al. (2023), we incor­
+porated two types of risk targets: a leading vehicle that sud­
+denly brakes and a pedestrian that suddenly crosses the 
+road. To explore the potential impact of varying multi-aug­
+mentation conditions (e.g., five or two targets), on the detec­
+tion of the risky target, we manipulated the number of 
+concurrent targets within the scenario. This was achieved by 
+controlling the number of additional targets present simul­
+taneously with the risky target. We selected traffic lights, 
+road signs, other vehicles, or pedestrians at random to serve 
+as these additional targets. We devised four distinct risky 
+target event scenarios: (1) a scenario with five targets featur­
+ing a braking leading vehicle as the risky target, (2) a scen­
+ario with five targets featuring a crossing pedestrian as the 
+risky target, (3) a scenario with two targets featuring a brak­
+ing leading vehicle as the risky target, and (4) a scenario 
+with two targets featuring a crossing pedestrian as the risky 
+target. To enhance the realism of the driving scenarios, we 
+also included other unpredictable events, such as the vehicle 
+speeding or running a red light. Each video randomly fea­
+tured 0 to 3 of these unpredictable events, including pedes­
+trian collisions, rear-end collisions, speeding, and red-light 
+violations, with the timing of these events determined ran­
+domly. Following the methodology of Wang et al. (2023), 
+each video was set to a duration of 30 seconds.
+Subsequently, we introduced different AR graphics into 
+the 20 videos to create two distinct AR warning modes: 
+Equivalent warning mode and Hierarchical warning mode. 
+Equivalent warning modes represent the case of no priori­
+tization design, and hierarchical warning modes represent 
+the case of prioritization design. Given that both yellow and 
+red are appropriate for conveying warnings (Friedrich & 
+Vollrath, 2022), and red signifies higher urgency (Friedrich 
+& Vollrath, 2022), yellow was designated as the warning 
+color for the foundational multi-target augmentation 
+(equivalent warning mode), while red or yellow was 
+employed based on the target’s risk level in the hierarchical 
+warning mode. Both colors were specified in RGB format, 
+with red defined as [255, 0, 0] and yellow as [255, 255, 0]. 
+Bounding box graphics, known for their effectiveness in AR 
+warnings, were utilized in this experiment. In the experi­
+ment, we referred to the definition by Wu et al. (2022), cate­
+gorizing objects within a certain range of the ego-vehicle as 
+medium importance level, while objects within the same 
+range that pose collision risks are classified as high impor­
+tance level. Since time headway is an important variable in 
+the distance-keeping algorithms in driving assistant system 
+(Siebert et al., 2014) and the National Road Administration 
+of Sweden recommends maintaining a time headway of 
+three seconds (Vogel, 2003), we defined a three-second time 
+headway on the longitudinal distance as the range threshold 
+to trigger the AR warning. To be more specific, we initially 
+employed a time headway threshold to trigger AR warnings. 
+An AR warning is immediately activated when an object’s 
+time headway relative to the ego-vehicle is less than or equal 
+to three seconds. In the equivalent warning mode, all objects 
+Figure 1. Illustration of video playback example and demonstration of the laboratory setup.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10927
+
+--- Page 7 ---
+meeting the trigger conditions are marked with a yellow AR 
+bounding box, without distinguishing between those that 
+pose collision risks. Building on this, in the hierarchical 
+warning mode, the color of the AR bounding box is deter­
+mined based on both the object’s time headway and colli­
+sion risk. If an object is within 3 seconds of the vehicle but 
+does not pose a collision risk during this period, the system 
+uses a yellow AR bounding box to alert the driver to pay 
+attention 
+without 
+necessitating 
+immediate 
+action. 
+Conversely, if an object is approximately 3 seconds away 
+from the vehicle and poses a collision risk during this 
+period, the system employs a red AR bounding box to warn 
+the driver to take action. During this process, leveraging the 
+adjustable nature of the simulated scenario, to ensure the 
+reasonable implementation of the warning system, we pre- 
+controlled the position, distance, and motion parameters of 
+the corresponding objects in the scene, thereby ensuring 
+that only preset crossing pedestrians and suddenly braking 
+vehicles pose collision risks within this duration in the driv­
+ing scenario. Consequently, the AR bounding box is 
+designed to highlight targets approaching the vehicle within 
+roughly three seconds, with its size adjusted according to 
+the dimensions of the target in the video. The unaltered 
+video clips served as the baseline for comparative analysis. 
+Figures 2 and 3 illustrate examples of the different warning 
+modes applied to the two types of risky targets in scenarios 
+with five or two target numbers.
+2.4. Experimental design
+A 3  2 mixed design was manipulated in the present 
+experiment. The independent variables comprised the warn­
+ing mode (with levels: Equivalent warning, Hierarchical 
+warning, and Baseline) as a between-subjects factor, and the 
+target number (with levels: five targets and two targets) as a 
+within-subjects factor.
+The warning mode was operationalized across three dis­
+tinct conditions: equivalent warning, hierarchical warning, 
+and baseline. In the equivalent warning condition, a uniform 
+yellow AR bounding box was employed to alert participants 
+to targets in the scene, irrespective of their risk level, pri­
+marily to examine the influence of multi-target augmenta­
+tion. Conversely, the hierarchical warning condition utilized 
+varying colors to distinguish warnings based on the targets’ 
+risk levels, primarily to assess the efficacy of warning priori­
+tization. The baseline condition was devoid of any AR warn­
+ings, serving as a control for comparison.
+The target number refers to the total count of targets pre­
+sent in the scenario at the time the risky target emerges. 
+Prior research studies of multiple object tracking (MOT) 
+suggest that individuals can track up to four to five identical 
+targets simultaneously (Beck et al., 2010; Cavanagh & 
+Alvarez, 2005; Hy€on€a et al., 2019), but participants exhibit 
+higher rates of perceptual error and higher response latency 
+when the number of tracked objects is five (Pylyshyn & 
+Storm, 1988). Furthermore, when the tracking targets are 
+changed to targets with distinct features in studies of mul­
+tiple identity tracking (MIT), it suggests that an individual’s 
+ability to track simultaneously may be limited to two differ­
+ent targets (Horowitz et al., 2007; Hy€on€a et al., 2019). A 
+prior study confirmed that when it comes to tracking the 
+features and location of targets, participants can track the 
+number of targets of approximately 1.6 items (Hy€on€a et al., 
+2019). Given that the main thrust of the study was to 
+explore the effects of multiple target augmentation, we com­
+bine the results of the MOT and MIT studies, as well as the 
+Figure 2. The equivalent warning modes were examined in the driving simulator study to investigate the impact of multi-target augmentation. Note: We created 
+four risky scenarios based on target numbers and risky target types (i.e., risky target events).
+10928
+W. CHEN ET AL.
+
+--- Page 8 ---
+complexity and dynamics of the driving scenario, and 
+thereby suspect two or five targets presented simultaneously 
+in the driving scenario can serve as a key entry point for 
+target numbers. It can realistically reflect an individual’s vis­
+ual attention when confronted with multiple targets. 
+Moreover, a previous study examining the effects of AR 
+graphic numbers on vision similarly used two and five AR 
+graphic numbers as extreme levels as well (Lee et al., 2024). 
+Eventually, in the experiment, the target number in the risky 
+driving scenario was set to two levels: two targets and five 
+targets, respectively.
+The dependent variables encompassed both behavioral 
+performance and eye-tracking data. Behavioral performance 
+metrics included response rate and reaction time. However, 
+the response rate was omitted from the results due to ceiling 
+effects observed in subsequent analyses. Reaction time was 
+calculated as the interval between the emergence of the risk 
+target and the moment participants provided feedback upon 
+detecting the risk (Cheng et al., 2023). Eye-tracking data 
+analysis focused on time to first fixation (TFF), saccade 
+count, and gaze entropy. Gaze entropy, which includes sta­
+tionary gaze entropy (Hs) and gaze transition entropy (Ht), 
+is an appropriate measure for dynamic eye movement char­
+acteristics (Harezlak et al., 2019). The definitions of eye 
+movement variables are detailed in Table 1.
+2.5. Procedure and tasks
+Before their initial visit, informed consent was obtained from 
+all participants. Subsequently, participants were assigned to 
+different warning modes by the experimenter, who also fami­
+liarized them with the warning system and the tasks involved, 
+and assisted in calibrating their eye movements. Throughout 
+the formal experiment, participants in all three groups were 
+directed to view the driving video simulations and to 
+immerse themselves in the role of the driver. Participants 
+were instructed to promptly press a button upon detecting an 
+unpredictable event, such as: (1) the vehicle speeding, (2) the 
+vehicle running a red light, (3) a pedestrian crossing the road, 
+or (4) the leading vehicle braking. The inclusion of the first 
+two events was strategic to mitigate the potential for partici­
+pants to react solely based on anticipatory effects (Wang 
+et al., 2022).
+In total, 24 events were distributed randomly across the 
+20 driving video simulations, with the critical risky target 
+events—namely, the pedestrian crossing and the leading 
+vehicle braking—each occurring four times. During this pro­
+cess, the background program recorded participants’ key­
+stroke reactions in real time, while the desktop eye-tracking 
+device concurrently captured the drivers’ scanning behav­
+iors. The participants’ simple push-button responses to risky 
+targets served as a metric for their corresponding hazard- 
+response abilities (Crundall et al., 2012). All 20 videos were 
+programmed to play in a randomized sequence. The sche­
+matic diagram of the experimental paradigm is depicted in 
+Figure 1(a). Once all videos had concluded, demographic 
+information was collected from participants across the three 
+groups. The detailed procedure is illustrated in Figure 4.
+2.6. Eye-tracking data processing
+Eye-tracking data is examined with the software package 
+SMI BeGaze3.2.28. Exclusion criteria led to removing three 
+participants from each experimental group due to an eye- 
+tracking ratio that fell below the 80% threshold, leaving a 
+total of 42 participants (22 males, 20 females) for analysis. 
+Figure 3. The hierarchical warning modes were examined in the driving simulator study.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10929
+
+--- Page 9 ---
+The primary eye movement metrics collected during this 
+experiment include time to first fixation, saccade count, and 
+gaze entropy. During the eye movement data analysis, to 
+obtain the driver’s time to first fixation on the risky target, 
+we first sketch the dynamic area of interest (AOI) related to 
+the risky target according to the position and size of the AR 
+bounding box which cues the risky target in each video. The 
+dynamic AOI is synchronized with the AR warning graph­
+ics’ dimensions and orientation by adjusting the keyframes 
+within the BeGaze software. Considering the three-second 
+interval from the risky target event’s onset to the collision in 
+the video, the dynamic AOI was configured to persist for 
+the same duration. That is, the dynamic AOI is consistent 
+with the AR graphics in each video that suggest risky tar­
+gets. We then identify the moment the first fixation entered 
+the dynamic AOI and calculate the corresponding time to 
+the first fixation. The standard settings of a minimum dur­
+ation of 80 milliseconds and a maximal dispersion of 100 
+pixels were used to define fixations. Besides, a saccade is 
+defined as an eye-movement event occurring between the 
+latest and preceding blink or fixation. We calculate the sac­
+cade count in the time period from the onset of the risky 
+target event to the participants’ key press. Lastly, to assess 
+the entropy of the eye movement time series, we collected 
+participants’ fixation coordinates in the duration from the 
+emergence of the risky target to the participants’ key press. 
+These fixation coordinates were partitioned into a spatial 
+bin of 144 by 90 pixels for the calculation of stationary gaze 
+entropy and gaze transition entropy. The calculation formula 
+of gaze entropy is referred to the Table 1. This strategy is 
+suitable for the formation of state spaces across the visual 
+field, leading to the production of representative transition 
+distributions (Shiferaw et al., 2018).
+3. Result
+The experimental data were analyzed utilizing IBM SPSS 
+Statistics version 26. A significance level of 0.05 was estab­
+lished for all statistical analyses. Initially, we attempted to 
+compute the results using a repeated measures analysis of 
+variance (ANOVA) with a general linear model (GLM). 
+However, this analysis revealed a bias in the residuals, indi­
+cating that the dependent variables did not meet the 
+assumptions necessary for the application of general linear 
+models. Furthermore, given the missing data and the 
+repeated measures, treating individual subjects as random 
+effects was deemed more appropriate. Consequently, we 
+conducted the data analysis using generalized linear mixed 
+models (GLMM), with warning modes and target numbers 
+as fixed effects, and individual subjects as random effects. 
+GLMM integrates the characteristics of linear mixed models, 
+which include random effects, and generalized linear mod­
+els, which manage non-normal data through the use of link 
+functions and exponential families (Bolker et al., 2009; Lo & 
+Andrews, 2015). It is recognized as the optimal analytical 
+tool for non-normal data involving random effects (Bolker 
+et al., 2009). The effects and interactions of each predictor 
+were assessed by examining the model effects and estimated 
+marginal means. These estimated marginal means were 
+employed to evaluate the impact of warning modes across 
+various conditions, with the Bonferroni correction applied 
+for post-hoc testing.
+Table 1. Definitions of eye-tracking measures.
+Metric
+Definition
+Time to first fixation (TFF)
+Time to first fixation (TFF) was defined as the time it took following the onset of the risky target event to first fixate on the 
+risky target (Lai et al., 2013; Vervoort et al., 2013). A low number reflects an early fixation on the risky target, and a 
+higher number represents a later fixation (Crundall et al., 2012).
+Saccade count
+The total number of saccades counted within the specific duration (i.e., the duration from the appearance of the risky target 
+to the keystroke response) (Lai et al., 2013). The high saccade count reflected an extensive search (Kotval & Goldberg, 
+1998).
+Stationary gaze entropy (Hs)
+Stationary gaze entropy is a method in which Shannon’s entropy Equation (1) is applied to the probability distribution of 
+fixation coordinates to calculate the average level of uncertainty in the spatial distribution of a sequence of fixations 
+generated in a given timeframe (Shiferaw et al., 2018). 
+HSðxÞ ¼ −Pn
+i¼1 pi
+ð Þlog2ðpiÞ (1) 
+Here HS is entropy for a given set x (time period from the risky target event trigger to participants’ key press), i is the 
+number of state spaces of each fixation in x, n is the total number of fixations in x, and pi is the proportion of fixations 
+landing in a given state space (Goodridge et al., 2024).
+Gaze transition entropy (Ht)
+Gaze transition entropy, based on the conditional entropy Equation (2) and Markov chain matrices (Shiferaw et al., 2018), is 
+to measure the predictability of visual scanning patterns (Shiferaw et al., 2018). 
+HtðxÞ ¼ −Pn
+i¼1 pi
+Pn
+j¼1 pði, jÞlog2pði, jÞ (2) 
+Where pi is as described in stationary gaze entropy, and pði, jÞ is the probability of transitioning from state i to state j in one 
+fixation (Devlin et al., 2022). Higher Ht suggests less structured or a more random pattern of scanning behavior (Shiferaw 
+et al., 2018).
+Figure 4. Experiment procedure.
+10930
+W. CHEN ET AL.
+
+--- Page 10 ---
+The mean and standard deviations (SD) for all dependent 
+variables are presented in Table 2, while the effects of warn­
+ing modes under different target number conditions on all 
+dependent variables are detailed in Table 3.
+3.1. Reaction time
+The warning mode had a significant main effect on reaction 
+time (F(2, 350) ¼ 66.732, p < 0.001). The equivalent warning 
+mode was accompanied by the longest reaction time and 
+was significantly higher than the remaining two modes 
+(Hierarchical: p < 0.001; Baseline: p ¼ 0.002). The use of the 
+hierarchical warning mode was relatively effective in short­
+ening the reaction time, as evidenced by a significantly 
+shorter reaction time than the remaining modes (ps < 0.001). 
+However, We did not find an effect of the target number on 
+the driver’s reaction time (F(1, 350) ¼ 0.021, p ¼ 0.885).
+While there was no significant interaction between the 
+warning mode and target number (F(2, 350) ¼ 1.327, 
+p ¼ 0.267), we found that whether there were five or two 
+targets in the scene, the equivalent warning resulted in sig­
+nificantly longer response times than the hierarchical warn­
+ing (ps < 0.001) and baseline (in five-target condition: 
+p ¼ 0.039; in two-target condition: p ¼ 0.012) respectively. 
+The hierarchical warning was also accompanied by the 
+shortest response times in both conditions (ps < 0.001). The 
+detailed results can be found in Figure 5.
+3.2. Eye tracking data
+3.2.1. Time to first fixation (TTF)
+The warning mode had a significant main effect on the time 
+to first fixation (F(2, 302) ¼ 6.554, p ¼ 0.002). The use of 
+the hierarchical warning mode can effectively shorten the 
+time to first fixation, resulting in a significantly shorter 
+latency than the equivalent mode (p ¼ 0.002) and the base­
+line (p ¼ 0.004). However, the equivalent warning mode did 
+not reach a significant difference with the baseline 
+(p ¼ 0.796). There was a significant main effect of the target 
+number on the time to first fixation (F(1, 302) ¼ 31.822, 
+p < 0.001). Drivers showed a longer time to first fixation 
+under the five-target condition.
+No significant interaction was reported between warning 
+modes and the target number (F(2, 302) ¼ 1.991, p ¼ 0.138). 
+The result showed that in the two-target condition, the hier­
+archical warning resulted in a significantly lower time to 
+first fixation than the equivalent warning (p ¼ 0.002) and the 
+baseline (p ¼ 0.002).
+3.2.2. Saccade count
+The warning mode had a significant main effect on the sac­
+cade count (F(2, 288) ¼ 14.120, p < 0.001). The equivalent 
+warning mode was associated with the highest saccade count, 
+compared to the hierarchical warning mode (p < 0.001) and 
+the baseline (p ¼ 0.033). And the hierarchical warning mode 
+Table 2. Means and standard deviations (SD) of all variables for different warning modes under different target number conditions.
+Equivalent Warning
+Hierarchical Warning
+Baseline
+Reaction Time (ms)
+Five targets
+1707.08 (494.87)
+1083.10 (454.63)
+1533.22 (522.31)
+Two targets
+1568.64 (561.90)
+983.75 (424.50)
+1300.13 (483.86)
+Time to First Fixation  (ms)
+Five targets
+1346.24 (744.37)
+1050.84 (753.24)
+1263.37 (819.18)
+Two targets
+998.86 (726.04)
+851.18 (770.97)
+1053.09 (724.06)
+Saccade Count
+Five targets
+4.87 (2.78)
+3.04 (1.84)
+3.85 (2.28)
+Two targets
+3.98 (2.20)
+2.86 (2.16)
+3.63 (2.35)
+Hs
+Five targets
+1.92 (0.83)
+1.31 (0.81)
+1.63 (0.94)
+Two targets
+1.69 (0.89)
+1.10 (0.91)
+1.51 (1.07)
+Ht
+Five targets
+0.30 (0.16)
+0.18 (0.19)
+0.24 (0.18)
+Two targets
+0.26 (0.18)
+0.15 (0.19)
+0.24 (0.19)
+Note: Hs means stationary gaze entropy; Ht means gaze transition entropy.
+Table 3. Effects of warning modes and target numbers on all dependent variables.
+Dependent variables
+F
+df1
+df2
+p
+Behavior Performance
+Reaction Time
+Warning mode
+66.732
+2
+350
+<0.001***
+Target number
+0.021
+1
+350
+0.885
+Warning mode  Target number
+1.327
+2
+350
+0.267
+Visual Performance
+Time to First Fixation
+Warning mode
+6.554
+2
+302
+0.002**
+Target number
+31.822
+1
+302
+<0.001***
+Warning mode  Target number
+1.991
+2
+302
+0.138
+Saccade Count
+Warning mode
+14.120
+2
+288
+<0.001***
+Target number
+1.763
+1
+288
+0.185
+Warning mode  Target number
+1.251
+2
+288
+0.288
+Hs
+Warning mode
+21.067
+1
+285
+<0.001***
+Target number
+0.878
+1
+285
+0.350
+Warning mode  Target number
+1.502
+2
+285
+0.225
+Ht
+Warning mode
+21.629
+2
+285
+<0.001***
+Target number
+0.568
+1
+285
+0.452
+Warning mode  Target number
+1.868
+2
+285
+0.156
+Note: Hs means stationary gaze entropy; Ht means gaze transition entropy.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10931
+
+--- Page 11 ---
+achieved a lower saccade count than the baseline (p ¼ 0.001). 
+There was no significant main effect of the target number on 
+the saccade count (F(1, 288) ¼ 1.763, p ¼ 0.185).
+No significant interaction was reported between warning 
+modes and the target number (F(2, 288) ¼ 1.251, p ¼ 0.288). 
+We further analyzed the result and found that in the five-tar­
+get condition, the equivalent warning was accompanied by a 
+higher saccade count than the hierarchical warning mode 
+(p < 0.001) and the baseline (p ¼ 0.007), and the driver in the 
+hierarchical warning mode has a marginally lower saccade 
+count than baseline group (p ¼ 0.080). In the two-target 
+condition, the hierarchical warning resulted in a significantly 
+lower saccade count than the equivalent warning mode 
+(p ¼ 0.001) and the baseline (p ¼ 0.004). Figure 6 shows the 
+results of time to first fixation and the saccade count of dif­
+ferent warning modes in different target number conditions.
+3.2.3. Stationary gaze entropy (Hs)
+There was a significant main effect of the warning mode on 
+the Hs (F(2, 285) ¼ 21.067, p < 0.001). Driver showed a 
+higher Hs in the equivalent waring mode than the hierarch­
+ical warning mode (p < 0.001) and the baseline (p ¼ 0.046), 
+Figure 5. Effects of warning modes on reaction time under different target number conditions. Notes: þp  0.1, p  0.05, p  0.01, p  0.001.
+Figure 6. Effects of warning modes on time to first fixation and the saccade count in different target number conditions. Notes: þp  0.1, p  0.05, p  0.01, 
+p  0.001.
+10932
+W. CHEN ET AL.
+
+--- Page 12 ---
+and had the lowest Hs in the hierarchical warning mode 
+(ps < 0.001). The target number did not have a significant 
+impact on drivers’ Hs (F(1, 285) ¼ 1.637, p ¼ 0.350).
+No significant interaction was reported between warning 
+modes and the target number (F(2, 285) ¼ 3.547, p¼ 0.225). 
+We found that in the five-target condition, the equivalent 
+warning was accompanied by the higher Hs than the hierarch­
+ical warning mode (p< 0.001) and the baseline (p¼ 0.036), 
+and the hierarchical warning was accompanied by a lower Hs 
+than the baseline (p¼ 0.049). Moreover, in the two-target con­
+dition, the hierarchical warning resulted in a lower Hs than the 
+equivalent warning mode and the baseline (ps< 0.001).
+3.2.4. Gaze transition entropy (Ht)
+A significant main effect of the warning mode on the Ht 
+was found (F(2, 285) ¼ 21.629, p < 0.001). The driver 
+showed the lowest Ht in the hierarchical waring mode 
+(ps < 0.001). and in the equivalent warning mode, drivers 
+showed marginally higher Ht than baseline (p ¼ 0.066). No 
+significant impact of target number on drivers’ Ht (F(1, 285) 
+¼ 0.568, p ¼ 0.452).
+No significant interaction was reported between warning 
+modes and the target number (F(2, 285) ¼ 1.868, p¼ 0.156). The 
+result showed that in the five-target condition, drivers showed 
+lower Ht in the hierarchical warning mode than the equivalent 
+warning mode (p< 0.001) and the baseline (p¼ 0.041), and the 
+equivalent warning mode was associated with a marginally 
+higher Ht than baseline (p¼ 0.070). In the two-target condition, 
+the hierarchical warning resulted in the lowest Ht (ps< 0.001). 
+Figure 7 shows the results of Hs and Ht of different warning 
+modes in different target number conditions.
+4. Discussion
+In this study, we compare the impact of equivalent warning 
+mode and hierarchical warning mode on novice drivers’ 
+reaction behavior and eye movements to verify the effective­
+ness of the warning priority design under multi-target aug­
+mentation conditions. We observe that the hierarchical 
+warning mode shortens reaction times and reduces saccade 
+counts and gaze entropy in comparison to those in the 
+equivalent warning mode, demonstrating the superior per­
+formance of the priority design. We further analyze these 
+results in the subsequence and summarize the implications 
+for future AR-HUD design.
+4.1. Hierarchical warning in multi-target augmentation
+Firstly, our analysis of reaction times indicates that across 
+varying target numbers, the equivalent warning mode 
+Figure 7. Effects of warning modes on the stationary gaze entropy and the gaze transition entropy in different target number conditions. Notes: þp  0.1, 
+p  0.05, p  0.01, p  0.001.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10933
+
+--- Page 13 ---
+consistently exhibits the longest reaction times, while the 
+hierarchical warning mode consistently alleviates this nega­
+tive impact and records the shortest reaction times in all 
+scenarios. The reaction time to a critical target is essential 
+for driving safety (Mackenzie & Harris, 2015), and thus, this 
+outcome preliminarily offers empirical support for the inte­
+gration of warning priority design with multi-target scen­
+arios, as a necessary and effective approach to mitigate the 
+extended reaction times associated with multi-target aug­
+mentation, ensuring driving safety.
+Upon further examination of the time to first fixation, we 
+encountered an unexpected result. The hierarchical warning 
+mode achieves the shortest time to first fixation under a 
+two-target condition, yet no significant difference is 
+observed in the first fixation time between the hierarchical 
+warning mode and the equivalent warning mode, under a 
+five-target condition. The time to first fixation is a critical 
+measure of a driver’s risk perception capability (Cheng 
+et al., 2023). Consequently, the hierarchical warning mode, 
+despite its utility, appears to have limited effectiveness in 
+enhancing risk perception in multi-target scenarios, espe­
+cially with an increased number of targets. We believe that 
+this result once again emphasizes the strong impact of atten­
+tion dispersion under multi-target augmentation, causing 
+participants’ attention to be divided among several targets, 
+which leads to an extended time to achieve the first fixation 
+even under warning priority design conditions. It reminds 
+that the color-based warning priority design may not sub­
+stantially improve a driver’s risk perception at the percep­
+tion stage and may not constitute the most effective warning 
+form. This insight diverges from the prevailing notion that 
+color prominence is paramount for enhancing visual search 
+efficiency (Beck et al., 2010). However, we hypothesize that 
+this discrepancy could also be attributed to the influence of 
+background colors and ambient lighting on the visibility of 
+AR graphics (Gabbard et al., 2022; Merenda et al., 2016), 
+which might impair the effectiveness of warning priority in 
+the perception stage. In addition, we think that another pos­
+sibility is due to our use of bounding boxes for warning 
+within the scene, where color differences are mainly 
+reflected in the contours of the box graphics, which may, to 
+some extent, weaken the effect of color-based warning 
+priority.
+The results presented elicit a critical question: why does 
+the hierarchical warning mode achieve the shortest reaction 
+times without concomitantly reducing the time to the first 
+fixation? For instance, despite equivalent times to the first 
+fixation, the equivalent warning mode is associated with the 
+longest reaction times, whereas the hierarchical warning 
+mode significantly reduces this duration. In light of these 
+findings, we seek to elucidate their implications by integrating 
+them with the concept of situational awareness. Situational 
+awareness is essential for effective decision-making, particu­
+larly in dynamic settings (Endsley & Endsley, 1995). It 
+encompasses three levels: detecting environmental elements 
+(perception, level 1), comprehending their significance 
+(understanding, level 2), and anticipating future developments 
+(prediction, level 3). Consequently, the progression from the 
+emergence of a risky target to participant response can be 
+divided into two stages (Cheng et al., 2023; Mackenzie & 
+Harris, 2015), including a perception stage, which involves 
+identifying targets and corresponds to level 1 of situational 
+awareness, and a verification stage, which involves assessing 
+risks and is associated with levels 2 and 3 of situational 
+awareness. We posit that warning modes differentially affect 
+the verification stage, thereby influencing the development of 
+levels 2 and 3 of situational awareness in drivers. Notably, 
+situational awareness necessitates the integration of disparate 
+elements. For instance, level 2 transcends mere awareness of 
+present elements to include an appreciation of their signifi­
+cance (Endsley & Endsley, 1995; Teichmann & Motus, 2021). 
+Thus, it is the synthesis of detailed situational information 
+and how this information is assembled for understanding and 
+projection that ultimately shapes decision-making (Endsley & 
+Endsley, 1995). During the experiment, the equivalent warn­
+ing mode’s prolonged reaction times are likely attributable to 
+its absence of a warning priority design, employing similar 
+yellow AR graphics that may obscure the distinction between 
+risky and non-risky targets. This similarity can not only 
+impede the identification of critical objects (Chicherov & 
+Herzog, 2015), but also impair drivers’ comprehension of the 
+meaning of the AR graphics. The ambiguity associated with 
+this equivalent augmentation is a particular challenge for nov­
+ice drivers since they are not good at recognizing potential 
+hazards (Underwood et al., 2003). Consequently, even after 
+fixating on the risky target, drivers must conduct additional 
+scans to verify the risk levels of other targets, and confirm 
+the meaning of these warning cues, prolonging the reaction 
+time. In contrast, the hierarchical warning mode, incorporat­
+ing a color-based warning priority design, conveys distinct 
+semantic meanings through the AR graphics’ colors, delineat­
+ing the boundaries between the risky target and other targets. 
+This distinction reduces the similarity between risky and 
+remaining targets, reduces unnecessary scanning of non-risky 
+targets, simplifies the validation process, promotes the pro­
+gression of situational awareness, and leads to the shortest 
+response time. It is especially beneficial for novice drivers. 
+Overall, the extent to which displays provide information that 
+is processed and integrated positively impacts situational 
+awareness, which in turn influences the final decision 
+(Endsley & Endsley, 1995). This finding confirms that the 
+benefits of hierarchical warning modes extend beyond aiding 
+in the perception of critical warnings; more importantly, they 
+reduce the cognitive load associated with the ambiguity that 
+arises from the concurrent presentation of AR graphics. 
+Considering the varying importance of objects within the 
+driving environment, we posit that the warning classification 
+provided by the priority design is particularly indispensable 
+under conditions characterized by multi-target augmentation.
+The analysis of saccadic eye movements also supports the 
+potential efficacy of hierarchical warning systems in mitigat­
+ing superfluous scanning behaviors and promoting a higher 
+level of situational awareness. For example, the equivalent 
+warning mode, devoid of integrated warning priority, is 
+observed to produce the highest saccade counts. In contrast, 
+the hierarchical warning mode, which incorporates the 
+10934
+W. CHEN ET AL.
+
+--- Page 14 ---
+warning priority design, demonstrates a significant reduction 
+in saccades. Elevated saccade counts are generally indicative 
+of a more exhaustive visual search and are positively corre­
+lated with increased reaction times (Kotval & Goldberg, 
+1998; Zelinsky & Sheinberg, 1995). Consequently, the dimin­
+ished saccade counts observed in the hierarchical warning 
+mode substantiate the notion that integrating warning prior­
+ity in scenarios with multiple targets can curtail unnecessary 
+driver scanning, thereby abbreviating the verification phase 
+and reaction time.
+Furthermore, integrating gaze entropy measurements into 
+our study provides a fresh vantage point for the enhanced 
+comprehension of the influence of warning modes. Gaze 
+entropy serves as a metric for assessing visual scanning 
+behaviors during tasks with substantial visuospatial complex­
+ity, such as driving (Shiferaw et al., 2018). It encapsulates 
+the intricacy of visual scanning as dictated by the statistical 
+distribution of elementary visual features or the information 
+density within the visual field (Shiferaw et al., 2019). 
+Notably, stationary gaze entropy measures the overall spatial 
+dispersion of gaze, whereas gaze transition entropy captures 
+the complexity of gaze shift patterns, indicative of search 
+efficiency (Shiferaw et al., 2019). Higher values of stationary 
+gaze entropy denote a more extensive dispersion of gaze 
+(Shiferaw et al., 2018), whereas elevated gaze transition 
+entropy suggests increased randomness in eye movements 
+and a higher frequency of gaze shifts among interest areas 
+(Ebeid & Gwizdka, 2018). Consequently, this experiment 
+employs gaze entropy to ascertain the efficacy of warning 
+modes in modulating driver scanning behavior within haz­
+ardous driving contexts from a quantitative standpoint. 
+Consistent with expectations, the equivalent warning mode 
+is associated with markedly higher levels of both stationary 
+and gaze transition entropy, signifying a wider gaze span 
+and more frequent shifts in attention, indicative of greater 
+visual disorder. Conversely, the hierarchical warning mode 
+is characterized by the lowest levels of these entropy meas­
+ures, implying a more focused gaze and reduced attentional 
+shifts, thereby robustly evidencing the efficacy of warning 
+priority design in curtailing superfluous scanning behaviors 
+among drivers. This result confirms our suspicion to some 
+extent.
+In summary, the findings validate the hypothesis that 
+integrating a color-based warning priority system with 
+multi-target augmentation—referred to as the hierarchical 
+warning mode—effectively mitigates the adverse effects typ­
+ically associated with multi-target scenarios. This is demon­
+strated by a significant decrease in saccade count, stationary 
+gaze entropy, and gaze transition entropy. Specifically, the 
+efficacy of the color-based warning priority design is likely 
+attributed to its capacity to reduce unnecessary scanning 
+activities during the verification stage, which pertains to lev­
+els 2 and 3 of situational awareness. This design demon­
+strates effectiveness in minimizing additional cognitive 
+demands stemming from the ambiguity of multiple targets 
+and in facilitating the driver’s comprehension of multiple 
+warnings in scenarios involving multi-target augmentation.
+4.2. Implications for AR-HUD design
+Prior research on Augmented Reality Head-Up Display (AR- 
+HUD) interface design has demonstrated that AR integra­
+tion can facilitate driver detection of hazardous targets. This 
+study advances the supportive role of AR to scenarios 
+involving multiple target augmentations, offering innovative 
+insights for the evolution of AR-HUD design. Firstly, our 
+research corroborates the notion that employing similar AR 
+graphics without an integrated warning priority can degrade 
+a driver’s ability to discern risky targets. Concurrently, the 
+incorporation of warning priority into interface design 
+emerges as an efficacious strategy to neutralize this adverse 
+effect, enabling drivers to discern risky targets among many, 
+expedite the verification process, and promote a higher level 
+of situational awareness. This underscores the criticality of 
+integrating warning priority design considerations for AR 
+graphics in AR-HUD multi-target augmentation interfaces. 
+Furthermore, the research analysis posits that the impact of 
+AR graphics is predominantly evident during the verification 
+stage subsequent to perception. This finding broadens our 
+comprehension of AR-HUD graphic effects and highlights 
+the necessity for interface designs to account for graphic 
+influences on the driver’s verification stage to reduce cogni­
+tive interference and augment system efficacy and safety. 
+Ultimately, while color-based warning priority design enhan­
+ces driver perception of risk under conditions of limited tar­
+gets, its utility is constrained in scenarios with an 
+abundance of targets. Hence, future AR-HUD warning pri­
+ority designs must consider alternative formats for optimiz­
+ing both perception and verification stages and contemplate 
+the optimal quantity of AR-augmented targets presentations.
+5. Limitations
+We recognize that the findings of this study are subject to 
+limitations regarding their generalizability and evidential 
+force. Firstly, this study, akin to previous research (Chen 
+et al., 2024; Wang et al., 2022), utilized video clips as stimuli 
+with the aim of investigating the impact of multi-target aug­
+mentation on drivers’ visual perception while controlling for 
+extraneous variables through video experiments. Despite 
+efforts to replicate real driving conditions, the interactive 
+complexities of actual driving may exceed those observed in 
+the video (Mackenzie & Harris, 2015), potentially undermin­
+ing the ecological validity of our findings and their real-world 
+applicability. Future research should integrate simulated driv­
+ing to assess the impact of multi-target augmentation on driv­
+ing performance. Second, the study’s focus on novice drivers 
+offers insights into AR-HUD interface design tailored to this 
+demographic. However, experienced drivers possess more 
+refined visual attention allocation and scene comprehension, 
+suggesting their performance with AR-HUD multi-target aug­
+mentation may differ significantly. Therefore, the study’s 
+emphasis on novice drivers limits the generalizability of the 
+results, and future studies should include experienced drivers 
+for a more comprehensive AR-HUD interface design. Third, 
+as noted in the introduction, real AR-HUD use involves 
+depth perception and focus-switching challenges, leading to 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10935
+
+--- Page 15 ---
+accommodation-convergence conflicts (Kang et al., 2019). 
+Multi-target augmentation may intensify these effects on vis­
+ual attention. The current video experiment’s format limits 
+the exploration of multi-target augmentation effects in depth- 
+varied scenarios, impacting the generalizability of our find­
+ings. Future studies should explore multi-target augmentation 
+effects in more realistic settings with depth perception differ­
+ences. Fourth, while our study considered scenarios with two 
+and five targets based on previous research, real-world driving 
+scenarios are more diverse, and individuals’ multi-target per­
+ception thresholds may vary due to scenario complexity and 
+dynamics. Future research should examine a broader range of 
+target numbers to better understand multi-target perception 
+processes in dynamic driving scenarios and broaden the scope 
+of multi-target augmentation research. Notably, this study did 
+not include a control condition with augmentation of only 
+the risk target, an aspect that should be integrated into future 
+research to better comprehend the impacts of multi-target 
+augmentation in AR-HUD systems. Lastly, while the discus­
+sion section touches on the influence of AR graphics during 
+the verification stage, the eye movement analysis conducted 
+was not exhaustive and did not specifically dissect this stage. 
+Subsequent studies could benefit from incorporating more 
+detailed eye-tracking methodologies to elucidate this stage.
+6. Conclusion
+This research explores the effects of the AR-HUD on driver 
+behavior within a multi-target environment, with a focus on 
+reaction times and eye movement patterns in response to risky 
+targets. Our goal was to evaluate the efficacy of warning prior­
+ity design within multi-target scenarios. By comparing the out­
+comes of the equivalent warning mode, hierarchical warning 
+mode, and a baseline group, we have advanced our under­
+standing of the impact of multi-target conditions and the 
+effectiveness of warning priority design within this context. 
+The hierarchical warning mode notably exhibited superior per­
+formance, characterized by the shortest reaction times, minimal 
+saccade count, and reduced gaze entropy across different target 
+number conditions, thereby enhancing the efficiency of driver 
+responses and the precision of visual scanning. Our analysis 
+suggests that the hierarchical warning mode’s effectiveness may 
+stem from its optimization of the situational awareness in the 
+verification stage. The results, encompassing reaction time, eye 
+movement metrics, and gaze entropy, collectively endorse the 
+utility of warning prioritization in AR-HUDs under conditions 
+of multi-target augmentation. These insights not only broaden 
+our comprehension of AR graphics’ role in multi-target scen­
+arios but also offer guidance for the future evolution of AR- 
+HUD technology. It is important to note that the time to first 
+fixation did not significantly vary with an increasing number 
+of targets in the hierarchical warning mode relative to other 
+modes. This finding implies that the color-based priority warn­
+ing system’s effectiveness may diminish under conditions with 
+a higher target density. Consequently, this insight encourages 
+further reflection on determining the optimal quantity of AR 
+graphics and the most effective presentation methods for prior­
+ity information.
+Disclosure statement
+No potential conflict of interest was reported by the author(s).
+Funding
+The author(s) disclosed receipt of the following financial support for 
+the research, authorship, and/or publication of this article: This work 
+was supported by the National Natural Science Foundation of China 
+under Grants [72371228, T2192930, T2192931, and 31900768] and 
+Zhejiang Sci-Tech University Excellent Graduate Student Dissertation 
+Cultivation Fund [LW-YP2024017].
+ORCID
+Shu Ma 
+http://orcid.org/0000-0003-2632-4209 
+Zhen Yang 
+http://orcid.org/0000-0002-0623-9712 
+References
+Albonico, A., Martelli, M., Bricolo, E., Frasson, E., & Daini, R. (2018). 
+Focusing and orienting spatial attention differently modulate crowd­
+ing in central and peripheral vision. Journal of Vision, 18(3), 4. 
+https://doi.org/10.1167/18.3.4
+Arexis, M., Maquestiaux, F., Gaspelin, N., Ruthruff, E., & Didierjean, 
+A. (2017). Attentional capture in driving displays. British Journal of 
+Psychology, 108(2), 259–275. https://doi.org/10.1111/bjop.12197
+Beck, M. R., Lohrenz, M. C., & Trafton, J. G. (2010). Measuring search 
+efficiency in complex visual search tasks: Global and local clutter. 
+Journal of Experimental Psychology. Applied, 16(3), 238–250. https:// 
+doi.org/10.1037/a0019633
+Bolker, B. M., Brooks, M. E., Clark, C. J., Geange, S. W., Poulsen, J. R., 
+Stevens, M. H. H., & White, J.-S. S. (2009). Generalized linear mixed 
+models: A practical guide for ecology and evolution. Trends in 
+Ecology & Evolution, 24(3), 127–135. https://doi.org/10.1016/j.tree. 
+2008.10.008
+Breslow, L., Trafton, J., & Ratwani, R. (2009). A perceptual process 
+approach to selecting color scales for complex visualizations. Journal 
+of Experimental Psychology. Applied, 15(1), 25–34. https://doi.org/10. 
+1037/a0015085
+Broadbent, D. E. (1957). A mechanical model for human attention and 
+immediate memory. Psychological Review, 64(3), 205–215. https:// 
+doi.org/10.1037/h0047313
+Campbell, J. I. D., & Thompson, V. A. (2012). MorePower 6.0 for 
+ANOVA with relational confidence intervals and Bayesian analysis. 
+Behavior Research Methods, 44(4), 1255–1265. https://doi.org/10. 
+3758/s13428-012-0186-0
+Cavanagh, P., & Alvarez, G. A. (2005). Tracking multiple targets with 
+multifocal attention. Trends in Cognitive Sciences, 9(7), 349–354. 
+https://doi.org/10.1016/j.tics.2005.05.009
+Chaney, W., Fischer, J., & Whitney, D. (2014). The hierarchical sparse 
+selection model of visual crowding. Frontiers in Integrative 
+Neuroscience, 8(13), 73. https://doi.org/10.3389/fnint.2014.00073
+Chapman, P., Underwood, G., & Roberts, K. (2002). Visual search pat­
+terns in trained and untrained novice drivers. Transportation Research 
+Part F, 5(2), 157–167. https://doi.org/10.1016/S1369-8478(02)00014-1
+Chen, B., Gong, C., & Yang, J. (2019). Importance-aware semantic seg­
+mentation for autonomous vehicles. IEEE Transactions on Intelligent 
+Transportation Systems, 20(1), 137–148. https://doi.org/10.1109/TITS. 
+2018.2801309
+Chen, W., Niu, L., Liu, S., Ma, S., Li, H., & Yang, Z. (2024). Evaluating 
+the effectiveness of contact-analog and bounding box prototypes in 
+augmented reality head-up display warning for chinese novice driv­
+ers under various collision types and traffic density. International 
+Journal of Human–Computer Interaction, 1–15. https://doi.org/10. 
+1080/10447318.2024.2327197
+10936
+W. CHEN ET AL.
+
+--- Page 16 ---
+Cheng, Y., Zhong, X., & Tian, L. (2023). Does the AR-HUD system 
+affect driving behaviour? An eye-tracking experiment study. 
+Transportation Research Interdisciplinary Perspectives, 18(6), 100767. 
+https://doi.org/10.1016/j.trip.2023.100767
+Chicherov, V., & Herzog, M. H. (2015). Targets but not flankers are 
+suppressed in crowding as revealed by EEG frequency tagging. 
+NeuroImage, 119(8), 325–331. https://doi.org/10.1016/j.neuroimage. 
+2015.06.047
+Chung, J., Lee, H., Moon, H., & Lee, E. (2022). The static and dynamic 
+analyses of drivers’ gaze movement using VR driving simulator. 
+Applied Sciences, 12(5), 2362. https://doi.org/10.3390/app12052362
+Colley, M., Eder, B., Rixen, J. O., & Rukzio, E. (2021). Effects of seman­
+tic segmentation visualization on trust, situation awareness, and cog­
+nitive load in highly automated Vehicles [Paper presentation]. 
+Proceedings of the 2021 CHI Conference on Human Factors in 
+Computing Systems, 1–11. https://doi.org/10.1145/3411764.3445351
+Crundall, D., Chapman, P., Trawley, S., Collins, L., van Loon, E., 
+Andrews, B., & Underwood, G. (2012). Some hazards are more 
+attractive than others: Drivers of varying experience respond differ­
+ently to different types of hazard. Accident; Analysis and Prevention, 
+45, 600–609. https://doi.org/10.1016/j.aap.2011.09.049
+Crundall, D., & Underwood, G. (2011). Visual attention while driving: 
+Measures of eye movements used in driving research. In B. E. 
+Porter (Ed.), Handbook of Traffic Psychology. (pp. 137–148). 
+Academic Press. https://doi.org/10.1016/B978-0-12-381984-0.10011-6
+Currano, R., Park, S. Y., Moore, D. J., Lyons, K., & Sirkin, D. (2021). 
+Little road driving HUD: Heads-up display complexity influences drivers’ 
+perceptions of automated vehicles [Paper presentation]. Proceedings of 
+the 2021 CHI Conference on Human Factors in Computing Systems, 
+511, 1–15. https://doi.org/10.1145/3411764.3445575
+Devlin, S. P., Brown, N. L., Drollinger, S., Sibley, C., Alami, J., & Riggs, 
+S. L. (2022). Scan-based eye tracking measures are predictive of 
+workload transition performance. Applied Ergonomics, 105(6), 
+103829. https://doi.org/10.1016/j.apergo.2022.103829
+Duncan, J., Williams, P., & Brown, I. (1991). Components of driving 
+skill: Experience does not mean expertise. Ergonomics, 34(7), 919– 
+937. https://doi.org/10.1080/00140139108964835
+Ebeid, I. A., & Gwizdka, J. (2018). Real-time gaze transition entropy 
+[Paper presentation]. Proceedings of the 2018 ACM symposium on 
+eye tracking research & applications. https://doi.org/10.1145/3204493. 
+3208340
+Endsley, M., & Endsley, M. R. (1995). Toward a theory of situation 
+awareness in dynamic systems. Human Factors, 37(1), 32–64. 
+https://doi.org/10.1518/001872095779049543
+Eyraud, R., Zibetti, E., & Baccino, T. (2015). Allocation of visual atten­
+tion while driving with simulated augmented reality. Transportation 
+Research Part F, 32(2), 46–55. https://doi.org/10.1016/j.trf.2015.04. 
+011
+Faure, V., Lobjois, R., & Benguigui, N. (2016). The effects of driving 
+environment complexity and dual tasking on drivers’ mental work­
+load and eye blink behavior. Transportation Research Part F, 40, 78– 
+90. https://doi.org/10.1016/j.trf.2016.04.007
+Friedrich, M., & Vollrath, M. (2022). Urgency-based color coding to 
+support visual search in displays for supervisory control of multiple 
+unmanned aircraft systems. Displays, 74(1), 102185. https://doi.org/ 
+10.1016/j.displa.2022.102185
+Gabbard, J. L., Smith, M., Merenda, C., Burnett, G., & Large, D. R. 
+(2022). A perceptual color-matching method for examining color 
+blending in augmented reality head-up display graphics. IEEE 
+Transactions on Visualization and Computer Graphics, 28(8), 2834– 
+2851. https://doi.org/10.1109/TVCG.2020.3044715
+Goodridge, C. M., Gonc¸alves, R. C., Arabian, A., Horrobin, A., 
+Solernou, A., Lee, Y. T., Lee, Y. M., Madigan, R., & Merat, N. 
+(2024). Gaze entropy metrics for mental workload estimation are 
+heterogenous during hands-off level 2 automation. Accident; 
+Analysis and Prevention, 202, 107560. https://doi.org/10.1016/j.aap. 
+2024.107560
+Harezlak, K., Augustyn, D. R., & Kasprowski, P. (2019). An analysis of 
+entropy-based eye movement events detection. Entropy, 21(2), 107. 
+https://doi.org/10.3390/e21020107
+Herbert, A., Baschnagel, J., Gordon, M., & McDonald, Z. (2017). 
+Augmented reality HUDS: Warning signs and driver situation aware­
+ness. Journal of Vision, 17(7), 40. https://doi.org/10.1167/17.7.40
+Horowitz, T. S., Klieger, S. B., Fencsik, D. E., Yang, K. K., Alvarez, 
+G. A., & Wolfe, J. M. (2007). Tracking unique objects. Perception & 
+Psychophysics, 69(2), 172–184. https://doi.org/10.3758/BF03193740
+Hy€on€a, J., Li, J., & Oksama, L. (2019). Eye behavior during multiple 
+object tracking and multiple identity tracking. Vision, 3(3), 37–63. 
+https://doi.org/10.3390/vision3030037
+Jung, K., Han, S. W., & Min, Y. (2020). Opposing effects of stimulus- 
+driven and memory-driven attention in visual search. Psychonomic 
+Bulletin & Review, 27(1), 105–113. https://doi.org/10.3758/s13423- 
+019-01630-9
+Kamkar, S., Ghezloo, F., Moghaddam, H. A., Borji, A., & Lashgari, R. 
+(2020). Multiple-target tracking in human and machine vision. PLoS 
+Computational Biology, 16(4), e1007698. https://doi.org/10.1371/jour­
+nal.pcbi.1007698
+Kang, H., Ko, J., Park, H., & Hong, H. (2019). Effect of outside view 
+on attentiveness in using see-through type augmented reality device. 
+Displays, 57(4), 1–6. https://doi.org/10.1016/j.displa.2019.02.001
+Karatas, N., Tanaka, T., Fujikakc, K., Yoshihara, Y., Kanamori, H., 
+Fuwamoto, Y., & Yoshida, M. (2020). Evaluation of AR-HUD inter­
+face during an automated intervention in manual driving [Paper 
+presentation]. 2020 IEEE Intelligent Vehicles Symposium (IV)., 19 
+Oct.–13 Nov. 2020 https://doi.org/10.1109/IV47402.2020.9304610
+Kastner, R., Michalke, T., Adamy, J., Fritsch, J., & Goerick, C. (2011). 
+Task-based environment interpretation and system architecture for 
+next generation ADAS. IEEE Intelligent Transportation Systems 
+Magazine, 3(4), 20–33. https://doi.org/10.1109/MITS.2011.942201
+Kerruish, L., Cheng, A., Ting, K. H., & Liu, K. (2022). Exploring the 
+sustained and divided attention of novice versus experienced drivers. 
+Transportation Research Interdisciplinary Perspectives, 16(6), 100702. 
+https://doi.org/10.1016/j.trip.2022.100702
+Kim, H., Gabbard, J. L., Anon, A. M., & Misu, T. (2018). Driver behav­
+ior and performance with augmented reality pedestrian collision 
+warning: An outdoor user study. IEEE Transactions on Visualization 
+and Computer Graphics, 24(4), 1515–1524. https://doi.org/10.1109/ 
+TVCG.2018.2793680
+Kim, H., Isleib, J., & Gabbard, J. (2016). Virtual shadow: Making cross 
+traffic dynamics visible through augmented reality head up display. 
+Proceedings of the Human Factors and Ergonomics Society Annual 
+Meeting, 60(1), 2093–2097. https://doi.org/10.1177/1541931213601474
+Kim, K., & Hwang, Y. (2016). The usefulness of augmenting reality on 
+vehicle head-up display. In N. Stanton, S. Landry, G. Di 
+Bucchianico, & A. Vallicelli, (Eds), Advances in human aspects of 
+transportation. advances in intelligent systems and computing (pp. 
+655–662). https://doi.org/10.1007/978-3-319-41682-3_55
+Koelega, H. S., Brinkman, J. A., Zwep, B., & Verbaten, M. N. (1990). 
+Dynamic vs static stimuli in their effect on visual vigilance perform­
+ance. Perceptual and Motor Skills, 70(3 Pt 1), 823–831. https://doi. 
+org/10.2466/pms.1990.70.3.823
+Kotval, X. P., & Goldberg, J. H. (1998). Eye movements and interface 
+component grouping: An evaluation method. Proceedings of the 
+Human Factors and Ergonomics Society Annual Meeting, 42(5), 486– 
+490. https://doi.org/10.1177/154193129804200509
+Krejtz, K., Duchowski, A., Szmidt, T., Krejtz, I., Perilli, F. G., Pires, A., 
+Vilaro, A., & Villalobos, N. (2015). Gaze transition entropy. ACM 
+Transactions on Applied Perception, 13(1), 1–20. https://doi.org/10. 
+1145/2834121
+Lai, M., Tsai, M., Yang, F., Hsu, C., Liu, T., Lee, S. W., Lee, M., Chiou, 
+G., Liang, J., & Tsai, C. (2013). A review of using eye-tracking tech­
+nology in exploring learning from 2000 to 2012. Educational 
+Research Review, 10, 90–115. https://doi.org/10.1016/j.edurev.2013. 
+10.001
+Lee, J., Lee, N., Ju, J., Chae, J., Park, J., Ryu, H. S., & Cho, Y. S. (2024). 
+Visual complexity of head-up display in automobiles modulates 
+attentional tunneling. Human Factors, 66(7), 1879–1892. https://doi. 
+org/10.1177/00187208231181496
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10937
+
+--- Page 17 ---
+Levi, D. M. (2008). Crowding – An essential bottleneck for object rec­
+ognition: A mini-review. Vision Research, 48(5), 635–654. https:// 
+doi.org/10.1016/j.visres.2007.12.009
+Lo, S., & Andrews, S. (2015). To transform or not to transform: Using 
+generalized linear mixed models to analyse reaction time data. 
+Frontiers in Psychology, 6(451), 1171. https://doi.org/10.3389/fpsyg. 
+2015.01171
+Luo, G., Vargas-Martin, F., & Peli, E. (2008). The role of peripheral 
+vision in saccade planning: Learning from people with tunnel vision. 
+Journal of Vision, 8(14), 25.1–25.8. https://doi.org/10.1167/8.14.25
+Mackenzie, A. K., & Harris, J. M. (2015). Eye movements and hazard 
+perception in active and passive driving. Visual Cognition, 23(6), 
+736–757. https://doi.org/10.1080/13506285.2015.1079583
+Merenda, C., Kim, H., Tanous, K., Gabbard, J., Feichtl, B., Misu, T., & 
+Suga, C. (2018). Augmented reality interface design approaches for 
+goal-directed and stimulus-driven driving tasks. IEEE Transactions 
+on Visualization and Computer Graphics, 24(11), 2875–2885. https:// 
+doi.org/10.1109/TVCG.2018.2868531
+Merenda, C., Smith, M., Gabbard, J., Burnett, G., & Large, D. (2016). 
+Effects of real-world backgrounds on user interface color naming and 
+matching in automotive AR HUDs [Paper presentation]. 2016 IEEE 
+VR 2016 Workshop on Perceptual and Cognitive Issues in AR 
+(PERCAR). https://doi.org/10.1109/PERCAR.2016.7562419
+Minh Tien, P., Thouvenin, I., & Fremont, V. (2016). Enhancing the 
+driver awareness of pedestrian using augmented reality cues [Paper 
+presentation]. 2016 IEEE 19th International Conference on 
+Intelligent Transportation Systems (ITSC). https://doi.org/10.1109/ 
+ITSC.2016.7795724
+Muela, I., Chica, A. B., Garcia-Fernandez, P., & Castro, C. (2021). 
+Visual attention in realistic driving situations: Attentional capture 
+and hazard prediction. Applied Ergonomics, 90, 103235. https://doi. 
+org/10.1016/j.apergo.2020.103235
+Ng-Thow-Hing, V., Bark, K., Beckwith, L., Tran, C., Bhandari, R., & 
+Sridhar, S. (2013). User-centered perspectives for automotive augmented 
+reality [Paper presentation]. 2013 IEEE International Symposium on 
+Mixed and Augmented Reality – Arts, Media, and Humanities 
+(ISMAR-AMH). https://doi.org/10.1109/ISMAR-AMH.2013.6671262
+Ohn-Bar, E., & Trivedi, M. M. (2017). Are all objects equal? Deep spatio- 
+temporal importance prediction in driving videos. Pattern Recognition, 
+64(1), 425–436. https://doi.org/10.1016/j.patcog.2016.08.029
+Orasanu, J. M., Dismukes, R. K., & Fischer, U. (1993). Decision errors 
+in the Cockpit. Proceedings of the Human Factors and Ergonomics 
+Society Annual Meeting, 37(4), 363–367. https://doi.org/10.1177/ 
+154193129303700423
+Pankok, C., & Kaber, D. (2018). The effect of navigation display clutter 
+on performance and attention allocation in presentation- and simu­
+lator-based driving experiments. Applied Ergonomics, 69, 136–145. 
+https://doi.org/10.1016/j.apergo.2018.01.008
+Pichlmeier, S., & Pfeiffer, T. (2021). Attentional capture in multiple 
+object tracking. Journal of Vision, 21(8), 16. https://doi.org/10.1167/ 
+jov.21.8.16
+Pylyshyn, Z. W., & Storm, R. W. (1988). Tracking multiple independ­
+ent targets: Evidence for a parallel tracking mechanism. Spatial 
+Vision, 3(3), 179–197. https://doi.org/10.1163/156856888x00122
+Rosenholtz, R., Li, Y., & Nakano, L. (2007). Measuring visual clutter. 
+Journal of Vision, 7(2), 17.1–22. https://doi.org/10.1167/7.2.17
+Sanocki, T., Islam, M., Doyon, J. K., & Lee, C. (2015). Rapid scene per­
+ception with tragic consequences: Observers miss perceiving vulner­
+able road users, especially in crowded traffic scenes. Attention, 
+Perception & Psychophysics, 77(4), 1252–1262. https://doi.org/10. 
+3758/s13414-015-0850-4
+Schieber, F., & Gilland, J. (2008). Visual entropy metric reveals differ­
+ences in drivers’ Eye gaze complexity across variations in age and 
+subsidiary task load. Proceedings of the Human Factors and 
+Ergonomics Society Annual Meeting, 52(23), 1883–1887. https://doi. 
+org/10.1177/154193120805202311
+Shibata, T., Kim, J., Hoffman, D. M., & Banks, M. S. (2011). Visual dis­
+comfort with stereo displays: Effects of viewing distance and direction 
+of vergence-accommodation conflict [Paper presentation]. Proceedings 
+SPIE The International Society for Optical Engineering, 7863, 78631– 
+78639. https://doi.org/10.1117/12.872347
+Shiferaw, B., Downey, L., & Crewther, D. (2019). A review of gaze 
+entropy as a measure of visual scanning efficiency. Neuroscience and 
+Biobehavioral Reviews, 96, 353–366. https://doi.org/10.1016/j.neu­
+biorev.2018.12.007
+Shiferaw, B. A., Downey, L. A., Westlake, J., Stevens, B., Rajaratnam, 
+S. M. W., Berlowitz, D. J., Swann, P., & Howard, M. E. (2018). 
+Stationary gaze entropy predicts lane departure events in sleep- 
+deprived drivers. Scientific Reports, 8(1), 2220. https://doi.org/10. 
+1038/s41598-018-20588-7
+Siebert, F. W., Oehl, M., & Pfister, H.-R. (2014). The influence of time 
+headway on subjective driver states in adaptive cruise control. 
+Transportation Research Part F: Traffic Psychology and Behaviour, 25, 
+65–73. https://doi.org/10.1016/j.trf.2014.05.005
+Teichmann, M., & Motus, L. (2021). Situation Awareness, Mental Models 
+and Understanding [Paper presentation]. 2021 IEEE Conference on 
+Cognitive and Computational Aspects of Situation Management 
+(CogSIMA). https://doi.org/10.1109/CogSIMA51574.2021.9475920
+Tretten, P., Normark, C. J., & G€arling, A. (2009). The effect of 
+redundantI information in HUD and HDD on driver performance 
+in simple and complex secondary tasks.
+Twisk, D. (1995). Factors contributing to the high accident liability of nov­
+ice drivers and the role of driver training [Conference presentation]. 
+Behavioural Research in Road Safety VI. University of London, England.
+Underwood, G., Chapman, P., Brocklehurst, N., Underwood, J., & 
+Crundall, D. (2003). Visual attention while driving: Sequences of eye 
+fixations made by experienced and novice drivers. Ergonomics, 
+46(6), 629–646. https://doi.org/10.1080/0014013031000090116
+van Leeuwen, P. M., Happee, R., & de Winter, J. C. F. (2015). Changes 
+of driving performance and gaze behavior of novice drivers during a 
+30-min simulator-based training. Procedia Manufacturing, 3, 3325– 
+3332. https://doi.org/10.1016/j.promfg.2015.07.422
+van Maarseveen, M. J. J., Oudejans, R. R. D., Mann, D. L., & Savelsbergh, 
+G. J. P. (2018). Perceptual-cognitive skill and the in situ performance 
+of soccer players. Quarterly Journal of Experimental Psychology, 71(2), 
+455–470. https://doi.org/10.1080/17470218.2016.1255236
+Vervoort, T., Trost, Z., Prkachin, K. M., & Mueller, S. C. (2013). 
+Attentional processing of other’s facial display of pain: An eye tracking 
+study. Pain, 154(6), 836–844. https://doi.org/10.1016/j.pain.2013.02.017
+Vogel, K. (2003). A comparison of headway and time to collision as 
+safety indicators. Accident; Analysis and Prevention, 35(3), 427–433. 
+https://doi.org/10.1016/S0001-4575(02)00022-2
+Wang, Q., Zhu, F., Dang, R., Wei, X., Han, G., Huang, J., & Hu, B. 
+(2023). An eye tracking investigation of attention mechanism in driv­
+ing behavior under emotional issues and cognitive load. Scientific 
+Reports, 13(1), 16963. https://doi.org/10.1038/s41598-023-43693-8
+Wang, X., Cai, B., Cao, Y., Zhou, C., Yang, L., Liu, R., Long, X., Wang, 
+W., Gao, D., & Bao, B. (2016). Objective method for evaluating 
+orthodontic treatment from the lay perspective: An eye-tracking 
+study. American Journal of Orthodontics and Dentofacial Orthopedics, 
+150(4), 601–610. https://doi.org/10.1016/j.ajodo.2016.03.028
+Wang, Y., Song, J., An, X., Ma, S., Li, H., Wang, D., & Yang, Z. 
+(2023). Head-up display graphic warning to support collision avoid­
+ance: Effect of graphic animation and border on driving behavior 
+and eye movement pattern. Transportation Research Record, 2677(5), 
+636–652. https://doi.org/10.1177/03611981221134628
+Wang, Y., Wu, Y., Chen, C., Wu, B., Ma, S., Wang, D., Li, H., & Yang, Z. 
+(2022). Inattentional blindness in augmented reality head-up display- 
+assisted driving. International Journal of Human–Computer Interaction, 
+38(9), 837–850. https://doi.org/10.1080/10447318.2021.1970434
+Wei, L., Zhang, X., Lyu, C., & Li, Z. (2016). The categorical distinction 
+between targets and distractors facilitates tracking in multiple iden­
+tity tracking task. Frontiers in Psychology, 7, 589. https://doi.org/10. 
+3389/fpsyg.2016.00589
+Wu, T., Sachdeva, E., Akash, K., Wu, X., Misu, T., & Ortiz, J. (2022). 
+Toward an adaptive situational awareness support system for urban 
+driving [Paper presentation]. 2022 IEEE Intelligent Vehicles 
+Symposium (IV). https://doi.org/10.1109/IV51971.2022.9827205
+10938
+W. CHEN ET AL.
+
+--- Page 18 ---
+Xia, Y., Manassi, M., Nakayama, K., Zipser, K., & Whitney, D. (2020). 
+Visual crowding in driving. Journal of Vision, 20(6), 1. https://doi. 
+org/10.1167/jov.20.6.1
+Xiang, W., Zhang, Y., Pan, X., Liu, X., & Xu, G. (2024). Analysis of 
+coping capacities and cognitive biases of novice drivers – A ques­
+tionnaire-based study. PLoS One, 19(2), e0297763. https://doi.org/10. 
+1371/journal.pone.0297763
+Yontem, A. O., Li, K., Chu, D., Meijering, V., & Skrypchuk, L. (2021). 
+Prospective immersive human-machine interface for future vehicles: 
+Multiple zones turn the full windscreen into a head-Up display. 
+IEEE Vehicular Technology Magazine, 16(1), 83–92. https://doi.org/ 
+10.1109/MVT.2020.3013832
+Zelinsky, G., & Sheinberg, D. (1995). Why some search tasks take lon­
+ger than others: Using eye movements to redefine reaction times. In 
+J. M. Findlay, R. Walker, & R. W. Kentridge (Eds.), Studies in visual 
+information processing (pp. 325–336). North-Holland. https://doi. 
+org/10.1016/S0926-907X(05)80028-5
+Zhang, H., & Lee, S. (2021). Collecting the information needs of skilled 
+and be-ginner drivers based on a user mental model for a custom­
+ized AR-HUD interface. Korean Society for Emotion and Sensibility, 
+24(4), 53–68. https://doi.org/10.14695/KJSOS.2021.24.4.53
+About the authors
+Wanting Chen is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include traffic 
+safety, augmented reality, and human-computer interaction.
+Chenyang Song is a graduate student at the Department of 
+Psychology, Zhejiang Sci-Tech University. Her research interests 
+include user experience, emotional design, auditory warning, and 
+human-computer interaction.
+Jing Luo is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include traffic 
+safety, user experience, and personalized design.
+Zilong Xu is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. His research interests include traffic 
+safety, ergonomics, and HUD design.
+Hongting Li is a professor at the Department of Psychology, Zhejiang 
+University of Technology. His research interests include human-com­
+puter interaction, ergonomics, user experience, augmented reality, and 
+virtual reality.
+Shu Ma is a PhD researcher at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include human- 
+computer interaction, traffic safety, and automated driving.
+Qijun Wang is a teacher at the Department of Psychology, Zhejiang 
+Sci-Tech University. Her research interests include human-computer 
+interaction, eye movement studies, and user product experience.
+Zhen Yang is an assistant professor at the Department of Psychology, 
+Zhejiang Sci-Tech University. His research interests include human- 
+computer interaction, human factors, user experience, cognitive sci­
+ence, and neuroeconomics.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+10939

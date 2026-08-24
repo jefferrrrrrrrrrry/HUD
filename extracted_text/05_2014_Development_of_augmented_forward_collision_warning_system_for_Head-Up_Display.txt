@@ -1,0 +1,340 @@
+--- Page 1 ---
+ 
+ 
+Abstract—In this paper, we present an augmented forward 
+collision warning system for Head-Up Display (HUD). The 
+convergence of HUD and Augmented Reality (AR) needs 
+challenge and make innovative application in automobile 
+industry. We focus on an advance of Forward Collision Warning 
+System (FCWS) by the fusion of HUD and AR. The proposed 
+system detects the frontal vehicles and pedestrians, assesses the 
+imminent danger caused by the detected results, and alerts the 
+augmented warnings to support safe driving practices. 
+I. INTRODUCTION 
+HUD has been used in modern fighters to present 
+information without requiring pilots to look away from their 
+usual view. In the automobile industry, GM employed HUD 
+first time in 1988 for Oldsmobile Cutlass Supreme. HUD 
+gains popularity since it can increase situation awareness and 
+reduce driving workload by 0.2 seconds than Head-Down 
+Display (HDD) [1]. However, most commercial HUD 
+products display simple information such as vehicle speed and 
+direction to the destination, which are conventionally 
+displayed in the instrument cluster. In recent years, interesting 
+research has focused on object detection [2]-[4] and AR based 
+HUD [5]-[8] to increase the driver safety and convenience. 
+Unlike existing HUD systems, the in-vehicle AR-HUD system 
+displays information registered to the driver’s view [9]. 
+Drivers should beware of vehicles, road hazard, lanes, 
+pedestrians and traffic signs while controlling vehicle speed 
+and directions. All these works increase physical and mental 
+workload which is dangerous especially for elderly and people 
+with slow recognition and responses. Therefore, an alarm that 
+alerts the driver of a danger in the road can help to minimize 
+driver workload and reduce vehicle accidents. Besides the 
+navigational information, it should help driver’s hazard event 
+detection if the safety information such as crossing pedestrians 
+are detected from front view cameras and their positions are 
+highlighted in the HUD according to the driver’s view point in 
+the form of AR. 
+In this paper, we present the augmented FCWS. The 
+proposed system detects the vehicles and pedestrians using 
+ 
+*Research supported the Industrial Strategic Technology Development 
+Program of MOTIE [10040927, Development of Driver-View based 
+In-vehicle AR Display System Technology]. 
+Changrak Yoon is with Electronics and Telecommunications Research 
+Institute, Yuseong-gu, Daejeon 305-700 Republic of Korea (corresponding 
+author to provide e-mail: cryoon@etri.re.kr).  
+Kyongho Kim and Hye Sun Park are with Electronics and 
+Telecommunications Research Institute, Yuseong-gu, Daejeon 305-700 
+Republic of Korea (e-mail: kkh@etri.re.kr, hspark78@etri.re.kr). 
+Min Woo Park and Soon Ki Jung are with Kyungpook National 
+University, Buk-gu, Daegu 702-701 Republic of Korea (e-mail: 
+mwpark@vr.knu.ac.kr , skjung@knu.ac.kr). 
+stereo cameras and displays early augmented warnings 
+through an HUD (see-through display) to alert driver for 
+taking a dodge or braking maneuver prior to collision. In the 
+below, we describe the design and implementation issues with 
+the real road test results. Then, future plans are described, 
+followed by the conclusion. 
+II. AUGMENTED FORWARD COLLISION WARNING SYSTEM 
+A. Overview of Proposed System 
+In the proposed system, stereo cameras are mounted on top 
+of the experimental vehicle to capture the frontal images. The 
+captured stereo images are used to detect vehicles and 
+pedestrians. Once the detection is done, the threat is assessed 
+by Time-To-Collision (TTC) calculation, and the visual 
+properties for augmented warnings are decided according to 
+the TTC. A speedometer is used to calculate the TTC by 
+presenting the driving speed, and the feasibility study helps to 
+make references of visual properties such as shape, color and 
+so on. Projective transformation is performed to take the 
+augmented warnings according to the driver’s view point 
+obtained by an eye tracker. Geometric modeling between a 
+camera and a HUD is carried out in a projective 
+transformation. Finally, the augmented warnings are rendered 
+onto an HUD. Fig.1 shows the overview of the proposed 
+system. Fig. 2 shows the configuration of the proposed 
+system. 
+B. Vehicle and Pedestrian Detection 
+The proposed system detects vehicles and pedestrians 
+using equi-height mosaicking image to improve the execution 
+time of the existing Graphic Processing Unit (GPU) 
+accelerated approach  without decreasing the detection 
+accuracy [10], [11]. 
+ 
+Figure 1.  Overview of proposed system. 
+Development of Augmented Forward Collision Warning System for 
+Head-Up Display* 
+Changrak Yoon, Kyongho Kim, Hye Sun Park, Min Woo Park, and Soon Ki Jung 
+2014 IEEE 17th International Conference on
+Intelligent Transportation Systems (ITSC)
+October 8-11, 2014. Qingdao, China
+978-1-4799-6078-1/14/$31.00 ©2014 IEEE
+2277
+
+--- Page 2 ---
+ 
+Equi-height mosaicking image 
+generation
+1D search based SVM 
+classification using HOG feature
+Tracking and nonmaximal 
+suppression
+Detected information
+TTC calculation
+Visual property configuration
+Augmented warning setup
+Speedometer
+Augmented warning information
+Projective transformation with 
+reference eye position
+Dynamic adjustment for 
+driver＇s eye position
+Augmented graphic rendering
+Eye tracker
+Video signal
+Stereo camera
+HUD
+(See-through display)
+Vehicle and pedestrian detection
+Threat assessment and warning 
+strategy conception
+AR information registration and 
+representation
+ 
+Figure 2.  Configuration of proposed system. 
+The equi-height mosaicking image is an image strip 
+cropped on the basis of the height of a normal vehicle (or 
+pedestrian) in the image and concatenated in a panorama-like 
+manner. The proposed system calibrates to compensate for the 
+lens distortion and correct the image skew caused by the 
+yawing of the camera. After the calibration is finished, road 
+scene is analyzed to detect the vanishing point and horizon. 
+The detected vanishing point and horizon are used to compute 
+the height of the vehicle and pedestrian on the road plane in 
+the perspective image. Hypothesis position sampling using 
+bird’s eye view is performed to extract the sampling position 
+on the image at a uniform distance interval from the camera 
+position. An equi-height image at each sampling position is 
+generated and concatenated into an equi-height mosaicking 
+image. The 1D search based the Support Vector Machine 
+(SVM) classifier using the Histogram of Oriented Gradient 
+(HOG) is trained and applied to detect vehicles and 
+pedestrians. Tracking is performed by searching and matching 
+only neighbor blocks of the detected position in the previous 
+time. Finally, non-maximal suppression method is performed 
+to group multiple overlapping candidates of vehicle and 
+pedestrian. 
+C. Threat assessment and warning strategy conception 
+The proposed system takes the distance values of the 
+detected vehicles and pedestrians by performing a stereo 
+vision. The driving velocity is obtained by using a 
+speedometer. Dividing the distance values of the detected 
+vehicles and pedestrians by the driving velocity, the proposed 
+system acquires the TTC values. The calculated TTC values 
+present the degree of safety. The augmented warnings for the 
+detected vehicles and pedestrians depend on the calculated 
+TTC values. The three threat level is decided by the calculated 
+TTC values. According to the TCC values, the detected 
+vehicles and pedestrians with high TCC values are used to 
+represent the augmented warnings. 
+It is important to provide necessary information to the 
+driver through an intuitive and helpful representation. To 
+improve the driving safety and minimize the driving workload, 
+the augmented warnings should be represented in such a way 
+that it is more easily understood. It is therefore necessary to 
+configure the characteristics of the augmented warnings, and 
+find a way to represent the augmented warnings according to 
+these characteristics. In addition, the proposed system needs 
+to be conducted into both the amount of information that can 
+minimize a driver’s cognitive load and the types of 
+representation that can minimize the driver’s visual load. The 
+result of a feasibility study using driving simulator [12] is used 
+to configure the visual properties for representation of the 
+augmented warnings. Visual properties include the visual 
+information of the threat level, shape, color, transparency, 
+relative position and size, icon, text, and so on. 
+D. AR Information Registration and representation 
+After the vehicles and pedestrians in imminent danger are 
+distinguished by the threat assessment, the registration in 
+HUD in the geometric perspective is performed to alerts the 
+augmented warning according to the driver’s view point. The 
+vehicle coordinate system needs to be defined arbitrary. In the 
+proposed system, the origin of the system is set in the back of 
+the vehicle with the x-axis to the front. The y-axis is to the left 
+direction and z-axis completes the right-handed coordinate 
+system. Therefore, the system is constant regardless of 
+vehicle’s movement and attitude change. The other coordinate 
+systems for the stereo cameras, eye tracker and HUD can be 
+defined similarly. An approximation method with minimum 
+complexity is used to overlay the augmented warnings on the 
+real world. Geometric modeling between the 2D image of a 
+camera and a 2D HUD is carried out in a projective 
+transformation (2D homography) with a fixed driver’s eye 
+position. Because the projective transformation parameter is 
+calculated in the fixed position and view, dynamic adjustment 
+is performed to compensate the movements in the driver’s eye 
+position. Eye tracker is also used to recognize the driver’s eye 
+position in real time. 
+III. EXPERIMENTS 
+In the proposed system, the stereo cameras are mounted on 
+the top and the transparent display is installed in front of the 
+passenger seat. The stereo cameras are 8 mm cameras with a 
+resolution of 640 × 480 at a speed of 30 fps and the transparent 
+display is a 22-inch transparent Samsung LCD display with a 
+transparency of 15% instead of an existing automotive HUD 
+product. Before the road test, we create the projective 
+2278
+
+--- Page 3 ---
+ 
+TABLE I.  
+VEHICLE AND PEDESTRIAN DETECTION RESULTS 
+Object Type 
+Experimental Results of Vehicle and Pedestrian Detection 
+Approach 
+Detection Time 
+Precision 
+Recall 
+F1 measure 
+Vehicle (Highway) 
+opencv-gpusvm 
+472 ms 
+82.14 % 
+80.20 % 
+81.16 % 
+proposed method 
+47 ms 
+88.34 % 
+85.21 % 
+86.75 % 
+Vehicle (Downtown) 
+opencv-gpusvm 
+497 ms 
+78.92 % 
+78.23 % 
+78.57 % 
+proposed method 
+58 ms 
+86.25 % 
+83.67 % 
+84.95 % 
+Pedestrian (Downtown) 
+opencv-gpusvm 
+348 ms 
+77.48 % 
+72.26 % 
+74.28 % 
+proposed method 
+83 ms 
+88.17 % 
+80.52 % 
+84.17 % 
+transformation parameters using the conjugate point 
+acquisition. Current implementation let the user select 
+detection target, e.g. vehicle or pedestrian, for real time 
+processing. The visual properties can be modified to test 
+various visual effects. 
+For training the SVM classifiers, we use a training data set 
+that contained positive images of 1,067 vehicles, negative 
+images of 38,253 non-vehicles, positive images of 7,248 
+pedestrians and negative images of 27,135 non-pedestrians. 
+The accuracy is measured with an F1 measure. We compare 
+the performance of the proposed system to the existing 
+GPU-based OpenCV HOG detector and HOG-based SVM 
+detector. Table 1 shows the experimental results. 
+Fig. 3 shows the images of the vehicles and pedestrians 
+detected through the proposed system on the transparent 
+display. The augmented warnings for the vehicles and 
+pedestrians can be selectively highlighted in some situations 
+for safe driving. Some of them should be helpful for people 
+with slow recognition and responses like elderly. 
+The proposed system is displayed with delay when the 
+detected object passes quickly. We can experience similar 
+behaviors when the experimental vehicle turns quickly. 
+Therefore, it needs to improve the performance and the speed, 
+which responds to robustly about various and fast speed in 
+various vehicle environments. 
+IV. CONCLUSION 
+We are in the first phase of research and development for 
+the proposed system with the five year plans (2012-2016). 
+Ending the second research year, an experimental application 
+has been designed and tested. From the road tests, we can 
+observe the potential of the augmented FCWS and derive 
+further improvement issues. Future plan is derived as below. 
+The transparent display will be replaced by a projector 
+HUD because the transparent display creates double vision 
+(diplopia) causing frequent eye accommodation leading to eye 
+strain. This replacement will require a conversion model 
+between images and the curvy windshield for AR display such 
+as the rational function model. The proposed system relies on 
+a GPU accelerated computer which is not familiar with 
+automotive industry. Therefore, it will be necessary to 
+implement the proposed system in real time embedded 
+systems using in automotive industry. The augmented 
+warnings should be displayed based on the situation 
+awareness. Since the augmented warnings often obstructs 
+driver's field of vision of the road, the minimized and selected 
+information will have to be displayed intelligently. 
+ 
+Figure 3.  Augmented warning results for (a) vehicles and (b) pedestrians. 
+REFERENCES 
+[1] W. J. Horrey, C.D. Wickens and A.L. Alexander, “The Effects of 
+Head-Up Display Clutter and In-Vehicle Display Separation on 
+Concurrent Driving Performance,” Proc. the Human Factors and 
+Ergonomics Society Annual Meeting, 2003, p. 1880. 
+[2] N. Dalal and B. Triggs, “Histograms of oriented gradients for human 
+detection,” IEEE Conf.Computer Vision and Pattern Recognition, vol. 
+1, 2005, pp. 886–893. 
+[3] R. Benenson et al., “Pedestrian detection at 100 frames per second,” 
+IEEE Conf. Computer Vision and Pattern Recognition, 2012, pp. 
+2903–2910. 
+[4] D. F. Llorca et al., “Vehicle logo recognition in traffic images using 
+HOG features and SVM,” IEEE Conf. Intelligent Transportation 
+Systems, 2013, pp. 2229–2234. 
+[5] V. Charissis and S. Papanastasiou, “Human-Machine Collaboration 
+through Vehicle Head Up Display Interface,” Int. J. Cognition, 
+Technol., Work, vol. 12, no. 1, 2010, pp. 41–50. 
+[6] Y.C. Shinko, D. Anup, and M.T. Mohan, “Active Heads-up Display 
+Based Speed Compliance Aid for Driver Assistance: A Novel Interface 
+and Comparative Experimental Studies,” IEEE Int. Symp. IV, 2007, pp. 
+594–599. 
+[7] A. Sato et al., “Visual Navigation System on Windshield Head-Up 
+Display,” Proc. 13th World Congress ITS, 2006, pp. 167–175. 
+[8] H. Watanabe et al., “The Effect of HUD Warning Location on Driver 
+Responses,” Proc. 6th World Congress ITS, 1999, pp. 1–10. 
+[9] H. S. Park, M. W. Park, K. H. Won, K. H. Kim and S. K. Jung, 
+“In-Vehicle AR-HUD System to Provide Driving-Safety Information,” 
+ETRI J., vol. 35, no. 6, 2013, pp. 1038–1047. 
+[10] M. W. Park, J. P. Park and S. K. Jung, “Real-time Vehicle Detection 
+using Equi-Height Mosaicking Image,” Int. Conf. ACM Reliable and 
+Convergent Systems, 2013, pp. 171–176. 
+[11] M. W. Park and S. K. Jung, “GPU-Based Real-Time Pedestrian 
+Detection and Tracking Using Equi-Height Mosaicking Image,” Int. 
+Conf. Neural Information Processing, part-3, 2013, pp. 409–416. 
+[12] H. S. Park and K. H. Kim, “Efficient Information Representation 
+Method for Driver-centered AR-HUD system,” HCI Int., part-3, 2013, 
+pp. 393–400. 
+2279

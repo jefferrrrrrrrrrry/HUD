@@ -1,0 +1,558 @@
+--- Page 1 ---
+400 Commonwealth Drive, Warrendale, PA 15096-0001 U.S.A.   Tel: (724) 776-4841  Fax: (724) 776-0790   Web: www.sae.org
+SAE TECHNICAL
+PAPER SERIES
+2007-01-1105
+An Efficient Visual Forward Collision Warning
+Display for Vehicles
+Henrik Lind
+Volvo Car Corporation
+Reprinted From:  IVI Technology and Intelligent Transportation Systems
+(SP-2099)
+2007 World Congress
+Detroit, Michigan
+April 16-19, 2007
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 2 ---
+By mandate of the Engineering Meetings Board, this paper has been approved for SAE publication upon
+completion of a peer review process by a minimum of three (3) industry experts under the supervision of
+the session organizer.
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or
+transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise,
+without the prior written permission of SAE.
+For permission and licensing requests contact:
+SAE Permissions
+400 Commonwealth Drive
+Warrendale, PA 15096-0001-USA
+Email: permissions@sae.org
+Fax: 
+724-776-3036
+Tel: 
+724-772-4028
+For multiple print copies contact:
+SAE Customer Service
+Tel: 
+877-606-7323 (inside USA and Canada)
+Tel: 
+724-776-4970 (outside USA)
+Fax: 
+724-776-0790
+Email: CustomerService@sae.org
+ISSN 0148-7191
+Copyright © 2007 SAE International
+Positions and opinions advanced in this paper are those of the author(s) and not necessarily those of SAE.
+The author is solely responsible for the content of the paper. A process is available by which discussions
+will be printed with the paper if it is published in SAE Transactions.
+Persons wishing to submit papers to be considered for presentation or publication by SAE should send the
+manuscript or a 300 word abstract of a proposed manuscript to: Secretary, Engineering Meetings Board, SAE.
+Printed in USA
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 3 ---
+2007-01-1105
+An Efficient Visual Forward Collision Warning Display
+for Vehicles 
+Henrik Lind 
+Volvo Car Corporation 
+Copyright © 2007 SAE International
+ABSTRACT 
+The aim of the present study was to investigate how 
+quickly and efficiently distracted drivers react to four 
+different visual warning displays intended for a Forward 
+Collision Warning system for vehicles. The displays are 
+the Collision Warning Head Up Display (CWHUD), the 
+Steering Wheel Warning Display, The High Head Down 
+Display (HHDD), and the Cluster display. The study was 
+performed in a simulator. 
+Warnings were randomly presented to drivers when they 
+were visually distracted away from the road by a traffic 
+sign discrimination task. Brake reaction times to the 
+different warnings were recorded. From the results of 
+performance tests and preference ratings, the CWHUD, 
+provided the best performance in terms of 200 ms lower 
+reaction time and low amount of missed warnings. The 
+average brake reaction times were significantly faster 
+for the CWHUD warnings. There were no significant 
+differences in reaction times among the other three 
+warnings. One CWHUD warning was missed during the 
+experiment, whereas 17 High Head Down Display, 
+HHDD, warnings were missed. The CWHUD was rated 
+first among the user preferences. The second, third and 
+fourth choices were HHDD, Cluster Display, and 
+Steering Wheel Warning Displays. It is concluded from 
+the results of this study that the CWHUD was the best of 
+the four FCW visual displays tested in the study.  
+The high performance and high subjective driver 
+preference is contributed to the location color and 
+brightness of the CWHUD providing the driver with an 
+intuitive understanding of a forward braking vehicle.
+INTRODUCTION 
+The present study investigates the performance of 
+different Forward Collision Warning (FCW) displays in a 
+driving simulator. FCW systems provide alerts to assist 
+drivers in avoiding or mitigating rear-end crashes. A 
+warning must provide a fast and appropriate response 
+from drivers in critical close to impact situations. The 
+design of the warning displays for FCW is very 
+important for safety because a poorly designed display 
+may reduce its effectiveness.  
+Figure 1 
+Warning displays in study
+It has been demonstrated that visual warnings are an 
+essential component of the single stage FCW1 however 
+there is much uncertainty about how and where this 
+warning should appear. Conspicuity is an important 
+issue in the design of warning displays.  Cole and 
+Hughes2 discuss issues relating to visibility or target 
+conspicuity while driving.  Conspicuity is “...the property 
+that leads to a target object having a high probability of 
+being seen within a very short time” 2 .  They summarize 
+the 
+following factors that determine conspicuity: 
+eccentricity from line of sight, contrast between target 
+and background, complexity of background, co lour and 
+the boldness of information on the target.  For maximum 
+conspicuity, a FCW visual warning display should be 
+near to a driver's line of sight, have high contrast 
+against a uniform background, and be bright and 
+colorful.  Unfortunately it is not that simple, particularly 
+for the line of sight issue.  
+Guidelines recommend that visual warnings be placed 
+within 15 degrees of the driver's normal sight line. The 
+vast majority of driver's visual attention is on the forward 
+road scene (roughly 85-90%3).  The visual warning 
+should be easily visible when the driver is looking 
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 4 ---
+forward.  More than 75% of the drivers are non-attentive 
+to the road-way before a frontal collision according to 
+the 100 cars naturalistic driving study7. If they were 
+looking at the forward road scene, they would be able to 
+see and avoid a hazardous situation.  Therefore an 
+FCW system should be seen as an intelligent “Anti-
+distraction system” and must provide the property of 
+directing the sight of a distracted driver to the forward 
+road scene. 
+Where do drivers look when they are distracted (i.e., not 
+looking at the road)? They could be checking their 
+mirrors, looking ahead but not attending, interacting with 
+an information system (e.g., radio), or perhaps talking 
+with a passenger.  According to field research by 
+Lansdown3 on drivers in the U.K., the mean percentage 
+of time spent looking to the different regions of the 
+visual scene were: 4.6 % rear-view mirror, 2.8 % right 
+region, 1.3 % left region and 3.9 % instrument panel & 
+centre stack. It is important that when drivers are 
+looking in these four areas, and not looking at the road, 
+the FCW display must also be visible.  Meanwhile, the 
+display should still be central to the forward view 
+because the warning must direct the driver's attention to 
+the hazard.  A disadvantage of highly conspicuous 
+visual displays is that they can capture attention rather 
+than direct the eye to a hazard ahead.   
+WARNING DISPLAY CHARACTERISTICS 
+Two new warning display concepts, the Collision 
+Warning Head Up Display, CWHUD, (figure 2) and the 
+Steering Wheel Display (figure 5), with the aim to 
+provide visibility, attention and intuitiveness.  
+A selection of two different visual warning displays was 
+made from literature and from market available 
+systems. These were the High Head Down Display, 
+HHDD (figure 3) and the Cluster Display (figure 4).  
+Table 1 to 4 lists the characteristics of the warning 
+displays. 
+A flashing red warning was selected to allow for a good 
+peripheral recognition of the activation. 
+Each warning lasted 1.2 second and flashed at a rate of 
+4 times per second.  The on flash lasted 0.15 seconds 
+with 0.1 seconds between flashes.  The table below 
+describes how the displays differed.  Figure 1 shows 
+pictures of how the four different warnings appeared to 
+the driver.  
+COLLISION WARNING HEAD UP DISPLAY, CWHUD 
+Figure 2  
+Collision Warning Head Up Display 
+Position: 
+Top of instrument panel reflected in 
+lower part of windscreen 
+Appearance: 
+Red light 
+Intensity 
+measured 
+from eye 
+position: 
+1000 mcd 
+Size: 
+14.5 x 0,5 cm 
+Light source: 
+23 round clear red high intensity 
+LED’s 
+of 
+1000mcd 
+each. 
+High 
+intensity is required since only roughly 
+10% of the visual intensity is reaching 
+the eye through the reflection in 
+windshield. 
+Table 1  
+Collision Warning Head Up Display 
+characteristics
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 5 ---
+HIGH HEAD DOWN DISPLAY, HHDD 
+Figure 3  
+High Head Down Display 
+Position: 
+Direct 
+view 
+display 
+on 
+top 
+of 
+instrument panel. 
+Appearance: 
+Telltale & warning in text 
+(CAMP symbol)
+Intensity 
+measured 
+from eye 
+position: 
+80 + 80 mcd covered with icon frame 
+Size: 
+2.0 x 1.0 cm 
+Light source: 
+2 red back-lighters composed of 16 
+LEDs 
+Table 2  
+High Head Down Display 
+characteristics
+CLUSTER DISPLAY 
+Figure 4  
+Cluster Display 
+Position: 
+Direct view, In instrument cluster
+Appearance: 
+Telltale & warning in text 
+(CAMP symbol)
+Intensity 
+measured 
+from eye 
+position: 
+80 mcd - covered with icon frame 
+Size: 
+1.5 x 0.7 cm 
+Light source: 
+1 red back-lighter composed of 8 
+LEDs 
+Table 3  
+Cluster display characteristics
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 6 ---
+STEERING WHEEL DISPLAY 
+Figure 5 
+Steering Wheel Display 
+Position: 
+Direct view, Top centre of steering 
+wheel rim 
+Appearance: 
+Lights 
+Intensity 
+measured 
+from eye 
+position: 
+80 mcd 
+Size: 
+26 cm x 0.2 cm 
+Light source: 
+16 square LEDs grouped as 5, 6 and 
+5.   
+Table 4 
+Steering Wheel Display 
+characteristics 
+METHOD 
+Sixteen experienced drivers aged 24 to 60 years (mean 
+age = 37 years) participated in the study.  Nine were 
+female and seven were male. 
+The study was run in a stationary base driving simulator 
+to be able to measure the performance in a controlled 
+environment.  Participants were given a five-minute 
+practice drive to become familiar with the driving 
+simulator. The test drive lasted for approximately 15 
+minutes on a motorway.  Participants were instructed to 
+drive as they normally would, but to maintain the speed 
+limit (110 km/h).  A forward vehicle was cruising at fixed 
+distance to the ego vehicle approximating about 1.5 
+second’s headway. There was other traffic, but nothing 
+that interfered with the driver’s speed. 
+During the test drive, participants were presented with 
+random targets in four different locations. The targets 
+are provided in the following pictures taken from the 
+driver position. Figure 6a shows a target in the Centre 
+stack display. Figure 6b shows the target in the far left 
+of the projected road scene approximating the left mirror 
+position. Figure 6c shows the image in the far right 
+approximating the right mirror position and finally figure 
+6d shows the image in high centre approximating the 
+inner rear view mirror position.  The targets were five 
+different road signs that appeared in one of the locations 
+every four seconds on average.  Drivers were asked to 
+respond, with a button press, to the appearance of one 
+of five target options (the deer sign).  Target detection 
+was rewarded with points. Approximately 12 responses 
+per target position were recorded amongst about 225 
+total signals.   
+Figure 6a 
+Centre stack position
+Figure 6b 
+Left mirror position 
+Figure 6c 
+Right Mirror position
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 7 ---
+Figure 6d  
+Rear view mirror position
+The number and frequency of targets were selected to 
+create a realistic amount of visual distraction.  FCW 
+warning events were distributed where the visual 
+warning display would light up and the drivers were 
+instructed to press the brake as fast as possible.  A 
+warning could only occur 0.5 seconds after a target sign 
+was displayed so the driver would be looking at the sign 
+when the warning light appeared. The drivers were 
+warned every 30 seconds on average with a minimum 
+spacing of at least 15 seconds between signals.  The 
+drivers brake reaction times to the FCW warnings were 
+timed. Approximately 8 responses per warning type 
+were recorded.   
+All of the reaction time data for both the warnings and 
+targets were recorded in a computer log file.  The 
+reaction time data for each participant were summarized 
+and transcribed into Statistica where they could be 
+further analyzed. 
+RESULTS 
+Repeated measure ANOVAs were conducted on the 
+reaction times to the four warning lights.  There were 
+significant differences between the warning lights for the 
+mean [F(3, 45) = 10.8, p < 0.0001], median [F(3, 45) = 
+11.4, p < 0.0001] and maximum [F(3, 45) = 4.28, p < 
+0.01] reaction times.  Post-hoc comparisons using 
+Tukey's HSD indicated, for these measures, that the 
+reaction times were significantly faster for the CWHUD 
+than the other three warning displays, figure 7.  This 
+difference was nearly 200 ms for the mean brake 
+reaction times.  
+The standardized effect between the CWHUD and 
+Cluster warnings was 0.87, which constitutes a large 
+difference. No significant differences were found among 
+the other warning lights and there were no gender 
+differences in reaction time.  
+Figure 7 
+Reaction time to warning
+Regarding the number of participants who missed a 
+warning, only one driver missed a HUD warning, 6 
+drivers missed a Steering Wheel warning, 5 missed a 
+HHDD warning and 11 missed Cluster warnings.  Some 
+people missed more than one warning. The number of 
+missed warnings per display distributed as an average 
+per driver is shown in figure 8.  The total number of 
+missed warnings was as follows: 1 CWHUD, 6 HHDD, 
+12 SW and 17 Cluster warnings.  Paired comparisons 
+with the Wilcoxon matched pairs test indicated that this 
+difference was statistically significant between the 
+CWHUD and other warnings (a = 0.05).  
+Figure 8 
+Missed warnings per warning display 
+Repeated measure ANOVAs were conducted on the 
+average reaction times to the four target positions.  
+There were significant differences between the four 
+locations [F(3, 39) = 27.0, p < 0.0001; note two 
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 8 ---
+participants were excluded from this analysis because 
+they missed all the targets that appeared on the centre 
+stack monitor].  Post-hoc comparisons using Tukey's 
+HSD indicated that the reaction times were significantly 
+faster for the middle screen targets than the other 3 
+locations.  Also the right screen targets had significantly 
+faster responses than the left screen position.  
+The participants were asked to rank the four warning 
+lights according to their preference at the end of their 
+drive, see figure 9.  Most preferred the CWHUD warning 
+light overall followed closely by the Steering wheel. The 
+HHDD was third choice and Cluster warning was the 
+least preferred option. 
+Figure 9  
+Ranking of visual warning display
+SOURCES OF ERROR 
+Before concluding with some recommendations, some 
+limitations of this study should be discussed.  One 
+limitation was that the warnings were given during 
+'normal' driving rather than collision scenarios (e.g., 
+sudden braking vehicle ahead).  This may have 
+surprised drivers because they had no indication of 
+when the warning would appear.  An opposing problem 
+was the test drivers were expecting the warning 
+throughout the drive, so they may have responded 
+faster than they would have in a real collision-warning 
+situation.  On the balance of these factors, it is believed 
+that this study obtained a reasonably accurate measure 
+of the speed to which distracted drivers react to collision 
+warning displays since the results are comparable to the 
+CAMP study results1 of 1,18 seconds 85 percentile 
+reaction time for a combined HHDD and audible 
+warning. The aim of the study was to make an interface 
+comparison and not to define the reaction time. For this 
+purpose the method is believed to be fully valid. 
+The simulator setup with lower environmental brightness 
+than 
+a 
+real 
+world 
+scenario 
+may 
+improve 
+the 
+performance. However the relationship in brake reaction 
+time between warning displays may still be similar.  
+The driver foot position before warning was not recorded 
+in the study. However since all drivers experienced the 
+same warnings the distribution of error for different 
+drivers foot position should be evenly spread over the 
+warning displays. 
+Another limitation of this study was that, because the 
+four warnings were unique, no conclusions regarding the 
+ideal design for a FCW can be made.  For example, 
+little can be said about the general effectiveness of 
+LED's versus telltales, or high versus low warnings.  The 
+study can only say what is best among a limited 
+selection of visual warning types rather than what is the 
+best possible visual warning for FCW.  
+CONCLUSION 
+From the results of the performance tests and 
+preference ratings, the CWHUD display was in the study 
+found to be the best for the FCW.  The average brake 
+reaction times were significantly faster for the CWHUD 
+warnings (approximately 200 ms). The same result was 
+found for the median, minimum and maximum reaction 
+times. There were no significant differences in reaction 
+times among the other three warnings.  The CWHUD 
+also performed best related to low amount of missed 
+warnings.  Only one CWHUD warning was missed 
+during the experiment, whereas 17 of the total number 
+of instrument Cluster warnings were missed by the 
+drivers.  Also, the CWHUD rated first among the user 
+preferences.  The second, third and fourth choices were 
+Steering wheel, HHDD, and Cluster. 
+The cluster position had the worst performance and 
+preferences ratings.  Also, it was the only warning 
+display that was not within 15 degrees of the driver's 
+normal site line which is a NHTSA recommendation4.
+The explanation for the performance of the CWHUD is 
+the greater size and brightness combined with the 
+similarity and the position of a red brake light that 
+together provide driver with an intuitive understanding of 
+the situation.  
+Not considered in this study was the problem of driver 
+annoyance.  Frequent false alarms or nuisance warnings 
+may cause the drivers to become irritated and this risk 
+of irritation increases when the warnings are intrusive.  
+Further studies preferably in realistic on road driving 
+conditions on should be done to ensure that an efficient 
+FCW visual display is not too annoying under normal 
+realistic operating conditions which include false and 
+nuisance alarms. A system utilizing an intrusive type of 
+Collision Warning Display is expected to demand less 
+nuisance warnings and a very low amount of false 
+warnings than a low intrusive Collision Warning system. 
+The use of complementary warning modalities can not 
+be ruled out as efficient means of warning. I.e. less 
+intrusive visual warning signals like the HHDD, Steering 
+Wheel Display and Cluster Display used together with 
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018
+
+--- Page 9 ---
+an audible warning can not be ruled out as an efficient 
+collision warning. 
+Low sunlight may in real life reduce the visibility of the 
+warning as well as if the CWHUD warning is outside the 
+peripheral 
+vision 
+of 
+the 
+driver. 
+It is therefore 
+recommended 
+to combine the CWHUD with a 
+complementary warning modality. 
+Internal studies on the CWHUD have been performed in 
+more realistic FCW scenarios both in simulator and on 
+road. These studies show that the proposed CWHUD 
+visual warning device is efficient and intuitive in collision 
+scenarios. 
+To conclude the results shows that the Collision 
+Warning Head Up Display, CWHUD, provided the best 
+performance in a distracted driver situation based on a 
+low amount of missed warnings, low reaction time and 
+high driver preference out of the four FCW visual 
+displays tested. 
+ACKNOWLEDGEMENT 
+The author likes to acknowledge the excellent study 
+layout, execution and analysis to Peter Burns and the 
+execution of the study to Maria Tevell. 
+REFERENCES 
+1. Kiefer, R., LeBlanc, D., Palmer, M., Salinger, J., 
+Deering, R., & Shulman, M. (1999). CAMP Report: 
+Development and validation of functional definitions 
+and evaluation procedures for collision warning/ 
+avoidance 
+systems. 
+(DOT 
+HS 
+808 
+964). 
+Washington, DC: NHTSA. 
+2. Cole, B. L., & Hughes, P. K. (1988). Driver's don't 
+search: they just notice. In D. Brogan (Ed.), Visual 
+Search,  (pp. 407-417). Durham, U.K.: Taylor & 
+Francis. 
+3. Lansdown, T.C. (1996) Visual Demand and the 
+Introduction 
+of 
+Advanced 
+Driver 
+Information 
+Systems into Road Vehicles, Doctoral Thesis, 
+Loughborough University, Leicestershire. 
+4. Lerner, N.D., Kotwal, B.M., Lyons, R.D., & Gardner-
+Bonneau, D.J. (1996). Preliminary Human Factors 
+Guidelines for Crash Avoidance Devices (DOT HS 
+808 342). Washington, DC: NHTSA. 
+5. Wang, J. S., Knipling, R. R., & Goodman, M. J. 
+(1996). The role of driver inattention in crashes; new 
+statistics from the 1995 Crashworthiness Data 
+System. Proceedings of 40th Annual meeting of the 
+Association for the Advancement of Automotive 
+Medicine, Vancouver (October, 1996). 
+6. Wickens, C.D. (1992). Engineering Psychology and 
+Human Performance. London: Harper-Collins. 
+7. Dingus et. al (2006). The 100 car naturalistic driving 
+study, Phase 2 - Results of the 100-Car Field 
+experiment (DOT HS 810 593). Washington, DC: 
+NHTSA. 
+CONTACT 
+Henrik Lind, Technical Expert 
+Volvo Car Corporation 
+Safety Electronics 
+Dep. 94354 PV4A2 
+SE-405 31 Gothenburg 
+SWEDEN 
+Tel: +46 (31) 595361 
+E-mail: hlind1@volvocars.com 
+Downloaded from SAE International by University of Auckland, Saturday, August 04, 2018

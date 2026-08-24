@@ -1,0 +1,920 @@
+--- Page 1 ---
+Accident prevention through visual warnings 
+How to design warnings in head-up display for older and younger drivers 
+Juela Kazazi, Susann Winkler & Mark Vollrath 
+Technische Universität Braunschweig 
+Institut für Psychologie 
+Abteilung für Ingenieur- und Verkehrspsychologie 
+Braunschweig, Germany 
+ 
+Abstract— Many severe accidents occur in urban areas. As 
+part of the research project UR:BAN this study investigated how 
+different types of visual warnings can prevent collisions within 
+these areas and trigger an adequate driver reaction. For this, two 
+different warning types were implemented in a head-up display. 
+It was assumed that one of the warning types would trigger an 
+immediate and strong brake reaction of the driver (stop sign 
+warning). The second warning type should animate the driver to 
+be cautious, for example by slightly pressing the brake pedal 
+(caution sign warning). As collisions in urban areas are very 
+severe for older drivers, differences in the driving performances 
+(numbers of collisions, brake reaction time, maximum braking 
+value) of older and younger drivers due to the warning types 
+were investigated. For this, four urban scenarios were 
+implemented in a fixed base driving simulator varying the 
+characteristics of the critical object (e.g., pedestrian, lead vehicle, 
+obstacle). In total 72 drivers (36 participants aged 20-35 years, 36 
+participants aged 65+ years) were tested in a between-subjects 
+design (type of warning, age). The study revealed that the 
+number of collisions was reduced when drivers were warned 
+(especially younger drivers) demonstrating the positive effect of 
+warnings in very critical scenarios. In less critical situations, the 
+warnings did not reduce the numbers of collisions, since the 
+amount of collisions was already low. In critical scenarios older 
+drivers preferred the stop sign warning (leading to a faster and 
+stronger brake reaction) compared to younger participants. 
+Younger drivers had the fastest and strongest brake reaction 
+when receiving the caution sign warning. In less critical scenarios 
+both warnings had a positive effect on the braking reaction time 
+for younger and older drivers.  In both groups the strongest 
+brake reaction was reached when receiving the stop sign 
+warning. This study demonstrates the importance of warning 
+design when wanting to create effective warnings.  
+Keywords—Driver Warning, Accident Prevention, Head-up 
+Display, Older and Younger Drivers; Simulator Study; Urban Area 
+I.  INTRODUCTION 
+For most drivers the urban area is a very challenging one 
+resulting in a large number of accidents.  Within these areas the 
+load of information is very high and the attention has to be 
+divided, since many traffic elements (oncoming vehicles, 
+traffic lights) need to be perceived simultaneously. Currently 
+assistance systems are progressively being implemented in 
+vehicles in order to make urban areas safer. Yet, when 
+developing assistance systems some imperative factors need to 
+be considered [2]. Some of these factors include: location 
+(head-up display (HUD), dashboard), modality (visual, 
+auditory, haptic), type of information (text, symbols). 
+The display location of assistance systems is important to 
+support and not distract drivers [8], [1], [11]. Information or 
+warning of assistance systems are located in different areas 
+within the vehicle, such as, for example, in head-down displays 
+(HDD) as well as head-up displays (HUD). Assistance systems 
+in HDD force drivers to take their eyes off the road in order to 
+get the provided information. Accident occurrence increases 
+with the time the eyes are off of the road [14], [12], and [21]. 
+Reference [14] conducted a simulator study with truck drivers, 
+who were asked to keep their speed close to either 64 km/h or 
+112 km/h. Drivers controlled their speed better with 
+information displayed on a HUD rather than on a HDD. The 
+study of [15] has shown that with a HUD the glance behavior 
+of participants was relatively short, since drivers are not forced 
+into taking their eyes off of the road. It could also be shown 
+that drivers had a gain in reaction time by 0.8 to 1.0 seconds 
+with a HUD compared to a HDD. Furthermore, the HUD was 
+rated as being “extremely meaningful” (close to 5, on a 1 to 5 
+scale). These studies have revealed some of benefits of HUD 
+compared to HDD. 
+Many studies focus on how to best assist the driver.  Yet, 
+research on how to warn the driver and how warnings should 
+be designed in the HUD are rare. Some researchers consider 
+traffic signs as a type of warning to be intuitive. Drivers are 
+confronted with these signs every day and should have an 
+association of reaction with them [17] and [16]. Since there are 
+many different traffic signs, the question arises whether some 
+traffic signs are better suited than others when warning drivers 
+and whether different reactions are triggered by different traffic 
+signs. It is hypothesized that a stop sign will evoke a fast and 
+strong braking, since this sign is linked to an immediate 
+reaction. A caution sign, on the other hand, is hypothesized to 
+cause the driver to be rather attentive without a harsh braking 
+reaction.  
+When developing warning systems the age of drivers is not 
+to be neglected since many studies have shown that the driving 
+behavior as well as the information processing rate of older and 
+younger drivers differs. Reference [17] reported that older 
+drivers have a reduced information processing rate. They 
+performed worse in all laboratory information processing test 
+compared to younger drivers. Furthermore it was reported that 
+older drivers had a reduction in the speed of performance 
+(slower perception and processing of viewed information), as 
+2015 IEEE 18th International Conference on Intelligent Transportation Systems
+978-1-4673-6596-3/15 $31.00 © 2015 IEEE
+DOI 10.1109/ITSC.2015.171
+1028
+
+--- Page 2 ---
+ 
+ 
+well as the possibility of overstrain in complex and critical 
+situations [18]. Concerning the driving behavior, for example 
+[23] examined the effects of traffic speed, driver age and 
+gender on left turn gap acceptance behavior, drivers’ 
+acceleration rate and steering action at a stop-controlled 
+intersection in a driving simulator experiment. A total of 63 
+participants (young: 20-30 years; mid aged: 31-55 years; old: 
+56-83 years) had to turn left with slow moving traffic (40.2 
+km/h) as well as fast moving traffic (88.5 km/h). The results 
+showed significant age effects (e.g. older drivers accelerated at 
+a slower pace). Yet, older drivers may compensate for their 
+cognitive impairments by simplifying their driving task (e.g. 
+driving slower as compared to younger drivers) [4], [17], [9], 
+[20], [6] and [23]. From this, the question rises, if the symbols 
+of warning systems need to be different for older and younger 
+drivers. 
+As part of the research project UR:BAN the following 
+study investigated how warnings should be designed in urban 
+areas to warn different drivers of two different age groups 
+(older drivers vs. younger drivers). 
+The focus of this research was to determine: 
+• 
+if warnings would help reduce older and younger 
+drivers’ crashes in different critical urban scenarios, 
+• 
+if warning symbols need to be different for older and 
+younger drivers, 
+• 
+what kind of warning symbols might have the best 
+effect (e.g., brake reaction time and maximum braking 
+value) 
+For this, two simulator studies were conducted (older 
+drivers vs. younger drivers). These studies will be explained in 
+more detail in the next section. 
+II. METHOD 
+A. Participants 
+Two groups of drivers (older and younger drivers) were 
+examined. The older participants group contained 36 drivers 
+(29 male, 7 female) all being above 65 years old and having a 
+mean age of 71.9 years (SD = 4.4 years) as well as an annual 
+mileage of about 12,000 km. This study was conducted in the 
+time of March 2014 to May 2014. All 36 younger participants 
+(20 male, 16 female) were above 18 years old, had a mean age 
+of 23.9 years (SD = 4.2 years) and drove about 6000 km 
+annually. This study was conducted from July 2013 to October 
+2013. Participants were recruited from a database of the 
+Technische Universität Braunschweig, consisting of younger 
+and older drivers. All drivers were trained in the driving 
+simulator in order to ensure that they were familiar and felt 
+comfortable driving in the simulator. This training (containing 
+three parts, all being the same for older and younger drivers) 
+was conducted on the same day as the experiment to increase 
+compliance. In the first and second part of the training, the 
+participants drove on a straight rural road followed by an urban 
+road in order to train acceleration and deceleration. The last 
+part contained urban intersections where the participants had to 
+turn left/right, in order to get familiar with the turning 
+behavior. Participants who developed simulator sickness had to 
+be excluded from the study (16 older and 2 younger drivers). 
+All 72 remaining participants had normal or corrected-to-
+normal vision. They were compensated for their time by either 
+receiving a box of chocolates, eight Euros an hour or course 
+credit (if university students). 
+B. Driver Warnings 
+Two different warning signs were considered in this paper. 
+Drivers were warned either with a stop sign or a caution sign in 
+the HUD. The HUD was located above the roadway, where it 
+would not obscure the view of the driver (traffic lights or 
+signs). Many warning systems are coupled with an auditory 
+signal [10] but a high frequency of auditory signals may 
+become annoying for drivers [22]. Furthermore the focus of 
+this study lay on the effect of visual warnings, this being the 
+reasons that auditory signals are not considered. The duration 
+of the warning was individual and depended on the speed of 
+the drivers. The onset as well as the offset of the warning was 
+triggered at particular flow points. If a participant came to a 
+complete stop between the two flow points, the duration of the 
+warning was longer as compared to drivers, who did not come 
+to a stop between these points. In total, there were four 
+experimental groups. One group comprised of older drivers 
+only receiving the stop sign warning (SW) in the HUD. The 
+other group of older drivers received the caution sign warning 
+(CW). Younger participants were also divided into two groups, 
+receiving either the SW or the CW warning. Each age group 
+had their own control group (C) receiving no warning at all 
+(see Table I). The size of the SW warning in the HUD was 
+19.9x17.7 cm; the CW warning was 21x19 cm.  
+It was assumed that the SW warning would provoke an 
+immediate brake reaction of drivers, whereas the CW would 
+guide the attention of the driver onto the critical object. It was 
+expected that the different symbols (pedestrian, vehicle or 
+obstacle) would help drivers to identify the critical object and 
+react on it by being cautious and not showing an immediate 
+strong reaction.  
+WARNING TYPES AND WARNING SYMBOLS 
+Type of Warning 
+Presentation in head-up display 
+Control 
+No warning sign 
+Stop sign 
+warning (SW) 
+ 
+Caution sign 
+warning (CW) 
+ 
+ 
+C. Driving Scenarios and Simulation 
+The different scenarios, as seen in Table II, were created 
+using the driving simulation software SILAB [13]. Table I 
+gives an overview of all scenarios and their criticality, as well 
+as the timing of the warnings. The timing of the warnings was 
+the same for older and younger drivers in each scenario, except 
+the Pedestrian 2 scenario. The results of the previous study 
+only with younger participants (which was conducted 
+formerly) showed that the timing of the warning was very late. 
+Thus, the timing of the warning was changed for the following 
+The research is supported by the Federal Ministry for Economic Affairs 
+and Energy on the basis of a decision by the German Bundestag 
+1029
+
+--- Page 3 ---
+ 
+ 
+study with older drivers (warning was now triggered seven 
+meters earlier). 
+In each scenario the ego vehicle, driven by the participant, 
+traveled through a simulated urban road and had to make a turn 
+when it was indicated by a voice output and an arrow in the 
+speedometer. Scenarios were implemented to be different in 
+their criticality, in order to find out what type of warning was 
+best suited for very critical to less critical situations. In the 
+Pedestrian 1 scenario, the driver had to make a left turn at an 
+intersection. While turning, a pedestrian crossed the ego 
+vehicles road. This scenario was implemented to reconstruct a 
+critical traffic situation. In the Pedestrian 2 scenario, a 
+pedestrian hidden by a parked car suddenly crossed, making 
+this scenario a very critical situation. The Vehicle scenario was 
+a less critical situation where a lead vehicle came to a sudden 
+stop. In the less critical Obstacle scenario, drivers were 
+confronted with an obstacle (hay bale) hidden behind a hill.  
+TABLE I.  
+CRITICALITY OF SCENARIOS AND TIMING OF WARNING USED 
+IN THE STUDY 
+ 
+ 
+The study was conducted in the fixed base medium fidelity 
+driving simulator of the Technische Universität Braunschweig. 
+The scenery is projected by three beamers on three screens 
+(front, left, right) resulting in a 180 degree field of view. 
+During this study an automatic transmission was used. Rear-
+view mirrors are simulated by three LCD screens (front, left, 
+right). By using a driving simulator an accurate measure of 
+driving performance is possible and essential variables (road 
+type, weather, day time) can be controlled. Furthermore an 
+evaluation of warning systems in critical situations is made 
+possible without harming the driver.  
+D. Procedure 
+After reading and signing a consent form, participants were 
+instructed in written form about the procedure of the 
+experiment. Drivers were told to ‘‘drive as they would 
+normally do in their own vehicles” and to obey all traffic rules 
+(e.g., speed limits). Afterwards, drivers completed the training 
+drive (lasting about 25 min) in order to get familiar with the 
+simulator and prevent simulator sickness. During the whole 
+experiment the investigator was seated in a separate room, 
+having the opportunity to communicate with the participant via 
+a microphone. The test drive lasted about 15 min. After that the 
+subjects were debriefed about the purpose of the study, 
+reimbursed and thanked for their participation. The overall 
+duration of the trial was about two hours. The order of 
+scenarios in the test drive was not counterbalanced, since the 
+effects of the warning types were of interest. 
+E. Data and Data Analysis 
+Driver behavior was recorded by the simulation software 
+SILAB [13]. Table III gives a summary of the dependent 
+variables. 
+For data analysis IBM SPSS Statistics 22 was used. When 
+applicable, a general linear model, with two between-subject 
+factors (Type of Warning and Age) was used. For accident 
+occurrence, chi-squared tests were conducted. A significance 
+level of alpha p = .05 was adopted for all statistical tests. 
+TABLE II.  
+DEPENDENT VARIABLES REGARDED IN THIS STUDY 
+Variable
+Unit
+Description
+Number of collisions 
+- 
+Number of collisions that occurred 
+between the ego vehicle and the 
+critical object 
+Brake reaction time 
+s 
+Reaction time to pressing the brake 
+pedal after the warning was triggered 
+Maximal braking 
+value 
+% 
+Maximal 
+value 
+of 
+brake 
+pedal 
+pressing 
+III. RESULTS 
+A. Number of collisions 
+Older drivers had a low number of collisions, regardless of the 
+presence and type of warning, when compared to younger 
+drivers (see Fig. 1).  
+There were no significant differences in the number of 
+collisions between older and younger drivers in the SW and 
+CW group (SW: χ² = 0.38, p = 1.000; CW: χ² = 0.89, p = .640) 
+in the Pedestrian 1 scenario. However, younger drivers in the 
+control group had significantly more collisions compared to 
+older drivers (χ² = 6.75, p = .027).  
+In the Pedestrian 2 scenario the amount of collisions for 
+younger drivers was relatively high in the experimental groups, 
+this being the reason for the changed timing of the warning (see 
+section: Driving Scenarios and Simulation). Younger drivers in 
+the control group had significantly more collisions compared to 
+older drivers in the control group (χ² = 6.75, p = .027). 
+Furthermore, younger drivers had significantly more accidents 
+in the SW compared to older ones (χ² = 6.32, p = .037).  
+In the Vehicle scenario, there were no significant differences 
+between younger and older drivers (SW: χ² = 2.18, p = .478; 
+CW: χ² = 1.04, p = 1.000). 
+In the Obstacle scenario there were no collisions at all. Fig. 1 
+gives an overview of the numbers of collisions in Pedestrian 1, 
+Pedestrian 2 and Vehicle scenario, where the * stands for p > 
+.05. 
+Fig. 1: Number of collisions in the Pedestrian 1, Pedestrian 2 and Vehicle 
+scenario for older and younger drivers 
+ 
+ 
+ 
+ 
+ 
+1030
+
+--- Page 4 ---
+ 
+ 
+B. Brake Reaction Time 
+For this analysis a general linear model, with two between-
+subject factors (Type of Warning and Age) was used. For this 
+analysis not all participants were considered. If participants 
+had not pressed the brake pedal and did not have a collision, 
+they were excluded from the examination, as the scenario had 
+not functioned as planned. If participants had not pressed the 
+brake pedal but had a collision, their brake reaction was 
+replaced with the longest brake reaction of their individual 
+group as this failure to react is similar to a very long reaction 
+time. 
+ 
+Fig. 2: Brake Reaction Time in the Pedestrian 1 scenario for older and 
+younger drivers 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In the Pedestrian 1 scenario there was an interaction 
+between the factors Type of Warning * Age. Older drivers had 
+the fastest brake reaction time with SW compared to younger 
+drivers who reached their fastest brake reaction time when the 
+CW was presented (see Fig. 2). Moreover, for younger drivers 
+both warnings were effective in reducing brake reaction time 
+while this was not the case for older drivers who had even 
+longer brake reaction times with CW than in the control group. 
+During the Pedestrian 2 scenario there was a main effect of 
+the factor Type of Warning, as seen in Fig. 3. Here the control 
+group had significantly the slowest brake reaction time 
+compared to the SW (p = .001) as well as compared to the CW 
+(p = .003) group.  
+Fig. 3: Brake Reaction Time in the Pedestrian 2 scenario for older and 
+younger drivers 
+ 
+ 
+In the Vehicle scenario a main effect of the factor Type of 
+Warning as well as Age was found, as seen Fig. 4. The control 
+group had the slowest brake reaction time compared to the SW 
+(p < .001) and the CW (p = .004) group. Older drivers had an 
+overall faster braking reaction compared to younger drivers  
+ 
+Fig. 4: Brake Reaction Time in the Vehicle scenario for older and younger 
+drivers 
+ 
+ 
+ 
+During the Obstacle scenario there was only a main effect 
+of the factor Type of Warning. Here again the control group 
+had the slowest brake reaction time compared to the SW (p < 
+.001) and the CW (p = .009) group. There was a tendency to a 
+significant difference between the SW and CW group, with the 
+SW having faster brake reactions (p = .055). The age groups 
+did not differ. 
+ 
+ 
+Fig. 5: Brake Reaction Time in the Obstacle scenario for older and younger 
+drivers 
+ 
+Table 5 gives an overview of the test results of the brake 
+reaction times in all four scenarios. 
+TABLE III.  
+RESULTS OF BRAKE REACTION TIME IN ALL FOUR SCENARIOS 
+Brake Reaction Time 
+Between-subject: Type of Warning (W) 
+ 
+F 
+df 
+p 
+² 
+Pedestrian 1 
+3.68 
+2,60 
+.032 
+.120 
+Pedestrian 2 
+7.59 
+2,72 
+.001 
+.187 
+Vehicle 
+9.71 
+2,62 
+.000 
+.258 
+Obstacle 
+10.85 
+2,70 
+.000 
+.253 
+Between-subject: Age (A) 
+ 
+F 
+df 
+p 
+² 
+Pedestrian 1 
+0.00 
+1.60 
+.987 
+.000 
+Pedestrian 2 
+1.76 
+1,72 
+.189 
+.026 
+Vehicle 
+10.66 
+1,62 
+.002 
+.160 
+Obstacle 
+0.42 
+1,70 
+.521 
+.006 
+W *A 
+ 
+F 
+df 
+p 
+² 
+Pedestrian 1 
+4.64 
+2,60 
+.014 
+.147 
+Pedestrian 2 
+0.84 
+2,72 
+.435 
+.025 
+Vehicle 
+0.09 
+2,62 
+.914 
+.003 
+Obstacle 
+0.82 
+2,70 
+.447 
+.025 
+ 
+For an overall description of the effect of the warning, we 
+computed the mean of the braking reaction time for each 
+subject over all scenarios. Fig. 6 gives the results. The brake 
+reaction time is reduced from 1.9 s in the control group to 1.2 
+s in the SW group and 1.4 s in the CW group. Thus, overall 
+there is a slight advantage of the SW type of warning.  
+ 
+Fig. 6: Mean Brake Reaction Times over all scenarios and all drivers in each 
+Type of Warning  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1031
+
+--- Page 5 ---
+ 
+ 
+C. Maximum Braking Value 
+For this analysis a general linear model with two between-
+subject factors (Type of Warning and Age) was used. The 
+maximum braking value gives information about the amount 
+(in %) of pressing the pedal. This value demonstrates if the 
+driver either pressed the brake pedal slightly or firmly. The 
+higher the percentage of the maximum braking value, the 
+firmer the brake pedal was pressed. For this analysis not all 
+participants were considered. If participants did not press the 
+brake pedal and did not have an accident, they were excluded 
+from the examination, leading to dissimilar numbers of 
+participants in the groups. If participants did not press the brake 
+pedal but had a collision, as their maximum braking value the 
+smallest maximum braking value of the individual group was 
+used.  
+In the Pedestrian 1 scenario an interaction between Type of 
+Warning * Age was found. Older drivers reached their highest 
+maximum braking value in the SW, while younger participants 
+had their highest value in the CW, as seen in Fig. 7. For older 
+drivers the CW caused a lesser maximal braking values 
+compared to the control group. Overall, only the SW warning 
+produced larger values than the control group. 
+Fig. 7: Maximum Braking Value in the Pedestrian 1 scenario for older and 
+younger drivers 
+ 
+ 
+In the Pedestrian 2 scenario a main effect of Type of 
+Warning was found (see Fig. 8). The control group had lesser 
+maxima compared to the SW (p = .031) and the CW (p = .046) 
+group in both age groups.  
+ 
+Fig. 8: Maximum Braking Value in the Pedestrian 2 scenario for older and 
+younger drivers 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+During the Vehicle scenario a main effect of both the 
+factors Type of Warning and Age was found (Fig. 9). 
+Participants in the SW (p < .001) and CW (p = .019) group had 
+higher maxima’s compared to the control group. Furthermore 
+older drivers had overall smaller maxima compared to younger 
+drivers (older drivers: M = 35.6 %, SD = 37.6 vs. younger 
+drivers: M = 65.2 %, SD = 36.4).  
+ 
+Fig. 9: Maximum Braking Value in the Vehicle scenario for older and younger 
+drivers 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+In the Obstacle scenario the factor Type of Warning showed 
+a main effect. Compared to the SW group, the control group 
+had significantly lower maxima’s (p < .001). No significant 
+difference could be found between the control and the CW 
+group (Fig. 10). Yet, the SW group had significantly higher 
+maxima compared to the CW group (p < .001).  
+Fig. 10: Maximum Braking Value in the Obstacle scenario older and younger 
+drivers 
+ 
+Table 5 gives an overview of the test results of the 
+maximum braking value in all four scenarios. 
+TABLE IV.  
+RESULTS OF MAXIMUM BRAKING VALUE IN ALL FOUR 
+SCENARIOS 
+Maximum Braking Value 
+ Between-subject: Type of Warning (W) 
+ 
+F 
+df 
+p 
+² 
+Pedestrian 1 
+2.85 
+2,64 
+.066 
+.089 
+Pedestrian 2 
+3.02 
+2,72 
+.056 
+.084 
+Vehicle 
+8.70 
+2,64 
+.000 
+.231 
+Obstacle 
+17.14 
+2,70 
+.000 
+.349 
+Between-subject: Age (A) 
+ 
+F 
+df 
+p 
+² 
+Pedestrian 1 
+0.20 
+1.64 
+.888 
+.000 
+Pedestrian 2 
+1.10 
+1,72 
+.298 
+.016 
+Vehicle 
+11.91 
+1,64 
+.001 
+.170 
+Obstacle 
+1.95 
+2,70 
+.167 
+.030 
+W *A 
+ 
+F 
+df 
+p 
+² 
+Pedestrian 1 
+3.89 
+2,64 
+.026 
+.118 
+Pedestrian 2 
+1.86 
+2,72 
+.164 
+.053 
+Vehicle 
+1.05 
+2,64 
+.356 
+.035 
+Obstacle 
+1.70 
+2,70 
+.190 
+.051 
+ 
+ 
+ 
+ 
+ 
+ 
+Overall, both warnings were somewhat effective as 
+compared to the control group in increasing the braking 
+reaction of the drivers. However, this effect was stronger for 
+the SW warning as compared to the CW warning. This was 
+found for both age groups. Additionally, there were some 
+differences between the two age groups with regard to the 
+amount of braking in some scenarios.  
+ 
+ 
+ 
+ 
+ 
+ 
+1032
+
+--- Page 6 ---
+ 
+ 
+Fig. 11: Mean Maximum braking value over all scenarios and all drivers in 
+each Type of Warning 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IV. DISCUSSION 
+The study examines the effect of two types of warning in 
+different critical scenarios for older and younger drivers. 
+Before discussing the results, some caveats have to be 
+considered. Comparing the data of different participants is only 
+valid to a limited degree due to the different timings of the 
+warning. The timing of the warning was not independent of the 
+drivers vehicle speed. For further studies the time to collision 
+(TTC) should be used as the time to trigger a warning, as 
+participants would than receive the warning at the same 
+“critical” level. Furthermore, comparing the results of older 
+and younger drivers in the Pedestrian 2 scenario is difficult, as 
+the time of the triggered warning was different for older and 
+younger drivers. Yet, when looking at the control group in this 
+scenario, it becomes clear that younger drivers have 
+significantly more collisions compared to older drivers 
+independently of the timing of the warning. For further studies 
+the timing of the warning should be the same for all groups. 
+During this study older drivers had less accidents compared 
+to younger drivers. One possibility might be that older drivers 
+had a higher annual mileage and thus more driving experience 
+compared to younger drivers. Other reasons for the low 
+accident occurrences of older drivers might have been 
+compensatory strategies like driving slower. Additionally, a 
+selection bias might have resulted and those older drivers 
+volunteering for this study were all in good shape. For further 
+studies more female older drivers should be recruited, since the 
+amount of female older drivers in this study was relatively low. 
+The four implemented scenarios were designed to vary in 
+their criticality. This could be shown when looking at the 
+maximal braking values in each scenario (Older Drivers: 
+Pedestrian 1: 85%; Pedestrian 2: 54%; Vehicle: 36%; 
+Obstacle: 45% vs. Younger Drivers: Pedestrian 1: 89%; 
+Pedestrian 2: 55%, Vehicle: 65%; Obstacle: 39%). The reasons 
+for the different criticalities of older and younger drivers in the 
+Vehicle scenario are that older drivers had a significant lower 
+speed when the warning was triggered compared to younger 
+drivers (F(1, 71) = 22.6, p < .001; older drivers: M = 11.3, SD = 
+1.9 vs. younger drivers: M = 12.9, SD = 0.7). Furthermore 
+older drivers had a significant larger distance to the lead 
+vehicle when pressing the brake pedal (F(1, 61) = 16.51, p < 
+.001; Older Drivers: M = 53.3, SD = 30.0 vs. Younger Drivers: 
+M = 28.2, SD = 17.8).  Additionally the different criticalities of 
+the scenarios become clear when looking at the number of 
+collisions. The most accidents occurred in the Pedestrian 2 
+(critical) and Pedestrian 1 (very critical) scenario. Furthermore, 
+it could be shown that the SW lead to the fastest and strongest 
+brake reactions. Yet, the question arises, whether drivers need 
+to have a very high braking maximum even if the situation is 
+not critical and a sudden and firm brake reaction is not 
+required, as in the Vehicle and Obstacle scenario. Here the SW 
+could lead to negative effects (e.g., maximum braking value is 
+too high and not suited for a less critical situation) so that other 
+road users might perceive this behavior as traffic blocking, 
+leading to hazardous behaviors of other drivers or resulting in 
+rear-end crashes [5]. In order to avoid that, a warning cascade 
+should be considered with different warnings depending on the 
+criticality of the situation as well as the reaction required. This 
+will be discussed in the next section. 
+V. CONCLUSION 
+The aim of this work was to determine if warning systems 
+would help reduce older and younger driver’s crashes in urban 
+scenarios. Furthermore the focus laid on the warning symbols 
+as well as what kind of warning symbols might have the best 
+effect on brake reaction time and maximum braking value in 
+critical urban situations. 
+The reduced number of accidents, especially for younger 
+drivers, demonstrates the positive effects of these warning 
+systems in (very) critical scenarios. When the situation is not 
+critical, then warning systems did not have a positive effect on 
+the reduction of collisions, since the amount of collisions was 
+already low.  
+In the very critical scenario Pedestrian 2, both warning 
+types lead to faster reaction times, as well as maximal braking 
+values compared to the control group, independently of the age 
+of drivers. 
+In the less critical Vehicle scenario both warning types had 
+a positive effect on the brake reaction time for older drivers. 
+Furthermore older drivers reacted faster compared to younger 
+drivers independently of the warning type, at least in this 
+scenario. Yet, they had a lower maximum braking value, since 
+their velocity was significantly lower compared to younger 
+drivers. The highest maximum braking value was reached (in 
+both groups) when receiving the SW. 
+In the less critical Obstacle scenario, the SW lead to the 
+fastest brake reaction as well as to the highest maximum 
+braking value in both groups. 
+In summary, the warnings used in this study had a positive 
+effect on the reduction of accidents for younger drivers. In 
+critical situations (e.g., Pedestrian 1) older drivers should 
+receive the SW in order to react fast and firm. Younger drivers 
+should receive the CW in these critical situations. For very 
+critical scenarios (e.g., Pedestrian 2) older and younger drivers 
+should receive any kind of warning (no difference between SW 
+and CW). In less critical scenarios (Vehicle or Obstacle) the 
+CW is best suited for both groups, since a high maximum 
+braking value is not required. 
+The descriptive results of the warnings, independently of 
+the scenario and the age of drivers, showed that the SW lead to 
+the fastest reaction time as well as the highest maximum 
+ 
+ 
+1033
+
+--- Page 7 ---
+ 
+ 
+braking values. This type of warning can be recommended for 
+quite critical scenarios, which demand an immediate driver 
+reaction. In less critical situation the CW should be triggered, 
+since raising the attention of the driver and a slight braking 
+reaction are sufficient reactions. When drivers do not react in 
+less critical situations, a warning cascade combining both 
+warning types would be reasonable [3], sine the situation might 
+become dangerous. If the driver reacts upon the CW as a first 
+prewarning stage (e.g. slight braking) the SW will not follow. 
+Yet, if the driver did not react upon the CW and the situation is 
+about to get critical, the SW warning is to be triggered. This 
+warning cascade will be examined in further studies, focusing 
+on whether it is suitable for older and younger drivers.  
+REFERENCES 
+[1] M. Blanco, W. J. Biever, J.P. Gallagherand T. A. Dingus, “The impact 
+of 
+secondary 
+task 
+cognitive 
+processing 
+demand 
+on 
+driving 
+performance,” Accident Analysis &Prevention, 38 (5), 2006 pp. 895-
+906. 
+[2] J.K . Caird, S.L. Chisholm and J. Lockhart, “Do in-vehicle advanced 
+signs enhance older and younger drivers’ intersection performance? 
+[3] Driving simulation and eye movement results,“ Journal of Human-
+Computer Studies, 66, 2008, pp. 132-144. 
+[4] J.L. Campbell, C.M. Richard, J.L. Brown and M. Mc Callum, “Crash 
+warning system interfaces: Human factors insights and lessons learned,” 
+(Report No. DOT HS 810 697). Battelle Center for Human Performance 
+and Safety, Seattle, 2007 
+[5] H.W. Case, S. Hulbert and J. Beers, “Driving ability as affected by age,” 
+Final Report No. 70-18, Institute of Transportation and Traffic 
+Engineering, University of California, Los Angeles, 1970 
+[6] M. Dotzauer, “Researching safety issues with intersection assistance 
+systems for the older driver, ” In Stevens, A., Krems, J. & Brusques, C. 
+(eds.). Driver adaptation to information and assistance systems 
+Stevenage, UK, 2013, pp. 123-143.  
+[7] J. Fofanova, J. Maciej and M. Vollrath, “Ältere Autofahrer beim 
+Linksabbiegen: Eine Beobachtungsstudie im Realverkehr, „ Zeitschrift 
+für Verkehrssicherheit, 57 (4), 2011, 176-180. 
+[8] P. George, I. Thouvenin, V. Frémont and V. Cherfaoui, “DAARIA: 
+Driver assistance by augmented reality for intelligent automobile,” in 
+2012 IEEE Intelligent Vehicles Symposium, 2012, pp. 1043–1048. 
+[9] P. Green, Visual Task Demands of Driver Information Systems (Tech. 
+Rep. No. UMTRI-98-16). The University of Michigan Transportation 
+Research Institute, Ann Arbor, MI, 1999 
+[10] L. Hakamies-Blomqvist, A. Siren and R. Davidse, R, „Older drivers - a 
+review,” VTI rapport 497A. Swedish National Road and Transport 
+Research Institute, 2004 
+[11] R.J. Hanowski, T.A. Dingus, J.P. Gallagher, C.A. Kieliszewski and V.L.  
+Neale, “Driver response to in-vehicle warnings,” Transportation Human 
+Factors 1 (1), 1999, pp. 91-106. 
+[12] T. Horberry, J. Anderson, M.A. Regan, T.J. Triggs and J. Brown, J, 
+“Driver distraction: The effects of concurrent in-vehicle tasks, road 
+environment complexity and age on driving performance,” Accident 
+Analysis & Prevention, 38(1), 2006, pp. 185-191 
+[13] A.H. Jamson and N. Merat, “Surrogate in-vehicle information systems 
+and driverbehaviour: Effects of visual and cognitive load in simulated 
+rural driving,” Transportation Research: Part E, 8 (2), 2005, pp. 79–96  
+[14] H-P. Krüger, M. Grein, A. Kaussner and C. Mark, C, „SILAB-A task-
+oriented driving simulation,” In: Proceedings of the Driving Simulator 
+Conference (DSC) Iowa City: University of Iowa, USA, 2005, pp. 232–
+331. 
+[15] Y.C. Liu, Y.Cand and M.H. Wen, “Comparison of head-up display 
+(HUD) vs. head-down display (HDD): Driving performance of 
+commercial vehicle operators in Taiwan,” Int. J. Human-Comput. 
+Studies, vol. 61, no. 5, 2004, pp. 679-697. 
+[16] J. Pierowicz, E. Jocoy, M. Lloyd, A. Bittner and B. Pirson, “Intersection 
+Collision Avoidance Using ITS Countermeasures,“(Task 9: Final Rep). 
+National Highway Traffic Safety Administration, Washington, DC, 2000 
+[17] M. Plavsic, H. Bubb, M. Duschl, M. Tönnis and G. Klinker, “Ergonomic 
+Design and Evaluation of Augmented Reality Based Cautionary 
+Warnings for Driving Assistance in Urban  Environments,” The 17th 
+World Congress on Ergonomics (International Ergonomics Association, 
+IEA), Beijing, China, Aug. 9 - 14, 2009. 
+[18] N. Rackoff, N, “An investigation of age related changes in driver’s 
+visual search patterns and driving performance and the relation to tests 
+of basic functional capacities,” Ph.D. dissertation, The Ohio State 
+University, Columbus, Ohio, USA, 1974 
+[19] B. Schlag, “Elderly drivers in Germany fitness and driving 
+behaviour,”Accident Analysis and Prevention, 25, 1993, pp. 47-55. 
+[20] G.E. Stelmach and  A. Nahom, „Cognitive-motor abilities of the elderly 
+driver,” Human Factors 34, 1992, pp. 53-65. 
+[21] M. Vollrath, J. Maciej, J. Howe and S. Briest, S, “Fahren Ältere 
+situationsbewusster als Jüngere? Zeitschrift für Arbeitswissenschaften, 1 
+(63), 2009, pp. 23–31. 
+[22] M. Wittmann, K. Miklos, G. Peter , S. Alexander, F. Martina, P. Ernst 
+and K. Hiroyuki, ”Effects of display position of avisual invehicle task 
+on simulated driving, “ Applied Ergonomics, 37, 2005, pp. 187 199. 
+[23] M.S. Wogalter, V.C. Conzola and T.L. Smith-Jackson, “Research-based 
+guidelines for warning design and evaluation,” Applied Ergonomics, 
+33(3), 2002, pp. 219–230. 
+[24] X. Yan, E. Radwan and D. Guo, “ Effects of major-road vehicle speed 
+and driver age and gender on left turn gap acceptance, “ Accident 
+Analysis and Prevention, 39, 2007, pp. 843–852. 
+ 
+ 
+1034

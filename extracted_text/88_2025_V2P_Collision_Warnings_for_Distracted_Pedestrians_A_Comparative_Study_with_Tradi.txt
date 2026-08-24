@@ -1,0 +1,703 @@
+--- Page 1 ---
+V2P Collision Warnings for Distracted Pedestrians: A Comparative
+Study with Traditional Auditory Alerts
+Novel Certad
+ID
+Graduate Student Member, IEEE, Enrico Del Re
+ID
+Student Member, IEEE,
+Joshua Varughese
+ID
+Member, IEEE, and Cristina Olaverri-Monreal
+ID
+Senior Member, IEEE
+Abstract— This study assesses a Vehicle-to-Pedestrian (V2P)
+collision warning system compared to conventional vehicle-
+issued auditory alerts in a real-world scenario simulating a
+vehicle on a fixed track, characterized by limited maneuver-
+ability and the need for timely pedestrian response. The results
+from analyzing speed variations show that V2P warnings are
+particularly effective for pedestrians distracted by phone use
+(gaming or listening to music), highlighting the limitations of
+auditory alerts in noisy environments. The findings suggest
+that V2P technology offers a promising approach to improving
+pedestrian safety in urban areas
+I. INTRODUCTION
+Road traffic accidents are a significant global concern, with
+a disproportionate number of fatalities and injuries affecting
+Vulnerable Road Users (VRUs) [1]. Among the various
+factors contributing to these accidents, pedestrian distraction,
+particularly due to smartphone use, has become a critical
+issue. Studies have shown that a substantial percentage of
+pedestrians engage with their smartphones while walking,
+leading to reduced situational awareness, increased risky
+behavior, and a higher likelihood of near collisions and
+accidents [1] [2]. This challenge is further intensified by the
+fact that traditional warning methods, such as vehicle horns,
+may not be effective in diverting the attention of distracted
+pedestrians [1] [2] [3].
+Concerning public transport use, pedestrians face signif-
+icant risks when sharing the road with buses and trams,
+especially in areas where infrastructure is not optimized for
+pedestrian safety. This risk is exacerbated by several factors,
+including pedestrians hurrying to cross the road to catch a
+bus or tram, or crossing in unsafe locations [4], and bus stops
+and tramways that lack proper pedestrian facilities, such as
+footpaths, pedestrian crossings, and safe waiting areas [5]
+[6].
+To address this, the development of advanced systems
+that can effectively warn distracted pedestrians of poten-
+tial dangers is essential. Vehicle-to-Pedestrian (V2P) and
+Pedestrian-to-vehicle (P2V) communication, which allows
+direct information exchange between vehicles (cars, buses,
+trams, etc) and pedestrians, offer a promising solution [7]
+[8] [9] [10] [11]. However, several challenges and research
+gaps exist in the implementation and evaluation of both
+communication systems for pedestrian safety:
+Department
+Intelligent
+Transport
+Systems,
+Johannes
+Ke-
+pler
+University
+Linz,
+Altenberger
+Straße
+69,
+4040
+Linz,
+Austria.
+{novel.certad hernandez, enrico.del re,
+joshua.varughese, cristina.olaverri-monreal}@jku.at
+• Uncertainty in pedestrian behavior: Current systems
+often fail to account for the unpredictable nature of
+pedestrian movement, leading to inaccurate collision
+risk predictions [8]
+• Smartphone limitations: Relying on smartphones for
+V2P communication raises concerns about battery con-
+sumption, channel load due to numerous devices, and
+how to avoid disturbing non-crossing pedestrians [1].
+• Need for effective warning mechanisms: Acoustic
+warnings are not always sufficient, and the practicality
+of visual warnings on pedestrian’s phones needs to be
+tested [1] [3].
+• Lack of realistic evaluation: Many studies rely on
+simulations or lab settings, with little real-world field
+tests, and especially field tests that compare the behavior
+of a pedestrian being alerted by V2P communication
+and traditional warnings (such as car’s horn or tram’s
+bell) in similar conditions [2].
+This paper addresses these gaps by presenting an experi-
+mental study that compares the effectiveness of V2P colli-
+sion warnings with traditional methods in alerting distracted
+pedestrians. The core research question is:
+• How do distracted pedestrians respond to a V2P-based
+collision warning system compared to acoustic warnings
+from a vehicle operating on a fixed track?
+To investigate this, we conducted an experiment where
+participants crossed a replicated shared tram-pedestrian space
+while using smartphones, simulating common distraction-
+induced diagonal crossings and reduced awareness of ap-
+proaching trams (see Fig. 1). Two conditions were tested
+to assess pedestrian response. In one condition, a collision
+warning was issued to the participant’s smartphone via V2P
+communication. In another, an auditory warning was emitted
+by the vehicle. The participants’ reactions were recorded
+using a camera mounted on the vehicle, allowing analysis
+of their visual attention, walking characteristics and overall
+behavior.
+By directly comparing a V2P collision warning system and
+an acoustic warning system, this paper provides empirical
+evidence for the effectiveness and feasibility of V2P tech-
+nology and its potential to significantly enhance pedestrian
+safety in urban environments.
+The remainder of this paper is organized as follows: the
+next section describes related studies in the field; section III
+details the experimental design; section IV describes the
+arXiv:2504.13906v1  [cs.HC]  9 Apr 2025
+
+--- Page 2 ---
+Fig. 1: Scenario replicating urban areas where trams and
+VRUs share the road, and distracted VRUs may diagonally
+cross without noticing an approaching tram.
+acquisition and processing of the data collected; sections V
+presents the results obtained. Finally, section VI concludes
+the present study outlining future work.
+II. RELATED WORK
+Extensive research on V2P and P2V systems has explored
+simulation platforms [12], wireless technologies (Long
+Range (LoRa) Wireless network [8], Wi-Fi [9], Cellular
+V2X (C-V2X) [10] [11]) and sensors (LiDAR, cameras) to
+enable real-time vehicle and pedestrian tracking for effective
+collision avoidance. However, several studies point out that
+the effectiveness of these systems can be limited when
+relying only on the technological aspects [1].
+Given the variability of pedestrian behavior, there is a need
+for V2P/P2V systems that can adapt to the specific context
+and behavior of individual pedestrians. Some studies focus
+on developing algorithms to predict pedestrian trajectories to
+improve collision risk assessment, but these may not account
+for all the unpredictable factors in real world scenarios [9]
+[7] [8]. Some studies show that incorporating perception
+models in the warning systems and integrating information
+from multiple sources (vehicle sensors, V2P communication,
+wearable sensors) help to improve reliability [13] [1].
+A significant challenge in pedestrian safety is the growing
+prevalence of distraction, particularly from smartphone use
+[14] [2]. A distracted pedestrian is someone who shifts their
+focus away from the main task, such as walking or crossing
+the street, by engaging in another activity [15]. Among
+the technology-based activities reported in the literature as
+the most common sources of distraction for pedestrians are
+listening to music, gaming and texting [15], [16]. Studies
+have consistently shown that pedestrians engaged with their
+smartphones exhibit reduced situational awareness, slower
+walking speeds, increased instances of risky behavior, and
+a higher likelihood of near collisions [14] [2] [15] [16].
+Additionally, age also plays a role regarding the frequency
+of being exposed to distraction sources such as texting
+or reading on the mobile phone while crossing a road
+[17]. Naturalistic studies show that distracted pedestrians
+are less likely to obey traffic signals, check for vehicles, or
+engage with drivers. Smartphone use while walking leads to
+Fig. 2: Bird view of the experiment scenario(180x8m)(taken
+from Google Earth). The red markers indicate the key points,
+the yellow line represents the intended trajectory for the
+participants and the blue line exhibits the intended trajectory
+for the vehicle.
+weaving, sudden direction changes, and reduced situational
+awareness, increasing crosswalk violations [14]. This sug-
+gests that warnings need to be specifically adapted to account
+for pedestrian distraction [3]. Therefore, it is important for
+collision warning systems to be able to adapt to individual
+pedestrian behavior and various road conditions.
+Regarding technological approaches to increasing pedes-
+trian safety, some studies have implemented systems that
+provide collision warnings. However, they have not ex-
+tensively analyzed how pedestrian characteristics, such as
+walking speed, distraction, and visual attention, impact the
+effectiveness of these warnings compared to more commonly
+used auditory warnings [3] [7] [18] [19] [20]. The current
+study contributes to this need by directly comparing the
+effectiveness of V2P warnings with auditory alerts in a
+real-world setting, while also considering the impact of
+smartphone distraction on pedestrian behavior.
+III. EXPERIMENTAL DESIGN
+An area comprised of a 180-meter-long and 8-meter-
+wide campus walkway at Johannes Kepler University (Linz,
+Austria) was selected as the location for the experiment. The
+area is mostly frequented by pedestrians; however, cyclists
+and small utility vehicles are also commonly seen. As shown
+in Fig. 2, seven key points were distributed along both sides
+of the walkway. A sign was physically placed on each key
+point indicating the corresponding character (from “A” to
+“G” ). The participants in the experiment were instructed
+to walk diagonally through the path connecting the key
+points from “A” to “G” and back (yellow line in Fig. 2),
+while the vehicle moved along a fixed track (blue line in
+Fig. 2) in the middle of the walkway. As a result, there were
+twelve possible crossing points where the pedestrian and the
+vehicle’s paths crossed, simulating the scenario described in
+Fig. 1.
+Four different agents participating in the experiment were
+defined:
+• Driver: This person is in charge of remotely operating
+the vehicle in a straight line and keeping the right
+distance (>1m) from the participant and explaining
+the procedure to the participant.
+
+--- Page 3 ---
+• Operator: This person is in charge of selecting and
+triggering the warnings when the participant enters the
+defined region of interest. The operator can also send
+commands (stay and move) to the participant, a detailed
+explanation can be found in section III-C.
+• Participant: Is the subject (pedestrian) whose reaction
+is under study along the experiment.
+• Vehicle: The vehicle interacting with the participant
+along the experiment. To this end, a wheeled robot
+(Husky A200) was used.
+A Region of Interest (ROI) was defined in front of the
+vehicle, measuring 2.6 meters in width (lightly wider than
+the city trams in Linz) to ensure adequate coverage. The
+warning was triggered when the participant entered this area.
+As mentioned in section II, texting, playing games and
+listening to music have been reported as the most common
+tasks performed by distracted pedestrians. In line with this,
+a trivia application was designed for the experiment and
+listening to music through headphones was added as a
+variable condition. In total, two independent variables were
+controlled during the experiment:
+• Warning Type: This variable specifies the type of warn-
+ing issued when the participant entered the vehicle’s
+ROI, resulting in four distinct conditions.
+– No warning (NW): No warning was issued.
+– Acoustic warning (AW): An acoustic warning, a
+bell sound resembling the city’s tramway signal in
+Linz, Austria, was emitted from a vehicle-mounted
+loudspeaker.
+– V2P warning (VW): A visual and acoustic warn-
+ing (visual message and alarm sound) using V2P
+was issued from a server running in the vehicle
+to the web application in the participant’s smart-
+phone. A detailed description of the implementa-
+tion is available in section III-C.
+– Both warning systems (AW+VW): issued at the
+same time.
+• Headphones (H): This variable indicates whether the
+participant was wearing headphones and listening to
+music during the experiment:
+The defined independent variables resulted in eight differ-
+ent combinations which are referenced with the respective
+acronyms from now on: NW, AW, VW, AW+VW, NW(H),
+AW(H), VW(H), and AW+VW(H).
+A. Procedure
+At the start of the experiment, participants received the
+following instructions:
+• Walk at their natural pace (∼1 m/s).
+• Follow the prompts in the Trivia Application and engage
+with it continuously while walking or standing.
+• Proceed to the next key point only when instructed by
+the Trivia Application.
+• The vehicle will move along a fixed track without
+deviation.
+AW:
+ Acoustic
+Warning
+VW:
+V2P Warning
+NW:
+No Warning
+Pedestrian enters the region of interest 
+Evaluation
+AW+VW:
+Traditional + V2P
+warning
+Trivia App
+Without
+Headphones
+Trivia App
+With
+Headphones
+Randomizer
+Randomizer
+Fig. 3: General procedure followed during the experiment.
+• Respond to warnings as they would in real-life situa-
+tions.
+The experiment followed the procedure illustrated in
+Fig. 3. First, participants were assigned to either the music
+or no-music condition. They then engaged with the Trivia
+Application while moving through designated key points.
+Along the route from point “A” to “G” and back, there
+were twelve opportunities to enter the vehicle’s ROI. In
+six instances, no warning was triggered (NW), while in the
+other six, a warning was issued, with each type (AW, VW
+or both) occurring twice. The operator pre-assigned these
+conditions randomly before the experiment. After completing
+the first round, participants repeated the experiment under
+the complementary condition (i.e., with or without music).
+The experiment was conducted in three days between
+December 2024 and January 2025. A total of 10 participants
+(4 females, 6 males) took part in the recordings. The age
+distribution was from 20 to 37 years (mean: 29.7, median:
+29).
+B. platform
+A general description of the hardware tools utilized for
+the experiment is shown in the block diagram in Fig. 4. At
+the core of the diagram, it is the vehicle for conducting
+the experiment, a Husky A200. It was equipped with a
+loudspeaker to play the bell sound intended as a AW, and
+a stereo camera (zed2i) running proprietary object detection
+algorithms in a Jetson Orion to detect the position and speed
+of the participant at any time. The vehicle was remotely
+operated through a Bluetooth joystick. The operator used a
+laptop connected to the same Wi-Fi network as the vehicle.
+The participant was given a smartphone, also connected
+to this network, with its sensors logged via the third-party
+application Sensor Logger.
+
+--- Page 4 ---
+IMU
+Stereo Camera
+Zed2i
+LIDAR
+OS1-32
+Ethernet Switch
+Nvidia 
+Jetson
+Joystick
+Storage
+2TB SSD
+Main Computer
+Power Motor
+controller
+Laptop
+Loudspeaker
+Accelerometer
+Pedometer
+Orientation
+Participant
+Vehicle
+Driver
+Operator
+Display
+Loudspeaker
+Location
+Smartphone
+Fig. 4: System hardware.
+The vehicle’s odometry sensors and camera readings were
+acquired using software developed in ROS2. A Network
+Time Protocol (NTP) server on the vehicle’s main com-
+puter ensured time synchronization with the NVIDIA Jetson,
+which processed the images. Timestamps were also synchro-
+nized with the Web Server (section III-C, as it operated on
+the vehicle’s main computer. However, smartphone data was
+synchronized offline by measuring the offset between the
+NTP server and the smartphone clock before each experi-
+mental round.
+C. Web Server And Trivia Application
+(a)
+(b)
+(c)
+Fig. 5: Three different screen captures from the trivia ap-
+plication (participant view). (a) Initial survey asking data
+from the participant. (b) An example of trivia question. (c)
+An example of trivia question displaying the V2P warning
+(VW).
+The application was designed with three key functions:
+(1) providing an immersive trivia experience to engage
+participants and divert their attention from the road, (2)
+serving as the platform for V2P warnings via visual alerts
+(Fig 5c) and an alarm sound, and (3) tracking participants’
+response times.
+Upon starting the application, the participants were
+prompted to complete a short questionnaire that collected
+their name, age, gender, and whether they were using head-
+phones (Fig. 5a). The application’s core functionality was
+a trivia quiz presenting multiple-choice questions (Fig. 5b)
+from a database of 500 general knowledge questions (math-
+ematics, geography, culture, literature, history). Questions
+were displayed one at a time, with real-time response track-
+ing. This data is saved to a CSV file for later analysis,
+allowing the operator to track the participant’s engagement
+and performance.
+The operator had additional control through an integrated
+dashboard, where he could manually issue the warnings (AW
+or VW) or the command to instruct the participant to move
+to next key point.
+The trivia application was developed using Flask and
+Python. As shown in Fig. 6, the application followed a client-
+server architecture, with the server running on the vehicle’s
+main computer. The operator and participant, acting as
+clients, connected via Wi-Fi and accessed the application
+through a web browser.
+Operator
+(Client)
+Participant
+(Client)
+Vehicle
+(Server)
+Fig. 6: The trivia app runs in a server located in the
+main computer of the vehicle. Both the operator and the
+participant connect to the server as clients.
+IV. PROCESSING AND EVALUATION
+Pedestrian responses to the different configurations were
+assessed as follows:
+First, camera-detected objects were manually analyzed to
+exclude non-participant VRUs. This process yielded 228
+trajectories (12 from one participant and 24 from each of the
+other nine). The trajectories were then transformed from the
+vehicle’s local reference frame to a global reference frame.
+To ensure analytical robustness, a filtering process was
+applied to remove outliers and exclude trajectories with in-
+consistencies or incomplete data. This included cases where
+participants were occluded by other pedestrians or the
+scene contained excessive VRU. In addition, crossings where
+participants stopped to yield to the vehicle were excluded.
+After filtering, 219 trajectories remained suitable for analysis.
+An example of the resulting pedestrian crossings is shown
+in Fig 7
+After filtering, key metrics were computed to assess the
+impact of warning type on participant behavior. The Speed
+Change Ratio (SCR) was introduced to standardize response
+comparisons across warning types, accounting for natural
+variability in pedestrian pace over extended paths. The
+SCRv was calculated by normalizing the instant speed after
+entering the ROI (vpost(t)) against the average speed before
+entering the ROI (⟨vpre(t)⟩) as shown in (1)
+SCRv = vpost(t)
+⟨vpre(t)⟩
+(1)
+
+--- Page 5 ---
+Fig. 7: Example of a distracted participant after entering the
+ROI.
+Finally, paired t-tests were conducted to assess the sta-
+tistical significance of differences in SCRv across warning
+types, verifying whether the observed behavioral changes
+were significant.
+V. RESULTS
+The numerical values for the mean ⟨SCRv⟩and the
+standard deviation SD(SCRv) are included in the Table I,
+along with the results from the t-tests comparing all the
+combinations used in the experiment. The Fig. 8 shows a
+boxplot with the distribution of SCRv per warning type.
+NW
+AW
+VW
+AW+VW
+NW(H)
+AW(H)
+VW(H)
+AW+VW(H)
+Warning Type
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+1.6
+1.8
+SCR [Dimensionless]
+Speed Change Ratio per Warning Type
+Fig. 8: Speed variation before and after pedestrian entry into
+the Region of Interest (ROI). The boxes extend from the first
+quartile (Q1) to the third quartile (Q3) of the data. The mean
+is shown as a green triangle and the median as an orange
+line.
+When comparing the SCRv values when the participants
+were not wearing headphones (Cases: NW, AW, VW and
+AW+VW) no significant differences were found. According
+to post-experiment comments from the participants, it was
+highlighted that the noise produced by the vehicle’s motor
+and wheels was at least as louder as the auditory warning
+(AW) itself. In any case the ⟨SCRv⟩resulted in an average
+increase between 7% and 11% in the participant speed after
+entering the ROI.
+On the contrary, the SCRv values when the participants
+were listening to music (Cases: NW(H), AW(H), VW(H)
+and AW+VW(H)) presented significant differences that can
+be analysed in more detail. For NW(H), speed increased
+marginally by 2% after entering the ROI. In contrast, AW(H)
+showed an average speed decrease of 4%. This may be due
+to some participants still perceiving the traditional auditory
+warning through their headphones.
+Finally, no significant differences were found between
+VW(H) and AW+VW(H). Participants primarily responded
+to the V2P warning, with an average speed increase of
+9–11%. Across all distributions, SCRv values did not sig-
+nificantly differ between cases where participants were not
+wearing headphones (NW, AW, VW and AW+VW) and
+cases where V2P warnings were issued while participants
+wore headphones (VW(H) and AW+VW(H)).
+VI. CONCLUSIONS AND FUTURE WORK
+This study demonstrates the potential of Vehicle-to-
+Pedestrian (V2P) communication to enhance pedestrian
+safety, particularly for distracted individuals.
+The findings also highlight the limitations of auditory
+warnings, which become ineffective when pedestrians wear
+headphones, emphasizing the need for non-auditory warning
+systems like V2P. Additionally, the observation that pedes-
+trian behavior remained unchanged in the presence of au-
+ditory warnings—potentially due to baseline noise from the
+vehicle—suggests that sound alerts may be less perceptible in
+real-world conditions. These results underscore the necessity
+for robust, multimodal safety approaches, especially given
+the increasing prevalence of distracted walking and the
+shortcomings of conventional warning methods.
+Future research will study the impact on the distance
+towards the vehicle with a focus on close encounters. It
+will also evaluate V2P warnings across various distraction
+scenarios, identifying the most effective alert modality, and
+assessing strategies to prevent over-reliance while maintain-
+ing pedestrian attention to traffic risks.
+ACKNOWLEDGMENT
+The work has been conducted as a part of OptiPEx project
+(No.101146513) funded by the European Union. Views and
+opinions expressed are however those of the author(s) only
+and do not necessarily reflect those of the European Union
+or CINEA. Neither the European Union nor the granting
+authority can be held responsible for them.
+REFERENCES
+[1] S. El Hamdani, N. Benamar, and M. Younis, “Pedestrian support
+in intelligent transportation systems: Challenges, solutions and open
+issues,” Transportation Research Part C: Emerging Technologies, vol.
+121, p. 102856, 2020.
+[2] K. Vamshi Krishna, R. Kapruwan, and P. Choudhary, “Understanding
+distracted pedestrians’ risky behaviour: The role of walking and visual
+characteristics through a field study,” Transportation Research Part F:
+Traffic Psychology and Behaviour, vol. 101, pp. 111–129, 2024.
+
+--- Page 6 ---
+TABLE I: Results from applying paired t-student test between all the distributions. P-values<0.05 in bold. Last two rows
+represent the mean (⟨SCRv⟩) and standard deviation (SD SCRv) per condition.
+NW
+AW
+VW
+AW+VW
+NW(H)
+AW(H)
+VW(H)
+AW+VW(H)
+NW
+-
+0.5342
+0.9654
+0.1460
+0.0642
+<0.0001
+0.0994
+0.4465
+AW
+0.5342
+-
+0.5388
+0.4179
+0.0179
+<0.0001
+0.3667
+0.8571
+VW
+0.9654
+0.5388
+-
+0.1648
+0.1048
+<0.0001
+0.1226
+0.4539
+AW+VW
+0.1460
+0.4179
+0.1648
+-
+0.0016
+<0.0001
+0.9968
+0.5614
+NW(H)
+0.0642
+0.0179
+0.1048
+0.0016
+-
+0.0023
+0.0003
+0.0185
+AW(H)
+<0.0001
+<0.0001
+<0.0001
+<0.0001
+0.0023
+-
+<0.0001
+<0.0001
+VW(H)
+0.0994
+0.3667
+0.1226
+0.9968
+0.0003
+<0.0001
+-
+0.5249
+AW+VW(H)
+0.4465
+0.8571
+0.4539
+0.5614
+0.0185
+<0.0001
+0.5249
+-
+⟨SCRv⟩
+1.07
+1.09
+1.07
+1.11
+1.02
+0.96
+1.11
+1.09
+SD SCRv
+0.25
+0.29
+0.30
+0.31
+0.22
+0.24
+0.24
+0.33
+[3] Y. Ni, S. Wang, L. Xin, Y. Meng, J. Yin, and J. Sun, “A V2X-
+based approach for avoiding potential blind-zone collisions between
+right-turning vehicles and pedestrians at intersections,” in 2020 IEEE
+23rd International Conference on Intelligent Transportation Systems
+(ITSC), 2020, pp. 1–6.
+[4] D. Gankhuyag and C. Olaverri-Monreal, “Naturalistic yielding be-
+havior of drivers at an unsignalized intersection based on survival
+analysis,” in 2023 IEEE 26th International Conference on Intelligent
+Transportation Systems (ITSC), 2023, pp. 2316–2322.
+[5] P. G. Tzouras, H. Farah, E. Papadimitriou, N. van Oort, and M. Hagen-
+zieker, “Tram drivers’ perceived safety and driving stress evaluation.
+a stated preference experiment,” Transportation Research Interdisci-
+plinary Perspectives, vol. 7, p. 100205, 2020.
+[6] D. Yendra, N. Haworth, and N. Watson-Brown, “A comparison of
+factors influencing the safety of pedestrians accessing bus stops in
+countries of differing income levels,” Accident Analysis & Prevention,
+vol. 207, p. 107725, 2024.
+[7] A. Hussein, F. Garc´ıa, J. M. Armingol, and C. Olaverri-Monreal,
+“P2V and V2P communication for pedestrian warning on the basis of
+autonomous vehicles,” in 2016 IEEE 19th International Conference
+on Intelligent Transportation Systems (ITSC), 2016, pp. 2034–2039.
+[8] R. Pan, L. Jie, H. Wang, P. Jie, and X. Zhang, “A V2P warning system
+on the basis of LoRa wireless network,” in 2023 5th International
+Conference on Natural Language Processing (ICNLP), 2023, pp. 373–
+378.
+[9] S. Chavhan, S. Kumar, D. Gupta, A. Alkhayyat, A. Khanna, and
+R. Manikandan, “Edge-empowered communication-based vehicle and
+pedestrian trajectory perception system for smart cities,” IEEE Internet
+of Things Journal, vol. 10, no. 21, pp. 18 951–18 960, 2023.
+[10] C. Zhang, J. Wei, S. Qu, C. Huang, J. Dai, P. Fu, Z. Wang, and X. Li,
+“Implementation of a V2P-based VRU warning system with C-V2X
+technology,” IEEE Access, vol. 11, pp. 69 903–69 915, 2023.
+[11] F. Gu, J. Niu, L. Jiang, X. Liu, and G. P. Hancke, “Safepath: Exploiting
+ubiquitous smartphones to avoid vehicle–pedestrian collision,” IEEE
+Internet of Things Journal, vol. 9, no. 9, pp. 6763–6777, 2022.
+[12] L. Artal-Villa, A. Hussein, and C. Olaverri-Monreal, “Extension of
+the 3dcoautosim to simulate vehicle and pedestrian interaction based
+on sumo and unity 3d,” in 2019 IEEE Intelligent Vehicles Symposium
+(IV), 2019, pp. 885–890.
+[13] C. Olaverri-Monreal, “Promoting trust in self-driving vehicles,” Nat
+Electron 3, p. 292–294, 2020.
+[14] T. Horberry, R. Osborne, and K. Young, “Pedestrian smartphone dis-
+traction: Prevalence and potential severity,” Transportation Research
+Part F: Traffic Psychology and Behaviour, vol. 60, pp. 515–523, 2019.
+[15] M. White, J. White, S. Siuhi, and J. Mwakalonge, “Self-reported
+behaviors and habits of distracted college pedestrians while walking,”
+Transportation Research Record, vol. 2661, no. 1, pp. 76–83, 2017.
+[16] K. Jiang, F. Ling, Z. Feng, C. Ma, W. Kumfer, C. Shao, and K. Wang,
+“Effects of mobile phone distraction on pedestrians’ crossing behavior
+and visual attention allocation at a signalized intersection: An outdoor
+experimental study,” Accident Analysis & Prevention, vol. 115, pp.
+170–177, 2018.
+[17] S. Schwarz, D. Sellitsch, M. Tscheligi, and C. Olaverri-Monreal,
+“Safety in pedestrian navigation: Road crossing habits and route
+quality needs,” in Proceedings of the 3rd International Symposium
+on Future Active Safety Technology Towards zero traffic accidents,
+2015, 2015.
+[18] W. M. Alvarez, M. ´Angel de Miguel, F. Garc´ıa, and C. Olaverri-
+Monreal, “Response of vulnerable road users to visual information
+from autonomous vehicles in shared spaces,” in 2019 IEEE Intelligent
+Transportation Systems Conference (ITSC), 2019, pp. 3714–3719.
+[19] M. A. de Miguel, D. Fuchshuber, A. Hussein, and C. Olaverri-Monreal,
+“Perceived pedestrian safety: Public interaction with driverless vehi-
+cles,” in 2019 IEEE Intelligent Vehicles Symposium (IV), 2019, pp.
+90–95.
+[20] L. Yue, M. Abdel-Aty, Y. Wu, J. Yuan, and M. Morris, “Influence
+of pedestrian-to-vehicle technology on drivers’ response and safety
+benefits considering pre-crash conditions,” Transportation Research
+Part F: Traffic Psychology and Behaviour, vol. 73, pp. 50–65, 2020.

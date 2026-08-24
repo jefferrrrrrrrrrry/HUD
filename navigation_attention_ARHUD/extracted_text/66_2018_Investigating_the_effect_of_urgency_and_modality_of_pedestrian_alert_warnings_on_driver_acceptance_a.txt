@@ -1,0 +1,999 @@
+Investigating the effect of urgency and modality of pedestrian
+alert warnings on driver acceptance and performance
+David R. Large a,⇑, Hyungil Kim b, Coleman Merenda b, Samantha Leong b,
+Catherine Harvey a, Gary Burnett a, Joseph Gabbard b
+a Human Factors Research Group, University of Nottingham, Nottingham, UK
+b COGENT Lab, Virginia Tech, Blacksburg, USA
+a r t i c l e
+i n f o
+Article history:
+Received 15 February 2018
+Received in revised form 6 August 2018
+Accepted 30 September 2018
+Keywords:
+Urgency
+Modality
+Driver acceptance
+Pedestrian alert systems
+HUD
+Vulnerable road users
+Simulation
+a b s t r a c t
+Active safety systems have the potential to reduce the risk to pedestrians by warning the
+driver and/or taking evasive action to reduce the effects of or avoid a collision. However,
+current systems are limited in the range of scenarios they can address using primary con-
+trol interventions, and this arguably places more emphasis in some situations on warning
+the driver so that they can take appropriate action in response to pedestrian hazards. In a
+counterbalanced experimental design, we varied urgency (‘when’) based on the time-to-
+collision (TTC) at which the warning was presented (with associated false-positive alarms,
+but no false negatives, or ‘misses’), and modality (‘how’) by presenting warnings using
+audio-only and audio combined with visual alerts presented on a HUD. Results from 24
+experienced drivers, who negotiated an urban scenario during twelve 6.0-min drives in a
+medium-ﬁdelity driving simulator, showed that all warnings were generally rated ‘posi-
+tively’ (using recognised subjective ‘acceptance’ scales), although acceptance was lower
+when warnings were delivered at the shortest (2.0 s) TTC. In addition, drivers indicated
+higher conﬁdence in combined audio and visual warnings in all situations. Performance
+(based on safety margins associated with critical events) varied signiﬁcantly between
+warning onset times, with drivers ﬁrst ﬁxating their gaze on the hazard, taking their foot
+off the accelerator, applying their foot on the brake, and ultimately bringing the car to a
+stop further from the pedestrian when warnings were presented at the longest (5.0 s)
+TTC. In addition, drivers applied the brake further from the pedestrian when combined
+audio and HUD warnings were provided (compared to audio-only), but only at 5.0 s TTC.
+Overall, the study indicates a greater margin of safety associated with the provision of ear-
+lier warnings, with no apparent detriment to acceptance, despite relatively high false alarm
+rates at longer TTCs. Also, that drivers feel more conﬁdent with a warning system present,
+especially when it incorporates auditory and visual elements, even though the visual cue
+does not necessarily improve hazard localisation or driving performance beyond the
+advantages offered by auditory alerts alone. Findings are discussed in the context of the
+design, evaluation and acceptance of active safety systems.
+ 2018 Elsevier Ltd. All rights reserved.
+https://doi.org/10.1016/j.trf.2018.09.028
+1369-8478/ 2018 Elsevier Ltd. All rights reserved.
+⇑Corresponding author.
+E-mail addresses: david.r.large@nottingham.ac.uk (D.R. Large), hci.kim@vt.edu (H. Kim), cjm120@vt.edu (C. Merenda), sam94@vt.edu (S. Leong),
+catherine.harvey@nottingham.ac.uk (C. Harvey), gary.burnett@nottingham.ac.uk (G. Burnett), jgabbard@vt.edu (J. Gabbard).
+Transportation Research Part F 60 (2019) 11–24
+Contents lists available at ScienceDirect
+Transportation Research Part F
+journal homepage: www.elsevier.com/locate/trf
+
+
+1. Introduction
+Accidents involving vulnerable road users (VRUs) remain a major issue for road safety, accounting for almost 40% of road
+fatalities in Europe, and almost 50% worldwide (World Health Organization, 2015). Pedestrians are one of the most vulner-
+able road user groups, both in terms of the likelihood of being involved in a near-miss or collision, and the potential ram-
+iﬁcations should an incident occur. For example, in the US, pedestrians represent 11–13% of those killed in collisions and
+are 1.5 times more at risk than vehicle passengers to be fatally injured (Beck, Dellinger, & O’neil, 2007; Clifton, Burnier, &
+Akar, 2009). Analysis of accident data shows that a high percentage of pedestrian-related incidents occur in urban areas
+(Graves, Lloyd, Wilson, Mais, Deda, & Bhagat, 2013), where cars drive at relatively low speeds and the density of pedestrians
+is likely to be high, with many of these accidents attributed to unexpected or inappropriate pedestrian behaviour, such as
+crossing the road at the incorrect place or time. For example, in 2013 over 80% of UK pedestrian road-related fatalities
+occurred outside of demarcated pedestrian crossings (Yanagisawa, Swanson, Najm, & W.G., 2014). More recent in-depth acci-
+dent analysis of European crash databases (including CARE, IGLAD and GIDAS), conducted as part of the PROSPECT project
+(PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2016), revealed that the most common accident scenario in Eur-
+ope is situations in which the pedestrian crosses a straight road from the nearside (or offside) with no obstructions. This
+accounts for the highest proportion of killed or seriously injured pedestrians (KSI) and all pedestrian injuries, and is therefore
+the designated scenario proposed by the EuroNCAP testing protocol for AEB pedestrian safety systems (EUROPEAN NEW CAR
+ASSESSMENT PROGRAMME (Euro NCAP), 2017).
+The past decade has seen signiﬁcant progress in active pedestrian safety in passenger cars, in particular due to advances
+in video and radar technology. This has resulted in the market introduction of ﬁrst-generation active pedestrian safety sys-
+tems that can identify at-risk pedestrians and perform autonomous emergency braking (AEB-PED) in critical trafﬁc situa-
+tions. In addition, other primary control interventions, such as steering (and braking jerks or steering wheel vibrations to
+provide haptic feedback to the driver (PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2017), are increasingly being
+integrated within vehicles. Such systems, collectively termed Pedestrian and Cyclist Detection Systems with Emergency
+Braking (PCDS + EBR), have the potential to mitigate the risk to VRUs by warning drivers of an impending collision and/or
+taking evasive action autonomously by braking, steering or both, if a collision becomes imminent or if the driver fails to
+respond. Moreover, evidence suggest that PCDS + EBR systems have the greatest potential (based on current active safety
+systems) to improve the safety of VRUs, with data indicating a reduction of 7.5% on all road fatalities and 5.8% on all road
+injuries, representing an estimated 2100 fatalities and over 62,900 injuries saved per year in Europe based on accident trends
+(Silla, Rama, Leden, van Noort, de Kruijff, Bell, & . . . Scholliers, 2015).
+However, such systems are non-trivial, requiring the optimisation and integration of situation analysis and collision risk
+estimation, information and warning concepts, and vehicle control strategies (PROSPECT (Proactive Safety for Pedestrians
+and Cyclists), 2017). Moreover, the effectiveness of intervention strategies will vary considerably depending on use-case
+(PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2017), with ﬁrst generation systems currently on the market
+addressing only a limited scope of scenarios (PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2016). For example,
+if a driver is turning across the path of a pedestrian or cyclist, and a collision is predicted, the available net braking distance is
+effectively only 1.57 m (assuming a typical cornering speed of approximately 20 km/h and a deceleration of 9.81 m/s2), and
+the maximum achievable vehicle displacement from the original driving path will thus be reduced to less than 0.6 m
+(PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2017). Moreover, in this situation, braking and evasive steering
+can only occur when the vehicle has started to drive in the bend. This arguably places a greater emphasis in this situation
+on warning the driver so that they can manually instigate appropriate evasive action.
+Indeed, as a rule, all systems will attempt to warn the driver before taking any action. Moreover, where possible, warnings
+will be provided with increasing urgency depending upon the perceived risk level. For example, the PROSPECT system (as
+realised by Continental PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2017), provides two types of VRU collision
+warning, based on risk level (PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2017). The ﬁrst (classiﬁed as an ‘early
+warning’) is an informative warning to the driver about a potentially dangerous trafﬁc situation involving a VRU, based on a
+trajectory prediction of VRU and the vehicle but without considering the velocities of both participants, and is therefore nec-
+essarily ambiguous. The second type of warning is an imminent acoustic and visual warning, which takes into consideration
+not only the geometric properties of the predicted trajectories but also the time of potential collision (measured as time-to-
+collision, TTC, in this case is 1.8 s). It is therefore velocity-dependent and assumes that both VRU and the ego vehicle preserve
+their speeds until the collision occurs. Similarly, the Daimler system provides three warnings (visual and/or auditory), at
+4.0 s TTC (‘early warning’), 2.6 s TTC (‘warning’), and 1.6 s TTC (‘urgent warning’), before taking action (i.e. braking at 1.1 s
+TTC).
+In addition, ongoing advances in situation analysis, collision risk estimation and intent prediction and modelling (based
+on improvements in both detection hardware and software algorithms) mean that active safety systems are therefore effec-
+tively moving from ‘collision mitigation’ (with the aim of reducing vehicle speed/kinetic energy to make the impact more
+survivable) to ‘collision avoidance’ (aiming to avoid collisions completely). As a consequence, the number of false alarms
+and/or activations is also expected to increase, in part due to the highly dynamic behaviour of pedestrians, who may change
+their walking direction and speed, or abruptly start or stop moving at a moment’s notice. For example, a pedestrian may
+approach the roadside, apparently intending to cross, but then stop at the kerb. This could result in a false declaration if
+12
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+
+the system has already identiﬁed the pedestrian as a potential hazard (based on current speeds and trajectories) and high-
+lighted their presence to the driver. Indeed, ﬁgures show that ﬁrst-generation pedestrian safety systems (still on the market)
+miss approximately 20–30% of all pedestrians (‘false negative’), and issue approximately one false alarm (‘false positive’), for
+every ten presented (Zhang, Benenson, Omran, Hosang, & Schiele, 2016). While future generations will likely reduce the inci-
+dence of false alarms and/or activations, false alarms remain unavoidable in any ‘predictive’ technology. Moreover, the fre-
+quency and occurrence of false alarms and activations will inevitably inﬂuence drivers’ attitudes towards the system,
+potentially encouraging them to neglect it, ﬁnd creative ways to bypass it, or if possible deactivate it completely
+(Parasuraman and Riley, 1997).
+The success of such technology is therefore contingent not only on its ability to accurately detect pedestrians, make a
+precise estimation of their current and future positions with respect to the moving vehicle, and provide timely warnings
+and/or primary control interventions, but also on driver’s attitudes towards it (i.e. their ‘acceptance’). On the face of it, these
+are conﬂicting goals: by warning drivers sooner, they may have more time and space to respond to warnings, but earlier
+warnings will be offered at the expense of accuracy, due to both limitations in technologies (range and capability of
+sensors, accuracy of detection algorithms etc.), as well as idiosyncrasies in the behaviour of pedestrians, and a high number
+of false declarations will likely detriment acceptance. As such, there is still considerable interest in investigating when and
+how to present warnings to drivers, in particular to minimise false positive or unnecessary reactions, and improve driver
+acceptance.
+1.1. Acceptance and Urgency
+One of the biggest ‘human’ challenges in the design of automated vehicle systems is how to keep the driver appraised of
+the driving situation (i.e. ‘in the loop’) (Banks and Stanton, 2015). Essential to this is the provision of appropriate feedback to
+the driver about what the system has done, is doing, or is about to do. Norman (2007) warned that ‘‘proper feedback can
+make the difference between a pleasurable and successful system and one that frustrates and confuses”. In an automotive
+context, feedback can also be the difference between a safe and an unsafe system, and is particularly important considering
+the time-criticality of much of the information presented by automated systems (Baldwin and Lewis, 2014). It is also there-
+fore particularly relevant to ensuring an appropriate level of driver acceptance.
+The ‘acceptance’ of in-vehicle driver support systems has been deﬁned as, ‘‘the degree to which an individual incorporates
+the system in his/her driving, or if the system is not available, intends to use it” (Adell, 2009). The determinants of acceptance
+are thus complex and derive from various factors, including how individuals use the technology, their understanding of its
+limits and the context in which it is implemented. Acceptance can also be affected by factors such as the level of trust, con-
+ﬁdence, intrusion, or annoyance that users associate with the technology. A common ground in acceptance research is the
+notion that human behaviour is not primarily determined by objective factors, but by subjective perceptions (Ghazizadeh,
+Lee, & Boyle, 2012). This means that acceptance is based on individual attitudes, expectations and experience, obtained dur-
+ing actual use, as well as their subjective evaluation of expected beneﬁts (Schade and Baum, 2007). In fact, it has been shown
+that the degree of technological innovation has a lesser effect on the acceptance and use of new technological systems than
+does the amount of personal importance for users (Ausserer and Risser, 2005). Moreover, for an in-vehicle hazard warning
+system, in particular, acceptance is considered to be closely related to the driver’s perception of risk – not necessarily the
+actual risk of collision (Sheridan, 2008). Drivers are therefore more likely to accept alerts presented in situations that they
+perceive to be ‘alarming’ (for example, they have already identiﬁed an encroaching pedestrian as a potential threat), even
+if they would have been able to avoid the incident without the warning (Källhammer and Smith, 2012). Regardless of the
+technical capabilities of PCDS, the successful future implementation and integration of such technology will thus depend lar-
+gely on the degree to which drivers ‘accept’ the technology, and are willing to place their trust in the system above their own
+judgement (Merenda, Kim, Leong, Gabbard, Burnett, & Large, 2017).
+For a pedestrian alert system, understanding when to present alarms is therefore an important consideration – if alarms
+are presented too early, accuracy may be compromised or the driver may be unaware of the potential risk, thereby negatively
+impacting acceptance. Moreover, earlier PCDS alerts may be interpreted by the driver as false positive alarms (i.e. the system
+alerts but no threat is visually detected or acted on), and may consequently degrade drivers’ attentiveness to future alarms
+(De Boer, Chaziris, Vreeswijk, Bie, & Van Arem, 2010). On the other hand, alarms that are presented at short TTCs (i.e. ‘too
+late’) may be of limited practical use (i.e. the driver may have insufﬁcient time to respond), can startle drivers, and may detri-
+ment their reaction and performance during the braking process (Lee, McGehee, Brown, & Reyes, 2002); late alarms may also
+annoy drivers, particularly if they are already aware of the hazard and have initiated their own evasive or corrective
+manoeuvre.
+Nevertheless, active safety systems must still accurately detect genuine situations. The concern is that by maximising
+detection rates, drivers are likely to be ﬂooded with false-alarm warnings, with the inevitable consequence that they will
+miss or ignore genuine alerts in future safety-critical situations (i.e. the system ‘cries wolf’) (Lee and Kantowitz, 1998). In
+contrast, systems designed to minimise false declarations may miss genuine safety-critical situations, and may provide
+insufﬁcient exposure to allow drivers to calibrate their trust in system (Lee and See, 2004). Moreover, in the absence of false
+alarms, genuine alerts may be so rare as to be utterly unfamiliar and consequently drivers’ reactions will be unpredictable
+(i.e. efﬁcient recall of how to react depends on the frequency of use (Bainbridge, 1983)).
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+13
+
+
+1.2. Feedback and Modality
+A further consideration is how to present warnings to drivers. Visual feedback is typically presented to the driver using
+either of two methods: traditional displays or ambient displays. Traditional displays are deﬁned as screens in the instrument
+cluster, centre console or dashboard and usually require foveal vision to attend to the presented information. Traditional
+visual displays usually have associated issues of distraction as they draw the driver’s attention away from the road scene
+– the larger the eccentricity of display location from forward view, the longer the eyes-off road time. In contrast, ambient
+displays aim to utilise peripheral vision by displaying feedback (e.g. lighting effects) in the A-pillars, doors, dashboard, steer-
+ing wheel, and interior and exterior mirrors (see for examples: (PROSPECT (Proactive Safety for Pedestrians and Cyclists),
+2017; Löcken, Unni, Müller, & Boll, 2013; Meschtscherjakov, Rödel, & Tscheligi, 2015). Ambient displays are much more lim-
+ited in the bandwidth of information content compared with traditional displays, but offer a beneﬁt in that they overcome
+some of the issues of distraction, requiring only peripheral attention.
+In addition, visual information can be presented ‘externally’ to the vehicle, via a Head-Up Display (HUD). HUD technology
+allows visual information to be presented using a transparent display located in the driver’s normal ﬁeld of view. Conse-
+quently, feedback appears to exist ‘in the world’ rather than inside the vehicle. By presenting information directly within
+the forward-facing line of sight (i.e. on or ‘through’ the windscreen), drivers can access that information without lowering
+or diverting their gaze away from the road scene, thus avoiding the apparent gaps in visual attention (‘eyes-off-road’) asso-
+ciated with using more traditional ‘head-down’ presentations. Moreover, drivers are not required to constantly re-
+accommodate their focal length between the distant road scene and nearby in-vehicle displays – a particularly important
+advantage for older drivers who experience problems with accommodating their vision to near objects (Burnett, 2003). Addi-
+tionally, information presented via a HUD can be spatially linked to and augment the information in the real world to which
+it relates (‘conformal’) (Foyle, Hooey, Wilson, & Johnson, 2002). In the context of a warning system, conformal visual feed-
+back (using a HUD) has been shown to help drivers localize threats earlier (Kim, Miranda Anon, Misu, Tawari, & Fujimura,
+2016; Liu and Wen, 2004). Additionally, using a HUD can command attention more strongly during the decision-making
+phase, and can help mitigate other functional weaknesses (such as poorly designed controls or a suboptimal ﬁeld of view
+of the road) that may exist between the driver and human–machine interface (HMI) (Eyraud, Zibetti, & Baccino, 2015;
+Kim, Isleib, & Gabbard, 2016; Rane, Kim, Marcano, & Gabbard, 2016).
+In contrast, auditory alerts that can be heard by the driver can enhance the recognition of warnings, afford better seman-
+tic association, and improve drivers’ responses, but are typically unable to visually guide attention towards the threat (Sayer,
+Sayer, & Devonshire, 2005). However, combining auditory warnings with visual information to provide ‘multimodal’ feed-
+back can reduce human reaction times (Blanco, Atwood, Vasquez, Trimble, Fitchett, Radlbeck, & . . . Morgan, 2015; Ho and
+Spence, 2008), and can be particularly effective for reorienting spatial attention (Gray, Spence, Ho, & Tan, 2013). Conse-
+quently, several novel HMI concepts to inform or warn the driver have been proposed (see examples in (PROSPECT
+(Proactive Safety for Pedestrians and Cyclists), 2017); these tend to incorporate both acoustic warnings and visual elements,
+although, it has also been suggested that in some cases it may be more appropriate to provide unimodal feedback (for exam-
+ple, auditory only) assuming the information is understandable and able to capture attention in the chosen modality.
+1.3. Overview and aim of study
+Aiming to take all of these factors into consideration, the study explored the effect of the urgency and modality of alert
+warnings associated with potential pedestrian hazards detected by an active safety system. To achieve this, urgency was var-
+ied based on the TTC at which the warning was presented (calculated using the existing speeds and trajectories of car and
+pedestrian). Moreover, a linear relationship between TTC and false alarm rate was applied, with a higher proportion of false
+alarms associated with warnings delivered at longer TTCs. This approach is based on previous literature indicating that the
+probability of making a correct judgement of whether a pedestrian will cross or not in this scenario reduces at an approx-
+imate linear rate with increasing TTC (Keller and Gavrila, 2014). The intention in taking this approach was primarily to reﬂect
+the higher false alarm rates based on the provision of earlier warnings, i.e. the system appears less ‘reliable’ at longer TTCs –
+as would be expected with such technology, and is not intended as a validation of this assumption.
+For each level of urgency, either no warning, an audio alert, or an audio alert combined with a visual warning projected
+via a HUD were explored (to investigate modality). Driver acceptance was subsequently determined using subjective ratings
+of trust, conﬁdence, annoyance, desirability, predictability, reliance and risk (based on existing acceptance/usability assess-
+ment protocols (Brooke, 1996). In addition, objective performance was calculated based on safety margins associated with
+critical primary control events and drivers’ visual behaviour (i.e. the TTC/headway from the pedestrian at which drivers ﬁrst
+located and ﬁxated their gaze on the pedestrian hazard, and the TTC/headway at which they took their foot off the acceler-
+ator, applied the brake, and ultimately brought the car to a stop).
+2. Method
+Twenty-four drivers took part in the study: 15 male, 9 female, with ages ranging from 19 to 55 years, representative of an
+active UK driving population. All participants were required to have at least 2 years of driving experience (mean: 10.7 years).
+14
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+
+Participants were self-selecting volunteers who responded to advertisements placed around the University of Nottingham
+campus and were reimbursed with £15 (GBP) of shopping vouchers as compensation for their time. All participants provided
+written informed consent.
+The study took place in a medium-ﬁdelity, ﬁxed-based driving simulator at the University of Nottingham (Fig. 1). The
+simulator comprises an Audi TT car located within a curved screen, affording 270 degrees forward and side image of the driv-
+ing scene via three overhead HD projectors, together with rear and side mirror displays. A Thrustmaster 500RS force feed-
+back steering wheel and pedal set are integrated with the existing Audi steering wheel and pedals, and the dashboard is
+created using a bespoke Java application and presented on a 7-in. LCD screen, which replaces the original instrument cluster.
+The driving scenario was created using STISIM Drive (version 3) to replicate a straight, single-carriageway road traversing
+through a built-up urban environment, absent of demarcated pedestrian crossings. Pavements (‘side-walks’) were populated
+with approximately 5–10 pedestrians every ﬁfty feet, who appeared in a random distribution, and walked forward and back-
+ward in parallel with the road, or stood facing the roadway but not moving. These pedestrians were included in the scenario
+to present a realistic, ‘visually-cluttered’ urban backdrop and to ensure that identifying the ‘hazard’ (i.e. the rogue pedes-
+trian/s who walked towards the roadway) was non-trivial.
+In addition to the ‘background’ pedestrians, a further ﬁve pedestrians were placed at random distances into the scenario,
+and approached the roadside as if intending to cross the road. Each of the ﬁve ‘hazard’ pedestrians were initially standing
+motionless approximately one metre from the roadway (corresponding with the centre of the ‘sidewalk’) and facing the road.
+As such, they were ‘always’ visible to the driver (i.e. they did not move into view from behind an obstruction as part of the
+crossing manoeuvre, or suddenly materialise as the driver approached). They walked at a steady pace to ensure that they
+would reach the centre of the roadway at the same time as the car (assuming they continued to do so). To achieve this,
+the total walking distance did not vary between conditions. Instead, walking speed was varied (from 0.5 to 3 mph, i.e.
+slightly slower than a brisk walk, typically 4 mph) to ensure that vehicle and pedestrian trajectory would intersect (assuming
+neither party deviated from their current trajectory or speed).
+Depending on the scenario (see Table 1), a proportion of the ‘hazard’ pedestrians then continued to cross the road (rep-
+resenting the most common pedestrian accident use-case (PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2016),
+while the remainder stopped at the roadside. All ﬁve of these pedestrians were identiﬁed by the PCDS system, thereby giving
+rise to ‘false positive alarms’ in the latter situation (i.e. the system accurately detected the presence of a pedestrian but fal-
+sely predicted their intention to enter the roadway). Participants in the study were instructed to drive along the road and
+Fig. 1. Driving simulator showing urban high-street scenario and pedestrian crossing road ahead, with visual alert icon that was presented on the HUD
+(inset).
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+15
+
+
+maintain a constant speed of 25 mph (40 kph). No speciﬁc instructions were provided to drivers regarding how they should
+respond to warnings, other than to behave ‘naturally’. They were not speciﬁcally told that some pedestrians might attempt to
+cross the roadway.
+Warnings were presented at four different levels of urgency, as deﬁned by the TTC, with the number of accurately
+detected pedestrians (i.e. those who continued to cross the road) decreasing with increasing TTC, thus simulating an increas-
+ing false alarm rate. This approach is predicated on the fact that the probability of making a correct judgement of whether a
+pedestrian will cross or not (as they approach the roadside) reduces at an approximately linear rate with increasing TTC
+(Keller and Gavrila, 2014). The TTCs (and associated false alarm rates) were thus selected to conform approximately with
+the performance of current state-of-the-art (PROSPECT (Proactive Safety for Pedestrians and Cyclists), 2017). TTCs therefore
+ranged from 5.0-s (with a false alarm rate of 80%, i.e. 4 out of 5 pedestrians approached, but ultimately did not cross the road)
+to 2.0-s (with a false alarm rate of 20% or 1 in 5).
+Warnings were presented within the vehicle as a static visual alert icon and/auditory icon presented at 75 dB (based on
+design guidelines (Campbell, J. L., Richard, C. M., Brown, J. L., & McCallum, 2007). A generic high-contrast visual alert icon was
+selected to aid ease of recognition and saliency to visual attention (Fig. 1). The icon was presented for a period of up to 4.0-s,
+based on design recommendations (Reader, 1999). Visual warnings were provided using a Pioneer laser-scanning head-up
+display (HUD). In addition, both visual and auditory warnings were spatially congruent (i.e. presented to correspond with
+the side of the road from which the pedestrian approached), with the aim of directing and localising the driver’s gaze to
+the target pedestrian.
+In addition to completing the drive with auditory and auditory/visual warnings, participants also repeated it for each false
+alarm rate with no warnings. Thus, participants completed 12 drives (Table 1). During ‘No Warning’ scenarios, the urgency
+levels indicate the equivalent distance at which a warning (had it been presented) would have generated a false alarm rate in
+line with our study design, and are used for comparative analysis between the three conditions. Conditions were counter-
+balanced, but participants completed all conditions for each warning type (and ‘no warnings’) together.
+2.1. Timeline of events
+During each scenario, participants drove for approximately 45 s before encountering any hazards. Thereafter, they were
+presented with the ﬁrst deviant pedestrian (who walked towards the roadside as if intending to cross) randomly within the
+next 300 m, approximately (i.e. 1000 ft). No events occurred within the subsequent 300 m, to ensure that participants were
+not presented with back-to-back hazards. Participants then experienced the second pedestrian crossing event in the follow-
+ing 300 m, and so on. This effectively resulted in the driver experiencing about 30–45 s of uninterrupted driving, followed by
+the next 30–45 s in which an event occurred. This pattern was repeated ﬁve times, but because of the random variability
+within each time window, it was not possible to predict events.
+After each pedestrian event (with associated warning intervention, where appropriate), participants resumed driving only
+after they felt sure that it was safe to continue (i.e. when they could conﬁrm that the pedestrian had either stopped at the
+roadside, or had ﬁnished crossing the road). Each drive therefore lasted approximately 6–8 min. Overall, the study took
+approximately 1½ hours for each participant.
+2.2. Measures
+Acceptance was determined using subjective measures, i.e. by asking participants to rate their attitudes towards the PCDS
+using recognised Likert scales (where 0 = ‘not at all’ and 10 = ‘completely’), immediately following each of the twelve drives
+(with each drive corresponding to a speciﬁc warning type and time, i.e. TTC). Scales were taken from existing acceptance/
+usability assessment protocols (Brooke, 1996), with ratings captured by inviting responses to seven questions exploring
+the constructs of trust, conﬁdence, annoyance, desirability, predictability, reliance and risk (which collectively were inter-
+preted as ‘acceptance’):
+(1) Overall, how much do you trust the system? (Trust)
+(2) How conﬁdent are you that the system will be able to cope with all situations in the future? (Conﬁdence)
+(3) How annoying was the system? (Annoyance)
+(4) How likely would you be to use the system if it was available in your own car? (Desirability)
+Table 1
+Twelve scenarios completed by all participants, showing TTCs and false alarm rates (i.e. number of pedestrians who did not step into the road but were
+nevertheless highlighted by the PCDS).
+Urgency Level
+TTC (when warning presented)
+Audio Only (4 scenarios)
+Combined (Audio + HUD) (4 scenarios)
+No Warning (4 scenarios)
+L1
+2.0-s
+20% (1 in 5)
+20% (1 in 5)
+20% (1 in 5)
+L2
+3.0-s
+40% (2 in 5)
+40% (2 in 5)
+40% (2 in 5)
+L3
+4.0-s
+60% (3 in 5)
+60% (3 in 5)
+60% (3 in 5)
+L4
+5.0-s
+80% (4 in 5)
+80% (4 in 5)
+80% (4 in 5)
+16
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+
+(5) To what extent can the system’s behaviour be predicted from moment to moment? (Predictability)
+(6) To what extent can you count on the system to do its job? (Reliance)
+(7) To what extent will the system’s actions have a harmful or injurious outcome? (Risk)
+Performance was determined based on data captured by the simulator software and visual behaviour from SensoMotoric
+Instruments Natural Gaze eye-tracking glasses, which were worn by participants throughout the study. A range of objective
+performance measures were subsequently deﬁned, based on the headway/TTC at which critical events occurred (effectively,
+surrogate safety margins) (Table 2). These were determined by synchronising the eye-tracking data with the performance
+data captured from the driving simulator (for gaze-related measures), or directly from the simulator data for primary control
+actions (foot off accelerator, foot on brake) and vehicle behaviour (car stopped). In addition, reaction times and stopping dis-
+tances were captured (using a similar approach), and these have been reported in Large, D. R., Harvey, Burnett, Merenda,
+Leong, and Gabbard (2017) and Merenda et al. (2017); the reader is advised to refer to these papers for further information
+on these measures.
+3. Results and analysis
+3.1. Data analysis
+To identify main and interaction effects of Urgency (measured by TTC = {2, 3, 4, 5} seconds) and Modality of warning
+(HMI = {no, Audio, Audio + HUD}) on driving performance and driver acceptance, we performed two-way, repeated-
+measures ANOVAs. Prior to this, data were tested for normality using a Shapiro-Wilk normality test. For those data that were
+not normally distributed, ANOVAs were performed on log-transformed values, which were subsequently back-transformed
+to provide summary statistics (e.g. means and standard error of means) in their original units for reporting. In situations
+where signiﬁcant effects were revealed, we conducted post-hoc contrast tests for planned comparisons among experimental
+conditions to investigate any interaction effects, applying Tukey’s adjustment to account for multiple comparisons. All data
+analysis was conducted using the statistical software program R (version 3.2.2), and the ‘lme4’ package for the mixed effects
+ANOVA, considering Urgency and Modality of warning as ﬁxed effect factors, and Participant as a random effect factor.
+3.2. Subjective ratings
+Descriptive statistics and main effects/interactions for subjective ratings are shown in Tables 3 and 4. In addition, ratings
+are shown as box plots with 95% conﬁdence intervals (Fig. 2). There were signiﬁcant main effects of Urgency evident for Trust
+(p < 0.01), Conﬁdence (p < 0.01), Desirability (p < 0.05), Predictability (p < 0.001), Reliance (p < 0.01) and Risk (p < 0.05). Post-
+hoc tests indicated differences in perceived Trust, Conﬁdence, Desirability (at p < 0.10), Predictability and Reliance between
+L1 and {L2, L3} and between L1 and L3 for Risk. In addition, there were signiﬁcant differences between L1 and L4 for Pre-
+dictability and Risk. Although overall, ratings were statistically ‘worse’ at L1 (lower for positive terms and higher for negative
+Table 2
+Subjective acceptance and objective performance measures analysed.
+Subjective Ratings (‘Acceptance’)
+Objective Performance Measures (‘Surrogate Safety Margins’)
+Trust
+Conﬁdence
+Annoyance
+Desirability
+Predictability
+Reliance
+Risk
+TTC(s)/Headway(m) @ gaze on PED
+TTC(s)/Headway(m) @ foot off accelerator
+TTC(s)/Headway(m) @ foot on brake
+Headway(m) @ car stopped
+Table 3
+Drivers’ acceptance, reported by subjective ratings, showing means (standard error of the means, corrected for within-subject variability) in each experimental
+condition.
+Modality (HMI)
+Urgency
+Trust
+Conﬁdence
+Annoyance
+Desirability
+Predictability
+Reliance
+Risk
+Audio
+L1
+5.7 (0.42)
+5.6 (0.42)
+4.5 (0.43)
+5.1 (0.47)
+6.0 (0.39)
+6.4 (0.38)
+5.4 (0.47)
+Audio + HUD
+L1
+6.6 (0.42)
+6.3 (0.42)
+4.7 (0.43)
+5.8 (0.48)
+6.1 (0.39)
+6.5 (0.38)
+5.1 (0.47)
+Audio
+L2
+6.6 (0.42)
+6.4 (0.43)
+4.9 (0.43)
+5.8 (0.48)
+6.7 (0.39)
+7.2 (0.38)
+5.3 (0.47)
+Audio + HUD
+L2
+7.1 (0.42)
+6.9 (0.42)
+4.5 (0.43)
+6.0 (0.48)
+6.8 (0.39)
+7.5 (0.38)
+4.6 (0.47)
+Audio
+L3
+7.0 (0.42)
+6.6 (0.42)
+4.5 (0.43)
+5.8 (0.47)
+6.6 (0.39)
+7.3 (0.38)
+4.6 (0.47)
+Audio + HUD
+L3
+6.9 (0.42)
+6.9 (0.42)
+4.5 (0.43)
+5.9 (0.47)
+7.2 (0.39)
+7.4 (0.38)
+4.6 (0.47)
+Audio
+L4
+6.4 (0.42)
+6.3 (0.42)
+4.5 (0.43)
+5.8 (0.48)
+6.6 (0.39)
+6.8 (0.38)
+4.7 (0.47)
+Audio + HUD
+L4
+6.7 (0.42)
+6.5 (0.42)
+5.0 (0.43)
+5.8 (0.48)
+6.7 (0.39)
+7.2 (0.38)
+4.7 (0.47)
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+17
+
+
+terms), all subjective ratings were generally positive in all situations (above 6 for positive terms, and below 5 for negative
+terms) (Fig. 2). Even so, there were also signiﬁcant effects of Modality for Conﬁdence, with post-hoc tests showing that dif-
+ferences existed between audio-only (W1) and audio + HUD warnings (W2), across all levels of Urgency, with higher ratings
+for combined warnings.
+3.3. Driving performance (headway and TTC)
+Descriptive statistics for driving performance measures with main effects and signiﬁcant interactions are shown in Tables
+5 and 6, respectively. It is worth highlighting that due to the nature of the driving environment (i.e. a single lane carriageway),
+steering interventions were not practically possible, and therefore drivers reacted to the pedestrian threats by braking or
+otherwise reducing the speed of their vehicle.
+For TTC @ Gaze on Pedestrian, there was a main effect of Urgency (F(3,44.6) = 89.94, p < 0.001). Post-hoc tests show signif-
+icant differences between all levels of Urgency (all p < 0.001), with TTC @ Gaze on Pedestrian increasing as TTC increased.
+There were no signiﬁcant main effects for Modality (F(2, 36.9) = 0.50, p = 0.608), and no signiﬁcant interaction between
+Urgency and Modality (F(6, 82.3) = 1.73, p = 0.125).
+Table 4
+Main and interaction effects of the urgency and modality of PCDS on driver subjective ratings (*p < 0.05, **p < 0.01, ***p < 0.001).
+Effect
+Trust
+Conﬁdence
+Annoyance
+Desirability
+Predictability
+Reliance
+Risk
+Urgency
+F(3, 137.1)
+= 5.111**
+F(3, 69.0)
+= 4.148**
+F(3, 67.9)
+= 0.660
+F(3, 137.1)
+= 2.843*
+F(3, 68.1)
+= 6.021***
+F(3, 68.8)
+= 5.534**
+F(3, 67.8)
+= 3.623*
+Modality
+F(1, 22.7)
+= 2.586
+F(1, 23.0)
+= 4.590*
+F(1, 22.9)
+= 0.082
+F(1, 23.0)
+= 1.036
+F(1, 22.9)
+= 0.471
+F(1, 22.9)
+= 0.932
+F(1, 21.9)
+= 1.069
+Urgency * Modality
+F(3, 137.1)
+= 1.868
+F(3, 69.0)
+= 0.535
+F(3, 68.6)
+= 1.703
+F(3, 137.1)
+= 1.308
+F(3, 68.5)
+= 1.115
+F(3, 68.8)
+= 0.389
+F(3, 69.2) =
+0.961
+Fig. 2. Drivers’ subjective ratings by urgency and modality, where 0 = ‘not at all’ and 10 = ‘completely’, with 95% conﬁdence intervals.
+18
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+
+For TTC @ Foot off Accelerator, there were main effects for Urgency (F(3, 67.4) = 5037.10, p < 0.001) and Modality (F(2,
+44.1) = 103.84, p < 0.001), and an interaction between Urgency and Modality (F(6,132.8) = 33.03, p < 0.001). Post-hoc tests
+(Table 7) show signiﬁcant differences between all levels of Urgency for all warning types, indicating that drivers took their
+foot off the accelerator further from the pedestrian when warnings were provided at longer TTCs. In addition, there were
+signiﬁcant differences between warning types and Urgency showing that when warnings were provided at the longest
+TTC, drivers’ initial response (i.e. taking their foot off the accelerator) occurred further from the pedestrian than when no
+warning was provided. Moreover, differences between having a warning and not having a warning became more pronounced
+as TTC increased (Fig. 3).
+For TTC @ Foot on Brake, there were main effects for Urgency (F(3, 67.6) = 427.09, p < 0.001) and Modality (F(2, 45.8)
+= 41.73, p < 0.001), and an interaction between Urgency and Modality (F(6,135.8) = 5.79, p < 0.001). Post-hoc tests (Table 8)
+show signiﬁcant differences between all levels of Urgency for all warning types (p < 0.001), although there were only signif-
+icant differences between warning types (i.e. between w1 and w2) at TTC = 5 s (pmax = 0.024). Again, differences between
+having a warning and not having a warning became more pronounced as TTC increased (Fig. 4).
+For Headway @ Car Stopped, there were main effects for Urgency (F(3, 45.8) = 117.97, p < 0.001) and Modality (F(2, 44.1)
+= 15.12, p < 0.001), and an interaction between Urgency and Modality (F(6,135.8) = 5.79, p = 0.072) (signiﬁcant at p < 0.10).
+Post-hoc tests (Table 9) show signiﬁcant differences between L1 and {L2, L3,L 4} for all warning types, between L2 and {L3,
+L4} for audio-only, and between L2 and L4 for audio + HUD warnings (all p < 0.001). In addition, signiﬁcant differences were
+evident at L3 and L4 between no-warnings and {audio-only, audio + HUD} (pmax = 0.007). There were no signiﬁcant differ-
+ences between warning types (w1 and w2) at any levels of Urgency. It was also evident, as before, that differences between
+having a warning and not having a warning became more pronounced as TTC increased (Fig. 5).
+Table 5
+Driving performance measures, reported by surrogate safety metrics – means (standard error of the means, corrected for within-subject variability) in each
+experimental condition.
+Modality (HMI)
+Urgency
+TTC (s) @ Gaze on Pedestrian
+TTC (s) @ Foot off Accelerator
+TTC (s) @ Foot on Brake
+Headway (m) @ Car Stopped
+None
+L1
+1.59 (0.12)
+1.42 (0.02)
+1.05 (0.04)
+18.44 (1.56)
+Audio
+L1
+1.43 (0.11)
+1.46 (0.02)
+1.11 (0.04)
+20.49 (1.67)
+Audio + HUD
+L1
+1.39 (0.09)
+1.47 (0.02)
+1.12 (0.04)
+21.03 (1.71)
+None
+L2
+2.31 (0.14)
+2.26 (0.02)
+1.56 (0.05)
+37.41 (3.08)
+Audio
+L2
+2.44 (0.14)
+2.37 (0.03)
+1.73 (0.05)
+44.39 (3.61)
+Audio + HUD
+L2
+2.36 (0.13)
+2.42 (0.03)
+1.71 (0.05)
+43.65 (3.55)
+None
+L3
+2.84 (0.17)
+3.05 (0.03)
+1.87 (0.06)
+41.57 (3.47)
+Audio
+L3
+3.23 (0.19)
+3.28 (0.03)
+2.22 (0.07)
+57.48 (4.68)
+Audio + HUD
+L3
+3.07 (0.16)
+3.33 (0.04)
+2.22 (0.07)
+54.10 (4.40)
+None
+L4
+3.12 (0.18)
+3.42 (0.04)
+2.28 (0.07)
+42.50 (3.50)
+Audio
+L4
+3.44 (0.19)
+4.23 (0.05)
+2.85 (0.09)
+64.69 (5.41)
+Audio + HUD
+L4
+3.74 (0.20)
+4.33 (0.05)
+3.14 (0.10)
+64.20 (5.29)
+Table 6
+Main and interaction effects of the urgency and modality of PCDS on surrogate safety metrics (#p < 0.1, *p < 0.05, **p < 0.01, ***p < 0.001).
+Effect
+TTC (s) @ Gaze on Ped.
+TTC (s) @ Foot off Acc.
+TTC (s) @ Foot on Brake
+Headway (m) @ Car Stopped
+Urgency
+F(3, 44.6) = 89.94***
+F(3, 67.4) = 5037.10***
+F(3, 67.6) = 427.09***
+F(3, 45.8) = 117.97***
+Modality
+F(2, 36.9) = 0.50
+F(2, 44.1) = 103.84***
+F(2, 45.8) = 41.73***
+F(2, 44.1) = 15.12***
+Urgency*Modality
+F(6, 82.3) = 1.73
+F(6, 132.8) = 33.03***
+F(6, 135.8) = 5.79***
+F(6, 106.4) = 2.00#
+Table 7
+Signiﬁcant post-hoc tests for TTC @ Foot off Accelerator between warning types
+(W0 = None, W1 = Audio, W2 = Audio + HUD).
+Contrast
+Urgency
+Statistics
+w0 - w2
+L1
+t(168.9) = 2.55, p = 0.031
+w0 - w1
+L2
+t(163.6) = 3.63, p = 0.001
+w0 - w2
+L2
+t(163.6) = 5.34, p < 0.001
+w0 - w1
+L3
+t(166.2) = 5.50, p < 0.001
+w0 - w2
+L3
+t(166.2) = 6.77, p < 0.001
+w0 - w1
+L4
+t(165.1) = 15.92, p < 0.001
+w0 - w2
+L4
+t(166.9) = 17.78, p < 0.001
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+19
+
+
+4. Discussion
+The study explored the effect of urgency (deﬁned here by TTC/false alarm rate) and modality (none, audio-only and audio
++ HUD) of PCDS alert warnings on driver acceptance and performance associated with an active safety system. In practice,
+most systems will also attempt to perform autonomous emergency braking (or other primary control interventions) in crit-
+ical situations. However, ﬁrst generation systems are still limited in the range of use-cases that can be addressed. Moreover,
+in the event of a potential collision, all systems will provide a warning to advise drivers of the potential hazard, and
+                                                         
+Fig. 3. TTC @ Foot off Accelerator by urgency and modality, with 95% conﬁdence intervals. (*p < 0.05, **p < 0.01, ***p < 0.001).
+Table 8
+Signiﬁcant post-hoc tests for TTC @ Foot on Brake between warning
+types (W0 = None, W1 = Audio, W2 = Audio + HUD).
+Contrast
+Urgency
+Statistics
+w0 - w1
+L2
+t(173.7) = 3.02, p = 0.008
+w0 - w2
+L2
+t(173.7) = 2.70, p = 0.021
+w0 - w1
+L3
+t(175.6) = 4.83, p < 0.001
+w0 - w2
+L3
+t(175.6) = 4.83, p < 0.001
+w0 - w1
+L4
+t(173.9) = 6.19, p < 0.001
+w0 - w2
+L4
+t(176.8) = 8.93, p < 0.001
+w1 - w2
+L4
+t(178.9) = 2.65, p = 0.024
+Fig. 4. TTC @ Foot on Brake by urgency and modality, with 95% conﬁdence intervals. (*p < 0.05, **p < 0.01, ***p < 0.001).
+20
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+
+encourage them to take evasive action, before the system assumes control. Understanding drivers’ behaviour in response to
+such warnings is therefore important. Building on previous analyses (reported in: (Large et al., 2017; Merenda et al., 2017)),
+the study employed a generalized mixed effect model using urgency (measured by TTC = {2, 3, 4, 5} seconds, with associated
+false alarm rates) and modality of warning (HMI = {no, Audio, Audio + HUD}) as independent variables. Acceptance is deter-
+mined based on participants’ responses to seven subjective ratings scales, assessing trust, conﬁdence, annoyance, desirabil-
+ity, predictability, reliance and risk (based on existing acceptance/usability assessment protocols (Brooke, 1996), which were
+completed immediately after each drive. In addition, objective performance was determined using surrogate measures of
+safety, i.e. the time-to-collision (and/or associated headway) at which drivers’ gaze ﬁrst ﬁxated on the pedestrian at risk,
+when they ﬁrst lifted their foot from the accelerator (indicating their ﬁrst response to the warning), when they put their foot
+on the brake pedal (indicating the driver’s ﬁrst conscious effort to slow the car), and ﬁnally, the headway at which the driver
+brought the vehicle to a stop. These measures represent the margin of safety between vehicle and the hazard (i.e. vulnerable
+pedestrian), based on drivers’ responses to the warnings.
+Immediately apparent is that all acceptance items were generally rated highly at all levels of urgency and for both HMI
+solutions – above the median scale-point for positive terms, and below this for negative terms – indicating a general accep-
+tance of in-vehicle warnings in situations where a potential threat is present (in this case, a pedestrian entering the vehicle’s
+path). On closer inspection, however, there were notable differences in subjective ratings, associated primarily with the time
+at which warnings were presented (i.e. TTC) (although differences were also indicated regarding the conﬁdence that people
+placed in the different warning modalities, discussed later). In particular, later warnings (i.e. at TTC of 2.0 s), attracted the
+lowest ratings of trust, conﬁdence, desirability, predictability, reliance and risk (compared to warnings delivered at longer
+TTCs), even though 2.0-s warnings were arguably the most reliable, i.e. suffered from the lowest occurrence of false alarms.
+Table 9
+Signiﬁcant post-hoc tests for Headway @ Car Stopped (W0 = None,
+W1 = Audio, W2 = Audio + HUD) (#p < 0.1).
+Contrast
+HMI / Urgency
+Statistics
+L1-L2
+w0
+t(181.8) = 7.79, p < 0.001
+L1-L3
+w0
+t(184.7) = 8.84, p < 0.001
+L1-L4
+w0
+t(181.2) = 9.19, p < 0.001
+L1-L2
+w1
+t(170.4) = 8.92, p < 0.001
+L1-L3
+w1
+t(170.4) = 11.90, p < 0.001
+L1-L4
+w1
+t(175.3) = 12.95, p < 0.001
+L2-L3
+w1
+t(170.4) = 2.98, p = 0.017
+L2-L4
+w1
+t(175.3) = 4.24, p < 0.001
+L1-L2
+w2
+t(170.4) = 8.43, p < 0.001
+L1-L3
+w2
+t(170.4) = 10.91, p < 0.001
+L1-L4
+w2
+t(173.1) = 12.74, p < 0.001
+L2-L3
+w2
+t(170.4) = 2.48, p = 0.067#
+L2-L4
+w2
+t(173.1) = 4.40, p < 0.001
+w0 - w1
+L3
+t(142.1) = 3.76, p = 0.001
+w0 - w2
+L3
+t(142.1) = 3.06, p = 0.007
+w0 - w1
+L4
+t(140.6) = 4.84, p < 0.001
+w0 - w2
+L4
+t(143.3) = 4.79, p < 0.001
+Fig. 5. Headway @ Car Stopped by urgency and modality, with 95% conﬁdence intervals of the means (*p < 0.05, **p < 0.01, ***p < 0.001).
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+21
+
+
+This suggests that drivers perhaps felt that 2.0-s warnings were issued too late for them to respond successfully (i.e. the
+pedestrian was already compromised). In such situations, drivers would therefore be reliant upon primary control interven-
+tions for collision mitigation/avoidance that would be expected to follow warnings in a real-world PCDS. It also indicates that
+drivers may be willing to accept the lower perceived reliability (due to errors and imperfection in the system, as well as the
+dynamic behaviour of pedestrians), that will inevitably accompany the provision of earlier warnings, even at extended head-
+ways (up to 5.0-s TTC based on the study ﬁndings). Of course, this provides additional time for drivers to take corrective
+action – braking or steering away from the hazard. As such, drivers maintain a sense of control, and this may be an important
+factor encouraging the acceptance of in-vehicle technology more generally. Even so, there was a tendency for some ratings to
+reduce at the highest TTCs (in particular, trust and conﬁdence). At this distance, it is possible that drivers were unaware of
+the speciﬁc threat posed by the pedestrian – and therefore questioned how accurate the system’s assessment could be, or
+drivers may have felt that they had sufﬁcient time to respond without the assistance of a PCDS.
+Participants also indicated increased conﬁdence in all situations where auditory and visual warnings (presented on the
+HUD) were combined, although ratings were comparable for other scale items between audio-only and audio + HUD warn-
+ings. Providing multi-modal warnings lends itself to redundancy – if the driver fails to see the warning on the HUD, they are
+still likely to hear the audio, and vice versa, and this may account for increased conﬁdence in this format.
+As with the subjective data, there were clear differences evident for the objective performance measures based on
+urgency, with drivers ﬁxating their gaze on the ‘target’ pedestrian at longer headway than when earlier warnings were pro-
+vided. In addition, drivers responded further away (i.e. took their foot off the accelerator, and put their foot on the brake fur-
+ther from the hazard) when warnings were presented at longer TTC. These actions also corresponded with drivers actually
+bringing their vehicle to a stop further from the pedestrian when warnings were provided at longer TTCs – in particular, the
+headway at which the vehicle stopped was shorter for warnings delivered at 2 s compared to longer TTCs. Differences
+between having a warning and not having a warning also became more pronounced as TTC increased for all performance
+measures. This demonstrates the utility and value of providing warnings, as they can help drivers to identify the potential
+hazard, and enact primary controls; it also demonstrates an inherent trust in the system, in that drivers appeared willing to
+accept, and act upon, the judgement of the system.
+Results indicate that ‘modality’ made a signiﬁcant difference for all primary control interventions (foot off accelerator,
+foot on brake, and bringing the car to a stop), with drivers taking these actions sooner when warnings were provided earlier
+(at TTCs of 4 and 5 s). However, these differences were in fact between ‘no warning’ and ‘audio and/or HUD’, demonstrating
+that while the presence of an alert encouraged the driver to respond sooner, the modality in which it is presented appeared
+to make little difference. Interestingly, there were no equivalent beneﬁts in localising the target pedestrian in situations
+when a warning was provided – this is particularly noteworthy given that part of the intention of providing conformal warn-
+ings was to guide attention towards the hazard.
+In situations where a warning was provided, modality (i.e. audio-only or audio + HUD alerts) only inﬂuenced ‘foot-on-
+brake’ at 5.0-s TTC, with combined audio and HUD warnings encouraging drivers to apply the brake further from the hazard.
+It is therefore particularly interesting to note that drivers claimed greater conﬁdence when warnings were also provided on
+the HUD (in addition to the auditory alarm), given that there were very limited performance gains in doing so.
+Although we are conﬁdent of the value and contribution of this work, we acknowledge several limitations in our
+approach. Firstly, to deﬁne ‘urgency’, we assumed that false alarm rate and TTC are closely related and increase together
+at a linear rate. While there is strong evidence to support this assumption (e.g. (Keller and Gavrila, 2014)), it is nevertheless
+unlikely that this relationship is completely linear. Modelling system performance in this manner may therefore be an over-
+simpliﬁcation. It also means that it is impossible to differentiate the effects of TTC and false alarm rate in our results,
+although these factors are undeniably linked. In practice, this approach was chosen to provide a more ecologically-valid
+experience of ‘urgency’ – it would be unrealistic to expect perfect human intent prediction ﬁve seconds into the future.
+Equally, it would be unusual to experience very high levels of inaccuracy at short TTCs where intent modelling is likely
+to be more robust (particularly with commercially available systems).
+In addition, we limited our investigation to false positive alarms, which were in effect due to an imprecision of the PCDS –
+a useful warning was given as a pedestrian hazard did exist, and still had the potential to enter the roadway. This arguably
+mitigates the previous concern to some extent, although we recognise that in practice, there are many other factors that are
+likely to inﬂuence the reliability and capability of such systems. For example, in a real-world situation, subtle cues, such as
+head-movements, eye-contact and other postural changes, would likely indicate a pedestrian’s intent to enter the roadway,
+or conversely demonstrate that they were about to stop. Such behaviour was notably absent from the simulated environ-
+ment (due to limitations in the ﬁdelity/functionality of the simulation software). Instead, all pedestrians appeared visually
+similar to drivers, with the exception that some continued to walk into the roadway, and others did not, and this may have
+affected drivers’ behaviour and responses.
+Finally, notwithstanding the aforementioned concerns, it is worth bearing in mind that exposing drivers to regular and
+repeated warnings meant that they may have become hyper-vigilant to potential pedestrian threats. Although we attempted
+to address this concern as much as practicable by counterbalancing exposure, there will be inevitable inﬂuences on drivers’
+behaviour caused by the rapid, repeated exposure to potential threats, and thus all results should be considered as relative,
+as indeed they are presented.
+22
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+
+5. Conclusions
+Warnings are a common component of pedestrian safety systems, intending to make drivers aware of a potential hazard,
+encouraging them to initiate an evasive manoeuvre, or preparing them for an emergency control intervention (such as steer-
+ing or braking). Thus, understanding the effect of urgency (i.e. when alarms are declared) and modality (how they are pre-
+sented) on driver acceptance and performance is important. In the study, warnings were generally well received,
+inspiring positive ratings of ‘acceptance’ even at extended TTCs, and despite relatively high false alarm rates. In addition, ear-
+lier warnings helped drivers localise the potential threat sooner, and encouraged them to begin evasive braking manoeuvres
+further from the pedestrian. There was, however, little differentiation in drivers’ performance between audio and audio/
+visual presentations, and modality also appeared to have negligible overall effect on generalised ‘acceptance’ ratings. An
+exception to this was drivers’ conﬁdence, which increased with multi-modal presentation, suggesting redundancy in modal-
+ity improved self-efﬁcacy. In addition, delaying warnings (i.e. presenting them at shorter TTCs) detrimented trust, conﬁ-
+dence, desirability, predictability, reliance and risk, even though later warnings invited fewer false activations. Ultimately,
+we can conclude that providing earlier warnings has the potential to increase the margin of safety between car and pedes-
+trian, without necessarily detrimenting acceptance. Moreover, multi-modal warnings are likely to increase conﬁdence even
+though these do not necessarily lead to improvements in drivers’ performance.
+Acknowledgements
+The research received funding from the European Community’s Eighth Framework Program (Horizon2020) (agreement
+no. 634149: Proactive Safety for Pedestrians and Cyclists (PROSPECT) project), and the NSF-funded International Research
+Experience for Students (IRES) program between Virginia Tech University (United States) and the University of Nottingham
+(UK) (NSF award: 1261162).
+References
+Adell, E. (2009). Driver experience and acceptance of driver support systems: a case of speed adaptation.
+Ausserer, K., & Risser, R. (2005). Intelligent transport systems and services-chances and risks. In ICTCT-workshop.
+Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775–779.
+Baldwin, C., & Lewis, B. (2014). Perceived urgency mapping across modalities within a driving context. Applied Ergonomics, 45, 1270–1277.
+Banks, V., & Stanton, N. (2015). Keep the driver in control: automating automobiles of the future. Applied Ergonomics, 53(B), 389–395.
+Beck, L. F., Dellinger, A. M., & O’neil, M. E. (2007). Motor vehicle crash injury rates by mode of travel, United States: Using exposure-based methods to
+quantify differences. American Journal of Epidemiology, 166, 212–218.
+Blanco, M., Atwood, J., Vasquez, H., Trimble, T., Fitchett, V., Radlbeck, V., . . . Morgan, J. (2015). Human factors evaluation of level 2 and level 3 automated
+driving concepts, Washington, DC.
+Brooke, J. (1996). SUS-A quick and dirty usability scale. Usability Evaluation in Industry, 189(194), 4–7.
+Burnett, G. (2003). A road-based evaluation of a head-up display for presenting navigation information. In Proceedings of the HCI International Conference,
+Crete.
+Campbell, J. L., Richard, C. M., Brown, J. L., & McCallum, M. (2007). Crash warning system interfaces: human factors insights and lessons learned. In US
+department of transportation, national highway trafﬁc safety administration.
+Clifton, K. J., Burnier, C. V., & Akar, G. (2009). Severity of injury resulting from pedestrian–vehicle crashes: What can we learn from examining the built
+environment? Transportation Research Part D: Transport and Environment, 14, 425–436.
+De Boer, J., Chaziris, A., Vreeswijk, J., Bie, J., & Van Arem, B. (2010). The accuracy and timing of pedestrian warnings at intersections: The acceptance from
+drivers and their preferences. In 13th International IEEE Conference on Intelligent Transportation Systems (ITSC).
+EUROPEAN NEW CAR ASSESSMENT PROGRAMME (Euro NCAP) (2017). TEST PROTOCOL – AEB VRU systems (version 2.0).
+Eyraud, R., Zibetti, E., & Baccino, T. (2015). Allocation of visual attention while driving with simulated augmented reality. Transportation Research Part F:
+Trafﬁc Psychology and Behaviour, 32, 46–55.
+Foyle, D., Hooey, B., Wilson, J., & Johnson, W. (2002). HUD symbology for surface operations: Command guidance vs. situation guidance formats. SAE
+Transactions: Journal of Aerospace, 111, 647–658.
+Ghazizadeh, M., Lee, J., & Boyle, L. (2012). Extending the Technology Acceptance Model to assess automation. Cognition, Technology & Work, 14(1), 39–49.
+Graves, F., Lloyd, D., Wilson, D., Mais, D., Deda, W., & Bhagat, A. (2014). Reported Road Casualties Great Britain: 2013 Annual Report.
+Gray, R., Spence, C., Ho, C., & Tan, H. (2013). Efﬁcient multimodal cuing of spatial attention. Proceedings of the IEEE, 10, 2113–2122.
+Ho, C., & Spence, C. (2008). The multisensory driver: Implications for ergonomic car interface design. Aldershot: Ashgate.
+Källhammer, J., & Smith, K. (2012). Assessing contextual factors that inﬂuence acceptance of pedestrian alerts by a night vision system. Human Factors: The
+Journal of the Human Factors and Ergonomics Society, 54(4), 654–662.
+Keller, C., & Gavrila, D. (2014). Will the pedestrian cross? a study on pedestrian path prediction. IEEE Transactions on Intelligent Transportation Systems, 15(2),
+494–506.
+Kim, H., Isleib, J., & Gabbard, J. (2016). Virtual shadow: making cross trafﬁc dynamics visible through augmented reality head up display. In Proceedings of
+the human factors and ergonomics society annual meeting, Los Angeles.
+Kim, H., Miranda Anon, A., Misu, T., Li, N., Tawari, A., & Fujimura, K. (2016). Look at me: augmented reality pedestrian warning system using an in-vehicle
+volumetric head up display. In Proceedings of the 21st international conference on intelligent user interfaces.
+Large, D. R., Harvey, C., Burnett, G., Merenda, C., Leong, S., & Gabbard (2017). Exploring the relationship between false alarms and driver acceptance of a
+pedestrian alert system during simulated driving. In Road safety and simulation international conference, The Hague, Netherlands.
+Lee, J., & Kantowitz, B. (1998). Perceptual and cognitive aspects of intelligent transportation systems. Human Factors in Intelligent Transportation Systems.
+Lee, J., McGehee, D., Brown, T., & Reyes, M. (2002). Collision warning timing, driver distraction, and driver response to imminent rear-end collisions in a
+high-ﬁdelity driving simulator. Human Factors: The Journal of the Human Factors and Ergonomics Society, 44(2), 314–334.
+Lee, J. D., & See, K. A. (2004). Trust in automation: Designing for appropriate reliance. Human Factors, 46(1), 50–80.
+Liu, Y.-C., & Wen, M.-H. (2004). Comparison of head-up display (HUD) vs. head-down display (HDD): Driving performance of commercial vehicle operators
+in Taiwan. International Journal of Human-Computer Studies, 61(5), 679–697.
+Löcken, A., Unni, A., Müller, H., & Boll, S. (2013). The car that cares: introducing an in-vehicle ambient display to reduce cognitive load. In Automotive user
+interfaces and interactive vehicular applications, Eindhoven, The Netherlands.
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+23
+
+
+Merenda, C., Kim, H., Leong, S., Gabbard, J., Burnett, G., & Large, D. (2017). Did you see me? Assessing real vs. perceived driving gains across multi-modality
+pedestrian alert systems. In The 9th international ACM conference on automotive user interfaces and interactive vehicular applications (AutoUI2017),
+Oldenburg, Germany.
+Meschtscherjakov, A., Döttlinger, C., Rödel, C., & Tscheligi, M. (2015). ChaseLight: Ambient LED strips to control driving speed. In Automotive user interfaces
+and interactive vehicular applications, Nottingham, UK.
+Norman, D. (2007). The design of future things. New York: Basic Books.
+Parasuraman, R., & Riley, V. (1997). Human and automation: Use, misuse, disuse, abuse. Human Factors, 39(2), 230–253.
+PROSPECT (Proactive Safety for Pedestrians and Cyclists) (2016). Deliverable D2.1: Accident analysis, naturalistic observations and project implications.
+PROSPECT (Proactive Safety for Pedestrians and Cyclists) (2017). Deliverable D5.2: Advanced HMI and vehicle control concepts for VRU active safety.
+Rane, P., Kim, H., Marcano, J., Gabbard, J., 2016. Virtual road signs: Augmented reality driving aid for novice drivers. In Proceedings of the human factors and
+ergonomics society annual meeting, Los Angeles.
+Reader, N. (1999). Development and validation of functional deﬁnitions and evaluation procedures for collision warning/avoidance systems.
+Sayer, T., Sayer, J., & Devonshire, J. (2005). Assessment of a driver interface for lateral drift and curve speed warning systems: mixed results for auditory and
+haptic warnings. In Proceedings of driving assessment.
+Schade, J., & Baum, M. (2007). Reactance or acceptance? Reactions towards the introduction of road pricing. Transportation Research Part A: Policy and
+Practice, 41(1), 41–48.
+Sheridan, T. (2008). Risk, human error, and system resilience: Fundamental ideas. Human Factors: The Journal of the Human Factors and Ergonomics Society, 50
+(3), 418–426.
+Silla, A., Rama, P., Leden, L., van Noort, M., de Kruijff, J., Bell, D., . . . Scholliers, J. (2015). Are intelligent transport systems effective in improving the safety of
+vulnerable road users?.
+World Health Organization (2015). Global status report on road safety.
+Yanagisawa, M., Swanson, E., & Najm, W.G. (2014). Target crashes and safety beneﬁts estimation methodology for pedestrian crash avoidance/mitigation
+systems.
+Zhang, S., Benenson, R., Omran, M., Hosang, J., & Schiele, B. (2016). How Far are We from Solving Pedestrian Detection? arXiv preprint arXiv:1602.01237.
+24
+D.R. Large et al. / Transportation Research Part F 60 (2019) 11–24
+
+

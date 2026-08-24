@@ -1,0 +1,1505 @@
+Capture by Context Elements, Not Attentional
+Suppression of Distractors, Explains the PD
+with Small Search Displays
+Dirk Kerzel and Nicolas Burra
+Abstract
+■Top–down control of attention allows us to resist attentional
+capture by salient stimuli that are irrelevant to our current
+goals. Recently, it was proposed that attentional suppression
+of salient distractors contributes to top–down control by biasing
+attention away from the distractor. With small search displays,
+attentional suppression of salient distractors may even result
+in reduced RTs on distractor-present trials. In support of at-
+tentional suppression, electrophysiological measures revealed
+a positivity between 200 and 300 msec contralateral to the
+distractor, which has been referred to as distractor positivity
+(PD). We reexamined distractor benefits with small search dis-
+plays and found that the positivity to the distractor was followed
+by a negativity to the distractor. The negativity, referred to as
+N2pc, is considered an index of attentional selection of the
+contralateral element. Thus, attentional suppression of the dis-
+tractor (PD) preceded attentional capture (N2pc) by the distrac-
+tor, which is at odds with the idea that attentional suppression
+avoids attentional capture by the distractor. Instead, we suggest
+that the initial “PD” is not a positivity to the distractor but rather a
+negativity (N2pc) to the contralateral context element, suggest-
+ing that, initially, the context captured attention. Subsequently,
+the distractor was selected because, paradoxically, participants
+searched all lateral target positions (even when irrelevant) be-
+fore they examined the vertical positions. Consistent with this
+idea, search times were shorter for lateral than vertical targets.
+In summary, the early voltage difference in small search displays
+is unrelated to distractor suppression but may reflect capture by
+the context. ■
+INTRODUCTION
+The debate on bottom–up versus top–down control of atten-
+tion has shifted from the question whether salient distractors
+capture attention to the question under which conditions this
+occurs (Liesefeld & Müller, 2019a; Theeuwes, 2018, 2019;
+Büsel, Voracek, & Ansorge, 2018; Gaspelin & Luck, 2018b;
+Awh, Belopolsky, & Theeuwes, 2012; Lamy, Leber, & Egeth,
+2012). Importantly, capture was found to decrease in condi-
+tions that promote precise target templates (Lamy, Carmel,
+Egeth, & Leber, 2006; Folk, Remington, & Johnston, 1992).
+For instance, Bacon and Egeth (1994) showed that atten-
+tional capture by a salient color distractor disappeared
+when observers were forced to search for the features
+of a specific shape (feature search) instead of searching
+for a divergent shape (singleton search). These results
+suggest that enhancing the representation of the target
+avoids attentional capture.
+Recently, Gaspelin and Luck (2018b) argued for another
+top–down control mechanisms. The signal suppression hy-
+pothesis (Gaspelin & Luck, 2018b; Sawaki & Luck, 2010)
+claims that salient stimuli capture attention unless they
+are suppressed by a top–down mechanism. Strong evi-
+dence for suppression was provided by the assessment of
+visual processing at individual stimulus locations. Gaspelin,
+Leonard, and Luck (2015) found that letter identification in
+shape-based feature search was worse at the location of the
+color distractor than at nontarget locations (see Figure 1),
+demonstrating that distractor suppression may reduce
+activation at the distractor location below baseline. In
+the same vein, Gaspelin, Leonard, and Luck (2017) re-
+ported that eye and reaching movements went less fre-
+quently to the distractor than to nontarget locations.
+For small search displays, distractor suppression may ef-
+fectively eliminate the distractor from the set of searched
+stimuli, resulting in shorter RTs on distractor-present than
+distractor-absent trials (Gaspelin et al., 2015). Thus, the dis-
+tractor decreased RTs, which is in contrast to more com-
+mon variants of the additional singleton paradigm where
+a distractor increases RTs because of attentional capture
+(Theeuwes, 2018, 2019). However, distractor benefits dove-
+tail nicely with research on an ERP, the PD. The PD is a
+positivity contralateral to the distractor between 200 and
+300 msec at posterior electrodes sites PO7/8 and is as-
+sumed to reflect distractor suppression (Hickey, Di Lollo,
+& McDonald, 2009). In previous studies, the magnitude
+of the PD to the distractor was larger on trials with fast re-
+sponses (Gaspar & McDonald, 2014; Jannati, Gaspar, &
+Université de Genève
+© 2020 Massachusetts Institute of Technology
+Journal of Cognitive Neuroscience X:Y, pp. 1–14
+https://doi.org/10.1162/jocn_a_01535
+
+
+McDonald, 2013), suggesting that the PD reflects a suppres-
+sive mechanism that helps bias attention away from the
+distractor.
+Direct evidence for the contribution of distractor sup-
+pression to the distractor benefit with small search
+displays was provided by Gaspelin and Luck (2018a). In
+their Experiment 1, participants performed feature search
+on 70% of the trials. On 30% of trials, a letter identification
+task was run to probe the distribution of attention at indi-
+vidual stimulus locations. Replicating previous work
+(Gaspelin et al., 2015), probe identification at the dis-
+tractor location was worse than at nontarget locations.
+Importantly, there was a PD to the color distractor, con-
+firming that distractor suppression occurred.
+Although the electrophysiological results from Gaspelin
+and Luck (2018a) are consistent with the signal sup-
+pression hypothesis, they are inconsistent with a previous
+study using larger search displays. Barras and Kerzel
+(2016) presented eight search items and compared sin-
+gleton and feature search. In singleton search, the target
+shape was unpredictable but unique among uniform non-
+target shapes, forcing participants to search for a shape
+that was different from the others. In contrast, the target
+was predictable but shown among heterogeneous non-
+target shapes in feature search, forcing participants to
+search for a particular shape. Singleton and feature search
+were similar to works by Gaspelin and colleagues (Gaspelin
+& Luck, 2018a; Gaspelin et al., 2015, 2017). Singleton search
+resulted in a 30-msec increase of RTs on distractor-present
+trials and a PD to the distractor. In contrast, feature search
+resulted neither in behavioral interference from the dis-
+tractor nor in a PD to the distractor. Rather, the amplitude
+of the N2pc to the target differed between singleton and
+feature search, suggesting that target enhancement ac-
+counted for the resistance to interference.
+The goal of this study was to clarify whether atten-
+tional suppression is a viable explanation for distractor
+benefits in feature search with small set sizes. Recently,
+Liesefeld and Müller (2019b) proposed that the small set
+size combined with the heterogeneous nontarget shapes
+in works by Gaspelin and colleagues (Gaspelin & Luck,
+2018a; Gaspelin et al., 2015, 2017) represents a strong
+departure from more common variants of the additional
+singleton paradigm. In particular, Liesefeld and Müller
+(2019b) proposed that their choice of set size and non-
+target stimuli promoted systematic scanning over guid-
+ance by priority. Guidance by priority relies on a spatial
+map, which represents the selection history, top–down rel-
+evance, and bottom–up saliency of elements in the search
+array. Attention is thought to move to stimulus locations in
+the order of decreasing priority, that is, the stimulus with
+the highest priority is attended first (Theeuwes, 2010; Itti &
+Koch, 2001). In contrast, systematic scanning of individual
+or grouped stimuli (“clump scanning”) involves successive
+shifts of attention across the search display where scan
+paths are idiosyncratic. For instance, scan paths may be
+defined by stimulus eccentricity so that stimuli close to the
+fovea are scanned before peripheral stimuli (Woodman &
+Luck, 1999). In the search displays by Gaspelin and col-
+leagues, however, the location of the distractor feature
+may determine the order of scanning by providing a tem-
+plate for rejection (Tanda & Kawahara, 2019; Beck, Luck,
+& Hollingworth, 2018; Arita, Carlisle, & Woodman, 2012).
+An important point is that scanning involves systematic
+shifts of attention, resulting in N2pc and PD components
+that may pass for attentional capture or suppression.
+Furthermore, we worried that the experimental design
+in Gaspelin and Luck (2018a) may have affected atten-
+tional selectivity. In Gaspelin and Luck’s experiments,
+search and probe trials were mixed. Because participants
+were asked to report as many letters as possible on probe
+trials, there was an incentive to distribute attention evenly
+across all stimulus locations. In contrast, pure search tasks
+provide no incentive to attend to locations other than the
+search target. Therefore, we decided to measure electro-
+physiological correlates of target and distractor processing
+in pure feature search with small set sizes.
+EXPERIMENT 1
+Experiment 1 replicated the first experiment in Gaspelin
+and Luck (2018a), but without the letter probe task (see
+Figure 1). The size and eccentricity of the stimuli were
+closely matched. In particular, the stimuli were close to
+fixation (at about 2° of visual angle), and the stimuli were
+relatively small (about 1° in diameter). We asked partici-
+pants to judge the orientation of a line inside the target
+Figure 1. Illustration of experimental stimuli and conditions of interest. In
+the example, the circle was the target, and the square, hexagon, and
+diamond were nontargets. Nontargets are also referred to as context
+elements. In the experiment, the target shape changed after blocks of trials
+between circle and diamond. The distractor was the stimulus with a
+different color. In the example, it was the red stimulus, but in the
+experiment, the colors were swapped after 480 trials. The conditions of
+interest for the analysis of ERPs are shown from left to right. The
+schematics in the top row will be used to refer to these conditions in
+the following graphs. (A) In the lateral target + no distractor condition, the
+target was on the left or right and the distractor was absent. (B) In the
+lateral target + vertical distractor condition, the target was on the left or
+right and the target was on the vertical midline. (C) In the lateral target +
+opposite distractor condition, the target was on the left or right and the
+distractor was opposite. (D) In the vertical target + lateral distractor
+condition, the distractor was shown on the left or right while the target
+was on the vertical midline.
+2
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+
+stimulus (similar to the classic work by Theeuwes, 1992),
+whereas Gaspelin and Luck (2018a) asked participants to
+judge the location of a dot.
+To isolate electrophysiological responses to the target and
+distractor, we employed the logic proposed by Woodman
+and Luck (2003) whereby stimuli presented on a vertical line
+crossing the fixation point do not affect lateralized compo-
+nents. Therefore, presenting the target on the vertical and
+the distractor on a lateral position (see Figure 1D) allows
+for the isolation of the distractor-related PD, which is the main
+focus of the current investigation. Because stimulus posi-
+tions were random, three other configurations of interest
+occurred. When the target was on a lateral position, either
+without distractor (Figure 1A) or with vertical distractor
+(Figure 1B), we expected target-related N2pc compo-
+nents. The N2pc is a more negative voltage at electrodes
+contralateral to candidate target objects (Eimer, 1996;
+Luck & Hillyard, 1994) and may indicate the transient
+enhancement for high-level processing such as identi-
+fication (Zivony, Allon, Luria, & Lamy, 2018). It occurs at
+the same electrodes (PO7/8) and in the same time interval
+(200–300 msec poststimulus) as the PD. The N2pc is also re-
+ferred to as posterior contralateral negativity (Töllner, Müller,
+& Zehetleitner, 2012; Töllner, Zehetleitner, Krummenacher,
+& Müller, 2010).
+Although the N2pc mostly occurs contralateral to can-
+didate target objects, it may also occur contralateral to
+distractors, indicating that attention was captured by
+the distractor. The occurrence of the distractor-related
+N2pc is contingent on the difficulty of the search task.
+With unlimited presentation times, an N2pc to the distrac-
+tor was reported, but in these studies, search was difficult
+because the target was inconspicuous (Barras & Kerzel,
+2017) or because target and distractor shape varied unpre-
+dictably (Burra & Kerzel, 2013; Kiss, Grubert, Petersen, &
+Eimer, 2012; Hickey, McDonald, & Theeuwes, 2006).
+Furthermore, attentional capture by the distractor (i.e.,
+an N2pc) may be followed by attentional suppression of
+the distractor (i.e., a PD), suggesting that the PD reflects the
+termination of the allocation of attention (Sawaki, Geng, &
+Luck, 2012). We refer to the sequence of distractor-related
+N2pc followed by a distractor-related PD as N2pc–PD switch.
+A reliable N2pc–PD switch was reported when target and
+distractor features were drawn from the same perceptual di-
+mension (e.g., color target with color distractor; Liesefeld,
+Liesefeld, Töllner, & Müller, 2017; Hilimire, Mounts, Parks,
+& Corballis, 2011). For same-dimension distractors, initial
+selection of the distractor may occur because the distractor
+partially matched the target features. N2pc–PD switches were
+also reported for cross-dimensional distractors when pre-
+sentation times were short (i.e., shape target with color dis-
+tractor; Feldmann-Wüstefeld, Brandhofer, & Schubö, 2016),
+but sometimes the N2pc was absent and only a PD occurred
+(Kiss et al., 2012). Because we used unlimited presentation
+times and easy search, we do not expect an N2pc or an
+N2pc–PD switch with lateral distractors. Rather, N2pc
+components are only expected to lateral targets.
+Furthermore, it is unlikely that the opposite distractor
+condition (Figure 1C) yields a sequence of two N2pcs
+where attentional capture by the distractor (a distractor-
+related N2pc) is followed by selection of the target on
+the opposite side (a target-related N2pc). The sequence
+of distractor-related N2pc followed by a target-related
+N2pc is referred to as N2pc flip. Initial reports of N2pc
+flips with cross-dimensional distractors opposite to the
+target (Hickey et al., 2006) were found to be unreliable
+(Jannati et al., 2013; McDonald, Green, Jannati, & Di Lollo,
+2013). However, reliable N2pc flips were observed for
+distractors drawn from the same dimension as the target
+(i.e., orientation target and orientation distractor; Liesefeld
+et al., 2017).
+In summary, based on the work by Gaspelin and Luck
+(2018a), we expect a distractor-related PD, but not a distractor-
+related N2pc. The main reasons are that stimulus presen-
+tation in our study was unlimited and the target was easy
+to find and drawn from a dimension different from the
+distractor. In contrast, lateral targets are expected to re-
+sult in an N2pc.
+Methods
+Participants
+Sample size was based on Experiment 1 in Gaspelin and
+Luck (2018a), which had 20 participants. Here, 24 first-
+year psychology students from the University of Geneva
+participated for class credit. Eleven data sets were
+retained in the final sample (three men; age: M = 20,
+SD = 3), and 13 were rejected (one man, age: M = 19,
+SD = 1) because of eye movements (see below). The loss
+of data sets was substantial, but the remaining number
+was sufficient (i.e., the study was overpowered with 20
+participants). The critical difference between conditions
+with lateral distractor and lateral target had a Cohen’s
+dz of about 0.9 in Gaspelin and Luck (2018a). A sample
+size of 12 would be necessary to replicate this effect with
+a power of .8 at an alpha of .05. The study was approved
+by the ethics committee of the Faculty of Psychology and
+Educational Sciences of the University of Geneva and was
+carried out in accordance with the Code of Ethics of the
+World Medical Association (Declaration of Helsinki).
+Informed consent was given before the experiment.
+Apparatus and Stimuli
+Stimuli were displayed on a 21-in. CRT monitor with a re-
+fresh rate of 85 Hz and a pixel resolution of 1280 × 1024
+(horizontal × vertical), viewed at a distance of 80 cm.
+The background was black, and the stimuli were either
+red or green (16.5 cd/m2, CIE xyY coordinates: x = 0.628,
+y = 0.338 for red and x = 0.294, y = 0.605 for green). A
+white fixation cross with a luminance of 87 cd/m2 was pre-
+sented in the center of the screen. The search display con-
+sisted of a circle, a square, a diamond, and a hexagon. All
+Kerzel and Burra
+3
+
+
+shapes were filled, similar to Gaspelin and Luck (2018a).
+The shapes were presented at an eccentricity of 2° of visual
+angle (center-to-center) on the vertical and horizontal
+midlines. The circle had a diameter of 1.4°, and the di-
+mensions of the remaining shapes (square, diamond,
+and hexagon) were adjusted to have an equal area. The
+mean number of lit pixels per shape was 4306 (SD = 14
+pixels or 0.3%, range = 4290–4324 pixels). A vertical or
+horizontal black line of 0.7° length was presented in the
+center of each shape. Stroke width was 0.06°. The Psy-
+chtoolbox (Kleiner et al., 2007; Brainard, 1997) was used
+to run the experiment.
+Electrophysiological Recording and Initial
+Data Processing
+An actiCHamp amplifier (Brain Products) with active
+Ag/AgCl electrodes was used. Data were recorded using
+the PyCorder software by Brain Products. In the filter set-
+tings of the PyCorder software, we deactivated cutoffs
+and the notch filter. Continuous EEG was sampled at
+1000 Hz from 26 scalp electrodes and six additional elec-
+trodes placed at the outer canthi of each eye, above and
+below the right eye, and on each earlobe. Cz served as
+online reference, and AFz served as ground site. The data
+were analyzed using ERPLAB (Lopez-Calderon & Luck,
+2014), an extension of EEGLAB (Delorme & Makeig,
+2004). Raw EEG was re-referenced to the average ear-
+lobes and filtered between 0.1 and 30 Hz with a bandpass
+second-order Butterworth filter (roll-off 12db/octave,
+command “pop_basicfilter” in ERP lab). The filter settings
+matched those in Gaspelin and Luck (2018a). The differ-
+ence between the left and right eye electrode constituted
+the HEOG channel, and the difference between upper
+and lower eye electrode constituted the VEOG channel.
+The EEG was segmented into 500-msec epochs, extend-
+ing from 100 msec before to 400 msec after stimulus on-
+set. The first 100 msec served as baseline.
+Procedure
+Participants were asked to search for a specific shape (e.g.,
+a circle) and to report the line orientation inside the
+shape. To indicate line orientation, participants pressed
+the left or right arrow key on a standard keyboard with
+their right hand. Left and right responses were equi-
+probable, and the key-to-response mapping was initially
+counterbalanced across participants. Participants were
+asked to maintain fixation on the central fixation cross,
+to ignore the colors, and to respond as rapidly as possible
+while keeping the error rate below 10%. After blocks of
+40 trials, mean RT and the error rate were shown for at
+least 5 sec, forcing participants to take a short break. At
+the beginning of the experiment, participants practiced
+the experimental task until they felt comfortable with it.
+Practice trials were not recorded, but participants com-
+pleted at least 30 trials.
+A trial started with the presentation of the fixation
+cross for a randomly selected duration between 0.85
+and 1.1 sec. Then, the search display appeared. As in
+Gaspelin and Luck (2018a), the search display stayed
+on the screen until a response was registered. Only very
+few trials had RTs shorter than 350 msec (M = 0.09 trials
+per participant in Experiment 1 and M = 3 trials in
+Experiment 2) so that offset transients caused by the
+key-press were unlikely to affect ERPs. Choice errors
+and late trials (RTs > 2 sec) were reported to the partic-
+ipant by visual feedback.
+On half of the trials, one nontarget shape had a color
+different from the remaining stimuli (distractor-present
+trials). On the other half, all four shapes had the same
+color (distractor-absent trials). The placement of target
+and distractor was random. To cancel out potential sen-
+sory differences, the color (red or green) and target shape
+(circle or diamond) changed after 480 trials. There were at
+least 10 familiarization trials before data collection re-
+sumed. The combination of color and target shape in
+the first block was initially counterbalanced across partici-
+pants. A total of 960 trials were run.
+Results
+The data from all experiments are available in the open
+science framework at https://osf.io/ckhgs/?view_only=
+8ab328c819c34d65b9db77cae1d6fda7.
+Exclusion of Data Sets
+Trials with behavioral errors and RTs slower than 2 sec
+were excluded from analysis for both behavioral and
+ERP analysis. Furthermore, individual trials in the ERP
+analysis were rejected when blinks and vertical eye move-
+ments (difference in VEOG channel exceeding ± 50 μV),
+horizontal eye movements (steps in HEOG channel exceed-
+ing ± 16 μV), and muscular or other artifacts (any electrode
+exceeding ± 80 μV) occurred between 100 msec before
+and 350 msec after stimulus onset. Thirteen data sets were
+discarded because more than 25% of the trials were lost,
+leaving 11 data sets for the final analysis. In the excluded
+data sets, the mean behavioral error rate was 5% and the
+mean rate of eye movement errors was 37%, but ERPs were
+similar to Figure 2.
+Behavior
+Eleven data sets were analyzed. Trials with RTs slower
+than 2 sec were excluded (less than 1%). Subsequently,
+data were trimmed for each participant and condition by
+removing trials with RTs that were more than 2.5 SDs
+above the respective condition mean. This resulted in
+the exclusion of additional 3% of the trials for the behav-
+ioral analysis.
+Individual mean RTs of correct responses on distractor-
+present and -absent trials (480 trials each) were compared
+4
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+
+by paired t test. RTs on distractor-present trials were
+30 msec shorter than on distractor-absent trials (743 vs.
+773 msec), t(10) = 3.93, p = .003, Cohen’s d = 1.18. Choice
+errors did not differ significantly (4% in both conditions),
+p = .446.
+Electrophysiology
+After rejecting trials with electrophysiological artifacts,
+behavioral errors, or RTs longer than 2 sec, 87% of the
+trials of interest remained for analysis. The mean number
+of trials per condition and participant was 210 trials for
+lateral target + no distractor (range = 188–232, out of
+240), 140 for lateral distractor + vertical distractor (range =
+129–153, out of 160), 71 for lateral target + opposite dis-
+tractor (range = 64–77, out of 80), and 139 for vertical
+target + lateral distractor (range = 125–159, out of 160).
+The 240 trials with vertical targets + no distractor and
+the 80 trials with vertical target + opposite distractor were
+not analyzed because they did not result in lateralized ERP
+components. The ipsi- and contralateral potentials at elec-
+trodes PO7/8 are shown in the top panels of Figure 2, and
+the respective difference waves (obtained by subtracting
+ipsi- from contralateral activity) are shown in the bottom
+left panel of Figure 2.
+Inspection of Figure 2 (bottom left) shows a biphasic
+response in the vertical target + lateral distractor condi-
+tion from about 170 to 350 msec. As this condition is the
+focus of the current study, we selected the analysis inter-
+vals accordingly. A 50-msec analysis window was placed
+on the positive-going peak, which occurred in the early range
+of the N2pc, at 209 msec. Another 50-msec analysis window
+was placed on the negative-going peak, which occurred in
+the late range of the N2pc, at 284 msec. The positive- and
+negative-going peaks correspond to the PD and N2pc, re-
+spectively. Peaks were determined after smoothing the
+grand-average difference waves by a 50-msec sliding average.
+Early N2pc Interval
+We tested whether average voltage differences in the 50-msec
+interval centered on 209 msec were significantly different
+from zero. By one-sample t test, the positivity to lateral
+distractors with vertical targets was significant (0.75 μV),
+t(10) = 3.59, p = .005, Cohen’s dz = 1.08, consistent with
+the occurrence of a PD as in Gaspelin and Luck (2018a).
+To assure that the time window was indeed the N2pc in-
+terval, we also tested the negativities to lateral targets for
+significance. The critical p value was adjusted to control
+the false discovery rate (Benjamini & Hochberg, 1995).
+One-sample t tests showed that the negativities to lateral
+targets without distractor, with vertical distractor, and
+with opposite distractor were significantly different from
+zero, ts(10) > 2.9, ps < .014, Cohen’s dz > 0.9, suggesting
+that the analysis interval corresponded to the early part of
+the N2pc time window.
+Late N2pc Interval
+We tested whether the average voltage difference in the
+50-msec interval centered on 284 msec was significantly
+different from zero. Importantly, there was a significant
+N2pc in the vertical target + lateral distractor condition
+(−1.19 μV), t(10) = 4.47, p = .001, Cohen’s dz = 1.35, indi-
+cating that the early positivity (PD) to the distractor was
+followed by a late negativity (N2pc). Separate one-sample
+t tests against zero confirmed that the late N2pc compo-
+nents to lateral targets were significantly different from
+zero in all conditions, ts(10) > 3.3, ps < .008, Cohen’s
+dz > 0.99, suggesting that the analysis interval corre-
+sponded indeed to the late part of the N2pc time window.
+HEOG
+HEOGs were calculated as the difference between
+contra- and ipsilateral electrodes, similar to the N2pc,
+and are plotted in Figure 2 (bottom right). We tested
+weather the early PD and late N2pc to the distractor were
+accompanied by changes in the HEOG, but neither differ-
+ence was significantly different from zero, ps > .38.
+Similarly, there were no significant differences to lateral
+targets. However, the bottom right panel in Figure 2
+shows that there was a tendency to look toward the lat-
+eral target after about 350 msec.
+Discussion
+We reexamined distractor processing in feature search
+with small search displays. Behaviorally, we replicated
+Figure 2. Electrophysiological results from Experiment 1. The top
+panels show the ERPs to lateral distractors and targets at ipsi- and
+contralateral electrodes PO7/8. The bottom left panel shows the
+difference waves between contra- and ipsilateral electrodes. The shaded
+areas indicate the 50-msec averaging intervals corresponding to the
+early and late N2pc. The bottom right panel shows the HEOG
+difference waves where a negative deflection indicates an eye
+movement toward the lateral stimulus. Epochs extended from −100
+to 350 msec poststimulus in the analysis reported in the text, but the
+graphs show the data until 400 msec.
+Kerzel and Burra
+5
+
+
+the shorter RTs on distractor-present than distractor-
+absent trials. However, our electrophysiological results
+are not compatible with the idea that attentional sup-
+pression of the distractor caused the behavioral benefit.
+We replicated a contralateral positivity to the distractor in
+the early N2pc interval, but the early positivity was fol-
+lowed by a contralateral negativity to the distractor. As the
+polar opposite of the N2pc–PD switch (e.g., Liesefeld et al.,
+2017; Feldmann-Wüstefeld et al., 2016; Hilimire et al., 2011),
+we observed that the PD turned into an N2pc. If we assume
+that the early positivity and late negativity correspond to
+distractor-related PD and N2pc components, respectively,
+we must conclude that attentional suppression was fol-
+lowed by attentional capture. According to the signal sup-
+pression hypothesis (Gaspelin & Luck, 2018b; Sawaki &
+Luck, 2010), the role of attentional suppression is to prevent
+the involuntary capture of attention by salient elements.
+Consequently, the observed sequence of attentional sup-
+pression followed by attentional capture is incompatible
+with the signal suppression hypothesis. Beyond signal
+suppression, the PD–N2pc switch seems paradoxical. Why
+would participants attend to the distractor after they sup-
+pressed it? It is easier to find a functional explanation for
+the N2pc–PD switch, where attentional capture by the dis-
+tractor is followed by attentional suppression (Liesefeld
+et al., 2017; Feldmann-Wüstefeld & Schubö, 2013; Hilimire
+et al., 2011; Hickey et al., 2006) to terminate the erroneous
+shift of attention (Sawaki et al., 2012). In the present case, it
+is not clear what could be achieved by first suppressing and
+then attending to the distractor. However, the results are
+consistent with the idea of spatial scanning strategies
+(Liesefeld & Müller, 2019b). Possibly, participants scanned
+the sparse display starting opposite to the salient ele-
+ment. Thus, the salient element may provide a template
+for rejection (Beck et al., 2018; Arita et al., 2012).
+Our results deviate from those of Gaspelin and Luck
+(2018a), who found a distractor-related positivity, but no
+negativity in their Experiment 1. We attribute the dis-
+crepancy to differences in the distribution of attention
+between a pure search task, where there was no benefit
+of spreading attention, and mixed tasks, where it was
+beneficial to also attend to non-target locations. Spread-
+ing attention across nontarget locations optimizes perfor-
+mance on the letter identification task where all stimuli in
+the array were probed. Although our results deviate from
+Experiment 1 in Gaspelin and Luck (2018a), results from
+their Experiment 3 are very similar to ours. In their Ex-
+periment 3, Gaspelin and Luck (2018a) presented a color
+singleton on each trial. In separate blocks of trials, the
+color singleton was either target or distractor. When
+the color singleton was a distractor, the same sequence
+of early PD followed by a late N2pc was observed (see
+Figure 9C in Gaspelin & Luck, 2018a). Despite the sta-
+tistical significance of the late N2pc, it was not discussed
+by Gaspelin and Luck (2018a). Possibly, the lack of
+distractor-absent trials in their Experiment 3 prevented
+firm conclusions.
+EXPERIMENT 2
+Before we attempt to find an explanation for the paradoxical
+PD–N2pc switch in Experiment 1, several methodologi-
+cal issues need to be addressed. First, the orientation–
+discrimination task in Experiment 1 was different from the
+localization task in Gaspelin and Luck (2018a). In Ex-
+periment 2, we therefore employed Gaspelin and Luck’s
+localization task to avoid spurious effects of seemingly
+small methodological details. Second, there was a large
+number of excluded data sets in Experiment 1. Of 24 par-
+ticipants, 13 were unable to maintain fixation during the
+search task, resulting in many discarded trials. Possibly,
+the small eccentricity of the stimuli and the unlimited pre-
+sentation time made it difficult to refrain from looking at
+the stimuli. In Gaspelin and Luck (2018a), only few data
+sets were removed, and we suspect that their participants
+had some experience with psychophysical tasks. In con-
+trast, the first-year students in our experiments were
+novices. Therefore, we decided to screen participants
+for their ability to maintain fixation. It should be men-
+tioned that the ERPs in the excluded data sets showed
+the same PD–N2pc switch as in Figure 2. Third, target
+shape and color were counterbalanced within each partic-
+ipant in our study, whereas target shape and color were
+counterbalanced across participants in Gaspelin and
+Luck (2018a). Although interference from color distractors
+is typically absent in feature search mode (Bacon & Egeth,
+1994), it has been demonstrated that interference re-
+emerges for about eight trials following a change of the
+distractor color (Vatterott, Mozer, & Vecera, 2018; Vatterott
+& Vecera, 2012). Because we had at least 10 familiarization
+trials after target and distractor colors were swapped, it
+is unlikely that our results were contaminated by the change
+of distractor color. Nonetheless, we checked whether the
+results after the color swap differed from those before the
+color swap.
+Methods
+Stimuli and Task
+The stimuli were the same as in Experiment 1, with the
+exception that the line inside each shape was replaced by
+a 0.08°-wide square at 0.5° to the left or right of the cen-
+ter of the shape. The task of the participant was to indi-
+cate the relative dot position in the target shape by
+clicking on the corresponding left or right mouse button.
+Participant Screening
+We screened 46 students for their ability to maintain eye
+fixation during the visual search task in a screening ses-
+sion that preceded the main experimental session. An
+EyeLink1000 desk-mounted eye tracker (SR Research
+Ltd.) was used. After practice and calibration of the eye
+tracker, participants performed two sets of 120 trials. A
+saccade error was signaled to the participant if a saccade
+6
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+
+occurred during the 600 msec following the onset of the
+search display. The standard EyeLink saccade criteria for
+cognitive research were used (30°/sec velocity and
+8000°/sec2 acceleration). We used the overall error rate
+in the second block of trials to decide whether the par-
+ticipant was invited to a second session with EEG re-
+cording. The selection criterion was 25% errors, but three
+exceptions occurred. One participant with 24% errors and
+one with 22% were not motivated to come back, whereas
+another with 27% errors was highly motivated and was
+therefore invited back. Of 46 students, 26 were selected
+for the EEG experiment (seven men, age: M = 19.5,
+SD = 2.2), and 20 were rejected (five men, age: M =
+19.9, SD = 1.6). The mean error rates in the second block
+of trials were 14% (SD = 7%) and 41% (SD = 11%) for the
+selected and rejected participants, respectively.
+Results
+Exclusion of EEG Data Sets
+One data set was discarded because more than 25% of the
+data were lost after artifact rejection. Two data sets were lost
+because an earlobe electrode got loose during the experi-
+ment and one recording session was interrupted for technical
+reasons. Thus, 22 of 26 data sets were available for analysis.
+Behavior
+Trials with slow responses (less than 1%) and outliers (3%)
+were excluded from analysis. Individual mean RTs of the
+distractor-present and -absent trials were compared by
+paired t test. RTs on distractor-present trials were 11 msec
+shorter than on distractor-absent trials (587 vs. 597 msec),
+t(21) = 3.96, p = .001, Cohen’s d = 0.84. Choice errors
+did not differ significantly between distractor-present
+and -absent trials (2% in both conditions), p = .422.
+Electrophysiology
+Data processing was as in Experiment 1. After rejecting
+trials with electrophysiological artifacts, behavioral errors,
+or RTs longer than 2 sec, 92% of the trials remained for
+analysis. The mean number of trials per condition was
+223 trials (range = 198–236) for lateral target + no dis-
+tractor, 147 (range = 126–157) for lateral distractor + ver-
+tical distractor, 74 (range = 62–80) for lateral target +
+opposite distractor, and 147 (range = 126–158) for vertical
+target + lateral distractor. The time intervals for analysis
+were centered on 211 msec for the early N2pc and on
+294 for the late N2pc. These times are close to those in
+Experiment 1 (209 and 284 msec, respectively). The mean
+ERPs are presented in Figure 3.
+Early N2pc Interval
+We tested whether average voltage differences in the
+50-msec interval centered on 211 msec were significantly
+different from zero. A one-sample t test against zero showed
+that there was a positivity to lateral distractors with vertical
+targets (1.07 μV), t(21) = 6.53, p < .001, Cohen’s dz = 1.39,
+consistent with the occurrence of a PD. Further one-
+sample t tests against zero showed that all target-related
+negativities were significantly different from zero, ts(21) >
+4.54, ps < .001, Cohen’s dz > 0.97, confirming that the anal-
+ysis interval corresponded to the early N2pc.
+Late N2pc Interval
+We tested whether average voltage differences in the 50-msec
+interval centered on 294 msec were significantly different
+from zero. Critically, a one-sample t test against zero con-
+firmed that the N2pc component was significant for la-
+teral distractors with vertical targets (−0.81 μV), t(21) =
+5.39, p < .001, Cohen’s dz = 1.15. Furthermore, the N2pc
+components to lateral targets were significant in the
+absence of a distractor (−0.99 μV) and with a vertical dis-
+tractor (−0.88 μV), ts(21) > 4.68, ps < .001, Cohen’s dz >
+1, suggesting that the analysis interval corresponded
+indeed to the late N2pc. However, the N2pc to lateral tar-
+gets with opposite distractor (0.02 μV), p = .904, was not
+significant, which may be explained by the earlier onset
+and offset of the N2pc in this condition.
+HEOG
+HEOGs are plotted in Figure 3 (bottom right). We con-
+ducted one-sample t tests against zero for the early and
+late N2pc interval but did not find significant differences,
+ps > .173, suggesting that effects at electrodes PO7/8
+were not contaminated by eye movements.
+Effects of Color Swap
+We split the data into the block preceding and following
+the color swap. Each block had 480 trials. First, we
+Figure 3. Electrophysiological results from Experiment 2. Conventions
+are as in Figure 2.
+Kerzel and Burra
+7
+
+
+checked whether the reduction of RTs in the presence of
+a distractor changed from the first to the second block by
+means of a 2 (distractor: present, absent) × 2 (block:
+first, second) ANOVA. There were no effects involving
+block. In particular, the interaction of distractor presence
+and block was not significant, p = .728, suggesting that
+the effect of distractor presence was unchanged after the
+color swap. Second, we checked for effects of block in the
+most important ERP results. Neither the early PD nor the late
+N2pc to the lateral distractor differed between the first and
+second blocks, ps > .434. Furthermore, the early PD and the
+late N2pc to the lateral distractor were significantly dif-
+ferent from zero in both blocks, ts(21) > 3.69, ps < .002,
+Cohen’s dz > 0.78. Thus, there was no evidence to suggest
+that changing the target shape and color had an effect.
+Rather, our results are consistent with prior studies showing
+that increased distractor interference after changes of the
+distractor color subsides after a few trials (Vatterott et al.,
+2018; Vatterott & Vecera, 2012). Similar results were ob-
+tained in a reanalysis of Experiment 1.
+Discussion
+Experiment 2 features methodological improvements
+and a larger sample compared with Experiment 1. We
+used the same localization task as Gaspelin and Luck
+(2018a) and screened participants for their ability to
+maintain fixation. As a result, participants providing data
+were trained on the task, which possibly accounts for the
+shorter overall RTs in Experiment 2 (592 msec) compared
+with Experiment 1 (758 msec), but differences between the
+orientation and localization task may also contribute.
+Importantly, we were able to replicate the electrophysio-
+logical results from Experiment 1. After a PD to the distrac-
+tor occurring at 211 msec poststimulus, we observed an
+N2pc to the distractor at 294 msec. The PD–N2pc switch
+had similar temporal characteristics as in Experiment 1
+and was unaffected by the color swap occurring after half
+of the trials.
+The paradoxical PD–N2pc switch is hard to reconcile
+with the signal suppression hypothesis because attentional
+suppression (as indexed by a distractor-related PD) is as-
+sumed to prevent attentional selection of the distractor
+(as indexed by a distractor-related N2pc). However, we
+observed a distractor-related PD that was followed by a
+distractor-related N2pc. Because the current results differ
+from those observed with larger search displays (Barras &
+Kerzel, 2016), an account of the PD–N2pc switch is limited
+to small search displays with heterogeneous shapes.
+Liesefeld and Müller (2019b) predicted that this type of
+search display may result in spatial scanning strategies as
+opposed to guidance by priority. Possibly, scanning started
+opposite to the distractor before the distractor itself was
+scanned.
+In general, it is unlikely that a waterproof explanation
+of the PD–N2pc switch can be given. PD and N2pc occur
+with opposite polarity at the same electrodes in the same
+time interval. Therefore, a data-driven justification for la-
+beling the voltage difference one way or the other is
+missing. Following Gaspelin and Luck’s (2018a) lead,
+we labeled the early positivity “distractor-related PD,”
+but it could also be a “context-related N2pc.” That is,
+the positivity to the distractor may in fact be a negativity
+to the nontarget element opposite to the distractor, sug-
+gesting that the context captured attention.
+What could be gained by turning the interpretation of
+the early voltage difference around? From the perspective
+of ideal search behavior, it would be best to use the dis-
+tractor to guide attention toward potentially response-
+relevant context elements, as proposed in research on
+templates for rejection (Tanda & Kawahara, 2019; Beck
+et al., 2018; Arita et al., 2012). In the lateral distractor con-
+dition, this behavior would result in an N2pc to the con-
+text element opposite to the distractor.
+Thus, we suggest that there were two N2pc compo-
+nents in the lateral distractor condition, the first to the
+context element opposite to the distractor and the sec-
+ond to the distractor itself. The second N2pc is certainly
+a deviation from optimality, as it makes no sense to select
+the distractor. Therefore, the flip of the lateralized com-
+ponent remains paradoxical. However, the flip may de-
+rive from a particular search strategy in this paradigm.
+We suggest that participants had a tendency to search lat-
+eral before vertical positions. When there was a distractor
+on a lateral position, search started on the opposite side,
+as visible in a context-related N2pc (formerly distractor-
+related PD). Because of the tendency to search both lat-
+eral positions first, the distractor was attended, as visible
+in a distractor-related N2pc, even though there was no
+reason to do so.
+To provide solid evidence for this account, it would be
+necessary to measure the N2pc on single trials in the
+condition with only a vertical target. In each trial, the
+N2pc is expected to flip from left to right or the other
+way around. Unfortunately, the N2pc represents the
+mean across many trials and searches starting on the left
+and right will cancel out. Therefore, ERPs cannot provide
+a test of the proposed account. However, there is a sim-
+ple behavioral prediction. If there was a tendency to at-
+tend to lateral positions first, then RTs for lateral targets
+should be shorter than for vertical targets. In contrast,
+the original account where a distractor-related PD is
+followed by distractor-related N2pc does not make this
+prediction because both the PD and the N2pc are related
+to a single response-irrelevant position.
+REANALYSIS OF BEHAVIORAL DATA
+We reanalyzed effects of spatial configuration on RTs in
+more detail. The paradoxical succession of two N2pc com-
+ponents predicts faster search times for targets on lateral
+than vertical positions. In the previous analyses of RTs, we
+opposed distractor-present and distractor-absent trials.
+8
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+
+Here, we separated trials according to the spatial configu-
+ration of target and distractor. We separated lateral (left
+and right) from vertical (top and bottom) target positions.
+Additionally, we considered the relative distractor posi-
+tion. If present, the distractor was either adjacent or oppo-
+site to the target. It should be noted that lateralized ERPs
+could not be analyzed for two of the conditions presented
+here. Notably, there were no lateralized elements in the
+vertical target + no distractor condition and in the vertical
+target + opposite distractor condition. These conditions
+are shown in gray in Figure 4. Because the task was differ-
+ent in Experiment 1 and the sample size was small, data
+from Experiment 1 is reported, but the main analysis con-
+cerns Experiment 2.
+Results
+Mean RTs as a function of target and distractor configura-
+tion are shown in Figure 4. Data from Experiments 1 and 2
+are shown in the top and bottom panels, respectively.
+Experiment 1
+There were less than 1% late trials and 5% outliers. We
+subjected mean individual RTs to a 2 (target position: lat-
+eral, vertical) × 3 (relative distractor position: absent, ad-
+jacent, opposite) repeated-measures ANOVA. RTs tended
+to be shorter for lateral than for vertical targets (dif-
+ference of 26 msec, 728 vs. 754 msec), F(1, 10) = 4.68,
+p = .056, ηp
+2 = .319. RTs without a distractor (760 msec)
+were longer than RTs with a distractor adjacent (734 msec)
+or opposite (729 msec) to the target, F(2, 20) = 8.34, p =
+.002, ηp
+2 = .455. The interaction was not significant, p =
+.131. Running the same ANOVA on choice errors did not
+yield any significant effects, ps > .214. The mean percent-
+age of choice errors was 4%.
+Experiment 2
+There were less than 1% late trials and 4% outliers. RTs
+were shorter with lateral than vertical targets (difference
+of 24 msec, 574 vs. 598 msec), F(1, 21) = 34.26, p < .001,
+ηp
+2 = .62, which is consistent with our hypothesis that lat-
+eral locations were searched before vertical locations. The
+main effect of relative distractor position, F(2, 42) = 9.54,
+p < .001, ηp
+2 = .312, and the two-way interaction, F(2,
+42) = 4.95, p = .012, ηp
+2 = .191, were significant, show-
+ing that the effect of relative distractor position differed
+between lateral and vertical targets. For lateral targets,
+RTs did not differ between adjacent and opposite dis-
+tractors (blue vs. pink bar in Figure 4, 570 vs. 572 msec),
+p = .397. In contrast, for vertical targets, RTs were
+shorter when the distractor was adjacent than when it
+was opposite (green vs. right gray bar in Figure 4, 586
+vs. 604 msec), t(21) = 3.35, p = .003, Cohen’s d = 0.71.
+More t tests involving the condition with lateral distrac-
+tor and vertical target were carried out because previous
+work implicitly assumed that RTs in the presence of a dis-
+tractor are generally shorter, but effects of specific spatial
+configurations were not evaluated. In particular, Gaspelin
+and Luck (2018a) suggested that the PD to the lateral
+distractor with vertical target explained why RTs were
+shorter on distractor-present trials. In fact, RTs in this
+condition were not different from the condition with
+lateral target only (green vs. red bar in Figure 4, 586 vs.
+579 msec), p = .216. An RT advantage only emerged
+when it was compared with the condition with vertical tar-
+get only (green vs. left gray bar, 586 vs. 603 msec), t(21) =
+4.24, p < .001, Cohen’s d = 0.9. For vertical targets, how-
+ever, RTs with opposite distractor were not different from
+RTs with vertical target only (right vs. left gray bar, 604 vs.
+603 msec), p = .953, suggesting that the presence of a
+distractor did not always result in shorter RTs, even when
+only one target position (vertical) was considered.
+Running the same ANOVA as above on choice errors
+did not yield any significant effects, ps > .165. The mean
+percentage of choice errors was 2%.
+Discussion
+The most important result of the reanalysis is that search
+times for lateral targets were shorter than for vertical tar-
+gets. We had conjectured that the flip of the voltage dif-
+ference with lateral distractor + vertical target represents
+Figure 4. Behavioral results from Experiments 1 and 2. RTs (in msec)
+are shown on the y axis, and the spatial configuration of target and
+distractor is shown on the x axis. The target was lateral or vertical
+while the distractor was absent, adjacent, or opposite to the target.
+The configurations with lateral target or distractor are shown in the
+same colors as in the analyses of ERPs. The configurations without
+lateral element are shown in gray. Error bars show the
+between-subject SEM.
+Kerzel and Burra
+9
+
+
+a sequence of two N2pc components. The initial N2pc oc-
+curs to the lateral context element, the second to the dis-
+tractor, suggesting that the lateral positions are searched
+exhaustively even if this does not represent optimal search
+behavior. If lateral positions are searched before vertical
+positions, RTs are expected to be shorter for lateral than
+vertical targets. Data from both Experiment 1 and 2 con-
+firm this assumption and lend some credibility to our
+explanation.
+EXPERIMENT 3
+We argued that search behavior with small search dis-
+plays (Gaspelin & Luck, 2018a) differs from the search
+behavior with larger set sizes (Barras & Kerzel, 2016).
+In particular, we suggested that search of horizontal po-
+sitions precedes search of vertical positions. According to
+Liesefeld and Müller (2019b), idiosyncratic scanning strat-
+egies are promoted by small and heterogeneous displays
+where the target is inconspicuous (see also Liesefeld,
+Liesefeld, & Müller, 2019). In contrast, displays where
+the target stands out are likely to be guided by the prior-
+ity map. Experiment 3 tested the role of target saliency by
+using the same displays, but with a different target as-
+signment. Participants were asked to search for the salient
+color singleton instead of the inconspicuous shape. We ex-
+pect idiosyncratic scanning to disappear. Second, we
+sought to rule out contributions of stimulus–response con-
+gruency. Participants performed left or right mouse clicks in
+response to the left or right position of the dot inside the
+target shape. The congruency between the relative dot po-
+sition and the response was the same irrespective of the
+position of the target shape. However, the congruency be-
+tween the position of the target shape and the response
+differed between lateral and vertical positons. The lateral
+position of the target shape may interfere with the re-
+sponse when incongruent or facilitate the response when
+congruent (Zhang, Zhou, di Pellegrino, & Ladavas, 2007;
+Ansorge, 2003; Simon, 1969). In contrast, the vertical target
+position does not overlap with the response and is there-
+fore unlikely to result in interference or facilitation. Possibly,
+the existence of stimulus–response congruency for lateral
+positions contributed to the difference between lateral
+and vertical target positions in Experiment 2. If so, we ex-
+pect faster RTs with lateral than vertical target even for a
+different search task. Otherwise, we may conclude that
+stimulus-response correspondence played no role in our
+findings.
+Methods
+Fifteen students participated (no men, age: M = 19.9,
+SD = 1.4). The stimuli were as in Experiment 2, with the
+exception that there was a color singleton on each trial.
+Participants were asked to perform the localization task
+on the dot inside the color singleton. Each shape (circle,
+square, diamond, and hexagon) was equally likely to be
+the color singleton. Eye fixation was checked for 400 msec
+after stimulus onset. Participants worked through eight
+blocks of 60 trials. Performance feedback was given after
+each block and calibration was checked every other block.
+Results
+Mean RTs are shown in Figure 5. There were less than 1%
+late trials and 9% fixation errors or blinks. A one-way (tar-
+get position: left, right, top, bottom), repeated-measures
+ANOVA showed a significant main effect, F(3, 42) = 8.7, p <
+.001, ηp
+2 = .383. RTs were about 20 msec longer when the
+target was on the left (552 msec) compared with when it
+was on the right, top, or bottom (529, 530, and 535 msec,
+respectively). A follow-up ANOVA on the latter three posi-
+tions showed no effect, p = .791, suggesting that only the
+left position differed from the remaining positions. Running
+the same analysis on choice errors also yielded a signifi-
+cant main effect of position, F(3, 42) = 12.86, p < .001,
+ηp
+2 = .479, showing that more errors occurred for posi-
+tions on the left (3%) and right (2%) than for positions
+above (1%) and below (1%). A follow-up test showed that
+more errors occurred on left and right target positions
+when the relative dot position inside the target was incom-
+patible with the target position relative to fixation (4% vs.
+1%), t(15) = 4.32, p = .001, Cohen’s dz = 1.12. However,
+choice errors were rare and no corresponding effects were
+present in RTs.
+Discussion
+We examined effects of target position in color-based sin-
+gleton search. Contrary to shape-based feature search in
+Experiments 1 and 2, we found no advantage of lateral
+positions over vertical positions. Rather, we observed
+that search times for targets on the left were longer,
+which is consistent with previous work on shape-based sin-
+gleton search with larger search displays (i.e., eight items in
+Carlei & Kerzel, 2018). With respect to the assumption that
+Figure 5. Results from Experiment 3. RTs (in msec) are shown on the
+y axis, and the position of the target is shown on the x axis. In this
+experiment, the target was the stimulus with a different color while
+stimulus shape was irrelevant.
+10
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+
+lateral stimuli are searched before vertical stimuli, we con-
+clude that it may be limited to the specific task and stimuli
+used in Experiments 1 and 2. Also, there is no reason to
+believe that stimulus–response compatibility contributed
+to the difference between lateral and vertical target posi-
+tions in Experiments 1 and 2 because the same mapping
+of stimulus to response was used in the present experi-
+ment, yet no difference between lateral and vertical target
+positions was observed in RTs.
+GENERAL DISCUSSION
+We investigated whether the distractor benefit in fea-
+ture search with small search displays was the result of
+attentional suppression as claimed by Gaspelin and Luck
+(2018a). In feature search with a larger set size, neither a
+PD nor an N2pc to the distractor was observed (Barras &
+Kerzel, 2016). Rather, changes in the N2pc to the target
+suggested that target enhancement—and not distractor
+suppression—prevented capture by salient distractors. To
+reconcile the divergent findings, we reexamined shape-
+based feature search with small set size. Compared with
+Gaspelin and Luck (2018a), our experiments present two
+improvements. First, compared with their Experiment 1,
+we did not interleave a search and a letter identification
+task, so that our experiments isolate typical search behavior,
+whereas mixing tasks may lead to biases in the distribution
+of attention. Second, compared with their Experiment 3,
+we presented both distractor-present and distractor-
+absent trials. Besides replicating the early distractor-related
+“PD,” we also found a late distractor-related N2pc. The latter
+finding was also reported in Experiment 3 of Gaspelin and
+Luck (2018a, see Figure 9C), but was not discussed, proba-
+bly because the distractor-absent condition was missing.
+The distractor-related “PD” and the following distractor-
+related N2pc were observed in two experiments with
+slightly different tasks (i.e., orientation discrimination in
+Experiment 1 and dot localization in Experiment 2).
+The most important conclusion from our findings is
+that the early positive deflection is unlikely to reflect dis-
+tractor suppression. According to the distractor suppres-
+sion hypothesis (Gaspelin & Luck, 2018b; Sawaki & Luck,
+2010), distractor suppression serves to prevent atten-
+tional capture by salient elements. However, the sequence
+of distractor-related PD and distractor-related N2pc would
+suggest that suppression of the distractor preceded atten-
+tional capture by the distractor, which is incompatible with
+the distractor suppression hypothesis. With respect to the
+original question, it seems unlikely that distractor benefits
+with small search displays (Gaspelin & Luck, 2018a) result
+from distractor suppression. Thus, it is not necessary to as-
+sume that distractor suppression occurred with small set
+sizes (Gaspelin & Luck, 2018a) whereas target enhance-
+ment occurred with large set sizes (Barras & Kerzel,
+2016). Rather, distractor suppression does not seem to be
+involved in either case, pointing to target enhancement
+(Barras & Kerzel, 2016; Bacon & Egeth, 1994; Folk et al.,
+1992) as the reason for resistance to interference in feature
+search.
+Ambiguity of the PD
+Although the distractor suppression hypothesis is un-
+likely to account for the present results, there is a lot
+of uncertainty regarding an alternative account. The big-
+gest problem is that there is no data-driven way to distin-
+guish a PD to the distractor from an N2pc to the context
+element on the opposite side. We nonetheless explored
+the hypothesis that the early distractor-related “PD” was
+in fact an early context-related N2pc. We did not diverge
+from the original interpretation of the late negativity,
+which we still believe to be an N2pc to the distractor.
+We suggest that the paradoxical succession of two N2pc
+components was caused by participants’ search strategy.
+In particular, we suggest that participants searched the
+lateral positions before the vertical positions. When there
+was a lateral distractor, search started opposite to the
+distractor but, nevertheless, visited the distractor location.
+This strategy is clearly not optimal, but may arise from
+the small and heterogeneous search display (Liesefeld &
+Müller, 2019b). Although ERPs cannot provide evidence
+for our conjecture, we found that search times for lateral
+targets were shorter than for vertical targets, consistent with
+the idea that lateral positions are searched first. The prece-
+dence of lateral positions may be specific to shape-based
+feature search with small search displays, as we did not
+replicate the results in a different search task using the
+same displays (Experiment 3). Furthermore, it may be con-
+jectured that the early and late deflections arise from the
+averaging of trials that either show an early PD or a late
+N2pc. To test this conjecture, we performed a median split
+by RT and reanalyzed the ERPs. Previous research showed
+that the PD is associated with faster search times, suggesting
+that the PD occurs on trials with successful distractor re-
+jection (Gaspar & McDonald, 2014; Jannati et al., 2013).
+However, we found no significant effects of search time,
+making it unlikely that the averaging of trials with either
+successful (PD) or failed (N2pc) distractor rejection caused
+the pattern of results.
+How Robust Is Evidence for Suppression of
+Salient Elements?
+Although we admit that it is difficult to provide solid ev-
+idence for the hypothesis that the positivity contralateral
+to a distractor was in fact a negativity to the opposite con-
+text element, one may wonder whether the evidence for
+distractor suppression is any better. As the PD arises in
+the same time window and at the same electrodes as
+the N2pc, no data-driven distinction between distractor
+suppression and context capture is possible. However,
+the positivity contralateral to the distractor was univer-
+sally interpreted as a PD. For instance, distractor-related
+positivities were interpreted as PD in a variety of tasks
+Kerzel and Burra
+11
+
+
+such as segmentation or detection tasks (Feldmann-
+Wüstefeld & Vogel, 2019; Feldmann-Wüstefeld et al.,
+2016; Feldmann-Wüstefeld & Schubö, 2013), compound
+search tasks (Barras & Kerzel, 2017; Gaspar & McDonald,
+2014; Burra & Kerzel, 2013; Jannati et al., 2013; Kiss et al.,
+2012), or same–different tasks (Kerzel, Barras, & Grubert,
+2018). In all these studies, however, there was a context
+element opposite to the distractor to assure balanced
+sensory processing. Therefore, it seems entirely possible
+that the positivity to the distractor was an N2pc to the
+context opposite the distractor. Under this assumption,
+observers started to search the context instead of sup-
+pressing the distractor, which represents a reasonable
+search strategy because the target was never at the dis-
+tractor location.
+However, there are two strong arguments against our
+interpretation. Notably, the PD has been observed without
+nontarget elements on the opposite side (Hickey et al.,
+2009) and the PD has been observed in the absence of dis-
+tractors (Wang, van Driel, Ort, & Theeuwes, 2019). In the
+study by Hickey et al. (2009), there was no stimulus oppo-
+site to the distractor. That is, the distractor was the only
+lateralized element when the target was on the vertical
+midline. Asymmetries in early sensory components of
+the EEG were avoided by making the distractor color iso-
+luminant to the background. One may propose that the
+absence of a stimulus opposite to the distractor made it
+unlikely that the side opposite to the distractor was at-
+tended. However, there is evidence that gaps in a search
+array involuntarily capture attention (Kiss & Eimer, 2011).
+Therefore, it cannot be excluded that attention was di-
+rected at an empty region of space. Furthermore, Wang
+et al. (2019) showed that a PD occurred to inconspicuous
+nontargets at a location where the distractor occurred with
+a high probability. In line with the reduced behavioral
+interference to distractors at a high-probability location
+(Allenmark, Zhang, Liesefeld, Shi, & Müller, 2019; Wang &
+Theeuwes, 2018a, 2018b), the PD to nontarget locations
+may indicate that there was anticipatory suppression of the
+high-probability distractor location (see also van Moorselaar
+& Slagter, 2019). However, we would like to argue that it is
+also possible that attention was shifted opposite to the high-
+probability distractor location. In both cases, a PD to the high-
+probability location would result. Although we do not suggest
+that all instances of distractor-elicited “PD” components are
+instances of context-elicited N2pc components, we think
+that this hypothesis has been neglected in the past lit-
+erature. More research is needed to disentangle the two
+processes.
+Evidence from the Contingent Capture Paradigm
+The hypothesis that the “PD” to the distractor was in fact
+an N2pc to the context element receives more direct sup-
+port from a related study using the modified spatial cue-
+ing paradigm by Folk et al. (1992). In Posner-type cueing
+paradigms (Posner & Cohen, 1984), it was observed that
+RTs are shorter when a peripheral cue preceded the
+target at the same location. Folk and Remington (1998)
+clarified that cueing benefits are restricted to situations
+where the features of the cue match the features of the
+target. For instance, a red cue will result in cueing bene-
+fits with a matching red target, but not with a nonmatch-
+ing green target. Although RTs with nonmatching cues
+are often equal at cued and uncued positions (Folk &
+Remington, 1998), there are situations where nonmatch-
+ing cues result in longer RTs at cued than at uncued lo-
+cations (“same location costs”; Kerzel, 2019; Schoeberl,
+Ditye, & Ansorge, 2018; Carmel & Lamy, 2014). In one
+series of experiments, Schönhammer, Grubert, Kerzel,
+and Becker (2016) inverted the colors of the cue and tar-
+get displays. That is, the cue was in the color of the con-
+text elements surrounding the target, whereas the context
+elements surrounding the cue were in the color of the tar-
+get. Therefore, the color of the cue context matched the
+target, whereas the cue was nonmatching. A same-location
+cost was observed for the cue, which was accompanied by
+a “PD” to the cue, pointing to suppression of the cue as a
+possible origin of the same-location costs. However, we
+wondered whether the cue-related “PD” was in fact a
+context-related N2pc. Effects of cue- and context-related
+processing are confounded because the lateral cue always
+appeared opposite to the context. To disentangle cue sup-
+pression (i.e., a cue-related PD) from context capture (i.e.,
+a context-related N2pc), Schönhammer, Becker, and
+Kerzel (submitted for publication) introduced a neutral
+element in the cue display. To isolate cue- and context-
+related processing, a neutral element was placed on the
+opposite side. We observed an N2pc to the context, but
+no PD to the cue, suggesting that the context captured at-
+tention, but the cue was not suppressed. These results are
+consistent with the proposed capture of attention by the
+context. However, it may not be possible to adapt the idea
+of a neutral element to the present paradigm. In the mod-
+ified cueing paradigm, characteristics of the cue display
+may be changed without changing the main search task,
+because the cue and search displays are temporally sep-
+arated. In the present paradigm, introducing a neutral
+stimulus (e.g., a gray item) would change the search task
+considerably because the color distractor would no longer
+be the only element with a different color.
+Summary
+To sum up, this study investigated whether distractor
+suppression occurred in shape-based feature search with
+small display size. Previously, the occurrence of a positiv-
+ity contralateral to a color distractor, the PD, was taken as
+evidence in favor of this hypothesis. We reexamined this
+situation with a number of methodological improvements.
+Importantly, we found a sequence of ERPs that is incom-
+patible with the idea of distractor suppression. The “PD” to
+the distractor was followed by an N2pc to the distractor,
+which is at odds with the idea that distractor suppression
+12
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+
+prevents attentional capture by the distractor. We suggest
+that the paradoxical flip of the contralateral voltage differ-
+ence was due to a search strategy that is idiosyncratic to
+the task and display type. Participants searched lateral
+items before vertical items, which reduced search times
+for lateral compared with vertical targets. When there
+was a lateral distractor, search started opposite to the
+distractor, as visible in an early context-related N2pc, and
+continued at the distractor location, as visible in a late
+distractor-related N2pc. Thus, we suggest that the early
+“PD” was in fact a context-related N2pc. Although more ev-
+idence is needed to confirm our interpretation, it provides
+a reasonable alternative to the distractor suppression the-
+ory, which fails to account for the data.
+Acknowledgments
+D. K. was supported by the Swiss National Science Foundation
+100019_182146. We wish to thank Silvia Cavelti, Heeral Gandhi,
+and Paulo Dos Santos Romao for helping with data collection.
+Reprint requests should be sent to Dirk Kerzel, Faculté de
+Psychologie et des Sciences de l’Éducation, Université de
+Genève, 40 Boulevard du Pont d’Arve, 1205 Genève, Switzerland,
+or via e-mail: dirk.kerzel@unige.ch.
+REFERENCES
+Allenmark, F., Zhang, B., Liesefeld, H. R., Shi, Z., & Müller, H. J.
+(2019). Probability cueing of singleton-distractor regions in
+visual search: The locus of spatial distractor suppression is
+determined by colour swapping. Visual Cognition, 27,
+576–594.
+Ansorge, U. (2003). Influences of response-activating stimuli
+and passage of time on the Simon effect. Psychological
+Research, 67, 174–183.
+Arita, J. T., Carlisle, N. B., & Woodman, G. F. (2012). Templates
+for rejection: Configuring attention to ignore task-irrelevant
+features. Journal of Experimental Psychology: Human
+Perception and Performance, 38, 580–584.
+Awh, E., Belopolsky, A. V., & Theeuwes, J. (2012). Top–down
+versus bottom–up attentional control: A failed theoretical
+dichotomy. Trends in Cognitive Sciences, 16, 437–443.
+Bacon, W. F., & Egeth, H. E. (1994). Overriding stimulus-driven
+attentional capture. Perception & Psychophysics, 55,
+485–496.
+Barras, C., & Kerzel, D. (2016). Active suppression of salient-
+but-irrelevant stimuli does not underlie resistance to visual
+interference. Biological Psychology, 121, 74–83.
+Barras, C., & Kerzel, D. (2017). Salient-but-irrelevant stimuli
+cause attentional capture in difficult, but attentional
+suppression in easy visual search. Psychophysiology, 54,
+1826–1838.
+Beck, V. M., Luck, S. J., & Hollingworth, A. (2018). Whatever you
+do, don’t look at the…: Evaluating guidance by an exclusionary
+attentional template. Journal of Experimental Psychology:
+Human Perception and Performance, 44, 645–662.
+Benjamini, Y., & Hochberg, Y. (1995). Controlling the false
+discovery rate: A practical and powerful approach to multiple
+testing. Journal of the Royal Statistical Society, Series B:
+Methodological, 57, 289–300.
+Brainard, D. H. (1997). The Psychophysics Toolbox. Spatial
+Vision, 10, 433–436.
+Burra, N., & Kerzel, D. (2013). Attentional capture during visual
+search is attenuated by target predictability: Evidence from
+the N2pc, Pd, and topographic segmentation.
+Psychophysiology, 50, 422–430.
+Büsel, C., Voracek, M., & Ansorge, U. (2018). A meta-analysis of
+contingent-capture effects. Psychological Research. https://
+doi.org/10.1007/s00426-018-1087-3.
+Carlei, C., & Kerzel, D. (2018). Stronger interference from
+distractors in the right hemifield during visual search.
+Laterality, 23, 152–165.
+Carmel, T., & Lamy, D. (2014). The same-location cost is
+unrelated to attentional settings: An object-updating account.
+Journal of Experimental Psychology: Human Perception
+and Performance, 40, 1465–1478.
+Delorme, A., & Makeig, S. (2004). EEGLAB: An open source
+toolbox for analysis of single-trial EEG dynamics including
+independent component analysis. Journal of Neuroscience
+Methods, 134, 9–21.
+Eimer, M. (1996). The N2pc component as an indicator of
+attentional selectivity. Electroencephalography and Clinical
+Neurophysiology, 99, 225–234.
+Feldmann-Wüstefeld, T., Brandhofer, R., & Schubö, A. (2016).
+Rewarded visual items capture attention only in
+heterogeneous contexts. Psychophysiology, 53, 1063–1073.
+Feldmann-Wüstefeld, T., & Schubö, A. (2013). Context
+homogeneity facilitates both distractor inhibition and target
+enhancement. Journal of Vision, 13, 11.
+Feldmann-Wüstefeld, T., & Vogel, E. K. (2019). Neural evidence
+for the contribution of active suppression during working
+memory filtering. Cerebral Cortex, 29, 529–543.
+Folk, C. L., & Remington, R. W. (1998). Selectivity in distraction
+by irrelevant featural singletons: Evidence for two forms of
+attentional capture. Journal of Experimental Psychology:
+Human Perception and Performance, 24, 847–858.
+Folk, C. L., Remington, R. W., & Johnston, J. C. (1992).
+Involuntary covert orienting is contingent on attentional
+control settings. Journal of Experimental Psychology:
+Human Perception and Performance, 18, 1030–1044.
+Gaspar, J. M., & McDonald, J. J. (2014). Suppression of salient
+objects prevents distraction in visual search. Journal of
+Neuroscience, 34, 5658–5666.
+Gaspelin, N., Leonard, C. J., & Luck, S. J. (2015). Direct
+evidence for active suppression of salient-but-irrelevant
+sensory inputs. Psychological Science, 26, 1740–1750.
+Gaspelin, N., Leonard, C. J., & Luck, S. J. (2017). Suppression of
+overt attentional capture by salient-but-irrelevant color
+singletons. Attention, Perception, & Psychophysics, 79,
+45–62.
+Gaspelin, N., & Luck, S. J. (2018a). Combined
+electrophysiological and behavioral evidence for the
+suppression of salient distractors. Journal of Cognitive
+Neuroscience, 30, 1265–1280.
+Gaspelin, N., & Luck, S. J. (2018b). The role of inhibition in
+avoiding distraction by salient stimuli. Trends in Cognitive
+Sciences, 22, 79–92.
+Hickey, C., Di Lollo, V., & McDonald, J. J. (2009).
+Electrophysiological indices of target and distractor
+processing in visual search. Journal of Cognitive
+Neuroscience, 21, 760–775.
+Hickey, C., McDonald, J. J., & Theeuwes, J. (2006).
+Electrophysiological evidence of the capture of visual
+attention. Journal of Cognitive Neuroscience, 18, 604–613.
+Hilimire, M. R., Mounts, J. R. W., Parks, N. A., & Corballis, P. M.
+(2011). Dynamics of target and distractor processing in visual
+search: Evidence from event-related brain potentials.
+Neuroscience Letters, 495, 196–200.
+Itti, L., & Koch, C. (2001). Computational modelling of visual
+attention. Nature Reviews Neuroscience, 2, 194–203.
+Kerzel and Burra
+13
+
+
+Jannati, A., Gaspar, J. M., & McDonald, J. J. (2013). Tracking
+target and distractor processing in fixed-feature visual
+search: Evidence from human electrophysiology. Journal of
+Experimental Psychology: Human Perception and
+Performance, 39, 1713–1730.
+Kerzel, D. (2019). The precision of attentional selection is
+far worse than the precision of the underlying memory
+representation. Cognition, 186, 20–31.
+Kerzel, D., Barras, C., & Grubert, A. (2018). Suppression of
+salient stimuli inside the focus of attention. Biological
+Psychology, 139, 106–114.
+Kiss, M., & Eimer, M. (2011). The absence of a visual stimulus
+can trigger task-set-independent attentional capture.
+Psychophysiology, 48, 1426–1433.
+Kiss, M., Grubert, A., Petersen, A., & Eimer, M. (2012). Attentional
+capture by salient distractors during visual search is determined
+by temporal task demands. Journal of Cognitive Neuroscience,
+24, 749–759.
+Kleiner, M., Brainard, D. H., Pelli, D., Ingling, A., Murray, R., &
+Broussard, C. (2007). What’s new in Psychtoolbox-3? Perception,
+36, 1–16.
+Lamy, D., Carmel, T., Egeth, H. E., & Leber, A. B. (2006). Effects
+of search mode and intertrial priming on singleton search.
+Perception & Psychophysics, 68, 919–932.
+Lamy, D., Leber, A. B., & Egeth, H. E. (2012). Selective attention.
+In A. F. Healy & R. W. Proctor (Eds.), Comprehensive
+handbook of psychology: Vol. 4. Experimental psychology
+(pp. 265–294). New York: Wiley.
+Liesefeld, H. R., Liesefeld, A. M., & Müller, H. J. (2019). Distractor-
+interference reduction is dimensionally constrained. Visual
+Cognition, 27, 247–259.
+Liesefeld, H. R., Liesefeld, A. M., Töllner, T., & Müller, H. J. (2017).
+Attentional capture in visual search: Capture and post-capture
+dynamics revealed by EEG. Neuroimage, 156, 166–173.
+Liesefeld, H. R., & Müller, H. J. (2019a). Distractor handling via
+dimension weighting. Current Opinion in Psychology, 29,
+160–167.
+Liesefeld, H. R., & Müller, H. J. (2019b). A theoretical attempt to
+revive the serial/parallel-search dichotomy. Attention,
+Perception, & Psychophysics. https://doi.org/10.3758/s13414-
+019-01819-z.
+Lopez-Calderon, J., & Luck, S. J. (2014). ERPLAB: An open-
+source toolbox for the analysis of event-related potentials.
+Frontiers in Human Neuroscience, 8, 213.
+Luck, S. J., & Hillyard, S. A. (1994). Spatial filtering during visual
+search: Evidence from human electrophysiology. Journal of
+Experimental Psychology: Human Perception and
+Performance, 20, 1000–1014.
+McDonald, J. J., Green, J. J., Jannati, A., & Di Lollo, V. (2013). On
+the electrophysiological evidence for the capture of visual
+attention. Journal of Experimental Psychology: Human
+Perception and Performance, 39, 849–860.
+Posner, M. I., & Cohen, Y. (1984). Components of visual
+orienting. In H. Bouma & D. G. Bouwhuis (Eds.), Attention
+and performance X (pp. 531–556). Hillsdale, NJ: Erlbaum.
+Sawaki, R., Geng, J. J., & Luck, S. J. (2012). A common neural
+mechanism for preventing and terminating the allocation of
+attention. Journal of Neuroscience, 32, 10725–10736.
+Sawaki, R., & Luck, S. J. (2010). Capture versus suppression of
+attention by salient singletons: Electrophysiological evidence
+for an automatic attend-to-me signal. Attention, Perception,
+& Psychophysics, 72, 1455–1470.
+Schoeberl, T., Ditye, T., & Ansorge, U. (2018). Same-location
+costs in peripheral cueing: The role of cue awareness and
+feature changes. Journal of Experimental Psychology:
+Human Perception and Performance, 44, 433–451.
+Schönhammer, J. G., Becker, S. I., & Kerzel, D. (submitted for
+publication). Attentional capture by context cues, not
+inhibition of cue singletons, explains same location costs.
+Schönhammer, J. G., Grubert, A., Kerzel, D., & Becker, S. I.
+(2016). Attentional guidance by relative features: Behavioral
+and electrophysiological evidence. Psychophysiology, 53,
+1074–1083.
+Simon, J. R. (1969). Reactions toward the source of stimulation.
+Journal of Experimental Psychology, 81, 174–176.
+Tanda, T., & Kawahara, J. I. (2019). Association between cue
+lead time and template-for-rejection effect. Attention,
+Perception, & Psychophysics, 81, 1880–1889.
+Theeuwes, J. (1992). Perceptual selectivity for color and form.
+Perception & Psychophysics, 51, 599–606.
+Theeuwes, J. (2010). Top–down and bottom–up control of
+visual selection. Acta Psychologica, 135, 77–99.
+Theeuwes, J. (2018). Visual selection: Usually fast and
+automatic; seldom slow and volitional; a reply to
+commentaries. Journal of Cognition, 1, 21.
+Theeuwes, J. (2019). Goal-driven, stimulus-driven, and history-
+driven selection. Current Opinion in Psychology, 29, 97–101.
+Töllner, T., Müller, H. J., & Zehetleitner, M. (2012). Top–down
+dimensional weight set determines the capture of visual
+attention: Evidence from the PCN component. Cerebral
+Cortex, 22, 1554–1563.
+Töllner, T., Zehetleitner, M., Krummenacher, J., & Müller, H. J.
+(2010). Perceptual basis of redundancy gains in visual pop-
+out search. Journal of Cognitive Neuroscience, 23, 137–150.
+van Moorselaar, D., & Slagter, H. A. (2019). Learning what is
+irrelevant or relevant: Expectations facilitate distractor
+inhibition and target facilitation through distinct neural
+mechanisms. Journal of Neuroscience, 39, 6953–6967.
+Vatterott, D. B., Mozer, M. C., & Vecera, S. P. (2018). Rejecting
+salient distractors: Generalization from experience. Attention,
+Perception, & Psychophysics, 80, 485–499.
+Vatterott, D. B., & Vecera, S. P. (2012). Experience-dependent
+attentional tuning of distractor rejection. Psychonomic
+Bulletin & Review, 19, 871–878.
+Wang, B., & Theeuwes, J. (2018a). Statistical regularities
+modulate attentional capture. Journal of Experimental
+Psychology: Human Perception and Performance, 44,
+13–17.
+Wang, B., & Theeuwes, J. (2018b). Statistical regularities
+modulate attentional capture independent of search strategy.
+Attention, Perception, & Psychophysics, 80, 1763–1774.
+Wang, B., van Driel, J., Ort, E., & Theeuwes, J. (2019).
+Anticipatory distractor suppression elicited by statistical
+regularities in visual search. Journal of Cognitive
+Neuroscience, 31, 1535–1548.
+Woodman, G. F., & Luck, S. J. (1999). Electrophysiological
+measurement of rapid shifts of attention during visual search.
+Nature, 400, 867–869.
+Woodman, G. F., & Luck, S. J. (2003). Serial deployment of
+attention during visual search. Journal of Experimental
+Psychology: Human Perception and Performance, 29,
+121–138.
+Zhang, D., Zhou, X., di Pellegrino, G., & Ladavas, E. (2007).
+Spatial coding for the Simon effect in visual search.
+Experimental Brain Research, 176, 616–629.
+Zivony, A., Allon, A. S., Luria, R., & Lamy, D. (2018). Dissociating
+between the N2pc and attentional shifting: An attentional
+blink study. Neuropsychologia, 121, 153–163.
+14
+Journal of Cognitive Neuroscience
+Volume X, Number Y
+
+

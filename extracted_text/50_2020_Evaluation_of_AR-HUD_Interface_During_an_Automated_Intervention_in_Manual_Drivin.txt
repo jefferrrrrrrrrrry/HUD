@@ -1,0 +1,809 @@
+--- Page 1 ---
+Evaluation of AR-HUD Interface During an Automated Intervention in
+Manual Driving
+Nihan Karatas1, Takahiro Tanaka1, Kazuhiro Fujikake1, Yuki Yoshihara1, Yoshitaka Fuwamoto2,
+Morihiko Yoshida2, Hitoshi Kanamori1
+Abstract— Automated driving systems are envisioned as the
+future mode of transportation owing to their projected ability to
+reduce human error and achieve more efﬁcient and comfort-
+able transportation. Accordingly, designing an interface that
+ensures the situational awareness of the human operator to
+reduce confusion, false expectations, and over-reliance on the
+automated system is important. When a human operator is in
+control, the automated system is expected to handle troublesome
+situations that the human is unable to manage. Thus, an
+interface is required to provide the appropriate information
+when necessary so that the human operator can easily perceive
+the reason for the sudden automated intervention. In this study,
+such a scenario is highlighted, in which a simulated automated
+intervention avoided a potential collision with a pedestrian who
+suddenly appeared on the roadside. To convey the reason for the
+automated intervention, an augmented reality-based head-up
+display (AR-HUD) cue that targets the pedestrian is developed.
+To understand the effects of the AR-HUD cue on the speed at
+which a human operator can recognize a pedestrian and the
+contribution of this visual cue to the perception of acceptability
+and credibility of the automated intervention, we compared
+AR-HUD with a static head-up display (S-HUD) that displays a
+pedestrian symbol at the bottom portion of the windshield. The
+results showed that the AR-HUD cue yielded faster recognition
+of the targeted pedestrian and provided a relatively more
+acceptable perception of the automated intervention.
+I. INTRODUCTION
+Automated cars are seen as the future of transportation, in
+which human error will be reduced, saving millions of lives,
+while providing a more energy efﬁcient, comfortable, and
+convenient method of transportation. The National Highway
+Trafﬁc Safety Administration deﬁnes six levels of car auton-
+omy: Level 0 – human driver solely performs the driving;
+Level 1 – function-speciﬁc automation; Level 2 – simultane-
+ous combined functions with automation, the current state-
+of-the-art; Level 3 – limited self-driving in which the driver
+needs to be ready to take over vehicle control at any time,
+Level 4 – full self-driving under certain circumstances; Level
+5 – full self-driving in all circumstances in which humans
+are just passengers and need not be involved in driving [1].
+Among these levels, Level 3 has a signiﬁcant importance as it
+is expected to be utilized in the next generation of vehicles
+1Nihan Karatas, Takahiro Tanaka, Kazuhiro Fujikake, Yuki Yoshihara
+and Hitoshi Kanamori are with Human-Machine Interaction and Hu-
+man Characteristics Research Division in Institutes of Innovation for
+Future Society, Nagoya University, Fuirocho, Chikusa-ku, Nagoya 464-
+8601, Japan karatas@mirai.nagoya-u.ac.jp, tanaka,
+fujikake, y-yuki, hitoshi kanamori
+@coi.nagoya-u.ac.jp
+2Yoshitaka
+Fuwamoto
+and
+Morihiko
+Yoshida
+are
+with
+the
+Toyota
+Motor
+Corporation.
+yoshitaka fuwamoto,
+morihiko yoshida@mail.toyota.co.jp
+[2]. In recent years, several tech entrepreneurs have tested
+their automated driving systems in Level 3 to achieve the
+ultimate goal of accomplishing fully automated driving in
+the near future [3][4]. Unfortunately, in March 2018, a self-
+driving Uber car collided with a pedestrian during its test.
+The National Transportation Safety Board reported that one
+reason for the accident was that even though the system de-
+tected the crossing pedestrian with sufﬁcient time before the
+collision, there was insufﬁcient time for the vehicle operator
+to detect and react to the crossing pedestrian. This is a typical
+effect of automation complacency, and resulted in the failure
+of avoiding a collision [5]. This incident shows that the
+design and function of the human–machine interface (HMI)
+is crucial for ensuring that the human operator and automated
+system collaborate in a safe manner. A mutual understanding
+between the human operator and automated system ensures
+that the human operator obtains the appropriate amount of
+driving-related information at the right time, leading to the
+establishment of accurate situational awareness [6]. Such
+mutual understanding is essential for a suitable calibration of
+trust with acceptable and comfortable operation in general. A
+misunderstanding between the automated system and human
+operator regarding the action of the other party has the
+potential to cause false expectations as well as an over-
+reliance on the system capability. In contrast, if human
+operators have insufﬁcient trust in the system capabilities,
+they may refuse to buy or use these systems.
+”Automation surprise” is deﬁned as the behavior of an
+automated system in which its action is inconsistent with
+the expectations of the driver [7]. Hurts et al. mentioned that
+automation surprise may occur before the operator becomes
+aware of its existence [8]. Automation surprise may also
+refer to a positive phenomenon in which a system takes
+control of a situation in such a way that the driver does
+not expect. However, even though the automation surprise
+occurs to handle an unexpected situation, it is important to
+minimize the automation surprise and reconcile the driver
+to the course of action of the automated system to maintain
+its acceptability and credibility. To mitigate the automation
+surprise, the reason for unexpected behavior should be
+provided by the system in a timely manner so that the
+operator can comprehend the situation and adjust his trust
+toward the system. Therefore, it is important to design a
+HMI that presents driving-related information corresponding
+to unexpected situations and the consequent behavior of the
+automated system in such a way that the human operator can
+promptly comprehend.
+2020 IEEE Intelligent Vehicles Symposium (IV)
+October 20-23, 2020. Las Vegas, USA
+978-1-7281-6673-5/20/$31.00 ©2020 IEEE
+2158
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 2 ---
+(a) S-HUD cue appears at a distance of 50 m from a pedestrian standing
+on the left side of the road and it stays until the car passes the pedestrian
+(b) AR-HUD cue appears at a distance of 50 m from a pedestrian standing
+on the left side of the road and it continues to move upward (0.5 m) and
+downward (0.5 m) until the car passes the pedestrian
+Fig. 1.
+Design of (a)(S-HUD) and (b)(AR-HUD)
+Drivers receive 80% of driving-related information visu-
+ally while looking forward toward the road, which supports
+safe driving practices [9]. If the driving-related information
+matches the real environment that is in line with the gaze
+of the human operator, then the operator can recognize the
+information naturally and focus on driving without distrac-
+tion. One way to accomplish this is the head-up display
+(HUD). HUDs have been proposed as a solution to reduce
+the frequency and duration that the eyes of the driver are
+off the road by projecting the visual cues of the driving-
+related information onto the windshield. When compared to
+head-down displays, HUDs have demonstrated reductions in
+the response times to unanticipated road events, resulting
+in smaller variances in lateral acceleration and steering
+wheel angle [10]. HUD-based interfaces provide intuitive
+information through appropriate static visual cues presented
+close to the outside view of the driver. However, they have
+demonstrated an increase in mental load, as indicated by the
+longer response times in high workload situations [11][12].
+Another limitation of HUDs is the potential for clutter, which
+may interfere with the visualization of other objects in the
+panorama [13]. A pilot study showed that static visual cues
+increased the response times for detecting hazards owing
+to obstruction, possibly caused by the nonconformal nature
+of the static cue [14]. Furthermore, in a real environment,
+cueing of less conspicuous objects by using a static cue may
+not be easily noticed by the driver, potentially causing fatal
+injuries.
+Previous research has identiﬁed that subjects noticed a
+target faster when it was explicitly pointed to when compared
+to a target that is not emphasized [15]. Herein, one strategy
+that can enhance the usage of HUD technology to present
+driving-related information is using augmented reality (AR)
+with HUDs. AR refers to the combination of real and artiﬁ-
+cial elements in the line of sight, with the aim of highlighting
+important objects to improve human performance [16]. The
+research showed that the detection accuracy of a target in
+an aviation visual search task was enhanced by cueing the
+target when the object was not conspicuous [17]. Moreover,
+the research demonstrated that AR can alert drivers and
+direct their attention to dangerous situations [18]. Thus, we
+believe that conveying driving-related information through
+visual cues using an AR-based HUD (AR-HUD) can enhance
+situational awareness and result in shorter response times for
+the driver when compared to the utilization of static HUD
+(S-HUD) cues.
+Because the timing of the presentation of information
+reﬂects the system behavior and capability, it must be con-
+sistent with the expectation of the driver; otherwise, it may
+lead to a reduction in driver trust [19]. Previous research has
+shown the effectiveness of alarm promptness on trust [20].
+While considering this, not only is the timing of informa-
+tion presentation critical, but the recognition timing of the
+driver pertaining to the information. However, there has been
+minimal investigation on recognition timing and its relation
+to acceptability and trust. In this study, we focused on such
+a scenario in which a simulated automated driving system
+suddenly intervenes in manual driving to avoid a potential
+collision with a pedestrian who unexpectedly appears on the
+roadside. To reduce the automation surprise and increase
+the acceptability of the sudden automated intervention, it
+is important to convey driving-related information to the
+driver in a timely manner. Reference [21] focused on four
+qualities that are important in a HMI for minimizing au-
+tomation surprise: observability, predictability, directability,
+and timelessness. We believe that a well-designed HMI that
+cooperates with the AR-HUD design attributes would reﬂect
+these qualities. Accordingly, the reason for the unexpected
+maneuver of the automated system would be understood
+quicker, resulting in a more acceptable and credible percep-
+tion. In this paper, we demonstrate a comparison between an
+AR-HUD cue and a S-HUD cue in such a scenario. The
+results of this comparison demonstrate that an AR-HUD
+based interface is better in providing prompt recognition.
+Correspondingly, it may be useful for a better acceptability
+and credibility assessment for automated intervention.
+II. METHOD
+A. Design of Augmented Reality-based Head-up Display
+(AR-HUD) and Static Head-up Display (S-HUD) Cues
+Previous research utilized pedestrian pictograms [22][23]
+or master alerts [24][25] as S-HUD cues to increase the
+2159
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 3 ---
+Fig. 2.
+Driving simulator and the experimental environment
+Fig. 3.
+Figure depicts the experimental scenario. The automated inter-
+vention occurs with the appearance of the pedestrian and the onset of the
+human–machine interface.
+awareness of drivers regarding pedestrians. Research pertain-
+ing to AR-HUD utilized rectangles [23] or the rhombus shape
+of broken lines [26]. In our study, we designed S-HUD and
+AR-HUD cues to indicate a pedestrian on the road, which
+is the reason for the automated intervention. The S-HUD
+was designed using a pedestrian pictogram that showed the
+position of the pedestrian on the road (Fig. I(a)). Conversely,
+for the AR-HUD cue, we designed a cylinder with a 0.5 m
+radius that moves 0.5 m upward and downward by using
+the Blender software (version 2.79b). The AR-HUD cue is
+placed directly on the pedestrian (Fig. I(b)). The orange color
+is chosen for two cues (pedestrian pictogram and cylinder) to
+convey a warning rather than an emergency [27]. We placed
+the visual cues at the appropriate places on the screen using
+the driving simulation software settings.
+B. Hypothesis
+The mutual understanding between a human operator
+and an automated system is important in establishing an
+accurate situational awareness with a well-designed HMI
+such that the driver can comprehend the actions of the
+system, which may reduce the automation surprise and
+increase the willingness to use and trust the system. The
+design of such a HMI should include multiple modalities,
+such as visual, audio, and tactile cues. As the ﬁrst step
+of this research, we focused on designing visual cues and
+exploring the objective and subjective responses as well as
+the impressions of the human operator toward the visual
+cues and automated intervention. We hypothesized that an
+AR-HUD cue would cause the driver to recognize the target
+that indicated a potential obstacle with a shorter response
+time than that with the S-HUD cue. Moreover, because the
+human operator would recognize the target faster, the reason
+for the automated intervention would be comprehended faster
+with the AR-HUD cue, resulting in a more acceptable and
+credible perception. We also hypothesized that the AR-HUD
+interface would provide a better user experience than the S-
+HUD interface owing to its explicit and dynamic design.
+C. Experimental Setup
+The UC-win/Road program (version 13) 1 was used as a
+simulation software along with ﬁve monitors, an adjustable
+driver seat, a steering wheel, a break, and an accelerator (Fig.
+2). The maximum speed of the simulated car was set to 50
+km/h. We examined two experimental conditions with the
+AR-HUD and S-HUD cues in the same driving route.
+In the AR-HUD condition, the AR-HUD cue appeared on
+the pedestrian when the car was 50 m away. The cue was
+visible on the pedestrian until the car passed him. In the S-
+HUD condition, the S-HUD cue was located on the bottom
+side of the screen when the car was 50 m away from the
+pedestrian, and the cue was visible until the car passed the
+pedestrian.
+The route was 5 km in the experimental session; moreover,
+the participants were asked to drive at a speed of approxi-
+mately 40 km/h. The participants started driving the car in
+manual mode for 4.5 km, and the automated intervention
+scenario occurred at a distance of 0.5 km before the end
+of the route. At this point, a pedestrian suddenly appeared
+on the left side of the road; simultaneously, the simu-
+lated car, which was in manual mode initially, intervened
+automatically, and the manual mode was changed to the
+automated mode and the car changed lanes to the right 50
+m before the pedestrian (Fig. 3). Simultaneously, with the
+appearance of the pedestrian and the onset of the automated
+intervention, the HMI cue was displayed. The rest of the
+trip was completed in the automated mode at a speed of
+40 km/h. Both before and during the intervention process,
+no other information was presented to the subjects regarding
+the purpose of the intervention.
+During the experiment, we set the time of the scenario to
+be before sunset, at which time the visibility of the objects
+was relatively low. Along the road, we also placed a group
+of pedestrians on the sidewalk and a construction scene on
+the right side of the road to distract the driver from the
+targeted pedestrian. Thus, we prevented a potential ceiling
+effect that may result from an easily observed target for
+both the aforementioned conditions. During the experiment,
+to track and evaluate the visual attention of the participants
+and their recognition time of the targeted pedestrian, we used
+Tobii Pro Glasses 2 2 eye tracker.
+2160
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 4 ---
+(a) Example from the AR-HUD condition shows that the participant
+recognized the pedestrian in the second step of their gaze
+(b) Example from the S-HUD condition shows that the participant recog-
+nized the pedestrian in the sixth step of their gaze
+Fig. 4.
+Figures depict two examples pertaining to the difference between the gaze shifts of two participants in AR-HUD and S-HUD conditions
+Fig. 5.
+Comparison of the recognition time of participants in the AR-HUD
+and S-HUD conditions (***: p<0.001)
+D. Procedure
+Our experiment was conducted on 36 participants (10
+females, 26 males) ranging from 21 to 54 years (mean (M)
+= 34.638, standard deviation (SD) = 11.293). We conducted
+a between-subjects study to avoid the inﬂuence of learning
+effects. All participants possessed a current driving license.
+The participants were randomly divided into two groups
+of 19 and 17 members to which the AR-HUD and S-
+HUD conditions were applied, respectively. Upon arrival,
+the participants were given a brief explanation regarding the
+experiment. Before starting the experimental sessions, the
+participants underwent a 5 min practice session to accustom
+them to the driving simulator. The practice session was
+conducted on a different road than the road considered in
+the experiment. During the practice session, the participants
+used the simulated car manually and were exposed to the
+automated intervention. After the practice session, the ex-
+perimental session was initiated.
+After the experimental session, the participants were asked
+to complete three questionnaires: the Acceptance Question-
+naire for evaluating the automated intervention with the
+AR-HUD- or S-HUD-based visual cue, Source Credibility
+1http://www.forum8.co.jp/
+2https://www.tobiipro.com/
+Measurement [20] for evaluating the automated intervention,
+and User Experience Questionnaire for evaluating the visual
+cue [21].
+The experiments were performed after obtaining approval
+from the Nagoya University Ethics Committee.
+III. RESULTS
+Data from two participants and one participant in the
+AR-HUD and S-HUD conditions, respectively, were omitted
+from the objective and subjective data analyses owing to
+low data accuracy. In our analysis, we deﬁned the “response
+time” as the time interval between the onset of the HMI and
+the ﬁrst observation by the participants of the pedestrian who
+suddenly appeared by the roadside.
+The average time of ﬁnishing the experimental conditions
+was 6 min 46 s (SD = 1 min 0 s). Additionally, the
+average speed of the participants just before the automated
+intervention and onset of the HMI was 39.218 km/h (SD =
+8.142).
+A. Eye Gaze Data Analysis
+The analysis showed that the gazes of two participants
+in the AR-HUD conditions were already on the area of
+the targeted pedestrian before the pedestrian and visual cue
+appeared. We included the response times of these two
+participants by reformulating them as the average value of the
+shortest three response times of the other participants. More-
+over, the gazes of three participants in the S-HUD condition
+were not aligned with the pedestrian at all. Therefore, the
+response times of these three participants were reformulated
+as the average value of the three longest response times from
+the rest of the participants. After these modiﬁcations, we
+conducted a two-sample t-test. The results showed that in
+the AR-HUD case, the attention of the participants shifted
+onto the pedestrian signiﬁcantly faster at the p <0.05 level
+than in the S-HUD case after the onset of HMI. (t(15) =
+4.825, p = 0.0001).
+When compared to the S-HUD condition, the ratings for
+the AR-HUD condition pertaining to Q4 and Q13 were
+signiﬁcantly higher (t(31) = 1.708, p = 0.048 and t(31) =
+2.753, p = 0.004, respectively). The gazing pattern of the
+participants showed that under the AR-HUD condition, the
+2161
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 5 ---
+Fig. 6.
+Acceptance Questionnaire results show signiﬁcant differences for
+Q4 and Q13. (***: p<0.001, **: p<0.01, *: p<0.05)
+TABLE I
+ACCEPTANCE QUESTIONNAIRE ITEMS THREE ITEMS ARE BASED ON
+HEAD-UP DISPLAY-BASED CUE, TWO ITEMS ARE BASED ON AUTOMATED
+INTERVENTION, AND SIX ITEMS ARE BASED ON THE COMPATIBILITY OF
+AUTOMATED INTERVENTION AND HEAD-UP DISPLAY-BASED CUE.
+Code
+Question
+Q1
+I could easily recognize the visual cue.
+Q2
+There is nothing wrong with the visual cue.
+Q3
+The visual cue was annoying.
+Q4
+Nothing was wrong with the execution of
+automated intervention.
+Q5
+The function of automated intervention was troublesome.
+Q6
+The visual cue allowed me to understand the execution
+of the automated intervention.
+Q7
+The reason why the automated intervention was executed
+can be understood from the visual cue.
+Q8
+I do not have any complaints about the visual cue.
+Q9
+Thanks to the visual cue, I did not have any anxiety
+during the automated intervention.
+Q10
+Thanks to the visual cue, the function of the automated
+intervention was reliable.
+Q11
+I will use this visual cue and automated
+intervention in my car.
+Q12
+I think the visual cue and the automated intervention
+will be helpful for my driving.
+Q13
+I was able to identify the targeted pedestrian quickly.
+Q14
+If you have any comments or feedback, please describe
+freely.
+participants recognized the targeted pedestrian in fewer steps
+after the onset of HMI (Fig. II-D(a)). However, in the S-HUD
+case, the gazing pattern showed that the participants noticed
+the targeted pedestrian after they gazed at the S-HUD cue
+and then, after several steps of gazing, they shifted their gaze
+to the targeted pedestrian (Fig. II-D(b)).
+When considered together, these results suggest that the
+AR-HUD-based visual cue achieved shorter response times
+of the drivers in recognizing the targeted pedestrian on the
+road.
+B. Subjective Evaluations
+1) Acceptance of the Automated Intervention with the
+Human–machine Interface (HMI) Cue:
+The Acceptance
+Questionnaire for the automated intervention created by us
+consisted of 14 items, in which the last was an open question
+(Table. I). The questionnaire responses were scored on a
+TABLE II
+CORRELATION BETWEEN THE RESPONSE TIME AND THE ACCEPTABILITY
+QUESTIONNAIRE ITEMS (left), THE SOURCE CREDIBILITY MEASURE
+FACTORS (right top) AND USER EXPERIENCE QUESTIONNAIRE ((right
+bottom)) IN AR-HUD AND S-HUD CONDITIONS
+.
+Acceptability Questionnaire
+Source Credibility M.
+Code
+Response Time
+Factor
+Response Time
+AR-HUD
+S-HUD
+AR-HUD
+S-HUD
+Q1
+-0.691**
+0.3
+Comp.
+-0.531*
+-0.285
+Q2
+-0.621*
+-0.096
+Caring.
+-0.564*
+-0.548*
+Q3
+0.01
+-0.354
+Trust.
+-0.637**
+-0.392
+Q4
+-0.095
+-0.058
+Q5
+0.363
+0.085
+User Experience Q.
+Q6
+-0.301
+-0.242
+Factor
+Response Time
+Q7
+-0.188
+-0.589*
+AR-HUD
+S-HUD
+Q8
+-0.344
+0.072
+Attr.
+-0.400
+0.359
+Q9
+-0.423
+-0.007
+Eff.
+-0.564*
+0.183
+Q10
+-0.387
+0.045
+Pers.
+-0.102
+-0.197
+Q11
+-0.411
+0.064
+Dep.
+-0.257
+0.349
+Q12
+-0.546*
+0.008
+Stim.
+-0.291
+0.169
+Q13
+-0.543*
+0.166
+Novelty
+-0.081
+0.010
+seven-point Likert scale: 7 (strongly agree), 6 (moderately
+agree), 5 (agree), 4 (neutral), 3 (disagree), 2 (moderately
+disagree), and 1 (strongly disagree). We applied a two-
+sample t-test to reveal the differences in the results from the
+questionnaire items for both conditions. The results showed
+signiﬁcant differences between the two conditions for Q4 and
+Q13 (Fig. 6).
+We also checked the correlations between the Acceptance
+Questionnaire items and the response time values for the
+two conditions. For the AR-HUD condition, we identiﬁed
+signiﬁcant correlations that were strongly negative (r(16)
+= -0.691, p = 0.003) and moderately negative (r(16) = -
+0.621, p = 0.01; r(16) = -0.546, p = 0.028 and r(16) = -
+0.543, p = 0.029) between the response time values and Q1,
+Q2, Q12 and Q13, respectively. For the S-HUD condition,
+we identiﬁed a signiﬁcant moderately negative correlation
+between the response time and Q7 (r(15) = -0.589, p =
+0.016) (Table II (left)).
+2) Credibility of the Automated Intervention: The Source
+Credibility Measurement items were also scored on a seven-
+point Likert scale. The results of a two-sample t-test showed
+no statistically signiﬁcant difference between the AR-HUD
+and S-HUD conditions pertaining to the factors of Com-
+petence, Caring, or Trustworthiness (Fig. 7) on the p
+<0.05 level. However, when we checked the correlations
+between the response time and the credibility factors for
+each condition, we observed signiﬁcant moderately negative
+correlations between the response time and the factors of
+Competence (r(17) = -0.531, p = 0.034), Caring/Goodwill
+(r(17) = -0.564, p = 0.022), and Trustworthiness (r(17) =
+-0.637, p = 0.007) for the AR-HUD condition. In addition,
+we observed a signiﬁcant moderately negative correlation
+between the response time and the Caring/Goodwill factor
+(r(17) = -0.548, p = 0.027) for the S-HUD condition (Table
+II (right top)).
+3) User Experience Quality of the HMI Cue: The User
+Experience Questionnaire items were again scored on a
+2162
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 6 ---
+Fig. 7.
+Source credibility measurement results
+seven-point Likert scale. The results of a two-sample t-test
+showed no statistically signiﬁcant difference for the Attrac-
+tiveness, Perspicuity, Efﬁciency, Dependability, Stimulation,
+or Novelty factors on the p <0.05 level (Fig. 8). However, we
+observed a moderate negative correlation between response
+time and the Efﬁciency facfor (r(17) = -0.564, p = 0.022) for
+the AR-HUD condition (Table II (right bottom)).
+4) User Comments and Feedback: Participants primarily
+complained about the difﬁculty in operating the steering.
+One participant commented that she could not pay sufﬁ-
+cient attention to the road because she was concentrating
+on driving accurately. Predominantly, the comments of the
+participants were regarding the insufﬁciency of the warning
+system. Three participants from the AR-HUD group and
+one participant from the S-HUD group commented that they
+wished to have an audio warning along with the visual
+cue. Two participants from the AR-HUD group and four
+participants from the S-HUD group stated that they were
+surprised and scared by the sudden intervention of the
+automated system. Three participants indicated that they did
+not feel safe when the car changed lanes without providing
+any safety conﬁrmation; consequently, they preferred the car
+to stop. One participant reported that the driving method
+of the automated system did not match the method of the
+participant. Furthermore, three participants indicated that
+they could not understand if they or the automated system
+was driving.
+IV. DISCUSSION
+In this research, we compared the effects of the AR-
+HUD- and S-HUD-based visual cues on human operators
+upon an automated intervention to avoid a potential col-
+lision with a pedestrian who has suddenly appeared on
+the roadside. The results showed that the AR-HUD-based
+visual cues provided signiﬁcantly shorter recognition time
+of the pedestrian and encouraged the human operators to
+demonstrate a marginally better perception of the automated
+intervention. While driving, evoking spatial attention allows
+drivers to selectively process visual information through the
+prioritization of an area within the visual ﬁeld. Research
+has demonstrated that when spatial attention is evoked, an
+Fig. 8.
+User Experience Questionnaire results
+observer is typically faster and more accurate in detecting a
+target that appears in an expected location when compared
+to an unexpected location [28]. According to the ”spotlight
+metaphor”, the focus of attention is analogous to the beam
+of a spotlight [29]. The movable spotlight is directed at
+one location and everything within its beam is noted and
+processed preferentially, while information outside the beam
+remains unattended. Our ﬁndings of a faster recognition
+of the pedestrian by shifting the attention of the human
+operators to a speciﬁc location by utilizing an AR-HUD
+cue also support this theory. In addition, the results of the
+subjective evaluation (Q13) support our objective ﬁndings
+that human operators were aware that they could easily
+recognize the target. Furthermore, the indication that the
+gazing patterns of the participants demonstrated fewer shifts
+until the targeted pedestrian was noticed in the AR-HUD
+condition conﬁrmed our hypothesis (Fig. II-D). Based on
+these ﬁndings, we can infer that the human operators can
+recognize the targets quicker when they are explicitly and
+dynamically indicated rather than implicitly and statically
+indicated on the windshield.
+We also hypothesized that with a rapid recognition of the
+target, the acceptance of the automated intervention by the
+participants will be higher, and more credit is expected to
+be given to the automated system when an AR-HUD-based
+visual cue is used. The negative correlation between the
+recognition time and the three questions from the Acceptabil-
+ity Questionnaire (Q1, Q2, Q12 and Q13) in the AR-HUD
+condition showed that as the recognition time decreased,
+the perception of recognition of the target improved. These
+results can be closely related to the credibility perception
+of the automated system. The ﬁndings of recent research
+demonstrated that when a system is more transparent and
+provides the reasons for its behavior, then the users may be-
+come more forgiving and accepting toward the system, even
+if the behavior of the system is perceived to be bad [30][31].
+Herein, even though the results of the credibility analysis
+did not show a meaningful difference between the AR-HUD
+and S-HUD conditions, we can infer from the correlation
+results that the perception of the human operators regarding
+the credibility of the automated system may depend on how
+fast they recognize the reason for the behavior of the system.
+The automated intervention was generally perceived as
+abrupt and caused dissatisfaction to the participants for both
+conditions. Therefore, the considerably low ratings for Q9
+2163
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- Page 7 ---
+may indicate this unpleasant perception of the automated
+system; moreover, unlike our expectations, the AR-HUD was
+not effective in enhancing this perception even though it
+provided faster recognition of the target. One reason for
+this might be the insufﬁcient modality of the interface, as
+indicated by the comments of certain participants. As these
+types of abrupt interventions, in other words, automation sur-
+prises, may likely occur in the future with real autonomous
+cars in real-world scenarios, it is important to leverage
+the unpleasant perception of human operators through other
+modalities, such as audio or tactile cues, in addition to a
+HUD-based cue.
+Limitations: This experiment was conducted using a
+driving simulator and two-dimensional HUD-based visual
+cues. The results of this study may change owing to the
+different depth perceptions of the AR and HUD technologies.
+In addition, the number of participants used in this study is
+relatively low. Nonetheless, our ﬁndings suggest that the two
+HUD-based cues merit further investigation. Future studies
+would beneﬁt from larger sample sizes and a more realistic
+application of AR-HUD and S-HUDs, as our marginally
+modest experiment raised the possibility that some of the
+factors that were non-signiﬁcant may have had certain effects
+that we were unable to detect.
+V. CONCLUSIONS
+In this paper, we demonstrated that an AR-HUD-based
+visual cue could provide a faster response time and facilitate
+the human operator recognizing a potential obstacle. The
+results also showed that with a shorter recognition time,
+the credibility of the automated system is likely to increase.
+While considering the design of a more acceptable and credi-
+ble interface during an unexpected automated intervention, it
+was speculated that using only a visual cue may not provide
+a sufﬁcient understanding between the system and the human
+operator. In future studies, we will examine different modal-
+ities and their combinations to support and satisfy human
+operators for better automated driving experiences.
+REFERENCES
+[1] N. H. T. S. Administration et al., “Preliminary statement of policy
+concerning automated vehicles,” Washington, DC, pp. 1–14, 2013.
+[2] J. Bierstedt, A. Gooze, C. Gray, J. Peterman, L. Raykin, and J. Walters,
+“Effects of next-generation vehicles on travel demand and highway
+capacity,” FP Think Working Group, vol. 8, pp. 10–1, 2014.
+[3] T. Vanderbilt, “Let the robot drive: The autonomous car of the future
+is here,” Wired Magazine, Conde NAST, www. wired. com, pp. 1–34,
+2012.
+[4] S. L. Poczter and L. M. Jankovic, “The google car: driving toward
+a better future?” Journal of Business Case Studies (JBCS), vol. 10,
+no. 1, pp. 7–14, 2014.
+[5] “National transportation safety board. collision between vehicle
+controlled
+by
+developmental
+automated
+driving
+system
+and
+pedestrian,”
+https://www.ntsb.gov/news/events/Documents/2019-
+HWY18MH010-BMG-abstract.pdf, november 19, 2019.
+[6] M. R. Endsley, “Toward a theory of situation awareness in dynamic
+systems,” Human factors, vol. 37, no. 1, pp. 32–64, 1995.
+[7] S. Dekker, Report of the ﬂight crew human factors investigation
+conducted for the Dutch safety board into the accident of TK1951,
+Boeing 737-800 near Amsterdam Schiphol Airport, February 25, 2009.
+Lund University, School of Aviation, 2009.
+[8] K. Hurts and R. J. de Boer, “Automation surprise looked at from a
+demands-resources perspective,” in Proceedings of the human factors
+and ergonomics society Europe chapter annual conference, 2015, pp.
+221–233.
+[9] A. S. Cohen and R. Hirsig, Feed forward programming of car drivers’
+eye movement behavior: A system theoretical approach. Swiss Federal
+Institute of Technology, Department of Behavioral Science, 1980.
+[10] Y.-C. Liu, “Effects of using head-up display in automobile context on
+attention demand and driving performance,” Displays, vol. 24, no. 4-5,
+pp. 157–165, 2003.
+[11] C. D. Wickens, R. Martin-Emerson, and I. Larish, “Attentional tun-
+neling and the head-up display,” 1993.
+[12] E. Fischer and R. F. Haines, “Cognitive issues in head-up displays,”
+1980.
+[13] S. Y. Cheng, A. Doshi, and M. M. Trivedi, “Active heads-up display
+based speed compliance aid for driver assistance: A novel interface and
+comparative experimental studies,” in 2007 IEEE Intelligent Vehicles
+Symposium.
+IEEE, 2007, pp. 594–599.
+[14] M. C. Schall and P. Gavin, “Attraction without distraction: Effects of
+augmented reality cues on driver hazard perception,” 2010.
+[15] R. T. Azuma, “A survey of augmented reality,” Presence: Teleoperators
+& Virtual Environments, vol. 6, no. 4, pp. 355–385, 1997.
+[16] D. L. Fisher and K. C. Tan, “Visual displays: The highlighting
+paradox,” Human factors, vol. 31, no. 1, pp. 17–30, 1989.
+[17] M. Yeh and C. D. Wickens, “Display signaling in augmented reality:
+Effects of cue reliability and image realism on attention allocation and
+trust calibration,” Human Factors, vol. 43, no. 3, pp. 355–365, 2001.
+[18] M. Tonnis, C. Sandor, G. Klinker, C. Lange, and H. Bubb, “Experi-
+mental evaluation of an augmented reality visualization for directing
+a car driver’s attention,” in Fourth IEEE and ACM International
+Symposium on Mixed and Augmented Reality (ISMAR’05).
+IEEE,
+2005, pp. 56–59.
+[19] A. M. Parkes and S. Franzen, Driving future vehicles.
+CRC Press,
+1993.
+[20] G. Abe and J. Richardson, “Alarm timing, trust and driver expectation
+for forward collision warning systems,” Applied ergonomics, vol. 37,
+no. 5, pp. 577–586, 2006.
+[21] O. Carsten and M. H. Martens, “How can humans understand their
+automated cars? hmi principles, problems and solutions,” Cognition,
+Technology & Work, vol. 21, no. 1, pp. 3–20, 2019.
+[22] A. Wuryandari, Y. Gondokaryono, and I. M. Y. Widnyana, “Design
+and implementation of driver main computer and head up display on
+smart car,” Procedia Technology, vol. 11, pp. 1041–1047, 2013.
+[23] M. T. Phan, I. Thouvenin, and V. Fr´emont, “Enhancing the driver
+awareness of pedestrian using augmented reality cues,” in 2016 IEEE
+19th International Conference on Intelligent Transportation Systems
+(ITSC).
+IEEE, 2016, pp. 1298–1304.
+[24] D. Large, V. Banks, C. Harvey, and G. Burnett, “Towards a predictive
+model of driver acceptance of active collision avoidance systems,”
+2018.
+[25] C. Merenda, H. Kim, J. L. Gabbard, S. Leong, D. R. Large, and
+G. Burnett, “Did you see me? assessing perceptual vs. real driving
+gains across multi-modal pedestrian alert systems,” in Proceedings
+ofx the 9th International Conference on Automotive User Interfaces
+and Interactive Vehicular Applications, 2017, pp. 40–49.
+[26] M. L. Rusch, M. C. Schall Jr, P. Gavin, J. D. Lee, J. D. Dawson,
+S. Vecera, and M. Rizzo, “Directing driver attention with augmented
+reality cues,” Transportation research part F: trafﬁc psychology and
+behaviour, vol. 16, pp. 127–137, 2013.
+[27] A. Chapanis, “Hazards associated with three signal words and four
+colours on warning signs,” Ergonomics, vol. 37, no. 2, pp. 265–275,
+1994.
+[28] M. I. Posner, “Orienting of attention,” Quarterly journal of experi-
+mental psychology, vol. 32, no. 1, pp. 3–25, 1980.
+[29] M. I. Posner, C. R. Snyder, and B. J. Davidson, “Attention and the
+detection of signals.” Journal of experimental psychology: General,
+vol. 109, no. 2, p. 160, 1980.
+[30] N. Tintarev and J. Masthoff, “A survey of explanations in recom-
+mender systems,” in 2007 IEEE 23rd international conference on data
+engineering workshop.
+IEEE, 2007, pp. 801–810.
+[31] R. Sinha and K. Swearingen, “The role of transparency in recom-
+mender systems,” in CHI’02 extended abstracts on Human factors in
+computing systems, 2002, pp. 830–831.
+2164
+Authorized licensed use limited to: UNIVERSITY OF WESTERN ONTARIO. Downloaded on May 26,2021 at 10:16:44 UTC from IEEE Xplore.  Restrictions apply. 

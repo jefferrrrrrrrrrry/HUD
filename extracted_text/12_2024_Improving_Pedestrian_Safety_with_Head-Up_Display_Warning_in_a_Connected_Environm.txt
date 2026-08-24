@@ -1,0 +1,2566 @@
+--- Page 1 ---
+International Journal of Human–Computer Interaction
+ISSN: 1044-7318 (Print) 1532-7590 (Online) Journal homepage: www.tandfonline.com/journals/hihc20
+Improving Pedestrian Safety with Head-Up
+Display Warning in a Connected Environment
+Yu Zhang, Yang Bian, Xiaohua Zhao, Xuewei Li & Jianhua Zhang
+To cite this article: Yu Zhang, Yang Bian, Xiaohua Zhao, Xuewei Li & Jianhua Zhang
+(2025) Improving Pedestrian Safety with Head-Up Display Warning in a Connected
+Environment, International Journal of Human–Computer Interaction, 41:6, 3724-3744, DOI:
+10.1080/10447318.2024.2368910
+To link to this article:  https://doi.org/10.1080/10447318.2024.2368910
+Published online: 17 Sep 2024.
+Submit your article to this journal 
+Article views: 292
+View related articles 
+View Crossmark data
+Citing articles: 1 View citing articles 
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=hihc20
+
+--- Page 2 ---
+Improving Pedestrian Safety with Head-Up Display Warning in a Connected 
+Environment
+Yu Zhang, Yang Bian, Xiaohua Zhao, Xuewei Li, and Jianhua Zhang 
+Beijing Key Laboratory of Traffic Engineering, Beijing University of Technology, Beijing, China 
+ABSTRACT 
+In this paper, the potential of using a head-up display (HUD) in the connected environment to 
+improve a vehicle’s running comfort and pedestrian safety is tested, by providing warning infor­
+mation to drivers in advance. To achieve this objective, driving simulation technology is used to 
+construct the connected environment and develop the HUD, and the effectiveness of the system 
+is then tested. Specifically, thirty-four participants were recruited to conduct driving simulation 
+experiments in six scenarios: three warning display types (Baseline/Head-down display/Head-up 
+display) combined with two weather conditions (clear weather/foggy weather). The effects of the 
+three different warning display types on braking risk-avoidance strategy were studied by compar­
+ing the drivers’ performance during the perception and decision stage (position of accelerator- 
+pedal release, position of first braking), the risk-avoidance manipulation stage (maximum deceler­
+ation, braking distance) and the risk-avoidance result stage (minimum collision distance, position 
+of minimum speed). The influences of weather conditions and driver attributes were also consid­
+ered. When the HUD warnings were activated, drivers started to decelerate further away from 
+pedestrians, with a more stable and moderate deceleration process and a greater safety margin 
+between the vehicle and the pedestrians. Using HUD warnings in foggy conditions improved driv­
+ers’ perception and decision abilities, this study confirmed the great benefits that HUD warnings 
+in the connected environment can bring to traffic safety, especially under risky situations and 
+inclement weathers. The research results provide a reference for the more humanized and ration­
+alized optimization design of these warning systems.
+KEYWORDS 
+Connected environment; 
+head-up display warning; 
+risk avoidance strategy; 
+pedestrian safety; 
+generalized linear mixed 
+model   
+1. Introduction
+A connected environment collects information related to 
+surrounding traffic by means of vehicle-to-vehicle(V2V), 
+vehicle-to-infrastructure(V2I), 
+and 
+vehicle-to-everything 
+(V2X) communications (Ali et al., 2020; Maag et al., 2022). 
+Such information, in the form of in-vehicle warnings, is 
+expected to improve drivers’ situational awareness of sur­
+rounding traffic during driving, such as potentially danger­
+ous vehicles and pedestrians (Aust et al., 2013; Cicchino, 
+2017). As a traditional human-computer interaction inter­
+face, head-down display (HDD) is installed on the dash­
+board or control panel of vehicles, requiring drivers to lower 
+their heads to obtain information (Liu & Wen, 2004). In 
+contrast, head-up display (HUD) projects the required infor­
+mation directly into the drivers’ line of vision, reducing eye 
+adjustment time and the possibility of ignoring dangerous 
+stimuli on the road (Ablaßmeier et al., 2007; Liu, 2003). It is 
+reasonable to expect that HUD warning system in the con­
+nected environment has great potential to improve driving 
+behavior.
+In recent years, pedestrian safety has received extensive 
+attention due to its high accident rate and mortality. A 
+report in the United States mentioned that it is estimated 
+that 6,590 pedestrians died in motor vehicle accidents in 
+2019, based on the preliminary data on pedestrian traffic 
+deaths in all fifty states and the District of Columbia 
+(Retting & GHSA, 2020). In pedestrian and motor vehicle 
+accidents, pedestrian crossing is the main source of risk. 
+Pedestrian crossing refers to the behavior of pedestrians 
+crossing roads (Wu et al., 2013), where pedestrian crossing 
+locations that may conflict with motor vehicles typically 
+include zebra crossings at intersections, zebra crossings on 
+roads, and roads outside the zebra crossing. Among them, 
+pedestrian crossing events outside the zebra crossing pose a 
+higher risk and are also one of the most common emergen­
+cies. According to statistical data from Italy in 2020 (ACI- 
+ISTAT, 2017), 7,204 (3.2%) road accidents were caused by 
+pedestrians’ inappropriate behavior when crossing the road 
+outside the crosswalk. Therefore, pedestrian crossing events 
+outside the zebra crossing are one of the most important 
+challenges facing road safety and the focus of this article.
+The HUD warning system in the connected environment 
+seems to have brought new possibilities to address pedes­
+trian safety issues. Limited research has shown that com­
+pared to no warning or HDD warning, the HUD warning 
+increases the likelihood that drivers would glance toward 
+latent the pedestrian (Hajiseyedjavadi et al., 2018), shortens 
+CONTACT Xiaohua Zhao 
+zhaoxiaohua@bjut.edu.cn 
+Beijing Key Laboratory of Traffic Engineering, Beijing University of Technology, Beijing, China 
+ß 2024 Taylor & Francis Group, LLC
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+2025, VOL. 41, NO. 6, 3724–3744 
+https://doi.org/10.1080/10447318.2024.2368910 
+
+--- Page 3 ---
+braking response time (Winkler et al., 2018b), and increases 
+safety margins with pedestrians (Naujoks & Neukum, 2014). 
+By reviewing previous research, it has been found that the 
+influence of HUD warning systems on driving behavior has 
+been preliminarily explored, while the impact of HUD warn­
+ing systems on driver risk avoidance strategies still needs 
+further exploration. Risk avoidance strategies can reflect the 
+driving behavior of drivers in various stages such as percep­
+tion, judgment, decision, and manipulation during the risk 
+avoidance process, as well as the final risk avoidance results 
+(Yue et al., 2020). The optimal risk avoidance strategy can 
+improve the stability of the risk avoidance process while 
+ensuring safety. Therefore, before the large-scale application 
+of HUD, it is necessary to fully explore how the HUD warn­
+ing system affects drivers’ risk avoidance strategies and 
+whether it can help drivers choose the optimal risk avoid­
+ance strategy.
+In fact, the effectiveness of the HUD warning system is 
+also influenced by complex external conditions and driver 
+attributes. Regarding the complex external environment, it 
+includes weather conditions (e.g., foggy, rain and snow), lin­
+ear road conditions (e.g., sharp curves and steep slopes) and 
+light conditions (day and night). As a typical inclement wea­
+ther with reduced visibility, foggy weather diminished the 
+drivers’ visual distance and perception of the surrounding 
+environment, which had a significant negative impact on 
+driver behavior (Gao et al., 2020; Mueller & Trick, 2012). 
+Previous studies have shown that HUD warning system in 
+the connected environment can effectively avoid vehicle col­
+lisions at intersections and rear-end collisions at sections 
+under foggy conditions, helping drivers respond earlier and 
+brake smoother (Wu et al., 2018; Zhang et al., 2020). It is 
+worth further exploring whether the HUD pedestrian warn­
+ing system is equally effective in foggy weather. In addition, 
+there are differences in the degree to which drivers with dif­
+ferent attributes (e.g., gender, age and driving experience) 
+benefit from the HUD warning system. Previous research 
+has suggested that HUD warning systems may be more 
+effective for inexperienced drivers (Li et al., 2020). When 
+using the HUD driving assistance system, male and female 
+drivers exhibit different horizontal and longitudinal driving 
+behaviors (Lyu et al., 2019). Therefore, when exploring the 
+impact of the HUD warning system on driver braking risk 
+avoidance strategies, it is meaningful to consider its inter­
+action with weather conditions or driver attributes.
+This study aims to explore the comprehensive effective­
+ness of HUD warning systems in avoiding pedestrian colli­
+sions in the connected environment. Specifically, the effect 
+of the HUD warning on drivers’ braking risk-avoidance 
+strategy in the pedestrian crossing event outside the zebra 
+crossing in the connected environment was explored 
+through the driver recognition process in spatial dimension, 
+considering the interaction of weather and driver attributes. 
+To achieve this objective, an advanced driving simulator was 
+used to build the connected environment and to test the 
+effectiveness of the HUD warning on the pedestrian crossing 
+event outside the zebra crossing under six scenarios of three 
+warning display types (Baseline/HDD/HUD)  two weather 
+conditions (clear weather/foggy weather). A comprehensive 
+index system was constructed from the spatial dimension to 
+reflect the entire process of braking risk-avoidance. Finally, 
+the generalized linear mixed model was applied to prelimin­
+arily explore the effects of warning display types, weather 
+conditions, driver attributes (gender, driving experience, 
+driving frequency) and their interaction factors on the brak­
+ing risk-avoidance strategy, and deeply analyze the differen­
+ces in the influence of different levels of the same factor on 
+the braking risk-avoidance strategy. The proposed method 
+can provide theoretical supports for the research of braking 
+risk-avoidance strategy, and the results may provide the 
+basis for the optimization and design of HUD warning sys­
+tems in the connected environment.
+2. Literature review
+This section is divided into four subsections: 2.1 The overall 
+development and application of HUD; 2.2 Application of 
+HUD warning in avoiding pedestrian collisions; 2.3 Test 
+tool for HUD warning utility; 2.4 A method of exploring 
+multiple influencing factors.
+2.1. The overall development and application of HUD
+HUD was first applied in the aviation industry to assist 
+pilots. Nowadays, HUD has been widely used in-vehicle 
+information systems. It uses the principle of optical reflec­
+tion to project driving-related information to the front of 
+the driver’s line of sight, reducing the frequency of the driv­
+er’s head lowering, improving information reading effi­
+ciency, improving driving distraction and load, and 
+effectively ensuring driving safety. As an in-vehicle informa­
+tion system, HUD was initially used to display navigation 
+information, vehicle status information, and entertainment 
+communication information. With the development of con­
+nected technology and the realization of V2X communica­
+tion, HUD has been widely used to display safety assistance 
+information, supporting various safety-critical scenarios such 
+as vehicle collisions, bicycle collisions, obstacle collisions 
+and pedestrian collisions (Winkler et al., 2018b; Z. Yang 
+et al., 2019). However, when HUD provides information 
+that is unreasonable or unclear, it may lead to driver distrac­
+tion and misunderstanding, resulting in negative effects 
+(Ahmed et al., 2020; Pfannm€uller et al., 2015; Z. Yang et al., 
+2019). Therefore, developing a reasonable HUD warning 
+system and testing its effectiveness in various safety-critical 
+scenarios have become a focus of scholars’ current attention.
+2.2. Application of HUD warning in avoiding pedestrian 
+collisions
+Pedestrians are considered one of the most vulnerable road 
+users, with characteristics such as being difficult to observe 
+and difficult to predict trajectories, leading to high accident 
+and mortality rates. HUD warning systems have great poten­
+tial in improving pedestrian safety through V2X technologies 
+in the connected environment. Scholars have conducted 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3725
+
+--- Page 4 ---
+research on the effectiveness of HUD warnings in pedestrian 
+crossing events outside the zebra crossing (Table 1). The 
+effectiveness of HUD is mainly quantitatively evaluated from 
+visual performance, behavioral performance, and subjective 
+performance. Behavioral performance is considered as direct 
+and beneficial evidence for demonstrating the effectiveness of 
+Table 1. Summary of relevant research on the application of HUD warning in avoiding pedestrian collisions.
+Authors
+Objective
+Safety-critical events
+Methods
+Observed variables
+Findings in pedestrian 
+events
+Liu and Wen, 
+(2004)
+Compare the difference 
+of driving 
+performance 
+between HUD 
+and HDD
+‹ Vehicles interact with 
+pedestrians on the road 
+outside the zebra crossing
+Driving simulation
+‹ Brake reaction time
+‹ Decreased brake 
+reaction time
+Naujoks and 
+Neukum (2014)
+Investigate the 
+influence of the 
+specificity and timing 
+of warnings on 
+drivers’ driving 
+performance
+‹ Vehicles interact with 
+pedestrians on the road 
+outside the zebra 
+crossing； 
+› Vehicles interact with 
+left-turning vehicles at the 
+intersection; 
+fi Vehicles interact with 
+cyclists at the intersection
+Driving simulation
+‹ Maximum brake 
+pedal pressure; 
+› Minimum Time-to- 
+arrival
+‹ Decreased maximum 
+brake pedal pressure; 
+› Increased 
+Minimum Time-to- 
+arrival
+Winkler et al., 
+(2015)
+Investigate the 
+influence of HUD 
+warning on drivers’ 
+gaze and driving 
+Behavior
+‹ Vehicles interact with 
+pedestrians on the road 
+outside the zebra crossing
+Driving simulation
+‹ Brake reaction time; 
+› Maximum braking 
+value; 
+fi Number of 
+collisions
+‹ Decreased brake 
+reaction time; 
+› Increases 
+maximum braking 
+value
+Hajiseyedjavadi 
+et al. (2018)
+Investigate the 
+effectiveness of 
+visual warnings on 
+young drivers’ hazard 
+anticipation and 
+hazard mitigation 
+abilities
+‹ Vehicles interact with 
+pedestrians on on roads 
+with and outside zebra 
+crossings; 
+› Vehicles interact with 
+vehicles on the road
+Driving simulation
+‹ Proportion of latent 
+hazards anticipated; 
+› Speed
+‹ Increased the 
+possibility of 
+glancing at the 
+potential pedestrian; 
+› Reduced speed
+Winkler et al. 
+(2018a)
+Investigate the 
+effectiveness of HUD 
+warnings under 
+different safe-critical 
+events
+‹ Vehicles interact with 
+pedestrians on the road 
+outside the zebra crossing 
+and at the intersection; 
+› Vehicles interact with 
+bicyclists on the road; 
+fi Vehicles interact with 
+the lead vehicle on the 
+road ; 
+fl Vehicles interact with 
+obstacles on the road;
+Driving simulation
+‹ Brake reaction time; 
+› Brake maximum; 
+fi Collision frequency
+‹ Decreased brake 
+reaction time; 
+› Increases 
+maximum braking 
+value
+Winkler et al. 
+(2018b)
+Investigate the 
+influence of multi- 
+stage collision 
+warning on drivers’ 
+driving performance
+‹ Vehicles interact with 
+pedestrians on the road 
+outside the zebra crossing 
+and at the intersection; 
+› Vehicles interact with 
+bicyclists on the road; 
+fi Vehicles interact with 
+the lead vehicle on the 
+road; 
+fl Vehicles interact with 
+obstacles on the road;
+Driving simulation
+‹ Brake reaction time; 
+› Brake maximum; 
+fi Collision frequency
+‹ Decreased brake 
+reaction time
+Large et al. (2019)
+Investigate the effect of 
+urgency and 
+modality of 
+pedestrian alert 
+warnings on driver 
+acceptance and 
+performance
+‹ Vehicles interact with 
+pedestrians on the road 
+outside the zebra crossing
+Driving simulation
+‹ TTC (Gaze on 
+Pedestrian); 
+› TTC (Foot off 
+Accelerator); 
+fi TTC (Foot on 
+Brake); 
+fl Headway (Car 
+Stopped)
+‹ Increased TTC (Foot 
+off Accelerator); 
+› Increased TTC 
+(Foot on Brake); 
+fi Increased 
+Headway (Car 
+Stopped)
+Ali, Sharma, et al. 
+(2020)
+Investigate the impact 
+of the connected 
+environment on 
+driving behavior and 
+safety
+‹ Vehicles interact with 
+pedestrians on the road 
+with zebra crossings
+Driving simulation
+‹ TTC
+‹ Increased TTC
+Haque et al. 
+(2021)
+Investigate the impact 
+of HUD warnings on 
+latent and observable 
+response time in the 
+connected 
+environment
+‹ Vehicles interact with 
+pedestrians on the road 
+with zebra crossings
+Driving simulation
+‹ Latent response time 
+; 
+› Observable 
+response time
+‹ Increased latent 
+response time; 
+› Decreased 
+observable response 
+time
+TTC is the abbreviation of time-to-collision.
+3726
+Y. ZHANG ET AL.
+
+--- Page 5 ---
+HUD and is currently the focus of scholars’ attention. 
+According to the driver’s cognitive avoidance process, the 
+perception and decision, manipulation, and risk-avoidance 
+result are the three main aspects of behavioral performance 
+(Dozza et al., 2020; Kudarauskas, 2007; W. Yang et al., 2019).
+Perception and decision are the processes in which the 
+driver recognizes the danger and makes a response. It is 
+usually measured accelerator pedal release time and brake 
+reaction time. Liu and Wen (2004) used driving simulation 
+to explore the driving performance of HUD and HDD when 
+completing different tasks. The results of ANOVA indicate 
+that compared to HDD, HUD improves the driver’s 
+response speed to pedestrians. Haque et al. (2021) divided 
+the driver response stage into the latent response phase and 
+the observable response phase and used driving simulation 
+to explore the impact of the HUD warning accompanied by 
+beeps on the two response stages in a connected environ­
+ment under the pedestrian crossing event at zebra crossing. 
+Through T-test, it was found that when providing HUD 
+warnings to drivers, they had a longer latent response time 
+and a shorter observable response time. Large et al. (2019) 
+designed a driving simulation experiment and used the 
+ANOVA method to study the impact of the urgency and 
+modality of pedestrian warning on driving performance. The 
+study found that providing earlier HUD warnings with vis­
+ual and/or auditory icon helps drivers locate potential 
+threats earlier and encourages them to start deceleration 
+operations earlier.
+Manipulation reflects the braking deceleration behavior 
+of the driver to avoid collisions, commonly characterized by 
+maximum deceleration, maximum brake pedal force, and 
+average speed. Hajiseyedjavadi et al. (2018) studied the 
+effectiveness of different warning timing on young drivers 
+hazard anticipation and hazard mitigation abilities through 
+driving simulation. Speed curve analysis revealed that the 
+HUD visual warning group, which received warnings 3 or 
+4 seconds in advance, maintained significantly lower driving 
+speeds compared to the control group or the 2-second warn­
+ing group. Naujoks and Neukum (2014) studied the effects 
+of HUD audio-visual warning time and warning specificity 
+(direction specificity and conflict specificity) on driver driv­
+ing performance through a driving simulator. The results of 
+repeated measurement analysis of variance suggest that pro­
+viding earlier warning (3.87s) in pedestrian crossing events 
+outside the zebra crossing can reduce the driver’s braking 
+intensity.
+The risk avoidance result is the ultimate manifestation of 
+the effectiveness of HUD warning on pedestrian collision 
+avoidance, which is often quantified by collision frequency, 
+minimum collision distance, time-to-collision (TTC)/time- 
+to-arrival (TTA) and other indicators. Taking pedestrian 
+crossing events outside the zebra crossing as an example, 
+Winkler et al. (2015) explored the impact of different HUD 
+visual warning contents (warning strategies and specificity) 
+on driver driving performance using a driving simulator. It 
+was found that all driver warnings affected the drivers’ per­
+formance positively. Although the number of collisions did 
+not decrease, the HUD warning significantly reduced the 
+severity of the collision. Ali et al. (2020) tested the impact of 
+the connected environment on driving behavior and safety 
+in various safety-critical scenarios through driving simula­
+tion experiments and conducted data analysis using a linear 
+mixed model (LMM). The results indicate that in a 
+connected environment, HUD pedestrian warnings accom­
+panied by beeps help drivers maintain a longer time-to- 
+collision to the pedestrian.
+In fact, the perception and decision, manipulation, and 
+risk avoidance result are not mutually independent. The 
+driver’s manipulation behavior will be influenced by the per­
+ception and decision, and the final risk avoidance result will 
+be jointly influenced by the perception and decision and 
+manipulation. They collectively reflect the driver’s braking 
+avoidance strategy. Previous studies have primarily explored 
+the impact of the HUD warning on driver perception and 
+decision, manipulation, and risk avoidance results from the 
+perspectives of warning modality, timing, and content. 
+However, it is currently unclear how different warning types 
+(HDD and HUD) affect driver braking risk avoidance strat­
+egies. The purpose of this paper is to explore how different 
+warning types (HDD and HUD) affect driver braking risk 
+avoidance strategies and whether the HUD warning can 
+help drivers choose the optimal braking risk avoidance 
+strategy.
+2.3. Test tool for HUD warning utility
+From Chapter 2.2, it can be seen that driving simulation has 
+become an important tool for testing the effectiveness of 
+HUD warnings. It allows to construct a connected environ­
+ment to realize effective interaction and real-time warning 
+among vehicle-to-vehicle, vehicle-to-cyclist and vehicle-to- 
+pedestrian (Ali et al., 2020). At the same time, it can create 
+safety-critical scenarios and various weather conditions, 
+allowing experimenters to observe user behavior in safe 
+environments without worrying about any accident costs 
+(Calvi et al., 2020). In addition, driving simulators can pro­
+vide a high degree of experimental control and fine-grained 
+driving behavior data, which has been widely used in micro- 
+driving behavior analysis (Raddaoui et al., 2020; Zhao et al., 
+2021). It is undeniable that driving simulations also have 
+certain limitations. Compared to real driving, the driver’s 
+psychological feelings and perception of speed and distance 
+information in driving simulation may be different (Ross 
+et al., 2021). It is worth noting that although driving simula­
+tions have inherent limitations, relative validity is still feas­
+ible with a driving simulator (Fisher et al., 2011; Galante 
+et al., 2010), which was confirmed by recent work by 
+Hussain et al. (2019) with respect to speed perception and 
+actual speed. The braking behavior of drivers in driving sim­
+ulators has also been proven to be comparable to real driv­
+ing (Boda et al., 2018). Previous studies on the effectiveness 
+testing of warning systems have also cited relevant literature 
+to theoretically demonstrate that the limitations of driving 
+simulations do not affect the effectiveness of research results 
+(Brijs et al., 2022; Winkler et al., 2018a). Based on this, driv­
+ing simulation is used as the testing tool for this study. By 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3727
+
+--- Page 6 ---
+using a highly simulated driving simulator and constructing 
+a more realistic road environment, this paper provides driv­
+ers with a more realistic driving experience, further narrow­
+ing the difference between driving simulation and the real 
+environment.
+2.4 A method of exploring multiple influencing factors
+Similar to general linear models and generalized linear mod­
+els, the generalized linear mixed model (GLMM) is also a 
+commonly used method for exploring influencing factors 
+and quantifying the degree of impact. The generalized linear 
+mixed model (GLMM) combines the characteristics of two 
+statistical frameworks: the linear mixed model (random 
+effects) and the generalized linear model (non-normal data), 
+which can deal with a variety of research designs and data 
+types, and fit data with non-normal distributions and com­
+plex correlation structures (Fei et al., 2013; Nelder & 
+Wedderburn, 1972). GLMM has been widely applied in 
+driving behavior research. Zhao et al. (2022) used GLMM to 
+explore the influence of driver attribute factors and takeover 
+situation factors and their interaction on takeover behavior. 
+Adavikottu and Velaga (2023) quantitatively analyzed the 
+impact of factors such as driver characteristics and different 
+levels of aggressive driver behavior on the collision risk at 
+unsignalized intersections using GLMM. Based on this, con­
+sidering the data structure and distribution, this paper 
+selects GLMM to quantitatively analyze the factors that 
+affect the driver’s braking avoidance strategy.
+3. Methods
+Based on a driving simulator, this paper has completed the 
+construction of the connected experimental scenario and the 
+development of HUD and HDD interfaces.
+All subjects must drive in six urban road scenarios: three 
+warning display types (Baseline/HDD/HUD) combined with 
+two weather conditions (clear weather/foggy weather). Then, 
+based on fine-grained driving behavior data, the risk avoid­
+ance process was characterized and indicators were 
+extracted. Finally, considering the data structure and distri­
+bution of this paper, the Generalized Linear Mixed Model 
+(GLMM) was used to explore the factors affecting brake 
+risk-avoidance strategies.
+3.1. Connected driving simulation experiment platform
+This paper builds a driving simulation experiment platform 
+under the connected environment, which is composed of the 
+driving simulation system, the human factor data-acquisition 
+system, the data collaborative processing center and the vehicle 
+terminal (human machine interface, HMI). Each component is 
+interconnected using wireless communication technology. The 
+architecture of the experimental platform is shown in Figure 1.
+3.1.1. Driving simulation system
+The driving simulation system is composed of a fixed-base 
+driving simulator and a computer located in Beijing 
+University of Technology, as shown in Figure 2. The driving 
+simulation system has the functions of virtual scenario 
+design and development, on-board data acquisition, data 
+transmission, etc. The design and development of virtual 
+scenarios include the construction of roads and the setting 
+of built-in parameters. After completion, the scenario is 
+imported into the driving simulation system, and the wea­
+ther, traffic flow and other scenario elements are added 
+through the application program interface (API). The on- 
+board data acquisition includes the operating parameters of 
+the vehicle and adjacent related vehicles (such as speed, 
+acceleration, brake-pedal depth, accelerator-pedal efficacy, 
+Figure 1. Connected driving simulation experiment platform.
+3728
+Y. ZHANG ET AL.
+
+--- Page 7 ---
+lateral position, etc.). The acquisition frequency is set to 
+30 Hz and transmitted to the collaborative data management 
+center through the user data protocol (UDP).
+3.1.2. Human factor data-acquisition system
+The human factor data-acquisition system obtains the drivers’ 
+eye-movement data through the eye-movement instrument. 
+This paper only analyzes driving behavior, and the eye-move­
+ment data obtained will be studied in other articles.
+3.1.3. Data collaborative processing center
+The data collaborative processing center receives the vehicle, 
+road and environment information from the driving simula­
+tion system in real time, and the transmission mode can be 
+regarded as the combination of V2V and V2I communica­
+tion. This information further filters and fuses the data; and 
+then interconnects with the vehicle terminal HMI over WiFi.
+3.1.4. Vehicle terminal HMI
+The vehicle terminal HMI involved in this paper was one of 
+either HDD or HUD. The HDD or HUD receives the fil­
+tered and fused data from the data collaborative processing 
+center and completes the real-time dynamic release of driv­
+ing assistance information.
+3.2. Experimental design
+3.2.1 Information interaction design
+The experimental design included three warning display 
+types, which were: Baseline, HDD and HUD. Only voice 
+navigation information was provided in the Baseline condi­
+tion, while HUD and HDD provide safety warning informa­
+tion in the connected environment.
+In the interface design of HUD, this paper comprehen­
+sively considered the cognitive ability of the driver, the size 
+limitation of the HUD (Strayer et al., 2019) and the current 
+situation of in-vehicle driving assistance system products 
+(Audi A7). At the same time, the interface design principles 
+of importance, use frequency, functional grouping and use 
+sequence were followed (Abdel-Aty et al., 2007). The HUD 
+interface in the connected environment was finally designed 
+and developed as shown in Figure 3. According to the con­
+tents of the information to be displayed, the HUD was div­
+ided into four sections: vehicle state information, navigation 
+information, safety warning information and entertainment 
+and communication information. The safety warning 
+information section can present continuous and on-time 
+event-triggered connected information, such as continuous 
+information about the spacing to the leader and event-trig­
+gered information about pedestrian crossing. The displayed 
+contents of each section are shown in Figure 3.
+The size of the HUD is greatly affected by the type of 
+vehicle and interface design, and there is no unified stand­
+ard. Taking into consideration the type of driving simulator 
+and the consistency with HDD size, we set the size of the 
+HUD interface at 215.5 mm  124.2 mm. The HUD was 
+developed using the SCANeR software, which was integrated 
+into the driving simulation, used WiFi real-time communi­
+cation, and was finally displayed on the road above the 
+steering wheel. In order to ensure the uniqueness of varia­
+bles, the interface design and size of the HDD were com­
+pletely consistent with those of the HUD. The only 
+difference was the position of the two displays. HDD was 
+displayed by HUAWEI pad M3 and placed in the right front 
+of the vehicle steering wheel, which was similar to the posi­
+tion of the central control panel in the vehicle. See Figure 4.
+3.2.2 Scenario design
+Six scenarios were designed for the experiment, covering 
+three warning display types (Baseline/HDD/HUD) combined 
+with two weather conditions (clear weather/foggy weather). 
+When using a warning display, the driver’s experiences from 
+start to finish are shown in Figure 5(a). The three warning 
+display types were connected into a loop, and the driver 
+drove a circle in each of the two weather conditions (clear 
+Figure 3. HDD/HUD interface design.
+Figure 2. Fixed-base driving simulator.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3729
+
+--- Page 8 ---
+weather/foggy weather). Except for the warning display type 
+and weather, the event design in all six scenarios is the 
+same. To avoid driving fatigue and learning effects, multiple 
+bus stops and roadside parked buses will be set up on the 
+road sections outside the scope of the event’s impact in each 
+scenario. Pedestrians or animals may appear behind some 
+parked buses. And we will change the color, number and 
+type of parked vehicles on the roadside. In addition, the sur­
+rounding environment (buildings, trees) also changes in 
+each scenario.
+The experimental scenario was a 4 km long urban road, 
+and five typical, hazardous events are designed, including 
+left-side vehicle merging, conflict with traffic in the opposite 
+direction, hidden pedestrian crossing outside the zebra 
+crossing, and conflict with turning left and emergency stop 
+of vehicle ahead, as shown in Figure 5(a). This paper only 
+considers the hidden pedestrian crossing event outside the 
+zebra crossing; the rest will be studied in other articles.
+The scenario design of the hidden pedestrian crossing 
+event outside the zebra crossing is shown in Figure 5(b). 
+The road where the event occurs is a two-way, four lane 
+road with a lane width of 3.5 m, a sidewalk width of 5 m 
+and a speed limit of 60 km/h. The experiment set up two 
+weather conditions: clear weather, and foggy weather with 
+visibility of 240 m. According to the “Grade of fog forecast” 
+(GB/T 27964 −2011, China), the visibility of dense fog con­
+dition is less than 500 m and more than 200 m. This visibil­
+ity fog reduces the driver’s perception of the surrounding 
+environment and speed, which can affect their decision and 
+behavior (Abdel-Aty et al., 2011; Yan et al., 2014). In the 
+free-flow state, there was a stable traffic flow in the left lane 
+of this road section, forcing the main vehicle to drive only 
+in the right lane, and there were no other vehicles ahead in 
+the main vehicle’s lane, so the longitudinal behavior of the 
+main vehicle was not constrained. The pedestrian was 2.5 m 
+away from the right edge line of the lane and was blocked 
+by the bus. In order to avoid learning effects as much as 
+possible, the type and color of buses will be changed during 
+scenario design, and some parked buses will be added on 
+the roadside, but no pedestrians will appear. The roadside 
+equipment/infrastructure detected the pedestrian (a typical 
+V2I case), and both the HUD and HDD in the connected 
+environment started issuing warning messages when the 
+main vehicle reached the point 100 m from the pedestrian. 
+When the main vehicle reached the point 60 m from the 
+pedestrian, the pedestrian was activated and began to cross 
+the road at a speed of 1 m/s. The main vehicle could only 
+slow down to avoid pedestrians, and the event ended after it 
+passed the pedestrian position.
+The HDD and HUD warnings designed in this paper are 
+accompanied by voice prompts. The voice prompt “pay 
+attention to pedestrians in front” started at 100 m from the 
+pedestrians, and the prompt was given only once. At the 
+same time, the safety warning section in the HUD and 
+HDD interface indicated the graphic symbol for pedestrians 
+crossing the road in front, and the warning graphic symbol 
+did not disappear until the vehicle passed the pedestrian 
+position, as shown in Figure 5(c).
+3.3. Participants
+In this experiment, subjects from universities and social 
+groups who met the requirements were recruited. The 
+recruited subjects needed to meet three conditions: (1) have 
+or obtain a motor vehicle driver’s license; (2) normal hear­
+ing and vision; and (3) no nausea, dizziness or other prob­
+lems. After screening, forty eligible subjects were recruited, 
+including five pre-experimenters and thirty-five formal 
+experimenters. The main purpose of the pre-experiment was 
+to test the rationality of the experimental design and 
+arrangement, so statistical analyses were not done. One of 
+the formal experimenters withdrew from the experiment due 
+to scheduling conflicts, so the final sample size was thirty- 
+four, of which twenty-five (73.53%) were male and nine 
+(26.47%) were female. The sex ratio was roughly in line with 
+current statistical characteristics of Chinese drivers (Ministry 
+of Public Security of the People’s Republic of China, 2020). 
+The subjects’ age is between 21 and 53 years (Mean ¼ 29.21, 
+SD ¼ 9.46). Their driving experience ranges between 1 and 
+22 years (Mean ¼ 6, SD ¼ 5.16). The demographic data for 
+the thirty-four subjects in the formal experiment are shown 
+in Table 2.
+In order to ensure the effectiveness of the results, it is 
+necessary to calculate the sample size required for the 
+experiment. The required sample size was calculated 
+according to the expected variance, target confidence 
+level and error amplitude (Chen et al., 2024; Zhao et al., 
+2021):
+Figure 4. HDD/HUD setting position.
+3730
+Y. ZHANG ET AL.
+
+--- Page 9 ---
+N ¼ ðza=2 þ zbÞ2r2
+e2 
+where N is the required sample size, za=2 is the upper (a=2)th 
+quantile of the standard normal distribution; zb is the upper 
+(b)th quantile of the standard normal distribution; r is the 
+standard deviation of the normal distribution population; e is 
+the difference between the true mean response of a test factor 
+and a reference value, which can be given by e ¼ 6dr 
+(Lerman, 1996), d is the meaningful difference, in practice, a 
+value between 0.25 and 0.5 is usually chosen as d if no prior 
+knowledge (Chow et al., 2017). Typically, a 5% level of sig­
+nificance is chosen to reflect a 95% confidence regarding the 
+unknown parameter, za=2¼1.96. To balance the power and 
+cost-effectiveness, a power of 80% and a meaningful differ­
+ence of 0.5 were used, zb¼0.84, d¼0.5. The results showed 
+that the required sample size in this research was 32, and the 
+number of participants in this study was 34. So the sample 
+size selected in this experiment met the requirements, and 
+could provide reliable answers to the research questions.
+Figure 5. Scenario design of the hidden pedestrian crossing event outside the zebra crossing.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3731
+
+--- Page 10 ---
+3.4. Experimental procedure
+There were six formal scenarios in the experiment (see 
+Section 3.2). Each subject was asked to drive in all six scen­
+arios to ensure a similar distribution of subject characteris­
+tics in the experiment. In order to eliminate the memory 
+effect as much as possible, the scenario orders for each par­
+ticipant were determined using a Latin square. In addition, 
+the six scenarios were arranged to be completed over two 
+working days, with an interval of three days in between. For 
+scenarios completed on the same day, subjects were required 
+to rest for five minutes after each scenario was completed, 
+and will be arranged to complete another city road scenario 
+that is not used for analysis. There are a total of six such 
+informal scenarios, with three assigned per workday. The 
+specific experimental steps were as follows:
+Before the test: ‹ subjects filled in a demographic ques­
+tionnaire, recording gender, age, driving experience and 
+other information; › the experimenter briefly introduced 
+the experimental process and the on-board information 
+interface to the subjects; the subjects were asked to complete 
+a pre-test in an informal test scenario to test whether the 
+subjects adapted to the driving simulator environment; fi 
+the experimenters read out the experimental instructions to 
+the subjects, and told them to follow their regular driving 
+habits, abide by the traffic rules and information guidance, 
+and complete the driving task safely.
+In the test: fl subjects adjusted their seats to sit in a 
+proper position; ° subjects conducted the driving simulation 
+experiment in Latin square order, with an individual experi­
+mental scenario lasting about five minutes; – after a single 
+scenario, subjects rested for approximate five minutes; † on 
+the first working day, subjects repeat steps fl–– to complete 
+the set of three formal experimental scenarios and three 
+informal experimental scenarios not used for analysis; ‡ after 
+three days, the remaining scenarios were completed in the 
+second working day, and experimental steps fl –† repeated.
+After the test: · the experimenters checked the behavioral 
+data records of the subjects. After verifying that there were 
+no missing data, each subject received a reward of 160 yuan.
+3.5. Data extraction
+For the hidden pedestrian crossing event outside the zebra 
+crossing, the warning point and pedestrian position are the 
+start and end points of the impact range for the event, 
+respectively; this was a length of 100 m, as shown in Figure 
+5(b). Basic driving behavior data were collected within these 
+100 m, including speed, acceleration, brake-pedal depth and 
+accelerator-pedal efficiency, etc. The required indicators can 
+be further calculated from basic driving behavior data.
+3.6. Process analysis and index extraction
+3.6.1. Description of braking risk-avoidance process
+In the experimental design of this paper, drivers can only 
+avoid danger by braking. Thus, this paper provides a 
+detailed description of the braking risk-avoidance process 
+for drivers under the hidden pedestrian crossing event out­
+side the zebra crossing. In the scenario of using an HUD in 
+clear weather, we selected one driver from 34 drivers and 
+drew a spatial variation diagram of his driving behavior 
+within 100 m from pedestrians, as shown in Figure 6. In this 
+figure, the ordinates are speed, acceleration, brake-pedal effi­
+ciency and accelerator-pedal efficiency, respectively; the 
+abscissa is the distance, where 0 m is the warning point of 
+the HUD and HDD, 40 m is the pedestrian trigger point, 
+and 100 m is the pedestrian point. Figure 6 contains two 
+dimensions: vertical and horizontal.
+3.6.1.1. Vertical dimension. According to the running char­
+acteristics of the vehicle, the vertical dimension is divided 
+into three levels: (i) manipulation, (ii) operation and (iii) 
+risk avoidance, and these three levels are progressive. (i) The 
+manipulation level reflects the manipulation and control 
+behavior of the vehicle, including the spatial-change curve 
+of brake-pedal efficiency and accelerator-pedal efficiency; (ii) 
+the operation level reflects the operation status of the 
+vehicle, including the spatial-change curve of speed and 
+acceleration; (iii) the risk-avoidance level reflects the driver’s 
+cognitive risk-avoidance process, including the start point of 
+risk avoidance (warning point) and the end point of risk 
+avoidance (minimum collision distance point).
+3.6.1.2. Horizontal dimension. According to the cognitive 
+processes of drivers, the horizontal dimension is divided 
+into three stages: (i) perception and decision, (ii) risk-avoid­
+ance manipulation and (iii) risk-avoidance result. (i) The 
+perception and decision stage reflects the driver’s percep­
+tion-judgment-decision process, starting from the warning 
+Table 2. Statistics of driver’s basic information.
+Attribute
+Level
+Number
+Ratio (%)
+Gender
+Male
+25
+73.53
+Female
+9
+26.47
+Age
+< 26
+16
+47.06
+26––57
+18
+52.94
+Driving experience
+Beginner (< 3 years)
+16
+47.06
+Middle (4–9 years)
+11
+32.35
+Senior (> 10 years)
+7
+20.59
+Driving frequency
+Rarely driving (Driving less than four times a month)
+20
+58.82
+Driving every week
+14
+41.18
+Prior experience with HUD
+Not at all
+15
+44.12
+Heard it before, but wasn’t sure what it was.
+10
+29.41
+Know but never used
+5
+14.71
+Used
+4
+11.76
+3732
+Y. ZHANG ET AL.
+
+--- Page 11 ---
+point (the risk-avoidance starting point) and ending at the 
+point of the first braking. The key points include the accel­
+erator-pedal release point and the first braking point. (ii) 
+The risk-avoidance manipulation stage reflects the process 
+in which the driver effects the deceleration through the 
+manipulation and adjustment of the brake pedal, starting at 
+the first braking point and ending at the minimum speed 
+point. The key points include the maximum deceleration 
+point and the braking end point. (iii) The risk-avoidance 
+result stage reflects the recovery process after the deceler­
+ation is completed, starting at the minimum speed point 
+and ending at the pedestrian point. The key points include 
+the minimum speed point and the minimum conflict dis­
+tance point (the risk-avoidance ending point). Based on the 
+detailed description of the whole braking risk-avoidance 
+process and the marking of key points in space, the braking 
+risk-avoidance strategy can be obtained.
+In order to verify that the key points we selected can 
+reflect different braking risk-avoidance processes and strat­
+egies, we further characterized the same driver’s spatial vari­
+ation of braking risk-avoidance process in the Baseline, 
+HDD and HUD groups under clear weather conditions, as 
+shown in Figure 7. Figure 7 marked the key points selected 
+in Figure 6, including the accelerator-pedal release point, the 
+first braking point, the maximum deceleration point, the 
+braking end point, the minimum speed point, and the min­
+imum conflict distance point. It can be seen that there are 
+differences in the key points among the Baseline, HDD and 
+HUD groups.
+3.6.2. Index extraction
+Based on the description of the process in the previous sec­
+tion, we selected the corresponding indicators from the 
+three stages of perception and decision; risk-avoidance 
+manipulation; and risk-avoidance results to reflect the driv­
+er’s braking risk-avoidance strategy (see Table 3).
+3.7. Model selection and construction
+3.7.1. Model selection
+This paper aims to explore the effects of three warning dis­
+play types (Baseline/HDD/HUD) combined with two wea­
+ther conditions (clear weather/foggy weather) on drivers’ 
+braking 
+risk-avoidance 
+strategies; 
+consider 
+differences 
+between drivers’ attributes (gender, driving experience, 
+Figure 6. Spatial variation of braking risk-avoidance processes in HUD group under clear weather conditions. (full name of abbreviations in the figure: accelerator- 
+pedal release point (APRP), first braking point (FBP), maximum deceleration point (DPmax), brake end point (BEP), minimum speed point (SPmin), minimum collision 
+distance point (CDPmin).
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3733
+
+--- Page 12 ---
+driving frequency); and the interaction among these differ­
+ent factors. In order to explore the factors affecting the indi­
+cators of the braking risk-avoidance strategy and quantify 
+the differences between levels of the same factor, taking into 
+account the distribution of the data (the Shapiro-Wilk test 
+showed that some of the experimental data do not follow 
+the normal distribution) and the random effects caused by 
+repeated experiments and differences between individuals, a 
+Generalized Linear Mixed Model (GLMM) was selected.
+3.7.2. GLMM construction
+Taking the six indicators extracted in Section 3.6 as depend­
+ent variables, six GLMMs were established. The independent 
+variables included fixed effects and random effects. The 
+fixed effects included warning display types, weather condi­
+tions, and driver attributes (gender, driving experience, driv­
+ing frequency). The random effects included: (i) correlation 
+of repeated measurement data (warning display types, wea­
+ther conditions); and (ii) individual heterogeneity (gender, 
+Figure 7. Spatial variation of braking risk-avoidance processes in baseline, HDD and HUD groups under clear weather conditions. (note that the blue lines and sym­
+bols represent the baseline group; grey lines and symbols represent the HDD group; purple lines and symbols represent the HUD group.) (the full name of the 
+abbreviations are consistent with those in Figure 6, and baseline, HDD and HUD of subscript forms combined with abbreviations respectively.).
+3734
+Y. ZHANG ET AL.
+
+--- Page 13 ---
+driving experience, driving frequency). The specific model 
+construction is included in Table 4.
+4. Results and discussion
+In this chapter, descriptive statistics were completed for six 
+indicators under different warning display types and weather 
+conditions. And a detailed analysis and discussion were con­
+ducted on the obtained GLMM results. Finally, the limita­
+tions and future research of this paper were explained.
+In order to ensure the effectiveness of the results, the 
+impact of the learning effect was separately tested. 
+According to the experimental order, all data were divided 
+into 6 groups. Considering that the data does not follow a 
+normal distribution (Shapiro-Wilk test) and the correlation 
+between samples, the Friedman test in the non parametric 
+test was selected, and the test results are shown in Table 5. 
+The results showed that there was no significant difference 
+in each indicator among different experimental order groups 
+(p > 0.05), indicating that the learning effect did not reach a 
+significant impact.
+4.1. Descriptive statistics
+Descriptive statistics were calculated for the six indicators 
+under different warning display type and weather conditions, 
+and the results were expressed in the form of mean value 
+(standard deviation, SD), as shown in Table 6. Scatter plots of 
+the six indicators for all thirty-four drivers using the different 
+warning display types are also shown. It can be seen from the 
+plots that there may be differences between indicators under 
+different warning display types and weather conditions.
+4.2. Model result analysis and discussion
+First, the data was pre-processed to delete abnormal or wrong 
+data according to Pauta standard, also referred to as 3r cri­
+terion (Du et al., 2021). Based on the processed data, the 
+GLMM was established, and the model was fit with the help 
+of SPSS 25. Then, the covariance structure with the minimum 
+Akaike information criterion (AIC) and Bayesian information 
+criterion (BIC) was selected. The fixed effects and fixed-effect 
+solutions for the model are shown in Tables 7 and 8.
+Table 3. Index system.
+Braking risk-avoidance  
+strategy
+Indexes
+Description
+Notes
+Perception and decision  
+stage
+Position of accelerator- 
+pedal release (m)
+Position of accelerator pedal release is the 
+distance between the driver’s first 
+accelerator pedal release point and the 
+warning point
+The driver senses the pedestrians in front 
+through warnings or observation. In order 
+to avoid a collision, the driver releases the 
+accelerator pedal, which represents the 
+driver’s perception stage.
+Position of first  
+braking (m)
+Position of first brake is the distance between 
+the driver’s first braking point and the 
+warning point.
+After perception takes place, the driver makes 
+a preliminary judgment according to the 
+current environment and the operational 
+status of the vehicle. Stepping on the brake 
+is the key point between judgment and 
+action.
+Risk-avoidance  
+manipulation stage
+Maximum deceleration  
+(m/s2)
+Maximum deceleration is the maximum 
+deceleration taken by the driver within the 
+100 m between the warning point and the 
+pedestrian position.
+The maximum deceleration is used to reflect 
+the urgency of the driver in the face of 
+hazard and the efforts that the driver needs 
+to make to avoid a collision.
+Braking distance (m)
+The braking distance is the distance that the 
+driver passed after stepping on the brake 
+pedal within the 100 m between the 
+warning point and the pedestrian position.
+The braking distance combined with the 
+maximum deceleration is used to reflect the 
+urgency of the driver in the face of hazard 
+and the stability of the deceleration control 
+process.
+Risk-avoidance  
+result stage
+Minimum collision  
+distance (m)
+Minimum collision distance is the minimum 
+collision distance between the main vehicle 
+and the pedestrian once the pedestrian 
+starts moving, until they leave the lane 
+where the main vehicle is located.
+The minimum collision distance reflects the 
+final risk-avoidance result.
+Position of minimum  
+speed (m)
+Minimum speed position is the distance 
+between the position where the driver 
+reaches the minimum speed and the 
+warning point.
+The driver slows down, reduces the speed to 
+the lowest point, and then accelerates 
+again. The position of minimum speed 
+reflects the end point of risk-avoidance in 
+the driver’s mind.
+Table 4. Model construction.
+Effect of type
+Factor
+Level
+Fixed/Random effects
+Warning display types
+Baseline/HDD/HUD
+Weather conditions
+clear weather/foggy weather
+Driver attributes
+Gender
+Male/Female
+Driving experience
+Beginner (<3 years) 
+Middle (4–9 years) 
+Senior (>10 years)
+Driving frequency
+Driving every week/ Rarely driving
+Dependent variables
+‹ Position of accelerator pedal release、› Position of first brake、 
+fi Maximum deceleration、fl Braking distance、° Minimum collision distance、– Position of minimum speed
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3735
+
+--- Page 14 ---
+Table 5. Results of learning effect test.
+Braking risk-avoidance strategy
+Indexes
+P
+Perception and decision stage
+Position of accelerator-pedal release (m)
+0.556
+Position of first braking (m)
+0.595
+Risk-avoidance manipulation stage
+Maximum deceleration (m/s2)
+0.581
+Braking distance (m)
+0.696
+Risk-avoidance result stage
+Minimum collision distance (m)
+0.331
+Position of minimum speed (m)
+0.054
+Table 6. Descriptive statistics.
+Indexes
+Warning display types
+Mean (SD)
+Scatter diagram
+Clear weather
+Foggy weather
+Position of accelerator-pedal release 
+(m)
+Baseline
+49.99 (11.53)
+55.02 (15.46)
+HDD
+32.02 (9.87)
+32.50 (15.33)
+HUD
+16.10 (6.81)
+13.34 (4.29)
+Position of first brake 
+(m)
+Baseline
+64.50 (10.22)
+68.22 (10.07)
+HDD
+53.16 (12.26)
+47.18 (12.73)
+HUD
+27.33 (7.98)
+23.96 (5.72)
+Maximum deceleration 
+(m/s2)
+Baseline
+−8.30 (1.94)
+−7.77 (2.66)
+HDD
+−6.94 (2.34)
+−6.59 (1.88)
+HUD
+−5.03 (1.23)
+−4.61 (1.12)
+Braking distance 
+(m)
+Baseline
+21.24 (5.12)
+19.55 (5.09)
+HDD
+27.00 (10.60)
+31.60 (10.61)
+HUD
+36.83 (8.08)
+36.73 (12.96)
+Minimum collision distance 
+(m)
+Baseline
+10.75 (6.97)
+10.63 (6.42)
+HDD
+15.02 (5.25)
+16.36 (5.38)
+HUD
+20.96 (6.58)
+21.65 (5.91)
+Position of minimum speed 
+(m)
+Baseline
+86.14 (7.85)
+86.94 (5.86)
+HDD
+81.24 (9.26)
+81.42 (8.41)
+HUD
+73.75 (12.64)
+74.52 (13.20)
+3736
+Y. ZHANG ET AL.
+
+--- Page 15 ---
+Table 7 only shows the variables that had significant 
+effects on the six indicators of a driver’s braking risk-avoid­
+ance strategy. First, in the two indicators for the perception 
+and decision stage, only the warning display type (p < 0.001) 
+had a statistical difference on the position of accelerator- 
+pedal release; warning display type (p < 0.001), driving fre­
+quency (p ¼ 0.019), interaction between gender and driving 
+experience (p ¼ 0.002), and interaction between driving 
+experience and driving frequency (p ¼ 0.009) had significant 
+effects on the position of first braking. Second, in the two 
+indicators for the risk-avoidance manipulation stage, there 
+were statistical differences in the effects of warning display 
+type (p < 0.001), weather conditions (p ¼ 0.016), driving 
+experience (p ¼ 0.009), interaction between weather condi­
+tions and gender (p ¼ 0.026), and interaction between driv­
+ing experience and driving frequency (p ¼ 0.008) on 
+maximum deceleration; the effects of warning display type 
+(p < 0.001) and the interaction between warning display type 
+and gender (p ¼ 0.021) on braking distance were statistically 
+different. Finally, in the two indicators for the risk-avoid­
+ance result stage, the impacts of warning display type 
+(p < 0.001), driving experience (p ¼ 0.017), driving frequency 
+(p ¼ 0.020), and the interaction between gender and driving 
+frequency (p ¼ 0.037) on the minimum conflict distance 
+were statistically different; only warning display type 
+(p < 0.001) had a significant effect on the position of min­
+imum speed.
+Table 8 only shows the variables that had significant 
+effects on the six indicators and gives the coefficients of 
+their fixed effect solutions. The difference between different 
+levels of the same independent variable is then obtained. 
+The analysis of Table 8 is divided into analysis of indicator 
+characteristics and analysis of influencing factors.
+4.2.1. Analysis of indicator characteristics
+Analysis of indicator characteristics refers to analyzing the 
+influencing factors of six indicators and the differences 
+between different levels of the same factor from three stages 
+in Table 8.
+4.2.1.1. Perception and decision stage 
+For the position of accelerator-pedal release and the position 
+of first braking, smaller values indicated closer proximity to 
+the starting position, which meant that the driver completed 
+the perception and decision stage earlier (Calvi et al., 2020).
+4.2.1.1.1. Position of accelerator-pedal release. Taking the 
+Baseline group as the reference, the position of accelerator- 
+pedal release for the HUD and HDD groups were signifi­
+cantly closer to the starting position (HUD: p < 0.001; HDD: 
+p < 0.001); of these, the HUD group was closer. Compared 
+to drivers with beginner driving experience (< 3 years), driv­
+ers with middle driving experience (4–9 years) released the 
+accelerator pedal earlier (p ¼ 0.030). Taking the Baseline 
+group as the reference, the interaction between the warning 
+display types and weather conditions showed that the HUD 
+group released the accelerator pedal earlier in foggy weather 
+than in clear weather (p ¼ 0.032); the interaction between 
+warning display types and driving experience showed that 
+the position of accelerator-pedal release for drivers with 
+middle driving experience was farther away than that of 
+drivers with beginner driving experience in the HDD and 
+HUD group (HDD: p ¼ 0.019；HUD: 0.076). This indicated 
+that HUD and HDD increased the driving confidence of 
+drivers with middle driving experience, and they chose to 
+release the accelerator pedal later. In other words, the 
+improvement of driving confidence also reduced their com­
+pliance with HUD and HDD.
+4.2.1.1.2. Position of first brake. Taking the Baseline group as 
+the reference, the position of first braking for the HUD and 
+HDD groups was closer to the starting position (HUD: 
+p < 0.001; HDD: p < 0.001) of these, the HUD group was 
+closer. In terms of driver attributes, drivers with senior driv­
+ing experience (> 10 years) started braking further away from 
+the starting point, as compared to drivers with beginner driv­
+ing experience (p ¼ 0.034); drivers who drive every week 
+started braking further away than drivers who rarely drive 
+(p ¼ 0.033). The reason for this may be that drivers with dif­
+ferent driving experiences have different observation strategies 
+(Crundall et al., 1999). After receiving a warning or perceiv­
+ing the hazard, experienced drivers will spend more time 
+observing the changes in the hazard to determine when to 
+brake (Yeung & Wong, 2015). An interesting finding is that 
+the distance required to complete the perception and decision 
+stages first decreases, and then increases with increasing driv­
+ing experience. Further exploration is needed to confirm this 
+pattern. Taking the Baseline group as a reference, the inter­
+action between the warning display types and weather condi­
+tions showed that the position of first braking of the HUD 
+and HDD groups in foggy weather was earlier than in clear 
+weather (HUD in foggy weather vs. HUD in clear weather, 
+p ¼ 0.035; HDD in foggy weather vs. HDD in clear weather, 
+p ¼ 0.011). This phenomenon was due to the fact that drivers’ 
+ability to perceive the outside environment decreases in foggy 
+weathers, and they rely more on the in-vehicle warning dis­
+plays, showing higher attention and compliance to the warn­
+ing information (Yue et al., 2018; Zhao et al., 2021b). The 
+interaction between warning display types and driving experi­
+ence showed that the position of first braking for drivers with 
+middle driving experience was further away than drivers with 
+beginner driving experience in the HDD group (p ¼ 0.042). 
+In the interaction between gender and driving experience, 
+taking male as the reference, the position of first braking of 
+females with senior driving experience was earlier than 
+females with beginner driving experience (p < 0.001). In the 
+interaction between driving frequency and driving experience, 
+taking drivers who rarely drive as the reference, drivers with 
+senior driving experience (>10 years) showed an earlier first 
+braking position than those with beginner driving experience 
+(<3 years) among drivers who drive every week (> 10 years) 
+(p ¼ 0.004).
+4.2.1.2. Risk-avoidance manipulation stage 
+Smaller absolute values of maximum deceleration and 
+greater braking distances indicated a lower degree of 
+urgency in the manipulation stages (Winkler et al., 2018b).
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3737
+
+--- Page 16 ---
+Table 7. Fixed effect.
+Indexes
+Perceptual and decision stage
+Risk-avoidance manipulation stage
+Risk-avoidance result stage
+Position of 
+accelerator pedal 
+release (m) 
+F(P)
+Position of first 
+braking (m) 
+F(P)
+Maximum 
+deceleration (m/ 
+s2) 
+F(P)
+Braking distance 
+(m) 
+F(P)
+Minimum 
+collision distance 
+(m) 
+F(P)
+Position of 
+minimum speed 
+(m) 
+F(P)
+Warning display types
+164.732 
+(<0.001)
+170.244 
+(<0.001)
+40.513 
+(<0.001)
+30.513 
+(<0.001)
+32.983 
+(<0.001)
+23.157 
+(<0.001)
+Weather conditions
+0.194 
+(0.660)
+1.285 
+(0.259)
+5.956 
+(0.016)
+0.784 
+(0.377)
+0.022 
+(0.882)
+0.365 
+(0.547)
+Driver attributes
+Gender
+1.198 
+(0.275)
+3.496 
+(0.063)
+0.406 
+(0.525)
+2.966 
+(0.087)
+0.838 
+(0.361)
+1.059 
+(0.305)
+Driving 
+experience
+0.116 
+(0.890)
+2.483 
+(0.087)
+4.864 
+(0.009)
+0.701 
+(0.498)
+4.206 
+(0.017)
+1.549 
+(0.216)
+Driving frequency
+0.283 
+(0.595)
+5.584 
+(0.019)
+0.345 
+(0.558)
+0.638 
+(0.426)
+5.475 
+(0.020)
+0.016 
+(0.901)
+Interaction effect
+Warning display 
+types 
+Weather 
+conditions
+2.580 
+(0.079)
+3.877 
+(0.023)
+0.046 
+(0.955)
+2.188 
+(0.115)
+0.164 
+(0.849)
+0.024 
+(0.977)
+Warning display 
+types 
+Gender
+1.042 
+(0.355)
+0.665 
+(0.516)
+0.230 
+(0.795)
+3.968 
+(0.021)
+0.569 
+(0.567)
+2.833 
+(0.062)
+Weather 
+conditions 
+ Gender
+0.166 
+(0.684)
+0.148 
+(0.701)
+5.054 
+(0.026)
+0.053 
+(0.819)
+0.077 
+(0.782)
+0.366 
+(0.546)
+Gender 
+Driving 
+experience
+1.086 
+(0.340)
+6.417 
+(0.002)
+1.723 
+(0.182)
+0.267 
+(0.766)
+2.607 
+(0.077)
+2.348 
+(0.099)
+Gender 
+Driving 
+frequency
+0.376 
+(0.540)
+3.878 
+(0.051)
+1.204 
+(0.274)
+0.790 
+(0.376)
+4.442 
+(0.037)
+0.437 
+(0.509)
+Driving frequency 
+Driving 
+experience
+1.468 
+(0.233)
+4.871 
+(0.009)
+4.905 
+(0.008)
+1.776 
+(0.173)
+0.446 
+(0.641)
+0.166 
+(0.847)
+Covariance type
+Variance 
+component
+First order 
+Autoregression
+Variance 
+component
+Variance 
+component
+Variance 
+component
+Variance 
+component
+AIC
+1364.028
+1246.825
+753.870
+1267.496
+1150.048
+1310.295
+BIC
+1391.185
+1273.041
+783.844
+1297.126
+1179.679
+1340.065
+Significant at 10% (bold values).
+Significant at the 5% (bold values).
+3738
+Y. ZHANG ET AL.
+
+--- Page 17 ---
+Table 8. Model fixed effect solution.
+Indexes
+Level
+Perceptual and decision stage
+Risk-avoidance manipulation stage
+Risk-avoidance result stage
+Position of accelerator pedal  
+release Coefficient  
+(m) (P)
+Position of first  
+braking Coefficient  
+(m) (P)
+Maximum  
+deceleration 
+Coefficient (m/s2) (P)
+Braking  
+distance 
+Coefficient (m) (P)
+Minimum collision  
+distance 
+Coefficient (m) (P)
+Position of  
+minimum speed 
+Coefficient (m) (P)
+Intercept
+51.906 
+(<0.001)
+62.067 
+(<0.001)
+27.683 
+(<0.001)
+21.761 
+(<0.001)
+9.430 
+(<0.001)
+86.848 
+(<0.001)
+Warning display types
+HUD 
+(Baseline)
+236.292 
+(<0.001)
+239.104 
+(<0.001)
+3.451 
+(<0.001)
+19.595 
+(<0.001)
+9.412 
+(<0.001)
+29.194 
+(0.018)
+HDD 
+(Baseline)
+223.822 
+(<0.001)
+215.242 
+(<0.001)
+1.832 
+(0.018)
+8.268 
+(0.008)
+6.186 
+(0.007)
+26.366 
+(0.042)
+Driving experience
+Senior (>10 years) 
+(Beginner (<3 years))
+1.782 
+(0.734)
+10.228 
+(0.034)
+22.283 
+(0.012)
+26.683 
+(0.030)
+2.446 
+(0.418)
+−0.246 
+(0.949)
+Middle (4–9 years) 
+(Beginner (<3 years))
+29.716 
+(0.030)
+−4.480 
+(0.263)
+−0.318 
+(0.678)
+−1.792 
+(0.535)
+4.145 
+(0.098)
+−3.818 
+(0.241)
+Driving frequency
+Driving every week 
+(Rarely driving)
+−0.852 
+(0.840)
+8.108 
+(0.033)
+−0.980 
+(0.184)
+0.100 
+(0.967)
+−0.826 
+(0.730)
+2.041 
+(0.515)
+Warning display types 
+
+Weather condition
+HUDFoggy weather 
+(HUDClear weather)
+27.724 
+(0.032)
+27.800 
+(0.035)
+−0.183 
+(0.768)
+1.385 
+(0.646)
+0.626 
+(0.784)
+0.153 
+(0.966)
+HDDFoggy weather 
+(HDDClear weather)
+−4.170 
+(0.371)
+29.181 
+(0.011)
+−0.184 
+(0.799)
+6.171 
+(0.038)
+1.207 
+(0.570)
+−0.529 
+(0.854)
+BaselineFoggy weather
+0a
+0a
+0a
+0a
+0a
+0a
+BaselineClear weather
+0a
+0a
+0a
+0a
+0a
+0a
+Warning display types 
+
+Gender
+HUDFemale 
+(HUDMen)
+−3.466 
+(0.431)
+0.325 
+(0.942)
+−0.503 
+(0.503)
+28.761 
+(0.019)
+2.873 
+(0.307)
+29.125 
+(0.038)
+BaselineFemale
+0a
+0a
+0a
+0a
+0a
+0a
+BaselineMale
+0a
+0a
+0a
+0a
+0a
+0a
+Warning display types 
+
+Driving experience
+HUDMiddle (4–9 years) 
+(HUDBeginner (<3 years))
+7.359 
+(0.076)
+5.169 
+(0.226)
+0.011 
+(0.988)
+0.966 
+(0.782)
+−1.453 
+(0.583)
+4.659 
+(0.262)
+HDDMiddle (4–9 years) 
+(HDD Beginner (<3 years))
+12.711 
+(0.019)
+8.513 
+(0.042)
+21.449 
+(0.085)
+0.727 
+(0.830)
+26.036 
+(0.014)
+5.899 
+(0.080)
+BaselineSenior (>10 years)
+0a
+0a
+0a
+0a
+0a
+0a
+BaselineMiddle (4–9 years)
+0a
+0a
+0a
+0a
+0a
+0a
+BaselineBeginner (<3 years)
+0a
+0a
+0a
+0a
+0a
+0a
+Weather conditions 
+
+Gender
+Foggy weatherFemale 
+(Foggy weatherMale)
+1.209 
+(0.684)
+1.422 
+(0.701)
+1.206 
+(0.026)
+0.629 
+(0.819)
+−0.590 
+(0.782)
+1.901 
+(0.546)
+Clear weatherFemale
+0a
+0a
+0a
+0a
+0a
+0a
+Clear weatherMale
+0a
+0a
+0a
+0a
+0a
+0a
+Gender 
+
+Driving experience
+FemaleSenior (>10years) 
+(FemaleBeginner (<3years))
+−6.085 
+(0.192)
+220.252 
+(<0.001)
+0.146 
+(0.869)
+2.562 
+(0.539)
+7.843 
+(0.032)
+−7.941 
+(0.112)
+FemaleMiddle (4–9 years) 
+(FemaleBeginner (<3years))
+1.221 
+(0.750)
+−3.187 
+(0.506)
+21.173 
+(0.082)
+−0.796 
+(0.817)
+3.293 
+(0.221)
+27.308 
+(0.069)
+MaleSenior (>10 years)
+0a
+0a
+0a
+0a
+0a
+0a
+MaleMiddle (4–9 years)
+0a
+0a
+0a
+0a
+0a
+0a
+MaleBeginner (<3 years)
+0a
+0a
+0a
+0a
+0a
+0a
+Gender 
+
+Driving frequency
+FemaleDriving every week 
+(FemaleRarely driving)
+3.484 
+(0.540)
+14.468 
+(0.051)
+−1.198 
+(0.274)
+−5.080 
+(0.376)
+29.071 
+(0.037)
+4.018 
+(0.509)
+MaleDriving every week
+0a
+0a
+0a
+0a
+0a
+0a
+MaleRarely driving
+0a
+0a
+0a
+0a
+0a
+0a
+Driving frequency
+Driving experience
+Driving every weekSenior (>10 years) 
+(Driving every weekBeginner (<3 years))
+−0.198 
+(0.958)
+−14.146 
+(0.004)
+2.321 
+(0.002)
+5.790 
+(0.090)
+0.981 
+(0.716)
+−1.222 
+(0.761)
+Rarely drivingSenior (>10 years)
+0a
+0a
+0a
+0a
+0a
+0a
+Rarely drivingMiddle (4–9 years)
+0a
+0a
+0a
+0a
+0a
+0a
+Rarely drivingBeginner (<3 years)
+0a
+0a
+0a
+0a
+0a
+0a
+Significant at 10% (bold values).
+Significant at the 5% (bold values).
+0aReference item.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3739
+
+--- Page 18 ---
+4.2.1.2.1. Maximum deceleration. Taking the Baseline group 
+as the reference, the absolute value of the maximum deceler­
+ation of the HUD and HDD groups decreased significantly 
+(HUD: p < 0.001; HDD: p ¼ 0.018); of these, the HUD group 
+decreased the most. The absolute value of the maximum 
+deceleration of drivers with senior driving experience was 
+greater than drivers with beginner driving experience 
+(p ¼ 0.012). In the interaction between weather conditions 
+and gender, taking clear weather as the reference, the abso­
+lute value of the maximum deceleration taken by females 
+was smaller than that of males in foggy weather (p ¼ 0.026). 
+In the interaction between driving frequency and driving 
+experience, taking drivers who rarely drive as the reference, 
+the absolute value of the maximum deceleration of drivers 
+with senior driving experience was smaller than drivers with 
+beginner driving experience among drivers who drive every 
+week (p ¼ 0.002).
+4.2.1.2.2. Braking distance. Taking the Baseline group as the 
+reference, the braking distances of the HUD and HDD 
+groups were longer (HUD group: p < 0.001; HDD group: 
+p ¼ 0.008); of these, the HUD group’s were the longest. The 
+braking distance of drivers with senior driving experience 
+was shorter than drivers with beginner driving experience 
+(p ¼ 0.030). The farther position of accelerator-pedal release 
+and first braking during the perception and decision stages 
+make it necessary to take more urgent braking actions dur­
+ing the risk-avoidance manipulation phase. Taking the 
+Baseline group as the reference, the interaction between 
+warning display types and weather conditions showed that 
+the braking distance in foggy weather was longer than that 
+in clear weather in the HDD group (p ¼ 0.038); and the 
+interaction between warning display types and gender, 
+showed that the braking distance of female drivers was 
+shorter than that of male drivers in the HUD group 
+(p ¼ 0.019).
+4.2.1.3. Risk-avoidance result stage 
+Greater minimum collision distances and an earlier position 
+of the minimum speed indicated better risk-avoidance 
+results (Z. Yang et al., 2019).
+4.2.1.3.1. Minimum collision distance. Taking the Baseline 
+group as the reference, the minimum conflict distances of 
+the HUD and HDD groups were longer (HUD: p < 0.001; 
+HDD: p ¼ 0.007); of these, the HUD group’s were the lon­
+gest. In the interaction between warning display types and 
+driving experience, taking the Baseline group as the refer­
+ence, the minimum conflict distance of drivers with middle 
+driving experience was smaller than that of drivers with 
+beginner driving experience in the HDD group (p ¼ 0.014). 
+Taking male as the reference, the interaction between gender 
+and driving experience showed that females with senior 
+driving experience have a greater minimum conflict distance 
+than drivers with beginner driving experience (p ¼ 0.032); 
+the interaction between gender and driving frequency 
+showed that females who drive every week have a lower 
+minimum conflict distance than drivers who rarely drive 
+(p ¼ 0.037).
+4.2.1.3.2. Position of minimum speed. Taking the Baseline 
+group as the reference, the positions of minimum speed of 
+the HUD and HDD groups were earlier (HUD: p ¼ 0.018; 
+HDD: p ¼ 0.042); of these, the HUD group’s were the ear­
+liest. Taking the Baseline group as the reference, the inter­
+action between warning display types and gender showed 
+that females reached the position of minimum speed earlier 
+than males in the HUD group (p ¼ 0.038).
+4.2.2. Analysis of influencing factors
+Analysis of influencing factors refers to analyzing the overall 
+variation patterns of the three influencing factors of warning 
+display type, weather, and driver attributes in three stages in 
+Table 8.
+4.2.2.1. Warning display types. It can be seen that HUD 
+and HDD in the connected environment help drivers allo­
+cate the distance spent in the three stages more reasonably, 
+helping them choose better braking risk-avoidance strategies, 
+and that HUD performs better than HDD. Specifically, 
+HUD can shorten perceived reaction distance and greatly 
+enhance the driver’s ability to perceive danger. It enables the 
+driver to appropriately extend the braking distance and 
+adopt a more comfortable deceleration behavior under cur­
+rent conditions. At the same time, it can increase the min­
+imum conflict distance and effectively improve the ultimate 
+level of safety. There is evidence that HUD pedestrian warn­
+ings change the braking process from a panic brake (slow 
+reaction, hard brake) to a comfortable brake (quick reaction, 
+gentle brake).
+4.2.2. 2. Weather conditions. Weather conditions are also an 
+important factor affecting the braking risk-avoidance strat­
+egy. Research shows that fog absents a separate main effect 
+on the six indicators of braking risk-avoidance strategy. 
+There are two explanations for this phenomenon: First, it 
+may be related to the level of fog. This paper only consid­
+ered dense fog with visibility of 240 m. Whether there are 
+significant differences under fog conditions with lower visi­
+bility, needs to be further explored. Second, it may be that 
+drivers are more attentive and careful in foggy weather (Wu 
+et al., 2018; Wu et al., 2018). Drivers’ more cautious behav­
+ior in fog may offset the reduction in driving performance 
+caused by the reduced visibility. Although there is no signifi­
+cant main effect, weather conditions and warning display 
+types showed a significant interaction effect. HDD and 
+HUD warnings improved the drivers’ braking risk-avoidance 
+strategy under fog conditions, especially helping the driver 
+to complete the perception decision stage earlier, leaving 
+more space for the driver to adjust the manipulation behav­
+ior. However, the failure to improve the final avoidance out­
+come may be due to the milder braking process offsetting 
+the advantages of the risk-avoidance result stage.
+4.2.2.3. Driver attributes. Among the driver attributes, the 
+main effect of gender on the six indicators of braking risk- 
+avoidance strategy was not significant (Wu et al., 2018). 
+3740
+Y. ZHANG ET AL.
+
+--- Page 19 ---
+Compared to drivers with beginner driving experience who 
+rarely drive, drivers with senior driving experience who 
+drive every week tend to engage in braking behaviors later 
+and more urgently. It is worth noting that compared to 
+drivers with beginner driving experience, drivers with mid­
+dle driving experience choose to take braking action earlier 
+and complete danger avoidance earlier. The warning display 
+types have different effects on drivers with different attrib­
+utes. In this regard, HUD effectively improved females’ final 
+risk-avoidance ability; HUD and HDD increased the driving 
+confidence of drivers with middle driving experience and 
+enabled them to choose more confident braking avoidance 
+strategies (Luzuriaga et al., 2022).
+To sum up, at the application level, the application of 
+HUD warning in emergencies is worth promoting, especially 
+in high-risk scenarios where the driver’s line of sight is 
+obstructed, such as hidden pedestrian crossing event outside 
+the zebra crossing. When the driver’s perception and deci­
+sion abilities decrease due to external conditions (such as 
+foggy weather), the setting of HDD and HUD warnings will 
+be more valuable. In the promotion process of HUD, it is 
+recommended to provide pre use training for drivers to 
+increase their trust and familiarity with HUD warnings. At 
+the same time, different warning forms and timing can be 
+set for drivers with different attributes to meet the personal­
+ized needs of each driver. Before HUD can be widely pro­
+moted, it is necessary to conduct sufficient effectiveness 
+testing on HUD. Additionally, during the testing process, 
+the impact of HUD warning on driver perception and deci­
+sion, risk-avoidance manipulation, and risk-avoidance result 
+stages should be considered. At least 1–2 appropriate indica­
+tors should be selected for each stage, such as position of 
+accelerator pedal release and position of first braking (per­
+ception and decision stage), braking distance and maximum 
+deceleration (risk-avoidance manipulation stage), minimum 
+conflict distance or position of minimum speed (risk-avoid­
+ance result stage), etc.
+4.3. Limitations and future research
+This paper also has the following limitations and related 
+work to be done in the future. First, with the development 
+of augmented reality (AR), as a new visual display type, AR- 
+HUD has recently been used to release navigation informa­
+tion or warning information, and it has been considered 
+that it may play a greater role in the future (Fremont et al., 
+2020; Hwang et al., 2015; Schwarz & Fastenmeier, 2017). 
+This paper only studies HDD and HUD, and the influence 
+of AR-HUD will be studied in the future. Second, fog was 
+often used in previous studies as a typical case of reduced 
+visibility. This paper has explored the impact of dense fog 
+on driver braking risk-avoidance strategies. In the future, 
+research on different levels of foggy weather and other 
+adverse weather conditions (e.g., rain and snow) can be 
+added. The third is the difference between the experimental 
+results of the driving simulator and the real-vehicle test. 
+This difference is inevitable, but it can be reduced by cali­
+bration. In the future, we can calibrate this difference 
+through real-vehicle testing, and the experimental results 
+after calibration will be more realistic. Finally, the learning 
+effect is also a common issue in driving simulation experi­
+ments. Although the learning effect of this paper is not sig­
+nificant and will not affect the experimental results through 
+testing, it still exists. In future experiments, we can try to 
+avoid learning effects as much as possible by increasing the 
+complexity of the scenario and the rest time of the driver. 
+And the learning effect will be measured through subjective 
+questionnaires as an auxiliary measure.
+5. Conclusion
+In the high-risk scenario of hidden pedestrian crossing event 
+outside the zebra crossing, this paper studied the influence 
+of three warning display types (Baseline/HDD/HUD) com­
+bined with two weather conditions (clear weather/foggy wea­
+ther) on a driver’s braking risk-avoidance strategy. It also 
+considered the driver’s attributes as factors. The driving 
+behavior data of thirty-four participants were obtained 
+through a driving simulator. Based on the description of the 
+process, an index system of braking risk-avoidance strategies 
+was established. A GLMM was used to explore the influence 
+of different factors (warning display types, weather condi­
+tions and driver attributes) on the six indicators, the differ­
+ences between different levels of the same factor, and the 
+interaction effects between different factors.
+‹ The results showed that warning display types, driving 
+experience and driving frequency had a significant main effect 
+on the braking risk-avoidance strategy. Compared to the 
+Baseline conditions and HDD warning, HUD warning helps 
+drivers 
+choose 
+the 
+optimal 
+risk 
+avoidance 
+strategy. 
+Specifically, the drivers reacted at positions closer to the start­
+ing point; braked more smoothly and gently; and maintained 
+a greater safety margin between themselves and the pedes­
+trian. Drivers with senior driving experience and who drive 
+every week tended to spend more time in the perception and 
+decision stage to observe the changes in the hazard.
+› Warning display type and weather conditions, driving 
+experience and driving frequency showed interaction effects 
+on braking and risk-avoidance strategies. The HUD and 
+HDD in foggy weather significantly improved the driver’s 
+perception and decision ability. Females braked more 
+urgently and completed risk-avoidance earlier when using 
+HUD. Drivers with middle driving experience tended to 
+adopt confident strategies when using HDD. Warning dis­
+play types may be particularly useful for inclement weather 
+and different types of drivers.
+The contribution of this paper can be summarized as the 
+following three points: First of all, the HUD test platform in 
+the connected environment constructed by the driving simu­
+lator can be widely used to test the HUD effectiveness in 
+other safety-critical events (e.g., left-side vehicle merging 
+and conflict with turning left), and it can also be used to 
+carry out AR-HUD related tests in the future. Secondly, 
+based on the detailed description of the braking risk-avoid­
+ance process under pedestrian crossing events outside the 
+zebra crossing, an index system for studying the braking 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3741
+
+--- Page 20 ---
+risk-avoidance strategy was constructed. Ultimately, a gen­
+eral research method for testing and evaluating the effective­
+ness of the HUD warning system in such braking risk- 
+avoidance events was formed. The research results support 
+the development and implementation of design regulations 
+for HUD, provide a reference for the rationalization and 
+personalized design of HUD warning systems.
+Disclosure statement
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influ­
+ence the work reported in this paper.
+Funding
+This study is supported by the Beijing Natural Science Foundation 
+Fengtai Rail Transit Frontier Research Joint Foundation (Grant No. 
+ZD038001202201).
+References
+Abdel-Aty, M., Ekram, A. A., Huang, H., & Choi, K. (2011). A study 
+on crashes related to visibility obstruction due to fog and smoke. 
+Accident; Analysis and Prevention, 43(5), 1730–1737. https://doi.org/ 
+10.1016/j.aap.2011.04.003
+Abdel-Aty, M., Pande, A., Lee, C., Gayah, V., & Santos, C. D. (2007). 
+Crash risk assessment using intelligent transportation systems data 
+and real-time intervention strategies to improve safety on freeways. 
+Journal of Intelligent Transportation Systems, 11(3), 107–120. https:// 
+doi.org/10.1080/15472450701410395
+Ablaßmeier, M., Poitschke, T., Wallhoff, F., Bengler, K., Rigoll, G. 
+(2007). Eye gaze studies comparing head-up and head-down displays 
+in vehicles. In Proceedings of the 2007 IEEE International Conference 
+on Multimedia and Expo, ICME 2007, 2250–2252. https://doi.org/10. 
+1109/icme.2007.4285134
+ACI-ISTAT Incidenti stradali 2017 (2017). ACI-ISTAT Incidenti stra­
+dali 2017. www.istat.it/it/files//2018/07/Incidenti-stradali_ 2017.pdf 
+(in Italian)
+Adavikottu, A., & Velaga, N. R. (2023). Analysis of speed reductions 
+and crash risk of aggressive drivers during emergent pre-crash scen­
+arios 
+at 
+unsignalized 
+intersections. 
+Accident; 
+Analysis 
+and 
+Prevention, 187, 107088. https://doi.org/10.1016/j.aap.2023.107088
+Ahmed, M. M., Yang, G., & Gaweesh, S. (2020). Assessment of drivers’ 
+perceptions of connected vehicle–human machine interface for driv­
+ing under adverse weather conditions: preliminary findings from 
+Wyoming. Frontiers in Psychology, 11, 1889. https://doi.org/10.3389/ 
+fpsyg.2020.01889
+Ali, Y., Sharma, A., Haque, M. M., Zheng, Z., & Saifuzzaman, M. 
+(2020). The impact of the connected environment on driving behav­
+ior and safety: A driving simulator study. Accident; Analysis and 
+Prevention, 144, 105643. https://doi.org/10.1016/j.aap.2020.105643
+Aust, M. L., Engstr€om, J., & Vistr€om, M. (2013). Effects of forward col­
+lision warning and repeated event exposure on emergency braking. 
+Transportation Research Part F: Traffic Psychology and Behaviour, 
+18, 34–46. https://doi.org/10.1016/j.trf.2012.12.010
+Boda, C. N., Dozza, M., Bohman, K., Thalya, P., Larsson, A., & Lubbe, 
+N. (2018). Modelling how drivers respond to a bicyclist crossing 
+their path at an intersection: How do test track and driving simula­
+tor compare? Accident; Analysis and Prevention, 111, 238–250. 
+https://doi.org/10.1016/j.aap.2017.11.032
+Brijs, T., Mauriello, F., Montella, A., Galante, F., Brijs, K., & Ross, V. 
+(2022). Studying the effects of an advanced driver-assistance system 
+to improve safety of cyclists overtaking. Accident; Analysis and 
+Prevention, 174, 106763. https://doi.org/10.1016/j.aap.2022.106763
+Calvi, A., D’Amico, F., Ferrante, C., & Bianchini Ciampoli, L. (2020). 
+Effectiveness of augmented reality warnings on driving behaviour 
+whilst approaching pedestrian crossings: A driving simulator study. 
+Accident; Analysis and Prevention, 147, 105760. https://doi.org/10. 
+1016/j.aap.2020.105760
+Chen, H., Zhao, X., Li, Z., Fu, Q., Wang, Q., & Zhao, L. (2024). 
+Construction and analysis of driver takeover behavior modes based 
+on situation awareness theory. IEEE Transactions on Intelligent 
+Vehicles, 9(2), 4040–4054. https://doi.org/10.1109/TIV.2023.3280077
+Chow, S. C., Shao, J., Wang, H., & Lokhnygina, Y. (2017). Sample size 
+calculations in clinical research. Chapman and Hall/CRC. https:// 
+doi.org/10.1201/9781315183084
+Cicchino, J. B. (2017). Effectiveness of forward collision warning and 
+autonomous emergency braking systems in reducing front-to-rear 
+crash rates. Accident; Analysis and Prevention, 99(Pt A), 142–152. 
+https://doi.org/10.1016/j.aap.2016.11.009
+Crundall, D., Underwood, G., & Chapman, P. (1999). Driving experi­
+ence and the functional field of view. Perception, 28(9), 1075–1087. 
+https://doi.org/10.1068/p281075
+Dozza, M., Boda, C. N., Jaber, L., Thalya, P., & Lubbe, N. (2020). How 
+do drivers negotiate intersections with pedestrians? The importance 
+of pedestrian time-to-arrival and visibility. Accident; Analysis and 
+Prevention, 141, 105524. https://doi.org/10.1016/j.aap.2020.105524
+Du, Z., Wang, S., Yang, L., Ni, Y., & Jiao, F. (2021). Experimental 
+study on the efficacy of retroreflective rings in the curved freeways 
+tunnels. Tunnelling and Underground Space Technology, 110(3), 
+103813. https://doi.org/10.1016/j.tust.2021.103813
+Fei, Y., Chen, F., Yu, D. L., & Han, J. L. (2013). Linear and generalized 
+linear mixed models and their statistical diagnosis.
+Fisher, D. L., Rizzo, M., Caird, J. K., & Lee, J. D. (2011). Handbook of 
+driving simulation for engineering, medicine, and psychology 
+https://doi.org/10.1201/b10836-2
+Fremont, V., Phan, M. T., & Thouvenin, I. (2020). Adaptive visual 
+assistance system for enhancing the driver awareness of pedestrians. 
+International Journal of Human–Computer Interaction, 36(9), 856– 
+869. https://doi.org/10.1080/10447318.2019.1698220
+Galante, F., Mauriello, F., Montella, A., Pernetti, M., Aria, M., & 
+D’Ambrosio, A. (2010). Traffic calming along rural highways cross­
+ing small urban communities: Driving simulator experiment. 
+Accident; Analysis and Prevention, 42(6), 1585–1594. https://doi.org/ 
+10.1016/j.aap.2010.03.017
+Gao, K., Tu, H., Sun, L., Sze, N. N., Song, Z., & Shi, H. (2020). 
+Impacts of reduced visibility under hazy weather condition on colli­
+sion risk and car-following behavior: Implications for traffic control 
+and 
+management. 
+International 
+Journal 
+of 
+Sustainable 
+Transportation, 14(8), 635–642. https://doi.org/10.1080/15568318. 
+2019.1597226
+Hajiseyedjavadi, F., Zhang, T., Agrawal, R., Knodler, M., Fisher, D., & 
+Samuel, S. (2018). Effectiveness of visual warnings on young drivers 
+hazard anticipation and hazard mitigation abilities. Accident; 
+Analysis and Prevention, 116, 41–52. https://doi.org/10.1016/j.aap. 
+2017.11.037
+Haque, M. M., Oviedo-Trespalacios, O., Sharma, A., & Zheng, Z. 
+(2021). Examining the driver-pedestrian interaction at pedestrian 
+crossings in the connected environment: A Hazard-based duration 
+modelling approach. Transportation Research Part A: Policy and 
+Practice, 150, 33–48. https://doi.org/10.1016/j.tra.2021.05.014
+Hussain, Q., Alhajyaseen, W. K. M., Pirdavani, A., Reinolsmann, N., 
+Brijs, K., & Brijs, T. (2019). Speed perception and actual speed in a 
+driving simulator and real-world: A validation study. Transportation 
+Research Part F: Traffic Psychology and Behaviour, 62, 637–650. 
+https://doi.org/10.1016/j.trf.2019.02.019
+Hwang, Y., Park, B. J., & Kim, K. H. (2015). The effects of augmented- 
+reality head-up display system on the perception of precautionary 
+situation [Paper presentation]. In 2015 International Conference on 
+Information and Communication Technology Convergence (ICTC), 
+October, pp. 1146–1148. IEEE. https://doi.org/10.1109/ICTC.2015. 
+7354760
+3742
+Y. ZHANG ET AL.
+
+--- Page 21 ---
+Kudarauskas, N. (2007). Analysis of emergency braking of a vehicle. 
+Transport, 22(3), 154–159. https://doi.org/10.1080/16484142.2007. 
+9638118
+Large, D. R., Kim, H., Merenda, C., Leong, S., Harvey, C., Burnett, G., 
+& Gabbard, J. (2019). Investigating the effect of urgency and modal­
+ity of pedestrian alert warnings on driver acceptance and perform­
+ance. Transportation Research Part F: Traffic Psychology and 
+Behaviour, 60, 11–24. https://doi.org/10.1016/j.trf.2018.09.028
+Lerman, J. (1996). Study design in clinical research: Sample size estima­
+tion and power analysis. Canadian Journal of Anaesthesia, 43(2), 
+184–191. https://doi.org/10.1007/BF03011261
+Li, R., Chen, Y. V., Zhang, L., Shen, Z., & Qian, Z. C. (2020). Effects of 
+perception of head-up display on the driving safety of experienced 
+and inexperienced drivers. Displays, 64, 101962. https://doi.org/10. 
+1016/j.displa.2020.101962
+Liu, Y. C. (2003). Effects of using head-up display in automobile con­
+text on attention demand and driving performance. Displays, 24(4- 
+5), 157–165. https://doi.org/10.1016/j.displa.2004.01.001
+Liu, Y. C., & Wen, M. H. (2004). Comparison of head-up display 
+(HUD) vs. head-down display (HDD): Driving performance of com­
+mercial vehicle operators in Taiwan. International Journal of 
+Human-Computer Studies, 61(5), 679–697. https://doi.org/10.1016/j. 
+ijhcs.2004.06.002
+Luzuriaga, M., Aydogdu, S., & Schick, B. (2022). Boosting advanced 
+driving information: A real-world experiment about the effect of 
+HUD on HMI, driving effort, and safety. International Journal of 
+Intelligent Transportation Systems Research, 20(1), 181–191. https:// 
+doi.org/10.1007/s13177-021-00277-y
+Lyu, N., Deng, C., Xie, L., Wu, C., & Duan, Z. (2019). A field oper­
+ational test in China: Exploring the effect of an advanced driver 
+assistance system on driving performance and braking behavior. 
+Transportation Research Part F: Traffic Psychology and Behaviour, 
+65, 730–747. https://doi.org/10.1016/j.trf.2018.01.003
+Maag, C., Kraft, A. K., Neukum, A., & Baumann, M. (2022). 
+Supporting cooperative driving behaviour by technology – HMI 
+solution, acceptance by drivers and effects on workload and driving 
+behaviour. Transportation Research Part F: Traffic Psychology and 
+Behaviour, 84, 139–154. https://doi.org/10.1016/j.trf.2021.11.017
+Ministry of Public Security of the People’s Republic of China. (2020). 
+33.28 million newly registered motor vehicles nationwide, and 4.92 
+million new energy vehicles. https://app.mps.gov.cn/gdnps/pc/content. 
+jsp?id=7647257&mtype¼
+Mueller, A. S., & Trick, L. M. (2012). Driving in fog: The effects of 
+driving experience and visibility on speed compensation and hazard 
+avoidance. Accident Analysis and Prevention, 48(9), 472–479. https:// 
+doi.org/10.1016/j.aap.2012.03.003
+Naujoks, F., & Neukum, A. (2014). Specificity and timing of advisory 
+warnings based on cooperative perception. In Mensch & Computer 
+2014 - Workshopband. https://doi.org/10.1524/9783110344509.229
+Nelder, J. A., & Wedderburn, R. W. M. (1972). Generalized Linear 
+Models. Journal of the Royal Statistical Society, 135(3), 370–384. 
+https://doi.org/10.2307/2344614
+Pfannm€uller, L., Kramer, M., Senner, B., & Bengler, K. (2015). A com­
+parison of display concepts for a navigation system in an automotive 
+contact analog head-up display. Procedia Manufacturing, 3, 2722– 
+2729. https://doi.org/10.1016/j.promfg.2015.07.678
+Raddaoui, O., Ahmed, M. M., & Gaweesh, S. M. (2020). Assessment of 
+the effectiveness of connected vehicle weather and work zone warn­
+ings in improving truck driver safety. IATSS Research, 44(3), 230– 
+237. https://doi.org/10.1016/j.iatssr.2020.01.001
+Retting, R, GHSA (2020). Pedestrian traffic fatalities by state: 2019 pre­
+liminary data. February 2020.
+Ross, V., Reinolsmann, N., Dehman, A., Van Vlierden, K., Mollu, K., 
+De Bisschop, E., Ectors, W., & Brijs, T. (2021). Investigating the 
+effect of marking and delineation treatments on driver behavior at 
+highway exit gore areas. Accident; Analysis and Prevention, 161, 
+106362. https://doi.org/10.1016/j.aap.2021.106362
+Schwarz, F., & Fastenmeier, W. (2017). Augmented reality warnings in 
+vehicles: Effects of modality and specificity on effectiveness. 
+Accident; Analysis and Prevention, 101, 55–66. https://doi.org/10. 
+1016/j.aap.2017.01.019
+Strayer, D. L., Cooper, J. M., Goethe, R. M., McCarty, M. M., Getty, 
+D. J., & Biondi, F. (2019). Assessing the visual and cognitive demands 
+of in-vehicle information systems. Cognitive Research: principles and 
+Implications, 4(1), 18. https://doi.org/10.1186/s41235-019-0166-3
+Winkler, S., Kazazi, J., & Vollrath, M. (2015). Distractive or supportive- 
+how warnings in the head-up display affect drivers’ gaze and driving 
+behavior 
+[Paper 
+presentation]. 
+In 
+IEEE 
+18th 
+International 
+Conference on Intelligent Transportation Systems, pp. 10351040. 
+IEEE. https://doi.org/10.1109/ITSC.2015.172
+Winkler, S., Kazazi, J., & Vollrath, M. (2018a). How to warn drivers in 
+various safety-critical situations – Different strategies, different reac­
+tions. Accident; Analysis and Prevention, 117, 410–426. https://doi. 
+org/10.1016/j.aap.2018.01.040
+Winkler, S., Kazazi, J., & Vollrath, M. (2018b). Practice makes better – 
+Learning effects of driving with a multi-stage collision warning. 
+Accident; Analysis and Prevention, 117, 398–409. https://doi.org/10. 
+1016/j.aap.2018.01.018
+Wu, C., Ma, S., & Zhuang, X. (2013). Cognitive psychological process 
+and model of pedestrian’s road crossing behavior. Advances in 
+Psychological Science, 21(7), 1141–1149. https://doi.org/10.3969/j.issn. 
+1003-3033.2011.04.004
+Wu, Y., Abdel-Aty, M., Cai, Q., Lee, J., & Park, J. (2018). Developing 
+an algorithm to assess the rear-end collision risk under fog condi­
+tions using real-time data. Transportation Research Part C: Emerging 
+Technologies, 87, 11–25. https://doi.org/10.1016/j.trc.2017.12.012
+Wu, Y., Abdel-Aty, M., Park, J., & Selby, R. M. (2018). Effects of real- 
+time warning systems on driving under fog conditions using an 
+empirically 
+supported 
+speed 
+choice 
+modeling 
+framework. 
+Transportation Research Part C: Emerging Technologies, 86, 97–110. 
+https://doi.org/10.1016/j.trc.2017.10.025
+Wu, Y., Abdel-Aty, M., Park, J., & Zhu, J. (2018). Effects of crash 
+warning systems on rear-end crash avoidance behavior under fog 
+conditions. Transportation Research Part C: Emerging Technologies, 
+95, 481–492. https://doi.org/10.1016/j.trc.2018.08.001
+Yan, X., Li, X., Liu, Y., & Zhao, J. (2014). Effects of foggy conditions 
+on drivers’ speed control behaviors at different risk levels. Safety 
+Science, 68(2014), 275–287. https://doi.org/10.1016/j.ssci.2014.04.013
+Yang, W., Zhang, X., Lei, Q., & Cheng, X. (2019). Research on longitu­
+dinal active collision avoidance of autonomous emergency braking 
+pedestrian system (AEB-P). Sensors (Basel, Switzerland), 19(21), 
+4671. https://doi.org/10.3390/s19214671
+Yang, Z., Shi, J., Zhang, Y., Wang, D., Li, H., Wu, C., Zhang, Y., & 
+Wan, J. (2019). Head-up display graphic warning system facilitates 
+simulated driving performance. International Journal of Human– 
+Computer 
+Interaction, 
+35(9), 
+796–803. 
+https://doi.org/10.1080/ 
+10447318.2018.1496970
+Yeung, J. S., & Wong, Y. D. (2015). Effects of driver age and experi­
+ence in abrupt-onset hazards. Accident; Analysis and Prevention, 78, 
+110–117. https://doi.org/10.1016/j.aap.2015.02.024
+Yue, L., Abdel-Aty, M., Wu, Y., & Wang, L. (2018). Assessment of the 
+safety benefits of vehicles’ advanced driver assistance, connectivity 
+and low level automation systems. Accident; Analysis and 
+Prevention, 117, 55–64. https://doi.org/10.1016/j.aap.2018.04.002
+Yue, L., Abdel-Aty, M., Wu, Y., Yuan, J., & Morris, M. (2020). 
+Influence of pedestrian-to-vehicle technology on drivers’ response 
+and safety benefits considering pre-crash conditions. Transportation 
+Research Part F: Traffic Psychology and Behaviour, 73, 50–65. 
+https://doi.org/10.1016/j.trf.2020.06.012
+Zhang, Y., Yan, X., Wu, J., & Duan, K. (2020). Effect of warning sys­
+tem on interactive driving behavior at unsignalized intersection 
+under fog conditions: A study based on multiuser driving simula­
+tion. Journal of Advanced Transportation, 2020, 1–16. https://doi. 
+org/10.1155/2020/8871875
+Zhao, X., Chen, H., Li, H., Li, X., Chang, X., Feng, X., & Chen, Y. 
+(2021). Development and application of connected vehicle technol­
+ogy test platform based on driving simulator: Case study. Accident; 
+Analysis and Prevention, 161, 106330. https://doi.org/10.1016/j.aap. 
+2021.106330
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+3743
+
+--- Page 22 ---
+Zhao, X., Chen, H., Li, Z., Li, H., Gong, J., & Fu, Q. (2022). Influence 
+characteristics of automated driving takeover behavior in different 
+scenarios. China Journal of Highway and Transport, 35(9), 20. 
+https://doi.org/10.19721/j.cnki.1001-7372.2022.09.015
+Zhao, X., Li, X., Chen, Y., Li, H., & Ding, Y. (2021b). Evaluation of fog 
+warning system on driving under heavy fog condition based on 
+driving simulator. Journal of Intelligent and Connected Vehicles, 4(2), 
+41–51. https://doi.org/10.1108/JICV-11-2020-0012
+About the authors
+Yu Zhang received the BS degree in transportation engineering from 
+ShanDong JiaoTong University, Shangdong, China, in 2021. She is cur­
+rently pursuing the MS degree in transportation engineering at Beijing 
+University of Technology, Beijing, China. Her main research interests 
+include human-computer interaction, driving behavior and traffic 
+safety.
+Yang Bian received the MS and PhD degree in transportation engin­
+eering and transportation planning and management from Southeast 
+University, Nangjing, China, in 2002 and 2007, respectively. Her main 
+research interests include pedestrian and bicycle traffic behavior and 
+planning design, as well as optimization design of traffic information 
+assistance systems.
+Xiaohua Zhao received the PhD degree in pattern recognition and 
+intelligent system from Beijing University of Technology, Beijing, 
+China, in 2001. At present, she is the author or co-author of 191 aca­
+demic papers in tenure and the first author of 151 academic papers.
+Xuewei Li received the MS and PhD degree in traffic and transporta­
+tion engineering from Beijing University of Technology, Beijing, China, 
+in 2018 and 2023, respectively. Her main research interests include 
+driver assistance systems, driving behavior and traffic safety.
+Jianhua Zhang received the MS degree in transportation engineering 
+from Chongqing Jiaotong University, Chongqing, China, in 2019. He is 
+currently pursuing the PhD degree in transportation engineering at 
+Beijing University of Technology, Beijing, China. His research interests 
+include intelligent transportation, driving behavior & traffic safety, and 
+traffic information & control.
+3744
+Y. ZHANG ET AL.

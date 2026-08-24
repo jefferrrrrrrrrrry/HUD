@@ -1,0 +1,795 @@
+--- Page 1 ---
+IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART B: CYBERNETICS, VOL. 39, NO. 1, FEBRUARY 2009
+85
+A Novel Active Heads-Up Display
+for Driver Assistance
+Anup Doshi, Student Member, IEEE, Shinko Yuanhsien Cheng, Member, IEEE, and
+Mohan Manubhai Trivedi, Senior Member, IEEE
+Abstract—In this paper, we introduce a novel laser-based
+wide-area heads-up windshield display which is capable of actively
+interfacing with a human as part of a driver assistance system.
+The dynamic active display (DAD) is a unique prototype interface
+that presents safety-critical visual icons to the driver in a manner
+that minimizes the deviation of his or her gaze direction without
+adding to unnecessary visual clutter. As part of an automotive
+safety system, the DAD presents alerts in the ﬁeld of view of the
+driver only if necessary, which is based upon the state and pose
+of the driver, vehicle, and environment. This paper examines the
+effectiveness of DAD through a comprehensive comparative exper-
+imental evaluation of a speed compliance driver assistance system,
+which is implemented on a vehicular test bed. Three different
+types of display protocols for assisting a driver to comply with
+speed limits are tested on actual roadways, and these are compared
+with a conventional dashboard display. Given the inclination,
+drivers who are given an overspeed warning alert reduced the time
+required to slow down to the speed limit by 38% (p < 0.01) as
+compared with the drivers not given the alert. Additionally, certain
+alerts decreased distraction levels by reducing the time spent
+looking away from the road by 63% (p < 0.01). Ultimately, these
+alerts demonstrate the utility and promise of the DAD system.
+Index Terms—Active safety, driver assistance systems, driver
+distraction, head movement tracking, human factors, integrated
+safety systems, intelligent driver-support systems.
+I. INTRODUCTION
+S
+AFETY is a major cause for innovation in automobile
+industries. Many new technologies are emerging to meet
+the increasing desire for safer vehicles and roadways.
+One factor that plays a big role in road safety is excessive
+speed. Speeding is a signiﬁcant cause of accidents and motor
+vehicle infractions. According to the National Highway Trans-
+portation Safety Administration (NHTSA) [1], 13 113 lives
+were lost in 2005 in crashes involving speeding. Indeed, 30% of
+all crashes involved speeding, involving a cost of approximately
+Manuscript received April 16, 2007; revised October 20, 2007. First pub-
+lished July 29, 2008; current version published January 15, 2009. This work
+was supported in part by UC Discovery, by the Digital Media Innovations
+Program, and by the Electronics Research Laboratory, Volkswagen of America.
+This paper was recommended by Guest Editor A. Pentland.
+A. Doshi and M. M. Trivedi are with the Laboratory for Intelligent and Safe
+Automobiles, University of California, San Diego, La Jolla, CA 92093 USA
+(e-mail: andoshi@ucsd.edu; mtrivedi@ucsd.edu).
+S. Y. Cheng was with the Laboratory for Intelligent and Safe Automobiles,
+University of California, San Diego, La Jolla, CA 92093 USA. He is now with
+HRL Laboratories, LLC, Malibu, CA 90265 USA (e-mail: sycheng@ucsd.edu).
+Color versions of one or more of the ﬁgures in this paper are available online
+at http://ieeexplore.ieee.org.
+Digital Object Identiﬁer 10.1109/TSMCB.2008.923527
+$40.4 billion each year in the U.S. alone. Furthermore, most of
+those crashes are at speeds under 55 mi/h, which are off of the
+highways.
+For these reasons and more, auto manufacturers have be-
+gun implementing technology-based safety systems. Some of
+these state-of-the-art systems include collision warning and
+brake support, intelligent night vision with pedestrian detection,
+backup warnings and cameras, and lane departure warning
+systems. Despite this progress, it is not clear whether these
+systems can urgently and reliably warn the driver without
+distracting him or her from the road conditions. Fixed displays
+will not grab the driver’s attention if he or she is looking away.
+Auditory (and haptic) displays may not be able to convey the
+same amount of information quickly and succinctly. Drivers
+may already know about impending danger, and they may be
+annoyed by systems that provide redundant warnings. Side-
+screen displays might take the driver’s attention off the road.
+We introduce and evaluate the dynamic active display
+(DAD), which is a unique large-area windshield display de-
+signed to actively alert the driver in critical situations. As a
+novel prototype developed in conjunction with Volkswagen,
+the DAD is able to use a laser to display dynamic visual
+icons nearly anywhere on the windshield. Within the author’s
+knowledge, the implementation of such a wide-area windshield
+display in a real test bed is unprecedented. It allows for the real-
+world experimentation of concepts which were previously only
+testable in laboratory settings, thus moving beyond the realm of
+simulated studies.
+The DAD can be used to provide context-speciﬁc alerts to the
+driver, and it is capable of changing the position and intensity of
+an alert, depending on the attention of the driver. This “active”
+alert thus makes decisions based upon the state and pose of the
+driver, vehicle, and environment.
+The display is presented as an effective medium to commu-
+nicate important information to the driver while minimizing
+distraction. As part of a quantitative evaluation of this system,
+we ﬁnd that DAD demonstrates signiﬁcant improvements in
+both effectiveness and the minimization of distractions as part
+of a driver assistance system.
+This paper is organized as follows. Background and re-
+lated works are discussed in Section II. Section III de-
+scribes the instrumented Laboratory for Intelligent and Safe
+Automobiles—Passat (LISA-P) test bed and the capabilities of
+DAD. A comprehensive evaluation of DAD in a speed control
+experiment is described in Section IV. Conclusions and future
+research are discussed in Section V.
+1083-4419/$25.00 © 2008 IEEE
+
+--- Page 2 ---
+86
+IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART B: CYBERNETICS, VOL. 39, NO. 1, FEBRUARY 2009
+II. BACKGROUND AND RELATED WORKS
+A. Background
+1) Modalities of Displays: The driver can be informed of
+critical situations via several different modalities. Haptic in-
+terfaces include any sort of interface that will use force feed-
+back or touch sensitivity. Examples could include resistance
+or shaking of the steering wheel or resistance in the brake and
+accelerator pedals. These have the advantage of being intuitive;
+they can also quickly inform the driver even if the driver is
+distracted, considering that the driver is usually in contact with
+the interface.
+Audio interfaces may include voiced commands, such as
+those given by Navigation systems, or even simple beeps and
+sounds. Most vehicles are equipped with warning beeps to
+indicate if the driver has left his or her headlights on or if the
+driver is not wearing a seatbelt. The beeps are useful if the
+driver knows what the sound means, or if the sound occurs
+in conjunction with a visual cue. To convey more information
+in the auditory channel, as is done with voiced navigation
+directions, for example, requires more time.
+Visual interfaces abound in the vehicular environment. Ex-
+amples include the dashboard of the vehicle, showing the
+speedometer, tachometer, and side-screen monitors for naviga-
+tion systems. Visual cues have the advantage of being able to
+quickly convey a wealth of information to the driver. However,
+there is a great deal of visual distraction in a vehicular environ-
+ment; therefore, informing a driver using this modality could be
+a challenge.
+Several cars these days also use heads-up displays (HUDs)
+to convey information to the driver. As a subset of visual
+interfaces, HUDs are designed to present information to the
+driver, which is closer to his or her ﬁeld of view. Thus, the
+driver does not have to look down to see the information but
+can spend more time looking at the road. It is important to note,
+however, that drivers will not be able to focus on the HUD and
+the road at the same time, which is due to the effects of parallax.
+Nevertheless, by presenting information that is closer to the
+normal ﬁeld of view, HUDs require less effort on the part of the
+driver than other kinds of visual displays [2]; therefore, it may
+present an effective choice of conveying visual information.
+2) Types of Displays: Moreover, independent of the modal-
+ity, there can be several types of displays, depending on the
+criticality of the situation. A “static” display will constantly dis-
+play information, regardless of the situation. This may be useful
+if the driver should be constantly aware of the information, as in
+speed or engine temperature. “Dynamic” displays monitor the
+state of the environment and the vehicle and change according-
+ly, potentially alerting the driver only if there is an impending
+event to be aware of. Navigation systems are certainly dynamic,
+as well as dashboard warning lights for “engine check” and
+others. Finally, an “active” display monitors the state of the
+driver and displays information in response to the state. The
+active display could infer the intent or focus of the driver
+and could determine whether displaying information would
+be useful or distracting. This also allows the display to
+change position or even modality, depending on the driver’s
+state.
+Some types of displays are mature technologies and are
+thereby widely implemented in vehicles. However, the design
+of a “dynamic and active” display is an active research subject,
+particularly in terms of investigating the effectiveness and the
+robustness of the active display. These references are discussed
+in more detail in the following section.
+B. Related Works
+A majority of research into “active” interfaces has mainly fo-
+cused on simulator-based experiments. Experiments conducted
+on such environments have evaluated various aspects of the ac-
+tive displays, including appropriate display timings [3], [4], po-
+sitions [2], [5], and driver responses [6] and attitudes [7]. These
+have demonstrated the potential positive effects of the active
+HUD. However, it is difﬁcult to draw conclusions for real-world
+situations based on simulated experiments, considering that
+there are many more variables present in real-world conditions.
+According to an NHTSA driver workload metrics report [8]
+Some effects were observed in the laboratory which
+were not observed during driving. Until this is better
+understood, judgments on task effects should reﬂect a
+comprehensive evaluation approach that includes more
+than just laboratory testing.
+This motivates the need for an implemented test bed to experi-
+ment in real-world conditions.
+Sharon et al. [9] implemented an active interface for the
+purpose of “coaching” or giving feedback to driving students.
+The interfaces are auditory and haptic, however. Therefore,
+very limited information can be communicated in urgent sit-
+uations. Takemura et al. [10] experimented with a test bed
+actively sensing the driver and environment states using cam-
+eras and potentially advising the driver with voice synthesis.
+Amditis et al. [11] proposed a test-bed solution for active
+visual displays using side-screen and dashboard displays.
+Petersson et al. [12] conducted experiments with camera-based
+systems to detect driver and environment conditions, with an
+active visual display in a side screen. Unfortunately, the side
+screen requires the user to look away from the road to gauge
+the information.
+Furthermore, Liu and Wen [2] observed that truck drivers in
+simulators were able to control their speed better with speed
+information from a HUD rather than a heads-down display
+(HDD). Their study had shown that a savings of 0.8 to 1.0 s
+in driver reaction time can be achieved with the use of HUDs
+to display warning information over conventional HDDs. We
+present results of a similar comparison on actual roadways with
+a novel experimental laser-based HUD.
+Our contributions are the motivation and introduction of
+a novel laser-based wide-area heads-up windshield display,
+which is capable of actively interfacing with a human as part
+of a driver assistance system. The DAD is a unique prototype
+interface that presents safety-critical visual icons to the driver in
+a manner that minimizes the deviation of his or her gaze direc-
+tion without adding to unnecessary visual clutter. Furthermore,
+as part of an active safety system, the DAD “actively” presents
+alerts in the ﬁeld of view of the driver—only if necessary, which
+
+--- Page 3 ---
+DOSHI et al.: NOVEL ACTIVE HEADS-UP DISPLAY FOR DRIVER ASSISTANCE
+87
+Fig. 1.
+LISA-P test bed.
+are based upon the state and pose of the driver, vehicle, and
+environment. We examine the effectiveness of DAD through a
+comprehensive comparative experimental evaluation of a speed
+compliance driver assistance system, which is implemented on
+a vehicular test bed. Three different types of display protocols
+for assisting a driver to comply with speed limits are tested on
+actual roadways and compared with the conventional dashboard
+speedometer. Given the inclination, drivers who are given an
+overspeed warning alert reduced the amount of “time-to-slow-
+back-down” to speed limit by 38% (p < 0.01), as compared
+with drivers not given the alert. Additionally, certain alerts
+decreased the distraction levels by reducing the time spent
+looking away from the road by 63% (p < 0.01). Ultimately,
+each of these alerts exhibits strengths in complementing ways,
+demonstrating the utility and promise of the DAD system.
+III. LISA-P TEST BED AND DAD ALERTS
+The LISA-P test-bed setup is shown in Fig. 1. It is instru-
+mented with a novel laser-based large-area windshield display
+whose capabilities are shown in Fig. 2. The DAD is capable of
+displaying alerts anywhere on the windshield via a blue-colored
+laser. Additionally, the LISA-P is outﬁtted with an optical
+motion capture system, a vision-based eye gaze tracker, and
+global positioning system (GPS) and controller area network
+(CAN) bus sensors to determine the state of the occupant and
+vehicle. A more detailed description of the LISA-P can be
+found in [13].
+Considering that speeding is a leading cause of crashes, any
+manner of safely reducing speed from over the speed limits
+may be useful. In this light, a DAD-based speed compliance
+aid is presented and used to quantitatively analyze the safety
+and effectiveness of the DAD over having normal dashboard-
+based displays.
+There are three proposed alert modes for this particular aid,
+whose designs were motivated by the strengths and weaknesses
+of human vision. The human eye can be divided into three
+regions based on acuity to different visual cues: the fovea and
+parafovea regions that subtend about 10◦, which are both found
+in the macula, and the peripheral vision region, extending to
+180◦. Vision within the macula has the highest visual acuity,
+which is necessary for reading, watching television, driving,
+and any activity where visual detail is of primary importance.
+Fig. 2.
+LISA-P test bed. DAD display capabilities and limitations and the
+approximate location of alerts used for the speed control experiment. Within
+these limitations, the DAD is capable of drawing anywhere on the windshield.
+The peripheral vision extends beyond it and has good motion
+detection and temporal resolution [14].
+For critically important situations, a visual alert directly
+presented in the driver’s central visual ﬁeld should be able to
+catch his or her attention immediately; however, this runs the
+risk of competing directly with the driver’s view of the road
+and surroundings. For the particular case of a speed limit or
+current speed alert, the more appropriate placement would be
+a secondary location where a driver has the option of taking
+notice if the situation does not demand complete concentration.
+Watanabe et al. [15] observed that the fastest response times
+to HUD warnings presented during videos of drives occurred
+when the warning was placed 5◦to the right of the center of line
+of sight. Because of the fast response times and the secondary
+importance of the speed alerts, all alerts in our speed control
+experiments were placed approximately 5◦diagonally to the
+bottom right from the center of the line of sight.
+There is also a need to display alerts that grab the attention
+of the driver from the secondary location, particularly when the
+speed limit has been exceeded. Considering that the peripheral
+visual ﬁeld is most sensitive to motion cues, we animate the
+alerts with zooming and bouncing effects for the purpose of
+attracting attention. The zooming enlarges the alert every other
+second, and the bouncing consists of a vertical location change
+that is similar to the motion of a rubber ball bouncing off the
+ground. Both take into account the apparent need for the driver
+to ﬁxate upon the alert for a moment in order to recognize its
+meaning. The zoom consists of two sizes, with 1 s separating
+the times between the changing sizes. The bounce starts with
+high bounces for 0.5 s; however, for 1.0 s, the icon bounces
+only subtly until it ﬁnally comes to rest at the base location.
+Both allow for some time in which the icon is not or barely
+
+--- Page 4 ---
+88
+IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART B: CYBERNETICS, VOL. 39, NO. 1, FEBRUARY 2009
+moving for the eyes to ﬁxate upon. Furthermore, the alerts
+were designed to be approximately 2 in tall, such that they
+were big enough to be clearly understood and yet small enough
+to prevent occlusions. The zoom doubles the size of the icon,
+whereas the bounce moves the icon approximately 2 in.
+Considering that it is easy to measure amount of time
+spent over the speed limit (given the current speed and the
+speed limit), the speed compliance module is chosen over
+the other two modules for a quantitative evaluation of DAD.
+The following section uses this design methodology to de-
+termine the performance and safety of the DAD in a speed
+compliance experiment.
+IV. DAD EVALUATION: SPEED COMPLIANCE EXPERIMENT
+A. Experiment Details
+We test four strategies of speed alerts; each driver is asked
+to drive the same route for each alert strategy. The alerts are
+presented in different orders for each driver, and the drivers are
+already familiar with the area. We measure the amount of time
+the driver spent above the speed limit, the ratio of time spent
+observing the alert or dash or the road in general, and the distri-
+bution of speeds measured for roads with various speed limits.
+For each drive, we vary the display in one of the following
+four ways.
+1) No display—No DAD alert is given.
+2) Warning—A triangular exclamation point warning sign
+appears and bounces as soon as the driver exceeds speed
+limit.
+3) Numbers—A textual alert constantly shows the driver’s
+current speed and the road speed limit (e.g., 43/45). The
+text representing the driver’s speed zooms in and out if
+the driver is above the speed limit.
+4) Graphic—A graphical alert constantly shows a vertical
+status bar with the driver’s speed and the speed limit
+clearly marked. The entire graphic bounces if the driver
+is above the speed limit.
+A graphical representation is shown in Fig. 3.
+On each of the four iterations (each using a different display
+condition) of the experiment, the subject is told to drive on a
+given road course lasting approximately 20 min. The route is
+carefully chosen to include a variety of situations and environ-
+ments, as shown in Fig. 4. The speed limits vary from 15 to
+65 mi/h, and the roads range from small local roads through
+campus to major highways. The distances were calculated such
+that approximately 3–4 min was spent driving in each speed
+range.
+During the drive, speed limits are acquired by determining
+the current global position in longitude and latitude via GPS
+and by searching the list of road way points for the closest
+match. Associated with each way point is a speed limit that was
+manually annotated with the speed limit. The distance between
+each way point is approximately 0.1 mi. When the current
+position deviates from all way points by more than the width of
+the widest road, the speed limit is defaulted to a nonvalid value.
+Head pose is measured by using a marker-based motion
+capture system, and eye gaze is measured by using a camera-
+Fig. 3.
+Illustration of the three alerts used.
+Fig. 4.
+Driving Test Path, which includes local roads, main roads, and
+highways, with speed limits ranging from 15 to 65 mph.
+based eye tracking system. The vehicle speed data, as part of
+over 20 other vehicle parameters, are recorded via the vehicle’s
+CAN bus and are passed as an input to the display module, to
+inform the subject of the speeds. A millisecond-accurate clock
+in the PC is used to time stamp all entries of data recorded. The
+setup for the experimental test-bed LISA-P is shown in Fig. 1.
+
+--- Page 5 ---
+DOSHI et al.: NOVEL ACTIVE HEADS-UP DISPLAY FOR DRIVER ASSISTANCE
+89
+Fig. 5.
+Results of sample test run for (top) condition 1—no display and
+(bottom) condition 2—warning sign. The driver’s ability to maintain speed is
+clearly evidenced by the reduced amount of time accidentally spent over the
+speed limit in condition 2.
+The subjects are asked to drive as they would normally but
+to pay particular attention to obey the speed limits. Each driver
+was familiar with the roads and path before beginning the drive.
+Data were collected from a total of 11 test subjects with varying
+experience levels, ranging from age 22 and 50, several with
+glasses, with a total of over 14 h of driving data. All drives
+were during the early evening hours, which are free from rush-
+hour trafﬁc. Over the set of drivers, the order of the four display
+conditions was varied, hopefully mitigating the impact of any
+learning effects over the course of the study.
+B. Results and Analysis
+Plots of a sample drive showing speed versus time, and the
+corresponding speed limits, for display conditions 1 and 2 are
+shown in Fig. 5.
+For each display condition, the driver was asked to drive nor-
+mally, paying attention to speed limits. To analyze the ability of
+the driver to stay under the limit, one statistic measured was the
+“time to slow back down” or the average amount of time the
+driver spent over the speed limit before returning to under
+the limit. This measure was chosen to clearly represent how
+immediate were the effects of the different warnings. This mea-
+sure also ignores route timing differences due to trafﬁc lights,
+congestion, and environment changes, all of which would cause
+biases in other absolute measures such as “total amount of time
+spent over speed limit.”
+The results are shown in Fig. 6, and the statistics are listed
+in Table I. With the second display condition, there is a clear
+drop in the amount of time it took each subject to return to
+driving below the speed limit once the warning was shown. For
+all test subjects, the caution symbol from the second condition
+caused a drop of 2.24 s in the average time to slow back down.
+We then normalize these times relative to the times of display
+condition 1 in order to better compare relative effects over each
+driver, arriving at the values shown at the bottom of Fig. 6.
+Using this normalized metric, we can conclude that, on average,
+Fig. 6.
+Time to slow back down or the amount of time spent over the speed
+limit before slowing back down with different alerts. Each experiment consists
+of 4 trials by 11 different drivers. The overall averages are in gray, superimposed
+by the individual averages. The top plot represents the raw data, and the bottom
+plot shows the same data normalized by the values of condition 1—no DAD.
+See Table I for numerical ﬁgures.
+TABLE I
+AVERAGE “TIME TO SLOW BACK DOWN” WITH DIFFERENT
+ALERTS OVER ALL DRIVERS
+the second display condition caused a drop of 38% in the time
+to slow back down.
+The other two warnings involving the displays of numbers
+and graphics were quite effective but not as much as the
+warning sign. As discussed later, this can be attributed to the
+two “active” signs being constantly displayed and thereby not
+catching as much of the driver’s attention when the drivers were
+over the speed limit. Additionally, their information takes a bit
+of time to process, compared with the static display which can
+be understood immediately.
+To further understand these data, an analysis of variance
+(ANOVA) was performed on the normalized statistic “time to
+
+--- Page 6 ---
+90
+IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART B: CYBERNETICS, VOL. 39, NO. 1, FEBRUARY 2009
+Fig. 7.
+Histograms of speeds for each section of road with the given speed limit. Signiﬁcant differences can be seen by comparing over-speed cases across the
+4 conditions, especially at 15 and 65 mph limits.
+slow back down.” The test was conducted to ascertain whether
+the pattern shown at the bottom plot of Fig. 6 was a coincidence
+or whether the reduction in time in experiments 2, 3, and 4
+actually represents general patterns. Analysis was done by
+comparing two conditions at a time using ANOVA, which is
+essentially equivalent to a t test. The analysis showed that
+the second display condition implies a statistically signiﬁcant
+reduction in time to slow back down (p = 0.0039 < 0.01),
+whereas the third and fourth conditions did not have statistically
+signiﬁcant effects. Based on the calculated conﬁdence intervals
+from the 11 test subjects, we may conclude that 99% of the pop-
+ulation would experience between 4.94% and 71.76% reduction
+in time to slow back down using this second display condition.
+Furthermore, one could divide the population of test subjects
+into “compliant” and “noncompliant” groups. The “noncompli-
+ant” drivers (consisting of the ﬁrst four in Fig. 6) exhibited no
+clear pattern in response to any of the alerts (p = 0.10 > 0.01).
+Interestingly, there was no clear common trait among these
+noncompliant drivers, as they were of varying age, gender, and
+backgrounds. The rest of the drivers were extremely responsive
+to all the alerts (p = 0.000082 < 0.0001) and could be labeled
+as “compliant.” Thus, while we can conclude that the warning,
+display condition 2, causes a 38% overall average drop in time
+to slow back down (p < 0.01), we can also identify that some
+users may be “noncompliant,” in which case they are less likely
+to respond. As discussed later, the active nature of the DAD
+could allow the system to identify such noncompliant drivers by
+analyzing historical responses and accordingly adjust or remove
+the alerts.
+C. Driver Distraction: Pose Analysis
+By analyzing the driver’s behavior, it becomes possible to
+gauge the distraction level of the alerts and determine whether
+they were taking the driver’s focus away from the road. Au-
+tomatic analysis of pose and gaze can be done by using the
+
+--- Page 7 ---
+DOSHI et al.: NOVEL ACTIVE HEADS-UP DISPLAY FOR DRIVER ASSISTANCE
+91
+LISA-P test-bed setup with the motion capture system and
+the near-infrared vision-based gaze tracking system. We can
+use these to determine whether the HUD kept the driver from
+taking his or her attention off the road, ostensibly to look at the
+dashboard when the driver has drifted above the speed limit.
+This would determine the drivers’ attention and distraction level
+in response to various visual cues, which has implications on
+the safety of the alerts.
+1) Eye Movement and Head Pose: Several of the studies
+mentioned in Section II-B focus on systems monitoring the
+driver, particularly eye gaze tracking systems [8], [10], [12].
+However, although modern eye gaze trackers have become
+extremely sophisticated, they still suffer under fast-changing
+in-vehicle conditions [16]–[18]. Indeed, others who have mea-
+sured eye gaze in vehicles have usually tracked eyes in more
+stable lighting environments. NHTSA [8] also conducted a
+thorough study into driver workload metrics, using eye gaze
+as a measurement tool. However, in that study, the eye gaze
+patterns were manually marked up by humans after the data
+were recorded in order to achieve more accurate results.
+We found that, after automatically collecting marked eye
+gaze data, these were not accurate or robust enough to draw
+systematic conclusions. Speciﬁcally, many of the drivers in the
+current experiment wore glasses, which, under strong illumina-
+tion changes, heavily affect the performance of the eye tracker,
+effectively serving as occlusions. Moreover, when the driver
+turns his or her head out of range of the eye tracking cameras,
+the gaze estimates are no longer valid. Finally, the eye gaze
+tracking system was cumbersome in that it required training
+for each individual subject, and slight errors in training would
+decrease the accuracy of the gaze estimates.
+We determined that head pose estimates were reliable and,
+thereby, a better estimate of the attention and distraction levels
+of the driver. The marker-based head pose estimation system
+used in these experiments, in comparison, is extremely accurate
+and precise [19]. It does not suffer under lighting changes, con-
+sidering that it is based on detecting infrared reﬂections off of
+the markers placed on the head. With the LISA-P instrumented
+with this powerful measurement tool, we were able to draw
+reliable data on driver reactions to the DAD alerts.
+2) Distraction Results: The input head pose data use labeled
+calibration data as a reference to cluster into three regions:
+looking “up,” or forward at the windshield; “down,” or at the
+dashboard; and “at DAD,” at the speciﬁc location of the DAD
+alert. These classes are shown in Fig. 8. To calibrate the regions,
+several subjects were asked to look around each region, and
+the measurements were labeled and stored. Input data were
+then clustered by using an L-2 norm-based nearest neighbor
+classiﬁer.
+Considering that each driver is unique in reaction speeds,
+the absolute amount of time spent looking in each direction
+is not a very reliable metric, particularly because the times
+being considered are so quick. Therefore, for each driver, we
+considered the relative amount of time spent looking in each
+direction with an alert (display conditions 2–4), compared with
+the time spent when there was no alert (display condition 1). In
+other words, we measured the time in each direction with alerts
+as a percentage of the time in each direction without alerts.
+Fig. 8.
+Head pose estimates are classiﬁed into three clusters, with each
+corresponding to a certain region in front of the driver, namely: “up,” “down,”
+or “at DAD.”
+TABLE II
+NORMALIZED RATIOS OF TIME SPENT “LOOKING” IN EACH DIRECTION
+WHILE ABOVE THE SPEED LIMIT, WITH VERSUS WITHOUT ALERTS,
+WHICH ARE AVERAGED OVER ALL DRIVERS
+This normalized metric provides greater insight into the relative
+glance patterns of the drivers over each condition.
+Results of each display condition are shown in Table II,
+again noting the behavior while the driver was traveling beyond
+speed limit.
+The effects of the warning in display condition 2 can be
+clearly seen, in that the driver was not warned of his or her
+current speed so the driver had to look down to the dash to ﬁnd
+out how much he or she needed to brake. This notion is veriﬁed
+by the head movements during display conditions 3 and 4,
+in which the speed was dynamically displayed to the driver,
+precluding the need to look down.
+We can draw from these results that the alert type from
+display condition 3 caused the least distraction. The driver spent
+only 37% of the normal time looking down, and the time spent
+looking forward through the windshield increased by 10%. This
+amount of time is particularly important when considering that
+every second is precious when it comes to avoiding accidents.
+An ANOVA implies that the increase in forward-looking time
+might not be as statistically signiﬁcant, whereas the time spent
+looking down is indeed a pattern, with p = 0.0034 < 0.01.
+
+--- Page 8 ---
+92
+IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART B: CYBERNETICS, VOL. 39, NO. 1, FEBRUARY 2009
+V. DISCUSSION AND CONCLUDING REMARKS
+A novel interface for communicating information to a driver
+was introduced, and its motivations over other interfaces were
+presented. As part of an active driver assistance system, the
+DAD is a unique and demonstrably capable display.
+Results were presented for a series of experiments conducted
+to discover the most effective and least distracting class of alerts
+using a HUD to assist a driver in maintaining speed. Head pose
+data were analyzed to determine the effects of the alerts on the
+driver’s attention and focus.
+The overall results in Table I show that the warning display
+that appears in the driver’s peripheral vision while he or she is
+driving above the speed limit is most effective in assisting the
+drivers to maintain speeds within or below the limit. With the
+warning display, the driver tended to speed only 62% as much
+compared with a conventional speedometer. ANOVA implies
+that these results are indeed general patterns, with p = 0.0039.
+In addition, results from the head pose data imply that the
+warning display actually increased the time looking away from
+the road; however, the numerical display decreased the time
+looking down by 63% overall (p = 0.0034).
+These results were echoed by the test subjects themselves.
+Among the most prevalent comments were that the warning
+display was the most helpful because it caught their attention
+better than the active displays and was able to inform them
+that they were driving above the speed limit without causing
+them to move their focus away from the road. They did have
+to look down to gauge their speed more often, which could
+ultimately decrease safety. The numerical display allowed them
+to concentrate on the road more, as they did not have to look
+down to see their speed; however, it was not effective enough
+in grabbing their attention while drifting above the speed limit.
+Finally, the graphical display took a bit of time to register the
+information; therefore, it did not prove as useful, even though it
+was effective in slowing the drivers down.
+One possibility to improve the utility of the alerts would be
+to combine the better aspects of each of them. The warning sign
+would prove more effective if the speed was also displayed in
+the driver’s ﬁeld of view. This kind of alert would still have
+the ability to do the following: 1) quickly grab the driver’s
+attention; 2) include information about how much to slow
+down; and 3) allow the driver to maintain focus on the road.
+At the same time, the alert could recognize, based on the
+current driver’s responses to recent alerts, whether the driver is
+“noncompliant,” which, as was explained earlier, decreases the
+likelihood of responding to the DAD. If this is the case, it may
+be wise to dynamically remove alerts to reduce distractions and
+annoyances.
+The active capabilities of DAD could also be useful in several
+other situations, including backup warning and navigation aids.
+Future experiments will evaluate the usefulness and critical
+safety improvements in using these systems. It would also
+be interesting to consider the problem of overlaying objects
+or destinations with an alert on the windshield, which would
+require accurate calibration and registration mechanisms.
+It is interesting to note that certain displays can in-
+crease distraction, whereas other displays decrease distraction.
+Design would thus become paramount in considering safe
+driver assistance systems. The ability of the DAD to test and
+implement many different designs and placements of alerts is
+thereby quite valuable. Considering that it is an active display,
+the DAD can even adjust its display types and information to
+suit a particular driver.
+The DAD system has the potential to play a clear role in
+improving driver assistance systems. This alert modality can
+decrease distraction levels by alerting drivers without taking
+their gaze off the road. It also can actively alert the driver
+only if necessary, which is based on the state and pose of the
+driver, vehicle, and environment. The experiments conducted in
+this paper quantitatively show the improvements in the drivers’
+abilities to control speed, as well as decreased distraction levels,
+using the DAD—speed control system in real trafﬁc conditions
+with the LISA-P test bed. Future research includes harnessing
+the capabilities of DAD in improving and analyzing intelligent
+driver assistance systems.
+ACKNOWLEDGMENT
+The authors would like to thank J. Camhi and Dr. A. Stoschek
+for helping them instrument the very ﬁrst prototype of the large-
+area windshield display in their LISA-P test bed, E. Murphy-
+Chutorian for his assistance with software libraries, and the
+test subjects for their invaluable input and assistance in their
+experiments. The authors would also like to thank the reviewers
+for their insightful comments.
+REFERENCES
+[1] NHTSA National Center for Statistics and Analysis, Trafﬁc Safety Facts:
+2005 Data—Speeding, 2006, Washington D.C.: U.S. Dept. Transp., Nat.
+Highway Trafﬁc Safety Admin.
+[2] Y.-C. Liu and M.-H. Wen, “Comparison of head-up display (HUD) vs.
+head-down display (HDD): Driving performance of commercial vehicle
+operators in Taiwan,” Int. J. Human-Comput. Studies, vol. 61, no. 5,
+pp. 679–697, Nov. 2004.
+[3] S. Nagirir, Y. Amano, K. Fukui, and S. Doi, “A study of a personally
+adaptive driving support system using a driving simulator,” R&D Rev.
+Toyota CRDL, vol. 39, no. 2, pp. 24–33, 2004.
+[4] G. Abe and J. Richardson, “Alarm timing, trust and driver expectation
+for forward collision warning systems,” Appl. Ergon., vol. 37, no. 5,
+pp. 577–586, Sep. 2006.
+[5] M. Wittman, M. Kiss, P. Gugg, A. Steffen, M. Fink, E. Poppel, and
+H. Kamiya, “Effects of display position of a visual in-vehicle task on
+simulated driving,” Appl. Ergon., vol. 37, no. 2, pp. 187–199, Mar. 2006.
+[6] B. Okombi-Diba, M. Okuwa, Y. Uchiyama, A. Kozato, and T. Hongo,
+“Evaluation of a night driver support system: Driver eye movement be-
+havior,” in Proc. SICE Annu. Conf., Aug. 4–6, 2004, vol. 1, pp. 795–801.
+[7] B. Donmez, L. N. Boyle, J. Lee, and D. McGehee, “Drivers’ attitudes
+toward imperfect distraction mitigation strategies,” Transp. Res., Part F
+Trafﬁc Psychol. Behav., vol. 9, no. 6, pp. 387–398, Nov. 2006.
+[8] L. Angell, J. Auﬂick, P. Austria, D. Kochhar, L. Tijerina, W. Biever,
+T. Diptiman, J. Hodgsett, and S. Kiger, “Driver workload metrics project:
+Task 2 ﬁnal report,” U.S. Dept. Transp., NHTSA, Washington, D.C., Tech.
+Rep. DOT HS 810 635, Nov. 2006.
+[9] T. Sharon, T. Selker, L. Wagner, and A. Frank, “Carcoach: A generalized
+layered architecture for educational car systems,” in Proc. IEEE Int. Conf.
+Softw.—Science, Technology Engineering, Feb. 2005, pp. 13–22.
+[10] K. Takemura, J. Ido, Y. Matsumoto, and T. Ogasawara, “Drive monitoring
+system based on non-contact measurement system of driver’s focus of vi-
+sual attention,” in Proc. IEEE Intell. Veh. Symp., Jun. 2003, pp. 581–586.
+[11] A. Amditis, H. Kubmann, A. Polychronopoulos, J. Engstrom, and
+L. Andreone, “System architecture for integrated adaptive HMI solu-
+tions,” in Proc. IEEE Intell. Veh. Symp., 2006, pp. 388–393.
+
+--- Page 9 ---
+DOSHI et al.: NOVEL ACTIVE HEADS-UP DISPLAY FOR DRIVER ASSISTANCE
+93
+[12] L. Petersson, L. Fletcher, and A. Zelinsky, “A framework for driver-in-
+the-loop driver assistance systems,” in Proc. IEEE Intell. Transp. Syst.,
+Sep. 2005, pp. 771–776.
+[13] S. Y. Cheng and M. M. Trivedi, “Turn intent analysis using bodypose for
+intelligent driver assistance,” Pervasive Comput., vol. 5, no. 4, pp. 28–37,
+Oct.–Dec. 2006.
+[14] M. Rizzo and I. L. Kellison, “Eyes, Brains, and Autos,” Arch. Ophthal-
+mol., vol. 122, no. 4, pp. 641–645, Apr. 2004.
+[15] H. Watanabe, H. Yoo, O. Tsimhoni, and P. Green, “The effect of HUD
+warning location on driver responses,” in Proc. Int. Transp. Syst. World
+Congr., 1999, pp. 1–10.
+[16] X. Liu, F. Xu, and K. Fujimura, “Real-time eye detection and tracking for
+driver observation under various light conditions,” in Proc. IEEE Intell.
+Veh. Symp., Jun. 2002, pp. 344–351.
+[17] P. Wang, B. G. Matthew, J. Qiang, and W. J. Wayman, “Automatic eye
+detection and its validation,” in Proc. IEEE Workshop Face Recog. Grand
+Challenge Experiments (CVPR), Jun. 2005, p. 164.
+[18] J. Wu and M. M. Trivedi, “A binary tree for probability learning in eye
+detection,” in Proc. IEEE Workshop FRGC CVPR, 2005, vol. 3, p. 170.
+[19] A. D. Wiles, D. G. Thompson, and D. D. Frantz, “Accuracy assessment
+and interpretation for optical tracking systems,” in Proc. SPIE—Medical
+Imaging,
+Visualization,
+Image-Guided
+Procedures,
+Display,
+2004,
+vol. 5367, pp. 421–432.
+[20] M. M. Trivedi and S. Y. Cheng, “Holistic sensing and active displays for
+intelligent driver support systems,” Computer, vol. 40, no. 5, pp. 60–68,
+May 2007.
+[21] M. M. Trivedi, T. Gandhi, and J. McCall, “Looking-in and looking-out of
+a vehicle: Computer-vision-based enhanced vehicle safety,” IEEE Trans.
+Intell. Transp. Syst., vol. 8, no. 1, pp. 108–120, Mar. 2007.
+[22] J. McCall and M. M. Trivedi, “Driver behavior and situation aware brake
+assistance for intelligent vehicles,” Proc. IEEE, vol. 95, no. 2, pp. 374–
+387, Feb. 2007.
+[23] K. W. Gish and L. Staplin, “Human factors aspects of using head up
+displays in automobiles: A review of the literature,” U.S. Dept. Transp.,
+NHTSA, Washington D.C., Tech. Rep. DOTT HS 808 320, Aug. 1995.
+[24] A. Doshi and M. M. Trivedi, “A comparative exploration of eye gaze and
+head motion cues for lane change intent prediction,” in Proc. IEEE Intell.
+Veh. Symp., 2008.
+[25] E. Murphy-Chutorian and M. M. Trivedi, “Head pose estimation in com-
+puter vision: A survey,” IEEE Trans. Pattern Anal. Mach. Intell., 2008.
+Anup Doshi (S’03) received the B.S. and M.S. de-
+grees in electrical and computer engineering from
+Carnegie Mellon University, Pittsburgh, PA, in 2005.
+He is currently working toward the Ph.D. degree in
+the Laboratory for Intelligent and Safe Automobiles,
+University of California, San Diego, La Jolla.
+His research interests include computer vision and
+machine learning for applications in driver assistance
+and intelligent vehicles, human-computer interfaces,
+and surveillance.
+Shinko Yuanhsien Cheng (S’05–M’07) received the
+Ph.D. from the University of California, San Diego,
+La Jolla, in 2007.
+He is currently with HRL Laboratories, LLC,
+Malibu, CA. His research interests include com-
+puter vision systems, human-machine interfaces,
+articulated body modeling, volumetric scene recon-
+struction, human body pose and structure recovery,
+human activity recognition, intelligent transportation
+systems, and intelligent vehicles.
+Mohan Manubhai Trivedi (S’76–M’79–SM’86) re-
+ceived the B.E. degree (with honors) from Birla In-
+stitute of Technology and Science, Pilani, India, and
+the Ph.D. degree from Utah State University, Logan.
+He is a Professor of electrical and computer engi-
+neering and the Founding Director of the Computer
+Vision and Robotics Research Laboratory, Univer-
+sity of California, San Diego (UCSD), La Jolla. He
+has established the Laboratory for Intelligent and
+Safe Automobiles, UCSD, to pursue a multidiscipli-
+nary research agenda. His team is currently pursuing
+system-oriented research in distributed video arrays and active vision, omni-
+directional vision, human body modeling and movement analysis, face and
+affect analysis, and intelligent driver assistance and active safety systems for
+automobiles. He regularly serves as a consultant to industry and government
+agencies in the United States and abroad.
+Prof. Trivedi served as the Editor-in-Chief of the Machine Vision and
+Applications Journal from 1996 to 2003 and on the editorial boards of several
+other journals. He is currently an Associate Editor of the IEEE TRANSACTIONS
+ON INTELLIGENT TRANSPORTATION SYSTEMS. He served as the Program
+Chair for the IEEE Intelligent Vehicles Symposium (IV 2006) and will serve
+as the General Chair for the IEEE IV 2010 in San Diego. He serves on the
+Executive Committees of the University of California Digital Media Innovation
+Program and of the California Institute for Telecommunication and Information
+Technologies [Cal-IT2] as the Leader of the Intelligent Transportation and
+Telematics Layer at UCSD. He serves as an Expert Panelist for the Strategic
+Highway Research Program (Safety) of the Transportation Research Board of
+the National Academy of Sciences. He has an extensive publication record, and
+two of his recent papers coauthored with his Ph.D. students have won the Best
+Paper Award. He was also a recipient of the Distinguished Alumnus Award
+from Utah State University and of the Pioneer Award (Technical Activities)
+and the Meritorious Service Award from the IEEE Computer Society.

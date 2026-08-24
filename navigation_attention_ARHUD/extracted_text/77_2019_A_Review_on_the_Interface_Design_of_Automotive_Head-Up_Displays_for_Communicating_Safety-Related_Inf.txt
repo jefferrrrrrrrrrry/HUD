@@ -1,0 +1,153 @@
+A Review on the Interface Design of Automotive Head-Up 
+Displays for Communicating Safety-Related Information
+ 
+Juhee Park1 and Woojin Park2 
+1Department of Industrial Engineering, Seoul National University, Seoul, Republic of Korea 
+2Department of Industrial Engineering and Institute for Industrial Systems Innovation, Seoul National 
+University, Seoul, Republic of Korea
+ 
+ 
+Automotive head-up displays (HUDs) have the 
+advantage of allowing drivers to keep their eyes forward while 
+driving by superimposing visual information on top of the 
+drivers’ forward field of view (FoV). In order to provide the 
+intended advantage, HUDs must be designed such that they 
+respect the characteristics and capacities of the human 
+information processing system and accommodate the specific 
+contexts of information use. Poorly designed HUDs indeed can 
+adversely affect driving safety by creating new sets of problems, 
+including visual clutter, information overload, inattentive 
+blindness and cognitive capture (Gish and Staplin, 1995; Pauzie, 
+2015; Tufano, 1997; Ward and Parkes, 1994). 
+During the last few decades, various research studies 
+have proposed different HUD displays that present HUD 
+information in particular styles. However, it is not well 
+understood what type of display would be most advantageous 
+or adequate for effectively communicating each information 
+type and thus best serve drivers in performing the associated 
+driving task. Relatively little research has been conducted to 
+evaluate the available HUD displays in the interface design.  
+ 
+As an initial effort towards addressing the knowledge 
+gap, the objective of the current study was to provide a review 
+of the existing HUD displays focusing on the interface design. 
+Among the variety of HUD information types, the current 
+review was intended to cover different types of safety 
+information. For each type of safety information, the HUD 
+displays proposed by the automobile industry and academic 
+research were examined, in terms of their structures and 
+behaviors and also related human factors display design 
+principles. On the basis of the review results, this study 
+suggests some future research directions that would help 
+develop useful and effective HUD displays.     
+This study conducted two literature searches, one for 
+documents describing existing commercial HUD displays, and, 
+the other one for research articles proposing or evaluating 
+automotive HUD displays for communicating safety-related 
+information. Thirteen major automobile manufacturers 
+providing HUD systems, such as Audi, BMW Group, Ford, 
+General Motors, Honda, Hyundai/KIA, Jaguar Land Rover, 
+Mercedes-Benz, PSA Peugeot Citroen, Renault, SAAB, 
+Toyota, and Volvo, were considered. The details of the 
+interface designs of the manufacturers’ HUD displays were 
+examined using the information provided in the vehicle 
+manuals. Research articles were searched by utilizing terms 
+describing four concepts: (1) head-up display (head up 
+display(s), head-up display(s), HUD(s)), (2) automobiles 
+(automotive, vehicle(s), car(s), automobile), (3) interface 
+design (display, design, interface, augmented reality, human 
+factors, system), and (4) safety information (safety, warning, 
+alert). As a result, a total of 15 studies were included in this 
+review. 
+The review results indicated that safety-related HUD 
+displays proposed by academic research studies were mostly 
+AR-based and contact-analog. On the other hand, all of the 
+commercial safety-related HUD displays were of the 
+unregistered type and did not utilize the AR technology. 
+It is not clear why the existing commercial HUD displays 
+did not adopt the AR technology. Perhaps, it may be due to 
+some technological challenges in incorporating the AR 
+technology into the automotive HUD system. Alternatively, it 
+may be that the efficacy of the AR HUD technology has not 
+been confirmed for creating safety-related HUD displays.  
+This study examined the HUD displays in terms of the 
+human factors display design principles (Wickens et al., 
+2003). Many of the proposed displays indeed were based on 
+some of the well-known display design principles, such as the 
+principles of proximity compatibility, information access cost 
+minimization, predictive aiding, color coding and consistency. 
+However, the display proposed by George et al. (2012) 
+seemed to provide a relatively large amount of information in 
+one display. In this case, the legibility of the display may 
+decrease and cause confusion in terms of discriminability. In 
+addition, visual complexity may increase, which may degrade 
+information processing. In dangerous situations, displays 
+should be simple and should not require too much perception 
+or interpretation. Future research will need to determine to 
+what degree the complexity of the display is acceptable in 
+hazardous or safety-critical driving situations. Research is also 
+needed to identify the individual differences in the acceptance 
+levels of visual complexity. 
+On the basis of the review results, some future research 
+directions were identified:   
+z 
+Research should attempt to develop design 
+principles/guidelines that help designers identify an 
+appropriate user interface type when given an 
+information characteristic and its usage context. 
+ㆍ What are the information characteristics 
+suitable for contact-analog and unregistered 
+display formats? Which of the two display 
+formats would be more effective, under various 
+circumstances, especially in situations where 
+nearby hazards must be detected quickly? 
+z 
+Research is needed to investigate how to design and 
+evaluate HUDs taking into account the drivers’ 
+information processing capabilities under safety-
+critical driving situations. 
+ㆍ How many HUD displays can be presented 
+without exceeding the drivers’ information 
+Proceedings of the Human Factors and Ergonomics Society 2019 Annual Meeting
+Copyright 2019 by Human Factors and Ergonomics Society. DOI 10.1177/1071181319631099
+2016
+
+
+processing capabilities under safety-critical 
+driving situations? In this regard, what are the 
+priority levels of different HUD displays and 
+how can they be determined? 
+ㆍ What is the acceptable level of visual 
+complexity of a single or multiple displays 
+within the drivers’ information processing 
+capabilities? What are the individual 
+differences in the acceptance levels of visual 
+complexity? 
+ 
+REFERENCES 
+ 
+Gish, K. W., & Staplin, L. (1995). Human factors aspects of 
+using head up displays in automobiles: A review of 
+the literature. 
+George, P., Thouvenin, I., Fremont, V., & Cherfaoui, V. 
+(2012, June). DAARIA: Driver assistance by 
+augmented reality for intelligent automobile. 
+In Intelligent Vehicles Symposium (IV), 2012 
+IEEE (pp. 1043-1048). IEEE. 
+Pauzie, A. (2015, August). Head Up Display in automotive: a 
+new reality for the driver. In International 
+Conference of Design, User Experience, and 
+Usability (pp. 505-516). Springer, Cham. 
+Tufano, D. R. (1997). Automotive HUDs: The overlooked 
+safety issues. Human factors, 39(2), 303-311. 
+Ward, N. J., & Parkes, A. (1994). Head-up displays and their 
+automotive application: An overview of human 
+factors issues affecting safety. Accident Analysis & 
+Prevention, 26(6), 703-717. 
+Wickens, C. D., Gordon, S. E., Liu, Y., & Lee, J. (2003). An 
+introduction to human factors engineering (2nd ed.). 
+ 
+Proceedings of the Human Factors and Ergonomics Society 2019 Annual Meeting
+2017
+
+

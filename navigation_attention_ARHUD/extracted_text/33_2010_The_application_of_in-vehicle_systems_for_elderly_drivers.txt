@@ -1,0 +1,960 @@
+SPECIAL ISSUE
+The application of in-vehicle systems for elderly drivers
+Amy Weihong Guo & Jenny F. Brake &
+Simon J. Edwards & Phil T. Blythe &
+Richard G. Fairchild
+Received: 30 April 2010 /Accepted: 23 September 2010 /Published online: 10 October 2010
+# The Author(s) 2010. This article is published with open access at Springerlink.com
+Abstract
+Purpose In response to the rapidly ageing global popula-
+tion, the purpose of this paper is to identify the problems of
+elderly drivers and their relation to emerging in-vehicle
+technologies.
+Methods The method is three fold. Firstly, it reviews factors
+involved in the functional decline of elderly drivers.
+Secondly, it assesses the feedback and support capabilities
+of in-vehicle systems (IVSs) with the potential to assist
+elderly people to drive safely for longer and maintain their
+quality of life. Lastly, it describes a newly funded project,
+Social inclusion through Digital Economy (SiDE), which
+will demonstrate an innovative application of driving
+simulator technology to test and evaluate the impact of
+emerging invehicle systems on elderly drivers. This project
+intends to assess whether it makes them less vulnerable
+road users.
+Conclusion The paper concludes that IVSs providing
+feedback and support to elderly drivers have the potential
+to help them recognize their weakness and vulnerability as
+road users and improve their driving performance through
+the use of advice, alerts, warnings or active interventions.
+Keywords Elderly driver. Vulnerable road user. Driver
+feedback . Driver support . In-vehicle system
+1 Introduction
+In the UK, the ageing segment of the population is growing
+more rapidly than other age groups. The population of the
+current state pensionable age is expected to rise by 32%
+over the next 25 years from 11.8 million in 2008 to 15.6
+million in 2033; and the number of people over 85 years is
+projected to more than double over the next 25 years from
+1.3 million in 2008 to 3.3 million by 2033. The proportion
+of people aged 65 years and over is projected to increase
+from 16% in 2008 to 23% by 2033 [1]. In Europe, the
+number of elderly people has tripled over the last 50 years
+and will more than triple again over the next 50 year period
+[2]. The same trend is echoed in Canada, USA, Japan and
+the rest of the developed world. Meanwhile, the number of
+female elderly drivers has also increased dramatically in the
+last decade as more of these women started driving in later
+adulthood or became widowed, divorced or separated and
+did not have another driver available in the household [3,
+4]. This trend will continue in the future and lead to a more
+even gender distribution among elderly drivers than in the
+past. These statistics show that the proportion of elderly
+drivers, particularly female elderly drivers, as a part of the
+driving population will increase globally and therefore
+special, targeted care for this segment of drivers should be
+identified and addressed.
+Research suggests that elderly drivers are less accurate
+in judging speed and distance and have more difficulty
+with multi-tasking [5, 6]. Robertson and Vanlaar [7] report
+that in Canada elderly drivers account for 16% of road
+deaths and 7.8% of injuries—the second largest behind the
+15–24 years group. The same study highlights a rate of
+15.7 deaths per 100,000 for the 65 years and over group
+compared to a rate of 24.7 deaths per 100,000 of the
+population in the 15–24 years group and 9.6 in the 24–
+A. W. Guo (*): J. F. Brake: S. J. Edwards: P. T. Blythe:
+R. G. Fairchild
+TORG, School of Civil Engineering & Geosciences,
+Newcastle University,
+Cassie Building,
+Newcastle upon Tyne NE1 7RU, UK
+e-mail: weihong.guo@ncl.ac.uk
+Eur. Transp. Res. Rev. (2010) 2:165–174
+DOI 10.1007/s12544-010-0037-y
+
+
+65 years age group [7]. Li et al. [8] show that whilst the
+number of deaths per driver involved in crashes in the
+United States is lowest for those aged 16–19 years, it rises
+by almost fivefold for drivers aged over 80 years.
+However, in the same study, a measure of fragility can
+be found by comparing the number of road deaths per
+number of drivers involved in a crash (a measure of risk)
+and excessive crash involvement (i.e. drivers involved in
+crashes per vehicle-miles travelled (VMT)) showed that
+the rate of drivers involved in crashes per VMT was
+highest for those aged 16–19 years and falls rapidly until
+the 70–74 years age group when it rises again. Thus,
+although the under 24 years age group has a larger crash
+risk than the over 65 years age group, the over 65 group
+drives comparatively fewer miles than the under 24 age
+group, but are more likely to suffer more serious or even
+fatal injuries, thereby having a higher measure of fragility
+and vulnerability. Furthermore, elderly drivers also have a
+problem with maintaining a constant vehicle speed [9].
+McGwin et al., [10] showed that for drivers aged
+65 years and older, the at-fault crash rate was 2.1 times
+higher for drivers who had been involved in a crash in the
+previous 4 years compared to those who had not, herefore
+an elderly person who has had a recent crash is more likely
+to have another one. This study also determined that at-fault
+drivers more often rated their driving as average or worse
+compared to not at-fault drivers. Habitual hazardous and
+critical errors highlighted in an Australian on-road driving
+assessment study of elderly drivers (aged between 60–
+86 years) showed that failing to check the blind spot,
+observe intersections and make critical observations (i.e.
+‘failure to observe critical features of the driving environ-
+ment that compromised safety including pedestrians on
+crossings, vehicles entering the flow of traffic, critical
+traffic signs or road markings’) were in the top four
+reported errors by the assessors [11]. Physical intervention
+by the instructors resulting from critical driving errors were
+primarily committed by drivers negotiating intersections,
+along with failures in observations, gap selection and
+vehicle positioning [11].
+Breker et al. [3] considered that elderly drivers are not
+often accident prone for the following reasons: they have a
+lower proportion of alcohol use when driving, use
+restraints more frequently and do not show signs of losing
+control over the vehicle in curves and straight sections.
+However, they are often involved in accidents at an
+intersection where fast information processing and quick
+reactions are required. AGILE (Aged people Integration,
+mobility, safety and quality of Life Enhancement through
+driving), a project funded by the European Commission
+Research Programme ‘Quality of Life’ Key Action ‘The
+Ageing Population’, conducted a survey with drivers in
+three age groups (55–64, 65–74, 75+) in 2001. The results
+indicate that the older the age group the person is in, the
+more often he/she is the following: the main driver in the
+household, legally responsible for accidents occurring
+recently, drives fewer miles monthly and is less open to
+external support such as special training and consultation
+courses [3]. Gender differences are also found in driving
+behaviour. Compared to male elderly drivers, female
+elderly drivers tend to drive fewer mileages; have less
+driving experience both quantitatively and qualitatively;
+and are less often involved in or responsible for accidents
+[3, 4].
+However, driving plays an important and essential role
+in maintaining elderly people’s mobility and independent
+living, enabling them to participate in their usual social
+activities and carry out practical day-to-day needs [7, 12–
+14]. From a psychological perspective, driving makes
+them feel younger, more confident and independent, whilst
+mobility increases their feeling of control, self-esteem,
+protection and prestige, enhances their status and helps
+them participate in work, education or social events and
+develop cognitive skills. Asking for lifts and the use of
+public transport could be alternatives to driving. However,
+UK Economic and Social Research Council (ESRC)
+research found that older people are exceedingly reluctant
+to ask family members or friends for lifts, even to hospital
+or doctor’s appointments, unless some kind of reciprocal
+relationship is involved [15]. Gilhooly [15], AgeUK [16]
+and Brake [17–19] indicate that barriers to using public
+transport may exist, such as being physically inaccessi-
+ble; a lack of covered waiting areas and toilets; the
+perception of being unsafe and unreliable, expensive and
+inconvenient; whilst very often services such as hospitals
+and cheaper out of town shopping centres are poorly
+served by public transport. In addition, many elderly
+people are not able to walk the required distance, stand
+for a long time or have the overall physical endurance to
+use public transport. Given that both car ownership and
+driving appear to be related to a higher quality of life,
+giving up driving can lead to reduced mobility, lack of
+freedom, loss of independence, unmet social and aesthet-
+ic needs, lower quality of life and eventually depression
+and isolation [12, 15].
+This paper reviews factors involved in the functional
+decline of elderly drivers which is well-documented as
+the main cause of reduced driving ability. It goes on to
+assess the feedback and support capabilities of IVSs with
+the potential to assist elderly people to drive safely for
+longer and maintain their quality of life. Lastly, it
+describes a newly funded project, Social inclusion
+through Digital Economy (SiDE), which will demonstrate
+an innovative application of driving simulator technology
+to test and evaluate the impact on elderly drivers of
+emerging IVSs.
+166
+Eur. Transp. Res. Rev. (2010) 2:165–174
+
+
+2 Functional decline of elderly drivers
+Age-related functional decline in physical health (especially
+mobility, sight and hearing) and mental health can impact
+on driving ability and lead to misjudgements and errors
+whilst driving. Elderly people suffering from a decline in
+physical health—such as stiffer muscles, limited neck and
+upper body rotation and loss of upper limb strength—can
+affect their ability to move and operate the car safely [7, 20,
+21]. People suffering from a decline in visual health such as
+blurred vision and photophobia can experience problems
+with distance vision and sensitivity to light and glare [20,
+22, 23]. Age-related functional decline can also be caused
+by other medical issues including a stroke, heart disease or
+medications prescribed to treat a specific ailment or other
+illness [10, 12, 20, 22, 24]. People suffering from a decline
+in mental health, such as loss of confidence, memory,
+concentration and capability to process information, can be
+more susceptible to distraction, find it difficult to perform
+multi-tasking and difficult to understand road signs and
+travel information displayed on the dashboard [12, 20, 22,
+25].
+In order to compensate for functional decline, elderly
+drivers tend to drive less: this is possible as they no longer
+need to commute and travel to work after retirement [12,
+26–28]. They deliberately avoid driving at night, in poor
+road conditions or other risky situations and places such as
+wet roads, rush hours, heavy traffic, unfamiliar roads and
+localities, bad weather or damaged roads: these practices all
+contribute to a reduction in the annual mileage driven [27,
+29, 30]. They display a coping mechanism for easing the
+driving tasks by creating more time. This specific strategy
+allows them to cope with a reduced capability to process
+information and allows the task to be completed conscious-
+ly rather than reactively [5, 31, 32]. This is usually achieved
+by slowing down before a manoeuvre (such as turning to
+cross a traffic lane). However, in certain situations, such as
+entering a high speed motorway, slowing down is not an
+effective coping mechanism and indeed it may contribute to
+increasing the risk of an accident. This risky behaviour can
+be compounded further by physical deficiencies such as
+reduced neck rotation which can commonly lead to a loss in
+ability to check the blind spot [11]. They also tend to avoid
+right turns by taking routes that require left turns or routes
+where right turns have green-arrow signals [33–35].
+3 In-vehicle systems
+3.1 Assistance needed to mitigate functional decline
+In the literature there are several descriptions of elderly
+drivers and driving behaviours that can adversely affect
+driving or can limit the freedom to choose when to drive.
+Table 1, adapted from Davidse [31], shows a summary of
+the functional decline affecting elderly drivers and the
+assistance needed to overcome this functional decline.
+From this type of information it is possible to begin to
+scope out the features of assistance systems for elderly
+drivers.
+As discussed earlier, the decline in capability of elderly
+drivers has contributed to the fact that—compared to
+middle aged drivers—elderly drivers are more often
+involved in traffic accidents, killed or seriously injured in
+accidents which involve other vehicles. Studies of individ-
+ual developed countries in Europe, Asia and North America
+[36–39] document that elderly drivers do not represent an
+excessive risk or a threat to other road users. They are more
+likely to hurt themselves than to put others at risk. Hence,
+improving their driving performance has the potential to
+enhance their safety on the road and benefit the transport
+network as a whole.
+In-vehicle assistive technologies are available to
+address elderly drivers’ functional decline and avoidable
+behaviours, assist elderly drivers with their driving
+activities and increase road safety. Rakotonirainy and
+Steinhardt [40] report that new in-vehicle technology
+could improve safety and comfort as well as maintain
+elderly people’s mobility for longer. Musselwhite and
+Haddad [12] point out that older people are quite willing
+to accept in-vehicle technology that helps their driving,
+with a slight preference for those that provide feedback
+rather than reduce workload.
+3.2 In-vehicle system capabilities: driver feedback
+and support
+A distinction is made between driver feedback and driver
+support. Driver feedback offers information (such as
+location, fuel consumption and the frequency of lane
+deviation) whereas driver support makes it possible to
+improve performance based on the information available
+through feedback (e.g. a better route, how to reduce fuel
+consumption, how to make fewer lane deviations). Driver
+support can be in the form of advice, an alert or a warning,
+or even active intervention. Different IVSs will offer one or
+more of these capabilities.
+In-vehicle navigation systems (IVNS) are common
+applications using feedback and support. They use a
+Geographic Information System (GIS), which combines a
+map and a database, and a satellite navigation system such
+as Global Positioning System (GPS) [41]. Currently, IVNS
+typically uses a GPS-enabled device to acquire position
+data to give feedback by locating the vehicle on the map
+displayed to the user. Each GPS-enabled device needs to
+receive signals from at least four satellites to calculate its
+Eur. Transp. Res. Rev. (2010) 2:165–174
+167
+
+
+position in three dimensions, therefore an unobstructed
+view of the sky is required. This means that signal loss and/
+or multipath error occurs often in urban canyons or tunnels.
+A dead reckoning technique (a method of determining
+position by making an educated guess based on last known
+position, speed, time and direction), using a gyroscope and
+an accelerometer is applied to enhance the reliability of
+IVNS. A system using satellite based, mobile based and
+wireless technologies was successfully tested in Newcastle
+during the ASK-IT project (Ambient intelligence system of
+agents for knowledge-based and integrated services for
+mobility impaired users, funded by the EU 6th Framework
+IST programme) to provide both indoor and outdoor
+location-based services to disabled and elderly people
+[42]. A future system which integrates GPS with current
+technologies as well as the forthcoming Galileo system (a
+European Civil Satellite Navigation system launched by the
+European Council in 2002) will be able to provide a fully
+connected and pervasive IVNS.
+According to Burns [43] and Goodman et al. [44], IVNS
+have the potential to maintain elderly drivers’ mobility and
+hence independence and quality of life. For example, they
+can offer support in the form of advice by providing
+distance information to identify the location of forthcoming
+manoeuvres [45], which creates more time for elderly
+drivers to prepare for the manoeuvres. They help elderly
+drivers when they travel in an unfamiliar area, where they
+are often reluctant to travel [45, 46]. It also allows elderly
+drivers in the early stages of dementia to locate themselves
+and guide them back home when they are lost, even in a
+familiar area [47]. However, a safety concern with IVNS
+using relatively complex visual displays is raised for elderly
+drivers by Mourant et al. (2001) and May et al. [45]. Also,
+an age-related decline in learning environment layout (e.g.
+route selection, scene recognition, distance ranking and
+map placement) is identified by Kirasic [48] and Moffat et
+al. [49]. Nevertheless, Guo [46] points out that using
+snapshots (photographic images) of landmarks for naviga-
+tion is welcomed by people of all ages. Goodman et al. [44]
+discovered that a navigation aid based around landmarks is
+particularly useful for elderly people. May et al. [45] report
+that the incorporation of landmarks in the turn-by-turn
+instructions provided by a navigation system has improved
+the confidence of elderly drivers in particular, because it
+significantly reduced the time spent glancing on the visual
+display. Therefore, the use of landmarks as navigation cues
+can increase the effectiveness and safety of navigation
+systems.
+Connections to the vehicle controller area network bus
+(CANbus) have allowed information relating to speed,
+Functional decline
+Assistance needed
+Vision and hearing
+Peripheral vision
+Signalling objects that are located in the driver’s
+blind spot
+Night time visual acuity
+Artificially lighting objects (other road users and
+road design elements)
+Sensitivity to glare
+Prevent glare
+Contrast sensitivity
+Draw attention to approaching traffic
+Colour vision
+Degree of contrast
+Motion perception
+Draw attention to approaching traffic
+Hearing
+Audible cues to visual information display
+Cognitive processing and decision making
+Divided attention
+Prioritisation of tasks and simplifying sequences
+of tasks
+Selective attention
+Assist the driver in directing his/her attention to
+relevant information
+Speed of processing information and making
+decisions
+Provide prior knowledge on the next traffic situation
+Performing tasks consciously
+Provide prior knowledge on the next traffic situation
+Physical changes
+Flexibility of head and neck
+Signalling objects that are located in the driver’s
+blind spot
+Manual dexterity and strength
+Ergonomic design
+Interaction with other road users
+Performance under pressure of time
+Provide prior knowledge on the next traffic situation
+Insight in the behaviour of other road users
+Draw attention to approaching traffic and
+its behaviour
+Table 1 Functional decline of
+elderly drivers and assistance
+needed (Source: adapted from
+Davidse [31])
+168
+Eur. Transp. Res. Rev. (2010) 2:165–174
+
+
+distance, time of trip, fuel consumption, electrical accessory
+usage, and heating and ventilation usage to be gained. This
+information is then used to provide feedback and support.
+The existence of sensor technology, radio frequency
+communication-based technology, ad-hoc communication,
+positioning technology and video image processing tech-
+nology enables extra information on the driving environ-
+ment to be collected and interpreted. Examples of such
+information are distance and/or speed from the vehicle
+ahead, lateral position of the vehicle on the lane and degree
+of visibility (e.g. day or night). Integrating them into in-
+vehicle driver support systems should decrease human
+errors, alert the driver as early as possible to an impending
+danger, warn him/her if there is no driver reaction to the
+first alert and actively assist or ultimately intervene in order
+to avert the accident or mitigate its consequences [14, 41,
+50, 51]. Warnings should be given in visual or audible
+formats rather than vibrating format as elderly drivers are
+less sensitive to vibration [52].
+Driver support systems have the potential to address
+either directly or indirectly the specific declines in
+perceptual, cognitive and physical performance by
+enabling a reduction in driver workload [41]. Neverthe-
+less, it is important to allow elderly drivers to select when
+and how much support they wish to receive, thereby
+increasing user acceptance and subsequent willingness—
+and capability—to improve their driving performance and
+road safety [12]. A summary of these driver support
+systems with the potential assistance to elderly drivers is
+shown in Table 2.
+3.3 In-vehicle system capabilities: methods of delivering
+feedback and support
+Feedback on and support for driving performance can be
+delivered either in-vehicle (on a display) before, during and
+at the end of the trip or off-vehicle (e.g. at home or on a
+mobile digital device) at the convenience of the driver
+through, for example, emails, websites, mobile phone text
+messages or paper-based statements. However, Fairchild et
+al. [53] have suggested that, for feedback to be effective,
+advice to the driver must be timely and useful, enabling the
+driver to take action that will improve driving performance
+in one or more ways, e.g. at the point of the negative
+behaviour being detected, but without causing a driving
+hazard in safety critical situations; or after the event whilst
+still in the car so that there is recent memory of the journey;
+or off-vehicle, so that more detailed feedback and support
+can be offered in a non-stressful environment. As many
+elderly drivers are unaware of their decreased driving
+performance or are less concerned about relevant issues
+[7, 54], the use of driver feedback systems will provide
+opportunities for them to recognise their weaknesses and
+possibly adopt measures to tackle their diminished driving
+performance.
+One example of off-vehicle feedback is Fiat’s eco:Drive
+system [55]. This measures the driving-style characteristics
+of the driver which can be downloaded via a universal
+serial bus (USB) drive. Data are analysed using a Fiat web
+service when uploaded to the user’s home computer. The
+user is then presented through their web browser with a
+summary of feedback information such as journey cost and
+estimated CO2 emissions, together with support in the form
+of general tips for better driving.
+Foot-LITE is a research project funded by the UK
+Engineering and Physical Sciences Research Council
+(EPSRC). It seeks to deliver innovative driver/vehicle
+interface systems and services to encourage sustained
+changes to driving styles (to improve safety and eco-
+driving) and wider travel behaviour (for example switching
+to non-car modes) [53]. The Foot-LITE system targets
+drivers from across the socio-economic spectrum and at all
+levels of experience, making it an appropriate system for
+use by elderly drivers. The system comprises an in-vehicle
+device to provide immediate feedback to the driver on a full
+colour screen that indicates the driving error or risky
+behaviour that has occurred and provides support showing
+how it may be corrected and avoided in the future. Further
+in-vehicle feedback is provided at the end of a trip,
+indicating journey length, cost (measured by the fuel used)
+and emissions; it also offers support in the form of ‘lessons
+to be learned’. Finally, statements sent out through the
+internet at the users’ preset timing (e.g. weekly or monthly)
+provide totals of measured driving factors such as fuel
+consumption, the number of times a driving infringement
+was committed, for that time period. It also provides a
+comparison of how the driver is performing in terms of the
+changes that have been made in driving style and their
+impact on the cost of driving and vehicle emissions (which
+could also increase as well as decrease) over a longer period
+of time which encompasses multiple trips. Lastly, off-
+vehicle web based support directs the driver to personalised
+lessons that will show how to improve their driving style.
+Driver performance is measured against pre-defined driving
+standards. The Foot-LITE system has undergone simulator
+trials fully instrumented vehicle trials and a three vehicle
+prototype trial; the final field trial will be carried out on a
+thirty vehicle test fleet.
+A more advanced method of delivering feedback and
+support is the head-up display (HUD). This is a transparent
+display that presents critical and relevant information to the
+driver without requiring him/her to look away from the road
+(Fig. 1). A HUD can be used on forward displays, such as a
+car windshield, or in rear view/wing mirrors. In March
+2010, General Motors announced its new concept: an
+enhanced vision system that builds upon conventional
+Eur. Transp. Res. Rev. (2010) 2:165–174
+169
+
+
+HUD technology and displays important information across
+the entire windshield using cameras and sensors placed
+around the car (www.wired.com/autopia/2010/03/gm-next-
+gen-heads-up-display).
+As visual impairment is common in elderly people,
+displaying road signs, speed limit data and traffic signs on
+the HUD (with optional audible cues) could improve
+elderly drivers’ road safety by enhancing the clarity of
+road/traffic signs [40]. In addition, elderly drivers, who
+need an early warning, due to a slower reaction time than
+younger drivers, will have the chance to decide when they
+want such information to be made available on the HUD.
+This will give them enough time (usually longer than for
+younger drivers) to perform the manoeuvres, before they
+are able to see the actual sign. This is probably a more
+effective alternative to ‘making road signs bigger to help
+elderly drivers’, as suggested by Box et al. [56]. Moreover,
+integrating the HUD into IVS has the potential to allow the
+Table 2 Driver support systems for elderly drivers (Sources: European Commission [51]; Fairchild et al. [53])
+Driver support systems
+Assistance to elderly drivers
+Adaptive Light Control (ALC)/Adaptive Front Lighting System (AFS)
+Using lighting technology, sensor networks (and satellite
+navigation systems in the future), ALC/AFS can adjust
+the direction, width and depth of the headlamps’ light
+automatically in reaction to the surroundings, type of road,
+steering wheel angle, speed and movement of the vehicle.
+Increase visibility at night time and bad weather; offer a better
+view of the road ahead, including other vehicles and obstacles
+in the distance.
+Lane Departure Warning (LDW)
+LDW is a forward-looking and vision-based system using
+algorithms to interpret video images to estimate the
+direction and lateral position and velocity of the vehicle
+and lane width and road curvature.
+Alert the driver to drive within the lane when deviation occurs.
+Intersection Assistant
+Intersection assistant monitors the traffic from the right,
+road signs and the traffic signals at the intersections.
+Via a wireless communication link, it provides the
+driver with the status of the traffic lights and a
+suggested speed to allow him/her to pass the
+intersections safely.
+Alert the driver to stop for the traffic from the right or offer
+speed suggestions according to the road signs/traffic signals,
+and then warn the driver if he/she performs inappropriately.
+Lane Change Assistance (LCA) or Blind Spot Detection (BSD)
+LCA or BSD continuously monitors the rear blind
+spots on both sides of the vehicle.
+Warn the driver visually/audibly to avoid overtaking in critical
+situations.
+Obstacle and Collision Warning (OCW)
+Using radar sensors or video image processing or a
+combination of them, OCW monitors the area in front
+of the vehicle. OCW is proactive in terms of providing
+full braking force, arming airbags or tightening the
+seatbelt when needed.
+Warn the driver when vehicles, cyclists, pedestrians or other
+obstacles on the road ahead are detected; prepare the vehicle
+for an imminent collision proactively to avoid the collision
+and/or mitigate the severity.
+Intelligent Speed Adaptation (ISA)
+Using satellite navigation technology, sensor technology,
+a road side beacon system and a central control system,
+ISA constantly monitors vehicles and the local speed limit
+on a road. ISA can be configured in two ways: advisory
+ISA and voluntary ISA.
+Help the driver maintain a safe speed by alerting the driver
+(advisory ISA) or decelerating automatically in cooperation
+with traffic management systems (voluntary ISA) when the
+speed limit for a given road is exceeded.
+Electronic Brake Assist System (EBS)
+EBS can activate the maximum braking power immediately
+and is triggered when the driver performs fast
+and hard braking.
+Take over the activity from the driver to avoid an accident or
+decrease vehicle speed at the moment of collision in order
+to reduce its seriousness.
+Adaptive Cruise Control System(ACC)
+Using a long range radar sensor, a signal processor and
+longitudinal control of the vehicle, ACC constantly
+monitors the speed of the vehicle and the distance to the
+vehicle ahead. It will slow down the vehicle when needed
+and accelerate automatically to the pre-selected speed whilst
+maintaining the correct distance to the vehicle ahead without
+requiring any action from the driver.
+Take over the activity from the driver to keep a safe distance
+from the vehicle ahead and avoid collision. The driver can
+override the system at any time.
+170
+Eur. Transp. Res. Rev. (2010) 2:165–174
+
+
+driver to remain focused on the environment outside the
+vehicle while maintaining the situational awareness of the
+relationship between the vehicle and the external objects by
+offering the driver advice along with a bird’s eye view of
+what is around the vehicle and the distances from them.
+Campbell et al. [57] suggest that a higher sensitivity setting
+of the interfaces should be available for elderly people
+because they have poorer visual acuity and are less
+sensitive to luminance contrasts.
+4 Use of a driving simulator to evaluate the impact
+of in-vehicle systems on elderly drivers
+The history of driving simulators can be traced back to the
+1920s when simulation was first used to evaluate the skill
+and competence of public transport operators [58]. Since
+then, driving simulators have been used to investigate the
+parameters that govern driver choice and behaviour, driver
+training and evaluation of vehicle design and technologies.
+It was pointed out by Yang et al. [58] and Lee et al. [59]
+that driving simulators give researchers full control of the
+situational and environmental variables. Also, Breker et al.
+[60] report that simulation makes it possible to conduct
+tests in new ways that cannot be realised in real traffic
+environments. This means that they can conduct observa-
+tion and evaluation of driver performance and behaviour in
+relation to the impacts of hypothetical road elements or
+traffic events. This means that they can avoid potentially
+hazardous on-road driving conditions and accompanying
+legal restrictions that may be caused by experiments. It is
+also a cost-effective alternative to on-road driving tests. The
+main concern regarding research using driving simulators is
+the validity of the results. In order to bring high fidelity
+user experience to the study subjects, it is essential to
+provide the subjects with the same sensory cues that they
+experience in real world driving. However, this was not
+possible in the past which led to misinterpretation of the
+signals between the eye and the inner ear. Elderly subjects
+often suffered motion sickness and had to terminate the
+experiment early. Furthermore, an older person’s ability to
+act in an unfamiliar technological environment might
+influence driving performance in the simulator as moderat-
+ing variable [60]. With the development of motion-cueing
+algorithms, the current generation of driving simulators
+(often in a form of the front half or all of a car) are
+supported by the use of a sophisticated and interactive
+motion-platform. This platform, which is integrated under-
+neath the driving simulator, is able to provide an immediate
+understanding of the motion of the vehicle in the simulated
+world and a valid duplication of the real world driving
+experience.
+Driving simulator technology is being applied in the
+Social inclusion through Digital Economy (SiDE) project.
+This has been funded by the Research Councils’ UK Digital
+Economy Programme for 5 years from October 2009.
+Based at Newcastle University, SiDE will address four
+fields where digital technologies and the building of a truly
+inclusive digital economy could deliver major social
+benefits: Connected Home and Community, Accessibility;
+Inclusive Transport Services; and Creative Industries.
+One of the key studies covered under Inclusive Transport
+Services is to evaluate whether IVSs underpinned by
+emerging technologies can assist elderly drivers to drive
+safely for longer. To understand elderly drivers’ behaviour
+in response to such IVSs, the SiDE project intends to
+establish driver awareness of their driving capability—and
+therefore their vulnerability as road users—which can then
+be compared with their actual functional ability at a later
+stage. This is different from the AGILE project which
+focused on establishing an aetiological classification of
+ageing-related illnesses associated with driving and acci-
+dents and gathering knowledge of driver assessment, driver
+training and traffic safety.
+Fig. 1 Head-up displays (Source: www.lightblueoptics.com)
+Eur. Transp. Res. Rev. (2010) 2:165–174
+171
+
+
+IVSs will then be tested using a driving simulator (as
+described above) equipped with a suite of technologies,
+including in-vehicle sensors (located on the pedals and
+steering wheel), multiple cameras and projectors, eye
+tracking and head movement systems and distributed ad-
+hoc wireless networks. As seen in Section 3, each IVS has a
+different set of capabilities which will be tested and
+evaluated individually as well as the whole system. These
+capabilities will be analysed according to the information
+that is being delivered (e.g. navigation instructions, lane
+departure, headway), the reactions made by the subjects
+(such as braking, accelerating, entering an intersection or
+high speed traffic) and the degree of personalisation and
+tolerance of visual load that can be made by the user. After
+each IVS has been evaluated, there will be a comparative
+evaluation of all the systems.
+Individual driver performance and attitudes to the IVSs
+will be measured before and after the implementation of
+each IVS into the driving simulator and its environment.
+This will permit a sound understanding of the impacts on
+individual elderly drivers and the scope for adopting these
+systems. The output of this study will identify the most
+appropriate combinations of in-vehicle capabilities; the
+propensity for elderly drivers to adopt these systems; and
+it will recommend ways of increasing the awareness of
+elderly drivers about their vulnerability as road users and
+how it may be overcome using IVSs. The research will also
+help to identify personalised training needs for individual
+elderly drivers and to enhance the elderly drivers’ under-
+standing of the other drivers’ driving behaviour and inform
+the development of new rules and traffic signs.
+5 Conclusion
+Elderly drivers are fragile and vulnerable on the road and
+do not represent an excessive risk or threat to other road
+users. They are more likely to hurt themselves than to put
+others at risk. Meanwhile, some of they are more likely to
+be involved in traffic accidents, be at fault, and are over-
+represented in traffic fatalities due to age-related functional
+decline. Also, the ageing population is growing fast
+worldwide, which is likely to be accompanied by a rise in
+age related accidents with an inevitable social and monetary
+cost for society. Neglecting their need for safe driving will
+lead to a decrease in their quality of life, loss of
+independence and potentially a high rate of clinical
+depression.
+A review of IVSs suggests that providing feedback and
+support to elderly drivers has the potential to enhance their
+safety on the road and benefit the transport network as a
+whole. Driver feedback offers information on elderly
+drivers’ driving performance and helps them be aware of
+the misjudgements or driving errors being made. Driver
+support provides elderly drivers with timely and construc-
+tive advice, alerts, warnings or even active interventions
+which take over the activity from the driver to avoid
+accidents or reduce the seriousness of the accidents. Driver
+feedback and support can be delivered either in-vehicle
+using head-up displays or off-vehicle using a home
+computer or other personal mobile devices.
+A newly funded research project, Social inclusion
+through Digital Economy (SiDE) will evaluate the impact
+of IVSs on elderly drivers’ driving performance to ascertain
+whether such systems can assist elderly drivers to drive
+safely for longer. SiDE will establish elderly drivers’
+vulnerability as road users based on their awareness of
+functional decline, and will test a suite of selected IVSs
+using a driving simulator. It is anticipated that the SiDE
+project will deliver a sound understanding of the impacts of
+different systems on elderly drivers, the scope for adopting
+individual systems or combinations of systems and the
+individual training needs for safe driving for older drivers.
+It will also help the elderly drivers’ understanding of the
+other drivers’ driving behaviour and inform the develop-
+ment of new rules and traffic signs.
+Open Access
+This article is distributed under the terms of the
+Creative Commons Attribution Noncommercial License which per-
+mits any noncommercial use, distribution, and reproduction in any
+medium, provided the original author(s) and source are credited.
+References
+1. ONS (2009) Population hub. 2009, Office of National Statistics.
+Available from: http://www.statistics.gov.uk/hub/population/
+index.html
+2. OASIS (2007) Description of work. Seventh Framework
+Programme Theme ICT-2007.7.1 ICT&Ageing
+3. Breker S, Henriksson P, Eeckhout G, Falkmer T, Siren A,
+Hakamies-Blomqvist L, Bekiaris E, Panou M, Leue E (2001)
+Problems of elderly in relation tothe driving task and relevant
+criticalscenarios. Report Number: AGILE Deliverable 1.1. Avail-
+able from: <http://www.agile.iao.fraunhofer.de/indexi.html>
+4. Oxley J, Charlton J, Scully J, Koppel S (2010) Older female
+drivers: an emerging transport safety and mobility issue in
+Australia. Accident Anal Prev 42(2):515–522, Available from:
+<http://www.sciencedirect.com/science/article/B6V5S-4XJP5X5-
+1/2/caeabc4b1e805b84b6fb79abc3e0d4c0>
+5. Birren J, Fisher L (1995) Ageing and speed of behaviour: possible
+consequences for psychological functioning. Annu Rev Psychol
+46:25, Available from: <http://www.questia.com/googleScholar.qst;
+jsessionid=LP8L9LjX2XCNpDGWGrd0WhXgPFHHpdn1v02Lxz
+21FBvZvZ13D4hc!1205579298!-937560419?docId=5001644976>
+6. Anderson DS (2004) Strategic planning for mature drivers:
+foundations and strategies. Center for the Advancement of Public
+Health MS 1F 5, Department of Health, Fitness and Recreation
+Resources, Graduate School of Education
+7. Robertson R, Vanlaar W (2008) Elderly drivers: future chal-
+lenges? Accident Anal Prev 40(6):1982–1986
+172
+Eur. Transp. Res. Rev. (2010) 2:165–174
+
+
+8. Li G, Braver ER, Chen L-H (2003) Fragility versus excessive
+crash involvement as determinants of high death rates per vehicle-
+mile of travel among older drivers. Accident Anal Prev 35
+(2):227–235
+9. Musselwhite C, Haddad H (2009) Using grounded theory to
+elicit the driving needs of older people. In: International
+conference on Inclusive Design, Royal College of Art, London,
+UK 5–8, April. Available from: http://include09.kinetixevents.
+co.uk/4dcgi/prog?sess=28893201042298616082009103543&
+operation=detail&paper_id=44
+10. McGwin G Jr, Sims RV, Pulley L, Roseman JM (2000) Relations
+among chronic medical conditions, medications, and automobile
+crashes in the elderly: a population-based case-control study pp 424–
+431, Available from: http://aje.oxfordjournals.org/cgi/content/
+abstract/152/5/424
+11. Kay L, Bundy A, Clemson L, Jolly N (2008) Validity and
+reliability of the on-road driving assessment with senior drivers.
+Accident Anal Prev 40(2):751–759
+12. Musselwhite C, Haddad H (2007) Prolonging the safe driving of
+older people through technology. The Centre for Transport
+&Society
+13. Hakamies-Blomqvist L, Peters B (2000) Recent European
+research on older drivers. Accident Anal Prev 32(4):601–607
+14. van den Broek G, Cavallo F, Vehrmann C (2010) AALIANCE
+ambient assisted living roadmap. AmbientIntelligence and smart
+environment. Vol. 6. IOS Press BV, Amsterdam
+15. Gilhooly M (2002) Transport and ageing: extending quality of life
+via public and private transport. Available from: <http://www.
+esrcsocietytoday.ac.uk/ESRCInfoCentre/Plain_English_Summaries/
+environment/mobility/index150.aspx>
+16. AgeUK (2008) Social inclusion and communities. Available from:
+http://www.ageconcern.org.uk/AgeConcern/Documents/
+AA_2008_Social_Inclusion.pdf
+17. Brake JF (2008) Identifying appropriate options for delivering
+urban transportation to older people. In: Urban transport confer-
+ence. Malta
+18. Brake JF (2008) Provision of transport for the disabled and elderly
+people: taxicard—taxilink preference survey. Contract Report.
+Nexus
+19. Brake JF (2007) Evaluation of older people’s community transport
+shopping pilot. Contract Report. Nexus
+20. Dobbs BM (2005) Medical conditions and driving: a review of the
+literature (1996–2000). National Highway Traffic Safety Admin-
+istration, Washington
+21. Alvarez FJ, Fierro I (2008) Older drivers, medical condition,
+medical impairment and crash risk. Accident Anal Prev 40
+(1):55–60
+22. Charlton J, Koppel S, O’Hare M, Andrea D, Smith G, Khodr B,
+Langford J, Odell M, Fildes B (2004) Influence of chronic illness
+on crash involvement of motor vehicle drivers. Monash University
+Accident Research Centre, Victoria, Australia, Available from:
+<http://www.monash.edu.au/muarc/reports/muarc213.html>
+23. Owsley C, McGwin G Jr, Sloane M, Wells J, Stalvey BT,
+Gauthreaux S (2002) Impact of cataract surgery on motor vehicle
+crash involvement by older adults. JAMA 288:9, Available from:
+<http://www.ncbi.nlm.nih.gov/pubmed/12186601>
+24. Lyman JM, McGwin G, Sims RV (2001) Factors related to driving
+difficulty and habits in older drivers. Accident Anal Prev 33
+(3):413–421
+25. Lundberg C, Hakamies-Blomqvist L (2003) Driving tests with
+older patients: effect of unfamiliar versus familiar vehicle. Transp
+Res Part F Traffic Psychol Behav 6(3):163–173, Available from:
+<http://www.sciencedirect.com/science/article/B6VN8-4979R1N-
+1/2/f8a140c86a438c15d620ce2d6e22a3a6>
+26. Hakamies-Blomqvist L, Wahlström B (1998) Why do older
+drivers give up driving? Accident Anal Prev 30(3):305–312
+27. Raitanen T, Törmäkangas T, Mollenkopf H, Marcellini F (2003)
+Why do older drivers reduce driving? Findings from three
+European countries. Transp Res Part F Traffic Psychol Behav 6
+(2):81–95
+28. Stutts JC, Stewart JR, Martell C (1998) Cognitive test perfor-
+mance and crash risk in an older driver population. Accident Anal
+Prev 30(3):337–346
+29. Ball K, Owsley C, Stalvey B, Roenker DL, Sloane ME, Graves M
+(1998) Driving avoidance and functional impairment in older
+drivers. Accident Anal Prev 30(3):313–322
+30. O’Neill D (1992) Physicians, elderly drivers, and dementia. Lancet
+339(8784):41–43, Available from: <http://www.sciencedirect.
+com/science/article/B6T1B-49K0B4P-34D/2/923b6e2d21abba
+789d5577e4e1242a75>
+31. Davidse RJ (2006) Older drivers and ADAS—which systems
+improve road safety? IATSS Res 30(1):6–20, Available from:
+<http://iatss.or.jp/english/research/30-1/30-1-01.html> [Accessed
+21/10/09]
+32. de Waard D, Dijksterhuis C, Brookhuis KA (2009) Merging into
+heavy motorway traffic by young and elderly drivers. Accident
+Anal Prev 41(3):588–597
+33. Hong I, Kurihara T, Iwasaki M (2008) Older drivers’ perceptions,
+responses, and driving behaviours during complex traffic con-
+ditions at a signalised intersection. In: IMechE 2008
+34. Keskinen E, Ota H, Katila A (1998) Older drivers fail in
+intersections: Speed discrepancies between older and younger
+male drivers. Accident Anal Prev 30(3):323–330
+35. Salisbury (2009) Positive Ageing Services, in home and commu-
+nity care. City of Salisbury, Salisbury
+36. Maycock G (1997) The safety of older car drivers in the European
+Union. European Road Safety Federation, AA Foundation for
+Road Safety Research, Basingstoke
+37. Evgenikos P, Yannis G, Leitner T, Hoeglinger S, Broughton J,
+Lawton B (2009) Road safety and the elderly in Europe. In: 4th
+IRTAD Conference. Seoul, Korea, p 8
+38. OECD (2001) Organisation for Economic Cooperation and
+Development (OECD). Ageing and transport: mobility needs
+and safety issues
+39. Dulisse B (1997) Older drivers and risk to other road users.
+Accident Anal Prev 29(5):573–582
+40. Rakotonirainy A, Steinhardt D (2009) In-vehicle technology
+functional requirements for older drivers. In: International
+conference on automotive user interfaces and interactive vehicular
+applications. ACM, Essen, Germany
+41. Bekiaris E (2010) Transport telematics: ADAS & IVICS, from
+concept to evaluation. Lecture Notes, Newcastle University
+42. Edwards S, Fairchild R (2008) The UK pilot site—progress and
+plans. In: Mobility for all—the use of ambient intelligence in
+addressing the mobility needs of people with impairments: the
+case of ASK-IT. Nuremberg, Germany, Available from: http://
+www.ask-it.org/index.php?page=publications
+43. Burns P (1999) Navigation and the mobility of older drivers. J
+Gerontol B Psychol Sci Soc Sci 54B(1):S49–S55
+44. Goodman J, Brewster SA, Gray P (2005) How can we best use
+landmarks to support older people in navigation? Behav Inf
+Technol 24(1):18
+45. May A, Ross T, Osman Z (2005) The design of next generation
+in-vehicle navigation systems for the older driver. Interact Comput
+17(6):643–659
+46. Guo AW (2009) Use of a new methodology to investigate the
+effectiveness of a pervasive and intelligent future traveller
+information system in encouraging public transport use. In:
+School of civil engineering and geosciences. Newcastle Univer-
+sity, Newcastle upon Tyne, p 323
+47. Brittain K, Robinson L, Lindsay S, Olivier P (2007) Keeping in
+touch everyday: findings of the scoping stage
+Eur. Transp. Res. Rev. (2010) 2:165–174
+173
+
+
+48. Kirasic K (2000) Age differences in adults’ spatial abilities,
+learning environmental layout and wayfinding behaviour. Spat
+Cogn Comput 2(2):18
+49. Moffat SD, Kennedy KM, Rodrigue KM, Raz N (2007) Extra-
+hippocampal contributions to age differences in human spatial
+navigation. Cereb Cortex 17(6):1274–1282. Oxford University Press
+50. Bekiaris E, Stevens A (2005) Common risk assessment method-
+ology for advanced driver assistance systems. Transp Rev 25(3):11
+51. European_Commission (2010) i2010 intelligent car initiative,
+Europe’s information society. European Commission (EC), Available
+from: http://ec.europa.eu/information_society/activities/intelligentcar/
+technologies/index_en.htm
+52. NHTSA (2007) Traffic safety facts 2007 data: older population.
+NHTSA, p 6
+53. Fairchild R, Brake JF, Thorpe NT, Birrel SA, Young MS, Felstead
+TJ, Fowkes M (2009) Using on-board driver feedback systems to
+encourage safe, ecological and efficient driving: the Foot-LITE
+project. In: The 23rd Convention of the Society for the Study of
+Artificial Intelligence and Simulation of Behaviour. Edinburgh
+54. Lesch MF, Hancock PA (2004) Driving performance during
+concurrent cell-phone use: are drivers aware of their performance
+decrements? Accident Anal Prev 36(3):471–480
+55. Fiat (2009) Fiat eco:Drive [Online]. Published by: fiat. Available
+from: <http://www.fiat.com/ecoDrive/> [Accessed 01/09/2009]
+56. Box E, Gandolfi J, Mitchell K (2010) Maintaining safe mobility for the
+ageing population: the role of the private car. Available from: <http://
+www.racfoundation.org/assets/rac_foundation/content/down
+loadables/maintaining%20safe%20mobility%20-%20rac%20foun
+dation%20-%20140410%20-%20report.pdf> Accessed: [30/04/2010]
+57. Campbell JL, Richard CM, Brown JL, McCallum M (2007) Crash
+warning system interfaces: human factors insights and lessons
+learned. National Highway Traffic Safety Administration, January
+58. Yang CY, Fricker JD, Kuczek T (1998) Designing advanced
+traveller information systems for a driver’s perspective: results of
+a driving simulation study. Transportation Research Record:
+Journal of the Transportation Research Board 1621:7
+59. Lee HC, Cameron D, Lee AH (2003) Assessing the driving
+performance of older adult drivers: on-road versus simulated
+driving. Accident Anal Prev 35(5):797–803
+60. Breker S, Rothermel S, Verwey W, Henriksson P (2002) The role of
+simulation in the assessment of older drivers. Human Factors and
+Ergonomics Society/Europe Chapter Annual Meeting, Dortmund.
+Available from: <http://www.agile.iao.fraunhofer.de/publications.
+html>
+174
+Eur. Transp. Res. Rev. (2010) 2:165–174
+
+

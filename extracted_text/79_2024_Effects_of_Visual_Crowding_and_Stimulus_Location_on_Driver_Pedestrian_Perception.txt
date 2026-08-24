@@ -1,0 +1,578 @@
+--- Page 1 ---
+Advances in Psychology 心理学进展, 2024, 14(8), 227-236 
+Published Online August 2024 in Hans. https://www.hanspub.org/journal/ap 
+https://doi.org/10.12677/ap.2024.148539   
+文章引用: 鲍威宇, 陈婉婷, 杨振(2024). AR-HUD 预警中视觉拥挤和刺激位置对驾驶员行人感知的影响. 心理学进展, 
+14(8), 227-236. DOI: 10.12677/ap.2024.148539 
+ 
+ 
+AR-HUD预警中视觉拥挤和刺激位置对驾驶员
+行人感知的影响 
+鲍威宇，陈婉婷，杨  振* 
+浙江理工大学理学院，浙江 杭州 
+ 
+收稿日期：2024年6月18日；录用日期：2024年8月6日；发布日期：2024年8月16日 
+ 
+ 
+ 
+摘  要 
+增强现实平视显示(即AR-HUD)，能够通过实时计算为用户提供准确、有效的AR预警信息，从智能驾驶
+辅助的角度帮助用户防范各类驾驶风险。当前AR-HUD可显示的信息逐渐增多，这可能会导致驾驶员的
+视觉感知负荷增加。本研究以行人预警为切入点，采用2 (有无AR增强提示，被试间) × 2 (拥挤程度，被
+试内) × 2 (行人位置，被试内)三因素混合实验设计，基于模拟驾驶视频，探索AR-HUD预警显示中伴随
+的视觉复杂度对驾驶员感知拥挤程度场景中的不同位置的意外刺激时的视觉注意和行为绩效的影响。主
+要研究结论有：1) 有AR增强提示下的驾驶员会更快感知到意外行人刺激，并更快做出反应。2) 驾驶员
+会对拥挤条件下的意外行人做出更快的反应，AR预警可以提高该状态下的视觉搜索效率。 
+ 
+关键词 
+AR-HUD，预警界面，视觉拥挤，视觉复杂度 
+ 
+ 
+Effects of Visual Crowding and Stimulus  
+Location on Driver Pedestrian Perception  
+in AR-HUD Warning 
+Weiyu Bao, Wanting Chen, Zhen Yang* 
+College of Science, Zhejiang University of Sci-Technology, Hangzhou Zhejiang 
+ 
+Received: Jun. 18th, 2024; accepted: Aug. 6th, 2024; published: Aug. 16th, 2024  
+ 
+ 
+ 
+Abstract 
+Augmented Reality Head-up Display (also known as AR-HUD) can provide users with accurate and 
+ 
+*通讯作者。 
+
+--- Page 2 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+228 
+心理学进展
+ 
+effective AR warning information through real-time calculations, and help users prevent all kinds 
+of driving risks from the point of view of intelligent driving assistance. The current AR-HUD can 
+display more and more information, which may lead to an increase in the driver’s visual percep-
+tual load. Taking pedestrian warning as an entry point, this study adopts a 2 (with or without 
+AR-enhanced cues, between subjects) × 2 (congestion level, within subjects) × 2 (pedestrian loca-
+tion, within subjects) three-factor mixed experimental design based on a simulated driving video 
+to explore the visual complexity accompanying AR-HUD warning displays on drivers' visual atten-
+tion and behavioral performance when perceiving unexpected stimuli in different locations in 
+congestion level scenarios. The main findings are: 1) Drivers with AR cues will perceive and re-
+spond to unexpected pedestrian stimuli faster. 2) Drivers will respond faster to unexpected pedes-
+trians in crowded conditions, and AR warnings can improve visual search efficiency in this state. 
+ 
+Keywords 
+AR-HUD, Warning Interface, Visual Crowding, Visual Complexity 
+ 
+ 
+Copyright © 2024 by author(s) and Hans Publishers Inc. 
+This work is licensed under the Creative Commons Attribution International License (CC BY 4.0). 
+http://creativecommons.org/licenses/by/4.0/ 
+ 
+ 
+ 
+1. 引言 
+随着增强现实技术在驾驶领域的日渐成熟和车载平视显示器的不断优化，搭载AR-HUD (Augmented 
+Reality Head-up Display)系统的车辆应运而生，该系统允许直接将AR 信息呈现在挡风玻璃上，实现导航
+信息、车辆信息(速度、油量、档位状态等)、预警信息与真实的驾驶环境的叠加，让它们以直观的形式呈
+现于驾驶员视野中，减少驾驶员注意分散，避免因低头查看导航设备产生的意外危险。 
+但当前AR-HUD 技术仍处于持续发展中，其界面信息数量的增加可能会让驾驶员感知到更高的视觉
+负荷。例如过往研究已证明在使用HUD 时存在一个关键安全问题——注意捕获现象，这一现象与认知隧
+道的概念密切相关，在认知隧道中，当个体高度专注于视野中心的任务时，就会发生外周视野变窄(Ward 
+& Parkes, 1994)。安全驾驶、外周视野中事件检测和车辆控制依赖于驾驶员的视觉注意力(李慧芬，李永
+峰，2014)，由于注意资源容量有限，驾驶员可能会过度关注HUD 上的信息，而忽视外周视野中的突发
+事件，出现注意捕获现象，从而造成事故发生。已有研究者针对预警界面中显示的信息内容数量提出了
+视觉复杂度的概念，并证明视觉复杂度高的界面会对驾驶员的感知产生影响(Burnett & Donker, 2012; Park 
+& Im, 2020)。由于当前AR-HUD 上可显示的内容与现实世界物体的重叠性，伴随着其信息的增多，驾驶
+员需要处理的信息数量也随之增加，但有限的注意资源可能无法支撑驾驶员同时处理多个信息源，反而
+干扰预警信息出现时的预警效果。因此这种高视觉复杂度的AR-HUD 中的预警效果及可能会引起视觉注
+意问题值得进一步考虑。 
+值得注意的是，在实际的驾驶活动中，驾驶员所感知到的道路交通密度和驾驶环境的复杂性是实时
+变化的并存在不同的交通参与者。这种复杂变化的环境可能相应伴随着视觉拥挤的情况。视觉拥挤是一
+种发生在外周视野中的知觉现象，指当一个物体被其他物体包围时，对该物体的识别会受到周围物体的
+影响，即：共同呈现目标刺激和干扰刺激时，个体对目标刺激的识别率显著低于单独呈现条件下的识别
+率(Whitney & Levi, 2011)。Xia 等人(2020)通过拟真驾驶环境、眼动指标(扫视改变)来反映驾驶环境中视
+觉拥挤的影响，证明了拥挤效应同样会发生在动态的驾驶场景中。其研究结果表明当行人周围存在其余
+Open Access
+
+--- Page 3 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+229 
+心理学进展
+ 
+行人(即拥挤)时，会尤为影响驾驶员对行人的识别。Sanocki 等人(2015)研究了用静态的交通图片调查了
+交通场景中的拥挤对行人、摩托车手和骑自行车者等弱势道路使用者检测的影响，结果也证明当车辆位
+于弱势道路使用者的旁侧时，被试对弱势道路使用者的检测明显受损。以上都表明驾驶员难以识别拥挤
+场景中的对象。显然，在AR-HUD 导致的视觉复杂度很可能会加剧这种现实场景中的视觉拥挤，进而干
+扰他们的识别。 
+另外，驾驶员的视觉感知表现与刺激在视野中的位置相关。例如前人的研究已发现意外刺激所在位
+置会对驾驶员的驾驶绩效产生影响。Yanko & Spalek (2013)和Charlton & Starkey (2013)通过使用模拟驾驶
+器研究了意外刺激事件类型和道路熟悉度对驾驶员非注意盲视的影响。他们都将意外刺激分为中心事件
+和外周事件：中心事件指发生在驾驶员视野中央(即马路上)的刺激，外周事件指发生在驾驶员视野边缘(即
+马路边或人行道上)的刺激。Charlton & Starkey (2013)发现相比于在陌生道路上驾驶，驾驶员在熟悉道路
+上对中央刺激的注意情况更好，对外周刺激则出现了更多的非注意盲视。Rosenholtz (2011)的研究表明中
+央视野的信息能够被驾驶员准确报告，但是外周视野的信息很容易被忽略，Dozza (2013)的研究发现与处
+理中心事件相比，驾驶员处理外周事件的反应时更长。因此可见行人在视野中的位置对驾驶员的整体视
+觉感知也可能存在一定的影响。 
+总体而言，现有的研究中对于AR-HUD 预警显示的视觉复杂度研究较少，并且其对拥挤状态下危险
+行人的识别和预警能力还尚未得到充分验证。为促进AR-HUD 系统与现有智能驾驶辅助系统的融合，需
+进行更加深入的研究。因此本研究在前人研究的基础上，探讨智能辅助驾驶中AR-HUD 预警增强显示下
+的视觉复杂度对驾驶员感知不同视觉拥挤和刺激位置行人的潜在影响，以期为未来的AR-HUD 行人预警
+界面设计提供一定的参考。 
+2. 研究内容 
+2.1. 研究目的 
+本研究将AR-HUD 汽车驾驶中的行人预警作为切入点，基于模拟驾驶视频，探究不同复杂度的
+AR-HUD 预警显示内容中视觉拥挤程度和意外刺激位置对驾驶员视觉感知和行为绩效的影响。 
+2.2. 实验设计 
+2.2.1. 被试 
+实验共招募到60 名被试，其中男性30 名，女性30 名，年龄在18~25 岁之间(M = 21.53, SD = 1.18)，
+均为浙江理工大学在校学生，视力或矫正视力正常，无眼部或耳部疾病，均持有机动车驾驶证，平均驾
+驶里程为773.02 km。 
+2.2.2. 研究设计 
+本实验采用2 × 2 × 2 三因素混合实验设计，AR 增强提示(有vs 无)为被试间变量，拥挤程度(拥挤vs
+非拥挤)和行人位置(中心vs 外周)为被试内变量。 
+其中有AR 增强提示组实验视频中添加了红色矩形增强框，增强提示视频中的各类意外事件，无AR
+增强提示组则未添加红色矩形增强框。行人拥挤程度使用行人数量表示，拥挤条件下控制5 个行人同时
+出现，非拥挤条件下仅有一个行人单独出现。行人位置通过离心率体现，中心视野范围为0˚~5˚，外周视
+野范围为5˚~10˚，在实验材料设置中，中心行人离心率约为2˚，外周行人离心率约为7˚，符合要求。因
+变量采用行为绩效，眼动指标以及工作负荷三个方面进行体现。行为绩效通过按键反应时衡量，定义为
+目标刺激出现到被试做出按键反应的时间。眼动指标以横穿马路的行人为兴趣区(即AOI)，分析被试在
+
+--- Page 4 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+230 
+心理学进展
+ 
+AOI 内的首次进入时间(指目标刺激呈现后，AOI 内第一个注视点出现的时间)、首次注视时间(指落在AOI
+内第一个注视点的持续时间)。工作负荷：采用美国国家航天航空局任务负荷指数量表(NASA-TLX 量表)
+测量，诸多研究表明该量表具有良好的信效度。另外控制变量包括刺激类型、道路复杂程度以及视频播
+放顺序等。视频播放顺序通过代码设置实现完全随机播放。 
+2.3. 研究工具 
+2.3.1. 实验设备 
+包括可调节下巴托、iView RED-m 遥测式眼动仪、72 寸华银液晶电子屏幕、电脑主机、键盘以及鼠
+标。 
+2.3.2. 实验材料 
+出于对技术实现难度和数据收集可行性的考虑，本实验参考了Oh 等人(2016)的研究，采用模拟驾驶
+视频作为实验材料。首先在驾驶模拟软件STISIM 中编制完所需的实验场景，模拟驾驶车辆速度为80 km/h，
+程序设定为不会与行人和其他车辆碰撞，在进行代码调试、修改并确认无误后，录制模拟驾驶视频材料。 
+共构建16 个实验视频，其中包含4 个关键视频，12 个干扰视频，每个视频持续30 秒。关键视频中
+包含中央单个行人、中央多个行人、外周单个行人、外周多个行人等4 类横穿马路的行人，每个视频中
+出现一类行人，生成4 个关键视频。干扰视频中包含超速、闯红灯、过弯道、道路出现障碍物、前车刹
+车减速、前方车辆变道等6 类事件，每类事件有2 个视频，生成12 个干扰视频。所有道路元素和道路事
+件都以随机的方式出现在道路上。对录制完成的视频材料进行后期处理，所有视频的挡风玻璃处均添加
+了五种AR 图标信息，包含速度、油量、限速、档位信息、导航箭头，AR 增强提示(有vs 无)两组均包含
+16 个视频，两组的区别在于：有提示组实验视频中添加了红色矩形增强框，用于增强提示各类事件，无
+提示组则未添加。实验场景如图1 所示。 
+ 
+ 
+有AR 增强提示下中心非拥挤行人                     有AR 增强提示下外周非拥挤行人 
+ 
+有AR 增强提示下中心拥挤行人                       有AR 增强提示下外周拥挤行人 
+
+--- Page 5 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+231 
+心理学进展
+ 
+  
+无AR 增强提示下中心非拥挤行人                  无AR 增强提示下外周非拥挤行人 
+  
+无AR 增强提示下中心拥挤行人                      无AR 增强提示下外周拥挤行人 
+Figure 1. Schematic diagram of the experimental scene 
+图1. 实验场景示意图 
+2.3.3. 实验程序 
+实验前核对被试的驾照信息，让被试签署知情同意书、填写基本信息登记表。 
+随后主试向被试讲解实验要求、注意事项以及基本操作，告诉被试在观看驾驶视频时，想象自己就
+是司机，当发现视频中出现超速、闯红灯、前车刹车或行人横穿马路等事件时，立刻进行按键反应。在
+实验过程中需要固定的被试头部位置并校准眼动设备。 
+正式实验开始前，被试有2 个试次的练习时间，练习场景与正式实验相同，但不会出现行人横穿马
+路事件，确保被试能熟悉流程但不会对该事件产生预期。练习结束后开始正式实验，被试将按照随机顺
+序完成16 个试次(包含4 次行人横穿过马路视频)，每个试次结束后，程序自动跳转到下一个试次。本实
+验采用SMI Experiment Center 眼动追踪程序完成实验场景运行和数据收集，通过BeGaze 眼动分析软件
+实现实验数据的导出。在实验结束后，被试需要填写NASA-TLX 量表来测量工作负荷得分。实验流程如
+图2 所示。 
+ 
+ 
+Figure 2. Flowchart of experimental tasks 
+图2. 实验流程图 
+
+--- Page 6 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+232 
+心理学进展
+ 
+3. 实验结果 
+经过正态性检验，工作负荷得分满足正态分布，部分反应时数据不满足正态分布。由于个体差异，
+眼动数据存在较多缺失值，不满足正态分布前提，本研究采用广义估计方程对反应时数据、眼动数据进
+行分析。由于实验设置，有无AR 增强提示为组间变量，拥挤程度和行人位置为组内变量，NASA-TLX
+量表无法单独测量不同拥挤程度和行人位置下的被试工作负荷水平，因此采用单因素方差分析处理工作
+负荷数据。 
+3.1. 反应时 
+各自变量水平下驾驶员反应时的描述性统计结果如表1 所示。 
+ 
+Table 1. Descriptive statistics of response time (ms) 
+表1. 反应时的描述性统计(ms) 
+AR 增强提示 
+拥挤程度 
+行人位置 
+M 
+SD 
+有 
+拥挤 
+中心 
+1400.43 
+1040.65 
+外周 
+1172.70 
+517.86 
+非拥挤 
+中心 
+1370.80 
+589.05 
+外周 
+2261.33 
+549.44 
+无 
+拥挤 
+中心 
+2205.02 
+1090.60 
+外周 
+2475.63 
+700.90 
+非拥挤 
+中心 
+2468.47 
+765.25 
+外周 
+2501.80 
+709.08 
+ 
+采用广义估计方程对反应时数据进行分析，各变量的模型效应检验结果如表2 所示。结果显示：AR
+增强提示、拥挤程度、行人位置三个自变量的主效应均显著(ps < 0.01)，表明了这些自变量均会对驾驶员的
+行人感知反应时产生显著影响。具体表现为：驾驶员在有AR 增强提示的反应时显著短于无AR 增强提示；
+对拥挤条件下意外行人的反应时显著短于非拥挤条件；对中心位置意外行人的反应时显著短于外周位置。 
+除AR 增强提示和行人位置之间的交互作用不显著(
+( )
+2
+1
+χ
+ = 1.304, p = 0.253)之外，其余变量间的交互
+作用均显著(ps < 0.05)。行人位置和拥挤程度交互显著(
+( )
+2
+1
+χ
+ = 6.930, p = 0.008)，在非拥挤条件下，外周位
+置的反应时显著长于中心位置；在外周位置时，对非拥挤条件的反应时显著长于拥挤条件。拥挤程度和
+AR 增强提示交互显著(
+( )
+2
+1
+χ
+ = 6.336, p = 0.012)，在同一拥挤程度下，驾驶员在无AR 增强提示条件下的
+反应时显著长于有AR 增强提示条件。 
+自变量的三阶交互效应显著(
+( )
+2
+1
+χ
+ = 16.396, p < 0.001)，如图3 所示。意外行人刺激位于中心位置时，
+同一拥挤程度下，有AR 增强提示时驾驶员的反应时显著快于无AR 增强提示时(拥挤：p = 0.003；非拥
+挤：ps < 0.001)。意外行人刺激位于外周位置时，行人处于拥挤状态时，有AR 增强提示的驾驶员反应时
+显著快于无AR 增强提示条件(ps < 0.001)。在有AR 增强提示条件下，对于单独出现的意外行人刺激，驾
+驶员对外周位置反应时显著慢于中心位置(ps < 0.001)。 
+3.2. 眼动指标 
+本实验的眼动指标选取首次进入时间、首次注视时间，各自变量水平下眼动指标的描述性统计结果
+如表3 所示。 
+
+--- Page 7 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+233 
+心理学进展
+ 
+Table 2. Model effects of the response time 
+表2. 反应时各变量模型效应检验 
+效应 
+χ2 
+df 
+p 
+AR 增强提示 
+38.281 
+1 
+0.000 
+拥挤程度 
+19.449 
+1 
+0.000 
+行人位置 
+9.453 
+1 
+0.002 
+AR 增强提示*拥挤程度 
+6.336 
+1 
+0.012 
+AR 增强提示*行人位置 
+1.304 
+1 
+0.253 
+拥挤程度*行人位置 
+6.930 
+1 
+0.008 
+AR 增强提示*拥挤程度*行人位置 
+16.396 
+1 
+0.000 
+ 
+ 
+Figure 3. Response time under different conditions 
+图3. 各个条件下的反应时 
+ 
+Table 3. Descriptive statistics of eye movement metrics across conditions (ms) 
+表3. 各个条件下的眼动指标的描述性统计(ms) 
+AR 增强提示 
+拥挤程度 
+行人位置 
+首次进入时间(M ± SD) 
+首次注视时间(M ± SD) 
+有 
+拥挤 
+中心 
+2401.22 ±1068.47 
+606.28 ±419.62 
+外周 
+2096.23 ±757.18 
+505.96 ±537.18 
+非拥挤 
+中心 
+1549.27 ±1356.28 
+800.09 ±830.98 
+外周 
+2263.00 ±1066.58 
+819.50 ±624.05 
+无 
+拥挤 
+中心 
+2390.53 ±1199.68 
+681.47 ±536.11 
+外周 
+2616.91 ±999.02 
+599.91 ±479.61 
+非拥挤 
+中心 
+2481.52 ±1396.85 
+715.52 ±727.38 
+外周 
+2090.20 ±947.60 
+656.20 ±621.58 
+3.2.1. 首次进入时间 
+采用广义估计方程对首次进入时间数据进行分析，各变量的模型效应检验结果如表4 所示。 
+
+--- Page 8 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+234 
+心理学进展
+ 
+Table 4. Descriptive statistics of eye movement metrics across conditions (ms) 
+表4. 各个条件下的眼动指标的描述性统计(ms) 
+效应 
+χ2 
+df 
+p 
+AR 增强提示 
+3.965 
+1 
+0.046 
+拥挤程度 
+1.690 
+1 
+0.194 
+行人位置 
+0.061 
+1 
+0.804 
+AR 增强提示*拥挤程度 
+0.121 
+1 
+0.728 
+AR 增强提示*行人位置 
+0.782 
+1 
+0.376 
+拥挤程度*行人位置 
+0.134 
+1 
+0.714 
+AR 增强提示*拥挤程度*行人位置 
+4.173 
+1 
+0.041 
+ 
+结果显示：AR 增强提示的主效应显著(
+( )
+2
+1
+χ
+ = 3.965, p = 0.046)，发现有AR 增强提示的首次进入时
+间显著短于无AR 增强提示，AR 增强提示、拥挤程度、行人位置三者交互效应显著(
+( )
+2
+1
+χ
+ = 4.173, p = 0.041)，
+具体如图4 所示。当行人处于中心非拥挤(p = 0.039)、外周拥挤(p = 0.046)两种状态时，驾驶员在有AR
+增强提示下的AOI首次进入时间显著短于无AR增强提示条件，即对意外行人刺激有着更好的视觉感知。 
+ 
+ 
+Figure 4. Time to first fixation at different conditions 
+图4. 各个条件下的首次进入时长 
+3.2.2. 首次注视时间 
+采用广义估计方程对首次注视时间数据进行分析，结果显示：对于首次注视时间这一眼动指标，AR
+增强提示、拥挤程度以及行人位置的主效应均不显著，所有变量间的交互效应均不显著，具体结果如表
+5 所示。 
+3.2.3. 工作负荷 
+本实验采用NASA-TLX 量表收集工作负荷数据，所有被试的工作负荷得分数据均完整，无缺失值，
+具体的描述性统计结果如表6 所示。 
+以NASA-TLX 量表测量得到的工作负荷为因变量，AR 增强提示为自变量，进行单因素方差分析。
+结果表明，有无AR 增强提示对工作负荷的影响不显著，F(1,58) = 0.20，p = 0.66。结果如图5 所示。 
+
+--- Page 9 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+235 
+心理学进展
+ 
+Table 5. Model effects of first fixation duration 
+表5. 首次注视时间各变量模型效应检验 
+效应 
+χ2 
+df 
+p 
+AR 增强提示 
+0.235 
+1 
+0.628 
+拥挤程度 
+3.153 
+1 
+0.076 
+行人位置 
+0.665 
+1 
+0.415 
+AR 增强提示*拥挤程度 
+1.487 
+1 
+0.223 
+AR 增强提示*行人位置 
+0.000 
+1 
+0.984 
+拥挤程度*行人位置 
+0.003 
+1 
+0.959 
+AR 增强提示*拥挤程度*行人位置 
+0.004 
+1 
+0.949 
+ 
+Table 6. Descriptive statistics of NASA-TLX Scale Scores 
+表6. NASA-TLX 量表得分的描述性统计结果 
+因变量指标 
+有AR 增强提示 
+无AR 增强提示 
+工作负荷 
+36.62 
+38.60 
+(16.67) 
+(17.44) 
+ 
+ 
+Figure 5. Impact of the AR cues on mental workload 
+图5. AR 增强提示对工作负荷的影响 
+4. 讨论 
+本研究从行为指标、眼动指标以及主观评价三个方面探究被试使用呈现复杂信息的AR-HUD 界面时，
+AR-HUD 界面的视觉复杂度是否会影响AR 增强提示对危险的预警效果，并探究了场景中的视觉拥挤程
+度、行人刺激位置等因素对于视觉感知和行为绩效的影响。实验结果表明，即使界面中具有一定的视觉
+复杂度，相比于无AR 增强提示，被试在有AR 增强提示下依旧会更快注意到行人刺激(即表现出更短的
+首次进入时间)，并做出更快的按键反应。该实验结果与Rusch 等人(2013)的研究得到的结果一致，即AR
+预警能够使驾驶员更容易注意到被增强的刺激，有助于辅助视觉搜索，提高驾驶的行为绩效。 
+另外相比于非拥挤条件，被试会更快感知到处于拥挤状态的行人刺激，做出更快的按键反应，尤其
+是有AR 增强提示可以明显的缩短驾驶员感知外周的拥挤行人时的首次进入时间以及中心非拥挤行人的
+首次进入时间。Vlaskamp 和Hooge (2006)的研究表明视觉拥挤会降低视觉搜索效率[18]，本研究得到的
+
+--- Page 10 ---
+鲍威宇 等 
+ 
+ 
+DOI: 10.12677/ap.2024.148539 
+236 
+心理学进展
+ 
+结果与前人的结果并不一致，其结果可能是多个目标同时出现的时候，驾驶员更容易知觉到多个目标构
+成的整体刺激而非个别刺激，这也显示了驾驶员可能无法从周围刺激中有效分离目标对象，但对多个刺
+激这一整体的感知却提高，反应策略倾向于更加保守，即提前做出行为反应，尤其是在AR 预警信息加
+入后多个目标被同时增强的情况。 
+最后相比于外周位置，被试对于中心位置的行人刺激有更快的视觉感知、更快的按键反应，前人的
+研究表明相对于中央视野，外周视野的信息更容易被驾驶员忽略(Rosenholtz, 2011)，并且驾驶员处理外周
+事件的反应时更长(Dozza, 2013)，本研究得到的实验结果与前人的结果一致。在驾驶过程中，驾驶员的
+视线主要集中在道路的中间，更多关注中央视野的信息，能够快速觉察到意外事件的发生并做出反应。
+而当外周视野出现非预期事件时，驾驶员需要将其视线和注意力转移到外周事件，这可能导致表现出更
+长的视觉搜索时间和行为反应时间。同时这也说明了说明驾驶员在处理中央事件更有优势，而在处理外
+周事件时较为低效。 
+参考文献 
+李慧芬, 李永峰(2014). 汽车车内信息系统界面设计. 人类工效学, 20(5), 43-46. 
+Burnett, G. E., & Donker, R. A. (2012). Evaluating the Impact of Head-Up Display Complexity on Peripheral Detection 
+Performance: A Driving Simulator Study. Advances in Transportation Studies, 28, 5-16. 
+Charlton, S. G., & Starkey, N. J. (2013). Driving on Familiar Roads: Automaticity and Inattention Blindness. Transportation 
+Research Part F: Traffic Psychology and Behaviour, 19, 121-133. https://doi.org/10.1016/j.trf.2013.03.008 
+Dozza, M. (2013). What Factors Influence Drivers’ Response Time for Evasive Maneuvers in Real Traffic? Accident Analy-
+sis & Prevention, 58, 299-308. https://doi.org/10.1016/j.aap.2012.06.003 
+Oh, H. J., Ko, S. M., & Ji, Y. G. (2016). Effects of Superimposition of a Head-Up Display on Driving Performance and 
+Glance Behavior in the Elderly. International Journal of Human-Computer Interaction, 32, 143-154.  
+https://doi.org/10.1080/10447318.2015.1104155 
+Park, K., & Im, Y. (2020). Ergonomic Guidelines of Head-Up Display User Interface during Semi-Automated Driving. 
+Electronics, 9, Article 611. https://doi.org/10.3390/electronics9040611 
+Rosenholtz, R. (2011). What Your Visual System Sees Where You Are Not Looking. SPIE Proceedings, 7865, Article ID: 
+786510. https://doi.org/10.1117/12.876659 
+Rusch, M. L., Schall, M. C., Gavin, P., Lee, J. D., Dawson, J. D., Vecera, S. et al. (2013). Directing Driver Attention with 
+Augmented Reality Cues. Transportation Research Part F: Traffic Psychology and Behaviour, 16, 127-137.  
+https://doi.org/10.1016/j.trf.2012.08.007 
+Sanocki, T., Islam, M., Doyon, J. K., & Lee, C. (2015). Rapid Scene Perception with Tragic Consequences: Observers Miss 
+Perceiving Vulnerable Road Users, Especially in Crowded Traffic Scenes. Attention, Perception, & Psychophysics, 77, 
+1252-1262. https://doi.org/10.3758/s13414-015-0850-4 
+Vlaskamp, B. N. S., & Hooge, I. T. C. (2006). Crowding Degrades Saccadic Search Performance. Vision Research, 46, 
+417-425. https://doi.org/10.1016/j.visres.2005.04.006 
+Ward, N. J., & Parkes, A. (1994). Head-up Displays and Their Automotive Application: An Overview of Human Factors Is-
+sues Affecting Safety. Accident Analysis & Prevention, 26, 703-717. https://doi.org/10.1016/0001-4575(94)90049-3 
+Whitney, D., & Levi, D. M. (2011). Visual Crowding: A Fundamental Limit on Conscious Perception and Object Recogni-
+tion. Trends in Cognitive Sciences, 15, 160-168. https://doi.org/10.1016/j.tics.2011.02.005 
+Xia, Y., Manassi, M., Nakayama, K., Zipser, K., & Whitney, D. (2020). Visual Crowding in Driving. Journal of Vision, 20, 
+1-17. https://doi.org/10.1167/jov.20.6.1 
+Yanko, M. R., & Spalek, T. M. (2013). Route Familiarity Breeds Inattention: A Driving Simulator Study. Accident Analysis 
+& Prevention, 57, 80-86. https://doi.org/10.1016/j.aap.2013.04.003 

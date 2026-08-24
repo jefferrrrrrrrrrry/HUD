@@ -1,0 +1,549 @@
+--- Page 1 ---
+ 
+ 
+  
+Abstract— We present an improvement of forward collision 
+warning (FCW) by adding more layers of warning functionality 
+based on five stages of crash timeline. Generally, FCW operates 
+at stage 3, the critical moment before crash. The added 
+functionality is the location-based warning (LW) which warns 
+the driver when driving toward a dangerous spot with high 
+speed. LW operates at stage 2, an open condition to crash 
+which comes from bad driving habit. We propose the use of 
+warning lag time as a performance indicator, which is 
+appropriate for real driving experiment. The warning lag time 
+is defined as the time period between the issue of warning and 
+the execution of brake by a normal driver. We performed real 
+driving experiments with normal drivers and compare their 
+brake actions with warnings from our system. The system with 
+FCW alone achieved an average time lag of 1.47 sec., while the 
+system with both FCW+LW can warn the driver faster with 
+average time lag of 1.32 sec. The accuracy of both systems was 
+about the same at 79%. 
+I. INTRODUCTION 
+In many traffic accidents, the damage to lives and 
+properties is so severe that it cannot be estimated. This 
+problem brings about the development of safety systems in 
+order to reduce both accidents and injuries. One common 
+cause of vehicle accidents is driver’s inattentiveness to the 
+driving task because of interrupting calls or readiness of his 
+driving conditions such as fatigue or sleepiness. Since the 
+major cause of accidents comes from human errors, active 
+safety and intelligent driving assistance system are necessary 
+solutions for future transportation. 
+The forward collision warning (FCW) is an emerging 
+technology that has been developed to help drivers avoid 
+collisions by giving warnings in dangerous situations. FCW 
+systems usually implement variety of sensors in order to 
+measure the distance to the front cars, the velocity, and the 
+acceleration of the equipped cars [1], [2]. Then, these 
+measured quantities are used in a mathematic model of 
+vehicles’ motion to predict potential crashes. In general, 
+forward collision warning signals can be issued within the 
+last few seconds before crash, called the critical moment.  
+This may not be enough for sluggish drivers to avoid a crash 
+in tight situations. Therefore, there are many researchers who 
+made efforts to predict car crashes and increase time period 
+between warning and crash called pre-warning time. Causes 
+ 
+ 
+of frontal collision, such as following distance, speed, 
+acceleration, deceleration, road environment, etc., are 
+considered as parameters to enhance FCW system. Masumi 
+et al. [3] included braking reaction time of a driver and a 
+relative safety distance margin in the vehicle’s motion model 
+in order to increase the pre-warning time. The vehicle 
+deceleration is also a significant parameter of collision 
+model. Deceleration for collision avoidance (DCA) is 
+calculated and used as an indicator of forward collision risk 
+[4], [5]. Another interesting method to enhance FCW systems 
+is a combination method. Road environment detection, such 
+as lane departure, and frontal obstacles, is utilized to improve 
+the performance of FCW systems. Chih-Li Hou et al. [6] 
+integrated an FCW system together with a lane departure 
+warning system based on image processing and the vehicle 
+kinematic model. The mentioned work accomplished 
+improvement of FCW systems in term of accuracy. However, 
+they did not demonstrate how much they can increase the 
+pre-warning time, which is an important indicator to assess 
+performance of FCW systems. There is a work [7] that 
+compared the system warning signals and the signals of 
+driver’s brake in order to show that they can increase the pre-
+warning time. They developed a FCW system based on 
+THASV-II platform. The result demonstrated that the system 
+warnings correspond to driver’s brake behavior without 
+measurement of the pre-waning time.  
+Our proposed idea to enhance FCW system is adding 
+more functionalities of the warning to increase the pre-
+warning time. This can be done by analyzing the 
+characteristic of collision and divide it into five levels. We 
+implement a system that operates on multilevel of safety, 
+which will help increase the performance. As mentioned 
+above, the literature work attempted to predict frontal 
+collisions and demonstrated their system’s performance in 
+the form of accuracy. In our work, we use warning lag time 
+as a performance metric (section IV) because FCW requires a 
+responsive vehicle maneuver in a short period of time to 
+avoid accidents.  The increase of pre-warning time in just a 
+fraction of a second can mean life or death. Therefore, pre-
+warning time is a crucial property, in which we chose to be 
+our performance indicator. 
+This paper is organized as follows. The concept of 
+general FCW systems is described in section II. The 
+proposed improvement of FCW system is presented in 
+Improvement of Warning Lag Time in Forward Collision Warning 
+Systems based on Multifunctional Warnings 
+Peachanika Thammakaroon and Poj Tangamchit 
+Department of Control System and Instrumentation Engineering 
+King Mongkut’s University of Technology Thonburi 
+Bangkok, Thailand 
+e-mail: peachanika@gmail.com, poj.tan@kmutt.ac.th 
+2012 IEEE International Conference on Vehicular Electronics and Safety
+July 24-27, 2012. Istanbul, Turkey
+978-1-4673-0993-6/12/$31.00 ©2012 IEEE
+146
+
+--- Page 2 ---
+ 
+ 
+ 
+Figure 1.  Forward collision warning system (FCW). 
+a method to improve FCW system. The warning lag time 
+evaluation, a key performance of this work, is demonstrated 
+in section IV. The systems were tested in real driving 
+situation and the results are presented in section V. The 
+conclusion is explained in section VI. 
+II. FORWARD COLLISION WARNING (FCW) SYSTEM 
+A forward collision warning system is an active pre-crash 
+vehicle safety system. FCW informs the driver of possible 
+frontal collisions to help the driver be aware of accidents and 
+perform collision avoidance maneuvers. Generally, most of 
+the FCW systems have been developed based on a kinematic 
+model of collision in order to warn a driver of a potential 
+crash when the distance to the front car is closer than the 
+distance required for safe brake. The model involves 
+equations of motion, which included distances, velocities, 
+and accelerations. Many types of sensors are utilized to 
+obtain distance to the front car, relative velocity to the car in 
+front, the car’s velocity, acceleration, etc. in order to 
+construct a vehicle kinematic model and estimate frontal 
+collision risks. 
+In our work, the FCW system we intended to improve is 
+based on a basic formula of a vehicle kinematic model as 
+shown in (1). We calculate the estimated time to the car in 
+front (Ts) from a current position of a host car to a front car 
+by using a current velocity of the host vehicle (v) and a 
+current following distance (D). The vehicle’s acceleration 
+and the velocity of obstacle/car in the front are assumed to be 
+zero in order to make the model as simple as possible.  
+The warnings are determined based on the two-second 
+rule, which is a concept from defensive driving technique. 
+The rule suggests that a driver has to keep a following 
+distance at least 2 seconds from the car in front. The warning 
+is active when Ts is less than this 2-second threshold. 
+However, we found that 2 seconds were not suitable for roads 
+in Bangkok, which has quite aggressive driving habit. 
+Therefore, we reduced the threshold down to 1.6 seconds. 
+This number came from trial and error in real driving 
+experiments, in which we found that this value is the most 
+suitable. The system computes the Ts value repeatedly 
+according to the formula below, and gives a warning if the 
+value is less than the threshold. 
+ 
+v
+D
+Ts =
+ 
+(1)         ((   
+III. IMPROVEMENT OF FORWARD COLLISION WARNING 
+Since the average pre-warning time of typical FCW 
+systems is quite short, there are efforts to increase this pre-
+warning time. We used another performance metric called 
+ 
+Figure 2.  Five levels for crash prevention with the safety level of FCW 
+system and the added warning system. 
+warning lag time which is directly related to the pre-warning 
+time. We treat the warning lag time as the key performance 
+of our FCW system. We propose that the improvement of 
+FCW by increasing warning lag time can be performed in 
+two ways. The first method, proposed in this paper, can be 
+implemented by adding multilevel safe drive capability. The 
+levels are divided into 5 levels according to collision risk. 
+The second method is our future work, which will improve 
+FCW systems by using a communication channel to promote 
+cooperative driving among several vehicles. This idea is the 
+implementation of distributed sensing in order to increase the 
+range of sensors. 
+A. Multilevel of crash prevention 
+In our work, car crash event is divided into five levels 
+according to collision risk as illustrated in Fig. 2. The 
+minimal collision risk is classified as the first level. In this 
+level, the driver pays attention while driving and follows 
+traffic laws strictly. The possibility of accidents is very low. 
+From the first level, if the driver places himself in an open 
+condition to collision, he will be in the second level. The 
+open condition to collision is usually caused by the violation 
+of traffic regulation. In the second level, if the driver does not 
+take a suitable maneuver to recover the driving situation back 
+to the first level, the driving situation will turn into the third 
+level which is a critical moment of crash avoidance. In the 
+third level, the driver can avoid collision if he has good skills 
+of maneuver such as harsh brake or crisp turn. However, 
+when the crash becomes unavoidable, the moment before 
+crash is classified as the fourth level. The fifth level is the 
+time period after crash.  
+From five levels of crash prevention, typical FCW 
+systems operate on stage 3, the critical moment. It is the 
+moment about 2-3 seconds before the impact. In order to 
+increase pre-warning time, we implemented FCW system 
+according to the multilevel of safety based on assumption 
+that the pre-warning time can be increased by combining 
+FCW system with the warning system that operates on stage 
+2, open condition, in order to prevent a driver getting into 
+stage 3, critical moment. We chose the location-based 
+warning system (LW) for this purpose. The location-based 
+warning operates at stage 2 because it will warn the driver 
+when the driver drives toward a dangerous spot such as a
+147
+
+--- Page 3 ---
+ 
+ 
+ 
+Figure 3.  Combination of FCW and LW systems. 
+intersection or a sharp curve with high speed. The vehicle 
+may go pass the intersection without a problem if there is no 
+car around. However, this move has a high risk. If there is 
+another car approaching from the side, the situation will turn 
+from stage 2 into stage 3 and the driver may have to apply 
+sharp brake later on. Therefore, the warning when 
+approaching an intersection is considered as warning on stage 
+2 because the driver has placed himself into an open 
+condition by driving too fast. 
+B. Combination of FCW and LW system 
+We chose location-based warning to enhance FCW 
+because it is the most reliable system that works on stage 2. 
+The main reason is that the warnings generated are from 
+static environment. Location-based warning system informs a 
+driver about potentially dangerous places (called accident 
+hotspots) before reaching them in order to help a driver 
+become aware of the dangers and prepare to slow down 
+before reaching the hotspots. The accident hotspots are 
+dangerous places which possibly lead to accidents such as a 
+zebra cross, an intersection, a dangerous curve road, etc.  
+We combined FCW and LW systems by summing up the 
+warning outputs from both systems. The two systems run 
+separately and concurrently as illustrated in Fig. 3. Two 
+sensors were utilized and connected to a computer to obtain 
+driving information for FCW and LW. A laser rangefinder 
+was used to measure a following distance. A GPS module 
+was used to obtain a vehicle status such as speed, vehicle 
+position (latitude and longitude) and heading. For FCW, the 
+following distance and the speed were used to determine a 
+warning as described in section II.  For LW, a warning was 
+calculated from vehicle’s speed, vehicle’s position and 
+vehicle’s heading according to the following equation. 
+
+
+
+<
+−
+>
+<
+=
+otherwise
+h
+h
+h
+AND
+v
+v
+AND
+d
+d
+LW
+th
+D
+th
+th
+,
+0
+)
+(
+)
+(
+)
+(,
+1
+ 
+(2)  
+For the LW system that we used, all accident hotspots 
+were collected in a database. Each data point consists of 
+latitude, longitude, speed limit and heading.  The car status 
+from GPS will be compared to every data point nearby. If the 
+location is close enough, the current velocity (v) exceeds the 
+speed limit (vth), and the heading (h) points toward a 
+dangerous place, then the system warning will be issued. For 
+the current location-based warning system shown in (2), the 
+speed limit (vth), and the range of warning distance from 
+hotspots (dth) are 30km/h and 30 m. respectively.  hD is the 
+angle from vehicle position, used as an origin point, to the 
+nearest hotspot in the database. If an absolute difference of h 
+and hD is not over hth, it means that the car is moving toward 
+the hotspot. As shown in Fig. 4., we differentiate a vehicle 
+direction that it is going into or going out of a hotspot by 
+considering a vehicle’s heading (h) and an angle from vehicle 
+position to the nearest hotspot in the database (hD). When a 
+vehicle is going into a hotspot, h and hD are same direction. In 
+contrast, h and hD are opposite direction when a vehicle is 
+going out of a hotspot. 
+IV. WARNING LAG TIME FOR PERFORMANCE EVALUATION 
+Since FCW systems are activated at a critical moment, 
+within 2-5 seconds before accidents, timing is a crucial 
+parameter. Some researchers focused their study on the pre-
+warning time, which is defined as the time period between 
+the issue of warning and the moment of crash impact. They 
+assumed that pre-warning time can be measured, because 
+crashes can be emulated in a driving simulator. Our work, 
+which focuses on real driving situations and experiments, 
+cannot simulate crashes. Therefore, we proposed another 
+performance metric, the warning lag time as shown in Fig. 5 
+and 6, which is used as a performance indicator in our 
+experiments. The warning lag time is defined as the time 
+period between the issue of warning and the execution of 
+brake by a normal driver who has no active warning systems. 
+In typical FCW systems, the warnings usually come after 
+brakes from alert drivers because human perception is better 
+than current sensing technology. As a result, human drivers 
+can perceive more road environments and react quicker than 
+a machine. 
+We evaluated the warning lag time of our system based 
+on the assumption that the pattern of system warning signal is 
+similar to the pattern of actual brake signal.  However, the 
+system warning has a short time-shift from the actual brake. 
+Thus, this short time-shift is warning lag time of the system 
+warning. After obtaining both data, we can evaluate warning 
+lag time by following these steps. First, we calculate the 
+cross-correlation between the actual brake and the system  
+148
+
+--- Page 4 ---
+ 
+ 
+ 
+Figure 4.  Warning condition of Location-based warning system. 
+output. The second step is finding the local maxima around 
+the middle of cross-correlation output. This is because the 
+time lag will not deviate much from the center (delay = 0 
+sec). Finally, we get the warning lag time by measuring a 
+distance between the center of cross-correlation output and 
+the local maxima as shown in Fig. 7. This figure 
+demonstrates the measurement of warning lag time by a 
+cross-correlation result of the actual brake and the system 
+warning of FCW system with LW system. The vertical line 
+indicates the center of cross-correlation output (no shift). The 
+local maxima point is on the right of the center. This means 
+that the system warning happens before the actual brake with 
+the measured pre-warning time.  On the other hand, if the 
+local maxima point is on the left, it indicates that the system 
+warning delays from the actual brake. 
+V. EXPERIMENTS AND RESULTS 
+Our system consists of three sensors installed in a test 
+vehicle as shown in Fig. 8. The first sensor is a laser 
+rangefinder mounted at the car’s windshield and pointed 
+forward. This sensor is used to obtain the distance between 
+the test car and a car in the front. The second sensor is a GPS 
+receiver used to obtain the car’s status consisting of latitude, 
+longitude, speed and heading of the car on the earth. The last 
+one is a force sensing resistor (FSR) equipped on a brake 
+pedal to obtain actual brake actions of the driver. The force 
+sensor is used only for performance evaluation purpose. It is 
+not needed for normal operation of the warning system. 
+These sensors are connected to a main computer in order to 
+record and process the data. 
+The purpose of the experiments is to demonstrate that the 
+warning lag time can be increased by adding the functionality 
+of a FCW system with a location-based warning system. We 
+tested both systems, the FCW system with and without 
+Location-based warning system, in real driving situation for 
+30 minutes on city roads. The test route consists of 28 
+accident hotspots. For testing purpose, the driver does not 
+know the output of the systems, so that his driving behavior 
+is independent to the output from the systems. 
+For performance evaluation, we determined two 
+performance parameters which are the warning lag time and 
+the accuracy of system warning. The accuracy of system 
+warning is the comparison result between the system 
+warnings and the actual brakes as shown in Fig. 9. After 
+determining the warning lag time, the time-scale of system 
+warnings was shifted by the warning lag time before 
+calculating the accuracy in order to measure the system 
+warnings corresponding to the actual brakes.  
+ 
+ 
+Figure 5.  The pre-warning time and the warning lag time in a timeline of 
+driving situation. 
+ 
+Figure 6.  The increased warning lag time 
+when enhancing FCW by adding LW. 
+From Table I., the accuracy of the combination FCW+ 
+LW system decreases from the accuracy of FCW alone for 
+about 0.53%. The main cause of false negatives of FCW in 
+this test is the traffic congestion of the road that we 
+performed the test. When the car stopped, the driver still left 
+his foot on the brake pedal. This was counted as a brake 
+action, while the FCW system did not give any warning when 
+the car did not move.  The output from FCW system has an 
+average delay of 1.47 sec. from the actual brake, whereas the 
+warning lag time of the combination system of FCW and LW 
+is 1.32 sec. These results indicate that enhancing FCW 
+system with location-based warning system can help improve 
+the pre-warning time for 0.15 sec. (from the pre-waning time 
++1.47 sec. to the pre-warning time +1.32 sec.). 
+ 
+Figure 7.  Measurement of warning lag time from cross-correlation 
+between actual brakes and system output. 
+ 
+ 
+149
+
+--- Page 5 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 8.  System Components: (a) Laser rangefinder and GPS receiver, 
+and (b) Force Sensing Resistor for obtaining actual brakes of the driver 
+TABLE I.  
+THE RESULTS OF PERFORMANCE EVALUATION OF THE 
+FCW SYSTEM WITHOUT AND WITH LOCATION-BASED WARNING SYSTEM 
+Warning 
+System 
+Warning 
+lag time (s) 
+Accuracy of system (%) 
+Correct 
+False 
+positive 
+False 
+negative 
+FCW 
++1.47 
+79.54 
+10.09 
+10.37 
+FCW with LW 
++1.32 
+79.01 
+10.66 
+10.33 
+(-) and (+) means the warning lag time happens before and after the actual brake respectively 
+VI. CONCLUSION 
+In this work, we improved the performance of FCW system 
+to increase the warning lag time by adding the location-based 
+warning system which is in the second level of the crash 
+prevention hierarchy. In order to perform our system in real 
+experiments, we proposed the warning lag time as the key 
+performance which is a time period between an actual brake 
+and a warning signal. We calculated the warning lag time 
+based on correlation method as shown in section 3. The 
+systems, FCW without and with LW, were tested in real 
+driving situations in order to evaluate the performance of the 
+enhanced FCW system. The results show that enhancing 
+normal FCW system with the level 2 warning system can 
+help increase the pre-warning time by 0.15 sec. with a small 
+drop in accuracy. 
+ACKNOWLEDGMENT 
+This work was supported by the Higher Education Research 
+Promotion and National Research University Project of 
+Thailand, Office of the Higher Education Commission. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 9.  The comparison of (a) the actual brakes with 
+(b) the output of the FCW system and (c) the output of the combination of 
+FCW and LW systems.. 
+REFERENCES 
+[1] 
+N. Srinivasa, Y. Chen, and C. Daniell, “A Fusion System for Real-
+time Forward Collision Warning in Automobiles,” in Proc. of IEEE 
+Conf. on Intelligent Transportation System, pp. 457–462, Oct., 2003. 
+[2] 
+H. Cheng, N. Zheng, L. Ma, J. Qin, and X. Zhang, “Vehicle Active 
+Safety Applications by Fusing Multiple-Sensor for the Springrobot 
+System,” ,” in Proc. of IEEE Int. Conf. on Vehicular Electronics and 
+Safety (ICVES 2005), pp. 155-160, Oct., 2005. 
+[3] 
+M. Nakaoka, P. Raksincharoensak, and M. Naka, “Study on Forward 
+Collision Warning System Adapted to Driver Characteristics and 
+Road Environment,” in Proc. of Int. Conf. on Control, Automation 
+and Systems (ICCAS), pp. 2890-2895, Oct., 2008. 
+[4] 
+T. Hiraoka, M. Tanaka, H. Kumamoto, T. Izumi, and  K. Hatanaka, 
+“Collision risk evaluation index based on deceleration for collision 
+avoidance (firstreport)–Proposal of a new index to evaluate collision 
+risk against forward obstacles,” Review of Automotive Engineering, 
+Vol. 30, No.4, pp.429–437, 2009. 
+[5] 
+S. Takada, T. Hiraoka, and H. Kawakami, “Forward obstacles 
+collision warning system based on deceleration for collision 
+avoidance,” in Proc. of SICE Annual Conference, pp 184 – 191, Sep., 
+2011. 
+[6] 
+C-L Huo, Y-H Yu, J-C Syu, and T-Y Sun, “Vehicle Warning System 
+for Land Departure and Collision Avoidance: Using Fuzzy Decision 
+Making,” IEEE Int. Conf. on Fuzzy Systems 2011 (FUZZ),  pp. 1554 – 
+1559, Jun., 2011. 
+[7] 
+Z. Lei, W. Jianqiang, and L. Keqiang, “Forward Collision Warning 
+System Based on Thasv-ii Platform,”  ,” in Proc. of IEEE Int. Conf. 
+on Vehicular Electronics and Safety (ICVES2006), pp. 255 – 258, 
+Dec., 2006. 
+ 
+ 
+(a) 
+ 
+(b) 
+ 
+(a) 
+ 
+(b) 
+ 
+(c) 
+150

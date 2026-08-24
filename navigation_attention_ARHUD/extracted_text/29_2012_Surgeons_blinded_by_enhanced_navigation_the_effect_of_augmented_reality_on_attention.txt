@@ -1,0 +1,766 @@
+Surgeons blinded by enhanced navigation: the effect of augmented
+reality on attention
+Benjamin J. Dixon • Michael J. Daly •
+Harley Chan • Allan D. Vescan • Ian J. Witterick •
+Jonathan C. Irish
+Received: 27 February 2012 / Accepted: 11 June 2012 / Published online: 26 July 2012
+ Springer Science+Business Media, LLC 2012
+Abstract
+Background
+Advanced image-guidance systems allowing
+presentation of three-dimensional navigational data in real
+time are being developed enthusiastically for many medical
+procedures. Other industries, including aviation and the
+military, have noted that shifting attention toward such
+compelling assistance has detrimental effects. Using the
+detection rate of unexpected ﬁndings, we assess whether
+inattentional blindness is signiﬁcant in a surgical context
+and evaluate the impact of on-screen navigational cuing
+with augmented reality.
+Methods
+Surgeons and trainees performed an endoscopic
+navigation exercise on a cadaveric specimen. The subjects
+were randomized to either a standard endoscopic view
+(control) or an AR view consisting of an endoscopic video
+fused with anatomic contours. Two unexpected ﬁndings
+were presented in close proximity to the target point: one
+critical complication and one foreign body (screw). Task
+completion time, accuracy, and recognition of ﬁndings
+were recorded.
+Results
+Detection of the complication was 0/15 in the AR
+group versus 7/17 in the control group (p = 0.008).
+Detection of the screw was 1/15 (AR) and 7/17 (control)
+(p = 0.041). Recognition of either ﬁnding was 12/17 for
+the control group and 1/15 for the AR group (p \ 0.001).
+Accuracy was greater for the AR group than for the control
+group, with the median distance from the target point
+measuring
+respectively
+2.10
+mm
+(interquartile
+range
+[IQR], 1.29–2.37) and 4.13 (IQR, 3.11–7.39) (p \ 0.001).
+Conclusion
+Inattentional blindness was evident in both
+groups. Although more accurate, the AR group was less
+likely to identify signiﬁcant unexpected ﬁndings clearly
+within view. Advanced navigational displays may increase
+precision, but strategies to mitigate attentional costs need
+further investigation to allow safe implementation.
+Keywords
+Attentional tunneling  Augmented reality 
+Endoscopic surgery  Image-guided surgery  Inattentional
+blindness  Surgical navigation
+Most procedural specialties have shown an increasing trend
+toward endoscopic, image-guided, minimally invasive
+techniques. Compared with open approaches, minimally
+invasive techniques may provide a narrower ﬁeld of view
+and fewer spatial cues. This has resulted in a greater reli-
+ance on technology to aid in diagnosis and precise
+navigation.
+As these procedures have evolved, there have been
+parallel advances in imaging technology that can provide
+an accurate submillimeter, three-dimensional (3D) repre-
+sentation of the operative ﬁeld. Not surprisingly, ever
+B. J. Dixon  I. J. Witterick  J. C. Irish (&)
+Department of Surgical Oncology, Princess Margaret Hospital,
+University Health Network, University of Toronto, 610
+University Avenue, 3-954, Toronto, ON M5G 2M9, Canada
+e-mail: jonathan.irish@uhn.on.ca
+B. J. Dixon
+e-mail: benjohndixon@hotmail.com
+B. J. Dixon  I. J. Witterick  J. C. Irish
+Department of Otolaryngology-Head and Neck Surgery, Princess
+Margaret Hospital, University Health Network, University of
+Toronto, Toronto, ON, Canada
+M. J. Daly  H. Chan
+Ontario Cancer Institute, Princess Margaret Hospital, University
+Health Network, University of Toronto, Toronto, ON, Canada
+A. D. Vescan  I. J. Witterick
+Department of Otolaryngology-Head and Neck Surgery, Mount
+Sinai Hospital, University of Toronto, Toronto, ON, Canada
+123
+Surg Endosc (2013) 27:454–461
+DOI 10.1007/s00464-012-2457-3
+and Other Interventional Techniques 
+
+
+increasing efforts have been made to use these data in a
+more dynamic way during performance of tasks.
+Currently, image-guided surgery (IGS) systems are
+commonly used for many procedures [1], especially when
+the operative site is within a relatively rigid framework as
+in neurosurgery, skull base surgery, and sinonasal surgery.
+In such areas, ﬁndings have shown that IGS systems
+signiﬁcantly
+change
+surgical
+strategy
+[2].
+Technical
+advancements in intraoperative imaging and deformable
+registration [3] currently are allowing IGS to be used in
+areas wherein soft tissue deformation and artifact from
+respiratory movement and arterial pulsation had previously
+rendered this technology not viable [4, 5].
+The Guided Therapeutics program at University Health
+Network, Toronto has developed a navigation system that
+incorporates intraoperative imaging and image registration
+[6, 7]. Anatomic segmentation and endoscope tracking then
+allows 3D representation of imaging and contouring data,
+which can be used during endoscopic surgery in real time
+[8]. This can be displayed as a virtual view on a submonitor
+or fused with the main endoscopic image as augmented
+reality (Fig. 1).
+Augmented reality (AR) describes the placement of
+virtual objects within a real environment in real time,
+meaning that true and virtual images are combined in a
+dynamic fashion [9]. This technique holds the promise of
+displaying accurate anatomic data derived from adjunct
+imaging on the endoscopic monitor during a procedure.
+Intuitively, most physicians recognize the potential clutter
+or visual overstimulation inherent in such a display.
+Although many research groups, including ours, have
+reported on the potential clinical beneﬁts of this technology
+[8, 10–12], the possible detrimental effects of AR displays
+remain poorly investigated or discussed.
+Human factors and psychological studies suggest that
+compelling displays such as AR alter attentional focus
+during the performance of tasks. Even in the absence of
+additional cues, people concentrating on a task may fail to
+recognize highly notable events or objects that appear
+within their visual ﬁeld. This phenomenon, known as
+‘‘inattentional blindness,’’ becomes more evident when
+tasks demand greater attention [13]. It might be expected
+that accurate and accessible navigational data would
+decrease cognitive demand during a procedure and allow
+for a greater allocation of attention to alternative tasks [14].
+However, evidence from the aviation, military, and auto
+industries suggests that the opposite occurs. Drawing
+attention to a certain cue in fact increases the chance of
+missing unexpected but important events occurring in the
+same environment [15, 16].
+Fig. 1 A Still screen shot taken during the endoscopic trial of the
+standard view with opacity at 75 %. Relevant ﬁndings are labeled
+including foreign body and complication. B Same image as in A with
+augmented reality (AR) fusion at 25 %. This is an actual screen-shot
+from a participant in the AR group who missed both ﬁndings.
+C Example showing a virtual view of contours with wire mesh
+surface rendering. D Trial setup displaying monitor and optical
+image-guided surgery (IGS)
+Surg Endosc (2013) 27:454–461
+455
+123
+
+
+To reﬁne the user interface of our image-guidance sys-
+tem, we aimed to assess the impact of AR on visual
+attention using a randomized-controlled trial comparing
+conventional endoscopy with an AR view (Fig. 1A, B).
+Endoscopic transnasal skull base navigation in a cadaveric
+specimen was chosen as the surgical model because it
+provides a complex 3D environment within a rigid
+framework that can be accurately registered.
+Endoscopic
+approaches
+to
+skull
+base
+tumors
+are
+increasingly popular, and the use of image guidance in this
+setting is almost ubiquitous. The main outcome measure
+was the detection rate of two deliberately presented unex-
+pected ﬁndings: one critical complication and one foreign
+body. Previous studies investigating inattentional blindness
+presented ﬁndings that were clearly out of place, and the
+foreign body (a screw) was chosen to replicate these
+experiments in a surgical setting. We also wished to
+present a surgically relevant abnormality, so the critical
+complication (injured optic nerve) was added.
+Importantly, we did not aim to assess the validity of any
+surgical approach or technique nor the competence of the
+participants. Rather, we wished to assess the effect that
+on-screen cuing with AR had on detection of unexpected
+ﬁndings as a measure of the potential attentional cost of
+these systems.
+Methods
+Otolaryngology trainees, fellows, and staff surgeons par-
+ticipated in the trial on a fully functional, dynamic endo-
+scopic
+AR
+prototype
+after
+informed
+consent
+and
+institutional
+ethics
+approval.
+A
+single
+cadaver
+head
+underwent a computed tomography (CT) scan after ﬁxation
+of ﬁduciary markers. Anatomic contours of critical struc-
+tures then were manually delineated using the ITK-Snap
+(University of Pennsylvania, PA) [17] (Fig. 1C). Sinonasal
+dissection, including ethmoidectomy and a wide uniﬁed
+sphenoidotomy, then was performed consistently with
+exposure for trans-sphenoidal skull base surgery such as
+pituitary surgery. A postablation cone-beam computed
+tomography (CT) image was acquired, and contours were
+rigidly registered to this scan [6].
+An optical IGS (Polaris; NDI, Waterloo, Ontario) sys-
+tem was used with custom visualization software for real-
+time tracking of a 0 endoscope (Hopkins II telescope and
+IMAGE1 camera; Karl Storz, Tuttlingen, Germany) and a
+probe. A dynamic virtual endoscopic image then could be
+displayed by registering imaging and contouring data to the
+head [8].
+Two unexpected ﬁndings were present in the specimen.
+First, a foreign object (small screw) was placed within the
+sphenoid sinus. Second, the optic nerve was divided at the
+chiasm, dissected along the canal, and draped into the
+sinus. This represented one totally unexpected ﬁnding and
+one critical complication (Fig. 1A). The subjects then were
+randomized to perform a navigation task in one of two
+endoscopic environments:
+1.
+Standard endoscopy (control group): The image was
+adjusted to 75 % opacity to match the image quality
+of the AR view, but no contour fusion was added
+(Fig. 1A).
+2.
+Augmented reality (AR group): The endoscopic view
+was adjusted to 75 % opacity, with anatomic contours
+seen as a fusion in the remaining 25 % (Fig. 1B).
+Each subject undertook the following task after ran-
+domization to one arm of the study. A brieﬁng outlined the
+prior dissection, the AR technology, and the anatomic
+contours. Unaware of which view he or she would receive,
+each participant was asked to locate, with a tracked pointer,
+the anterior face of the sella turcica (pituitary fossa) in the
+midline as accurately and efﬁciently as possible. The AR
+group viewed precontoured anatomic data fused with the
+endoscopic image, which was updated dynamically in real
+time as the subject moved the endoscope. The subjects
+were aware that they were being timed, but no time limits
+were enforced. Randomization was stratiﬁed to balance the
+level of surgical experience in each group.
+Once the subject indicated that he or she had located the
+target area, the 3D coordinates and time were recorded, and
+the endoscopic image was hidden. The following questions
+then were asked: (1) Did you notice anything unusual? (2)
+Did you note any critical complication? (3) Did you notice
+a foreign body in the sphenoid sinus? (4) Did you notice a
+screw? Binary responses (yes/no) were documented. Video
+footage of the monitor and the room were recorded
+separately.
+Statistical analysis
+Analysis was performed using SPSS Statistics 19 (Chicago,
+IL, USA). The recognition rates for unexpected ﬁndings
+between the two groups were compared using the two-
+sided Fisher’s exact test. Spearman’s rank correlations
+were performed to identify any signiﬁcant factors associ-
+ated with recognition of the ﬁndings. Binary logistic
+regression analysis, with Wald forward and backward
+modeling, was performed to assess whether randomization
+group, time taken, or experience level was independently
+associated with noting an unexpected ﬁnding. Task accu-
+racy was assessed by measuring the distance from a ‘‘gold
+standard’’ target point set by the investigators aided by
+image guidance. Linear regression analysis was used to
+assess again the impact of group, experience level, and
+time on accuracy.
+456
+Surg Endosc (2013) 27:454–461
+123
+
+
+Results
+The study enrolled 33 otolaryngology residents, fellows,
+and surgeons spanning all levels of experience. There was
+an equal distribution of experience levels between groups
+(likelihood ratio, 0.98). One subject in the AR group was
+excluded from the analysis because the AR malfunctioned
+due to processing latency in the laptop computer, freezing
+the superimposed virtual view in a static position. Retro-
+spective scrutiny of individual video footage showed that
+both unexpected ﬁndings were clearly seen on the monitor
+in every instance.
+Recognition of unexpected ﬁndings
+Only 4 of the 32 subjects in the study noticed something
+unusual (question 1), with two commenting during the
+exercise.
+Direct questioning about noticing a critical complication
+(question 2) resulted in correct answers by 7 (41 %) of 17
+subjects in the control group and 0 (0 %) of 15 subjects in
+the AR group (p = 0.008). The same ratios were present
+for question 3 with regard to noticing a foreign body
+(Table 1).
+One subject from the AR group altered his answer for
+question 4 (Did you see a screw?) from his response to
+question 3, meaning 1 (7 %) of 15 subjects in the AR group
+noticed a screw compared with 7 of 17 subjects in the
+control group (p = 0.041). Altogether, 12 subjects in the
+control group noticed a ﬁnding (5 noted a complication, 5 a
+foreign body, 2 both) compared with 1 subject in the AR
+group (p \ 0.001).
+The AR group showed a trend toward a shorter task
+completion time (p = 0.153) (Table 1). Logistic regression
+analysis showed that randomization group was the only
+signiﬁcant independent variable for all the unexpected
+ﬁndings (all p \ 0.03). After control was used for display
+group, time and experience level were not signiﬁcant.
+The median task completion time for the subgroup
+reporting a ﬁnding (28 s; interquartile range [IQR], 22.5–33
+s) was signiﬁcantly longer than for those who missed the
+ﬁndings (19 s; IQR, 12–30 s) (p = 0.03, Mann–Whitney
+U test). The more experienced subjects exhibited a trend
+toward a faster completion time (R = 0.33; p = 0.064,
+Spearman correlation coefﬁcient).
+Accuracy
+A 3D representation of the localized points with target
+reference is shown in Fig. 2A. The median distance from
+the designated target point was signiﬁcantly shorter in the
+AR group (2.10 mm; IQR, 1.29–2.37 mm) than in the
+control group (4.13 mm; IQR, 3.11–7.39 mm) (p \ 0.001)
+(Table 1). Display type was the only signiﬁcant variable
+for accuracy, but there was a trend toward greater accuracy
+with experience (p = 0.074). In Fig. 2B, localized points
+are graphically represented on a CT image as an anatomic
+reference.
+Discussion
+This study provides experimental evidence that surgeons
+exhibit inattentional blindness while performing tasks. It
+Table 1 Differences in accuracy, detection of unexpected ﬁndings, and task completion time between the randomization groups
+Group A
+Group B
+p Value
+Standard endoscopy
+Augmented reality
+Subjects
+Total (n = 32)
+17
+15
+0.98 Likelihood ratio
+PGY 1, 2 (n = 8)
+4
+4
+PGY 3–5 (n = 13)
+7
+6
+Fellows/surgeons (n = 11)
+6
+5
+Accuracy (mm from target)
+Median (IQR)
+4.13 (3.11–7.39)
+2.10 (1.29–2.37)
+\0.001 Mann–Whitney U test
+Complication noted
+Yes
+7
+0
+0.008 Fisher’s exact test
+No
+10
+15
+Foreign body noted
+Yes
+7
+0
+0.008 Fisher’s exact test
+No
+10
+15
+Screw noted
+Yes
+7
+1
+0.04 Fisher’s exact test
+No
+10
+14
+Either ﬁnding noted
+Yes
+12
+1
+\0.001 Fisher’s exact test
+No
+5
+14
+Time to complete task (s)
+Median (IQR)
+25 (21–30)
+19 (12–31.5)
+0.15 Mann–Whitney U test
+IQR interquartile range
+Surg Endosc (2013) 27:454–461
+457
+123
+
+
+also demonstrates that recognition of signiﬁcant unex-
+pected ﬁndings can be markedly reduced when AR is used
+to enhance navigation.
+Despite the expansion of minimally invasive techniques,
+image-guided procedures, and telerobotic surgery, the
+potential detrimental effects of advanced displays, includ-
+ing AR, are poorly explored in the medical literature. Some
+studies of anesthesia have examined the pros and cons of
+head-mounted AR displays for monitoring purposes, but
+investigation in other ﬁelds is sparse [18, 19]. Although
+perceptual issues with medical AR are well documented
+[20], we believe this is the ﬁrst experiment to demonstrate
+that augmented surgical navigation systems have a poten-
+tially deleterious attentional cost. This has implications for
+the use and development of all image-guided procedures.
+In our study, on-screen navigation improved accuracy,
+and there was a trend toward faster task completion. A trial
+investigating navigation on an airport surface in reduced
+visibility showed similar results. The addition of an aug-
+mented display resulted in more accurate navigation, faster
+route completion, and decreased pilot task workloads [21].
+Emulating such advances in a medical context clearly is
+appealing because of its potential for a safer, more efﬁcient
+procedure, with less demand on the physician.
+Our data support other authors who suggest that such
+gains may be achievable for medical procedures [11, 22, 23]
+but that safe implementation will require some mitigation of
+attentional costs. The presence of inattentional blindness
+during performance of a surgical task was expected, given
+the results from similar studies investigating visual percep-
+tion. Even so, when we were designing this experiment, it
+seemed inconceivable that surgeons would miss ﬁndings so
+clearly visible within the operative ﬁeld.
+One famous example of inattentional blindness is collo-
+quially termed the ‘‘invisible gorilla.’’ In this example, a
+person in a gorilla costume is clearly present on a monitor
+that the subjects are viewing while focused on a task [13].
+Amazingly, during one condition, 58 % of the subjects miss
+the gorilla. Similarly, 59 % of our ‘‘task-focused’’ control
+arm failed to notice the screw although it would have been
+difﬁcult to place it any closer to the target point (Fig. 1A).
+Perhaps of greater signiﬁcance, no one in the AR group
+noted the complication, and only one subject saw the
+screw. Military and aviation studies have previously doc-
+umented similar drawbacks when investigating AR and
+head-up displays. The term ‘‘attentional tunneling’’ is used
+to describe cognitive ﬁxation on speciﬁc cues and the
+resulting cost of neglecting alternative information or tasks
+[24]. This phenomenon has been implicated in the Three
+Mile Island nuclear accident [24], F16 mishaps in the U.S.
+Air Force [25], and cell phone-related car accidents [26,
+27]. In a military simulation, detection of unexpected but
+‘‘highest priority’’ objects was reduced when they were
+closely presented adjacent to cued (with AR) targets [15].
+The participant’s attention was therefore drawn to the
+highlighted object although the noncued item nearby was
+of greater importance.
+Attentional constraints
+have
+been shown to limit
+severely a pilot’s ability to process real-world and aug-
+mented display information simultaneously [28]. Head-up
+display symbolism may support precision landing, but
+attraction to the displayed image has led attention away
+from runway incursions [29], resulting in reduced detection
+of ﬂight path objects as salient as a blimp [30].
+Because we did not analyze eye movements, we are
+unable to determine whether failure to note the unexpected
+objects resulted from failure to scan the area or failure to
+perceive. Radiologic studies suggest that both occur and
+explain the ‘‘satisfaction of search’’ phenomenon whereby
+secondary abnormalities are missed on imaging studies.
+Greater attention, measured by gaze dwell time, is given
+to contrast-enhanced regions of a radiograph than to
+Fig. 2 A Three-dimensional (3D) virtual view displaying the points
+located by the control group (magenta) and the augmented reality
+(AR) group (blue). The reference target point is in yellow (partially
+obscured). The AR group was more accurate (p \ 0.001). B The 3D
+data points from A are shown projected onto a sagittal computed
+tomography (CT) image for anatomic reference
+458
+Surg Endosc (2013) 27:454–461
+123
+
+
+noncontrast regions, leading to missed abnormalities [31].
+This differs from other studies of eye position during
+radiograph interpretation, which indicated that the effect is
+based on failure to recognize [32]. The addition of com-
+puter-aided diagnosis in medical imaging has been shown
+to reduce the visual search for noncued abnormalities [33].
+The differences between our randomization groups suggest
+that AR has an effect similar to contrast on an imaging
+study. Secondary ﬁndings are overlooked due to an atten-
+tional shift toward a highlighted area.
+In addition to attentional tunneling, the clutter caused by
+on-screen cues provides another explanation for the infe-
+rior detection of unexpected ﬁndings. As more and more
+information is displayed within one’s visual ﬁeld, the costs
+of clutter begin to outweigh the costs of scanning [34, 35].
+In a procedural context, this suggests that a point is reached
+at which viewing imaging data away from the operative
+ﬁeld in a traditional manner may be safer and faster than
+interpreting information-rich data within the ﬁeld despite
+the inherent shift of attention. Clutter and jitter induced by
+AR may reduce the user’s effective visual acuity [36]. We
+believe there may be an additional camouﬂage effect, as
+evidenced by the difﬁculty seeing the optic nerve when it is
+fused with the red carotid artery contour (Fig. 1B).
+Given our ﬁndings, we caution any claims in the medical
+literature that advanced navigational displays inevitably
+lead to safer, easier, and more precise surgery. Technical
+development in many disciplines has been impressive,
+including the introduction of live AR through continuous
+low-dose CT scanning, AR assistance for remote neurosur-
+gical assistance, fused video-ultrasound images for partial
+nephrectomy, AR-assisted navigation during natural oriﬁce
+translumenal endoscopic surgery (NOTES), and overlay AR
+during robotic surgery [4, 5, 11, 12, 37]. Reporting of this
+progress remains focused on registration accuracy, and
+perhaps rightly so given that it is absolutely essential for
+reliable navigation. However, registration error represents
+only one among many potential detrimental effects of AR,
+which include attention shifts; behavioral effects of reliance,
+complacency, and trust; impact of automation failure; and
+processing of noncued targets and cued nontargets [15, 16,
+38]. In light of these other potential hazards, further inves-
+tigation into interface design is required.
+The sample size in the current study was relatively
+small, but it would be challenging to ﬁnd a greater number
+of surgeons with varying levels of experience to participate
+and perform such speciﬁc and surgically relevant tasks in
+a realistic environment. Similar human factors studies
+investigating skilled end-users’ use of technology have
+been equally limited in subjects [16, 30, 34].
+A single cadaveric specimen was used. Although indi-
+vidual anatomic variations exist, we doubt that this would
+signiﬁcantly affect the results.
+We believe the greatest factor limiting interpretation of
+these results is that none of the participants had experience
+with operative AR. We are not sure whether lack of
+familiarity
+affected
+outcome.
+Perhaps
+the
+difference
+between the groups would have been insigniﬁcant if they
+had been given time to use the system and get used to the
+display.
+On-screen AR could potentially be presented in various
+formats, and we investigated only one setting. It could be
+argued that an alternative view, such as a wire mesh
+overlay rather than solid contours or a reduced contour
+opacity, could limit or negate the effect demonstrated. The
+unknown effect of habituation on the system (learning
+curve) and the possibility of alternative views highlight the
+need for further research into display settings and feedback
+mechanisms.
+Despite these limitations, our ﬁndings correlate closely
+with results in other industries. Thus, we believe the effect
+demonstrated does exist. Potential methods to reduce in-
+attentional blindness that require further investigation
+include on-demand rather than full-time AR, clutter
+reduction, soniﬁcations (informative auditory feedback)
+[39], and a perceptually matched 3D virtual view on a
+submonitor.
+Although the task chosen for the trial was designed to
+focus attention, it is important to remember that the only
+parameter that differed between the groups was the display
+setting. On-screen cuing appears to have a far greater
+impact on detection of unexpected ﬁndings than either
+experience level or time spent on the task. Despite the
+attentional costs, we see enormous potential beneﬁts from
+real-time navigation, and we are actively engaged in
+addressing the issues of attention and distraction.
+Our attentional capacity is limited, and we focus it for
+good reason; many tasks require concentration, and unex-
+pected events are rare. Thus, quarantining a portion of our
+attention for unexpected events is wasteful in most cir-
+cumstances and probably impossible anyway. Instead, we
+suggest that surgeons need to be aware of the potential
+detrimental effects from additional stimuli while perform-
+ing procedures as advanced displays continue to be adopted
+into practice. Procedures and subtasks with high naviga-
+tional demand should be targeted, and systems should be
+customized to mitigate distractive cues when demand is
+low. Emphasis needs to be placed on the perceptual limi-
+tations of the task-focused end user. Therefore, it is
+essential that physicians play a role in the development of
+these systems.
+Acknowledgments
+The authors thank Karl Storz, Endoscopy Can-
+ada, and Medtronic of Canada for providing the wet lab dissection
+instruments and devices. The prototype cone-beam CT C-arm was
+developed in collaboration with Siemens Healthcare. This study could
+not have been performed without assistance from the staff at the
+Surg Endosc (2013) 27:454–461
+459
+123
+
+
+University of Toronto Surgical Skills Centre, Mount Sinai Hospital,
+Toronto. This work was supported by the Guided Therapeutics (GTx)
+Program at the University Health Network, including the Kevin and
+Sandra Sullivan Chair in Surgical Oncology, the Hatch Engineering
+Fellowship Fund, the RACH Fund, and the Princess Margaret Hos-
+pital Foundation.
+Disclosures
+Benjamin J. Dixon, Michael J. Daly, Harley Chan,
+Allan D. Vescan, Ian J. Witterick, and Jonathan C. Irish have no
+conﬂicts of interest or ﬁnancial ties to disclose.
+References
+1. Cleary K, Peters TM (2010) Image-guided interventions: tech-
+nology review and clinical applications. Annu Rev Biomed Eng
+12:119–142
+2. Strauss G, Koulechov K, Rottger S, Bahner J, Trantakis C, Hofer
+M, Korb W, Burgert O, Meixensberger J, Manzey D, Dietz A,
+Luth T (2006) Evaluation of a navigation system for ENT with
+surgical efﬁciency criteria. Laryngoscope 116:564–572
+3. Nithiananthan S, Brock KK, Daly MJ, Chan H, Irish JC,
+Siewerdsen JH (2009) Demons deformable registration for
+CBCT-guided procedures in the head and neck: convergence and
+accuracy. Med Phys 36:4755–4764
+4. Shekhar R, Dandekar O, Bhat V, Philip M, Lei P, Godinez C,
+Sutton E, George I, Kavic S, Mezrich R, Park A (2010) Live
+augmented reality: a new visualization method for laparoscopic
+surgery using continuous volumetric computed tomography. Surg
+Endosc 24:1976–1985
+5. Cheung CL, Wedlake C, Moore J, Pautler SE, Peters TM (2010)
+Fused video and ultrasound images for minimally invasive partial
+nephrectomy: a phantom study. Med Image Comput Comput
+Assist Interv 13(Pt 3):408–415
+6. Siewerdsen JH, Daly MJ, Chan H, Nithiananthan S, Hamming N,
+Brock KK, Irish JC (2009) High-performance intraoperative
+cone-beam CT on a mobile C-arm: an integrated system for
+guidance of head and neck surgery. Proc SPIE 7261(1):72610J
+7. Daly MJ, Chan H, Nithiananthan S, Qiu J, Barker E, Bachar G,
+Dixon BJ, Irish JC, Siewerdsen JH (2011) Clinical implementa-
+tion of intraoperative cone-beam CT in head and neck surgery.
+Proc SPIE 7964:796426
+8. Daly MJ, Chan H, Prisman E, Vescan A, Nithiananthan S, Qiu J,
+Weersink R, Irish JC, Siewerdsen JH (2010) Fusion of intraop-
+erative cone-beam CT and endoscopic video for image-guided
+procedures. Proc SPIE 7625:762503
+9. Azuma RT (1997) A survey of augmented reality. In presence:
+teleoperators and virtual environments 4:355–385
+10. Teber D, Guven S, Simpfendorfer T, Baumhauer M, Guven EO,
+Yencilek F, Gozen AS, Rassweiler J (2009) Augmented reality: a
+new tool to improve surgical accuracy during laparoscopic partial
+nephrectomy? Preliminary in vitro and in vivo results. Eur Urol
+56:332–338
+11. Volonte F, Pugin F, Bucher P, Sugimoto M, Ratib O, Morel P
+(2011) Augmented reality and image overlay navigation with
+OsiriX in laparoscopic and robotic surgery: not only a matter of
+fashion. J Hepatobiliary Pancreat Sci 18(4):506–509
+12. Fernandez-Esparrach G, San Jose Estepar R, Guarner-Argente C,
+Martinez-Palli G, Navarro R, Rodriguez de Miguel C, Cordova
+H, Thompson CC, Lacy AM, Donoso L, Ayuso-Colella JR, Gines
+A, Pellise M, Llach J, Vosburgh KG (2010) The role of a com-
+puted tomography-based image registered navigation system for
+natural oriﬁce transluminal endoscopic surgery: a comparative
+study in a porcine model. Endoscopy 42:1096–1103
+13. Simons DJ, Chabris CF (1999) Gorillas in our midst: sustained
+inattentionalblindnessfordynamicevents.Perception28:1059–1074
+14. Carswell CM, Clarke D, Seales WB (2005) Assessing mental
+workload during laparoscopic surgery. Surg Innov 12:80–90
+15. Yeh M, Wickens CD (2001) Display signaling in augmented
+reality: effects of cue reliability and image realism on attention
+allocation and trust calibration. Hum Factors 43:355–365
+16. Maltz M, Shinar D (2003) New alternative methods of analyzing
+human behavior in cued target acquisition. Hum Factors 45:281–295
+17. Yushkevich PA, Piven J, Hazlett HC, Smith RG, Ho S, Gee JC,
+Gerig G (2006) User-guided 3D active contour segmentation of
+anatomical structures: signiﬁcantly improved efﬁciency and
+reliability. Neuroimage 31:1116–1128
+18. Liu D, Jenkins SA, Sanderson PM (2009) Patient monitoring with
+head-mounted displays. Curr Opin Anaesthesiol 22:796–803
+19. Liu D, Jenkins SA, Sanderson PM, Fabian P, Russell WJ (2010)
+Monitoring with head-mounted displays in general anesthesia: a
+clinical evaluation in the operating room. Anesth Analg 110:
+1032–1038
+20. Sielhorst T, Feuerstein M, Navab N (2008) Advanced medical
+displays: a literature review of augmented reality. J Display
+Technol 4:451–467
+21. McCann RS, Foyle DC, Andre AD, Battiste V (1996) Advanced
+navigation aids in the ﬂight deck: effects on ground taxi perfor-
+mance under low visibilty conditions. SAE Transact J Aerospace
+105:1419–1430
+22. Marescaux J, Rubino F, Arenas M, Mutter D, Soler L (2004)
+Augmented-reality-assisted laparoscopic adrenalectomy. JAMA
+292:2214–2215
+23. Kawamata T, Iseki H, Shibasaki T, Hori T (2002) Endoscopic
+augmented reality navigation system for endonasal transsphe-
+noidal surgery to treat pituitary tumors: technical note. Neuro-
+surgery 50:1393–1397
+24. Wickens CD (2005) Attentional tunneling and task management:
+Technical Report AHFD-05-23/NASA-05-10. University of Illi-
+nois, Urbana-Champaign
+25. Shappell SA, Wiegmann DA (2003) A human error analysis of
+general aviation controlled ﬂight into terrain accidents occurring
+between 1990–1998. Final Rep. DOT/FAA/AM-03/4. Ofﬁce of
+Aerospace Medicine, Washington, DC
+26. Strayer DL, Johnston WA (2001) Driven to distraction: dual-task
+studies of simulated driving and conversing on cellular telephone.
+Psychol Sci 12:462–466
+27. Horrey WJ, Wickens CD (2006) Examining the impact of cell
+phone conversations on driving using meta-analytic techniques.
+Hum Factors 48:196–205
+28. McCann RS, Foyle DC, Johnston JC (1993) Attentional limita-
+tions with head-up displays. In: Jensen RS (ed) Proceedings of
+the Seventh International Symposium on Aviation Psychology
+1993, Colombus, pp 70–75
+29. Fischer E, Haines RF, Price TA (1980) Cognitive issues in head-
+up displays. NASA Technical paper 1711. NASA Ames Research
+Center, Moffat Field
+30. Wickens CD, Alexander AL, Horrey WJ, Nunes A, Hardy TJ
+(2004) Trafﬁc and ﬂight guidance depiction on a synthetic vision
+system display: the affects of clutter on performance and visual
+attention allocation. In: Proceedings of the 48th Annual Meeting
+of the Human Factors and Ergonomics Society, Santa Monica,
+pp 218–222
+31. Berbaum KS, Franken EA Jr, Dorfman DD, Miller EM,
+Krupinski EA, Kreinbring K, Caldwell RT, Lu CH (1996) Cause
+of satisfaction of search effects in contrast studies of the abdo-
+men. Acad Radiol 3:815–826
+32. Samuel S, Kundel HL, Nodine CF, Toto LC (1995) Mechanism
+of satisfaction of search: eye position recordings in the reading of
+chest radiographs. Radiology 194:895–902
+460
+Surg Endosc (2013) 27:454–461
+123
+
+
+33. Berbaum KS, Caldwell RT, Schartz KM, Thompson BH, Franken
+EA Jr (2007) Does computer-aided diagnosis for lung tumors
+change satisfaction of search in chest radiography? Acad Radiol
+14:1069–1076
+34. Yeh M, Merlo JL, Wickens CD, Brandenburg DL (2003) Head-
+up versus head-down: the costs of imprecision, unreliability, and
+visual clutter on cue effectiveness for display signaling. Hum
+Factors 45:390–407
+35. Ververs PM, Wickens CD (1998) Head-up displays: effects of
+clutter, display intensity, and display location on pilot perfor-
+mance. Int J Aviat Psychol 8:377–403
+36. Livingston MA (2005) Evaluating human factors in augmented
+reality systems. IEEE Comput Graph Appl 25:6–9
+37. Shenai MB, Dillavou M, Shum C, Ross D, Tubbs RS, Shih A,
+Guthrie BL (2011) Virtual interactive presence and augmented
+reality (VIPAR) for remote surgical assistance. Neurosurgery
+68(1 Suppl operative):200–207; discussion 207
+38. Lee JD, See KA (2004) Trust in automation: designing for
+appropriate reliance. Hum Factors 46:50–80
+39. Sanderson PM, Liu D, Jenkins SA (2009) Auditory displays in
+anesthesiology. Curr Opin Anaesthesiol 22:788–795
+Surg Endosc (2013) 27:454–461
+461
+123
+
+

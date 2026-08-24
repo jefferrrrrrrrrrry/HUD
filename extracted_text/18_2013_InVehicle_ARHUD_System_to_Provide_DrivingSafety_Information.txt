@@ -1,0 +1,1084 @@
+--- Page 1 ---
+1038   Hye Sun Park et al. 
+© 2013 
+       ETRI Journal, Volume 35, Number 6, December 2013 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+Augmented reality (AR) is currently being applied 
+actively to commercial products, and various types of 
+intelligent AR systems combining both the Global 
+Positioning System and computer-vision technologies are 
+being developed and commercialized. This paper suggests 
+an in-vehicle head-up display (HUD) system that is 
+combined with AR technology. The proposed system 
+recognizes driving-safety information and offers it to the 
+driver. Unlike existing HUD systems, the system displays 
+information registered to the driver’s view and is 
+developed for the robust recognition of obstacles under 
+bad weather conditions. The system is composed of four 
+modules: a ground obstacle detection module, an object 
+decision module, an object recognition module, and a 
+display module. The recognition ratio of the driving-safety 
+information obtained by the proposed AR-HUD system is 
+about 73%, and the system has a recognition speed of 
+about 15 fps for both vehicles and pedestrians. 
+ 
+Keywords: AR, augmented reality, HUD, head-up 
+display, vehicle and pedestrian recognition, stereo camera, 
+SVM, support vector machine, HOG, histograms of 
+oriented gradients, driving-safety information, in-vehicle 
+intelligent information system. 
+                                                               
+Manuscript received Mar. 31, 2013; revised Oct. 15, 2013; accepted Oct. 26, 2013. 
+This work was supported by the Industrial Strategic Technology Development Program of 
+MKE [10040927, Development of Driver-View based In-vehicle AR Display System 
+Technology].  
+Hye Sun Park (phone: +82 860 4803, hspark78@etri.re.kr) and Kyong-Ho Kim 
+(kkh@etri.re.kr) are with the IT Convergence Technology Research Laboratory, ETRI, 
+Daejeon, Rep. of Korea. 
+Min Woo Park (mwpark@vr.knu.ac.kr), Kwang Hee Won (khwon@vr.knu.ac.kr), and Soon 
+Ki Jung (skjung@knu.ac.kr) are with the Virtual Reality Laboratory, Kyungpook National 
+University, Daegu, Rep. of Korea.  
+I. Introduction 
+Augmented reality (AR) is a computer graphics technology 
+that supplements a real environment with virtual objects or 
+information based on computer technology. AR is currently 
+being applied in many aspects of the real world [1]-[8]. In the 
+Republic of Korea in particular, as of 2011, the number of 
+smartphone users has surpassed twenty million people. 
+Accordingly, companies focusing on AR technology are 
+actively progressing. According to Juniper Research [9], the 
+AR market has increasingly expanded, and it is expected that 
+the technology will earn more than seventy billion US dollars 
+by 2014. This technology is therefore expected to be applied to 
+fields beyond the area of smartphones. 
+In 1999, GM started the development of a vehicle-installed 
+head-up display (HUD). Thereafter, other famous car 
+companies, such as BMW and Peugeot, started to develop 
+HUD-based vehicles. However, most of the information 
+offered was already available on the dashboard, such as the 
+driving speed and vehicle direction. AR technology was first 
+used in vehicles in 2010 due to the rapid development of the 
+smartphone but only provided limited information to a 
+designated area on a vehicle’s windshield [10], [11]. 
+However, thanks to the intellectualization and radical 
+development of vehicle technology, technologies that can 
+provide the driver with a large amount of information within 
+the vehicle have been developed. The driver can therefore 
+receive not only information on their own vehicle but also 
+information on the environment in which they are driving and 
+information on their physical state and mental state, such as 
+driving habits, inattention (drowsiness or gaze distribution), 
+and even health status. 
+Past research has indicated that the vast majority of motor 
+In-Vehicle AR-HUD System  
+to Provide Driving-Safety Information 
+Hye Sun Park, Min Woo Park, Kwang Hee Won, Kyong-Ho Kim, and Soon Ki Jung 
+
+--- Page 2 ---
+ETRI Journal, Volume 35, Number 6, December 2013 
+Hye Sun Park et al.   1039 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+vehicle crashes are caused by human error. According to a 
+study released by the National Highway Traffic Safety 
+Administration (NHTSA) of the US Department of 
+Transportation and the Virginia Tech Transportation Institute 
+(VTTI), 80% of crashes in the United States involve some 
+form of driver distraction. Thus, an alarm that alerts the driver 
+of an obstacle in the road helps to reduce vehicle accidents. 
+Such an alarm is especially important to prevent collisions with 
+pedestrians or other cars. In this regard, many such 
+technologies and products are being developed around the 
+world, and driving-safety information is now being offered to 
+the driver through various modalities. Thus, driving workloads, 
+including visual, auditory, psychomotor, and cognitive, arise 
+when the driver recognizes information transferred through 
+touch sensors, in-vehicle terminals, and so on [12]-[18]. In 
+particular, the driver receives 80% of this information visually 
+while looking forward at the road to support safe driving 
+practices [19], [20]. If augmented driving-safety information 
+matched with the information regarding the real environment is 
+provided while the driver’s gaze is toward the driving direction, 
+the driver can recognize the information naturally and focus on 
+driving safely. 
+Thus, this paper introduces an in-vehicle AR-HUD system 
+that detects such driving-safety information and offers the 
+information to the driver, fitting the driver’s viewpoint, as 
+shown in Fig. 1. In particular, the proposed system intelligently 
+judges what information is proper to provide based on road 
+attributes associated with vehicle traffic and those associated 
+with pedestrian traffic, using the number of lanes, road type, 
+and vehicle speed. To improve the performance speed in real 
+time, the proposed system operates in one of two modes when 
+both modes are not needed, such as on a vehicle-only road. 
+In-vehicle AR-HUD technologies are being actively 
+developed [21]-[24]. In particular, prominent automobile 
+companies are selling high-quality vehicles installed with AR-
+HUD products. However, the current commercially available 
+AR-HUD products all offer information in front of the driver 
+but in a state that does not match the real environment. In 
+addition, simple vehicle information (speed, RPM, and so on) 
+and route information is displayed in a much more visually 
+distracting way than in a head-down display. 
+If such driving-safety information as pedestrian and vehicle 
+information is offered in front of the driver in a state that does 
+not match the real environment, it can interrupt the driver’s 
+concentration, causing confusion. Therefore, it is best that the 
+interface through which driving-safety information is provided 
+appears within the driver’s forward-facing view in a state that 
+matches the real environment. In this respect, since 2010, GM 
+has been conducting research to provide driving-safety 
+information for traffic signs and lanes through an interface that  
+ 
+Fig. 1. Concept map of proposed system. 
+Real world
+See-through display
+<Vehicle detection mode>
+Clear weather 
+Rainy weather
+ 
+ 
+superimposes the data onto the real environment in a position 
+that accommodates the driver’s view [25]. 
+As mentioned above, the proposed method detects the most 
+important vehicle and pedestrian information and provides it to 
+the driver. Many technologies for detecting such information 
+while driving have been previously developed [26]-[32]. 
+In the proposed system, stereo cameras are used to extract 
+more correct distance values and reduce the recognition times. 
+An obstacle on the ground plane is extracted from the visual 
+data from the stereo cameras, and other vehicles and 
+pedestrians are distinguished from the detected obstacle. Then, 
+since the proposed system finds obstacles from the input 
+images using ground detection and the system thereafter 
+extracts the candidate region and finds the driving-safety 
+information only in the extracted region, it can reduce the 
+detection area required as compared to existing methods based 
+on a single camera that detects all areas of the input images. 
+The proposed system is therefore developed to be easily 
+combined with real vehicles by reducing the recognition time. 
+II. In-Vehicle AR-HUD System for Providing Driving-
+Safety Information 
+1. Necessity for Development of AR-HUD for Driving-
+Safety 
+To reduce driving accidents, driving-safety needs to be 
+modeled. Among the various models, one suggested in 
+Australia consists of four factors: safe speed limit, vehicle 
+safety, road-facility safety, and driver safety [33]. 
+The first factor, a safe speed limit, applies to driving safety in 
+that the driver is expected to maintain a safe distance behind 
+the car in front by maintaining a proper vehicle speed. The next 
+factor, vehicle safety, refers to the utilization of mounted 
+devices used to promote accident prevention. The third factor 
+refers to the establishment of safety facilities to reduce 
+accidents at known accident sites or crossways. Finally, the 
+fourth factor refers to ensuring the protection of the driver 
+
+--- Page 3 ---
+1040   Hye Sun Park et al. 
+ETRI Journal, Volume 35, Number 6, December 2013 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+through driver education. 
+To maintain a safe distance behind other vehicles and avoid 
+collisions, the proposed system informs and warns the driver of 
+detected obstacles using various mounted devices, under 
+consideration of the previously mentioned factors. Through this 
+system function, the number of traffic accidents can be 
+significantly reduced. 
+However, most existing devices provide the driver with 
+warning sounds using auditory sensors. In recent years, such 
+devices have offered information through vibrations using the 
+development of a tactile sensor. However, more than 80% of 
+the information is received visually by the driver while driving. 
+In addition, for driver safety, the driver must keep their gaze 
+forward as much as possible. The literature has shown through 
+simple response experiments that reaction times are lowest 
+(fastest) for auditory modality (approximately 150 ms), 
+followed by touch (approximately 155 ms), with visual 
+modality being the slowest (approximately 190 ms). However, 
+the transmission of information through vibrations has a 
+limitation during driving and may actually interfere with the 
+driver. Thus, tactile warning devices can be used only under 
+special and emergency situations according to the context of 
+the information, such as during driver drowsiness. The driver 
+may sometimes ignore the provided information from auditory 
+devices when concentrating on driving. 
+Previously proposed systems are not equipped to accurately 
+recognize the location of a detected obstacle. Regarding 
+obstacles that pose a high threat, it is crucial that location 
+information be available in the driver’s field of view to 
+effectively avoid such obstacles. 
+2. Overview of Proposed System 
+The hardware and software of the proposed system are 
+composed as shown in Fig. 2. Two stereo cameras are mounted 
+on the rearview mirror and receive the frontal images in real 
+time, with a viewing angle of 65 degrees. PC software installed 
+in the vehicle detects other vehicles and pedestrians from the 
+input images, and the detection results are provided to the 
+driver through a see-through display installed in the windshield, 
+fitting the driver’s line of vision. The proposed system detects 
+all vehicles and pedestrians in front of the vehicle and provides 
+the results to the driver. 
+However, future intelligent AR-HUD systems will filter the 
+detected information and offer only the information useful to 
+the driver according to the provision type (modality) and 
+information representation (display) method for easier 
+understanding. Based on the problems mentioned above, 
+current AR-HUD systems should be further developed, 
+considering driver safety. For the purpose of convenience in  
+ 
+Fig. 2. Overview of proposed system. 
+Main S/W controller 
+Main PC/power supply
+Stereo camera 
+Stereo camera
+See-through
+display 
+PC monitor 
+GPS 
+ 
+ 
+this experiment, the proposed system is designed to use a see-
+through display installed in front of the passenger seat, fitting 
+the line of vision of the person in the passenger seat. If the 
+proposed system is developed to completion for the 
+commercial market, the display will instead be installed on the 
+driver’s side. 
+3. System Configuration 
+Figure 3 shows the configuration of the proposed system. 
+The system consists of four modules. Each module is described 
+below along with each submodule. 
+A. Ground Obstacle Detection Module 
+All objects on a road can be potential obstacles. In this 
+system, we first extract all obstacles using their geometric 
+properties. We also classify them into “significant” and “less 
+significant” objects based on the mode selection module, 
+which is triggered under certain circumstances. Significant 
+objects are identified using specialized detectors (that is, 
+vehicle and pedestrian detectors). 
+We use a billboard sweep stereo algorithm to identify 
+obstacles on the ground plane [34]. Unlike many other 
+algorithms that estimate the ground plane after disparity 
+matching, the algorithm determines the ground, obstacles, and 
+background regions, as well as their corresponding slopes and 
+distances, with reliable accuracy. Among the three categories 
+stated above, we use obstacle regions and their disparity values 
+for further processing. To achieve a near real-time performance, 
+we implement the algorithm on a graphics processing unit 
+(GPU) and use input at half resolution. 
+The billboard sweep stereo algorithm consists of two main 
+steps: matching the cost computation and optimization. It  
+
+--- Page 4 ---
+ETRI Journal, Volume 35, Number 6, December 2013 
+Hye Sun Park et al.   1041 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+ 
+Fig. 3. Configuration of proposed system. 
+  
+ 
+ 
+ 
+Vehicle speed
+Route
+Lane types 
+Road attribute 
+Map-based various information 
+Stereo camera 
+Ground obstacle detection module
+Stereo rectification
+Object decision module 
+Object recognition module 
+Object classification 
+ 
+Training 
+DB 
+Recognized 
+results 
+Display module 
+Registration
+Results 
+displaying 
+Calibration 
+Stereo input 
+Pre-computed 
+rectification map 
+Homography-based
+matching cost 
+computation 
+Muti-path line 
+optimization 
+GPS 
+Object (vehicle or pedestrian) 
+determination 
+Decided object’s  
+feature extraction 
+See-through 
+display 
+ 
+utilizes homography-based matching costs using pre-calibrated 
+candidate planes, which represent varying slopes of the ground 
+plane and distances of the billboard planes. For the next step, 
+the algorithm performs multipath line optimization over the 
+cost volume to select the disparity values and slopes as well as 
+the labels. Billboard labels are considered detected obstacles, 
+and the corresponding disparity values are used as the distance 
+to the detected objects. 
+Therefore, the proposed billboard approach is a road-based 
+vehicle detection system. It firstly detects the road geometry 
+and computes the depth of obstacles, including the height from 
+the road plane. In this case, we assume that all obstacles are 
+dangerous. Therefore, we reduce the false positive for vehicle 
+detection.  
+B. Object Decision Module 
+This module selects the detection object using the 
+surrounding environment, such as the vehicle speed or road 
+type in real time. If the system does not need to find other 
+vehicles and pedestrians at the same time, only the selected 
+mode is used. This therefore reduces the computation cost. 
+This module, based on driving-situation cognition, selects and 
+provides the appropriate information. Thus, this module is a 
+dynamic and intelligent module for providing driving-safety 
+information. 
+C. Object (Vehicle/Pedestrian) Recognition Module 
+If a detected object between the vehicle and a pedestrian is 
+determined through context awareness in the previous module, 
+the proposed system should detect the object. For this module, 
+the input images and ground obstacle images are needed for 
+detection. A ground obstacle is computed using the billboard 
+sweep stereo matching algorithm by the ground obstacle 
+detection module [35]. Obstacles are deemed dangerous 
+according to height. Therefore, we can recognize the partial 
+obstacles using the billboard sweep stereo matching algorithm 
+even if the detection fails. The vehicle and pedestrian 
+recognition module consists of three steps: 1) candidate region 
+detection, 2) GPU-based histograms of oriented gradients 
+(HOG) extraction, and 3) support vector machine (SVM) 
+training and classification. 
+First, we generate the hypothesis using the edge-based 
+segmentation algorithm. In the edge-based segmentation 
+algorithm, we first perform canny edge detection and find the 
+horizontal and vertical lines through a variance of intensity 
+from the edge image using a generalized projection function 
+[36]. After we make the cell region using the detected lines, we 
+extract the candidate regions based on the average disparity for 
+each segmented cell. In this step, the extracted region is a 
+candidate location for a vehicle or pedestrian. 
+Next, we extract the HOG features for the detected candidate 
+region. An HOG feature is used as the main feature to detect 
+other vehicles and pedestrians. In this step, we use GPU 
+acceleration to extract the feature descriptor in real time. In 
+general, HOG feature extraction consumes a lot of execution 
+time in its computation. Therefore, we use a GPU to improve 
+the speed of HOG feature extraction for vehicle and pedestrian  
+
+--- Page 5 ---
+1042   Hye Sun Park et al. 
+ETRI Journal, Volume 35, Number 6, December 2013 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+ 
+ 
+ 
+Fig. 4. Object recognition module. 
+ 
+GPU-based HOG extraction
+Input data 
+ 
+ 
+ 
+SVM classification
+Training data
+Vehicle  
+classifier 
+Pedestrian 
+classifier 
+ 
+Vehicle detection 
+ 
+Pedestrian detection 
+Input image 
+Ground obstacles 
+Ground obstacles 
+Input image 
+Detected vehicle 
+Ground  
+obstacle detection 
+Other obstacles 
+Detected pedestrian 
+Other obstacles 
+Segmented cells
+Candidates
+Candidate region detection
+ 
+detection. 
+Finally, we perform a hypothesis verification using two types 
+of linear SVM classifiers [37], [38]. The two types of linear 
+SVM classifiers are chosen based on the selected mode of the 
+previous module. The proposed system performs recognition 
+for the detected candidate region using the selected classifier. If 
+the recognition is complete, we determine and display the 
+vehicle or pedestrian region. Each linear SVM classifier is 
+learned using training data composed of positive and negative 
+data before the system is performed.  
+Figure 4 shows the process of the vehicle and pedestrian 
+recognition module. In Fig. 4, we illustrate the detected regions 
+and non-detected obstacle regions. 
+The proposed method uses the two steps of hypothesis 
+generation and hypothesis verification. The method cannot 
+increase the processing time. First, we perform the depth 
+grouping using a connected component labeling algorithm to 
+reduce the computational region in the hypothesis generation 
+step. Next, we perform the fast classification using a simple 
+linear SVM method in hypothesis verification. Furthermore, 
+we perform the tracking and cannot perform the hypothesis 
+verification for detected regions by tracking in the next frame. 
+Therefore, the proposed method is not affected even if the 
+number of candidates is increased. 
+D. Display Module 
+The system receives the location values (x, y coordinates) of 
+pedestrians or vehicles and their distance values, which were 
+detected from the previous modules through a TCP/IP socket. 
+It also shows the vehicle and pedestrian information detected 
+from the input values in the form of a square box, fitting the 
+view of the driver. 
+To make the information correctly match the real 
+environment according to the variations in the driver’s view, 
+this system needs to use a rigorous approach [39] to present the 
+pedestrian or vehicle information in a 3D space onto an HUD 
+display through 3D rendering. For this, the position and eye 
+location of the driver should be calculated exactly.  
+However, while this method is accurate, the calculations are 
+complex. Therefore, the system adopts an approximation 
+method [39] with minimum complexity and can match and 
+present the information in real time. The method only conducts 
+geometric modeling between the 2D image of a camera and a 
+2D HUD machine on the assumption that the position and 
+view of the driver are fixed toward the front. Since this system 
+converts a 2D image into an HUD plane, it is therefore carried 
+out in a projective transformation (2D homography) calculated 
+by (1): 
+
+--- Page 6 ---
+ETRI Journal, Volume 35, Number 6, December 2013 
+Hye Sun Park et al.   1043 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+11
+c
+12
+c
+13
+h
+31
+c
+32
+c
+33
+21
+c
+22
+c
+23
+h
+31
+c
+32
+c
+33
+,
+,
+h x
+h y
+h
+x
+h x
+h y
+h
+h x
+h y
+h
+y
+h x
+h y
+h
+
+
+
+
+
+
+
+
+
+
+           (1) 
+where, xc, yc are the image coordinates in the camera and xh, yh 
+are the image coordinates in the HUD. Additionally, h11 
+through h33 are projective transformation parameters, each of 
+which has eight degrees of freedom. To calculate the projective 
+transformation parameter, it is necessary to specify more than 
+four point correspondences. In general, an automatic matching 
+method, such as SIFT or SURF, is used to correspond feature 
+point pairs. However, we manually extract the corresponding 
+points between the camera image and the HUD image in the 
+proposed system. To determine the projective transformation 
+parameter given a set of 2D to 2D point correspondences 
+between camera and HUD, we use the direct linear 
+transformation (DLT) algorithm; then, we assume the 
+parameters follow to affine transformation. Thus, the DLT 
+algorithm is easily adapted to enforce the condition by setting 
+h31=h32=0 and h33=1. To estimate the remaining h values, (1) is 
+translated into (2), and (3) is then extracted using a least 
+squares method. 
+21
+11
+12
+13
+h
+c
+c
+h
+h
+c
+c
+c
+c
+h
+c
+h
+22
+23
+31
+3
+c
+h
+2
+0
+0
+0
+1
+,
+1
+0
+0
+0
+h
+h
+h
+h
+x x
+y x
+x
+x
+y
+x
+y
+y x
+y y
+y
+h
+h
+h
+h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+r
+(2) 
+where 
+
+
+11
+12
+13
+21
+22,
+23
+31
+32
+,
+,
+,
+,
+,
+,
+,
+,
+H
+h
+h
+h
+h
+h
+h
+h
+h
+
+a coefficient 
+matrix of H is defined by A, and r is a residual vector. 
+
+
+1
+h
+h
+.
+T
+T
+x
+H
+A
+A
+A
+y
+
+
+
+
+
+
+
+
+
+
+
+
+
+           (3) 
+III. Experiments 
+1. Experimental Environments 
+For vehicle recognition, we perform an experiment in which 
+a vehicle equipped with the proposed system drives at a speed 
+of 70 km/h to 80 km/h in more than two lanes, and detects 
+other vehicles within 40 m to 45 m of its radius. For the 
+pedestrian recognition, we perform an experiment in which a 
+vehicle equipped with the proposed system drives at a speed of  
+ 
+Fig. 5. Example of display used in proposed detection results of 
+(a) other vehicles and (b) pedestrians. 
+(a) 
+(b) 
+ 
+ 
+less than 30 km/h along a narrow road in a residential district 
+and detects pedestrians within a range of around 30 m of its 
+radius. The cameras used for this experiment are GS2-FW-
+14S5 models from the Point Grey Research Company, which 
+are 8 mm cameras with a resolution of 1038 × 1036 and can 
+obtain an image at a speed of 30 fps. In addition, we use IEEE 
+1394b for the interface. 
+We use a 22-inch transparent Samsung LCD display with a 
+transparency of 15%. Figure 5 shows the images of the 
+vehicles and pedestrians detected through the proposed system 
+on the display. 
+2. Experiment Results 
+The recognition ratio [40] and recognition speed [41] of this 
+system are calculated using (4) and (5). 
+
+
+
+
+true positive
+Recognition rate %
+,
+true positive+false positive
+
+(4) 
+
+
+tickfrequency
+fps
+.
+end tickcount-start tickcount
+
+      (5) 
+The results of the vehicle recognition are shown in Table 1. The 
+experiment is conducted in various experimental environments, 
+as shown in Fig. 6.  
+During vehicle recognition, we comparatively analyze the 
+system using two road types: urban road and highway. An  
+
+--- Page 7 ---
+1044   Hye Sun Park et al. 
+ETRI Journal, Volume 35, Number 6, December 2013 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+Table 1. Vehicle recognition results. 
+Vehicle 
+Urban road 
+Highway 
+Highway in rain 
+Recognition rate (%) 
+72.86 
+82.17 
+61.50 
+Performance (fps) 
+13.97 
+15.21 
+15.60 
+ 
+ 
+ 
+Fig. 6. Vehicle recognition results for (a) urban road, (b) highway,
+and (c) highway in rain. Pedestrian recognition results for
+(d) downtown street, (e) residential street, and (f) urban
+road. 
+(a) 
+(b) 
+(c) 
+(d) 
+(e) 
+(f) 
+ 
+ 
+urban road is a general road with cars and people walking on a 
+sidewalk or crossing through a crosswalk. A highway is usually 
+a vehicle-only road. In the case of the highway, we conduct a 
+comparative analysis according to the weather conditions. The 
+proposed method performs the vision-based forward obstacle 
+detection. It performs the alert and notifies the warning for 
+collision information. The vision-based method cannot 
+generally detect the obstacles in severe weather. However, we 
+perform the experiments to measure the robustness of the 
+proposed method in rainy weather. Table 1 shows the results of 
+the vehicle recognition experiments in sunny and rainy weather. 
+The system is more robust on the highway than on the urban 
+road. The reason for this is that the surrounding environment is 
+more complex on an urban road. In addition, because the 
+wipers are automatically turned on when raindrops hit the 
+windshield, the recognition rate is lower than on sunny days. 
+In pedestrian recognition, we comparatively analyze the 
+system using three road types: downtown street, residential 
+street, and urban road. A downtown street is a city street with 
+cars and people. On such roads, people walk together in groups, 
+and the recognition rate is therefore slightly lower. A residential 
+street indicates a pedestrian-oriented road or a road with a 
+school or similar type of building. On residential streets, 
+pedestrians usually do not walk together, and the highest 
+recognition rates are therefore achieved in comparison with 
+other roads. Finally, an urban road is the same type of road as 
+the above-mentioned urban road used for vehicle recognition. 
+Table 2. Pedestrian recognition results. 
+Pedestrian 
+Downtown street Residential street 
+Urban road 
+Recognition rate (%)
+73.48 
+81.80 
+68.21 
+Performance (fps)
+14.03 
+16.71 
+14.60 
+ 
+ 
+ 
+Fig. 7. Training dataset for recognition in proposed system: (a)
+positive and (b) negative data for training vehicle data. 
+(a) 
+(b) 
+ 
+In such roads, the driver’s view of the pedestrian may be 
+obscured by the vehicle in front of the driver because 
+pedestrians mainly exist along the side of the road. Therefore, 
+the recognition rate for such roads is the lowest. Table 2 shows 
+the results of the pedestrian recognition experiments. The 
+system is more robust on a residential street than on the other 
+types of road because the background environment is simpler 
+and it is less likely that people walk in groups.  
+Figure 7 shows the images used in the learning data for the 
+vehicle recognition module. A total of 217 images are used as 
+positive data, and 410 images are used as negative data. The 
+learning data used in the pedestrian recognition module is from 
+the INRIA person dataset, with 2,416 images used as positive 
+data and 12,180 images used as negative data. 
+IV. Conclusion 
+The proposed system, in which an HUD system is combined 
+in a vehicle with AR technology, matches augmented driving-
+safety information with the information on other vehicles and 
+pedestrians in the real world and offers the information to the 
+driver in real time through a transparent display installed in 
+front of the driver, fitting the driver’s view.  
+
+--- Page 8 ---
+ETRI Journal, Volume 35, Number 6, December 2013 
+Hye Sun Park et al.   1045 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+The proposed method seeks out the ground from the images 
+input from stereo cameras and detects the foreground region by 
+removing the ground from the image. Within the detected 
+foreground region, the system then detects pedestrians and 
+vehicles based on their feature points, learns and classifies the 
+detected objects through an SVM, and recognizes the vehicles 
+and pedestrians from the input images in real time. In this paper, 
+we proposed an obstacle detection method based on the road 
+geometry. The method reduces the false positive better than 
+other detection methods do because we can detect partial 
+obstacles using the billboard sweep stereo algorithm. 
+Furthermore, we use a GPU acceleration to improve the 
+performance of the proposed system. When we tested the 
+system on actual roads, we achieved a 72% recognition rate 
+regarding other vehicles and a 74% recognition rate regarding 
+pedestrians. To increase the recognition rate of the proposed 
+system, we need to collect more data by changing the 
+illumination, vehicle speeds, and other environmental 
+conditions. 
+The proposed system can perform real-time obstacle 
+detection in sunny or rainy weather. However, it has not been 
+verified that the proposed system can likewise perform in 
+severe weather or in the nighttime. Therefore, we will extend 
+the obstacle detection to work in invisible environments 
+through a fusion of night vision technology and radar sensors.  
+In addition, this proposed system detects all pedestrians and 
+vehicles from the input images within a certain camera range. 
+Sometimes, driver distraction is caused by oversaturation of 
+information. Therefore, a future system is needed to filter the 
+input information and obtain only the information that can help 
+protect the driver from accidents. For example, a pedestrian 
+who crosses the road or makes a sudden movement toward the 
+vehicle would rate high on a scale of danger, whereas a 
+pedestrian simply walking in the same direction as the moving 
+vehicle would rate low on a scale of danger. Thus, a system 
+developed in the future must be able to anticipate such dangers 
+based on a model that can predict the movements of 
+pedestrians and offer such driving-safety information to the 
+driver adaptively, according to the level of risk. 
+References 
+[1] S.H. Lee, J. Choi, and J. Park, “Interactive e-Learning System 
+Using Pattern Recognition and Augmented Reality,” IEEE Trans. 
+Consum. Electron., vol. 55, no. 2, May 2009, pp. 883-890. 
+[2] B. Choi et al., “A Metadata Design for Augmented Broadcasting 
+and Testbed System Implementation,” ETRI J., vol. 35, no. 2, Apr. 
+2013, pp. 292-300. 
+[3] N. Parimal et al., “Application of Sensors in Augmented Reality 
+Based Interactive Learning Environments,” IEEE Int. Conf. ICST, 
+Dec. 2012, pp. 173-178. 
+[4] 
+M.A. 
+Oikawa 
+et 
+al., 
+“AR-Based 
+Video-Mediated 
+Communication: A Social Presence Enhancing Experience,” 14th 
+Int. Symp. VR, May. 2012, pp. 125-130. 
+[5] Y.M. Aung and A. Al-Jumaily, “AR Based Upper Limb 
+Rehabilitation System,” IEEE Int. Conf. BioRob., June 2012, pp. 
+213-218. 
+[6] T. Zysk, J. Luce, and J. Cunningham, “Augmented Reality for 
+Precision Navigation,” GPS World Mag., vol. 23, issue 6, June 
+2012, pp. 47-51. 
+[7] H. Chen et al., “Application of Augmented Reality in Engineering 
+Graphics Education,” IEEE Int. Symp. ITME 2, art. no. 6132125, 
+Dec. 2011, pp. 362-365. 
+[8] Y.C. Cheng et al., “AR-Based Positioning for Mobile Devices,” 
+Int. Conf. Parallel Process., no. 6047276, Sept. 2011, pp. 63-70. 
+[9] J.J. Mccorvey, “Using Augmented Reality to Market Your 
+Business,” Inc., Apr. 2010. http://www.inc.com/magazine/ 
+20100401/using-augmented-reality-to-market-your-business.html 
+[10] Siemens, “From Sedans to Compact Cars — One HUD Fits All,” 
+press photo, reference no. 200605004, Siemens AG, Munich, 
+Germany, 2006. http://www.siemens.com/press/en/presspicture/? 
+press=/en/pp_sv/2006/sv200605004_(hud)_1376467.htm 
+[11] J. Lincoln, D. Lincoln, and M. Carmean, How a Laser HUD Can 
+Make Driving Safer, MicroVision Program Brief, MicroVision, 
+Inc., Mar. 2007. 
+[12] R. Parasuraman, R. Molloy, and I.L. Singh, “Performance 
+Consequences of Automation-Induced Complacency,” Int. J. 
+Aviation Psychology, vol. 3, no. 1, 1993, pp. 1-23. 
+[13] NHTSA, Measuring Distraction Potential of Operating In-Vehicle 
+Devices, no. DOT-HS-811-231, Dec. 2008. 
+[14] S.C. Lee, “Psychological Effects on Aged Driver’s Traffic 
+Accidents,” Korea J. Psychological Soc. Issues, vol. 12, 2006, pp. 
+149-167. 
+[15] Y. Zhang, Y. Owechko, and J. Zhang, “Learning-Based Driver 
+Workload Estimation,” Comput. Intell. Automobile Appl., Ser. 
+Studies Comput. Intell., vol. 132, 2008, pp. 1-24. 
+[16] E.R. Michael, J.G. Leo, and J.W. Nicholas, “Effects of Naturalistic 
+Cell Phone Conversations on Driving Performance,” Int. J. Safety 
+Research, vol. 35, 2004, pp. 453-464. 
+[17] E. Adella, A. Varhely, and M. Fontana, “The Effects of a Driver 
+Assistance System for Safe Speed and Safe Distance: A Real-Life 
+Field Study,” Int. J. Transp. Research Part C 19, 2011, pp. 145-
+155. 
+[18] E. Johan, J. Emma, and O. Joakim, “Effects of Visual and 
+Cognitive Load in Real and Simulated Motorway Driving,” Int. J. 
+Transp. Research Part F, vol. 8, 2005, pp. 97-120. 
+[19] R. Venkatasawmy, The Digitization of Cinematic Visual Effects: 
+Hollywood’s Coming of Age, UK: Press Lexington Books, 2013. 
+[20] A.S. Cohen and R. Hirsig, Feed Forward Programming of Car 
+Driver’s Eye Movement Behavior: A System Theoretical 
+
+--- Page 9 ---
+1046   Hye Sun Park et al. 
+ETRI Journal, Volume 35, Number 6, December 2013 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+Approach, final technical report, vol. 2, 1980, pp. 1-223. 
+[21] V. Charissis and S. Papanastasiou, “Human-Machine 
+Collaboration through Vehicle Head Up Display Interface,” Int. J. 
+Cognition, Technol., Work, vol. 12, no. 1, 2010, pp. 41-50. 
+[22] Y.C. Shinko, D. Anup, and M.T. Mohan, “Active Heads-up 
+Display Based Speed Compliance Aid for Driver Assistance: A 
+Novel Interface and Comparative Experimental Studies,” IEEE 
+Int. Symp. IV, 2007, pp. 594-599. 
+[23] A. Sato et al., “Visual Navigation System on Windshield Head-Up 
+Display,” Proc. 13th World Congress ITS, 2006, pp. 167-175. 
+[24] H. Watanabe et al., “The Effect of HUD Warning Location on 
+Driver Responses,” Proc. 6th World Congress ITS, 1999, pp. 1-10. 
+[25] C. Jablonski, “An Augmented Reality Windshield from GM,” 
+Mar. 
+2010. 
+http://www.zdnet.com/blog/emergingtech/an-
+augmented-reality-windshield-from-gm/2164 
+[26] V. Poortere et al., “Efficient Pedestrian Detection: A Test Case for 
+SVM Based Categorization,” Proc. ICVW, Sept. 2002, pp. 19-20. 
+[27] D.M. Gavrila and V. Philomin, “Real-Time Object Detection for 
+Smart Vehicles,” IEEE Int. Conf. CVPR, 1999, pp. 87-93. 
+[28] S. Hermann and R. Klette, “Iterative Semi-Global Matching for 
+Robust Driver Assistance Systems,” Int. Conf. ACCV, vol. 7726, 
+2012, pp. 456-478. 
+[29] H. Hattori et al., “Stereo-Based Pedestrian Detection Using 
+Multiple Patterns,” Int. Conf. BMVC, 2009, pp. 1-10. 
+[30] M. Bajracharya et al., “A Fast Stereo-Based System for Detecting 
+and Tracking Pedestrians from a Moving Vehicle,” Int. J. 
+Robotics Research, vol. 28, 2009, pp. 1466-1485. 
+[31] A. Shashua, Y. Gdalyahu, and G. Hayun, “Pedestrian Detection for 
+Driving Assistance Systems: Single-Frame Classification and 
+System Level Performance,” IEEE Int. Symp. IV, 2004, pp. 1-6. 
+[32] S. Munder and D.M. Gavrila, “An Experimental Study on 
+Pedestrian Classification,” IEEE Trans. Pattern Anal. Mach. 
+Intell., vol. 28, no. 11, 2006, pp. 1863-1868. 
+[33] Australian Transport Council, The National Road Safety Strategy 
+2011-2020, 2011, pp. 1-108. 
+[34] K.H. Won and S.K. Jung, “Billboard Sweep Stereo for Obstacle 
+Detection in Road Scenes,” Int. J. IET, vol. 48, issue 24, Nov. 
+2012, pp. 1528 -1530. 
+[35] M.W. Park, K.H. Won, and S.K. Jung, “Vehicle Detection and 
+Tracking Using Billboard Sweep Stereo Matching Algorithm,” 
+Korea J. KMMS, vol. 16, no. 6, 2013, pp. 764-781.  
+[36] Z.H. Zhou and X. Geng, “Projection Functions for Eye 
+Detection,” Int. J. Pattern Recognition, vol. 37, no. 5, 2004, pp. 
+1049-1056. 
+[37] C. Cortes and V. Vapnik, “Support-Vector Networks,” Int. J. Mach. 
+Learning, vol. 20, no. 3, 1995, pp. 273-297. 
+[38] T. Joachims, “Making Large-Scale SVM Learning Practical,” 
+Advances in Kernel Methods — Support Vector Learning, B. 
+Schölkopf, C. Burges, and A. Smola, Eds., Cambridge, MA: MIT 
+Press, 1999. 
+[39] K.A. Paul and H. Ayman, “A Comparative Analysis between 
+Rigorous and Approximate Approaches for LiDAR System 
+Calibration,” Korea J. KSGPC, vol. 30, no. 6, 2012, pp. 593-605. 
+[40] Wikipedia, Precision and recall. http://en.wikipedia.org/wiki/ 
+Precision_and_recall 
+[41] Gamedev.net, Calculate framerate with GetTickCount function. 
+http://www.gamedev.net/topic/621703-calculate-framerate-with-
+gettickcount/ 
+ 
+ 
+Hye Sun Park has been a senior engineer of  
+the Human-Vehicle Interaction Research Center 
+at ETRI, Daejeon, Rep. of Korea, since 
+December 2009. She received her Ph.D. from 
+the School of Electrical Engineering and 
+Computer Science at Kyungpook National 
+University in 2007, where she was a member of 
+the Artificial Intelligence Lab. She was selected as a delegate from 
+Korea for the 2nd China-Japan-Korea Young Researchers Workshop 
+(five members in IT). She also received the JSPS (Japan Society for the 
+Promotion of Science) during her studies as a postdoctoral fellow at 
+Kyoto University, Japan. In addition, she was a cooperative overseas 
+researcher at Kyoto University during her master’s and doctoral studies 
+with support from BK21 (Brain Korea 21) and NRF (National 
+Research Foundation of Korea). Her research areas include computer 
+vision and HCI (human-computer interaction). 
+ 
+Min Woo Park is currently a Ph.D candidate in 
+the Virtual Reality Lab. at Kyungpook National 
+University. His research topic is image 
+registration and safety systems for intelligent 
+vehicles. He received his B.S degree in computer 
+engineering from Dongguk University in 2005 
+and his M.S degree in computer engineering 
+from Kyungpook National University in 2007. 
+ 
+Kwang Hee Won received his B.S., M.S., and 
+Ph.D. degrees in computer engineering from 
+Kyungpook National University, Rep. of Korea. 
+He is currently a postdoctoral fellow in the 
+School of Computer Science and Engineering at 
+Kyungpook National University. His research 
+interests include stereo image processing, object 
+detection from 2D images, and 3D point clouds. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 10 ---
+ETRI Journal, Volume 35, Number 6, December 2013 
+Hye Sun Park et al.   1047 
+http://dx.doi.org/10.4218/etrij.13.2013.0041 
+Kyong-Ho Kim is a principal researcher and the 
+director of the Human-Vehicle Interaction 
+Research Center at ETRI, Daejeon, Rep. of 
+Korea. He received his B.S. and M.S. degrees in 
+electronics 
+engineering 
+from 
+Kyungpook 
+National University, Rep. of Korea, in 1993 and 
+1995, respectively, and his Ph.D. degree in 
+computer science from KAIST, Rep. of Korea, in 2010. Since 1994, he 
+has been with ETRI. His current research topics include intelligent 
+vehicles, human-computer interaction, head-up display, and augmented 
+reality applications in the vehicle. 
+ 
+Soon Ki Jung is a professor in the School of 
+Computer 
+Science 
+and 
+Engineering 
+at 
+Kyungpook National University, Daegu, Rep. of 
+Korea. He received his Ph.D. degree from the 
+Korea Advanced Institute of Science and 
+Technology, Rep. of Korea, in 1997. His research 
+areas include computer vision, computer graphics, 
+and virtual reality. 

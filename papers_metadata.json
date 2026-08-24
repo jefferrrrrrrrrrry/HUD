@@ -1,0 +1,2407 @@
+[
+  {
+    "idx": 1,
+    "doi": "10.1109/tvcg.2018.2793680",
+    "title": "Driver Behavior and Performance with Augmented Reality Pedestrian Collision Warning: An Outdoor User Study",
+    "year": 2018,
+    "authors": [
+      "Hyungil Kim",
+      "Joseph L. Gabbard",
+      "Alexandre Miranda Añon",
+      "Teruhisa Misu"
+    ],
+    "venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/tvcg.2018.2793680",
+    "abstract": "This article investigates the effects of visual warning presentation methods on human performance in augmented reality (AR) driving. An experimental user study was conducted in a parking lot where participants drove a test vehicle while braking for any cross traffic with assistance from AR visual warnings presented on a monoscopic and volumetric head-up display (HUD). Results showed that monoscopic displays can be as effective as volumetric displays for human performance in AR braking tasks. The experiment also demonstrated the benefits of conformal graphics, which are tightly integrated into the real world, such as their ability to guide drivers' attention and their positive consequences on driver behavior and performance. These findings suggest that conformal graphics presented via monoscopic HUDs can enhance driver performance by leveraging the effectiveness of monocular depth cues. The proposed approaches and methods can be used and further developed by future researchers and practitioners to better understand driver performance in AR as well as inform usability evaluation of future automotive AR applications.",
+    "cited_by": 69,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://vtechworks.lib.vt.edu/bitstream/handle/10919/88886/Kim_H_D_2017.pdf?sequence=1&isAllowed=y"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/01_2018_Driver_Behavior_and_Performance_with_Augmented_Reality_Pedestrian_Collision.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/01_2018_Driver_Behavior_and_Performance_with_Augmented_Reality_Pedestrian_Collision.txt"
+  },
+  {
+    "idx": 2,
+    "doi": "10.1109/itsc.2016.7795724",
+    "title": "Enhancing the driver awareness of pedestrian using augmented reality cues",
+    "year": 2016,
+    "authors": [
+      "Minh Tien Phan",
+      "Indira Thouvenin",
+      "Vincent Frémont"
+    ],
+    "venue": null,
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc.2016.7795724",
+    "abstract": "Pedestrian accident is a serious problem for the society. Pedestrian Collision Warning Systems (PCWS) are proposed to detect the presence of pedestrians and to warn the driver about the potential dangers. However, their interfaces associated with ambiguous alerts can distract drivers and create more dangers. On the other hand, Augmented Reality (AR) with Head-Up Display (HUD) interfaces have recently attracted the attention in the field of automotive research as they can maintain driver's gaze on the road. In this paper, we design a new PCWS with the AR cues and propose an experimental to evaluate the AR cues by assessing the driver's awareness of a pedestrian. At this stage, a fixed-based driving simulator is used for the study. Twenty five healthy middle-aged licensed drivers participate in the experiment. A car following task is proposed as the main driving task. Three levels of the driver's awareness of a pedestrian: the perception level, the vigilance level and the anticipation level are assessed through the observable outcomes. The results show that the proposed AR cues can enhance the driver's awareness of a pedestrian in all the three levels.",
+    "cited_by": 36,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://hal.science/hal-01398344v1/document"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/02_2016_Enhancing_the_driver_awareness_of_pedestrian_using_augmented_reality_cues.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/02_2016_Enhancing_the_driver_awareness_of_pedestrian_using_augmented_reality_cues.txt"
+  },
+  {
+    "idx": 3,
+    "doi": "10.1109/vr.2016.7504725",
+    "title": "Casting shadows: Ecological interface design for augmented reality pedestrian collision warning",
+    "year": 2016,
+    "authors": [
+      "Hyungil Kim",
+      "Jessica D. Isleib",
+      "Joseph L. Gabbard"
+    ],
+    "venue": null,
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/vr.2016.7504725",
+    "abstract": "Ecological interface design (EID) has the opportunity to complement current approaches for augmented reality (AR) interface design by considering human-environment interaction and leveraging the inherent benefit of AR interfaces: conformal graphics. This work applies EID to design a novel interface for pedestrian collision warning for an automotive AR head-up display (HUD). Our initial usability evaluation shows potential benefits of incorporating EID into AR interface design.",
+    "cited_by": 4,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://vtechworks.lib.vt.edu/bitstream/handle/10919/88886/Kim_H_D_2017.pdf?sequence=1&isAllowed=y"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/03_2016_Casting_shadows__Ecological_interface_design_for_augmented_reality_pedestri.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/03_2016_Casting_shadows__Ecological_interface_design_for_augmented_reality_pedestri.txt"
+  },
+  {
+    "idx": 4,
+    "doi": "10.1177/1541931213601474",
+    "title": "Virtual Shadow",
+    "year": 2016,
+    "authors": [
+      "Hyungil Kim",
+      "Jessica D. Isleib",
+      "Joseph L. Gabbard"
+    ],
+    "venue": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1177/1541931213601474",
+    "abstract": "Most obvious benefit of augmented reality (AR) displays is direct perception of information atop physical reality. In driving context, however, AR interfaces should be designed carefully to guide drivers’ attention while minimizing attentional narrowing. This work aims to design an interface for cross traffic alert using an AR head up display (HUD) that is compatible with both the driver’s cognitive process and physical reality of driving environment. Ecological interface design (EID) allowed us to complement current user centered design (UCD) approaches by considering human-environment interaction and leveraging the inherent benefit of AR interfaces: conformal graphics. We designed a novel interface that casts virtual shadows of approaching obstacles through an AR HUD and prototyped this idea for a specific use-case of pedestrian collision warning. Our initial usability evaluation demonstrated potential benefits of incorporating EID into AR interface design. The approaches and design idea from this study can be leveraged by future researchers and designers to create more reliable and safer AR interfaces for vehicle drivers.",
+    "cited_by": 27,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://www.ergofoundation.org/images/VirginiaTech-Kim.pdf",
+      "https://www.researchgate.net/profile/Hyungil-Kim-3/publication/308404636_Ecological_Interface_Design_for_Augmented_Reality_Pedestrian_Collision_Warning_HFES2016_Kim_20Sep2016/links/57e2fc0f08ae0e3158a6b96f/Ecological-Interface-Design-for-Augmented-Reality-Pedestrian-Collision-Warning-HFES2016-Kim-20Sep2016.pdf"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/04_2016_Virtual_Shadow.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/04_2016_Virtual_Shadow.txt"
+  },
+  {
+    "idx": 5,
+    "doi": "10.1109/itsc.2014.6958054",
+    "title": "Development of augmented forward collision warning system for Head-Up Display",
+    "year": 2014,
+    "authors": [
+      "Changrak Yoon",
+      "Kyong-Ho Kim",
+      "Hye Sun Park",
+      "Min Woo Park",
+      "Soon Ki Jung"
+    ],
+    "venue": null,
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc.2014.6958054",
+    "abstract": "In this paper, we present an augmented forward collision warning system for Head-Up Display (HUD). The convergence of HUD and Augmented Reality (AR) needs challenge and make innovative application in automobile industry. We focus on an advance of Forward Collision Warning System (FCWS) by the fusion of HUD and AR. The proposed system detects the frontal vehicles and pedestrians, assesses the imminent danger caused by the detected results, and alerts the augmented warnings to support safe driving practices.",
+    "cited_by": 8,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/05_2014_Development_of_augmented_forward_collision_warning_system_for_Head-Up_Display.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/05_2014_Development_of_augmented_forward_collision_warning_system_for_Head-Up_Display.txt"
+  },
+  {
+    "idx": 6,
+    "doi": "10.3390/s24248010",
+    "title": "Design and Evaluation of Ecological Interface of Driving Warning System Based on AR-HUD",
+    "year": 2024,
+    "authors": [
+      "Jun Ma",
+      "Yuhui Li",
+      "Yuanyang Zuo"
+    ],
+    "venue": "Sensors",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/1424-8220/24/24/8010/pdf?version=1734253890",
+    "landing": "https://doi.org/10.3390/s24248010",
+    "abstract": "As the global traffic environment becomes increasingly complex, driving safety issues have become more prominent, making manual-response driving warning systems (DWSs) essential. Augmented reality head-up display (AR-HUD) technology can project information directly, enhancing driver attention; however, improper design may increase cognitive load and affect safety. Thus, the design of AR-HUD driving warning interfaces must focus on improving attention and reducing cognitive load. Currently, systematic research on AR-HUD DWS interfaces is relatively scarce. This paper proposes an ecological interface cognitive balance design strategy for AR-HUD DWS based on cognitive load theory and environmental interface design theory. The research includes developing design models, an integrative framework, and experimental validation suitable for warning scenarios. Research results indicate that the proposed design effectively reduces cognitive load and significantly decreases driver response and comprehension times, outperforming existing interfaces. This design strategy and framework possess promotional value, providing theoretical references and methodological guidance for AR-HUD warning interface research.",
+    "cited_by": 11,
+    "alt_oa_urls": [
+      "https://europepmc.org/articles/PMC11679450?pdf=render",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11679450/pdf/sensors-24-08010.pdf",
+      "https://www.mdpi.com/1424-8220/24/24/8010/pdf?version=1734253890"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/06_2024_Design_and_Evaluation_of_Ecological_Interface_of_Driving_Warning_System_Based_on.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/06_2024_Design_and_Evaluation_of_Ecological_Interface_of_Driving_Warning_System_Based_on.txt"
+  },
+  {
+    "idx": 7,
+    "doi": "10.1080/10447318.2024.2327197",
+    "title": "Evaluating the Effectiveness of Contact-Analog and Bounding Box Prototypes in Augmented Reality Head-Up Display Warning for Chinese Novice Drivers Under Various Collision Types and Traffic Density",
+    "year": 2024,
+    "authors": [
+      "Wanting Chen",
+      "Liuqiucheng Niu",
+      "Shan Liu",
+      "Shu Ma",
+      "Hongting Li",
+      "Zhen Yang"
+    ],
+    "venue": "International Journal of Human-Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2024.2327197",
+    "abstract": "Augmented Reality Head-Up Display (AR-HUD) is a promising solution to the current warning system distraction problem. However, how to effectively convey warnings through AR graphics is still unclear. This study examines the effectiveness of the contact-analog graphic compared to the bounding box graphic in various collision types and traffic densities. Forty-eight participants watched AR-augmented driving videos and were instructed to respond to critical events. Reaction time, response rate, and subjective evaluations were compared for rear-end and pedestrian collisions in different traffic densities under different warnings. Both bounding box and contact-analog warnings improved driving performance compared to the non-warning group. The contact-analog warning performed better for rear-end collisions, while the bounding box warning had a lower reaction time for pedestrian collisions, regardless of traffic density.",
+    "cited_by": 6,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://www.tandfonline.com/doi/pdf/10.1080/10447318.2024.2327197"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/07-Chen 等 - 2025 - Evaluating the effectiveness of contact-analog and bounding box prototypes in augmented reality head.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/07-Chen 等 - 2025 - Evaluating the effectiveness of contact-analog and bounding box prototypes in augmented reality head.txt"
+  },
+  {
+    "idx": 8,
+    "doi": "10.3390/su16219167",
+    "title": "Comparative Analysis of AR-HUDs Crash Warning Icon Designs: An Eye-Tracking Study Using 360° Panoramic Driving Simulation",
+    "year": 2024,
+    "authors": [
+      "Zhendong Wu",
+      "Ying Liang",
+      "Guocui Liu",
+      "Xiaoqun Ai"
+    ],
+    "venue": "Sustainability",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2071-1050/16/21/9167/pdf",
+    "landing": "https://doi.org/10.3390/su16219167",
+    "abstract": "Augmented Reality Head-Up Displays (AR-HUDs) enhance driver perception and safety, yet optimal hazard warning design remains unclear. This study examines three AR-HUD crash warning icon types (BD, BR, BW) across various turning scenarios. Using a 360-degree video-based driving simulation with 36 participants, eye-tracking metrics were collected. Results show BW icons, dynamically linked to hazards, significantly improve drivers’ pedestrian risk awareness and visual attention allocation compared to BD and BR systems. BW consistently demonstrated longer gaze duration, higher fixation counts, and shorter time to first fixation across all turns. BD and BR icons were more susceptible to lane changes, potentially diverting attention from hazards. Findings suggest prioritizing dynamic tracking warning icons over fixed-position alternatives to minimize visual competition and distraction, providing crucial insights for AR-HUD optimization in automated vehicles.",
+    "cited_by": 7,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2071-1050/16/21/9167/pdf"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2071-1050/16/21/9167/pdf"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/08-sustainability-16-09167.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/08_2024_Comparative_Analysis_of_AR-HUDs_Crash_Warning_Icon_Designs_An_Eye-Tracking_Study.txt"
+  },
+  {
+    "idx": 9,
+    "doi": "10.3390/electronics14234768",
+    "title": "Spatial Plane Positioning of AR-HUD Graphics: Implications for Driver Inattentional Blindness in Navigation and Collision Warning Scenarios",
+    "year": 2025,
+    "authors": [
+      "M. H. Ye",
+      "Jun Yin"
+    ],
+    "venue": "Electronics",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2079-9292/14/23/4768/pdf?version=1764844424",
+    "landing": "https://doi.org/10.3390/electronics14234768",
+    "abstract": "In-vehicle Augmented Reality Head-Up Displays (AR-HUDs) enhance driving performance and experience by presenting critical information such as navigation cues and collision warnings. Although many studies have investigated the efficacy of AR-HUD navigation and collision warning interface designs, existing research has overlooked the critical interplay between graphic spatial positioning and safety risks arising from inattentional blindness. This study employed a single-factor within-subjects design, with Experiment 1 and Experiment 2 separately examining the impact of the spatial planar position (horizontal planar position, vertical planar position, mixed planar position) of AR-HUD navigation graphics and collision warning graphics on drivers’ inattentional blindness. The results revealed that the spatial planar position of AR-HUD navigation graphics has no significant effect on inattentional blindness behavior or reaction time. However, the horizontal planar position yielded the best user experience with low workload, followed by the mixed planar position. For AR-HUD collision warning graphics, their spatial planar position does not significantly influence the frequency of inattentional blindness; From the perspectives of workload and user experience, the vertical planar position of collision warning graphics provides the best experience with the lowest workload, while the mixed planar position demonstrates superior hedonic qualities. Overall, this study offers design guidelines for in-vehicle AR-HUD interfaces.",
+    "cited_by": 2,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2079-9292/14/23/4768/pdf?version=1764844424"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2079-9292/14/23/4768/pdf?version=1764844424"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/09-electronics-14-04768.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/09_2025_Spatial_Plane_Positioning_of_AR-HUD_Graphics_Implications_for_Driver_Inattention.txt"
+  },
+  {
+    "idx": 10,
+    "doi": "10.3390/app11167197",
+    "title": "An Augmented Warning System for Pedestrians: User Interface Design and Algorithm Development",
+    "year": 2021,
+    "authors": [
+      "Yourui Tong",
+      "Bochen Jia",
+      "Shan Bao"
+    ],
+    "venue": "Applied Sciences",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2076-3417/11/16/7197/pdf?version=1628075438",
+    "landing": "https://doi.org/10.3390/app11167197",
+    "abstract": "Warning pedestrians of oncoming vehicles is critical to improving pedestrian safety. Due to the limitations of a pedestrian’s carrying capacity, it is crucial to find an effective solution to provide warnings to pedestrians in real-time. Limited numbers of studies focused on warning pedestrians of oncoming vehicles. Few studies focused on developing visual warning systems for pedestrians through wearable devices. In this study, various real-time projection algorithms were developed to provide accurate warning information in a timely way. A pilot study was completed to test the algorithm and the user interface design. The projection algorithms can update the warning information and correctly fit it into an easy-to-understand interface. By using this system, timely warning information can be sent to those pedestrians who have lower situational awareness or obstructed view to protect them from potential collisions. It can work well when the sightline is blocked by obstructions.",
+    "cited_by": 13,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2076-3417/11/16/7197/pdf?version=1628075438"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2076-3417/11/16/7197/pdf?version=1628075438"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/10_2021_An_Augmented_Warning_System_for_Pedestrians_User_Interface_Design_and_Algorithm_.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/10_2021_An_Augmented_Warning_System_for_Pedestrians_User_Interface_Design_and_Algorithm_.txt"
+  },
+  {
+    "idx": 11,
+    "doi": "10.1109/icce46568.2020.9043068",
+    "title": "Collision Avoidance Head-Up Display: Design Considerations for Emergency Services’ Vehicles",
+    "year": 2020,
+    "authors": [
+      "Kweku F. Bram-Larbi",
+      "Vassilis Charissis",
+      "Soheeb Khan",
+      "Ramesh Lagoo",
+      "David K. Harrison",
+      "Dimitris Drikakis"
+    ],
+    "venue": null,
+    "is_oa": true,
+    "pdf_url": "https://researchonline.gcu.ac.uk/en/publications/629553b4-6f49-4146-9d52-ace008a1602a",
+    "landing": "https://doi.org/10.1109/icce46568.2020.9043068",
+    "abstract": "Emergency Services’ (ES) vehicles primary objective is to attend an accident or other incident scenes in a fast, safe and efficient manner. Yet this task is becoming increasingly difficult due to the increasing population and the plethora of emergency cases. These factors affect directly the traffic both within the urban and the rural environment, increasing dramatically the “time to arrive” at the point of interest. Numerous Head-Down Display (HDD) systems have populated the dashboard area of the ES vehicles in order to tackle this issue, with limited success. To this end, the development of emerging technologies in both computing and telecommunications have enabled modern vehicular systems to assist drivers in their decision-making process. Head-Up Displays (HUD) present a combinatory approach of the aforementioned technologies, which present crucial information to the driver through Augmented Reality (AR) projection. In order to develop a design and development framework for the utilisation of AR and HUD technology, this paper presents the results of 50 drivers investigation related to their activities during immobile or slow-moving traffic which results in driver’s distraction and inability to respond to the incoming ES vehicles. In turn, the paper discusses these results and offers an overview of the Human-Machine Interface requirements for a prototype HUD aiming to assist the safety, speed and manoeuvrability of the ES vehicles.",
+    "cited_by": 16,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://researchonline.gcu.ac.uk/files/41605482/Bram_Larbi_K._et_al_2020_AR_guidance_system_for_traffic_circumvention_and_collision_avoidance_emergency_services_case_study.pdf",
+      "https://scispace.com/pdf/collision-avoidance-head-up-display-design-considerations-3w1tdix5cc.pdf"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/11_2020_Collision_Avoidance_Head-Up_Display_Design_Considerations_for_Emergency_Services.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/11_2020_Collision_Avoidance_Head-Up_Display_Design_Considerations_for_Emergency_Services.txt"
+  },
+  {
+    "idx": 12,
+    "doi": "10.1080/10447318.2024.2368910",
+    "title": "Improving Pedestrian Safety with Head-Up Display Warning in a Connected Environment",
+    "year": 2024,
+    "authors": [
+      "Yu Zhang",
+      "Yang Bian",
+      "Xiaohua Zhao",
+      "Xuewei Li",
+      "Jianhua Zhang"
+    ],
+    "venue": "International Journal of Human-Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2024.2368910",
+    "abstract": "In this paper, the potential of using a head-up display (HUD) in the connected environment to improve a vehicle’s running comfort and pedestrian safety is tested, by providing warning information to drivers in advance. To achieve this objective, driving simulation technology is used to construct the connected environment and develop the HUD, and the effectiveness of the system is then tested. Specifically, thirty-four participants were recruited to conduct driving simulation experiments in six scenarios: three warning display types (Baseline/Head-down display/Head-up display) combined with two weather conditions (clear weather/foggy weather). The effects of the three different warning display types on braking risk-avoidance strategy were studied by comparing the drivers’ performance during the perception and decision stage (position of accelerator-pedal release, position of first braking), the risk-avoidance manipulation stage (maximum deceleration, braking distance) and the risk-avoidance result stage (minimum collision distance, position of minimum speed). The influences of weather conditions and driver attributes were also considered. When the HUD warnings were activated, drivers started to decelerate further away from pedestrians, with a more stable and moderate deceleration process and a greater safety margin between the vehicle and the pedestrians. Using HUD warnings in foggy conditions improved drivers’ perception and decision abilities, this study confirmed the great benefits that HUD warnings in the connected environment can bring to traffic safety, especially under risky situations and inclement weathers. The research results provide a reference for the more humanized and rationalized optimization design of these warning systems.",
+    "cited_by": 6,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/12-Improving_Pedestrian_Safety_with_Head-Up_Display_Warning_in_a_Connected_Environment(科研通-ablesci.com).pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/12_2024_Improving_Pedestrian_Safety_with_Head-Up_Display_Warning_in_a_Connected_Environm.txt"
+  },
+  {
+    "idx": 13,
+    "doi": "10.1177/0018720819844845",
+    "title": "Assessing Distraction Potential of Augmented Reality Head-Up Displays for Vehicle Drivers",
+    "year": 2019,
+    "authors": [
+      "Hyungil Kim",
+      "Joseph L. Gabbard"
+    ],
+    "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1177/0018720819844845",
+    "abstract": "OBJECTIVE: To develop a framework for quantifying the visual and cognitive distraction potential of augmented reality (AR) head-up displays (HUDs). BACKGROUND: AR HUDs promise to be less distractive than traditional in-vehicle displays because they project information onto the driver's forward-looking view of the road. However, AR graphics may direct the driver's attention away from critical road elements. Moreover, current in-vehicle device assessment methods, which are based on eyes-off-road time measures, cannot capture this unique challenge. METHOD: = 24) was conducted in a driving simulator to apply the proposed method for the assessment of two AR pedestrian collision warning (PCW) design alternatives. RESULTS: Only one of the two tested AR interfaces improved driver awareness of pedestrians without visually and cognitively distracting drivers from other road elements that were not augmented by the display but still critical for safe driving. CONCLUSION: Our initial human-subject experiment demonstrated the potential of the proposed method in quantifying both positive and negative consequences of AR HUDs on driver cognitive processes. More importantly, the study suggests that AR interfaces can be informative or distractive depending on the perceptual forms of graphical elements presented on the displays. APPLICATION: The proposed methods can be applied by designers of in-vehicle AR HUD interfaces and be leveraged by designers of AR user interfaces in general.",
+    "cited_by": 104,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://par.nsf.gov/servlets/purl/10184842"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/13_2019_Assessing_Distraction_Potential_of_Augmented_Reality_Head-Up_Displays_for_V.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/13_2019_Assessing_Distraction_Potential_of_Augmented_Reality_Head-Up_Displays_for_V.txt"
+  },
+  {
+    "idx": 14,
+    "doi": "10.1016/j.jsr.2017.02.002",
+    "title": "Brake reactions of distracted drivers to pedestrian Forward Collision Warning systems",
+    "year": 2017,
+    "authors": [
+      "Nils Lübbe"
+    ],
+    "venue": "Journal of Safety Research",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.jsr.2017.02.002",
+    "abstract": "",
+    "cited_by": 49,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/14_2017_Brake_reactions_of_distracted_drivers_to_pedestrian_Forward_Collision_Warning_sy.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/14_2017_Brake_reactions_of_distracted_drivers_to_pedestrian_Forward_Collision_Warning_sy.txt"
+  },
+  {
+    "idx": 15,
+    "doi": "10.1109/itsc.2015.172",
+    "title": "Distractive or Supportive -- How Warnings in the Head-up Display Affect Drivers' Gaze and Driving Behavior",
+    "year": 2015,
+    "authors": [
+      "Susann Winkler",
+      "Juela Kazazi",
+      "Mark Vollrath"
+    ],
+    "venue": null,
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc.2015.172",
+    "abstract": "Urban areas expose drivers to a lot of challenges (e.g., many kinds of distracting stimuli and road users) and critical situations, increasing the probability of driver errors. Therefore the accident rate in urban areas is quite high and driver assistance is needed. As part of the research project UR:BAN, this study investigates the effectiveness of four different types of driver warnings (+ control group), presented in a head-up display (HUD), to support drivers in a very critical urban scenario. The aim of these driver warnings was to alert drivers to a forthcoming pedestrian crossing the ego vehicle's road, eliciting a fast and strong response from the drivers like an emergency brake. The driver warnings varied in their strategy (attention vs. reaction oriented) and specificity (generic vs. specific). In a driving simulation the drivers' gaze and driving behavior were analyzed. A total of sixty drivers were tested in a between-subjects design (27 female, 33 male, M = 23.7 years, SD = 3.7 years). In general, all driver warnings affected the drivers' performance positively. Even though the number of collisions was not reduced, drivers showed a faster and stronger brake reaction when being warned, which nevertheless reduced the collision severity. While all drivers gazed at the safety-critical object, only about half of the drivers showed a HUD glance. When the drivers gazed at the HUD, the positive effect of the driver warnings on the brake reaction time was reduced. Thus, driver warnings which do not have to be fixated in order to be perceived are an interesting perspective for future research. Furthermore, the warning types differed little from each other in their effects on the drivers' performance. However, one warning, which was somewhat more unusual and difficult to understand, was least effective. This shows that a bad design of a warning can negate the potential benefits. Overall, the examined driver warnings can be recommended for very critical situations as they improved the drivers' performance and did not distract them. However, not all driver warnings are equally well suited.",
+    "cited_by": 39,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/15_2015_Distractive_or_Supportive_--_How_Warnings_in_the_Head-up_Display_Affect_Drivers_.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/15_2015_Distractive_or_Supportive_--_How_Warnings_in_the_Head-up_Display_Affect_Drivers_.txt"
+  },
+  {
+    "idx": 16,
+    "doi": "10.1109/itsc.2015.171",
+    "title": "Accident Prevention through Visual Warnings: How to Design Warnings in Head-up Display for Older and Younger Drivers",
+    "year": 2015,
+    "authors": [
+      "Juela Kazazi",
+      "Susann Winkler",
+      "Mark Vollrath"
+    ],
+    "venue": null,
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc.2015.171",
+    "abstract": "Many severe accidents occur in urban areas. As part of the research project UR:BAN this study investigated how different types of visual warnings can prevent collisions within these areas and trigger the adequate reaction in critical situations. For this, two different warning types were implemented in a head-up display. It was assumed that one of the warning types should trigger an immediate and firm brake reaction of the driver (stop sign warning) whereas the other type of warning should animate the driver to be cautious, for example by slightly pressing the brake pedal (caution sign warning). As collisions in urban areas are also very difficult for older drivers, differences of the effects of the two warning types between older and younger drivers on driver performance (numbers of collisions, brake reaction time, maximum braking value) were examined. For this, four urban scenarios were implemented in a static driving simulator varying the characteristics of the critical object (e.g., pedestrian, lead vehicle, obstacle). In total 72 drivers (36 participants aged 20-35 years, 36 participants aged 65+ years) were tested in a between-subjects design (Age, Type of Warning). The study revealed that the number of collisions was reduced when drivers were warned (especially for younger drivers) demonstrating the positive effect of these warning types in very critical scenarios. If the situation is not very critical, warnings did not reduce the numbers of collisions, since the total amount of collisions was very already very low. In critical scenarios older drivers prefer the stop sign warning (leading to a faster and stronger brake reaction) compared to younger participants. This group had the fastest and strongest brake reaction when receiving the caution sign warning. In less critical scenarios both warnings had a positive effect on the braking reaction times for both younger and older drivers. The strongest brake reaction here was reached (in both groups) when receiving the stop sign warning. This study demonstrates the importance of design thoroughness when wanting to achieve effective warnings.",
+    "cited_by": 22,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://www.hfes-europe.org/wp-content/uploads/2015/12/Kazazi2015.pdf"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/16_2015_Accident_Prevention_through_Visual_Warnings_How_to_Design_Warnings_in_Head-up_Di.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/16_2015_Accident_Prevention_through_Visual_Warnings_How_to_Design_Warnings_in_Head-up_Di.txt"
+  },
+  {
+    "idx": 17,
+    "doi": "10.1109/access.2023.3286872",
+    "title": "Augmented Reality-Based Navigation Using Deep Learning-Based Pedestrian and Personal Mobility User Recognition—A Comparative Evaluation for Driving Assistance",
+    "year": 2023,
+    "authors": [
+      "Dong Hyeon Roh",
+      "Jae Yeol Lee"
+    ],
+    "venue": "IEEE Access",
+    "is_oa": true,
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/10005208/10154473.pdf",
+    "landing": "https://doi.org/10.1109/access.2023.3286872",
+    "abstract": "Recently, research on augmented reality-based head-up displays (AR-HUDs) for driving assistance has been widely conducted in the automotive industry. The disadvantage of having to look away from the road while driving can be compensated by using AR-HUD-based visualization instead of an auxiliary display on the central dashboard. As the number of personal mobility users on the road increases, and their moving speed is considerably faster than pedestrians, personal mobility makes it more difficult for the driver to cope with dangerous situations. However, there is little research work for considering personal mobility users for driving assistance. This study aims to enhance the driver’s situational awareness to respond to unexpected situation by providing driver assistance information on the AR-HUD by combining deep learning and AR. In particular, the deep learning-based anomaly detection method can recognize personal mobility users effectively. This study also investigates the driver’s understanding of the relationship between the amount of prioritized information provided to AR-HUD and situational cognitive ability. This understanding can be used to adjust the amount of information displayed on the AR-HUD to maintain drivers’ situational awareness. The proposed approach was evaluated through an online study. The results showed that the proposed deep learning-based AR-HUD system improved the driver’s situational awareness and showed advantages in driving assistance compared to the typical system.",
+    "cited_by": 12,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/17_2023_Augmented_Reality-Based_Navigation_Using_Deep_Learning-Based_Pedestrian_and_Pers.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/17_2023_Augmented_Reality-Based_Navigation_Using_Deep_Learning-Based_Pedestrian_and_Pers.txt"
+  },
+  {
+    "idx": 18,
+    "doi": "10.4218/etrij.13.2013.0041",
+    "title": "In‐Vehicle AR‐HUD System to Provide Driving‐Safety Information",
+    "year": 2013,
+    "authors": [
+      "Hye Sun Park",
+      "Min Woo Park",
+      "Kwanghee Won",
+      "Kyong‐Ho Kim",
+      "Soon Ki Jung"
+    ],
+    "venue": "ETRI Journal",
+    "is_oa": true,
+    "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.4218/etrij.13.2013.0041",
+    "landing": "https://doi.org/10.4218/etrij.13.2013.0041",
+    "abstract": "Augmented reality (AR) is currently being applied actively to commercial products, and various types of intelligent AR systems combining both the Global Positioning System and computer‐vision technologies are being developed and commercialized. This paper suggests an in‐vehicle head‐up display (HUD) system that is combined with AR technology. The proposed system recognizes driving‐safety information and offers it to the driver. Unlike existing HUD systems, the system displays information registered to the driver's view and is developed for the robust recognition of obstacles under bad weather conditions. The system is composed of four modules: a ground obstacle detection module, an object decision module, an object recognition module, and a display module. The recognition ratio of the driving‐safety information obtained by the proposed AR‐HUD system is about 73%, and the system has a recognition speed of about 15 fps for both vehicles and pedestrians.",
+    "cited_by": 120,
+    "alt_oa_urls": [
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.4218/etrij.13.2013.0041"
+    ],
+    "all_oa_pdf_urls": [
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.4218/etrij.13.2013.0041"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/18_2013_InVehicle_ARHUD_System_to_Provide_DrivingSafety_Information.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/18_2013_InVehicle_ARHUD_System_to_Provide_DrivingSafety_Information.txt"
+  },
+  {
+    "idx": 19,
+    "doi": "10.1080/10447318.2024.2443252",
+    "title": "A Review of Augmented Reality Heads Up Display in Vehicles: Effectiveness, Application, and Safety",
+    "year": 2025,
+    "authors": [
+      "M. Winkler",
+      "Morteza Soleimani"
+    ],
+    "venue": "International Journal of Human-Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2024.2443252",
+    "abstract": "This paper reviews the evolution of driver displays, focusing on the transition to Augmented Reality Heads-Up Display (AR HUD) in vehicles. It compares AR HUD with traditional HUD, emphasising safety, cognitive workload, and user experience. Particular attention is given to AR HUD’s role in automated vehicles, especially during driver handover from automated to manual driving. Findings suggest AR HUD can enhance safety and user experience when applied effectively but may increase distraction and cognitive load if misused. Benefits include improved navigation through reduced cognitive load, decreased inattentional blindness, and better obstacle detection, such as identifying pedestrians. A notable gap in the literature is that AR HUD is often studied as an extension of the main driver display rather than as a primary display. This review highlights AR HUD's potential as the sole display, emphasising the need for further research. Overall, AR HUD presents transformative possibilities for enhancing vehicle user experience.",
+    "cited_by": 14,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://www.tandfonline.com/doi/pdf/10.1080/10447318.2024.2443252"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/19-Winkler和Soleimani - 2025 - A Review of Augmented Reality Heads Up Display in Vehicles Effectiveness, Application, and Safety.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/19-Winkler和Soleimani - 2025 - A Review of Augmented Reality Heads Up Display in Vehicles Effectiveness, Application, and Safety.txt"
+  },
+  {
+    "idx": 20,
+    "doi": "10.1145/3712270",
+    "title": "ARive: Assisting Drivers with In-Car Augmented Reality for Risk Zone Detection",
+    "year": 2025,
+    "authors": [
+      "Chao Wang",
+      "Derck Chu",
+      "Marieke Martens"
+    ],
+    "venue": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies",
+    "is_oa": true,
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3712270",
+    "landing": "https://doi.org/10.1145/3712270",
+    "abstract": "Human factors such as fatigue and distraction often impair drivers' ability to gauge traffic dynamics, leading to collisions, especially at unsignalized intersections. Augmented reality (AR) technology, particularly through advanced 3D projections and wearable head-mounted displays (HMDs), offers a promising enhancement by integrating comprehensive environmental awareness directly into the driver's field of view. This paper presents \"ARive,\" an innovative AR driver-assistance system designed to improve road safety by projecting dynamic risk zones beneath other traffic participants, thus providing real-time kinematic information to promote safer driving distances and informed decision-making. The research involved developing two distinct AR designs and testing them using a fixed-base driving simulator with integrated real-time data communication. A user study with 17 participants revealed that while AR projections significantly improve distance maintenance, particularly in abrupt braking scenarios, they do not markedly affect brake response times or enhance safety during critical events. These findings suggest the need for further optimization of AR design elements to maximize effectiveness, highlighting the potential of AR in enhancing driver awareness and safety.",
+    "cited_by": 1,
+    "alt_oa_urls": [
+      "https://pure.tue.nl/ws/files/382572724/3712270.pdf",
+      "https://dl.acm.org/doi/pdf/10.1145/3712270"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/20_2025_ARive__Assisting_Drivers_with_In-Car_Augmented_Reality_for_Risk_Zone_Detection.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/20_2025_ARive__Assisting_Drivers_with_In-Car_Augmented_Reality_for_Risk_Zone_Detection.txt"
+  },
+  {
+    "idx": 21,
+    "doi": "10.3389/frvir.2025.1638823",
+    "title": "Differences in drivers’ dependence on AR warning information in urban driving environments: the role of driving experience",
+    "year": 2025,
+    "authors": [
+      "Faren Huo",
+      "Rubanka Alla"
+    ],
+    "venue": "Frontiers in Virtual Reality",
+    "is_oa": true,
+    "pdf_url": "https://public-pages-files-2025.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2025.1638823/pdf",
+    "landing": "https://doi.org/10.3389/frvir.2025.1638823",
+    "abstract": "Augmented Reality Head-Up Displays (AR HUDs) have been shown to enhance drivers’ performance and road safety. However, with the growing attention to trust in automated driving systems, excessive reliance on automation may lead to complacency and dependency. This study therefore aimed to examine how drivers with different levels of experience depend on AR warning messages under varying environmental conditions (daytime vs. nighttime urban driving) and to propose strategies for optimizing AR warning interaction design. A before-and-after comparative experimental design was employed. Participants completed driving tasks involving a typical urban hazard—pedestrians suddenly running into the road—under two conditions: (1) without AR warning messages and (2) with an induced random AR warning failure in an AR message environment. The perceived time-to-pedestrian values were analyzed to quantify driving dependence. Participants were divided into experienced and novice driver groups, and the effects of driving experience and lighting condition were examined. Objectively, both experienced and novice drivers’ dependence on AR warning messages was primarily influenced by the driving environment. Under high-load conditions such as nighttime driving, both groups maintained higher attention and exhibited minimal dependence on AR warnings. Under lower-load daytime conditions, dependence varied by driving experience: experienced drivers remained self-reliant due to ingrained driving habits and situational awareness, while novice drivers displayed increased relaxation and dependence on AR cues. Subjectively, drivers’ perceived dependence and anticipation of AR warnings correlated more strongly with the perceived intrusiveness of the AR system than with its effectiveness. These findings suggest that dependence on AR HUD warning messages is a complex interaction between environmental load, user experience, and perceived system intrusiveness. To mitigate automation complacency, future AR HUD design should tailor warning strategies according to user experience levels and driving context. The study provides practical insights for optimizing AR interaction design and highlights directions for future research to address additional urban driving risks.",
+    "cited_by": 0,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/21_2025_Differences_in_drivers’_dependence_on_AR_warning_information_in_urban_driving_en.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/21_2025_Differences_in_drivers’_dependence_on_AR_warning_information_in_urban_driving_en.txt"
+  },
+  {
+    "idx": 22,
+    "doi": "10.1145/3229556.3229564",
+    "title": "ARVE",
+    "year": 2018,
+    "authors": [
+      "Pengyuan Zhou",
+      "Wenxiao Zhang",
+      "Tristan Braud",
+      "Pan Hui",
+      "Jussi Kangasharju"
+    ],
+    "venue": null,
+    "is_oa": true,
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3229556.3229564",
+    "landing": "https://doi.org/10.1145/3229556.3229564",
+    "abstract": "Vehicular communication applications, be it for driver-assisting augmented reality systems or fully driverless vehicles, require an efficient communication infrastructure for timely information delivery. Centralized, cloud-based infrastructures present latencies too high to satisfy the requirements of emergency information processing and transmission. In this paper, we present a novel Vehicle-to-Edge (ARVE) infrastructure, with computational units co-located with the base stations and aggregation points. Embedding computation at the edge of the network allows to reduce the overall latency compared to vehicle-to-cloud and significantly trim the complexity of vehicle-to-vehicle communication. To demonstrate the efficiency of our solution, we apply these principles on an augmented reality head-up display. In this use case, vehicular communication is exploited to connect vehicle's vision, and quickly propagate emergency information. ARVE is a general system framework, applicable to many practical scenarios. Our preliminary evaluation shows that ARVE noticeably decreases transmission latency with reasonable capital expenditure.",
+    "cited_by": 22,
+    "alt_oa_urls": [
+      "http://hdl.handle.net/10138/307278",
+      "https://dl.acm.org/doi/pdf/10.1145/3229556.3229564"
+    ],
+    "all_oa_pdf_urls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3229556.3229564",
+      "http://hdl.handle.net/10138/307278"
+    ],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://pengyuan-zhou.github.io/papers/enhanced.pdf"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/22_2018_ARVE.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/22_2018_ARVE.txt"
+  },
+  {
+    "idx": 23,
+    "doi": "10.3390/app13084952",
+    "title": "Assessing the Impact of AR HUDs and Risk Level on User Experience in Self-Driving Cars: Results from a Realistic Driving Simulation",
+    "year": 2023,
+    "authors": [
+      "Seung Ju Kim",
+      "Seungju Kim",
+      "Jungseok Oh",
+      "Minwoo Seong",
+      "Eunki Jeon",
+      "Yeon-Kug Moon"
+    ],
+    "venue": "Applied Sciences",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2076-3417/13/8/4952/pdf?version=1681470692",
+    "landing": "https://doi.org/10.3390/app13084952",
+    "abstract": "The adoption of self-driving technologies requires addressing public concerns about their reliability and trustworthiness. To understand how user experience in self-driving vehicles is influenced by the level of risk and head-up display (HUD) information, using virtual reality (VR) and a motion simulator, we simulated risky situations including accidents with HUD information provided under different conditions. The findings revealed how HUD information related to the immediate environment and the accident’s severity influenced the user experience (UX). Further, we investigated galvanic skin response (GSR) and self-reported emotion (Valence and Arousal) annotation data and analyzed correlations between them. The results indicate significant differences and correlations between GSR data and self-reported annotation data depending on the level of risk and whether or not information was provisioned through HUD. Hence, VR simulations combined with motion platforms can be used to observe the UX (trust, perceived safety, situation awareness, immersion and presence, and reaction to events) of self-driving vehicles while controlling the road conditions such as risky situations. Our results indicate that HUD information provision significantly increases trust and situation awareness of the users, thus improving the user experience in self-driving vehicles.",
+    "cited_by": 13,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2076-3417/13/8/4952/pdf?version=1681470692"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2076-3417/13/8/4952/pdf?version=1681470692"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/23-applsci-13-04952.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/23_2023_Assessing_the_Impact_of_AR_HUDs_and_Risk_Level_on_User_Experience_in_Self-Drivin.txt"
+  },
+  {
+    "idx": 24,
+    "doi": "10.3390/app152011072",
+    "title": "The Influence of Information Redundancy on Driving Behavior and Psychological Responses Under Different Fog and Risk Conditions: An Analysis of AR-HUD Interface Designs",
+    "year": 2025,
+    "authors": [
+      "Junfeng Li",
+      "Kexin Chen",
+      "Mo Chen"
+    ],
+    "venue": "Applied Sciences",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2076-3417/15/20/11072/pdf?version=1760543832",
+    "landing": "https://doi.org/10.3390/app152011072",
+    "abstract": "Adverse road conditions, particularly foggy weather, significantly impair drivers’ abilities to gather information and make judgments in response to unexpected events. To investigate the impact of different Augmented Reality-Head-Up Display (AR-HUD) interfaces (words-only, symbols-only, and words + symbols) on driving behavior, this study simulated driving scenarios under varying visibility and risk levels in foggy conditions, measuring reaction time (RT), time-to-collision (TTC), the maximum lateral acceleration, the maximum longitudinal acceleration, and subjective data. The results indicated that risk levels significantly affected drivers’ RT, TTC, and maximum longitudinal and lateral accelerations. The three interfaces significantly differed in RT and TTC across different risk levels in heavy fog. In light fog, words-only and redundant interfaces significantly affected RT across different risk levels; words-only and symbols-only interfaces significantly affected TTC across different risk levels. In addition, participants responded faster when using text-related interfaces in the subject’s native language. After analyzing data on perceived usability across the three interfaces, the results indicated that under high-risk conditions, both in light fog and heavy fog, participants rated the redundant interface as having higher usability and preferred the redundant interfaces. Based on these findings, this paper proposes the following design strategies for AR-HUD visual interfaces: (1) Under low-risk foggy driving conditions, all three interface types are effective and applicable. (2) Under high-risk foggy driving conditions, redundant interface design is recommended. Although it may not significantly improve driving performance, this interface type was subjectively perceived as more useful and preferred by the subjects. The findings of this study provide support for design of AR-HUD interfaces, contributing to enhanced driving safety and human–machine interaction experience under complex meteorological conditions. This offers practical implications for the development and optimization of intelligent vehicle systems.",
+    "cited_by": 2,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2076-3417/15/20/11072/pdf?version=1760543832"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2076-3417/15/20/11072/pdf?version=1760543832"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/24-applsci-15-11072.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/24-applsci-15-11072.txt"
+  },
+  {
+    "idx": 25,
+    "doi": "10.3389/frobt.2019.00098",
+    "title": "AR DriveSim: An Immersive Driving Simulator for Augmented Reality Head-Up Display Research",
+    "year": 2019,
+    "authors": [
+      "Joseph L. Gabbard",
+      "Missie Smith",
+      "Kyle Tanous",
+      "Hyungil Kim",
+      "Bryan Jonas"
+    ],
+    "venue": "Frontiers in Robotics and AI",
+    "is_oa": true,
+    "pdf_url": "https://www.frontiersin.org/articles/10.3389/frobt.2019.00098/pdf",
+    "landing": "https://doi.org/10.3389/frobt.2019.00098",
+    "abstract": "Optical see-through automotive head-up displays (HUDs) are a form of augmented reality (AR) that is quickly gaining penetration into the consumer market. Despite increasing adoption, demand, and competition among manufacturers to deliver higher quality HUDs with increased fields of view, little work has been done to understand how best to design and assess AR HUD user interfaces, and how to quantify their effects on driver behavior, performance, and ultimately safety. This paper reports on a novel, low-cost, immersive driving simulator created using a myriad of custom hardware and software technologies specifically to examine basic and applied research questions related to AR HUDs usage when driving. We describe our experiences developing simulator hardware and software and detail a user study that examines driver performance, visual attention, and preferences using two AR navigation interfaces. Results suggest that conformal AR graphics may not be inherently better than other HUD interfaces. We include lessons learned from our simulator development experiences, results of the user study and conclude with limitations and future work.",
+    "cited_by": 44,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/25_2019_AR_DriveSim__An_Immersive_Driving_Simulator_for_Augmented_Reality_Head-Up_Displa.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/25_2019_AR_DriveSim__An_Immersive_Driving_Simulator_for_Augmented_Reality_Head-Up_Displa.txt"
+  },
+  {
+    "idx": 26,
+    "doi": "10.3390/app11041397",
+    "title": "Employing Emerging Technologies to Develop and Evaluate In-Vehicle Intelligent Systems for Driver Support: Infotainment AR HUD Case Study",
+    "year": 2021,
+    "authors": [
+      "Vassilis Charissis",
+      "Jannat Falah",
+      "Ramesh Lagoo",
+      "Salsabeel F. M. Alfalah",
+      "Soheeb Khan",
+      "Shu Wang"
+    ],
+    "venue": "Applied Sciences",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2076-3417/11/4/1397/pdf?version=1612432134",
+    "landing": "https://doi.org/10.3390/app11041397",
+    "abstract": "The plurality of current infotainment devices within the in-vehicle space produces an unprecedented volume of incoming data that overwhelm the typical driver, leading to higher collision probability. This work presents an investigation to an alternative option which aims to manage the incoming information while offering an uncluttered and timely manner of presenting and interacting with the incoming data safely. The latter is achieved through the use of an augmented reality (AR) head-up display (HUD) system, which projects the information within the driver’s field of view. An uncluttered gesture recognition interface provides the interaction with the AR visuals. For the assessment of the system’s effectiveness, we developed a full-scale virtual reality driving simulator which immerses the drivers in challenging, collision-prone, scenarios. The scenarios unfold within a digital twin model of the surrounding motorways of the city of Glasgow. The proposed system was evaluated in contrast to a typical head-down display (HDD) interface system by 30 users, showing promising results that are discussed in detail.",
+    "cited_by": 60,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2076-3417/11/4/1397/pdf?version=1612432134"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2076-3417/11/4/1397/pdf?version=1612432134"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/26_2021_Employing_Emerging_Technologies_to_Develop_and_Evaluate_In-Vehicle_Intellig.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/26_2021_Employing_Emerging_Technologies_to_Develop_and_Evaluate_In-Vehicle_Intellig.txt"
+  },
+  {
+    "idx": 27,
+    "doi": "10.1109/access.2021.3112240",
+    "title": "Does Augmented-Reality Head-Up Display Help? A Preliminary Study on Driving Performance Through a VR-Simulated Eye Movement Analysis",
+    "year": 2021,
+    "authors": [
+      "Xiangdong Ma",
+      "Mengting Jia",
+      "Zhicong Hong",
+      "Alex Pak Ki Kwok",
+      "Mian Yan"
+    ],
+    "venue": "IEEE Access",
+    "is_oa": true,
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09536587.pdf",
+    "landing": "https://doi.org/10.1109/access.2021.3112240",
+    "abstract": "Augmented reality heads-up display (AR-HUD) is becoming increasingly popular as a way to keep drivers focusing on roads. By overlaying visuals on the windshield, AR-HUDs improve the drivers’ view of the environment outside the car, creating a stronger sense of awareness of the surroundings. However, whether AR-HUD and to what extent different AR-HUD layouts could improve drivers’ driving performance are still questionable. Unfortunately, AR-HUD is still at a research stage, not yet fully commercialized. Hence, there are few actual products in the market available for testing. For this reason, this study developed a virtual reality driving simulator to tested drivers’ driving performance environment under three scenarios: without AR-HUD, dispersed layout (AR-HUD1), and dense layout (AR-HUD2). Twelve subjects were invited to join the experiment. Their driving performance was measured in various aspects. This study showed that AR-HUD with interfaces that conform to human-computer interaction principles and visual design rules could improve cognitive resource allocation and promote driving safety. Conversely, a poor designed AR-HUD could negatively impact driving safety.",
+    "cited_by": 37,
+    "alt_oa_urls": [
+      "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09536587.pdf"
+    ],
+    "all_oa_pdf_urls": [
+      "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09536587.pdf"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/27_2021_Does_Augmented-Reality_Head-Up_Display_Help_A_Preliminary_Study_on_Driving_Perfo.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/27_2021_Does_Augmented-Reality_Head-Up_Display_Help_A_Preliminary_Study_on_Driving_Perfo.txt"
+  },
+  {
+    "idx": 28,
+    "doi": "10.1109/tsmcb.2008.923527",
+    "title": "A Novel Active Heads-Up Display for Driver Assistance",
+    "year": 2008,
+    "authors": [
+      "Anup Doshi",
+      "Shinko Y. Cheng",
+      "Mohan M. Trivedi"
+    ],
+    "venue": "IEEE Transactions on Systems Man and Cybernetics Part B (Cybernetics)",
+    "is_oa": true,
+    "pdf_url": "https://escholarship.org/content/qt21x1793b/qt21x1793b.pdf?t=lnq603",
+    "landing": "https://doi.org/10.1109/tsmcb.2008.923527",
+    "abstract": "In this paper, we introduce a novel laser-based wide-area heads-up windshield display which is capable of actively interfacing with a human as part of a driver assistance system. The dynamic active display (DAD) is a unique prototype interface that presents safety-critical visual icons to the driver in a manner that minimizes the deviation of his or her gaze direction without adding to unnecessary visual clutter. As part of an automotive safety system, the DAD presents alerts in the field of view of the driver only if necessary, which is based upon the state and pose of the driver, vehicle, and environment. This paper examines the effectiveness of DAD through a comprehensive comparative experimental evaluation of a speed compliance driver assistance system, which is implemented on a vehicular test bed. Three different types of display protocols for assisting a driver to comply with speed limits are tested on actual roadways, and these are compared with a conventional dashboard display. Given the inclination, drivers who are given an overspeed warning alert reduced the time required to slow down to the speed limit by 38% (p < 0.01) as compared with the drivers not given the alert. Additionally, certain alerts decreased distraction levels by reducing the time spent looking away from the road by 63% (p < 0.01). Ultimately, these alerts demonstrate the utility and promise of the DAD system.",
+    "cited_by": 128,
+    "alt_oa_urls": [
+      "https://escholarship.org/content/qt21x1793b/qt21x1793b.pdf?t=lnq603"
+    ],
+    "all_oa_pdf_urls": [
+      "https://escholarship.org/content/qt21x1793b/qt21x1793b.pdf?t=lnq603"
+    ],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://escholarship.org/content/qt21x1793b/qt21x1793b_noSplash_13e753b0183597b6915d5813771b72d3.pdf"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/28_2008_A_Novel_Active_Heads-Up_Display_for_Driver_Assistance.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/28_2008_A_Novel_Active_Heads-Up_Display_for_Driver_Assistance.txt"
+  },
+  {
+    "idx": 29,
+    "doi": "10.3389/fpubh.2023.1195961",
+    "title": "Machine learning-based cognitive load prediction model for AR-HUD to improve OSH of professional drivers",
+    "year": 2023,
+    "authors": [
+      "Jian Teng",
+      "Fucheng Wan",
+      "Yiquan Kong",
+      "Ju-Kyoung Kim"
+    ],
+    "venue": "Frontiers in Public Health",
+    "is_oa": true,
+    "pdf_url": "https://www.frontiersin.org/articles/10.3389/fpubh.2023.1195961/pdf",
+    "landing": "https://doi.org/10.3389/fpubh.2023.1195961",
+    "abstract": "Motivation: Augmented reality head-up display (AR-HUD) interface design takes on critical significance in enhancing driving safety and user experience among professional drivers. However, optimizing the above-mentioned interfaces poses challenges, innovative methods are urgently required to enhance performance and reduce cognitive load. Description: A novel method was proposed, combining the IVPM method with a GA to optimize AR-HUD interfaces. Leveraging machine learning, the IVPM-GA method was adopted to predict cognitive load and iteratively optimize the interface design. Results: Experimental results confirmed the superiority of IVPM-GA over the conventional BP-GA method. Optimized AR-HUD interfaces using IVPM-GA significantly enhanced the driving performance, and user experience was enhanced since 80% of participants rated the IVPM-GA interface as visually comfortable and less distracting. Conclusion: In this study, an innovative method was presented to optimize AR-HUD interfaces by integrating IVPM with a GA. IVPM-GA effectively reduced cognitive load, enhanced driving performance, and improved user experience for professional drivers. The above-described findings stress the significance of using machine learning and optimization techniques in AR-HUD interface design, with the aim of enhancing driver safety and occupational health. The study confirmed the practical implications of machine learning optimization algorithms for designing AR-HUD interfaces with reduced cognitive load and improved occupational safety and health (OSH) for professional drivers.",
+    "cited_by": 8,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/29_2023_Machine_learning-based_cognitive_load_prediction_model_for_AR-HUD_to_improve_OSH.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/29_2023_Machine_learning-based_cognitive_load_prediction_model_for_AR-HUD_to_improve_OSH.txt"
+  },
+  {
+    "idx": 30,
+    "doi": "10.1080/10447318.2019.1698220",
+    "title": "Adaptive Visual Assistance System for Enhancing the Driver Awareness of Pedestrians",
+    "year": 2019,
+    "authors": [
+      "Vincent Frémont",
+      "Minh-Tien Phan",
+      "Indira Thouvenin"
+    ],
+    "venue": "International Journal of Human-Computer Interaction",
+    "is_oa": true,
+    "pdf_url": "https://hal.science/hal-02399904",
+    "landing": "https://doi.org/10.1080/10447318.2019.1698220",
+    "abstract": "In the past decade, Pedestrian Collision Warning Systems have been proposed to detect pedestrians and warn drivers of imminent collision. However, such systems are often limited by eye-off-road and cognitive overload problems. Head Up displays with augmented reality are being considered as a key technology for changing drivers’ user experiences. In this paper, we propose a new visual assistance system that can enhance drivers’ perception by dynamically directing attention to pedestrians to avoid collisions using Augmented Reality cues. The proposed system takes into account driver behaviors through vehicle driving signals analysis, in order to warn it at the right moments. To that end, we statistically model correct and incorrect driver behaviors in situations with pedestrians. Based on this model, a warning visual metaphor is displayed if unawareness is detected and a driving simulator was used to evaluate the concept. The experimental results suggest that our proposed adaptive visual aids can enhance driver awareness of pedestrians in critical situations.",
+    "cited_by": 22,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "https://hal.science/hal-02399904v1/document",
+      "https://hal.science/hal-02399904/document"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/30_2019_Adaptive_Visual_Assistance_System_for_Enhancing_the_Driver_Awareness_of_Pedestri.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/30_2019_Adaptive_Visual_Assistance_System_for_Enhancing_the_Driver_Awareness_of_Pedestri.txt"
+  },
+  {
+    "idx": 31,
+    "doi": "10.3390/safety8040084",
+    "title": "Augmented Reality for Vehicle-Driver Communication: A Systematic Review",
+    "year": 2022,
+    "authors": [
+      "Liam Kettle",
+      "Yi‐Ching Lee"
+    ],
+    "venue": "Safety",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2313-576X/8/4/84/pdf?version=1671521950",
+    "landing": "https://doi.org/10.3390/safety8040084",
+    "abstract": "Capabilities for automated driving system (ADS)-equipped vehicles have been expanding over the past decade. Research has explored integrating augmented reality (AR) interfaces in ADS-equipped vehicles to improve drivers’ situational awareness, performance, and trust. This paper systematically reviewed AR visualizations for in-vehicle vehicle-driver communication from 2012 to 2022. The review first identified meta-data and methodological trends before aggregating findings from distinct AR interfaces and corresponding subjective and objective measures. Prominent subjective measures included acceptance, trust, and user experience; objective measures comprised various driving behavior or eye-tracking metrics. Research more often evaluated simulated AR interfaces, presented through windshields, and communicated object detection or intended maneuvers, in level 2 ADS. For object detection, key visualizations included bounding shapes, highlighting, or symbols. For intended route, mixed results were found for world-fixed verse screen-fixed arrows. Regardless of the AR design, communicating the ADS’ actions or environmental elements was beneficial to drivers, though presenting clear, relevant information was more favorable. Gaps in the literature that yet to be addressed include longitudinal effects, impaired visibility, contextual user needs, system reliability, and, most notably, inclusive design. Regardless, the review supports that integrating AR interfaces in ADS-equipped vehicles can lead to higher trust, acceptance, and safer driving performances.",
+    "cited_by": 26,
+    "alt_oa_urls": [
+      "https://www.mdpi.com/2313-576X/8/4/84/pdf?version=1671521950"
+    ],
+    "all_oa_pdf_urls": [
+      "https://www.mdpi.com/2313-576X/8/4/84/pdf?version=1671521950"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/31-safety-08-00084-v2.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/31_2022_Augmented_Reality_for_Vehicle-Driver_Communication_A_Systematic_Review.txt"
+  },
+  {
+    "idx": 32,
+    "doi": "10.1002/adma.202110463",
+    "title": "Automotive Holographic Head‐Up Displays",
+    "year": 2022,
+    "authors": [
+      "Jana Skirnewskaja",
+      "Timothy D. Wilkinson"
+    ],
+    "venue": "Advanced Materials",
+    "is_oa": true,
+    "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202110463",
+    "landing": "https://doi.org/10.1002/adma.202110463",
+    "abstract": "Driver's access to information about navigation and vehicle data through in-car displays and personal devices distract the driver from safe vehicle management. The discrepancy between road safety and infotainment must be addressed to develop safely operated modern vehicles. Head-up displays (HUDs) aim to introduce a seamless uptake of visual information for the driver while securely operating a vehicle. HUDs projected on the windshield provide the driver with visual navigation and vehicle data within the comfort of the driver's personal eye box through a customizable extended display space. Windshield HUDs do not require the driver to shift the gaze away from the road to attain road information. This article presents a review of technological advances and future perspectives in holographic HUDs by analyzing the optoelectronics devices and the user experience of the driver. The review elucidates holographic displays and full augmented reality in 3D with depth perception when projecting the visual information on the road within the driver's gaze. Design factors, functionality, and the integration of personalized machine learning technologies into holographic HUDs are discussed. Application examples of the display technologies regarding road safety and security are presented. An outlook is provided to reflect on display trends and autonomous driving.",
+    "cited_by": 75,
+    "alt_oa_urls": [
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202110463"
+    ],
+    "all_oa_pdf_urls": [
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202110463"
+    ],
+    "ddg_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/32_2022_Automotive_Holographic_HeadUp_Displays.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/32_2022_Automotive_Holographic_HeadUp_Displays.md"
+  },
+  {
+    "idx": 33,
+    "doi": "10.1007/s44230-022-00011-1",
+    "title": "Usability Evaluation of in-Vehicle AR-HUD Interface Applying AHP-GRA",
+    "year": 2022,
+    "authors": [
+      "Yunuo Cheng",
+      "Zhong Xia",
+      "Min Ye",
+      "Tian Liwei"
+    ],
+    "venue": "Human-Centric Intelligent Systems",
+    "is_oa": true,
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s44230-022-00011-1.pdf",
+    "landing": "https://doi.org/10.1007/s44230-022-00011-1",
+    "abstract": "Abstract Usability is regarded to be a fundamental requirement for in-vehicle HMIs, and usability evaluation reflects the impact of the interface and the acceptance from the users. This study introduced a usability evaluation model of AR-HUD interface by applying grey analytic hierarchy process (AHP). First, based on the ameliorated PSSUQ (Post-Study System Usability Questionnaire), the usability evaluation system was modified and optimized according to the characteristics of AR-HUD. On this basis, the preference weights for evaluation indexes were calculated by AHP and the idea of group decision. Finally, the criteria of usability were integrated into grey relational degree by applying grey relational analysis (GRA) to obtain optimal design. A case study was conducted to demonstrate the applicability of the developed model to the usability evaluation of AR-HUD interface design. According to the existing AR-HUD interface design, 7 dimensions of design elements (A-G) and 18 interface prototypes (S1-S18) were selected by Taguchi orthogonal array test (TOAT). As the results indicated, the grey relational degree of S5 was 0.923, signifying that it was the optimal sample; and the results were also compared with entropy-TOPSIS to verify the feasibility of the proposed method. The grey-based AHP evaluation model can be used to evaluate the usability level of AR-HUD interface effectively, which may help designers achieve insights for design process and samples decision-making.",
+    "cited_by": 6,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/33_2022_Usability_Evaluation_of_in-Vehicle_AR-HUD_Interface_Applying_AHP-GRA.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/33_2022_Usability_Evaluation_of_in-Vehicle_AR-HUD_Interface_Applying_AHP-GRA.txt"
+  },
+  {
+    "idx": 34,
+    "doi": "10.4108/eai.17-6-2022.2322686",
+    "title": "Color Visibility Evaluation of In-Vehicle AR-HUD Under Different Illuminance",
+    "year": 2022,
+    "authors": [
+      "Xia Zhong",
+      "Yunuo Cheng",
+      "Liwei Tian"
+    ],
+    "venue": "Proceedings of the International Conference on Information Economy, Data Modeling and Cloud Computing, ICIDC 2022, 17-19 June 2022, Qingdao, China",
+    "is_oa": true,
+    "pdf_url": "http://eudl.eu/pdf/10.4108/eai.17-6-2022.2322686",
+    "landing": "https://doi.org/10.4108/eai.17-6-2022.2322686",
+    "abstract": "Drivers’ visual distraction serves as the main cause of traffic accidents, different ambient illuminance can also exert a considerable impact on the drivers’ cognition efficiency. It is therefore very important to study the color visibility of AR-HUD interface under different illuminance. In this st",
+    "cited_by": 6,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/34_2022_Color_Visibility_Evaluation_of_In-Vehicle_AR-HUD_Under_Different_Illuminance.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/34_2022_Color_Visibility_Evaluation_of_In-Vehicle_AR-HUD_Under_Different_Illuminance.txt"
+  },
+  {
+    "idx": 35,
+    "doi": "10.4108/eai.24-5-2024.2350098",
+    "title": "Interface Design of Automobile Head-up Display from the Perspective of Human-Machine Interaction",
+    "year": 2024,
+    "authors": [
+      "Lening Guan"
+    ],
+    "venue": null,
+    "is_oa": true,
+    "pdf_url": "http://eudl.eu/pdf/10.4108/eai.24-5-2024.2350098",
+    "landing": "http://dx.doi.org/10.4108/eai.24-5-2024.2350098",
+    "abstract": "Under the background of user-centered era, the traditional head-down display (HDD) is gradually being replaced by head-up display (HUD). As the carrier of HUD information presentation and the medium for direct interaction with drivers, the design research of HUD interface has become increasingly imp",
+    "cited_by": 0,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/35_2024_Interface_Design_of_Automobile_Head-up_Display_from_the_Perspective_of_Human-Mac.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/35_2024_Interface_Design_of_Automobile_Head-up_Display_from_the_Perspective_of_Human-Mac.txt"
+  },
+  {
+    "idx": 36,
+    "doi": "10.1109/access.2023.3305383",
+    "title": "Physiological Signals as Predictors of Cognitive Load Induced by the Type of Automotive Head-Up Display",
+    "year": 2023,
+    "authors": [
+      "Gregor Strle",
+      "Andrej Košir",
+      "Jaka Sodnik",
+      "Kristina Stojmenova"
+    ],
+    "venue": "IEEE Access",
+    "is_oa": true,
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10217790.pdf",
+    "landing": "https://doi.org/10.1109/access.2023.3305383",
+    "abstract": "Visual information complexity of automotive head-up displays (HUDs) may increase cognitive load and reduce driver performance in critical situations. This study examined whether physiological indicators of cognitive load could predict the type of HUD while driving. Physiological signals of heart rate variability (HRV), electrodermal activity (EDA), skin temperature, and pupil dilation were recorded from 28 participants using a motion-based driving simulator. Two types of HUD with different information complexities were compared: baseline HUD and augmented reality HUD. Heart rate and EDA were processed to generate standardized biomedical features. Two separate sets of features were created for pupil dilation and skin temperature using time-series analysis and basic statistics. The fusion of physiological signals was used to test the impact of different signal combinations on classification performance. Three gradient boosting classifiers LightGBM (LGBM), HistGradientBoostingClassifier (HGBC), and XGBoost (XGB) were trained on physiological signals to predict the type of HUD. Classifiers based on the fusion of HRV, EDA and time-series features for skin temperature and pupil dilation achieved moderate performance, with average AUC ROC scores of XGB=0.67, LGBM=0.69, and HGBC=0.70. Classifiers based on the fusion of HRV, EDA, and the basic statistical features for skin temperature and pupil dilation achieved notable overall improvement in performance, with an average AUC ROC score = 0.76 for all three classifiers and the best score of LGBM=0.96, XGB=0.96, and HGBC=0.98. These results demonstrate the potential of physiological signals for modeling HUD-induced cognitive load and dynamically regulating its effects in real-time.",
+    "cited_by": 12,
+    "alt_oa_urls": [
+      "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10217790.pdf"
+    ],
+    "all_oa_pdf_urls": [
+      "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10217790.pdf"
+    ],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [
+      "http://ieeexplore.ieee.org/iel7/6287639/10005208/10217790.pdf",
+      "https://ieeexplore.ieee.org/iel7/6287639/10005208/10217790.pdf"
+    ],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/36_2023_Physiological_Signals_as_Predictors_of_Cognitive_Load_Induced_by_the_Type_of_Aut.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/36_2023_Physiological_Signals_as_Predictors_of_Cognitive_Load_Induced_by_the_Type_of_Aut.txt"
+  },
+  {
+    "idx": 37,
+    "source": "arxiv",
+    "arxiv_id": "1612.06558",
+    "title": "End-to-End Pedestrian Collision Warning System based on CNN Semantic Segmentation",
+    "pdf_url": "https://arxiv.org/pdf/1612.06558.pdf",
+    "landing": "https://arxiv.org/abs/1612.06558",
+    "is_oa": true,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/37__End-to-End_Pedestrian_Collision_Warning_System_based_on_CNN_Semantic_Segmentatio.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/37__End-to-End_Pedestrian_Collision_Warning_System_based_on_CNN_Semantic_Segmentatio.txt"
+  },
+  {
+    "idx": 38,
+    "source": "arxiv",
+    "arxiv_id": "2009.10868",
+    "title": "Real-Time Predictive Pedestrian Collision Warning Service for Cooperative ITS",
+    "pdf_url": "https://arxiv.org/pdf/2009.10868.pdf",
+    "landing": "https://arxiv.org/abs/2009.10868",
+    "is_oa": true,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/38__Real-Time_Predictive_Pedestrian_Collision_Warning_Service_for_Cooperative_ITS.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/38__Real-Time_Predictive_Pedestrian_Collision_Warning_Service_for_Cooperative_ITS.txt"
+  },
+  {
+    "idx": 39,
+    "source": "arxiv",
+    "arxiv_id": "2112.09074",
+    "title": "Influence of Pedestrian Collision Warning Systems on Driver Behavior - Simulator Study",
+    "pdf_url": "https://arxiv.org/pdf/2112.09074.pdf",
+    "landing": "https://arxiv.org/abs/2112.09074",
+    "is_oa": true,
+    "local_pdf": "/home/gezhuocheng/HUD/papers/39__Influence_of_Pedestrian_Collision_Warning_Systems_on_Driver_Behavior_-_Simulator.pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/39__Influence_of_Pedestrian_Collision_Warning_Systems_on_Driver_Behavior_-_Simulator.txt"
+  },
+  {
+    "idx": 40,
+    "doi": "10.1080/10447318.2024.2439572",
+    "title": "Priority Design in Multi-Target AR-HUD Warning: Evidence from Eye Movement and Behavior of the Novice Driver",
+    "year": 2024,
+    "authors": [
+      "Wanting Chen",
+      "Chenyang Song",
+      "Jing Luo",
+      "Zilong Xu",
+      "Hongting Li",
+      "Shu Ma",
+      "Qijun Wang",
+      "Zhen Yang"
+    ],
+    "venue": "International Journal of Human-Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2024.2439572",
+    "abstract": "Technically, Augmented Reality Head-Up Display (AR-HUD) technology can augment multiple targets in the scene. However, existing literature predominantly focuses on scenarios involving single-target augmentation. The understanding of multi-target augmentation and studies exploring effective presentation methods under such conditions are notably scarce. This study evaluates the efficacy of integrating color-based warning priority design across multi-target scenarios. 45 Participants in different warning modes (Equivalent, Hierarchical, and Baseline) view AR-augmented driving videos and respond to risky targets. Their behavioral performance and eye-tracking data are compared. Findings indicate that the equivalent warning mode, lacking in priority design, adversely affects driver performance, prolongs reaction times, and elevates saccade counts, and gaze entropy. Conversely, the hierarchical warning mode significantly ameliorates driver reaction times and the time to first fixation, while also reducing saccade counts and gaze entropy, demonstrating the efficacy of the warning priority design.",
+    "cited_by": 0,
+    "alt_oa_urls": [],
+    "all_oa_pdf_urls": [],
+    "ddg_pdf_urls": [],
+    "google_pdf_urls": [],
+    "local_pdf": "/home/gezhuocheng/HUD/papers/40-Priority_Design_in_Multi-Target_AR-HUD_Warning__Evidence_from_Eye_Movement_and_Behavior_of_the_Novice_Driver(科研通-ablesci.com).pdf",
+    "has_fulltext": true,
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/40-Priority_Design_in_Multi-Target_AR-HUD_Warning__Evidence_from_Eye_Movement_and_Behavior_of_the_Novice_Driver(科研通-ablesci.com).txt"
+  },
+  {
+    "idx": 41,
+    "doi": "10.1145/2799250.2799253",
+    "title": "An investigation of augmented reality presentations of landmark-based navigation using a head-up display",
+    "year": 2015,
+    "authors": [
+      "Adam Bolton",
+      "Gary Burnett",
+      "David R Large"
+    ],
+    "venue": "Proceedings of the 7th International Conference on Automotive User Interfaces and Interactive Vehicular Applications",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1145/2799250.2799253",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/41_2015_An_investigation_of_augmented_reality_presentations_of_landmark-based_navigation.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/41_2015_An_investigation_of_augmented_reality_presentations_of_landmark-based_navigation.txt",
+    "has_fulltext": true,
+    "cited_by": 59,
+    "source_list": "list1",
+    "ref_key": "bolton2015"
+  },
+  {
+    "idx": 42,
+    "doi": "10.1111/nyas.70167",
+    "title": "Hierarchical Feature Evaluation and Decision‑Making for In‐Vehicle Augmented‐Reality Head‐Up Display Based on Pythagorean Hamacher Aggregation",
+    "year": 2026,
+    "authors": [
+      "Hongru Chen",
+      "Weixing Wang",
+      "Jiaqi Gao",
+      "Xinyu Tao",
+      "Zhikai Li",
+      "Qin Lu",
+      "Yan Liu",
+      "Jianghu Huang"
+    ],
+    "venue": "Annals of the New York Academy of Sciences",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1111/nyas.70167",
+    "abstract": "ABSTRACT The rapid proliferation of automotive augmented‐reality head‐up displays (AR‐HUDs) in intelligent‐driving systems has increased the need for rigorous multidimensional performance evaluation—a task complicated by data heterogeneity and cognitive uncertainty. To address this dual challenge, we propose a comprehensive decision‐making method that combines Pythagorean fuzzy set and Hamacher confidence‐weighted aggregation operator (PyHa‐CWAO) and embeds it in a novel hierarchical evaluation framework that separately appraises the static basic information layer (SBIL) and the dynamic AR fusion layer (DAFL) before synthesizing the results. We further propose a hyperbolic tendency‐confidence fused scoring model for the first time, which simultaneously captures subjective hesitation and confidence weights while amplifying interalternative discrimination. Combining DEMATEL for causal‐relationship elicitation with VIKOR for multicriteria ranking yields the integrated PyHa‐CWAO–DEMATEL–VIKOR decision model. A driving‐simulation and eye‐tracking experiment evaluated 10 AR‐HUD prototypes (six DAFL, four SBIL) across 12 objective and subjective indicators. Compared with three established multicriteria decision‐making methods, the proposed model improves ranking consistency by 14%, confirming its robustness and practical value. Overall, this work offers an accurate, resilient, and extensible decision tool for AR‐HUD and broader extended reality interfaces, enriching fuzzy‐decision theory and providing a methodological foundation for future virtual human−computer interaction optimization.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list1",
+    "ref_key": "chenh2026"
+  },
+  {
+    "idx": 43,
+    "doi": "10.1080/15389588.2023.2186735",
+    "title": "Inattentional blindness to unexpected hazard in augmented reality head-up display assisted driving: The impact of the relative position between stimulus and augmented graph",
+    "year": 2023,
+    "authors": [
+      "Wanting Chen",
+      "Jiaqing Song",
+      "Yuwei Wang",
+      "Changxu Wu",
+      "Shu Ma",
+      "Duming Wang",
+      "Zhen Yang",
+      "Hongting Li"
+    ],
+    "venue": "Traffic Injury Prevention",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/15389588.2023.2186735",
+    "abstract": "Abstract Objective An augmented reality head-up display (AR-HUD) is a promising technology in assisted driving. It provides additional information in the driving environment. However, considering the registration problem related to the limitations of interactive technology, we suspect that an AR-HUD may not be able to recognize unpredictable stimuli in a timely manner, inducing inattentional blindness to these non-augmented stimuli. Actually, non-augmented stimuli may accidentally have a brief superimposition to AR graphics. This condition may also influence the rate of inattentional blindness accordingly. Thus, this study examined the problem of inattentional blindness in AR-HUD systems that may result from the immaturity of AR technology. Method We investigated the impact of AR graphic position (peripheral AOI v.s. central AOI) and the relative position of the AR graphic on unpredictable stimuli (on-HUD hazard v.s. off-HUD hazard) on the occurrence of inattentional blindness. Thirty Participants watched an AR-augmented driving video that included four augmented conditions. Participants were instructed to respond to four critical events (speeding, running of red lights, unexpected pedestrians or motorcycles). The rate of inattentional blindness and response time were recorded. We only analyzed data on unexpected pedestrian and motorcycle incidents. Results The relative position of the AR graphic on unpredictable stimuli and AR graphic positions significantly affected the rate of inattentional blindness and response time. Drivers had a higher rate of inattentional blindness to the unpredictable stimulus briefly superimposed on the AR graphic (i.e., on-HUD hazard) in the peripheral visual field (i.e., peripheral AOI). Also, drivers exhibited a higher rate of inattentional blindness to the unpredictable stimuli outside the AR graphic (i.e., off-HUD hazard) in the central visual field (i.e., central AOI). Conclusion The study is expected to be beneficial for furthering the design of an AR-HUD-assisted system to reduce inattentional blindness in driving. Our results found that in the peripheral visual field, unpredictable stimuli accidentally superimposed on the AR graphic (i.e., on-HUD hazard) lead to a higher probability of ignoring the accidental events and seemed to require a longer response time for drivers. This study illustrated that inattentional blindness to non-augmented stimuli is also influenced by the AR graphic position when AR technology fails to augment them in a timely manner. An important recommendation emerging from this work is to consider the design of AR graphics according to the AR graphic positions and stimulus types to reduce the occurrence of inattentional blindness.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 26,
+    "source_list": "list1",
+    "ref_key": "chenw2023ib"
+  },
+  {
+    "idx": 44,
+    "doi": "10.1016/j.trf.2019.07.004",
+    "title": "Drivers’ recognition of pedestrian road-crossing intentions: Performance and process",
+    "year": 2019,
+    "authors": [
+      "Wenxiang Chen",
+      "Xiangling Zhuang",
+      "Zixin Cui",
+      "Guojie Ma"
+    ],
+    "venue": "Transportation Research Part F: Traffic Psychology and Behaviour",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.trf.2019.07.004",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/44_2019_Drivers_recognition_of_pedestrian_road-crossing_intentions_Performance_and_proce.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/44_2019_Drivers_recognition_of_pedestrian_road-crossing_intentions_Performance_and_proce.txt",
+    "has_fulltext": true,
+    "cited_by": 39,
+    "source_list": "list1",
+    "ref_key": "chenw2019ped"
+  },
+  {
+    "idx": 45,
+    "doi": "10.1016/j.trip.2023.100767",
+    "title": "Does the AR-HUD system affect driving behaviour? An eye-tracking experiment study",
+    "year": 2023,
+    "authors": [
+      "Yu-nuo Cheng",
+      "Xia Zhong",
+      "Li-wei Tian"
+    ],
+    "venue": "Transportation Research Interdisciplinary Perspectives",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.trip.2023.100767",
+    "abstract": "In recent years, the continuous development of in-vehicle information systems (IVIS) has greatly enriched the driving experience, while also occupying the driver’s cognitive resources to varying degrees, causing driving distraction. Therefore, studying the influence of the AR-HUD (Augmented Reality Head-up Display, AR-HUD) system on driving behaviour is of great significance for the in-vehicle information system to manage the complexity of information and enhance driving safety. This experiment applied five typical risky driving scenarios under two lighting conditions (daytime and night), as stimulus materials. The effects of eye movement behaviour and risk reaction time indicators during driving were comprehensively analysed. The experiment results showed that the AR-HUD system can significantly improve the subjects' attention to risky AOIs (Area of Interest, AOI) in night driving situations, as well as reduce the difficulty of processing information in risky driving scenarios, thus reducing cognitive load; In terms of reaction time, the AR-HUD system can significantly reduce the driver's perception time for risky driving scenarios, thus responding to risky situations more quickly. The experiment conclusions verified the role of AR-HUD technology in improving driving safety and driving behaviour, and provide a new direction for the future development of in-vehicle information systems.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 23,
+    "source_list": "list1",
+    "ref_key": "cheng2023trip"
+  },
+  {
+    "idx": 46,
+    "doi": "10.1162/pres_a_00320",
+    "title": "Fostering User Acceptance and Trust in Fully Automated Vehicles: Evaluating the Potential of Augmented Reality",
+    "year": 2018,
+    "authors": [
+      "Philipp Wintersberger",
+      "Anna-Katharina Frison",
+      "Andreas Riener",
+      "Tamara von Sawitzky"
+    ],
+    "venue": "PRESENCE: Virtual and Augmented Reality",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1162/pres_a_00320",
+    "abstract": " Abstract \n                   Lack of trust in or acceptance of technology are some of the fundamental problems that might prevent the dissemination of automated driving. Technological advances, such as augmented reality aids like full-sized windshield displays or AR contact lenses, could be of help to provide a better system understanding to the user. In this work, we picked up on the question of whether augmented reality assistance has the potential to increase user acceptance and trust by communicating system decisions (i.e., transparent system behavior). To prove our hypothesis, we conducted two driving simulator studies to investigate the benefit of scenario augmentation in fully automated driving—first in normal (N=26) and then in rearward viewing (N=18) direction. Quantitative results indicate that the augmentation of traffic objects/participants otherwise invisible (e.g., due to dense fog), or the presentation of upcoming driving maneuvers while sitting backwards, is a feasible approach to increase user acceptance and trust. Results are further backed by qualitative findings from semistructured interviews and UX curves (a method to retrospectively report experience over time). We conclude that the application of augmented reality, in particular with the emergence of more powerful, lightweight, or integrated devices, is a good opportunity with high potential for automated driving. ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/46_2018_Fostering_User_Acceptance_and_Trust_in_Fully_Automated_Vehicles_Evaluating_the_P.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/46_2018_Fostering_User_Acceptance_and_Trust_in_Fully_Automated_Vehicles_Evaluating_the_P.txt",
+    "has_fulltext": true,
+    "cited_by": 119,
+    "source_list": "list1",
+    "ref_key": "wintersberger2018"
+  },
+  {
+    "idx": 47,
+    "doi": "10.1109/itsc48978.2021.9561107",
+    "title": "Graph-SIM: A Graph-based Spatiotemporal Interaction Modelling for Pedestrian Action Prediction",
+    "year": 2021,
+    "authors": [
+      "Tiffany Yau",
+      "Saber Malekmohammadi",
+      "Amir Rasouli",
+      "Peter Lakner",
+      "Mohsen Rohani",
+      "Jun Luo"
+    ],
+    "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc48978.2021.9561107",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/47_2021_Graph-SIM_A_Graph-based_Spatiotemporal_Interaction_Modelling_for_Pedestrian_Acti.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/47_2021_Graph-SIM_A_Graph-based_Spatiotemporal_Interaction_Modelling_for_Pedestrian_Acti.txt",
+    "has_fulltext": true,
+    "cited_by": 20,
+    "source_list": "list1",
+    "ref_key": "graphsim2021"
+  },
+  {
+    "idx": 48,
+    "doi": "10.1080/10447318.2024.2400376",
+    "title": "The Effect of Dynamic Effects and Color Transparency of AR-HUD Navigation Graphics on Driving Behavior Regarding Inattentional Blindness",
+    "year": 2024,
+    "authors": [
+      "Guanhua Hou",
+      "Qi Dong",
+      "Huiwen Wang"
+    ],
+    "venue": "International Journal of Human–Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2024.2400376",
+    "abstract": "Abstract In-vehicle Augmented Reality Head-Up Displays (AR-HUDs) offer drivers integrated navigation and vehicle status information, thereby improving the driving experience. Many studies explored the effects of AR-HUD navigation design and information presentation on driving performance; however, these studies neglected the occurrence of inattentional blindness, which may lead to potential safety hazards. This study used a two-factor within-subjects design to investigate how dynamic effects (pulsation, blinking, movement) and color transparency levels (T1, T0.75, T0.5, T0.35) of AR-HUD navigation graphics influence inattentional blindness and user experience. The results indicated that color transparency significantly affects the drivers’ inattentional blindness behavior and user experience. Specifically, T0.75 resulted in the lowest inattentional blindness, while T0.5 was associated with the shortest reaction time (without blindness) and highest user satisfaction. Dynamic effects did not significantly impact inattentional blindness, but blinking reduced reaction time (without blindness). This study provides design insights for vehicle AR-HUD navigation interfaces.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 18,
+    "source_list": "list1",
+    "ref_key": "hou2025dyn"
+  },
+  {
+    "idx": 49,
+    "doi": "10.1080/15389588.2022.2055752",
+    "title": "The impact of different AR-HUD virtual warning interfaces on the takeover performance and visual characteristics of autonomous vehicles",
+    "year": 2022,
+    "authors": [
+      "Chunhui Jing",
+      "Chenguang Shang",
+      "Dongyu Yu",
+      "Yaodong Chen",
+      "Jinyi Zhi"
+    ],
+    "venue": "Traffic Injury Prevention",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/15389588.2022.2055752",
+    "abstract": "Abstract Objective The objective of this study was to determine the different effects of the arrow-pointing augmented reality head-up display (AR-HUD) interface, virtual shadow AR-HUD interface, and non-AR-HUD interface on autonomous vehicle takeover efficiency and driver eye movement characteristics in different driving scenarios. Methods Thirty-six participants were selected to carry out a simulated driving experiment, and the eye movement index and takeover time were analyzed. Results The arrow pointing AR-HUD interface and the virtual shadow AR-HUD interface could effectively reduce the driver's visual distraction, improve the efficiency of obtaining visual information, reduce the number of times the driver's eyes leave the road, and improve the efficiency of the takeover compared with the non-AR-HUD interface, but there was no significant difference in eye movement indexes between the arrow pointing AR-HUD interface and the more eye-catching virtual shadow AR-HUD interface. When specific scenarios were considered, it was found that in the scenario of emergency braking of the vehicle in front, the arrow pointing AR-HUD interface and the virtual shadow AR-HUD interface had more advantages in takeover efficiency than the non-AR-HUD interface. However, in the scenarios of a rear vehicle overtaking the vehicle ahead and non-motor vehicles running red lights, there was no significant difference in takeover efficiency. For the non-motor vehicle invading the line, emergency U-turn of the vehicle in front, and pedestrian crossing scenarios, the virtual shadow AR-HUD interface had the highest takeover efficiency. Conclusions These research results can help improve the active safety of autonomous vehicle AR-HUD interfaces.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 37,
+    "source_list": "list1",
+    "ref_key": "jing2022"
+  },
+  {
+    "idx": 50,
+    "doi": "10.1109/iv47402.2020.9304610",
+    "title": "Evaluation of AR-HUD Interface During an Automated Intervention in Manual Driving",
+    "year": 2020,
+    "authors": [
+      "Nihan Karatas",
+      "Takahiro Tanaka",
+      "Kazuhiro Fujikakc",
+      "Yuki Yoshihara",
+      "Hitoshi Kanamori",
+      "Yoshitaka Fuwamoto",
+      "Morihiko Yoshida"
+    ],
+    "venue": "2020 IEEE Intelligent Vehicles Symposium (IV)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/iv47402.2020.9304610",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/50_2020_Evaluation_of_AR-HUD_Interface_During_an_Automated_Intervention_in_Manual_Drivin.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/50_2020_Evaluation_of_AR-HUD_Interface_During_an_Automated_Intervention_in_Manual_Drivin.txt",
+    "has_fulltext": true,
+    "cited_by": 19,
+    "source_list": "list1",
+    "ref_key": "karatas2020"
+  },
+  {
+    "idx": 51,
+    "doi": "10.1109/itsc.2016.7795767",
+    "title": "Augmented reality versus classical HUD to take over from automated driving: An aid to smooth reactions and to anticipate maneuvers",
+    "year": 2016,
+    "authors": [
+      "S. Langlois",
+      "B. Soualmi"
+    ],
+    "venue": "2016 IEEE 19th International Conference on Intelligent Transportation Systems (ITSC)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc.2016.7795767",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/51_2016_Augmented_reality_versus_classical_HUD_to_take_over_from_automated_driving_An_ai.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/51_2016_Augmented_reality_versus_classical_HUD_to_take_over_from_automated_driving_An_ai.txt",
+    "has_fulltext": true,
+    "cited_by": 66,
+    "source_list": "list1",
+    "ref_key": "langlois2016"
+  },
+  {
+    "idx": 52,
+    "doi": "10.1002/jsid.2096",
+    "title": "Effects of Driving Background Complexity and Interface Opacity on Visual Cognition in AR‐HUD Systems",
+    "year": 2025,
+    "authors": [
+      "Jing Li",
+      "Chuchu Wang",
+      "Mo Chen"
+    ],
+    "venue": "Journal of the Society for Information Display",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1002/jsid.2096",
+    "abstract": "ABSTRACT The cognitive effectiveness of AR‐HUD interfaces is influenced by driving background complexity (DBC) and information opacity. This study explores how they impact visual cognition and reaction efficiency using a dual‐phase experimental approach. In Experiment I, a subjective evaluation classified DBC into low, medium, and high levels based on static driving scene images. This was followed by an objective assessment of the complexity of color variety, edge density, and texture features for the selected L‐DBC, M‐DBC, and H‐DBC images. Experiment II then employed eye‐tracking metrics (reaction time, mean pupil diameter, and AOI fixation duration) to evaluate participants' visual performance across 10 opacity gradients (0.1–1.0). Results revealed significant interactions between DBC and opacity levels. Under L‐DBC, M‐DBC, and H‐DBC conditions, the relationship between information opacity and reaction times exhibited different phases. To optimize visual cognitive performance, AR‐HUD opacity should be set at a minimum of 0.6. When opacity levels are below 0.7, the greater the DBC, the longer the response time for the same opacity. When the information opacity is above 0.7, quicker reaction times can be achieved, regardless of whether the DBC is high or low. These findings offer valuable design guidelines for optimizing AR‐HUD text opacity in complex driving backgrounds.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 3,
+    "source_list": "list1",
+    "ref_key": "lij2025opa"
+  },
+  {
+    "idx": 53,
+    "doi": "10.1016/j.apergo.2025.104610",
+    "title": "Opacity in car augmented reality head-up displays: users’ preferences, visual attention, and situation awareness",
+    "year": 2025,
+    "authors": [
+      "Juan Camilo Lopez",
+      "Nadine Marie Moacdieh"
+    ],
+    "venue": "Applied Ergonomics",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.apergo.2025.104610",
+    "abstract": "Car augmented-reality heads-up displays (AR-HUDs) superimpose driving information on the outside view. However, there are concerns that AR-HUDs may be distracting and questions remain about how best to present AR-HUD imagery. This study explores people's opinions about AR-HUD opacity and its effects on driver attention and situation awareness. Videos of driving scenes were created and navigation-related AR-HUD imagery was added at different opacity levels. Twenty-seven participants watched these videos while their eye movements were tracked. Participants answered questions related to the opacity of the AR-HUD imagery and to their situation awareness. Results suggest that drivers are ambivalent about AR-HUD opacity, opacity affects how people look at and perceive the roadside environment, opacity levels of 20 % and 60 % both support situation awareness, and the effects of AR-HUD opacity are different for different types of AR-HUD imagery. Thus, AR-HUD opacity levels need to be further investigated to maximize driving safety.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 2,
+    "source_list": "list1",
+    "ref_key": "lopez2025"
+  },
+  {
+    "idx": 54,
+    "doi": "10.1109/tvcg.2018.2868531",
+    "title": "Augmented Reality Interface Design Approaches for Goal-directed and Stimulus-driven Driving Tasks",
+    "year": 2018,
+    "authors": [
+      "Coleman Merenda",
+      "Hyungil Kim",
+      "Kyle Tanous",
+      "Joseph L. Gabbard",
+      "Blake Feichtl",
+      "Teruhisa Misu",
+      "Chihiro Suga"
+    ],
+    "venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/tvcg.2018.2868531",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/54_2018_Augmented_Reality_Interface_Design_Approaches_for_Goal-directed_and_Stimulus-dri.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/54_2018_Augmented_Reality_Interface_Design_Approaches_for_Goal-directed_and_Stimulus-dri.txt",
+    "has_fulltext": true,
+    "cited_by": 69,
+    "source_list": "list1",
+    "ref_key": "merenda2018"
+  },
+  {
+    "idx": 55,
+    "doi": "10.1016/j.aap.2012.07.026",
+    "title": "Attentional differences in driving judgments for country and city scenes: Semantic congruency in inattentional blindness",
+    "year": 2013,
+    "authors": [
+      "Kristen Pammer",
+      "Caroline Blink"
+    ],
+    "venue": "Accident Analysis &amp; Prevention",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.aap.2012.07.026",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/55_2013_Attentional_differences_in_driving_judgments_for_country_and_city_scenes_Semanti.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/55_2013_Attentional_differences_in_driving_judgments_for_country_and_city_scenes_Semanti.txt",
+    "has_fulltext": true,
+    "cited_by": 30,
+    "source_list": "list1",
+    "ref_key": "pammer2013"
+  },
+  {
+    "idx": 56,
+    "doi": "10.1007/978-3-642-39238-2_43",
+    "title": "Efficient Information Representation Method for Driver-Centered AR-HUD System",
+    "year": 2013,
+    "authors": [
+      "Hyesun Park",
+      "Kyong-ho Kim"
+    ],
+    "venue": "Lecture Notes in Computer Science",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1007/978-3-642-39238-2_43",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/56_2013_Efficient_Information_Representation_Method_for_Driver-Centered_AR-HUD_System.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/56_2013_Efficient_Information_Representation_Method_for_Driver-Centered_AR-HUD_System.txt",
+    "has_fulltext": true,
+    "cited_by": 29,
+    "source_list": "list1",
+    "ref_key": "park2013eff"
+  },
+  {
+    "idx": 57,
+    "doi": "10.1016/j.promfg.2015.07.678",
+    "title": "A Comparison of Display Concepts for a Navigation System in an Automotive Contact Analog Head-up Display",
+    "year": 2015,
+    "authors": [
+      "Lisa Pfannmüller",
+      "Martina Kramer",
+      "Bernhard Senner",
+      "Klaus Bengler"
+    ],
+    "venue": "Procedia Manufacturing",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.promfg.2015.07.678",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/57_2015_A_Comparison_of_Display_Concepts_for_a_Navigation_System_in_an_Automotive_Contac.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/57_2015_A_Comparison_of_Display_Concepts_for_a_Navigation_System_in_an_Automotive_Contac.txt",
+    "has_fulltext": true,
+    "cited_by": 34,
+    "source_list": "list1",
+    "ref_key": "pfann2015"
+  },
+  {
+    "idx": 58,
+    "doi": "10.1146/annurev-vision-110423-025626",
+    "title": "SPIDER 2.0: Driver Distraction and Visual Attention",
+    "year": 2025,
+    "authors": [
+      "David L. Strayer",
+      "Amy S. McDonnell"
+    ],
+    "venue": "Annual Review of Vision Science",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1146/annurev-vision-110423-025626",
+    "abstract": "Driving is a complex multisensory experience that requires the integration of various sensory inputs to maintain effective situational awareness, with vision and visual attention being paramount for safe driving. However, multitasking significantly degrades a driver's situational awareness and causes them to overlook or misjudge important aspects of their environment, such as pedestrians, road signs, or other vehicles. It also impairs a driver's ability to visually scan for hazards and process vital information, reducing their capacity to notice and respond to changes on the roadway. Multitasking can also induce inattentional blindness, causing drivers to miss important information directly in their line of sight. Beyond diminished visual attention, multitasking also slows reaction times to detected events, increasing the likelihood and severity of crashes. This article discusses the central role that visual attention plays in a driver's situational awareness, examines common methods for assessing visual attention while driving, and presents an updated review of the SPIDER (scanning, predicting, identification, decision-making, and executing a response) model of driver awareness with a focus on visual distraction.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 4,
+    "source_list": "list1",
+    "ref_key": "strayer2025"
+  },
+  {
+    "idx": 59,
+    "doi": "10.1016/j.ijhcs.2023.103194",
+    "title": "A new dynamic spatial information design framework for AR-HUD to evoke drivers’ instinctive responses and improve accident prevention",
+    "year": 2024,
+    "authors": [
+      "Jianmin Wang",
+      "Jingyan Yang",
+      "Qianwen Fu",
+      "Jie Zhang",
+      "Jun Zhang"
+    ],
+    "venue": "International Journal of Human-Computer Studies",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.ijhcs.2023.103194",
+    "abstract": "Driver’s instinctive responses and skill-based behaviors enable them to react faster and better control their vehicle in dangerous situations. This study incorporated dynamic spatial information design (DSID) in an augmented reality head-up display (AR-HUD) under manual driving conditions. By integrating the skill, rule, and knowledge (SRK) taxonomy and situation awareness (SA) theory, our AR-HUD successfully evoked drivers’ instinctive responses and improved driving safety. First, we converted symbol and sign information processed at the knowledge-based and rule-based levels, respectively, into signal information processed at the skill-based level. Then we developed four AR-HUD interfaces with different dynamic designs for use in a hazardous scenario at an intersection. Finally, we investigated each design’s impact on drivers’ SA and driving performance. Experimental results demonstrated that our DSID enhanced drivers’ SA and accident-avoidance capabilities while reducing their cognitive workload. Among the four AR-HUD interfaces, the one that incorporated all three information elements under study (i.e., lateral warning, dynamic driving space, and speedometer) performed the best. This indicates that our proposed framework has potential applications in other similar dangerous driving scenarios, thus contributing to the development of safer and more efficient driving environments.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 33,
+    "source_list": "list1",
+    "ref_key": "wangj2024dyn"
+  },
+  {
+    "idx": 60,
+    "doi": "10.1080/10447318.2021.1970434",
+    "title": "Inattentional Blindness in Augmented Reality Head-Up Display-Assisted Driving",
+    "year": 2021,
+    "authors": [
+      "Yuwei Wang",
+      "Yimin Wu",
+      "Cheng Chen",
+      "Bohan Wu",
+      "Shu Ma",
+      "Duming Wang",
+      "Hongting Li",
+      "Zhen Yang"
+    ],
+    "venue": "International Journal of Human–Computer Interaction",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2021.1970434",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/60_2021_Inattentional_Blindness_in_Augmented_Reality_Head-Up_Display-Assisted_Driving.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/60_2021_Inattentional_Blindness_in_Augmented_Reality_Head-Up_Display-Assisted_Driving.txt",
+    "has_fulltext": true,
+    "cited_by": 56,
+    "source_list": "list1",
+    "ref_key": "wangy2021ib"
+  },
+  {
+    "idx": 61,
+    "doi": "10.1109/cvci66304.2025.11348153",
+    "title": "Study on AR-HUD Design in Unprotected Intersection Scenario Under Autonomous Driving",
+    "year": 2025,
+    "authors": [
+      "Chang Wei",
+      "Yangbin Jin",
+      "Yingying Fu",
+      "Yutian Zhang",
+      "Yating Su",
+      "Wenbo Li"
+    ],
+    "venue": "2025 9th CAA International Conference on Vehicular Control and Intelligence (CVCI)",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/cvci66304.2025.11348153",
+    "abstract": "Autonomous driving technology is evolving from assisted driving to fully autonomous driving. However, there are still some technical challenges in the industry that lead to a lack of trust from drivers, which affects driving safety and user experience. As one of the important components of the intelligent cockpit, the head-up display (HUD) technology can improve driving safety and trust in autonomous driving. The combination of HUD and augmented reality (AR) technology, known as AR-HUD, is an important future technological direction. However, the design of AR-HUD faces the problem of high information density, which can easily cause interference and burden to drivers. Therefore, this paper researches ARHUD design schemes based on human-machine trust and visual load. The unprotected intersection scenario is selected as the starting point. Through user-need research, high-demand ARHUD driving-assistance information is screened. The “distance warning for surrounding vehicles” information, which has the highest demand, is used as the essential information. Based on different combinations of “trajectory prediction of ego vehicle” “trajectory prediction of surrounding vehicles” and “blind spot video”, the design and comparative testing of schemes are carried out. Subjective and eye-tracking data are collected. The trust degree and load degree of participants in autonomous driving under different schemes are comprehensively evaluated. Finally, through data analysis, it is found that there is no significant difference in trust among different schemes. The combination of “trajectory prediction of surrounding vehicles” and “blind spot video” has the lowest workload. It can be considered that the combination of these two types of information is relatively optimal, which will bring significant improvement to driving trust and safety in autonomous driving.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list1",
+    "ref_key": "wei2025inter"
+  },
+  {
+    "idx": 62,
+    "doi": "10.1016/j.aap.2018.01.040",
+    "title": "How to warn drivers in various safety-critical situations – Different strategies, different reactions",
+    "year": 2018,
+    "authors": [
+      "Susann Winkler",
+      "Juela Kazazi",
+      "Mark Vollrath"
+    ],
+    "venue": "Accident Analysis &amp; Prevention",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.aap.2018.01.040",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/62_2018_How_to_warn_drivers_in_various_safety-critical_situations_Different_strategies_d.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/62_2018_How_to_warn_drivers_in_various_safety-critical_situations_Different_strategies_d.txt",
+    "has_fulltext": true,
+    "cited_by": 48,
+    "source_list": "list1",
+    "ref_key": "winklers2018"
+  },
+  {
+    "idx": 63,
+    "doi": "10.1080/10447318.2023.2254645",
+    "title": "The Effect of AR-HUD Takeover Assistance Types on Driver Situation Awareness in Highly Automated Driving: A 360-Degree Panorama Experiment",
+    "year": 2023,
+    "authors": [
+      "Zhendong Wu",
+      "Lintao Zhao",
+      "Guocui Liu",
+      "Jingchun Chai",
+      "Jierui Huang",
+      "Xiaoqun Ai"
+    ],
+    "venue": "International Journal of Human–Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2023.2254645",
+    "abstract": "Abstract Human-machine co-driving presents a significant hurdle in automated driving system. The takeover process in automated driving system involves complex human factors, failure to takeover the vehicle and control driving behavior during the takeover process may lead to severe traffic safety hazards. An augmented reality head-up display (AR-HUD) takeover assistance information can provide real-time assistance information to the driving environment, enhancing drivers’ situation awareness (SA) and takeover decisions in highly automated driving system. This study investigated the impact of different AR-HUD types of takeover assistance information display. Three AR-HUD types, corresponding to the three pre-takeover behavioral processes (perception, understanding, and prediction), were evaluated: PSR (assistance in perceiving the source of risk), AS (assistance in analyzing situations), and MD (assistance in making decisions). The baseline (without assistance information) was used as the control group. In a driving simulation experiment using 360° panoramic video, seventy-nine participants performed SA assessment and visual tracking tasks. Questionnaire and eye-tracking data indicated that the type of AR-HUD displayed positively influenced drivers’ SA and takeover decisions, with AS being the most effective in enhancing SA and improving takeover performance. Additionally, this study compared the differences between the three types of AR-HUD and the baseline under two takeover request lead times (TORlt) of 5 seconds and 7 seconds. It was found that drivers’ SA was lower when TORlt was shorter (with the corresponding AR-HUD display also being shorter). This study provides insight concerning the impact of various types of AR-HUD takeover assistance information display and TORlt on driving safety. The findings support the further optimization of AR-HUD takeover assistance information design.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 32,
+    "source_list": "list1",
+    "ref_key": "wuz2024take"
+  },
+  {
+    "idx": 64,
+    "doi": "10.1016/j.trf.2024.06.001",
+    "title": "In-vehicle human–machine interface guidelines for augmented reality head-up displays: A review, guideline formulation, and future research directions",
+    "year": 2024,
+    "authors": [
+      "Putra A.R. Yamin",
+      "Jaehyun Park",
+      "Hyun K. Kim"
+    ],
+    "venue": "Transportation Research Part F: Traffic Psychology and Behaviour",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.trf.2024.06.001",
+    "abstract": "",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 35,
+    "source_list": "list1",
+    "ref_key": "yamin2024guide"
+  },
+  {
+    "idx": 65,
+    "doi": "10.1080/10447318.2023.2233734",
+    "title": "A Novel Cooperation-Guided Warning of Invisible Danger from AR-HUD to Enhance Driver’s Perception",
+    "year": 2023,
+    "authors": [
+      "Fang You",
+      "Jun Zhang",
+      "Jie Zhang",
+      "Lian Shen",
+      "Weixuan Fang",
+      "Wei Cui",
+      "Jianmin Wang"
+    ],
+    "venue": "International Journal of Human–Computer Interaction",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/10447318.2023.2233734",
+    "abstract": "Abstract Augmented Reality (AR) has the potential to help drivers become aware of invisible hazards through an Augmented Reality Head-Up Display (AR-HUD). However, this issue is still underexplored. To address it, a novel warning system for invisible dangers in AR-HUD user interfaces has been designed as a carrier for agents' cognitive information to enhance driver perception. This design was created by using a team cooperation perception model that combined the perception cycle of a human driver with a computational agent. Furthermore, user experiments were conducted to investigate the impact of this design on safe driving in two typical scenarios. The experimental results showed that this design can significantly improve drivers’ situation awareness and reaction time in both human-driving and auto-pilot modes, and enhance human drivers' trust in the auto-pilot system. The model and design can be generalized to more AR-HUD scenarios requiring human-machine perception and cognitive cooperation.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 20,
+    "source_list": "list1",
+    "ref_key": "you2024coop"
+  },
+  {
+    "idx": 66,
+    "doi": "10.1080/15389588.2024.2337120",
+    "title": "Effects of a color gradient and emoji in AR-HUD warning interfaces in autonomous vehicles on takeover performance and driver emotions",
+    "year": 2024,
+    "authors": [
+      "Kaidi Yu",
+      "Dandan Du",
+      "Dongyu Yu",
+      "Jinyi Zhi",
+      "Yun Wang",
+      "Chunhui Jing"
+    ],
+    "venue": "Traffic Injury Prevention",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1080/15389588.2024.2337120",
+    "abstract": "Abstract Objective This study examined the effects of color gradients and emojis in an augmented reality-head-up display (AR-HUD) warning interface on driver emotions and takeover performance. Methods A total of 48 participants were grouped into four different warning interfaces for a simulated self-driving takeover experiment. Two-way analysis of variance and the Kruskal–Wallis test was used to analyze takeover time, mood, task load, and system availability. Results Takeover efficiency and task load did not significantly differ among the interfaces, but the interfaces with a color gradient and emoji positively affected drivers’ emotions. Emojis also positively affected emotional valence, and the color gradient had a high emotional arousal effect. Both the color gradient and the emoji interfaces had an inhibitory effect on negative emotions. The emoji interface was easier to learn, reducing driver learning costs. Conclusions These findings offer valuable insights for designing safer and more user-friendly AR-HUD interfaces for self-driving cars.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 12,
+    "source_list": "list1",
+    "ref_key": "yuk2024emoji"
+  },
+  {
+    "idx": 67,
+    "doi": "10.1504/ijvd.2023.133262",
+    "title": "How does AR-HUD system affect driving behaviour Evidence from an eye-tracking experiment study",
+    "year": 2023,
+    "authors": [
+      "Cheng Yunuo",
+      "Zhong Xia",
+      "Tian Liwei"
+    ],
+    "venue": "International Journal of Vehicle Design",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1504/ijvd.2023.133262",
+    "abstract": "In response to the issue of whether the AR-HUD system can effectively manage information complexity and improve driving safety, this article applied a driving simulator to experimentally measure the response ability of participants to risks in five risky driving scenarios. The experiment results showed that the augmented reality head-up display (AR-HUD) system can significantly improve the subjects' attention to risky dynamic areas of interest (AOI) in night driving situations, as well as reduce the difficulty of processing information in risky driving scenarios, thus reducing cognitive load. In terms of reaction time, the AR-HUD system can significantly reduce the driver perception time for risk driving scenarios and thus they can respond more quickly to high-risk situations. The experimental conclusions validate the role of AR-HUD technology in improving driving safety and driving behaviour and provide a new direction for further development of in-vehicle information systems (IVIS).",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 5,
+    "source_list": "list1",
+    "ref_key": "yunuo2023ijvd"
+  },
+  {
+    "idx": 68,
+    "doi": "10.1117/12.3054840",
+    "title": "The impact of AR-HUD lane enhancement on lateral control performance under fog conditions",
+    "year": 2024,
+    "authors": [
+      "Mengjin Zeng",
+      "Qiuyang Tang",
+      "Pingping Deng",
+      "Yuchen Jia",
+      "Yu Zhang",
+      "Haolin Chen",
+      "Duan Yu",
+      "Xiaohua Zhao"
+    ],
+    "venue": "Eighth International Conference on Traffic Engineering and Transportation System (ICTETS 2024)",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1117/12.3054840",
+    "abstract": "This study investigates the impact of Augmented Reality Head-Up Display (AR-HUD) lane enhancement system on lateral control performance in fog conditions. Using Unity-based simulations, a controlled, immersive driving scenario in fog was created to assess the impact of the AR-HUD system on lateral control performance. Participants drove on a curved road in a foggy environment while their lateral control metrics, specifically steering speed (SS) and standard deviation of lateral position (SDLP), were monitored. The results showed that the AR-HUD system significantly reduced SS and SDLP in all driving segments, demonstrating improved steering accuracy and stability. Notably, the most significant improvements were observed during the initial phase when foggy conditions were encountered, i.e., the Approach Segment, highlighting the utility of the AR-HUD when transitioning to low visibility conditions.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list1",
+    "ref_key": "zeng2024fog"
+  },
+  {
+    "idx": 69,
+    "doi": "10.1109/access.2025.3588576",
+    "title": "Visual Saliency Design for AR-HUD Navigation in Extreme Weather: Reducing Inattentional Blindness",
+    "year": 2025,
+    "authors": [
+      "Qi Zhu",
+      "Jiale Li",
+      "Yixiang Liu"
+    ],
+    "venue": "IEEE Access",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/access.2025.3588576",
+    "abstract": "Background: Current research on AR-HUD visual icons focuses primarily on interface, color, and motion trajectory design. However, when displayed in complex environments, AR-HUD might cause inattentional blindness, particularly during extreme weather conditions where occurrence rates increase significantly. Methods: This study employed a two-factor within-subjects design to examine how dynamic saliency and contour saliency in AR-HUD navigation graphics affect inattentional blindness and user experience. Eye-tracking metrics with total fixation time and first fixation time, driver reaction time, and user experience scores were analyzed. Results: Objective measures revealed significant interaction effects between saliency types, though user experience feedback showed no significance. Both contour and dynamic saliency effectively reduced inattentional blindness and improved information-seeking efficiency. Conclusions: The combination of dynamic and contour saliency produced the lowest inattentional blindness rates, fastest reaction times, and highest user satisfaction. We recommend: 1) adding distinct contours to prevent environmental visual fusion, 2) implementing temporary icon enlargement during critical moments to enhance attentional capture. These findings provide actionable design principles for improving AR-HUD safety in adverse weather conditions.",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/69_2025_Visual_Saliency_Design_for_AR-HUD_Navigation_in_Extreme_Weather_Reducing_Inatten.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/69_2025_Visual_Saliency_Design_for_AR-HUD_Navigation_in_Extreme_Weather_Reducing_Inatten.txt",
+    "has_fulltext": true,
+    "cited_by": 6,
+    "source_list": "list1",
+    "ref_key": "zhu2025sal"
+  },
+  {
+    "idx": 70,
+    "doi": "10.24230/kjiop.v29i2.257-277",
+    "title": "Differences in drivers’ pedestrian avoidance response based on Warning timing, stimulus-response compatibility and Drivers’ distraction of auditory pedestrian collision warning system",
+    "year": 2016,
+    "authors": [
+      "Hyunmin Kang",
+      "Kwanghee Han",
+      "Jaesik Lee"
+    ],
+    "venue": "Korean Journal of Industrial and Organizational Psychology",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.24230/kjiop.v29i2.257-277",
+    "abstract": "In this study, the effects of auditory pedestrian collision warning system’s stimulus-response compatibility (compatible vs. incompatible) and warning timing(TTC: 2sec. vs. 4sec.) and type of driver distraction (control condition vs. auditory distraction vs. visual distraction) on pedestrian avoidance response were examined. The dependent measures were time to initial steering wheel maneuvering, steering wheel rotation angle, clearance distance to the pedestrian, ratio of pedestrian-collision and ratio of lane departure. The experiment used driving simulator and the results was as follows. First, the effects of stimulus-response compatibility appeared to differ as warning timing and types of driver distraction were varied. To be specific, stimulus-response incompatible condition was more suitable for auditory pedestrian collision warning system than stimulus-response compatible condition. Second, compare to 4sec, 2sec TTC condition yielded larger steering wheel rotation angle and higher ratios both in pedestrian-collision and lane departure. Third, among the types of driver distraction, the visual distraction impaired drivers’ ability to avoid the pedestrian most seriously. In conclusion, stimulus-response incompatible warnings which provided 4sec TTC condition seemed to be more reliable and useful in providing pedestrian-collision warning to drivers.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 1,
+    "source_list": "list2",
+    "ref_key": "kang2016ttc"
+  },
+  {
+    "idx": 71,
+    "doi": "10.1109/ictis.2015.7232174",
+    "title": "Effects of collision warning system under different warning timing on driving speed and distanc",
+    "year": 2015,
+    "authors": [
+      "Zhang Yuting",
+      "Li Xiaomeng",
+      "Yan Xuedong",
+      "Xue Qingwan"
+    ],
+    "venue": "2015 International Conference on Transportation Information and Safety (ICTIS)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/ictis.2015.7232174",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/71_2015_Effects_of_collision_warning_system_under_different_warning_timing_on_driving_sp.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/71_2015_Effects_of_collision_warning_system_under_different_warning_timing_on_driving_sp.txt",
+    "has_fulltext": true,
+    "cited_by": 3,
+    "source_list": "list2",
+    "ref_key": "zhangyt2015"
+  },
+  {
+    "idx": 72,
+    "doi": "10.1109/iciea.2013.6566508",
+    "title": "Forward collision warning system considering both time-to-collision and safety braking distance",
+    "year": 2013,
+    "authors": [
+      "Yuan-Lin Chen",
+      "Kun-Yuan Shen",
+      "Shun-Chung Wang"
+    ],
+    "venue": "2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/iciea.2013.6566508",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/72_2013_Forward_collision_warning_system_considering_both_time-to-collision_and_safety_b.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/72_2013_Forward_collision_warning_system_considering_both_time-to-collision_and_safety_b.txt",
+    "has_fulltext": true,
+    "cited_by": 20,
+    "source_list": "list2",
+    "ref_key": "chenyl2013fcw"
+  },
+  {
+    "idx": 73,
+    "doi": "10.1016/j.aap.2026.108635",
+    "title": "A-TTC: a multimodal fusion framework for personalized truck forward collision warning via dynamic threshold calibration",
+    "year": 2026,
+    "authors": [
+      "Yibing Wang",
+      "Qi He",
+      "Jingqiu Guo",
+      "Mark Stevenson",
+      "Yan Xu"
+    ],
+    "venue": "Accident Analysis & Prevention",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.aap.2026.108635",
+    "abstract": "Heavy trucks experience persistent forward collision risks due to driver heterogeneity and limitations of fixed-threshold Forward Collision Warning (FCW) systems, which fail to adapt to dynamic driver behavior categories and multimodal contextual cues. This study proposes the Adaptive Time-to-Avoidance (A-TTC) framework, a driver-in-the-loop FCW framework developed using a naturalistic dataset of 3,519 video-verified FCW-triggered events from 569 heavy trucks. To capture behavioral variability, a Multimodal Temporal Alignment Neural Network (MMTANN) is introduced, explicitly synchronizing facial cues, road scenes, and vehicle dynamics to infer driver behavior categories (Distracted, Normal, Harsh) with 84.80% accuracy. Leveraging this behavior category awareness, a hybrid approach utilizes a Gradient Boosting Decision Tree (GBDT) for real-time reaction-time prediction and a convolutional-enhanced Transformer (C-Trans) for braking-distance estimation, reducing prediction error (RMSE) by 51.8% over standard LSTM. These parameters dynamically calibrate a personalized TTA threshold against the real-time predicted minimum Time-to-Collision (TTC). In a retrospective event-based evaluation on pre-triggered FCW logs, A-TTC achieved an overall accuracy of 81.42% and reduced the event-level nuisance-warning proportion to 13.74%, while maintaining a threat-event recall of 89.25%. This research provides a data-driven and driver-adaptive approach to enhancing the safety and personalization of commercial vehicle collision avoidance systems.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list2",
+    "ref_key": "attc2025",
+    "preprint_doi": "10.2139/ssrn.6351998",
+    "preprint_abstract": "Heavy trucks experience persistent forward collision risks due to driver heterogeneity and limitations of fixed-threshold Forward Collision Warning (FCW) systems, which fail to adapt to dynamic driving states and multimodal contextual cues. This study assembled a large naturalistic dataset of 9,435 logged FCW triggers from 816 trucks; 3,519 events were video-verified and used for model development. A driver-adaptive FCW framework (A-TTC) is proposed that: i) detects heterogeneous driver states (e.g., distracted, harsh) using a multimodal attention network, ii) predicts driver reaction time and braking distance with a hybrid gradient-boosting plus convolutional-transformer model, and iii) integrates a dynamic time-to-avoidance threshold into FCW decision logic. On naturalistic events, A-TTC increased overall accuracy to 82.67%, and reduced the false-positive rate from 25.16% to 12.21%. In simulations spanning stationary, constant-speed, gradual- and emergency-deceleration scenarios, A-TTC matched or exceeded the best baseline in collision-avoidance success. Overall, adapting FCW thresholds to multimodal, state-aware driver representations substantially reduces nuisance alarms in heavy trucks without sacrificing hazard detection. This research provides a data-driven and driver-adaptive approach to enhancing the safety and personalization of commercial vehicle collision avoidance systems.",
+    "volume": "236",
+    "page": "108635",
+    "version_note": "2026-08 更正：原记录为 SSRN 预印本 10.2139/ssrn.6351998。正式版已发表于 Accident Analysis & Prevention 236:108635。两版数值不一致：卡车数 816→569、样本表述由「9,435 条触发（3,519 条核验）」改为「3,519 条经视频核验事件」、总体准确率 82.67%→81.42%；**预印本的「固定阈值基线误报率 25.16%」在正式版中未出现**，正式版只报告标定后的event-level nuisance-warning proportion 13.74% 与 threat-event recall 89.25%。故 25.16% 不可再作为已验证的生态基线引用。"
+  },
+  {
+    "idx": 74,
+    "doi": "10.1016/j.apergo.2005.11.001",
+    "title": "Alarm timing, trust and driver expectation for forward collision warning systems",
+    "year": 2006,
+    "authors": [
+      "Genya Abe",
+      "John Richardson"
+    ],
+    "venue": "Applied Ergonomics",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.apergo.2005.11.001",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/74_2006_Alarm_timing_trust_and_driver_expectation_for_forward_collision_warning_systems.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/74_2006_Alarm_timing_trust_and_driver_expectation_for_forward_collision_warning_systems.txt",
+    "has_fulltext": true,
+    "cited_by": 135,
+    "source_list": "list2",
+    "ref_key": "abe2006"
+  },
+  {
+    "idx": 75,
+    "doi": "10.1037/e577202012-006",
+    "title": "The human factors of collision warning systems: System performance, alarm timing, and driver trust",
+    "year": 2004,
+    "authors": [
+      "Genya Abe",
+      "John Richardson"
+    ],
+    "venue": "PsycEXTRA Dataset",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1037/e577202012-006",
+    "abstract": "",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list2",
+    "ref_key": "abe2004"
+  },
+  {
+    "idx": 76,
+    "doi": "10.1109/icves.2012.6294314",
+    "title": "Improvement of warning lag time in forward collision warning systems based on multifunctional warnings",
+    "year": 2012,
+    "authors": [
+      "Peachanika Thammakaroon",
+      "Poj Tangamchit"
+    ],
+    "venue": "2012 IEEE International Conference on Vehicular Electronics and Safety (ICVES 2012)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/icves.2012.6294314",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/76_2012_Improvement_of_warning_lag_time_in_forward_collision_warning_systems_based_on_mu.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/76_2012_Improvement_of_warning_lag_time_in_forward_collision_warning_systems_based_on_mu.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "thammakaroon2012"
+  },
+  {
+    "idx": 77,
+    "doi": "10.4271/2007-01-1105",
+    "title": "An Efficient Visual Forward Collision Warning Display for Vehicles",
+    "year": 2007,
+    "authors": [
+      "Henrik Lind"
+    ],
+    "venue": "SAE Technical Paper Series",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.4271/2007-01-1105",
+    "abstract": " &lt;div class=\"htmlview paragraph\"&gt;The aim of the present study was to investigate how quickly and efficiently distracted drivers react to four different visual warning displays intended for a Forward Collision Warning system for vehicles. The displays are the Collision Warning Head Up Display (CWHUD), the Steering Wheel Warning Display, The High Head Down Display (HHDD), and the Cluster display. The study was performed in a simulator.&lt;/div&gt;\n&lt;div class=\"htmlview paragraph\"&gt;Warnings were randomly presented to drivers when they were visually distracted away from the road by a traffic sign discrimination task. Brake reaction times to the different warnings were recorded. From the results of performance tests and preference ratings, the CWHUD, provided the best performance in terms of 200 ms lower reaction time and low amount of missed warnings. The average brake reaction times were significantly faster for the CWHUD warnings. There were no significant differences in reaction times among the other three warnings. One CWHUD warning was missed during the experiment, whereas 17 High Head Down Display, HHDD, warnings were missed. The CWHUD was rated first among the user preferences. The second, third and fourth choices were HHDD, Cluster Display, and Steering Wheel Warning Displays. It is concluded from the results of this study that the CWHUD was the best of the four FCW visual displays tested in the study.&lt;/div&gt;\n&lt;div class=\"htmlview paragraph\"&gt;The high performance and high subjective driver preference is contributed to the location color and brightness of the CWHUD providing the driver with an intuitive understanding of a forward braking vehicle.&lt;/div&gt; ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/77_2007_An_Efficient_Visual_Forward_Collision_Warning_Display_for_Vehicles.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/77_2007_An_Efficient_Visual_Forward_Collision_Warning_Display_for_Vehicles.txt",
+    "has_fulltext": true,
+    "cited_by": 4,
+    "source_list": "list2",
+    "ref_key": "lind2007cwhud"
+  },
+  {
+    "idx": 78,
+    "doi": "10.1016/j.trf.2018.09.028",
+    "title": "Investigating the effect of urgency and modality of pedestrian alert warnings on driver acceptance and performance",
+    "year": 2019,
+    "authors": [
+      "David R. Large",
+      "Hyungil Kim",
+      "Coleman Merenda",
+      "Samantha Leong",
+      "Catherine Harvey",
+      "Gary Burnett",
+      "Joseph Gabbard"
+    ],
+    "venue": "Transportation Research Part F: Traffic Psychology and Behaviour",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.trf.2018.09.028",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/78_2019_Investigating_the_effect_of_urgency_and_modality_of_pedestrian_alert_warnings_on.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/78_2019_Investigating_the_effect_of_urgency_and_modality_of_pedestrian_alert_warnings_on.txt",
+    "has_fulltext": true,
+    "cited_by": 30,
+    "source_list": "list2",
+    "ref_key": "large2018urgency"
+  },
+  {
+    "idx": 79,
+    "doi": "10.12677/ap.2024.148539",
+    "title": "Effects of Visual Crowding and Stimulus Location on Driver Pedestrian Perception in AR-HUD Warning",
+    "year": 2024,
+    "authors": [
+      "威宇 鲍"
+    ],
+    "venue": "Advances in Psychology",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.12677/ap.2024.148539",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/79_2024_Effects_of_Visual_Crowding_and_Stimulus_Location_on_Driver_Pedestrian_Perception.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/79_2024_Effects_of_Visual_Crowding_and_Stimulus_Location_on_Driver_Pedestrian_Perception.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "bao2024crowd"
+  },
+  {
+    "idx": 80,
+    "doi": "10.54941/ahfe1008065",
+    "title": "Effect of AR-HUD Warning Information Presentation Modes on Driver Situation Awareness under Single-Hazard Scenarios",
+    "year": 2026,
+    "authors": [
+      "Chang Shen",
+      "Hua Qin",
+      "Shijiao Li",
+      "Xipu Shi",
+      "CHUANYU ZOU",
+      "Linghua Ran"
+    ],
+    "venue": "AHFE International",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.54941/ahfe1008065",
+    "abstract": " Drivers are prone to Cognitive Tunneling while driving. This study aims to discuss which Augmented Reality Head-Up Display (AR-HUD) warning information flashing mode can effectively break this effect when drivers face a single-hazard scenarios.Twelve drivers were recruited for a simulated driving experiment. The study used four warning information flashing modes (non-flashing, 25%, 50%, and 75% flashing duty cycles) and three secondary task immersion levels (low, medium, and high) as independent variables. Reaction time, subjective perception scores, and objective perception accuracy were quantitatively evaluated. The results showed that reaction times tended to increase as secondary task immersion became deeper. The non-flashing mode caused the most severe reaction delays under high immersion conditions. Comparisons revealed that Flashing Mode 2 (50% duty cycle) had the optimal intervention effect. It shortened reaction times by nearly half under high immersion and received the highest subjective scores. Conversely, Flashing Mode 3 (75% duty cycle) had the lowest objective accuracy, indicating that excessive flashing frequency causes visual interference. Therefore, the AR-HUD warning signal in Flashing Mode 2 is the most effective at breaking cognitive tunneling. It significantly shortens reaction times while maintaining high situation awareness. Future AR-HUD interface designs should prioritize this parameter. Designs should also avoid high-frequency flashing strategies that lead to misjudgment, in order to enhance driving safety in complex environments. ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/80_2026_Effect_of_AR-HUD_Warning_Information_Presentation_Modes_on_Driver_Situation_Awar.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/80_2026_Effect_of_AR-HUD_Warning_Information_Presentation_Modes_on_Driver_Situation_Awar.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "shen2023flash"
+  },
+  {
+    "idx": 81,
+    "doi": "",
+    "title": "Estimation of driver awareness of pedestrian for an augmented reality advanced driving assistance system",
+    "year": 2016,
+    "authors": [
+      "Minh Tien Phan"
+    ],
+    "venue": "",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "",
+    "abstract": " Estimation de l’inattention du conducteur vis-à-vis d’un piéton pour un système d’aide à la conduite avancé utilisant la réalité augmentée \n                 La réalité augmentée (Augmented Reality ou AR) peut potentiellement changer significativement l’expérience utilisateur. Au contraire les applications sur Smartphone ou tablette, les technologies d’affichage tête haute (Head Up Display ouHUD) aujourd’hui sont capables de projeter localement sur une zone du pare-brise ou globalement sur tout le pare-brise. Le conducteur peut alors percevoir l’information directement dans son champ de vision. Ce ne sont pas que les informations basiques comme vitesse ou navigation, le système peut aussi afficher des aides, des indicateurs qui guident l’attention du conducteur vers les dangers possibles. Il existe alors un chalenge scientifique qui est de concevoir des visualisations d’interactions qui s’adaptent en fonction de l’observation de la scène mais aussi en fonction de l’observation du conducteur. Dans le contexte des systèmes d’alerte de collision avec les piétons (Pedestrian Collision Warning System ou PCWS), l’efficacité de la détection du piéton a atteint un niveau élevé grâce à la technologie de vision. Pourtant, les systèmes d’alerte ne s’adaptent pas au conducteur et à la situation, ils deviennent alors une source de distraction et sont souvent négligés par le conducteur. Pour ces raisons, ce travail de thèse consiste à proposer un nouveau concept de PCWS avec l’AR (nommé the AR-PCW system). Premièrement, nous nous concentrons sur l’étude de la conscience de la situation (Situation Awareness ou SA) du conducteur lorsqu’il y a un piéton présent devant le véhicule. Nous proposons une approche expérimentale pour collecter les données qui représentent l’attention du conducteur vis-à-vis du piéton (Driver Awareness of Pedestrian ou DAP) et l’inattention du conducteur vis-à-vis de celui-ci (Driver Unawareness of Pedestrian ou DUP). Ensuite, les algorithmes basées sur les charactéristiques, les modèles d’apprentissage basés sur les modèles discriminants (ex, Support Vector Machine ou SVM) ou génératifs (Hidden Markov Model ou HMM) sont proposés pour estimer le DUP et le DAP. La décision de notre AR-PCW system est effectivement basée sur ce modèle. Deuxièmement, nous proposons les aides ARs pour améliorer le DAP après une étude de l’état de l’art sur les ARs dans le contexte de la conduite automobile. La boite englobante autour du piéton et le panneau d’alerte de danger sont utilisés. Finalement, nous étudions expérimentalement notre système AR-PCW en analysant les effets des aides AR sur le conducteur. Un simulateur de conduite est utilisé et la simulation d’une zone HUD dans la scène virtuelle sont proposés. Vingt-cinq conducteurs de 2 ans de permis de conduite ont participé à l’expérimentation. Les situations ambigües sont créées dans le scénario de conduite afin d’analyser le DAP. Le conducteur doit suivre un véhicule et les piétons apparaissent à différents moments. L’effet des aides AR sur le conducteur est analysé à travers ses performances à réaliser la tâche de poursuite et ses réactions qui engendrent le DAP. Les résultats objectifs et subjectifs montrent que les aides AR sont capables d’améliorer le DAP défini en trois niveaux : perception, vigilance et anticipation. Ce travail de thèse a été financé sur une bourse ministère et a été réalisé dans le cadre des projets FUI18 SERA et Labex MS2T qui sont financé par le Gouvernement Français, à travers le programme « Investissement pour l’avenir » géré par le ANR (Référence ANR-11-IDEX-0004-02). ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/81_2016_Estimation_of_driver_awareness_of_pedestrian_for_an_augmented_reality_advanced_d.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/81_2016_Estimation_of_driver_awareness_of_pedestrian_for_an_augmented_reality_advanced_d.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "phan_thesis"
+  },
+  {
+    "idx": 82,
+    "doi": "10.17077/etd.tbjq72y2",
+    "title": "Augmented reality cues and elderly driver hazard perception",
+    "year": 2013,
+    "authors": [
+      "Mark Christopher Schall"
+    ],
+    "venue": "",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.17077/etd.tbjq72y2",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/82_2013_Augmented_reality_cues_and_elderly_driver_hazard_perception.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/82_2013_Augmented_reality_cues_and_elderly_driver_hazard_perception.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "schall_thesis"
+  },
+  {
+    "idx": 83,
+    "doi": "",
+    "title": "Head-up Displays (HUD) in driving",
+    "year": 2018,
+    "authors": [
+      "Marcos Maroto",
+      "Enrique Caño",
+      "Pavel González",
+      "Diego Villegas"
+    ],
+    "venue": "arXiv preprint",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "",
+    "abstract": "Head Up Displays (HUDs) were designed originally to present at the usual viewpoints of the pilot the main sensor data during aircraft missions, because of placing instrument information in the forward field of view enhances pilots ability to utilize both instrument and environmental information simultaneously. The first civilian motor vehicle had a monochrome HUD that was released in 1988 by General Motors as a technological improvement of HeadDown Display (HDD) interface, which is commonly used in automobile industry. The HUD reduces the number and duration of the drivers sight deviations from the road, by projecting the required information directly into the drivers line of vision. There are many studies about ways of presenting the information: standard oneearpiece presentation, threedimensional audio presentation, visual only or audiovisual presentation. Results have shown that using a 3D auditory display the time of acquiring targets is approximately 2.2 seconds faster than using a oneearpiece way. Nevertheless, a disadvantage is when the drivers attention unconsciously shifts away from the road and goes focused on processing the information presented by the HUD. By this reason, the time, the way and the channel are important to represent the information on a HUD. A solution is a context aware multimodal proactive recommended system that features personalized content combined with the use of car sensors to determine when the information has to be presented.",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/83_2018_Head-up_Displays_HUD_in_driving.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/83_2018_Head-up_Displays_HUD_in_driving.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "maroto2018hud"
+  },
+  {
+    "idx": 84,
+    "doi": "",
+    "title": "Pedestrian and cyclist forward collision warning system effectiveness estimation based on simulation of kinematic reconstructions",
+    "year": 2022,
+    "authors": [
+      "François Char"
+    ],
+    "venue": "",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "",
+    "abstract": " Estimation des bénéfices apportés en sécurité routière par des avertisseurs de collision frontale pour des piétons et des cyclistes et sensibilité de ces systèmes \n                 En 2016, le nombre de morts atteignait plus d'1 million selon l’OMS dont 26% étaient des piétons et cyclistes. De nos jours, de plus en plus de véhicules sont équipés de systèmes d’urgence automatique (appelés FCW - avertisseur de collision frontale) qui peuvent détecter piétons et cyclistes et prévenir d’une situation dangereuse. Ces systèmes peuvent aussi participer à l’évitement de collision par une assistance durant le freinage ou en activant un freinage d’urgence automatique (AEB).Plus de 3700 reconstructions d’accidents (2200 cas cyclistes et 1500 piétons) sont analysées provenant de bases de données française et allemande. Des configurations d’accidents sont extraites et les accidents sont classés en différents scénarios. Un logiciel implémenté pour rejouer la cinématique des accidents en intégrant un AEB avec différents réglages permet l’identification des caractéristiques optimums d’un AEB piéton et cycliste en termes de détection d’usager vulnérable mais également du temps de déclenchement d’un FCW et la durée des freinages d’urgences.Puis avec une expérimentation sur simulateur de conduite, les réactions de conducteurs face à un FCW sont analysées dans des configurations d’accidents: cas piéton/cycliste, avec ou sans FCW ou avec différents temps de déclenchement du FCW. 200 participants ont pris part à cette étude sur simulateur. Les résultats expérimentaux extraits concernent l’analyse du regard, la réponse au FCW, le temps de réaction pour déclencher un freinage ou encore le comportement en fonction de l’environnement de conduite.Enfin à partir des résultats précédents, l’estimation des effets du FCW est réalisée en termes d’accidents évités ou atténués. ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/84_2022_Pedestrian_and_cyclist_forward_collision_warning_system_effectiveness_estimation.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/84_2022_Pedestrian_and_cyclist_forward_collision_warning_system_effectiveness_estimation.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "char_thesis"
+  },
+  {
+    "idx": 85,
+    "doi": "10.4018/978-1-4666-2649-2.ch011",
+    "title": "The Development of Parameters and Warning Algorithms for an Intersection Bus-Pedestrian Collision Warning System",
+    "year": 2013,
+    "authors": [
+      "Chien-Yen Chang",
+      "Ting-Wei Chang"
+    ],
+    "venue": "Implementation and Integration of Information Systems in the Service Sector",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.4018/978-1-4666-2649-2.ch011",
+    "abstract": "This study presents the conceptual design of an intersection bus-pedestrian collision warning system for bus drivers approaching an intersection. The basic parameters of the proposed design concept include the bus drivers’ perception-reaction time, the emergency deceleration rate of the bus, and pedestrian walking speed. A bus driving simulation was designed and conducted to analyze bus drivers’ responses to unexpected pedestrians crossing unsignalized intersections or signalized intersections during a green light interval for parameter analysis. The timings of auditory warnings and visual warnings, the locations for vehicle detectors and pedestrian detectors, and the locations for visual warning devices were also developed after analyzing the experimental results. The experimental results also highlight some important characteristics of bus driving behavior at intersections. Moreover, bus drivers really pay attention to the warning messages. Finally, this study develops and discusses some warning algorithms.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list2",
+    "ref_key": "chang2013bus"
+  },
+  {
+    "idx": 86,
+    "doi": "10.1109/apscc.2009.5394118",
+    "title": "Parameters analysis for an intersection bus-pedestrian collision warning system",
+    "year": 2009,
+    "authors": [
+      "Chien-Yen Chang",
+      "Ting-Wei Chang"
+    ],
+    "venue": "2009 IEEE Asia-Pacific Services Computing Conference (APSCC)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/apscc.2009.5394118",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/86_2009_Parameters_analysis_for_an_intersection_bus-pedestrian_collision_warning_system.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/86_2009_Parameters_analysis_for_an_intersection_bus-pedestrian_collision_warning_system.txt",
+    "has_fulltext": true,
+    "cited_by": 2,
+    "source_list": "list2",
+    "ref_key": "chang2009apscc"
+  },
+  {
+    "idx": 87,
+    "doi": "10.5592/co/cetra.2026.1849",
+    "title": "Machine Learning-Based Pedestrian Intention Prediction Models for Collision Warning at Unsignalized Crosswalks",
+    "year": 2026,
+    "authors": [
+      "Sami Haktan Cangut",
+      "Yalçın Alver"
+    ],
+    "venue": "International Conference on Road and Rail Infrastructure",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.5592/co/cetra.2026.1849",
+    "abstract": " Pedestrian safety remains a critical challenge in urban environments and pedestrians account for approximately 21% of all traffic fatalities in Turkey. A major contributor to this risk is the uncertainty inherent in pedestrian–driver interactions at unsignalized crosswalks where drivers yield in only 29% of observed cases. Misinterpretation of pedestrian intentions in such ambiguous situations can lead to hazardous outcomes. This study addresses this problem by developing and comparing machine learning models that predict pedestrian crossing intention with high reliability. A comprehensive dataset containing 4, 835 pedestrian observations was created by combining the widely used JAAD, PIE, and PSI datasets. For each pedestrian, fifteen consecutive video frames were analyzed to extract kinematic features such as position and acceleration along with social interaction cues derived from nearby pedestrians. Three neural network architectures were evaluated using a two-stage transfer learning procedure. The models included a Bidirectional Long Short-Term Memory network (BiLSTM), a Social-LSTM incorporating social pooling mechanisms, and a Transformer model designed to capture complex temporal dependencies. Performance evaluation demonstrated that the Social-LSTM architecture achieved the highest overall performance with a precision of 85.02% and an F1-score of 84.57% by explicitly modeling the social context. Conversely, the Transformer model recorded an F1-score of 83.44% and suggested that architectural complexity does not guarantee superior performance when training data is limited. The BiLSTM provided a strong, kinematic-focused baseline with an F1-score of 84.06%. These findings confirm that sequential machine learning models can effectively anticipate pedestrian crossing intentions. The results highlight that incorporating social behavioral theories into engineering solutions is essential for developing robust collision warning systems aimed at reducing pedestrian–vehicle conflicts. ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/87_2026_Machine_Learning-Based_Pedestrian_Intention_Prediction_Models_for_Collision_Warn.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/87_2026_Machine_Learning-Based_Pedestrian_Intention_Prediction_Models_for_Collision_Warn.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "cangut2026intent"
+  },
+  {
+    "idx": 88,
+    "doi": "",
+    "title": "V2P Collision Warnings for Distracted Pedestrians: A Comparative Study with Traditional Auditory Alerts",
+    "year": 2025,
+    "authors": [
+      "Novel Certad",
+      "Enrico Del Re",
+      "Joshua Varughese",
+      "Cristina Olaverri-Monreal"
+    ],
+    "venue": "arXiv preprint",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "",
+    "abstract": "This study assesses a Vehicle-to-Pedestrian (V2P) collision warning system compared to conventional vehicle-issued auditory alerts in a real-world scenario simulating a vehicle on a fixed track, characterized by limited maneuverability and the need for timely pedestrian response. The results from analyzing speed variations show that V2P warnings are particularly effective for pedestrians distracted by phone use (gaming or listening to music), highlighting the limitations of auditory alerts in noisy environments. The findings suggest that V2P technology offers a promising approach to improving pedestrian safety in urban areas",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/88_2025_V2P_Collision_Warnings_for_Distracted_Pedestrians_A_Comparative_Study_with_Tradi.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/88_2025_V2P_Collision_Warnings_for_Distracted_Pedestrians_A_Comparative_Study_with_Tradi.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "certad2025v2p"
+  },
+  {
+    "idx": 89,
+    "doi": "",
+    "title": "Early warning of pedestrians and cyclists",
+    "year": 2021,
+    "authors": [
+      "Joerg Christian Wolf"
+    ],
+    "venue": "arXiv preprint",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "",
+    "abstract": "State-of-the-art motor vehicles are able to break for pedestrians in an emergency. We investigate what it would take to issue an early warning to the driver so he/she has time to react. We have identified that predicting the intention of a pedestrian reliably by position is a particularly hard challenge. This paper describes an early pedestrian warning demonstration system.",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/89_2021_Early_warning_of_pedestrians_and_cyclists.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/89_2021_Early_warning_of_pedestrians_and_cyclists.txt",
+    "has_fulltext": true,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "wolf2021early"
+  },
+  {
+    "idx": 90,
+    "doi": "10.1109/ivs.2010.5548120",
+    "title": "Sensor fusion-based pedestrian collision warning system with crosswalk detection",
+    "year": 2010,
+    "authors": [
+      "Shige Suzuki",
+      "Pongsathorn Raksincharoensak",
+      "Ikuko Shimizu",
+      "Masao Nagai",
+      "Rolf Adomat"
+    ],
+    "venue": "2010 IEEE Intelligent Vehicles Symposium",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/ivs.2010.5548120",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/90_2010_Sensor_fusion-based_pedestrian_collision_warning_system_with_crosswalk_detection.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/90_2010_Sensor_fusion-based_pedestrian_collision_warning_system_with_crosswalk_detection.txt",
+    "has_fulltext": true,
+    "cited_by": 14,
+    "source_list": "list2",
+    "ref_key": "suzuki2010fusion"
+  },
+  {
+    "idx": 91,
+    "doi": "10.1061/9780784484869.024",
+    "title": "A Reinforcement Learning-Based Adaptive Forward Collision Warning System by Considering Drivers’ Reaction Time in Real Time",
+    "year": 2023,
+    "authors": [
+      "Yi-Han Sun",
+      "Xia Wu",
+      "Si-Yuan Gong",
+      "Rui Yang"
+    ],
+    "venue": "CICTP 2023",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1061/9780784484869.024",
+    "abstract": "This study proposes a reinforcement learning-based adaptive forward collision warning system (RL-AFCWS) with individualized real-time driver reaction time (DRT). Specifically, the curve matching algorithm is presented to obtain the real-time DRT by matching the trajectories of preceding-following vehicle pairs. A deep Q network (DQN) model is constructed to predict the activation state of the collision warning by using trajectory data and DRT as inputs. To improve the accuracy of the RL-AFCWS, real driving data set NGSIM from two different periods is selected for samples. The effectiveness of the proposed study is verified by numerical experiments. The result indicates that the proposed RL-AFCWS can effectively improve the accuracy rate and true positive rate to 94% and 49%, respectively, while greatly reducing the alarm interference, compared to the TTC-based classical model and adaptive model. It also has realized adaptive early warning for drivers with different driving styles.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list2",
+    "ref_key": "sun2023rl"
+  },
+  {
+    "idx": 92,
+    "doi": "10.1109/is3c.2016.189",
+    "title": "Pedestrian Collision Warning of Advanced Driver Assistance Systems",
+    "year": 2016,
+    "authors": [
+      "Ying-Che Kuo",
+      "Ci-Ming Fu",
+      "Cheng-Tao Tsai",
+      "Chun-Cheng Lin",
+      "Ghih-Hao Chang"
+    ],
+    "venue": "2016 International Symposium on Computer, Consumer and Control (IS3C)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/is3c.2016.189",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/92_2016_Pedestrian_Collision_Warning_of_Advanced_Driver_Assistance_Systems.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/92_2016_Pedestrian_Collision_Warning_of_Advanced_Driver_Assistance_Systems.txt",
+    "has_fulltext": true,
+    "cited_by": 9,
+    "source_list": "list2",
+    "ref_key": "kuo2016pcw"
+  },
+  {
+    "idx": 93,
+    "doi": "10.1109/ictis60134.2023.10243767",
+    "title": "Research on pedestrian vehicle collision warning based on path prediction",
+    "year": 2023,
+    "authors": [
+      "Yue Zhang",
+      "Xu Wang",
+      "Kaimin Zhuo",
+      "Wenjian Jiao",
+      "Wenxin Yang"
+    ],
+    "venue": "2023 7th International Conference on Transportation Information and Safety (ICTIS)",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/ictis60134.2023.10243767",
+    "abstract": "The vehicle FCW (forward collision warning) system is supposed to considerable reduce the traffic accidents caused by pedestrian crossing. The pedestrian path prediction method in FCW is studied, and the five-freedom-degree vehicle model is analyzed, the limit condition where whether the maximum barking acceleration can avoid collision effectively is researched. The vehicle coordinate is divided according to the psychological safety distance of pedestrians, and an anti-collision warning system is designed on basis of the pedestrian initial position, the movement speed and path. The test results show that the designed anti-collision warning system can effectively warn the driver before the collision accident occurs and avoid pedestrian traffic accidents caused by the negligence of the drivers.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 5,
+    "source_list": "list2",
+    "ref_key": "zhangy2023path"
+  },
+  {
+    "idx": 94,
+    "doi": "10.2139/ssrn.4927850",
+    "title": "Predictive Safety-Aware Transmit Rate Control Scheme for Real-Time Proactive Forward Collision Warning System",
+    "year": 2024,
+    "authors": [
+      "Yang-Jun Joo",
+      "Dong-Kyu Kim",
+      "Eui-Jin Kim"
+    ],
+    "venue": "",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.2139/ssrn.4927850",
+    "abstract": "Forward collision warning systems in connected vehicles are crucial for improving road safety. These systems use V2X communication to frequently capture and broadcast potential rear-end crash risks, issuing warnings via beacon messages. However, V2X-based proactive forward collision warning systems face challenges due to channel congestion and delays between the occurrence of dangerous situations and the reception of warning messages. To address these challenges, this study proposes a predictive safety-aware transmit rate control scheme (PSA-TRC). This scheme predicts crash risk and adaptively adjusts each vehicle’s beaconing rate in a decentralized manner. Upon detecting channel congestion, the system activates a distributed beacon rate adaptation algorithm. This algorithm assigns higher beaconing rates to vehicles with greater predicted crash risk while maintaining the total beaconing demand within the channel’s capacity limits. We evaluated the effectiveness of the proposed PSA-TRC through comprehensive comparisons with benchmark schemes using real-world highway trajectory datasets. Our case study findings suggest that the PSA-TRC significantly enhances the reliability and efficiency of beaconing for proactive forward collision warning systems, especially in scenarios involving high vehicle density.",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": null,
+    "source_list": "list2",
+    "ref_key": "joo2024rate"
+  },
+  {
+    "idx": 95,
+    "doi": "10.4271/2005-08-0554",
+    "title": "Development of Forward-Collision Avoidance Warning System Adapted for Driver Characteristics",
+    "year": 2005,
+    "authors": [
+      "Noboru Miyoshi",
+      "Masao Nagai",
+      "Takayoshi Kamada",
+      "Hidehisa Yoshida"
+    ],
+    "venue": "",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.4271/2005-08-0554",
+    "abstract": "",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 0,
+    "source_list": "list2",
+    "ref_key": "miyoshi2005sae",
+    "abstract_note": "Crossref 该 DOI 无元数据记录；原 abstract 字段为 Crossref 占位文本，已清空以防误引。"
+  },
+  {
+    "idx": 96,
+    "doi": "10.1016/j.jtte.2018.09.005",
+    "title": "Recent advances in connected and automated vehicles",
+    "year": 2019,
+    "authors": [
+      "David Elliott",
+      "Walter Keen",
+      "Lei Miao"
+    ],
+    "venue": "Journal of Traffic and Transportation Engineering (English Edition)",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1016/j.jtte.2018.09.005",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/96_2019_Recent_advances_in_connected_and_automated_vehicles.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/96_2019_Recent_advances_in_connected_and_automated_vehicles.txt",
+    "has_fulltext": true,
+    "cited_by": 143,
+    "source_list": "list2",
+    "ref_key": "elliott2019cav"
+  },
+  {
+    "idx": 97,
+    "doi": "10.1109/tits.2019.2901817",
+    "title": "Autonomous Vehicles That Interact With Pedestrians: A Survey of Theory and Practice",
+    "year": 2020,
+    "authors": [
+      "Amir Rasouli",
+      "John K. Tsotsos"
+    ],
+    "venue": "IEEE Transactions on Intelligent Transportation Systems",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/tits.2019.2901817",
+    "abstract": "One of the major challenges that autonomous cars are facing today is driving in urban environments. To make it a reality, autonomous vehicles require the ability to communicate with other road users and understand their intentions. Such interactions are essential between the vehicles and pedestrians as the most vulnerable road users. Understanding pedestrian behavior, however, is not intuitive and depends on various factors such as demographics of the pedestrians, traffic dynamics, environmental conditions, etc. In this paper, we identify these factors by surveying pedestrian behavior studies, both the classical works on pedestrian-driver interaction and the modern ones that involve autonomous vehicles. To this end, we will discuss various methods of studying pedestrian behavior, and analyze how the factors identified in the literature are interrelated. We will also review the practical applications aimed at solving the interaction problem including design approaches for autonomous vehicles that communicate with pedestrians and visual perception and reasoning algorithms tailored to understanding pedestrian intention. Based on our findings, we will discuss the open problems and propose future research directions.",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/97_2020_Autonomous_Vehicles_That_Interact_With_Pedestrians_A_Survey_of_Theory_and_Practi.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/97_2020_Autonomous_Vehicles_That_Interact_With_Pedestrians_A_Survey_of_Theory_and_Practi.txt",
+    "has_fulltext": true,
+    "cited_by": 707,
+    "source_list": "list2",
+    "ref_key": "rasouli2019survey"
+  },
+  {
+    "idx": 98,
+    "doi": "10.3390/su11236713",
+    "title": "Negotiation and Decision-Making for a Pedestrian Roadway Crossing: A Literature Review",
+    "year": 2019,
+    "authors": [
+      "Roja Ezzati Amini",
+      "Christos Katrakazas",
+      "Constantinos Antoniou"
+    ],
+    "venue": "Sustainability",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.3390/su11236713",
+    "abstract": " The interaction among pedestrians and human drivers is a complicated process, in which road users have to communicate their intentions, as well as understand and anticipate the actions of users in their vicinity. However, road users still ought to have a proper interpretation of each others’ behaviors, when approaching and crossing the road. Pedestrians, as one of the interactive agents, demonstrate different behaviors at road crossings, which do not follow a consistent pattern and may vary from one situation to another. The presented inconsistency and unpredictability of pedestrian road crossing behaviors may thus become a challenge for the design of emerging technologies in the near future, such as automated driving system (ADS). As a result, the current paper aims at understanding the effectual communication techniques, as well as the factors influencing pedestrian negotiation and decision-making process. After reviewing the state-of-the-art and identifying research gaps with regards to vehicle–pedestrian crossing encounters, a holistic approach for road crossing interaction modeling is presented and discussed. It is envisioned that the presented holistic approach will result in enhanced safety, sustainability, and effectiveness of pedestrian road crossings. ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/98_2019_Negotiation_and_Decision-Making_for_a_Pedestrian_Roadway_Crossing_A_Literature_R.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/98_2019_Negotiation_and_Decision-Making_for_a_Pedestrian_Roadway_Crossing_A_Literature_R.txt",
+    "has_fulltext": true,
+    "cited_by": 63,
+    "source_list": "list2",
+    "ref_key": "amini2019negotiation"
+  },
+  {
+    "idx": 99,
+    "doi": "",
+    "title": "Effectiveness of forward obstacles collision warning system based on deceleration for collision avoidance",
+    "year": 2014,
+    "authors": [
+      "Shota Takada",
+      "Toshihiro Hiraoka",
+      "Hiroshi Kawakami"
+    ],
+    "venue": "IET Intelligent Transport Systems",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "",
+    "abstract": " In the authors previous study, the authors proposed deceleration for collision avoidance (DCA) as an index to evaluate collision risks against forward obstacles and examined the effectiveness of their forward obstacles collision warning system (FOCWS) based on DCA. In the present manuscript, they improve the visual interface of the FOCWS, and conduct driving simulator experiments to quantitatively evaluate the effectiveness of the improved FOCWS in situations where a preceding vehicle decelerates abruptly. The experimental results revealed that the FOCWS based on DCA was effective in assisting drivers to shorten the reaction time and to avoid collisions. Moreover, in the subjective assessment questionnaire, a significant number of experimental participants reported that the FOCWS based on DCA could evaluate collision risks more properly compared with the FOCWS based on a time‐to‐collision. ",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/99_2014_Effectiveness_of_forward_obstacles_collision_warning_system_based_on_deceleratio.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/99_2014_Effectiveness_of_forward_obstacles_collision_warning_system_based_on_deceleratio.txt",
+    "has_fulltext": true,
+    "cited_by": 13,
+    "source_list": "list2",
+    "ref_key": "takada_decel"
+  },
+  {
+    "idx": 100,
+    "doi": "10.1371/journal.pone.0087070",
+    "title": "A Comparison of Different Informative Vibrotactile Forward Collision Warnings: Does the Warning Need to Be Linked to the Collision Event?",
+    "year": 2014,
+    "authors": [
+      "Rob Gray",
+      "Cristy Ho",
+      "Charles Spence"
+    ],
+    "venue": "PLoS ONE",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1371/journal.pone.0087070",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/100_2014_A_Comparison_of_Different_Informative_Vibrotactile_Forward_Collision_Warnings_Do.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/100_2014_A_Comparison_of_Different_Informative_Vibrotactile_Forward_Collision_Warnings_Do.txt",
+    "has_fulltext": true,
+    "cited_by": 26,
+    "source_list": "list2",
+    "ref_key": "gray2014vibro"
+  },
+  {
+    "idx": 101,
+    "doi": "10.4271/j2400_200308",
+    "title": "Human Factors in Forward Collision Warning Systems: Operating Characteristics and User Interface Requirements",
+    "year": 2003,
+    "authors": [
+      ""
+    ],
+    "venue": "",
+    "is_oa": false,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.4271/j2400_200308",
+    "abstract": "&lt;div class=\"section abstract\"&gt; &lt;div class=\"htmlview paragraph\"&gt;Forward Collision Warning (FCW) systems are onboard systems intended to provide alerts to assist drivers in avoiding striking the rear end of another moving or stationary motorized vehicle. This SAE Information Report describes elements for a FCW operator interface, as well as requirements and test methods for systems capable of warning drivers of rear-end collisions.&lt;/div&gt; &lt;div class=\"htmlview paragraph\"&gt;This information report applies to original equipment and aftermarket FCW systems for passenger vehicles including cars, light trucks, and vans. This report does not apply to heavy trucks. Furthermore, this document does not address integration issues associated with adaptive cruise control (ACC), and consequently, aspects of the document could be inappropriate for an ACC system integrated with a FCW system.&lt;/div&gt;&lt;/div&gt;",
+    "local_pdf": "",
+    "local_text": "",
+    "has_fulltext": false,
+    "cited_by": 1,
+    "source_list": "list2",
+    "ref_key": "saej2400"
+  },
+  {
+    "idx": 102,
+    "doi": "10.1109/itsc.2010.5625077",
+    "title": "Collision Warning with Full Auto Brake and Pedestrian Detection - a practical example of Automatic Emergency Braking",
+    "year": 2010,
+    "authors": [
+      "Erik Coelingh",
+      "Andreas Eidehall",
+      "Mattias Bengtsson"
+    ],
+    "venue": "13th International IEEE Conference on Intelligent Transportation Systems",
+    "is_oa": true,
+    "pdf_url": "",
+    "landing": "https://doi.org/10.1109/itsc.2010.5625077",
+    "abstract": "",
+    "local_pdf": "/home/gezhuocheng/HUD/papers/102_2010_Collision_Warning_with_Full_Auto_Brake_and_Pedestrian_Detection_-_a_practical_ex.pdf",
+    "local_text": "/home/gezhuocheng/HUD/extracted_text/102_2010_Collision_Warning_with_Full_Auto_Brake_and_Pedestrian_Detection_-_a_practical_ex.txt",
+    "has_fulltext": true,
+    "cited_by": 174,
+    "source_list": "list2",
+    "ref_key": "coelingh2010cwab"
+  }
+]

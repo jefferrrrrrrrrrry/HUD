@@ -1,0 +1,1523 @@
+--- Page 1 ---
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=hihc20
+International Journal of Human–Computer Interaction
+ISSN: (Print) (Online) Journal homepage: https://www.tandfonline.com/loi/hihc20
+Inattentional Blindness in Augmented Reality
+Head-Up Display-Assisted Driving
+Yuwei Wang, Yimin Wu, Cheng Chen, Bohan Wu, Shu Ma, Duming Wang,
+Hongting Li & Zhen Yang
+To cite this article: Yuwei Wang, Yimin Wu, Cheng Chen, Bohan Wu, Shu Ma, Duming Wang,
+Hongting Li & Zhen Yang (2022) Inattentional Blindness in Augmented Reality Head-Up Display-
+Assisted Driving, International Journal of Human–Computer Interaction, 38:9, 837-850, DOI:
+10.1080/10447318.2021.1970434
+To link to this article:  https://doi.org/10.1080/10447318.2021.1970434
+Published online: 30 Aug 2021.
+Submit your article to this journal 
+Article views: 794
+View related articles 
+View Crossmark data
+
+--- Page 2 ---
+Inattentional Blindness in Augmented Reality Head-Up Display-Assisted Driving
+Yuwei Wang, Yimin Wu, Cheng Chen, Bohan Wu, Shu Ma, Duming Wang, Hongting Li, and Zhen Yang
+Department of Psychology, Zhejiang Sci-Tech University, Hangzhou, China
+ABSTRACT
+Augmented reality head-up display (AR HUD) is a new technology in assisted driving, which can add 
+extra information to the driving environment in real-time to help the driver better perceive road 
+situation. AR HUD can enhance driving safety but may also encourage inattentional blindness. Hence, 
+this study aims to examine whether AR HUD-induces inattentional blindness and determine whether 
+workload intensifies their relationship. In experiment 1, 60 participants were randomly assigned to three 
+groups and watched three types of augmented reality (AR)-augmented driving videos, respectively. They 
+were instructed to respond to any critical events, but only their responses to road-crossing pedestrians 
+were recorded. Results show that AR HUD reduces inattentional blindness when pedestrians are 
+augmented but encourages inattentional blindness when pedestrians are not augmented. In experiment 
+2, 20 participants viewed AR-augmented driving videos of high and low workloads. Pedestrians were not 
+augmented in all videos. Result reveals that a high workload induces more inattentional blindness than 
+low workload. The finding confirms that AR HUD induces inattentional blindness, and a high workload 
+will intensify this relationship. The future design of the AR HUD assisted-driving system should consider 
+the risk of inattentional blindness and come up with corresponding countermeasures.
+1. Introduction
+Augmented reality (AR) technology refers to a technology in 
+which virtual information is added to the real environment 
+through engineering and computer technologies. In addition, 
+the real and virtual environments are synchronized in the 
+same spatial relationship in real-time (Moussa et al., 2012). 
+With the increasing maturity of AR technology, AR has been 
+applied increasingly to everyday life, such as games, assembly, 
+navigation, teaching, and medical surgery, offering substantial 
+convenience for work, life, and entertainment. Studies in 
+driving tried to combine AR technology and head-up display 
+to create a novel approach to present information to drivers. 
+Two types of AR HUD design exist according to the driver’s 
+view perspectives, that is, screen-fixed AR HUD and world- 
+fixed AR HUD, which are used for to different purposes. 
+Screen-fixed AR HUD is suitable for presenting driving- 
+related information not directly attached to real-world objects 
+such as vehicle speed, and world-fixed AR HUD is suitable for 
+augmenting real-world road objects and can be applied in 
+wayfinding and hazard warning systems (Gabbard et al., 
+2014). However, when applying world-fixed AR HUD to 
+enhance road objects, the augmented objects may attract too 
+much attention from drivers causing them to ignore “unpre­
+dictable events” (e.g., the sudden appearance of pedestrians). 
+In this case, the system failed to augment unpredictable sti­
+mulus in time, thereby, inducing inattentional blindness.
+Inattentional blindness is a phenomenon that the obser­
+ver’s attention is shifted to other places, so even when looking 
+at them, the observer fails to detect certain evident stimuli, 
+which happens frequently and sometimes threatens people’s 
+safety (Neisser, 1979; Neisser & Becklen, 1975). The AR tech­
+nology application is often accompanied by inattentional 
+blindness. Dixon et al. (2014, 2013) found that doctors using 
+AR navigation technology experience more inattentional 
+blindness during surgery than those who do not. AR technol­
+ogy is also widely applied in a driving-assistance device. 
+However, AR technology is not yet fully mature in the assisted 
+driving field, and its advantages and disadvantages need 
+further research and discussion. Special focus should be put 
+on AR-induced inattentional blindness, which has been 
+a major concern in the application of AR technologies and 
+is closely related to road safety. Many studies in cognitive 
+psychology found that the individual’s attention to the main 
+task is the main cause of inattentional blindness. Moreover, 
+researchers already discovered several factors that affect inat­
+tentional blindness (Mack & Rock, 1998; Most et al., 2001; 
+Simons & Chabris, 1999), including the location, shape, color, 
+and size of unpredictable stimuli (Hyman et al., 2010; Most 
+et al., 2001; Simons & Chabris, 1999), the eye movement 
+effects (Beanland & Pammer, 2010b), previous experience of 
+drivers (Beanland & Pammer, 2010a), and the difficulty of the 
+main task (Cartwright-Finch & Lavie, 2007; Lavie, 1995). 
+Some studies also found that although the incidence rate is 
+relatively low, individuals still experience inattentional blind­
+ness even without the main task. This finding further indi­
+cates that the features of unpredictable stimuli can exert an 
+influence on inattentional blindness (Davies et al., 2013; 
+White & Caird, 2010). With regard to driving, although 
+CONTACT Zhen Yang 
+yangzhen@zstu.edu.cn 
+Department of Psychology, Zhejiang Sci-Tech University, Qiantang District, Hangzhou, Zhejiang, China
+https://doi.org/10.1080/10447318.2021.1970434
+© 2021 Taylor & Francis Group, LLC
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION
+2022, VOL. 38, NO. 9, 837–850
+
+--- Page 3 ---
+driving shares the same theoretical basis with the cognitive 
+study on inattentional blindness, considerable differences still 
+exist. Driving requires the drivers to control the car, con­
+stantly pay attention to the surrounding environment, and 
+adjust the trajectory and speed of the vehicle according to 
+the surrounding environment. Each task is associated with 
+driving safety and cannot be defined as the main task. That 
+is to say, a driving task may be much more difficult than the 
+full attention task in the cognitive study. In the inattentional 
+blindness paradigm used in cognitive studies, participants 
+only need to detect certain stimuli while performing rather 
+simple main tasks (Mack & Rock, 1998; Most et al., 2005, 
+2001). For example, in Mack and Rock (1998) study, partici­
+pants needed to detect a simple geometric shape (unexpected 
+stimuli) while discriminating the longer arm of a cross (main 
+task). Moreover, Most et al. (2001) showed crosses on the 
+screen (unexpected stimuli) while the participants were 
+instructed to count the number of the letters showed on the 
+screen simultaneously (main task).
+1.1. Inattentional blindness in driving
+Inattentional blindness during driving may cause serious con­
+sequences, and thus, this topic has gained considerable atten­
+tion from researchers. Existing studies related to blindness in 
+driving mainly focused on the condition and factors that lead 
+to inattentional blindness and were committed to eliminating 
+such phenomenon in driving. With the evolution of automo­
+bile equipment and technology, new study topics and meth­
+ods continue to emerge.
+Romer et al. (2014) proposed a model of sources of atten­
+tion failures in novice drivers, which differentiates distraction 
+and inattentional blindness based on whether driving-related 
+tasks cause ignorance of road conditions. This model reveals 
+that distraction is an attention failure caused by the driver’s 
+attention shifting to other non-driving-related tasks, such as 
+using mobile phones and talking. However, inattentional 
+blindness means that the driver’s attention is focused on the 
+driving task but still fails to notice key stimuli. White and 
+Caird (2010) first distinguished looked-but-failed-to-see error 
+(LBFTS) error from inattentional blindness. LBFTS error 
+refers to a common phenomenon in driving that the driver 
+looked at the target stimulus but failed to detect it, that is, he 
+did not actually “see” it. They found that conversations during 
+driving, particularly with attractive passengers, are more likely 
+to trigger LBFTS, and extroverted drivers are more likely to 
+experience LBFTS. Given that the driver’s sight is already on 
+the target object when LBFTS occurs, they speculate that 
+conversational distraction should be cognitive and has noth­
+ing to do with the gaze situation. They thus believe that 
+LBFTS should be regarded as a special kind of inattentional 
+blindness that needs further exploration.
+Early studies on inattentional blindness in driving nor­
+mally adopted the conventional dual-task paradigm. They 
+used a task that is non-related to driving tasks or even inter­
+fering with driving as the main task, such as using a mobile 
+phone or talking to passengers (Strayer et al., 2003; White & 
+Caird, 2010). In Strayer’s experiment, no significant difference 
+is observed in eye movement data between participants who 
+used a mobile phone while driving and those who did not. 
+However, participants’ memory toward specific objects who 
+used a mobile phone was significantly reduced, indicating that 
+using mobile phones can cause more inattentional blindness 
+(Strayer et al., 2003).
+Many researchers also studied the inattentional blindness 
+of drivers while only completing driving tasks. Most and 
+Astur (2007) conducted the first well-recognized study that 
+explored inattentional blindness in driving. They found that if 
+the color of the unpredictable stimuli is different from that of 
+the stimuli the participant pays attention to, then the partici­
+pant is more likely to experience inattentional blindness, and 
+the response time is longer even when the participant notices 
+the stimulus (Most & Astur, 2007). This finding is consistent 
+with the conclusion drawn in a cognitive psychology study 
+(Simons & Chabris, 1999).
+In the studies of inattentional blindness in driving, the self- 
+report of participants is one of the most common indicators, 
+such as the score of recall, recognition, or forced-choice test 
+(H. Kim & Gabbard, 2019; Pammer & Blink, 2013). However, 
+self-report data may be lacking in investigating the influence 
+of inattentional blindness on driving performance. Therefore, 
+many studies adopted behavioral indicators. In the study of 
+inattentional blindness in the driving, reaction time is intro­
+duced through driving experiments using static mode (i.e., 
+picture mode), video mode, and simulators as objective indi­
+cators, including pressing a certain key when observing 
+unpredictable stimulus or performing specific driving opera­
+tions such as turn on lights or windshield wipers (Koivisto & 
+Revonsuo, 2008; Murphy & Greene, 2015; Pammer et al., 
+2015; Pammer & Blink, 2013; Yanko & Spalek, 2013).
+1.2. Influencing factors of inattentional blindness in 
+driving
+The types and properties of unpredictable stimuli will affect 
+inattentional blindness in driving. A study demonstrated that 
+in driving, different unpredictable stimuli may result in 
+a different incidence of inattentional blindness (Pammer 
+et al., 2015). This finding is similar to the study of Mack 
+and Rock (1998) whose result shows that the participants 
+have a different sensitivity to different stimuli. Pammer and 
+Blink (2013) also concluded that the consistency of accidental 
+stimuli and the environment will affect inattentional blind­
+ness. The unpredictable stimuli frequently used in the resent 
+study include pedestrians (Murphy & Greene, 2015, 2016; 
+Pammer et al., 2015; Pammer & Blink, 2013; Yanko & 
+Spalek, 2013), motorcycles (Most & Astur, 2007), vehicles 
+(Murphy & Greene, 2016; Yanko & Spalek, 2013), road signs 
+(Kennedy & Bliss, 2013), and non-safety-related stimuli 
+(Remington et al., 2014; Strayer et al., 2003). Among them, 
+pedestrians are the most used stimuli. Pammer and Blink 
+(2013) studied the impact of consistency between accidental 
+stimuli and driving environment on inattentional blindness. 
+Results show that in the urban environment, participants are 
+more likely to experience inattentional blindness for kangar­
+oos that do not match the environment than businessmen. On 
+the contrary, in a rural environment, no significant difference 
+is found between the two stimuli (Pammer & Blink, 2013). 
+838 
+ Y. WANG ET AL.
+
+--- Page 4 ---
+The experiment revealed that the consistency of accidental 
+stimuli and the driving environment may affect the occur­
+rence of inattentional blindness.
+High workloads can also lead to an increase in inatten­
+tional blindness. Kennedy and Bliss (2013) showed that even 
+when only completing high-load driving-related tasks, parti­
+cipants are very prone to inattentional blindness. Murphy and 
+Greene (2015, 2016) also studied inattentional blindness in 
+driving under different workloads via driving simulators and 
+manipulating workloads through a target searching task and 
+narrow gap driving task respectively. They found that drivers 
+are more likely to experience inattentional blindness under 
+high perceptual load because under the low perceptual load, 
+the drivers paid additional attention to driving-related stimuli. 
+By contrast, under the high perceptual load, the driver paid 
+equal attention to driving-related and unrelated tasks. Their 
+study also proved that no significant difference exists in the 
+occurrence of inattentional blindness between unpredictable 
+stimuli that appeared the first and second time. This result 
+indicates that cognitive load, and not participants’ expecta­
+tion, affects inattentional blindness.
+However, the way to manipulate workload may lead to 
+inconsistent results. For example, road familiarity is one of 
+the most unique factors of inattentional blindness in driving. 
+Researchers proposed that driving on familiar roads will 
+encourage automated processing of road information that 
+leads to low workload, some studies showed that driving on 
+familiar roads leads to more inattentional blindness (Charlton 
+& Starkey, 2013; Yanko & Spalek, 2013). This conclusion 
+accords with De Fockert and Bremner (2011), in which low 
+workload may also cause inattentional blindness. However, 
+these results are contrary to that drawn by Kennedy and Bliss 
+(2013) and Murphy and Greene (2015, 2016). In the present 
+study, we speculate that this discrepancy of results may be 
+attributed to the various manipulations of the driver’s work­
+load (e.g., road familiarity in Charlton and Starkey (2013) and 
+Yanko and Spalek (2013), subjective workload after completed 
+the driving task in Kennedy and Bliss (2013), and driving 
+through car gaps of different widths in Murphy and Greene 
+(2015, 2016)). Hence, we used road complicacy to induce 
+different workloads and asked participants to complete work­
+load scales after completing all tasks as supporting informa­
+tion in our study to ensure that we successfully manipulate 
+participants’ workload.
+1.3. AR HUD and inattentional blindness
+The AR assistance in driving can be divided into visual, 
+auditory, and tactile support according to the different sen­
+sory channels, and all forms have been put into use in certain 
+areas of driving (S. Kim & Dey, 2016). Most of the driving 
+information is obtained through visual perception. Visual 
+perception can accurately seize long-distance information 
+and the direction, trajectory, and speed of the vehicle. 
+Nowadays, the AR HUD is widely used in AR-assisted driv­
+ing. In addition, AR HUD integrates AR information in the 
+conventional HUD by projecting real-time driving informa­
+tion on the HUD, thereby providing the driver with additional 
+information from the first perspective (Ng-Thow-Hing et al., 
+2013). Moreover, AR HUD can enhance the driver’s visibility 
+of important events on the road and may also enhance the 
+driver’s situational awareness. AR HUD is also suitable for 
+drivers of different ages (Ng-Thow-Hing et al., 2013). Hwang 
+et al. (2016) proved that AR HUD can enhance the driver’s 
+risk perception and reduce the driver’s anxiety level.
+However, AR HUD has certain disadvantages. When HUD 
+was first applied in the aerospace field, many studies have 
+found that HUD can bring about a phenomenon named 
+“attention tunnel” (Karar & Ghosh, 2012). Attention tunnel 
+refers to missed events caused by a slight mismatch of atten­
+tion between the HUD and the external scenery (Karar et al., 
+2015). This phenomenon can be regarded as inattentional 
+blindness in driving. One view is that HUD may separate 
+the attention of pilots from the real environment. In other 
+words, pilots tend to ignore unpredictable stimuli when pay­
+ing attention to the information on HUD (Moodi, 1995).
+A similar phenomenon exists in the field of automobile driv­
+ing. Gabbard et al. (2014) proposed that when driver pays addi­
+tional attention to the information displayed on the windshield 
+by HUD, they tend to ignore information in the real environ­
+ment. They suggested that the role of AR HUD in driving has 
+three levels: (1) guiding the driver to perceive the surrounding 
+environment and operate the vehicle, including wayfinding, 
+heading control, speed control, and distance control with other 
+vehicles and objects; (2) guiding the driver to operate some 
+functions that are more relevant to the driving task, such as 
+turning on the turn signal lights and adjusting the wiper; (3) 
+guiding the driver to complete the adjustment and entertain­
+ment functions, such as adjusting the air conditioning, informa­
+tion display, and other entertainment functions (Gabbard et al., 
+2014). The importance of these three levels decreases in order. 
+Gabbard et al. (2014) suggested that if the second and third levels 
+of AR HUD attract excessive attention from the drivers, then 
+they can easily ignore the stimuli in the real driving environ­
+ment, resulting in safety hazards.
+Although previous studies provided evidence that AR 
+HUD introduces inattentional blindness, most of them 
+focused on “distraction” (Romer et al., 2014). That is, non- 
+driving-related tasks in AR HUD-assisted driving cause dri­
+vers to ignore unpredictable stimuli.
+The factors that cause attention failure in the HUD may also 
+cause attention failure in the AR HUD. However, few related 
+studies focused on the factors influencing inattentional blindness 
+in AR HUD. Oh et al. (2016) suggested that the superposition of 
+HUD on unpredictable stimuli in the real world may cause 
+additional attention tunnel, that is, more inattentional blindness. 
+Some researchers were committed to improving AR HUD to 
+make it a better assistant for drivers. H. Kim et al. (2016) 
+provided the drivers with the distance information between the 
+vehicle and the critical event through AR HUD, which effectively 
+reduced inattentional blindness. Then, Schwarz and Fastenmeier 
+(2017) proved that using AR technology to provide the subjects 
+with visual information by describing the accident ahead in 
+detail can reduce the subject’s time to shift their attention back 
+to the road. In a recent study, H. Kim and Gabbard (2019) used 
+driver’s gaze behavior and situational awareness as quantifiable 
+indicators of inattentional blindness in AR HUD-assisted driv­
+ing, providing a new method to evaluate the AR HUD interface. 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+ 839 
+
+--- Page 5 ---
+They concluded that using a conformal graphic (e.g., a bounding 
+box) to augment stimulus will encourage inattentional blindness 
+toward non-augmented environmental elements. However, Kim 
+and Gabbard only augmented pedestrians in their study, exclud­
+ing other important safety-critical elements, such as road signs. 
+Unpredictable stimuli, such as pedestrians, are easily omitted by 
+the system due to their unpredictability and current technical 
+restraints. Thus, future studies need to explore conditions when 
+unpredictable stimuli are not augmented in AR HUD-assisted 
+driving to come up with corresponding countermeasures.
+In summary, AR HUD should try to provide drivers with 
+more appropriate and efficient information to prevent traffic 
+accidents. However, many studies showed that AR HUD may 
+lead to more inattentional blindness. At present, only a few 
+studies focused on the blindness caused by HUD, and even 
+less research explored the impact of AR HUD on inattentional 
+blindness. The AR bounding box used in AR HUD can direct 
+the driver’s attention. This bounding box is designed to attract 
+the driver’s attention to the augmented stimuli, which may 
+induce inattentional blindness toward non-augmented stimuli 
+(i.e., unpredictable stimuli in some situations). Moreover, 
+existing studies showed that the characteristic of stimuli and 
+cognitive load are associated with inattentional blindness. 
+However, no study has examined the effect of cognitive load 
+on inattentional blindness in the context of AR HUD display. 
+Therefore, the influence of augmented condition and cogni­
+tive load on the occurrence of inattentional blindness in the 
+AR HUD driving task needs to be explored.
+The present study focuses on inattentional blindness in AR 
+HUD-assisted driving tasks by exploring its forming condition 
+and influencing factors through two experiments. The present 
+study mainly aims to improve the AR HUD design and reduce 
+inattentional blindness. The objectives of the study are as follows:
+(1) Explore whether the application of AR-assisted dis­
+play in-car driving will induce more inattentional 
+blindness. In experiment 1, some contingencies (i.e. 
+the unpredictable event that has not been augmented 
+by AR) were added in driving routes to induce the 
+potential inattentional blindness when the drivers use 
+the AR HUD during driving.
+(2) Explore whether cognitive load affects the occurrence 
+of inattentional blindness in AR HUD-assisted driving. 
+In experiment 2, we set two driving scenarios with 
+different complexities of the driving environment to 
+induce different levels of cognitive load in driving.
+Accordingly, this study proposes the following hypothesis: 
+Drivers using AR HUD without augmented pedestrian (AR 
+HUD-NP) will experience the highest level of inattentional 
+blindness in a higher workload condition.
+2. Experiment 1
+2.1. Objectives
+This study aims to explore whether AR HUD is used and 
+whether unpredictable stimuli are augmented by AR HUD 
+will increase inattentional blindness in driving tasks. In this 
+experiment, the driving situations were divided into two 
+types: with AR HUD and without AR HUD. Considering 
+the large uncertainty of unpredictable stimuli, the existing 
+AR HUD systems may not detect and augment the unpredict­
+able stimuli in time. The unpredictable stimuli refer to the 
+events that occur unpredictably to the drivers, such as the 
+sudden appearance of a pedestrian. Thus, AR HUD condi­
+tions were further divided into AR HUD with and without 
+augmented unpredictable stimuli conditions to investigate the 
+potential effect of different augmented conditions of AR HUD 
+on driving inattentional blindness.
+Thus, this experiment explored the effects of augmented 
+conditions, including No AR HUD, AR HUD with augmented 
+unpredictable stimuli, and AR HUD without augmented 
+unpredictable stimuli, on inattentional blindness in driving.
+2.2. Methods
+2.2.1. Participants
+We recruited 60 licensed drivers with normal to corrected-to- 
+normal vision. The average age of the participants was 
+20.94 years old (SD = 2.32), their average driving experience 
+is 3.15 years (SD = 1.35), and their average mileage is 362 km. 
+All participants provided written informed consent and were 
+compensated for their participation.
+2.2.2. Experimental equipment
+This study used a driving simulator consisted of a driving 
+simulator 
+software 
+(STISIMDRIVE 
+M100K, 
+Systems 
+Technology Inc., Hawthorne, CA, USA), an operating system 
+(Logitech MOMO, Newark, CA, USA) with a steering wheel, 
+an accelerator, and brake pedals, two computers, and an 
+INTECH IWB 72-inch LED screen with 1,920 × 1,080 px 
+resolution is used in our study. The LED screen was approxi­
+mately 1.5 m away from participants vertically.
+All virtual sceneries were created on the STISIM 3 program 
+and were projected on the LED screen. An SMI RED-m 
+portable eye tracker was used to record participants’ eye 
+movements at a sampling frequency of 30 Hz. The eye move­
+ment data were analyzed using the SMI system software iView 
+3.5 and BeGaze 3.5.
+The laboratory is an independent room of 25 m2. The 
+simulation car is set in the center of the room. The windshield 
+is installed to make the driving environment more realistic. 
+The cardboards are installed on both sides of the seats, and 
+the LED screen is placed near the wall.
+2.2.3. Materials
+In the present study, we used driving videos generated with 
+a medium-fidelity driving simulator to create a naturalistic 
+driving experience. However, we cannot directly augment 
+target stimuli in the driving simulator due to technical limita­
+tions. Thus, we adopted video materials used by Oh et al. 
+(2016). To create the video footage, a licensed experimenter 
+completed the driving tasks in the SITSIM driving simulator, 
+and we captured the video footage through screen recording.
+We created 10 videos in total. In the videos, the ego-car 
+drove on a 2 km-long four-lane motorway at a constant speed 
+of 65 km/h. We added various road elements, such as curves, 
+840 
+ Y. WANG ET AL.
+
+--- Page 6 ---
+interactions with traffic lights, buildings, trees, road signs, 
+vehicles, and pedestrians, to the scenarios to create a natural 
+and realistic driving experience for drivers. We also added 
+four types of critical events to the scenarios: (1) speed of the 
+ego-car exceeding the speed limit (occurred two times), (2) 
+the ego-car running a red light (occurred 2 times), (3) the 
+ego-car driving too close to lead vehicles (occurred two 
+times), and (4) pedestrian in front of the ego-car crossing 
+the road (occurred six times). In all videos, the ego-car will 
+not avoid any critical events. However, no collision would 
+occur according to the system setting. All road elements and 
+road events appeared at a random distance on the road.
+2.2.4. Experimental variables and design
+This experiment was a single-factor between-subject design in 
+which three groups of participants need to experience different 
+augmented conditions. The independent variable was augmen­
+ted condition: (1) No AR HUD condition, (2) AR HUD without 
+augmented pedestrian (AR HUD-NP) condition, (3) AR HUD 
+with augmented pedestrian (AR HUD-P) condition. In this 
+stidy, we use the No AR HUD condition as a baseline for driver 
+behavioral and eye movement measurements.
+To create a prototype of AR interfaces, we used a video- 
+editing tool to overlay bounding boxes (i.e., the AR graphics) 
+atop the driving videos. Table 1 shows the designing detail 
+and demonstration graph of each augmented condition.
+The dependent variables were the occurrence of inatten­
+tional blindness, types of inattentional blindness, reaction 
+time without blindness, and subjective workload. We adopted 
+White and Caird (2010) operational definition of inattentional 
+blindness, that is, drivers do not respond when the pedestrian 
+is in the center of the windshield. Then we divided inatten­
+tional blindness into ordinary blindness and looked-but-failed 
+-to-see error (LBFTS error) according to eye movement data 
+(White & Caird, 2010) (Table 2). Ordinary blindness means 
+that the participant neither looked at the pedestrian (gaze 
+dwell time under 100 ms) nor responded to it. LBFTS error 
+means that participants looked at pedestrians (gaze dwell time 
+is and above 100 ms) without responding to it. The sampling 
+frequency of the eye tracking device is 30 Hz, so 100 ms is 
+approximately three consecutive video frames after pedes­
+trians were in the center point of the windshield. The reaction 
+time without blindness was defined as the interval time 
+between the onset of the pedestrian’s movement and the 
+participant pressing the button. The workload is measured 
+using the NASA Task Load Index (NASA-TLX) scale (Hart & 
+Staveland, 1988), which includes six dimensions of workload 
+(overall performance, frustration, effort, mental, physical, and 
+temporal demand of a task). We used a weighted average TLX 
+score as the workload indicator.
+Pammer et al. (2015) noted that the types of unpredictable 
+stimuli will affect inattentional blindness. Therefore, we only 
+used pedestrians as unpredictable stimuli in our study. The 
+Governors Highway Safety Administration (GHSA) reported 
+that the number of pedestrian fatalities in the United States 
+has grown sharply in recent years (Governors Highway Safety 
+Association, 2019). Thus, GHSA calls for engineering coun­
+termeasures to reduce pedestrian fatality. A report by Britain’s 
+Department of Transport shows that drivers failing to detect 
+pedestrians accounted for 15% of pedestrian fatality 
+(Department for Transport, 2019). Moreover, the current 
+AR HUD designs have not reached a consensus on whether 
+and how to augment pedestrians (Hwang et al., 2016; Karar 
+et al., 2015; H. Kim & Gabbard, 2019; Langlois & Soualmi, 
+2016; Park & Kim, 2013; Park et al., 2013). Therefore, we 
+choose pedestrians as our unpredictable stimuli.
+Table 1. Designing details and demonstration graphs of three augmented conditions.
+Types of augmented condition
+Designing detail
+Demonstration graph
+No AR HUD
+We did not augment anything in this condition.
+AR HUD without augmented 
+pedestrian (AR HUD-NP)
+We augmented road signs, traffic lights, and lead vehicles with bounding boxes, 
+but we did not augment unpredictable pedestrians in this condition.
+AR HUD with augmented 
+pedestrian condition (AR 
+HUD-P)
+We augmented road signs, traffic lights, lead vehicles, and unpredictable 
+pedestrians in this condition.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+ 841 
+
+--- Page 7 ---
+2.2.5. Procedure
+The participants read and signed an informed consent form 
+and completed a demographic questionnaire. The experimen­
+ter helped participants wear and calibrate the eye tracker 
+using a three-point calibration mode of eye-tracking device. 
+That is, participants gazed at three random locations in the 
+front view, and the experimenter clicked the corresponding 
+locations in the eye-tracking monitor to adjust the gaze point.
+The experimenter also helped participants adjust the height 
+of the chair to ensure that their eye sights were right in the 
+center of the HUD display (the experimenter can observe 
+participant’s eyesight through the eye-tracking monitor).
+We told the participant to imagine being the driver when 
+watching these first-person-view videos. We also instructed 
+them to press the designated buttons whenever they noticed 
+a critical event in the videos, such as overspeeding, running 
+a red light, being too close to the lead vehicle, or pedestrians 
+crossing the road. We required participants to respond to all 
+critical events because we want to prevent them from antici­
+pating the pedestrians. That is, participants needed to press 
+the button when they noticed the following: (1) the ego-car 
+exceeded the speed limit, (2) the ego-car ran a red light, (3) 
+the distance between the ego-car and the lead car was too 
+close, (4) a participant in front was crossing the road. 
+However, only the data of participants responding to pedes­
+trians were used for analysis.
+The participants first completed two practice trials. In the 
+practice trials, all road settings were the same as the formal 
+experiment. Moreover, critical events, such as overspeeding, 
+running a red light, and leading vehicle decelerating (i.e., 
+being too close to leading vehicles), were all included. 
+However, unpredictable stimuli (i.e., pedestrians crossing the 
+road) are excluded.
+After practice, participants were randomly assigned to 
+three groups and they were to watch three types of AR- 
+augmented driving videos, respectively. Each group completed 
+10 formal trials (i.e., viewed 10 videos). Among these, six trials 
+contained pedestrians’ road-crossing events. The presentation 
+order of 10 videos was counter-balanced by Latin squares. 
+When participants complete one trial, the next trial automa­
+tically started on the basis of the system setting.
+After completing all experimental trials, the participants 
+were asked to complete the NASA-TLX scale to measure their 
+overall workload of completing the entire experiment.
+2.3. Results
+2.3.1. Data processing
+The occurrence of inattentional blindness is based on drivers’ 
+response (response or no response). We coded the result as no 
+blindness if participants responded to unpredictable pedes­
+trians and inattentional blindness if they responded. The type 
+of inattentional blindness was calculated based on eye move­
+ment data. We used unpredictable stimuli (i.e. pedestrians) as 
+the area of interest (AOI) to analyze the gaze dwell time of the 
+participants. We coded the result as LBFTS blindness if their 
+gaze dwell time on the AOI was longer than three frames 
+(100 ms at 30 Hz sample frequency) and they failed to press 
+the button to respond (White & Caird, 2010). We coded the 
+result as the ordinary inattentional blindness if the partici­
+pants’ gaze dwell time on the AOI was less than three frames 
+and they failed to press the button (Table 2). Reaction time 
+without blindness equals the exact time the participants press 
+the brake pedal minus the exact time the unpredictable 
+showed up. When analyzing the brake time pedal, we 
+excluded the data when the participant did not press the 
+brake pedal. For the NASA-TLX score, we asked the partici­
+pants to finish two parts of the questionnaire. We multiplied 
+the weighted score (the score derived from the second part of 
+the questionnaire) and the scale score (the score derived from 
+the first part of the questionnaire) and divided it by 15 to 
+obtain our final workload score.
+2.3.2. Occurrence of inattentional blindness
+This experiment had 348 valid trials where we observed inat­
+tentional blindness in 168 trials. However, we excluded three 
+trials, accounting for 1.78% of the total inattentional blindness 
+trial, as their eye movement data were missing due to techni­
+cal problems. Thus, we had 165 valid inattentional blindness 
+trials for further analysis.
+IBM SPSS Statistics 26.0 was used to analyze the experi­
+mental data. In the present study, the occurrence of inatten­
+tional blindness and the type of inattentional blindness were 
+discrete and non-linear data. Thus, we adopted the general­
+ized linear model (GLM) for data analysis. GLM is suitable for 
+discrete data as it allows using a link function to connect the 
+linear model to the non-normally distributed response vari­
+able. To reach consistency in data analysis, we also used GLM 
+to analyze reaction time and NASA-TLX data.
+We used the occurrence of blindness as the dependent 
+variable and the augmented condition as the factor to perform 
+GLM. We used binary logistic regression as the link function. 
+The result showed that the effect of augmented condition on 
+the occurrence of inattentional blindness was significant (χ2 
+(2) = 21.484, p< .001). The GLM parameter estimates results 
+showed that compared with the AR HUD-P condition, the No 
+AR HUD (χ2(1) = 6.554, p< .01) and the AR HUD-NP con­
+ditions (χ2(1) = 21.453, p< .001) significantly increased the 
+incidence of inattentional blindness (Table 3). We further 
+conducted the GLM post hoc test to compare the incidence 
+of inattentional blindness between AR HUD-NP and No AR 
+HUD conditions (we used Bonferroni correction for multiple 
+comparisons). The result showed that the AR HUD-NP con­
+dition had a marginally higher proportion of inattentional 
+blindness No AR HUD condition (p = .087) (Figure 1a).
+2.3.3. Type of inattentional blindness
+We used the type of blindness as the dependent variable and 
+the augmented condition as the factor to perform GLM. We 
+Table 2. Classification of no blindness, ordinary blindness, and LBFTS error.
+Response
+Yes
+No
+Gaze dwell time
+≥100 ms
+Look and respond
+LBFTS error
+<100 ms
+Not look but respond
+Ordinary blindness
+No blindness = Look and respond + Not look but respond; Inattentional 
+blindness = LBFTS error + Ordinary blindness. 
+842 
+ Y. WANG ET AL.
+
+--- Page 8 ---
+used binary logistic regression as the link function. The result 
+showed that the augmented condition significantly impacted 
+the type of inattentional blindness (χ2(2) = 10.493, p< .01). 
+The GLM parameter estimates results showed that compared 
+with the AR HUD-P condition, the incidences of LBFTS error 
+were significantly lower in No AR HUD and AR HUD-NP 
+conditions (χ2(1) = 4.303, p< .05; χ2(1) = 10.487, p< .001) 
+(Table 3). We conducted the GLM post hoc test to compare 
+the incidence of LBFTS error between AR HUD-NP and No 
+AR HUD conditions (Bonferroni correction). We observed no 
+difference between AR HUD-NP and No AR HUD conditions 
+(p> .05) (Figure 1b). Notably, although the proportion of 
+LBFTS errors in the AR HUD-P condition was significantly 
+higher than that of the other two groups. However, the fre­
+quency of LBFTS in the three groups was very similar (n(No 
+AR HUD) = 27, n(AR HUD-NP) = 28, n(AR HUD-P) = 27). 
+Thus, the frequencies of ordinary blindness in the No AR 
+HUD (n = 28) and the AR HUD-NP (n = 46) conditions were 
+significantly higher than those of the AR HUD-P (n = 11) 
+condition.
+2.3.4. Reaction time without blindness
+We used reaction time without blindness as the dependent 
+variable and the augmented condition as the factor to perform 
+GLM. We used the linear model as the link function. The 
+result showed that the augmented condition significantly 
+impacted reaction time without blindness (χ2(2) = 13.490, 
+p< .001). The GLM parameter estimates results showed that 
+compared with the AR HUD-P condition, the reaction time 
+was significantly longer in the No AR HUD condition (χ2 
+(1) = 12.632, p< .001). No difference was observed between 
+AR HUD-P and AR HUD-NP conditions (χ2(1) = 0.268, 
+p> .05) (Table 3). The GLM post hoc test results 
+(Bonferroni correction) showed that reaction time was 
+Figure 1. (a) Incidence of inattentional blindness, (b) incidence of two types of blindness, (c) reaction time without blindness (mean and standard error), and (d) 
+NASA-TLX score (mean and standard error) under different augmented condition.
+Table 3. Effect of augmented condition on behavior performance and NASA-TLX score.
+Dependent Variable
+Augmented condition
+B
+SE
+Wald χ2
+p
+OR
+95% CI OR
+The occurrence of inattentional blindness
+No AR HUD
+−0.697
+0.272
+6.554
+.010**
+0.498
+[0.292, 0.849]
+AR HUD-NP
+−1.275
+0.275
+21.453
+.000***
+0.280
+[0.163, 0.479]
+AR HUD-P
+Type of inattentional blindness
+No AR HUD
+0.936
+0.451
+4.303
+.038*
+2.549
+[1.053, 6.170]
+AR HUD-NP
+1.394
+0.431
+10.487
+.001***
+4.032
+[1.734, 9.377]
+AR HUD-P
+Reaction time without blindness
+No AR HUD
+111.655
+31.4158
+12.632
+.000***
+3.10E+48
+[5.62E+21, 1.71E+75]
+AR HUD-NP
+18.5
+35.7514
+0.268
+.605
+1.08E+08
+[4.01E-23, 2.93E+38]
+AR HUD-P
+NASA-TLX
+No AR HUD
+6.061
+4.1977
+2.085
+.149
+428.733
+[0.115, 1.60E+06]
+AR HUD-NP
+−3.53
+4.1977
+0.707
+.400
+0.029
+[7.83E-06, 109.633]
+AR HUD-P
+*p < .05; **p < .01; ***p < .001. 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+ 843 
+
+--- Page 9 ---
+significantly longer in the No AR HUD condition compared 
+with the AR HUD-NP condition (p< .05). However, no dif­
+ference existed between the two AR HUD conditions (p> .05) 
+(Figure 1c).
+2.3.5. Subjective workload
+We used the NASA-TLX score as the dependent variable, the 
+augmented condition as the factor to perform GLM. We 
+used the linear model as the link function. The result 
+showed that the impact of the augmented condition on 
+subjective workload was of marginal significance (χ2 
+(2) = 5.630, p = .06). The GLM parameter estimates results 
+showed that no significant difference existed among No AR 
+HUD, AR HUD-NP, and AR HUD-P conditions in terms of 
+subjective workload (ps > .05) (Table 3). The GLM post hoc 
+test (Bonferroni correction) showed that the subjective work­
+load in the No AR HUD condition was marginally signifi­
+cantly higher than the AR HUD-NP condition (p = .057). 
+No difference was observed between the two AR HUD con­
+ditions (p> .05) (Figure 1d).
+3. Experiment 2
+3.1. Objectives
+The results of experiment 1 showed that when using AR HUD, 
+the participants were more likely to notice augmented stimuli. 
+However, they were more likely to experience inattentional 
+blindness 
+to 
+unpredictable 
+stimuli 
+not 
+augmented. 
+Nevertheless, existing AR HUD designs purposed different stra­
+tegies over the choice of which stimulus to augment. Moreover, 
+in an intricate driving environment, no AR HUD system can 
+ensure that every safety-critical stimulus is augmented reason­
+ably and promptly. Therefore, inattentional blindness induced 
+by AR HUD failing to augment unpredictable pedestrians 
+urgently needs attention and solution. In experiment 2, we 
+explored how the workload affects the occurrence of inatten­
+tional blindness in driving in AR HUD without the augmented 
+unpredictable pedestrian (AR HUD-NP) condition.
+3.2. Method
+3.2.1. Participants
+A total of 20 licensed drivers (mean age = 21.63 years) with 
+normal to corrected-to-normal vision were recruited as parti­
+cipants for this experiment. Their average driving experience 
+is 2.74 years (SD = 1.21) and their average mileage is 283 km. 
+All participants provided written informed consent and were 
+compensated for their participation.
+3.2.2. Experimental equipment
+The experiment equipment and environment are identical to 
+those in experiment 1.
+3.2.3. Materials
+In experiment 2, we created five low-workload trials and five 
+high-workload trials on STISIM3. A total of 10 videos were 
+generated through video recording as a licensed experimenter 
+completes all trials in the driving simulators. Trials of differ­
+ent workloads were different in terms of the density of road 
+elements. For example, in a low-workload trial, there were no 
+curves, 1 decelerating lead vehicle, 5 buildings, 20 trees, and 5 
+pedestrians, while in a high-workload video there were 4 
+curves,1 decelerating lead vehicle, 15 opposite vehicles, 20 
+buildings, 35 trees, and 20 pedestrians (see Figure 2 for 
+demonstration 
+graphs 
+for 
+two 
+workload 
+conditions). 
+Participants would experience six pedestrians-crossing-road 
+events (three in each workload condition). Other settings are 
+the same as those in experiment 1.
+3.2.4. Experimental variables and design
+This experiment used a within-subject design. The workload 
+condition was the independent variable with two levels: (1) 
+low-workload condition; (2) high-workload condition. All 
+participants viewed low-workload and high-workload videos. 
+The workload can be manipulated by the complexity of the 
+road according to Paxion et al. (2015), such as the number of 
+curves, traffic flow, number of pedestrians, and the complex­
+ity of the surrounding environment. We used the NASA-TLX 
+scale scores to verify whether the road complexity is success­
+fully manipulated. The dependent variables were the occur­
+rence of inattentional blindness and reaction time without 
+blindness, which is the same as that in experiment 1. In 
+experiment 2, we did not include LBFTS error as the depen­
+dent variable because we did not find any difference in the 
+frequency of LBFTS error among three augmented conditions. 
+Thus, we believed that the incidence of LBFTS error was not 
+a sensitive indicator in our study.
+3.2.5. Procedure
+The experiment procedure was identical to that in experiment 
+1. In experiment 2, all subjects completed both high load 
+Figure 2. Demonstration graphs for (a) low- and (b) high-workload conditions.
+844 
+ Y. WANG ET AL.
+
+--- Page 10 ---
+block and low load block., and each block included five trials 
+(i.e. five videos). The presentation order of two blocks was 
+counterbalanced in an ABBA order. That is, half participants 
+followed the “high ! low” order, and the other half followed 
+the “low ! high” order. We used the Latin square design to 
+counterbalance the sequence of five trials in each block. 
+Participants were instructed to press the button when they 
+noticed the following: (1) the ego-car exceeded the speed 
+limit, (2) the ego-car ran a red light, (3) the distance between 
+the ego-car and the lead car was too close, (4) a participant in 
+front was crossing the road. However, only the data of parti­
+cipants responding to pedestrians were used for analysis.
+When participants completed one trial, the next trial auto­
+matically started according to the system setting. After com­
+pleting one block, the participants were asked to complete the 
+NASA-TLX scale to measure their workload of each workload 
+block.
+3.3. Results
+3.3.1. Data processing
+The data processing method was the same as that in experi­
+ment 1. The occurrence of inattentional blindness is based on 
+drivers’ response (response or no response). We coded the 
+result as no blindness if participants responded to unpredict­
+able pedestrians and inattentional blindness if they responded. 
+The reaction time without blindness equals the exact time the 
+participants press the brake pedal minus the exact time the 
+unpredictable pedestrian showed up. For the NASA-TLX 
+score, we asked the participants to finish two parts of the 
+questionnaire. We multiplied the weighted score (the score 
+derived from the second part of the questionnaire) and the 
+scale score (the score derived from the first part of the 
+questionnaire). Then, we divided it by 15 to get our final 
+workload score.
+3.3.2. Subjective workload and road complexity
+A total of 117 valid trials were obtained. The generalized 
+estimating equation (GEE) was adopted to analyze the occur­
+rence of blindness, the subjective workload, and reaction time 
+without blindness data. Similar to GLM, GEE can handle 
+discrete and non-linear data. GEE is suitable for a within- 
+subject design while GLM is suitable for a between-subject 
+design.
+We used the NASA-TLX as the dependent variable and the 
+workload condition as the factor to perform GEE. We used 
+the linear model as the link function. The result showed that 
+workload condition had a significant impact on subjective 
+workload (χ2(1) = 10.556, p< .001) (Table 4), indicating that 
+we successfully manipulated participants’ subjective workload 
+by altering the complexity of roads (Figure 3c).
+3.3.3. Occurrence of inattentional blindness
+We used the occurrence of inattentional blindness as the 
+dependent variable and the workload condition as the factor 
+to perform GEE. We used binary logistic regression as the link 
+function. The result showed that the workload condition had 
+a significant impact on subjective workload (χ2(1) = 6.050, 
+p< .05) (Table 4), and the incidence of inattentional blindness 
+was significantly higher in the high-workload condition 
+(Figure 3a).
+3.3.4. Reaction time without blindness
+We used the reaction time without blindness as the dependent 
+variable and the workload condition as the factor to perform 
+GEE. We used the linear model as the link function. The 
+Table 4. Effect of workload on inattention blindness and reaction time.
+Dependent Variable
+Workload Condition
+B
+SE
+Wald χ2
+p
+OR
+95% CI OR
+The occurrence of inattentional blindness
+High
+0.740
+0.301
+6.050
+.014*
+2.097
+[1.162, 3.782]
+Low
+Reaction time without blindness
+High
+−141.450
+66.126
+4.576
+.032*
+3.71E-62
+[1.92E-118, 7.17E-06]
+Low
+NASA-TLX Score
+High
+−6.267
+1.9288
+10.556
+.001***
+0.002
+[4.33E-05, 0.083]
+Low
+*p < .05; **p < .01; ***p < .001. 
+Figure 3. (a) Incidence of inattentional blindness, (b) reaction time without blindness (mean and standard error), and (c) NASA-TLX score (mean and standard error) 
+under different workload conditions.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+ 845 
+
+--- Page 11 ---
+result showed that the workload has a significant impact on 
+the reaction time (χ2(1) = 4.576, p< .05) (Table 4), and the 
+driver’s reaction time was longer in the high-workload con­
+dition than in the low-workload condition (Figure 3b).
+4. General discussion
+The empirical study focused on the inattentional blindness in 
+AR HUD-assisted driving. This study compared the occur­
+rence of inattentional blindness in different AR HUD- 
+augmented conditions and further explored the impact of 
+workload on inattentional blindness. The results showed that 
+utilizing AR HUD could significantly reduce driver’s inatten­
+tional blindness if the unpredictable stimuli were augmented 
+with a bounding box. However, AR HUD could also encou­
+rage inattentional blindness if the system failed to augment 
+the unpredictable stimuli, and high-workload participants 
+would experience more inattentional blindness.
+4.1. Impact of AR HUD-augmented condition on 
+inattentional blindness
+The present study provided empirical evidence that AR HUD in 
+driving could induce inattentional blindness toward a subject 
+not augmented, which consists of the conclusion drawn by 
+previous studies (Gabbard et al., 2014; H. Kim & Gabbard, 
+2019; Oh et al., 2016; Romer et al., 2014). The present study 
+further studied inattentional blindness toward unpredictable 
+pedestrians. This study found that drivers using AR HUD were 
+more likely to pay attention to augmented objects, thereby 
+neglecting the safety-critical objects not detected and augmented 
+by the system. That is to say, if the system fails to augment an 
+abruptly appeared pedestrian and instead augment a traffic sign 
+with a bounding box, then the driver may experience inattention 
+blindness toward pedestrians because the drivers’ attention is 
+shifted to the augmented traffic sign. This event could lead to 
+serious traffic accidents. The underlying reason may be that the 
+AR bounding box used to augment environmental elements in 
+AR HUD guided the participant’s attention to a certain subject, 
+causing them to ignore other stimuli.
+We can also explain the result in terms of the theory of 
+attention set. Pammer et al. (2015) first proposed the concept 
+of “attention set” in their study of inattentional blindness in 
+driving. Attention set refers to an individual’s mental template 
+of objects, situations, or behavior based on its consistent seman­
+tic features and feature relationships. Koivisto and Revonsuo 
+(2008) proved that if individuals were faced with multiple stimuli 
+simultaneously, then they would only pay attention to the target 
+stimulus while ignoring others. In other words, individuals built 
+an “attention set” of the features of this specific stimulus. 
+According to the theory of “attention set,” the observer estab­
+lishes an attention set that contains features of the target object 
+to better monitor the environment, enabling the easy detection 
+of stimuli containing the same features. Hence, the more the 
+stimuli overlap with the attention set, the easier it will be noticed 
+by observers. With regard to the driving task, the attention set 
+should have only contained features of objects and processes 
+related to the driving environment. However, if participants use 
+AR HUD, then the “AR bounding box” becomes a new feature of 
+the participants’ attention set. Therefore, the overlap ratio of the 
+augmented unpredictable stimuli and the attention set would 
+increase compared with when not using AR HUD. Meanwhile, 
+the overlap ratio between the unpredictable stimuli not augmen­
+ted, and the attention set would decrease. This event explains 
+why participants using AR HUD were more likely to detect the 
+augmented stimuli and showed more inattentional blindness to 
+the unpredictable stimuli not augmented.
+The limitation of the human visual system could also be 
+the underlying reason for AR HUD-induced inattentional 
+blindness. According to Treisman’s (1982) theory of percep­
+tual grouping, our visual attention is a limited pool of 
+resource which curtails parallel information processing. That 
+is, one cannot focus on two different perceptual groups at 
+once. The theory echoes Wicken’s viewpoint that the visual 
+system is limited in monitoring multiple displays for it only 
+has a single focal point (Baldwin et al., 2012; Wickens, 1984, 
+2002) . In a HUD display study, McCann et al. (1993) demon­
+strated that our visual system parses HUD display as separate 
+perceptual groups. Thus, when drivers focused their attention 
+on HUD display (i.e. the bounding box in the present study), 
+real-world road elements (i.e. The pedestrians) were excluded 
+from processing and vice versa. As a result, drivers need to 
+shift attention constantly between the HUD and the real 
+world, which causes inattentional blindness. Although 
+McCann’s et al. (1993) conclusion was based on the screen- 
+fixed AR HUD design, we presume that world-fixed AR HUD 
+may contain a similar flaw that induces inattentional blind­
+ness. Future study is needed to test this hypothesis.
+Inattentional blindness could also be the result of lacking 
+cognitive resources. Cognitive load theory suggests that our 
+cognitive resources are limited. If the ongoing task demands 
+considerable cognitive resources, then the cognitive resources 
+left are insufficient to process other tasks (Lavie, 1995, 2005). 
+In experiment 1, we found that AR HUD display cannot 
+effectively reduce participants’ subjective workload. This 
+notion could explain why drivers under No AR HUD and AR 
+HUD-NP conditions shared a similar proportion of inatten­
+tional blindness toward unpredictable pedestrians. In experi­
+ment 2, we found that high-workload drivers were more likely 
+to experience inattentional blindness, and they reacted signifi­
+cantly slower to unpredictable pedestrians compared with low- 
+workload drivers. That is, if the driving task is demanding, then 
+driving would take up much of the driver’s cognitive resource, 
+leaving the driver with insufficient cognitive resources to han­
+dle unpredictable contingencies.
+4.2. Impact of workload on inattentional blindness when 
+using AR HUD
+Experiment 2 was based on a previous paradigm and explored 
+the impact of workload on inattentional blindness in AR 
+HUD-assisted car driving (Murphy & Greene, 2015, 2016). 
+The result confirmed that the high-complexity road environ­
+ment induced a higher workload, indicating that our manip­
+ulation of workload was effective (Paxion et al., 2015). We 
+also concluded that a higher workload would lead to more 
+inattentional blindness or prolonged reaction to unpredictable 
+stimuli, which was in accordance with the findings of previous 
+846 
+ Y. WANG ET AL.
+
+--- Page 12 ---
+studies (Hyman et al., 2010; Murphy & Greene, 2015, 2016). 
+Many cognitive studies of inattentional blindness also come 
+up with the same conclusion and can help to explain this 
+phenomenon (Cartwright-Finch & Lavie, 2007). For example, 
+Macdonald and Lavie (2008) adopted the classic letter-search 
+paradigm to study inattentional blindness. They proposed that 
+load-induced blindness was caused only by the allocation of 
+limited capacity attention, and not by other cognitive pro­
+cesses. Their inference was consistent with cognitive load 
+theory, which believes that our cognitive resources are limited, 
+and when exhausted, we can no longer process other stimuli. 
+That is, we need sufficient cognitive resources to notice and 
+respond to target stimuli in time (Lavie, 2005; Lavie et al., 
+2014). Therefore, we deemed that drivers failed to detect 
+unpredictable stimuli or to respond to them quickly under 
+high workloads in our experiment. The reason is that the 
+high-complexity 
+road 
+demands 
+considerable 
+cognitive 
+resources from drivers, leaving them with insufficient 
+resources to deal with new stimuli.
+Experiment 2 provides additional insight on the impact of 
+workload on inattentional blindness in AR HUD-assisted 
+driving. As the incidence of inattentional blindness increase 
+and the response time to unpredictable stimuli also increases, 
+indicating that cognitive resource was closely associated with 
+inattentional blindness. Thus, future studies should examine 
+their underlying relationship in driving.
+4.3. Implications for AR HUD design
+World-fixed AR HUD was proved to be more effective than 
+screen-fixed AR HUD as the former is conformal to the real 
+world and will not cluster real-world view. However, the present 
+study revealed that the world-fixed AR HUD could also com­
+promise attention allocation of drivers, that is, the bounding box 
+used to augment important road objects may serve as an atten­
+tion pointer that attracts too much attention from drivers to 
+augmented objects leaving critical road events undetected. In 
+other words, drivers will be more likely to experience inatten­
+tional blindness to critical road events under AR HUD assis­
+tance. This case counters the original purpose of developing the 
+AR HUD system to reduce road accidents. Moreover, once the 
+drivers realize that the system is overwhelmingly attention- 
+demanding, they may stop using it at all.
+Geometric elements such as quadrate- and triangular- 
+shaped bounding graphics are widely accepted in the AR 
+HUD warning system design (Gabbard et al., 2014). 
+However, few studies have pointed out its limitation. The 
+inattentional blindness phenomenon observed in the present 
+study provides a new insight into world-fixed AR HUD 
+design. Cues similar to bounding boxes are too prominent 
+for drivers when they are superimposed on real-world objects. 
+Thus, softer and less distracting cues should be introduced in 
+the AR HUD design to attract an appropriate amount of 
+attention from drivers without negatively affecting their abil­
+ity to observe the surrounding environment. For example, 
+Kim and Gabbard (2019) have developed “virtual shadow” 
+AR HUD cues that can guide the drivers’ attention without 
+narrowing it. Park and Kim (2013) used a green arrow at the 
+pedestrian’s head position as cues to guide drivers’ attention 
+properly. In general, we recommend AR HUD cues that only 
+give hints of the existence of augmented (e.g., an arrow) 
+objects instead of extracting them from the real-world envir­
+onment as the bounding boxes do.
+We also recommended using different cues to augment 
+different types of road elements. In our experiments, we 
+used the same bounding boxes to augment pedestrians, traffic 
+lights, and road signs. These road elements often appeared at 
+the same time in the driver’s sight. According to “attentional 
+set” theory, the bounding boxes become the new features of 
+augmented objects in the AR HUD augmented condition, 
+which requires more attention resources for drivers to identify 
+the type of augmented objects and judge their safety signifi­
+cance respectively. If different cues were applied in the AR 
+HUD design, the driver’s mental workload may drop and may 
+develop a safer attention allocation strategy. Previous studies 
+have strived to design diverse AR HUD cues. Park and Kim 
+(2013) proposed an AR HUD interface design with various 
+cues to augment different road elements. Gabbard et al. 
+(2014) summed up different AR HUD cues used in 
+a previous study. S. Kim and Dey (2016) included visual 
+icons in their AR HUD designed to better present road 
+information. We also believe that affective AR HUD design 
+may attract drivers attention naturally and could provide 
+benefit to road safety (Ho & Spence, 2013). Future studies 
+can give some insight into it.
+4.4. Limitations and research prospect
+The present study has certain limitations. First, the present study 
+chose driving videos as the experimental material in considera­
+tion of the paradigm of previous studies, the difficulty of data 
+collection, and the issue of technical limitation (H. Kim & 
+Gabbard, 2019; Lu et al., 2020; Schwarz & Fastenmeier, 2017). 
+Watching video clips and pretending to drive cannot precisely 
+imitate the workload nor the close loop control in real-world 
+diving, leaving the study with low ecological validity. Future 
+studies can repeat the present study in a natural or simulated 
+driving condition to explore the influence of AR HUD on 
+inattentional blindness and driving performance. Second, the 
+present study used a portable eye tracker to collect eye move­
+ment data, so the participants were carefully instructed to restrict 
+their head movement for data collection. However, keeping their 
+head still in a long driving task is impossible, and this case may 
+eliminate the precision of eye movement data. Moreover, 
+restricting head movement would also hurt the ecological valid­
+ity of the study. Future studies should introduce more precise 
+apparatus to avoid these problems.
+To optimize the existing AR HUD design, additional fac­
+tors affecting inattentional blindness in AR HUD need to be 
+investigated. Previous studies have suggested that the shape 
+and color of unpredictable stimuli affect the occurrence of 
+inattentional blindness (Hyman et al., 2010; Simons & 
+Chabris, 1999). With regard to the design of the AR HUD 
+interface, the effect of some properties of AR warning graphic, 
+such as the shape and color and appropriate timing on inatten­
+tional blindness in driving is still an open question (H. Kim & 
+Gabbard, 2019). Moreover, the present study only focused on 
+whether unpredictable stimuli were augmented in AR HUD. 
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+ 847 
+
+--- Page 13 ---
+Other design factors such as the instrument panel, real-time 
+navigation information, and warning information, may also 
+affect inattentional blindness in driving. Furthermore, subject 
+variables such as driver’s age, experience, and road familiarity 
+may interact with the AR HUD interface and driving environ­
+ment, causing inconsistent results. Therefore, future studies 
+could focus on these factors to offer new insight into inatten­
+tional blindness in driving. With the development of AR tech­
+nology, the multimodal AR technology that integrates multiple 
+sensory channels has been applied to the driving field 
+(Kaczmarek, 1995; Kern et al., 2009; Hwang & Ryu, 2010; 
+Carton & Dunne, 2013; S. Kim & Dey, 2016). A study has proved 
+that the multi-model AR technology can bring better driving 
+performance. However, such technology may also overload dri­
+vers with its rich information, causing more inattentional blind­
+ness. Thus, the application of multi-model AR technology in 
+driving and its impact on inattentional blindness still needs 
+further exploration.
+5. Conclusion
+The present study focused on the inattentional blindness in AR- 
+assisted driving and the impact of workload when the AR system 
+fails to augment the unpredictable stimuli. The study found that 
+AR HUD can reduce inattentional blindness toward augmented 
+subjects (subjects inside the AR bounding box) while inducing 
+inattentional blindness toward subjects outside the AR bounding 
+box. Moreover, a higher workload will intensify inattentional 
+blindness toward subjects outside the AR bounding box.
+Disclosure of potential conflict of interest
+No potential conflict of interest was reported by the author(s).
+Funding
+This work was supported by the National Natural Science Foundation of 
+China under Grant [31900768]; Youth Innovation Special Project of 
+Basic Scientific Research Foundation of Zhejiang Sci-Tech University 
+under Grant [2020Q046]; Science and technology innovation activity 
+plan of college students in Zhejiang Xinmiao Talents Program under 
+Grant [2019R46035]; National College Student Innovation and 
+Entrepreneurship Training Program of Zhejiang Sci-Tech University 
+under Grant [201910338003].
+References
+Baldwin, C. L., Spence, C., Bliss, J. P., Brill, J. C., Wogalter, M. S., 
+Mayhorn, C. B., & Ferris, T. K. (2012). Multimodal cueing: The 
+relative benefits of the auditory, visual, and tactile channels in com­
+plex environments. Proceedings of the human factors and ergonomics 
+society annual meeting (pp. 1431–1435). USA: SAGE Publications. 
+https://doi.org/10.1177/1071181312561404
+Beanland, V., & Pammer, K. (2010a). Looking without seeing or seeing 
+without looking? Eye movements in sustained inattentional blindness. 
+Vision Research, 50(10), 977–988. https://doi.org/10.1016/j.visres.2010. 
+02.024
+Beanland, V., & Pammer, K. (2010b). Gorilla watching: Effects of expo­
+sure and expectations on inattentional blindness. ASCS09: Proceedings 
+of the 9th conference of the Australasian society for cognitive science 
+(pp. 12–20). Macquarie University.
+Carton, A., & Dunne, L. E. (2013). Tactile distance feedback for fire­
+fighters: Design and preliminary evaluation of a sensory augmentation 
+glove. Proceedings of the 4th augmented human international confer­
+ence (pp. 58–64). Association for Computing Machinery. https://doi. 
+org/10.1145/2459236.2459247
+Cartwright-Finch, U., & Lavie, N. (2007). The role of perceptual load in 
+inattentional blindness. Cognition, 102(3), 321–340. https://doi.org/10. 
+1016/j.cognition.2006.01.002
+Charlton, S. G., & Starkey, N. J. (2013). Driving on familiar roads: 
+Automaticity and inattention blindness. Transportation Research 
+Part F: Traffic Psychology and Behaviour, 19, 121–133. https://doi. 
+org/10.1016/j.trf.2013.03.008
+Davies, A. M. A., Waterman, S., White, R. C., & Davies, M. (2013). When 
+you fail to see what you were told to look for: Inattentional blindness 
+and task instructions. Consciousness and Cognition, 22(1), 221–230. 
+https://doi.org/10.1016/j.concog.2012.11.015
+De Fockert, J. W., & Bremner, A. J. (2011). Release of inattentional 
+blindness by high working memory load: Elucidating the relationship 
+between working memory and selective attention. Cognition, 121(3), 
+400–408. https://doi.org/10.1016/j.cognition.2011.08.016
+Department for Transport. (2019). Reported road casualties great Britain 
+annual report 2019. https://www.gov.uk/government/statistical-data- 
+sets/ras50-contributory-factors#history
+Dixon, B. J., Daly, M. J., Chan, H., Vescan, A. D., Witterick, I. J., & 
+Irish, J. C. (2013). Surgeons blinded by enhanced navigation: The 
+effect of augmented reality on attention. Surgical Endoscopy, 27(2), 
+454–461. https://doi.org/10.1007/s00464-012-2457-3
+Dixon, B. J., Daly, M. J., Chan, H. H. L., Vescan, A., Witterick, I. J., & 
+Irish, J. C. (2014). Inattentional blindness increased with augmented 
+reality surgical navigation. American Journal of Rhinology & Allergy, 
+28(5), 433–437. https://doi.org/10.2500/ajra.2014.28.4067
+Gabbard, J. L., Fitch, G. M., & Kim, H. (2014). Behind the glass: Driver 
+challenges and opportunities for AR automotive applications. 
+Proceedings of the IEEE, 102(2), 124–136. https://doi.org/10.1109/ 
+JPROC.2013.2294642
+Governors Highway Safety Association. (2019). Pedestrian traffic fatal­
+ities by state. https://www.ghsa.org/sites/default/files/2020-02/GHSA- 
+Pedestrian-Spotlight-FINAL-rev2.pdf
+Hart, S. G., & Staveland, L. E. (1988). Development of NASA-TLX (Task 
+Load Index): Results of empirical and theoretical research. In P. A. 
+Hancock & N. Meshkati (Eds.), Advances in psychology (Vol. 52, pp. 
+139–183). North-Holland: Elsevier. https://doi.org/10.1016/S0166- 
+4115(08)62386-9
+Ho, C., & Spence, C. (2013). Affective multisensory driver interface 
+design. International Journal of Vehicle Noise and Vibration, 9(1–2), 
+61–74. https://doi.org/10.1504/IJVNV.2013.053817
+Hwang, S., & Ryu, J. (2010). The haptic steering wheel: Vibro-tactile 
+based navigation for the driving environment. 2010 8th IEEE interna­
+tional conference on Pervasive Computing and Communications 
+Workshops (PERCOM workshops) (pp. 660–665). IEEE. https://doi. 
+org/10.1109/PERCOMW.2010.5470517
+Hwang, Y., Park, B.-J., & Kim, K.-H. (2016). Effects of augmented-reality 
+head-up display system use on risk perception and psychological 
+changes of drivers. ETRI Journal, 38(4), 757–766. https://doi.org/10. 
+4218/etrij.16.0115.0770
+Hyman, I. E., Boss, S. M., Wise, B. M., McKenzie, K. E., & Caggiano, J. M. 
+(2010). Did you see the unicycling clown? Inattentional blindness while 
+walking and talking on a cell phone. Applied Cognitive Psychology, 24(5), 
+597–607. https://doi.org/10.1002/acp.1638
+Kaczmarek, K. A. (1995). Sensory augmentation and substitution. In J. D. 
+Bronzino (Ed.), CRC handbook of biomedical engineering (pp. 
+2100–2109). CRC Press.
+Karar, V., Agrawal, D., & Ghosh, S. (2015). Intuitive approach towards 
+detection of attention tunneling while using a head-up display. 
+Chinese Optics Letters, 13(8), 081201. https://doi.org/10.3788/ 
+COL201513.081201
+Karar, V., & Ghosh, S. (2012). Effect of varying contrast ratio and 
+brightness non- uniformity over human attention and tunneling 
+aspects in aviation. International Journal of Electronics and 
+Communication Engineering & Technology, 3(2), 400–412. https:// 
+848 
+ Y. WANG ET AL.
+
+--- Page 14 ---
+www.semanticscholar.org/paper/EFFECT-OF-VARYING- 
+CONTRAST-RATIO-AND-BRIGHTNESS-NON-Karar/ 
+3b94ebcd8e4be5573ab4bbe1a7f1b168c1764a8e
+Kennedy, K. D., & Bliss, J. P. (2013). Inattentional blindness in 
+a simulated driving task. Proceedings of the Human Factors and 
+Ergonomics Society Annual Meeting, 57(1), 1899–1903. https://doi. 
+org/10.1177/1541931213571423
+Kern, D., Marshall, P., Hornecker, E., Rogers, Y., & Schmidt, A. (2009). Enhancing 
+navigation information with tactile output embedded into the steering wheel. 
+International conference on pervasive computing (pp. 42–58). Springer.
+Kim, H., & Gabbard, J. L. (2019). Assessing distraction potential of 
+augmented reality head-up displays for vehicle drivers. Human 
+Factors: The Journal of the Human Factors and Ergonomics Society, 
+001872081984484. https://doi.org/10.1177/0018720819844845
+Kim, H., Miranda Anon, A., Misu, T., Li, N., Tawari, A., & Fujimura, K. 
+(2016). Look at me: Augmented reality pedestrian warning system 
+using an in-vehicle volumetric head up display. Proceedings of the 21st 
+international conference on Intelligent User Interfaces - IUI ’16 (pp. 
+294–298). ACM Press. https://doi.org/10.1145/2856767.2856815
+Kim, S., & Dey, A. K. (2016). Augmenting human senses to improve the user 
+experience in cars: Applying augmented reality and haptics approaches to 
+reduce cognitive distances. Multimedia Tools and Applications, 75(16), 
+9587–9607. https://doi.org/10.1007/s11042-015-2712-4
+Koivisto, M., & Revonsuo, A. (2008). The role of unattended distractors 
+in sustained inattentional blindness. Psychological Research, 72(1), 
+39–48. https://doi.org/10.1007/s00426-006-0072-4
+Langlois, S., & Soualmi, B. (2016). Augmented reality versus classical HUD to 
+take over from automated driving: An aid to smooth reactions and to 
+anticipate maneuvers. 2016 IEEE 19th international conference on 
+Intelligent Transportation Systems (ITSC) (pp. 1571–1578). IEEE. https:// 
+doi.org/10.1109/ITSC.2016.7795767
+Lavie, N. (1995). Perceptual load as a necessary condition for selective 
+attention. Journal of Experimental Psychology: Human Perception and 
+Performance, 21(3), 451. https://doi.org/10.1016/j.tics.2004.12.004
+Lavie, N. (2005). Distracted and confused?: Selective attention under 
+load. Trends in Cognitive Sciences, 9(2), 75–82. https://doi.org/10. 
+1016/j.tics.2004.12.004
+Lavie, N., Beck, D. M., & Konstantinou, N. (2014). Blinded by the load: 
+Attention, awareness and the role of perceptual load. Philosophical 
+Transactions of the Royal Society B: Biological Sciences, 369(1641), 
+20130205. https://doi.org/10.1098/rstb.2013.0205
+Lu, Z., Happee, R., & De Winter, J. C. F. (2020). Take over! A video-clip 
+study measuring attention, situation awareness, and decision-making 
+in the face of an impending hazard. Transportation Research Part F: 
+Traffic Psychology and Behaviour, 72, 211–225. https://doi.org/10. 
+1016/j.trf.2020.05.013
+Macdonald, J. S., & Lavie, N. (2008). Load induced blindness. Journal of 
+Experimental Psychology: Human Perception and Performance, 34(5), 
+1078. https://doi.org/10.1037/0096-1523.34.5.1078
+Mack, A., & Rock, I. (1998). Inattentional blindness. MIT Press.
+McCann, R. S., Foyle, D. C., & Johnston, J. C. (1993). Attentional 
+limitations with head-up displays. In JensenR. S. (Ed.), Proceedings 
+of the Seventh International Symposium on Aviation Psychology (pp. 
+70–75). Columbus: Ohio State University.
+Moodi, M. (1995). Head-up display supplemental information package 
+(Boeing document no. D6–81703). Boeing.
+Most, S. B., & Astur, R. S. (2007). Feature-based attentional set as a cause 
+of traffic accidents. Visual Cognition, 15(2), 125–132. https://doi.org/ 
+10.1080/13506280600959316
+Most, S. B., Scholl, B. J., Clifford, E. R., & Simons, D. J. (2005). What you 
+see is what you set: Sustained inattentional blindness and the capture 
+of awareness. Psychological Review, 112(1), 217. https://doi.org/10. 
+1037/0033-295X.112.1.217
+Most, S. B., Simons, D. J., Scholl, B. J., Jimenez, R., Clifford, E., & 
+Chabris, C. F. (2001). How not to be seen: The contribution of similarity 
+and selective ignoring to sustained inattentional blindness. Psychological 
+Science, 12(1), 9–17. https://doi.org/10.1111/1467-9280.00303
+Moussa, G., Radwan, E., & Hussain, K. (2012). Augmented reality 
+vehicle system: Left-turn maneuver study. Transportation Research 
+Part C: Emerging Technologies, 21(1), 1–16. https://doi.org/10.1016/j. 
+trc.2011.08.005
+Murphy, G., & Greene, C. M. (2015). High perceptual load causes 
+inattentional blindness and deafness in drivers. Visual Cognition, 23 
+(7), 810–814. https://doi.org/10.1080/13506285.2015.1093245
+Murphy, G., & Greene, C. M. (2016). Perceptual load induces inatten­
+tional blindness in drivers. Applied Cognitive Psychology, 30(3), 
+479–483. https://doi.org/10.1002/acp.3216
+Neisser, U. (1979). The control of information pickup in selective looking 
+in perception and its development: A tribute to Eleanor J Gibson 
+Ed. AD Pick. Lawrence Erlbaum Associates.
+Neisser, U., & Becklen, R. (1975). Selective looking: Attending to visually 
+specified events. Cognitive Psychology, 7(4), 480–494. https://doi.org/ 
+10.1016/0010-0285(75)90019-5
+Ng-Thow-Hing, V., Bark, K., Beckwith, L., Tran, C., Bhandari, R., & 
+Sridhar, S. (2013). User-centered perspectives for automotive augmen­
+ted reality. IEEE international symposium on mixed and augmented 
+reality (pp. 13–22). IEEE.
+Oh, H. J., Ko, S. M., & Ji, Y. G. (2016). Effects of superimposition of a 
+head-up display on driving performance and glance behavior in the 
+elderly. International Journal of Human-Computer Interaction, 32(2), 
+143–154. https://doi.org/10.1080/10447318.2015.1104155
+Pammer, K., Bairnsfather, J., Burns, J., & Hellsing, A. (2015). Not all 
+hazards are created equal: The significance of hazards in inattentional 
+blindness for static driving scenes. Applied Cognitive Psychology, 29(5), 
+782–788. https://doi.org/10.1002/acp.3153
+Pammer, K., & Blink, C. (2013). Attentional differences in driving judg­
+ments for country and city scenes: Semantic congruency in inatten­
+tional blindness. Accident Analysis & Prevention, 50, 955–963. https:// 
+doi.org/10.1016/j.aap.2012.07.026
+Park, H., & Kim, K. (2013). Efficient information representation method 
+for driver-centered AR-HUD system. International conference of 
+design, user experience, and usability (pp. 393–400). Springer. https:// 
+doi.org/10.1007/978-3-642-39238-2_43
+Park, H. S., Park, M. W., Won, K. H., Kim, K.-H., & Jung, S. K. (2013). In- 
+vehicle AR-HUD system to provide driving-safety information. ETRI 
+Journal, 35(6), 1038–1047. https://doi.org/10.4218/etrij.13.2013.0041
+Paxion, J., Galy, E., & Berthelon, C. (2015). Overload depending on 
+driving experience and situation complexity: Which strategies faced 
+with a pedestrian crossing? Applied Ergonomics, 51, 343–349. https:// 
+doi.org/10.1016/j.apergo.2015.06.014
+Remington, A., Cartwright-Finch, U., & Lavie, N. (2014). I can see clearly 
+now: The effects of age and perceptual load on inattentional blindness. 
+Frontiers in Human Neuroscience, 8, 229. https://doi.org/10.3389/ 
+fnhum.2014.00229
+Romer, D., Lee, Y.-C., McDonald, C. C., & Winston, F. K. (2014). Adolescence, 
+attention allocation, and driving safety. Journal of Adolescent Health, 54(5), 
+S6–S15. https://doi.org/10.1016/j.jadohealth.2013.10.202
+Schwarz, F., & Fastenmeier, W. (2017). Augmented reality warnings in vehi­
+cles: Effects of modality and specificity on effectiveness. Accident Analysis 
+& Prevention, 101, 55–66. https://doi.org/10.1016/j.aap.2017.01.019
+Simons, D. J., & Chabris, C. F. (1999). Gorillas in our midst: Sustained 
+inattentional blindness for dynamic events. Perception, 28(9), 
+1059–1074. https://doi.org/10.1068/p281059
+Strayer, D. L., Drews, F. A., & Johnston, W. A. (2003). Cell 
+phone-induced failures of visual attention during simulated driving. 
+Journal of Experimental Psychology: Applied, 9(1), 23. https://doi.org/ 
+10.1037/1076-898X.9.1.23
+Treisman, A. (1982). Perceptual grouping and attention in visual search 
+for features and for objects. Journal of Experimental Psychology: 
+Human Perception and Performance, 8(2), 194–214. https://doi.org/ 
+10.1037/0096-1523.8.2.194
+White, C., & Caird, J. (2010). The blind date: The effects of change 
+blindness, passenger conversation and gender on looked-but-failed- 
+to-see (LBFTS) errors. Accident Analysis & Prevention, 42(6), 
+1822–1830. https://doi.org/10.1016/j.aap.2010.05.003
+Wickens, C. D. (1984). Processing resources in attention. In 
+ParasuramanR. & DaviesR. (Eds.), Varieties of attention (pp. 63– 
+101). New York: Academic Press.
+INTERNATIONAL JOURNAL OF HUMAN–COMPUTER INTERACTION 
+ 849 
+
+--- Page 15 ---
+Wickens, C. D. (2002). Multiple resources and performance prediction. 
+Theoretical Issues in Ergonomics Science, 3(2), 159–177. https://doi. 
+org/10.1080/14639220210123806
+Yanko, M. R., & Spalek, T. M. (2013). Route familiarity breeds inatten­
+tion: A driving simulator study. Accident Analysis & Prevention, 57, 
+80–86. https://doi.org/10.1016/j.aap.2013.04.003
+About the Authors
+Yuwei Wang is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include traffic 
+safety, user experience design, human–computer interaction.
+Yimin Wu is an undergraduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. His research interests include user experi­
+ence and human–computer interaction.
+Cheng Chen is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. Her research interests include augmented 
+reality and human–computer interaction.
+Bohan Wu is a graduate student at the Department of Psychology, 
+Zhejiang Sci-Tech University. His research interests include user experi­
+ence design and ergonomics.
+Shu Ma is a PhD researcher at the Department of Psychology, Zhejiang 
+Sci-Tech University. Her research interests include human–computer 
+interaction, traffic safety and automated driving.
+Duming Wang is an assistant professor at the Department of 
+Psychology, Zhejiang Sci -Tech University. His research interests include 
+human–computer interaction, human factors, and user experience.
+Hongting Li is a professor at the Department of Psychology, Zhejiang 
+Sci-Tech University. His research interests include human–computer 
+interaction, ergonomics, user experience, augmented reality and virtual 
+reality.
+ZhenYang is an assistant professor at the Department of Psychology, 
+Zhejiang Sci-Tech University. His research interests include human 
+computer interaction, human factors, user experience, cognitive science 
+and neuroergonomics.
+850 
+ Y. WANG ET AL.
