@@ -92,8 +92,9 @@ def fig_onset_spectrum() -> None:
                 ha="left", arrowprops=dict(arrowstyle="->", color=GREEN, lw=1.1,
                 connectionstyle="arc3,rad=-0.18"))
     ax.axvline(1.6, color="#666666", ls=":", lw=1.3, zorder=2)
-    ax.text(1.63, 0.15, "AEB 物理最早介入 1.6 s\n（Coelingh 等, 2010）",
-            fontsize=9.0, color="#555555", va="bottom")
+    ax.text(1.63, 0.42, "AEB 物理最早介入 1.6 s\n（Coelingh 等, 2010）",
+            fontsize=9.0, color="#555555", va="bottom",
+            bbox=dict(facecolor="white", edgecolor="none", pad=1.2))
 
     ax.set_xlim(0, 8.9)
     ax.set_ylim(-0.7, 15.1)
@@ -116,17 +117,20 @@ def fig_onset_spectrum() -> None:
 
 
 # ────────────────────────────────────────────────────────────────────────────
-# 图 2-2　三线夹逼模型
+# 图 2-2　三重约束模型
 # ────────────────────────────────────────────────────────────────────────────
 def fig_three_bounds() -> None:
-    fig, ax = plt.subplots(figsize=(11.4, 4.5))
+    fig, ax = plt.subplots(figsize=(11.4, 4.8))
     ax.set_xlim(0, 10)
-    ax.set_ylim(0, 5.4)
+    ax.set_ylim(0, 6.05)
     ax.axis("off")
 
+    ax.text(0.30, 5.98, "预警时刻的三重约束：三者的交集即可行设计区间",
+            ha="left", va="top", fontsize=10.8, color="#333333", fontweight="bold")
     ax.annotate("", xy=(9.7, 4.5), xytext=(0.35, 4.5),
                 arrowprops=dict(arrowstyle="-|>", color="#333333", lw=1.6))
-    ax.text(9.7, 4.75, "距冲突的剩余时间（右侧更紧急）", ha="right", fontsize=10.5)
+    ax.text(9.72, 5.98, "→ 横轴为距冲突的剩余时间（右侧更紧急）", ha="right", va="top",
+            fontsize=10.0, color="#666666")
 
     marks = [(1.5, "$t_{pred}$\n可预测起点"), (3.4, "$t_{warn}$\n预警时刻"),
              (5.9, "$t_0$\n自发察觉", ), (7.8, "$t_{LPB}$\n最晚制动点"), (9.3, "冲突")]
@@ -136,33 +140,39 @@ def fig_three_bounds() -> None:
         ax.text(x, 5.02, lab, ha="center", va="bottom", fontsize=10.2,
                 fontweight=("bold" if "t_{warn}" in lab or "t_0" in lab else "normal"))
 
-    def band(y, x0, x1, color, title, formula, source):
-        ax.add_patch(Rectangle((x0, y), x1 - x0, 0.42, facecolor=color, alpha=0.20,
-                               edgecolor=color, lw=1.2))
-        ax.add_patch(FancyArrowPatch((x0 + 0.05, y + 0.21), (x1 - 0.05, y + 0.21),
-                                     arrowstyle="<|-|>", mutation_scale=11,
-                                     color=color, lw=1.3))
-        ax.text(x0 + 0.1, y + 0.60, title, fontsize=10.6, color=color, fontweight="bold")
-        ax.text((x0 + x1) / 2, y + 0.21, formula, ha="center", va="center", fontsize=9.4)
-        ax.text(x1 + 0.12, y + 0.21, source, va="center", fontsize=8.8, color="#555555")
+    WBOX = dict(facecolor="white", edgecolor="none", pad=1.6)
 
-    band(3.25, 1.5, 3.4, RED, "上界线：可靠性—信任",
-         r"$t_{warn}\leq t_{pred}$", "实验 2 操纵可靠性")
+    def band(y, x0, x1, color, title, tail, side="right", inside=None):
+        """带 + 双向箭头。标题在带上方，公式与负责实验并排放在带的外侧，
+        故不会出现「箭头穿过文字」；只有足够宽的带才在带内写字（并加白底）。"""
+        ax.add_patch(Rectangle((x0, y), x1 - x0, 0.42, facecolor=color, alpha=0.20,
+                               edgecolor=color, lw=1.2, zorder=2))
+        ax.add_patch(FancyArrowPatch((x0 + 0.06, y + 0.21), (x1 - 0.06, y + 0.21),
+                                     arrowstyle="<|-|>", mutation_scale=11,
+                                     color=color, lw=1.3, zorder=3))
+        ax.text(x0 + 0.08, y + 0.60, title, fontsize=10.6, color=color,
+                fontweight="bold", zorder=6)
+        if tail:
+            ax.text(x1 + 0.16 if side == "right" else x0 - 0.16, y + 0.21, tail,
+                    va="center", ha="left" if side == "right" else "right",
+                    fontsize=9.3, color="#333333", zorder=6)
+        if inside:
+            ax.text((x0 + x1) / 2, y + 0.21, inside, ha="center", va="center",
+                    fontsize=9.3, zorder=6, bbox=WBOX)
+
+    band(3.25, 1.5, 3.4, RED, "上界：可靠性—信任",
+         "$t_{warn}\\leq t_{pred}(PPV \\geq \\pi^{*})$\n→ 实验 2 操纵系统可靠性")
     band(2.15, 3.4, 5.9, BLUE, r"相对提前量 $\Delta t = t_0 - t_{warn}$",
-         r"本研究估计 $\Delta t \geq 0.9$–1.2 s", "实验 1 的核心自变量")
-    band(1.05, 5.9, 7.8, GREEN, "下界线：运动学必要性",
-         r"$t_{warn} \geq PRT_{p95}+v/a_{comf}+\delta$", "实验 0 测 PRT")
-    ax.add_patch(Rectangle((3.4, 0.18), 7.8 - 3.4, 0.42, facecolor=AMBER, alpha=0.18,
-                           edgecolor=AMBER, lw=1.2))
-    ax.add_patch(FancyArrowPatch((3.45, 0.39), (7.75, 0.39), arrowstyle="<|-|>",
-                                 mutation_scale=11, color=AMBER, lw=1.3))
-    ax.text(3.5, 0.72, "中线：认知加工窗口（SPIDER 五阶段）", fontsize=10.6,
-            color="#9A6E00", fontweight="bold")
-    ax.text(5.6, 0.39, "S 617 ms（实测）+ I 300–600 ms（本研究推导）", ha="center",
-            va="center", fontsize=9.4)
+         "本研究估计 $\\Delta t \\geq 0.9$–1.2 s\n→ 实验 1 的核心自变量")
+    band(1.05, 5.9, 7.8, GREEN, "下界：运动学必要性",
+         "$t_{warn} \\geq PRT_{p95}+v_{ego}/a_{comf}+\\delta_{brake}$\n→ 实验 0 测 PRT 分布",
+         side="left")
+    band(0.18, 3.4, 7.8, AMBER, "窗口：认知加工（SPIDER 五阶段）", "",
+         inside="S 617 ms（实测）+ I 300–600 ms（本研究推导）")
 
     ax.annotate("零点由实验 0 实测；\nτ 理论校验值 TTC ≈ 3.2 s @60 km/h",
-                xy=(5.9, 4.3), xytext=(6.35, 3.55), fontsize=9.3, color="#444444",
+                xy=(5.9, 4.28), xytext=(6.42, 3.78), fontsize=9.3, color="#444444",
+                zorder=6,
                 arrowprops=dict(arrowstyle="->", color="#888888", lw=1.0))
     save(fig, "ch2_fig_three_bounds")
 
@@ -190,7 +200,7 @@ def fig_time_window_tension() -> None:
     ax1.set_xlabel("到达时间 TTA（s）", fontsize=11)
     ax1.set_ylabel("比率", fontsize=11)
     ax1.set_ylim(0.1, 1.0)
-    ax1.set_title("驾驶员对行人过街意图的判别绩效\n（Chen 等, 2019）", fontsize=11.5)
+    ax1.set_title("驾驶员对行人过街意图的判别绩效\n（Chen 等, 2019，Table 1 原值）", fontsize=11.0)
     ax1.legend(frameon=False, fontsize=9, loc="center left")
     ax1.grid(color="#EEEEEE", lw=0.6)
     for sp in ("top", "right"):
@@ -202,7 +212,8 @@ def fig_time_window_tension() -> None:
          "6.07–6.28 s\nChang 与 Chang (2009)"),
         ("人类判别能力上界", 0, 4.0, BLUE, "TTA 4 s 峰值\nChen 等 (2019)"),
         ("算法预测能力上界", 0, 1.0, RED, "动作前 0.5–1.0 s\nCangut 与 Alver (2026)"),
-        ("本领域实证研究的\n实际取值区间", 2.0, 5.0, "#8064A2", "2–5 s\n（三者的交集）"),
+        ("本领域实证研究的\n实际取值区间", 2.0, 5.0, "#8064A2",
+         "2–5 s\n（本研究对本库 14 项取值的归纳，\n非任一文献报告值）"),
     ]
     for i, (lab, x0, x1, c, note) in enumerate(rows):
         y = len(rows) - 1 - i

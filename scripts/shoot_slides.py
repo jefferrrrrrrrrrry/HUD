@@ -9,29 +9,44 @@ from __future__ import annotations
 
 import asyncio
 import json
+import sys
 from pathlib import Path
 
 from playwright.async_api import async_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML = ROOT / "文献综述_幻灯片.html"
-OUT = ROOT / "figures" / "slides_shots"
+HTML = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "文献综述_幻灯片.html")
+OUT = ROOT / "figures" / (sys.argv[2] if len(sys.argv) > 2 else "slides_shots")
 
 PROBE = """
 () => {
   const el = document.querySelector('.slide.on');
   const b = el.querySelector('.body') || el;
-  const r = el.getBoundingClientRect();
   let worst = 0, who = '';
+  const bump = (d, n, tag) => {
+    if (d > worst) { worst = d; who = tag + ' ' + n.tagName + '.' + (n.className || ''); }
+  };
+  // ① 版心：任何元素不得越出 1280×720
+  const rs = el.getBoundingClientRect();
   el.querySelectorAll('*').forEach(n => {
     const q = n.getBoundingClientRect();
-    const d = Math.max(q.bottom - r.bottom, q.right - r.right);
-    if (d > worst) { worst = d; who = n.tagName + '.' + (n.className || ''); }
+    if (q.width < 1 && q.height < 1) return;
+    bump(Math.max(q.bottom - rs.bottom, q.right - rs.right), n, 'slide');
+  });
+  // ② 容器：子孙不得越出各自的布局容器（网格/弹性子项越界会被静默裁掉或互相压盖）
+  el.querySelectorAll('.body, .cols2, .cols3, .cols4, .box, figure, .vs').forEach(c => {
+    const rc = c.getBoundingClientRect();
+    c.querySelectorAll('*').forEach(n => {
+      const q = n.getBoundingClientRect();
+      if (q.width < 1 && q.height < 1) return;
+      if (getComputedStyle(n).position === 'absolute') return;
+      bump(Math.max(q.bottom - rc.bottom, q.right - rc.right), n, 'in-' + (c.className || c.tagName));
+    });
   });
   return {
     idx: [...document.querySelectorAll('.slide')].indexOf(el) + 1,
     scrollH: b.scrollHeight, clientH: b.clientHeight,
-    overflowPx: Math.round(worst), who: who.slice(0, 46),
+    overflowPx: Math.round(worst), who: who.slice(0, 58),
     title: (el.querySelector('h1') || {}).innerText || ''
   };
 }
@@ -62,7 +77,7 @@ async def main() -> None:
             print(f"{flag} p{k:02d}  溢出 {over:>4} px  {t}")
         await br.close()
     bad = [r for r in report if r["over"] > 2]
-    (ROOT / "figures" / "slides_overflow.json").write_text(
+    (ROOT / "figures" / f"{OUT.name}_overflow.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n溢出页 {len(bad)} / {len(report)}")
     for r in bad:
