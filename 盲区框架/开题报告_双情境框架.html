@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>开题报告 — AR-HUD 行人碰撞预警的情境依赖时空参数设计</title>
+<style>
+:root{
+  --blue:#4472C4; --blue-d:#2F528F; --blue-l:#D9E2F3;
+  --red:#C00000; --green:#3E7D3E; --amber:#E0A100; --purple:#7B5EA7;
+  --grey:#8C8C8C; --grey-l:#F2F2F2; --ink:#1a1a1a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:#3a3a3c; color:var(--ink);
+  font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC",sans-serif;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+#stage{position:relative;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center}
+.slide{
+  position:absolute; width:1280px; height:720px; background:#fff;
+  box-shadow:0 10px 44px rgba(0,0,0,.5); padding:0 46px 42px;
+  display:none; flex-direction:column; transform-origin:center center;
+}
+.slide.on{display:flex}
+h1.crumb{
+  font-size:21px;font-weight:700;color:var(--ink);
+  padding:20px 0 12px;border-bottom:2px solid var(--blue);margin-bottom:16px;flex:0 0 auto;
+}
+h1.crumb em{font-style:normal;color:var(--blue);font-weight:700;margin-left:8px}
+h1.crumb span.tag{
+  float:right;font-size:12px;color:#fff;background:var(--blue);
+  padding:3px 11px;border-radius:11px;font-weight:400;margin-top:2px;
+}
+.body{flex:1 1 auto;overflow:hidden;display:flex;flex-direction:column;gap:11px}
+.pg{position:absolute;right:46px;bottom:14px;font-size:12px;color:var(--grey)}
+.def{
+  background:var(--blue-l);border-left:4px solid var(--blue);
+  padding:11px 15px;font-size:14.5px;line-height:1.72;color:var(--blue-d);
+}
+.def b{color:var(--blue-d)}
+.cite{color:var(--grey);font-size:12.5px}
+p{font-size:15px;line-height:1.78}
+ul{margin-left:22px}
+li{font-size:15px;line-height:1.8;margin-bottom:5px}
+li.tight{margin-bottom:2px}
+.small li,.small p{font-size:13.6px;line-height:1.66}
+.xs li,.xs p{font-size:13.8px;line-height:1.66}
+p.small{font-size:13.6px;line-height:1.66}
+p.xs{font-size:13.8px;line-height:1.66}
+li.small{font-size:13.6px;line-height:1.66}
+li.xs{font-size:13.8px;line-height:1.66}
+.k{color:var(--red);font-weight:700}
+.k2{color:var(--blue);font-weight:700}
+.k3{color:var(--green);font-weight:700}
+.k4{color:var(--amber);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--blue);color:#fff;padding:7px 9px;text-align:left;font-weight:700}
+td{padding:6px 9px;border-bottom:1px solid #E4E4E4;vertical-align:top;line-height:1.55}
+tr:nth-child(even) td{background:#FAFBFD}
+td.n{text-align:center;white-space:nowrap}
+.mini{font-size:11.8px}
+.mini td{padding:4.5px 7px}
+.mini th{padding:5.5px 7px;font-size:11.8px}
+.mini.tt td{padding:3.4px 7px}
+.tiny{font-size:11px}
+.tiny td{padding:3.6px 6px;line-height:1.48}
+.tiny th{padding:4.6px 6px;font-size:11px}
+.cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;flex:1 1 auto;min-height:0}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1 1 auto;min-height:0}
+.cols2.w37{grid-template-columns:0.72fr 1fr}
+.cols2.w73{grid-template-columns:1fr 0.72fr}
+.cols4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:11px;flex:1 1 auto;min-height:0}
+.box{border:1.5px solid #D6D6D6;border-radius:7px;padding:12px 14px;background:#fff}
+.box h3{font-size:15px;color:var(--blue-d);margin-bottom:8px;border-bottom:1px solid var(--blue-l);padding-bottom:5px}
+.box.g{border-color:var(--green);background:#F6FBF6} .box.g h3{color:var(--green);border-color:#CFE6CF}
+.box.r{border-color:var(--red);background:#FEF6F6} .box.r h3{color:var(--red);border-color:#F0D5D5}
+.box.a{border-color:var(--amber);background:#FFFBF0} .box.a h3{color:#9A6E00;border-color:#F0E2BE}
+.box.p{border-color:var(--purple);background:#FAF7FD} .box.p h3{color:var(--purple);border-color:#E4DAF0}
+.tp .box,.rcol .box{padding:9px 13px}
+.tp .box h3,.rcol .box h3{margin-bottom:6px;padding-bottom:4px}
+.note{background:#FFF8E5;border-left:4px solid var(--amber);padding:9px 13px;font-size:13.2px;line-height:1.66;color:#6B5200}
+.note b{color:#8A6A00}
+.warn{background:#FDF2F2;border-left:4px solid var(--red);padding:9px 13px;font-size:13.2px;line-height:1.66;color:#7A1F1F}
+.ok{background:#F2F9F2;border-left:4px solid var(--green);padding:9px 13px;font-size:13.2px;line-height:1.66;color:#1F5A1F}
+figure{flex:1 1 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0}
+figure img{max-width:100%;max-height:100%;object-fit:contain;flex:1 1 auto;min-height:0}
+figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;line-height:1.5}
+/* 封面 */
+.cover{align-items:center;justify-content:center;text-align:center;padding:0 90px}
+.cover h1{font-size:34px;line-height:1.45;color:var(--blue-d);margin-bottom:12px;border:0;padding:0}
+.cover h2{font-size:18px;color:var(--blue);font-weight:400;margin-bottom:26px}
+.cover .rule{width:130px;height:3px;background:var(--blue);margin:0 auto 26px}
+.cover .meta{font-size:15px;line-height:2.05;color:#555}
+/* 双情境时间轴 */
+.tl{flex:0 0 auto;padding:2px 0}
+.tl h4{font-size:13.5px;color:var(--blue-d);margin-bottom:6px;font-weight:700}
+.tl-bar{display:flex;height:44px;border-radius:5px;overflow:hidden;border:1px solid #CFCFCF}
+.tl-seg{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:12.2px;font-weight:700;line-height:1.3;text-align:center;padding:0 6px}
+.tl-seg span{font-weight:400;font-size:10.6px;opacity:.88;margin-top:2px}
+.tl-seg.q{background:#EDEDED;color:#6B6B6B}
+.tl-seg.q2{background:#F7F5FA;color:#7A7A8A}
+.tl-seg.pre{background:#EFE7F8;color:#5B4382}
+.tl-seg.rev{background:#DCEBDC;color:#2C5E2C}
+.tl-seg.one{background:var(--blue-l);color:var(--blue-d)}
+.tl-seg.dash{border-left:1.5px dashed #9FB4DA}
+.tl-ticks{display:flex;margin-top:3px}
+.tl-ticks span{font-size:10.6px;color:var(--grey);text-align:right;line-height:1.3;padding-left:6px}
+.tl-ticks span::before{content:"▲";display:block;font-size:7px;color:#B4B4B4;line-height:1;margin-right:-2px}
+.hr{height:1px;background:#E4E4E4;flex:0 0 auto}
+/* 技术路线流程图 */
+.flow{flex:1 1 auto;display:flex;flex-direction:column;gap:7px;min-height:0}
+.frow{display:flex;align-items:stretch;gap:8px;flex:0 0 auto}
+.fnode{flex:1 1 0;border:1.5px solid var(--blue);border-radius:6px;background:#F7F9FD;
+  padding:7px 9px;font-size:12px;line-height:1.42;color:var(--blue-d)}
+.fnode b{display:block;font-size:12.6px;margin-bottom:2px}
+.fnode.g{border-color:var(--green);background:#F5FAF5;color:#2C5E2C}
+.fnode.p{border-color:var(--purple);background:#FAF7FD;color:#5B4382}
+.fnode.a{border-color:var(--amber);background:#FFFBF0;color:#7A5A00}
+.fnode.k{border-color:var(--red);background:#FEF6F6;color:#7A1F1F}
+.fnode.s{flex:0 0 96px;border-style:dashed;background:#fff;color:var(--grey);
+  display:flex;align-items:center;justify-content:center;text-align:center;font-size:11.4px}
+.farrow{flex:0 0 auto;text-align:center;color:var(--blue);font-size:13px;line-height:1;
+  padding:1px 0;letter-spacing:.35em}
+/* 甘特 */
+.gantt td{padding:3px 6px}
+.gbar{height:15px;border-radius:3px;background:var(--blue);position:relative}
+.gbar.g{background:var(--green)} .gbar.p{background:var(--purple)}
+.gbar.a{background:var(--amber)} .gbar.k{background:var(--red)}
+.gwrap{position:relative;height:15px;background:#F1F1F4;border-radius:3px}
+.gwrap>.gbar{position:absolute;top:0}
+.gh th{font-size:10.6px;padding:4px 3px;text-align:center}
+/* 甘特页紧排 */
+.slide.gt .body{gap:8px}
+.slide.gt .gantt td{padding:1.6px 6px;line-height:1.36}
+.slide.gt .gh th{padding:3px 3px}
+.slide.gt .gwrap,.slide.gt .gbar{height:13px}
+.slide.gt .ok{font-size:12.6px;line-height:1.6;padding:8px 12px}
+/* 导航 */
+#nav{position:fixed;left:0;right:0;bottom:0;height:5px;background:rgba(255,255,255,.14);z-index:60}
+#bar{height:100%;background:var(--blue);width:0;transition:width .18s}
+#hud{position:fixed;right:14px;top:12px;color:#eee;font-size:12.5px;background:rgba(0,0,0,.42);
+  padding:5px 12px;border-radius:13px;z-index:60;font-variant-numeric:tabular-nums}
+#hint{position:fixed;left:14px;top:12px;color:#ddd;font-size:11.5px;background:rgba(0,0,0,.42);
+  padding:5px 12px;border-radius:13px;z-index:60}
+@page{size:1280px 720px;margin:0}
+@media print{
+  body{background:#fff;display:block;overflow:visible}
+  #stage{width:auto;height:auto;display:block}
+  #nav,#hud,#hint{display:none!important}
+  .slide{position:static!important;display:flex!important;transform:none!important;
+    box-shadow:none;page-break-after:always;break-after:page;margin:0}
+  .slide:last-child{page-break-after:auto;break-after:auto}
+}
+.m{font-family:"Cambria Math","Latin Modern Math","Times New Roman",serif;font-style:italic}
+.m sub,.m sup{font-style:normal;font-size:.7em;line-height:0}
+.m .up{font-style:normal}
+</style>
+</head>
+<body>
+<div id="hint">← → / 空格翻页　·　F 全屏　·　O 目录</div>
+<div id="hud"><span id="cur">1</span> / <span id="tot">0</span></div>
+<div id="stage">
+
+<!-- 1 封面 -->
+<section class="slide cover on">
+  <h1>AR-HUD 行人碰撞预警的情境依赖时空参数设计<br>非盲区与盲区双情境的分别标定及其迁移损失</h1>
+  <div class="rule"></div>
+  <div class="meta">硕士学位论文开题报告</div>
+  <div class="pg"></div>
+</section>
+
+<!-- 2 选题依据 -->
+<section class="slide">
+  <h1 class="crumb">选题依据<em>一个高危却尚未被参数化的情境</em><span class="tag">1 / 8</span></h1>
+  <div class="body">
+    <div class="def">行人碰撞中最危险的一类，并非驾驶员看见了行人而未及反应，而是<b>驾驶员在碰撞前从未看见行人</b>。从停放车辆后方窜出、自公交车尾绕行、在 A 柱遮挡角内横穿——中文语境称为「鬼探头」，即<b>视线被车辆或障碍物遮挡时行人突然窜出</b>。这类场景对 AR-HUD 具有双重意义。</div>
+    <div class="cols2">
+      <div class="box g">
+        <h3>机器感知在此具有绝对优势</h3>
+        <ul class="xs">
+          <li class="tight">毫米波雷达、路侧摄像机与车路协同链路可以「看见」驾驶员看不见的目标。已有实车与仿真证据：路侧单元于距行人 100 m 触发预警，使<b>油门松开提前 36.29 m、首次制动提前 39.10 m、最大减速度绝对值降低约 3.45 m/s²、最小冲突距离增加 9.41 m</b>（均 <span class="m">p</span> &lt; .001）。</li>
+          <li class="tight">故 AR-HUD 在此不只是加速信息传递的通道，而是<b>信息的唯一来源</b>——这与常规可见场景有本质区别。</li>
+          <li class="tight">能见度下降还会<b>放大</b>这一优势：雾天条件下油门提前多 27.7 m（<span class="m">p</span> = .032）、制动提前多 27.8 m（<span class="m">p</span> = .035）。</li>
+        </ul>
+      </div>
+      <div class="box r">
+        <h3>但也正因如此，责任与风险同时放大</h3>
+        <ul class="xs">
+          <li class="tight"><b>驾驶员无法用自身视觉核验预警。</b>预警发出时行人不可见，故「报警是否与我的判断吻合」这一常规的信任建立路径在此不成立。</li>
+          <li class="tight"><b>系统漏检的后果更严重。</b>已有证据显示 AR 边界框把无意视盲频次由 46 降至 11，<b>但系统一旦漏检行人，无意视盲反而高于不用 AR-HUD</b>；而盲区情境中驾驶员<b>没有独立视觉信息源可以补偿</b>。</li>
+          <li class="tight"><b>共形图形可能失效。</b>实车实测显示 17° 视场下<b>近距侧方行人的共形图形会移出视场而彻底失效</b>，而遮挡后横穿恰是近距侧方构型。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="warn" style="flex:0 0 auto"><b>选题的直接依据：</b>本课题已建成的 102 篇文献库中，<b>以遮挡为核心条件的研究不足 6%（6 篇）</b>，其中仅 1 篇提供可引用的数值、1 篇为实车范式、1 篇为仅摘要级；<b>无一篇测量或计算行人的自然显露时刻，无一篇以相对显露时刻的提前量为自变量，无一篇正交比较遮挡条件下的锚定策略。</b>既有文献自身的判断亦一致——该问题「仍未被充分探索」。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 3 研究现状一 -->
+<section class="slide">
+  <h1 class="crumb">研究现状<em>既有格局：「是否有效」已有共识，「取何值」普遍缺证据</em><span class="tag">2 / 8</span></h1>
+  <div class="body">
+    <p class="xs" style="flex:0 0 auto">本课题前期已完成 102 篇文献的系统综述，按 AR-HUD 预警设计须依次确定的<b>七个参数环节</b>组织，每一环节固定考察已有证据、结论分歧与研究空白三项。下表为七环节的现状概览。</p>
+    <table class="mini tt">
+      <tr><th style="width:17%">参数环节</th><th style="width:47%">已形成的共识</th><th style="width:36%">仍缺失的证据</th></tr>
+      <tr><td><b>① 呈现时机</b></td><td>把预警搬进前视野即有实质收益；单层预警在 TTC 小于 3 s 时不足以改变行为；过早预警收益递减且代价上升</td><td><b>自发察觉时刻从未被作为基准量测量</b>；全部研究把预警设在绝对时距上</td></tr>
+      <tr><td><b>② 触发准则</b></td><td>算法侧四篇一致主张以运动学量而非固定秒数触发——同一 TTC 2 s 在 40 与 80 km/h 下制动威胁数相差一倍</td><td>准则类型<b>从未被作为自变量</b>；人因侧零对照</td></tr>
+      <tr><td><b>③ 分层与级间间隔</b></td><td>产业实现的级间间隔落在 0.5–2.0 s 且随紧迫度单调缩短，其中 1.0 s 有双源支持</td><td>级间间隔<b>无任何直接人因对照</b>；升级仲裁被普遍忽视</td></tr>
+      <tr><td><b>④ 持续与撤销</b></td><td>唯一可用的撤销规则是 2 : 1 滞环；理论上下界为不低于 500 ms、不高于 3 s</td><td>持续时长<b>对照实验完全缺失</b>，报告率低于 15%；渐隐时长无文献支撑</td></tr>
+      <tr><td><b>⑤ 系统可靠性</b></td><td>低行动要求条件下 15% 误报加 15% 漏报<b>对所有因变量无显著效应</b>；高行动要求条件下信任由 7.3 降至 4.3</td><td>可靠性与预警时机的<b>交互从未被分离</b></td></tr>
+      <tr><td><b>⑥ 空间参照系</b></td><td>跟随目标锁定在定位效率上显著占优：首次注视 617 ms 对 2563／2730 ms</td><td>四种锁定的<b>正交对照至今无一实现</b>；位置增益与共形增益未分离</td></tr>
+      <tr><td><b>⑦ 图形与动态编码</b></td><td>红与黄为日夜鲁棒色对、蓝紫不可用；不透明度四源收敛于 0.6–0.75；分级配色可缩短风险感知时间</td><td>「动态」<b>从未被拆成量级映射与趋势映射</b>的正交设计</td></tr>
+    </table>
+    <div class="note" style="flex:0 0 auto"><b>格局判断：</b>针对「某一措施是否有效」的问题，文献多已给出方向一致的答案；针对「参数应取何值」的问题，直接证据普遍缺失。<b>而上述七环节的全部结论都隐含同一前提——危险目标可见。</b>本课题的切入点即在于检验并突破这一前提。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 4 研究现状二 -->
+<section class="slide">
+  <h1 class="crumb">研究现状<em>遮挡情境的六篇核心证据与一处三倍缺口</em><span class="tag">2 / 8</span></h1>
+  <div class="body">
+    <div class="cols2 w73">
+      <div style="min-height:0;overflow:hidden">
+        <table class="tiny">
+          <tr><th style="width:16%">文献</th><th style="width:63%">遮挡设置与关键数值</th><th style="width:21%">证据等级</th></tr>
+          <tr><td><b>Merenda 等<br>（2018）</b></td><td><b>唯一的实车「遮挡后横穿」范式。</b>事件区左右各停 3 辆同色货车；<b>货车尾部悬挂黑布以阻止被试在行人步出前看到其双脚</b>；紧迫度三级 TTC 2／3／4 s。结果为一对<b>双解离</b>：屏幕固定线索捕获快、引导慢；世界固定共形线索捕获慢、引导快，<b>总定位时间无显著差异</b>。两条硬约束：与本车运动耦合的动画在 2 s TTC 下产生<b>负的停车间隙</b>；<b>17° 视场下近距侧方共形图形移出视场</b>。</td><td><b>A</b>　全文（实车）</td></tr>
+          <tr><td><b>Zhang 等<br>（2024）</b></td><td>行人被路边公交车遮挡，路侧单元于 100 m 触发；<span class="m">N</span> = 34。<b>提前 36.29／39.10 m、减速度绝对值降 3.45 m/s²、最小冲突距离 +9.41 m</b>；雾天放大优势。</td><td><b>A</b>　全文<br><b>唯一数值源</b></td></tr>
+          <tr><td><b>You 等<br>（2023）</b></td><td>以<b>团队协同感知模型</b>设计「不可见危险」预警，报告情境意识与反应时在手动与自动两模式下均改善。<b>零个数值，计时起止点未定义。</b>其真正贡献是揭示目标锁定在遮挡下不可实现。</td><td><b>B</b>　仅摘要<br><b class="k">禁引数值</b></td></tr>
+          <tr><td><b>Chang 等<br>（2009）</b></td><td>交叉口公交—行人相互遮挡。预警须在<b>碰撞点前 6.07 s（视觉）／6.28 s（语音）</b>发出；检测覆盖距路缘 7.1 m。收益形式为<b>紧急减速率由 3.10–3.56 降至 2.77–3.18 m/s²，即制动平顺化</b>。</td><td><b>A</b>　全文</td></tr>
+          <tr><td><b>Kim 等<br>（2022）</b></td><td>路侧系统 + 车路协同实现<b>非视距</b>行人预警。给出<b>最低时间预算 1.66 s = 1.5 s 意图预测 + 0.16 s 制动响应</b>。</td><td><b>A</b>　全文</td></tr>
+          <tr><td><b>Char<br>（2022）</b></td><td>3 700 余例事故重建。<b>硬下界 1.5 s</b>；预警于 2 s 时制动反应 0.97 ± 0.31 s，于 1.7 s 时<b>反增至 1.17 ± 0.24 s</b>；<b>传感视场 70° + 预警 2.6 s + 反应 0.6 s 可正面影响 84% 行人事故</b>。反证：<b>40–56% 被试认为 1.7／2 s 太晚</b>。</td><td><b>A</b>　博士论文</td></tr>
+        </table>
+      </div>
+      <div class="rcol" style="display:flex;flex-direction:column;gap:7px;min-height:0">
+        <div class="box r" style="flex:0 0 auto">
+          <h3>一处三倍缺口</h3>
+          <p class="xs">车载意图预测可提供的安全缓冲仅 <b>0.5–2.0 s</b>（查准 85.02%／查全 84.13%／F1 84.57%），而由制动动力学反推的遮挡场景需求为 <b>6.07–6.28 s</b>。</p>
+          <p class="xs" style="margin-top:6px"><b>判断：</b>仅依赖车载感知时，盲区预警在物理上无法达到人因所需提前量。<b>故盲区行人预警必须走车路协同路线</b>——这是由既有数值直接推出的工程结论，本课题将其作为<b>前置约束</b>而非研究发现。</p>
+        </div>
+        <div class="box a" style="flex:0 0 auto">
+          <h3>补检与证据纪律</h3>
+          <p class="xs">另经联网补检新增 <b>12 条题录</b>，含盲区 AR 可视化奠基文献（穿透式墙体显示，2012）、遮挡情境下参照系比较的唯一直接先例（<span class="m">N</span> = 28）、遮挡比例与检出率退化曲线、遮挡在行人事故中的占比。</p>
+          <p class="xs" style="margin-top:6px"><b class="k">全部为题录级，一律不得作为数值依据。</b>其中参照系比较一篇的佩戴者是<b>行人而非驾驶员</b>；占比一条为新闻稿层级。四条占比数据的分母定义均须核验后方可引用。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 5 问题的提出 -->
+<section class="slide">
+  <h1 class="crumb">问题的提出<em>盲区使既有结论的六项前提不成立，而非使效应量变小</em><span class="tag">3 / 8</span></h1>
+  <div class="body">
+    <table class="mini tt">
+      <tr><th style="width:14%">编号</th><th style="width:32%">既有结论的成立前提</th><th style="width:39%">盲区情境下的失效方式</th><th style="width:15%">出处</th></tr>
+      <tr><td><b>BD-1</b>　零点</td><td>存在自发察觉时刻 <span class="m">t<sub>0</sub></span>，可实测、可作提前量的零点</td><td>行人在显露前不可见，<b>Scanning 无信号可采样，<span class="m">t<sub>0</sub></span> 在物理上不存在</b>；<span class="m">Δt<span class="up"> = </span>t<sub>0</sub><span class="up"> − </span>t<sub>warn</sub></span> 无定义</td><td>You 等, 2023；Strayer 与 McDonnell, 2025</td></tr>
+      <tr><td><b>BD-2</b>　空间</td><td>目标可见，故跟随目标锁定可实现且最优（首次注视 2730 → 617 ms）</td><td><b>严格的目标锁定物理不可实现</b>：或锚定遮挡物表面（此时锚的是遮挡物），或穿透绘制（引入深度歧义）；<b>候选集本身改变</b></td><td>You 等, 2023 揭示 Wu 等, 2024 的边界</td></tr>
+      <tr><td><b>BD-3</b>　上界</td><td>提前量上界由<b>人因</b>（虚警代价、认知窗口）决定，可由界面设计缓解</td><td>上界由<b>传感器能否看见</b>决定：最低预算 1.66 s、意图预测缓冲 0.5–2.0 s，远小于 6.07–6.28 s 的需求。<b>任何界面设计都无法补偿</b></td><td>Kim 等, 2022；Cangut 等, 2026；Chang 等, 2009</td></tr>
+      <tr><td><b>BD-4</b>　信任</td><td>驾驶员可核验预警真伪，信任由「与自身判断是否吻合」建立</td><td><b>无从核验</b>：信任只能依赖长期可靠性经验；「晚报警 → 信任 7.3 降至 4.3、<span class="m">R</span> = −0.46」的机制在此不适用</td><td>Abe 与 Richardson, 2006；You 等, 2023</td></tr>
+      <tr><td><b>BD-5</b>　视场</td><td>共形图形可稳定贴合于目标</td><td><b>17° 视场下近距侧方共形图形移出视场而彻底失效</b>；遮挡后横穿恰是近距侧方构型</td><td>Merenda 等, 2018</td></tr>
+      <tr><td><b>BD-6</b>　理论</td><td>可由光学膨胀率 <span class="m">dθ<span class="up">/</span>dt</span> 越过知觉阈值反推 <span class="m">t<sub>0</sub></span> 下界（60 km/h 约 3.2 s）</td><td><b>膨胀率的时间原点被遮挡截断</b>：序列自显露时刻起才存在，下界推导须以新零点重做</td><td>本研究推导，依已发表场景几何</td></tr>
+    </table>
+    <div class="warn" style="flex:0 0 auto"><b>由此确立选题的逻辑：</b>六条并非「盲区条件下效应变弱」，而是「参数化本身失效」。若仅是效应变弱，盲区可作既有研究的<b>一个附加水平</b>处理；既是前提不成立，就<b>必须另立一项研究并重建参数化基础</b>。六条的逻辑结构为：BD-1 为根本，BD-3 与 BD-4 为独立约束，BD-2 与 BD-5 为空间侧叠加，BD-6 为 BD-1 的理论侧后果。<b>此判断本身可被否证</b>——见创新点第一条与预测 P6′。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 6 研究目标与内容 -->
+<section class="slide">
+  <h1 class="crumb">研究目标<em>三个按情境展开的问题与五个实验</em><span class="tag">4 / 8</span></h1>
+  <div class="body">
+    <div class="def"><b>总目标：</b>围绕<b>视线可见性</b>这一情境变量建立两套可检验、可复现的 AR-HUD 行人预警时空参数规范，并<b>直接实测两套参数之间的迁移损失</b>，据此回答参数是否需要情境自适应。</div>
+    <div class="cols3">
+      <div class="box">
+        <h3>内容一　非盲区情境</h3>
+        <ul class="xs">
+          <li class="tight"><b>时间参数：</b>预警相对自发察觉时刻应提前多少？触发准则用固定时间阈值还是减速度归一化量？</li>
+          <li class="tight"><b>空间参数：</b>预警应锁定屏幕、道路冲突点、行人目标还是复合？该优势是否随背景视觉复杂度变化？</li>
+          <li class="tight"><b>产出：</b>提前量与触发准则的可行区间；锁定策略的推荐序，且<b>位置增益与共形增益分离报告</b>。</li>
+          <li class="tight"><b>实验 1、实验 2</b></li>
+        </ul>
+      </div>
+      <div class="box p">
+        <h3>内容二　盲区情境</h3>
+        <ul class="xs">
+          <li class="tight"><b>零点重建：</b>以行人<b>自然显露时刻</b>替代自发察觉时刻，并给出解析式。</li>
+          <li class="tight"><b>时间参数：</b>相对显露时刻应提前多少？<b>预告区段</b>是否有独立价值？可靠性如何调节？</li>
+          <li class="tight"><b>空间参数：</b>目标锁定不可实现时应锚定于何处？最优解是否随遮挡几何变化？</li>
+          <li class="tight"><b>产出：</b>盲区提前量区间；分层语义分化规则；<b>「遮挡几何 × 可用视场 → 推荐锚定」查表式规范</b>。</li>
+          <li class="tight"><b>实验 3、实验 4</b></li>
+        </ul>
+      </div>
+      <div class="box a">
+        <h3>内容三　跨情境迁移</h3>
+        <ul class="xs">
+          <li class="tight"><b>迁移损失：</b>把一情境入选方案施用于另一情境，估计双向绩效损失的点估计与 95% 置信区间。</li>
+          <li class="tight"><b>切换判据：</b>若需情境自适应，给出以可见性判别为输入的切换条件。</li>
+          <li class="tight"><b>自我否证：</b>若迁移损失不显著，<b>本研究的情境切分不成立，应退回单情境处理</b>——该零结果照实报告并视为有效贡献。</li>
+          <li class="tight"><b>交叉迁移区块</b>（嵌入实验 2 与实验 4）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ok" style="flex:0 0 auto"><b>共用前提——实验 0（双情境标定）：</b>以「情境（非盲区／盲区）× 车速（40／60 km/h）」四单元、无 AR 预警条件，<b>在同一批被试与同一场景族内同时标定两个零点</b>：非盲区的自发察觉时刻分布，盲区的显露时刻几何验证与显露后感知反应时；另产出反应时分位数、舒适减速度、零点时刻的制动威胁数、系统渲染延迟与方差成分。<b>一个实验同时定出两个零点，是两套参数可比的前提。</b></div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 7 核心理论 -->
+<section class="slide">
+  <h1 class="crumb">核心理论<em>预告区段：盲区把注意加工的五阶段强制拆成两段</em><span class="tag">5 / 8</span></h1>
+  <div class="body">
+    <div class="tl">
+      <h4>非盲区情境：预警到冲突为<b>单一连续加工段</b></h4>
+      <div class="tl-bar">
+        <div class="tl-seg q" style="flex:0 0 26%">预警前<span>尚未获得任何提示</span></div>
+        <div class="tl-seg one" style="flex:0 0 24%">相对提前量 <span class="m">Δt</span><span>Scanning 已可启动：行人本就可见</span></div>
+        <div class="tl-seg one dash" style="flex:1 1 auto">S · P · I · D · E 在同一连续区段内完成<span>预警的作用是<b>加速</b>一条本已存在的加工链条</span></div>
+      </div>
+      <div class="tl-ticks"><span style="flex:0 0 26%">t<sub>warn</sub></span><span style="flex:0 0 24%">t<sub>0</sub>（自发察觉，须实测）</span><span style="flex:1 1 auto">冲突</span></div>
+    </div>
+    <div class="hr"></div>
+    <div class="tl">
+      <h4>盲区情境：被自然显露时刻<b>切成两段</b>，两段可做的加工不同</h4>
+      <div class="tl-bar">
+        <div class="tl-seg q" style="flex:0 0 13%">探测前<span>系统亦不可见</span></div>
+        <div class="tl-seg q2" style="flex:0 0 13%">已探测 · 未预警<span>预警最早只能提前至此</span></div>
+        <div class="tl-seg pre" style="flex:0 0 32%">预告区段 <span class="m">Δt′</span><span>可做 P、预置 D　·　<b>不能做 S、I</b>（无目标可扫视、可确认）</span></div>
+        <div class="tl-seg rev" style="flex:1 1 auto">显露区段<span>S · I · D · E 全可做；预警的作用是<b>从无到有创造</b>一个加工窗口</span></div>
+      </div>
+      <div class="tl-ticks"><span style="flex:0 0 13%">t<sub>detect</sub>（硬上界）</span><span style="flex:0 0 13%">t<sub>warn</sub></span><span style="flex:0 0 32%">t<sub>reveal</sub>（自然显露，可解析）</span><span style="flex:1 1 auto">冲突</span></div>
+    </div>
+    <div class="cols2 tp" style="flex:0 0 auto">
+      <div class="box g">
+        <h3>零点由心理量替换为几何量：三项方法学收益</h3>
+        <ul class="xs">
+          <li class="tight"><b>免个体校准。</b>显露时刻由遮挡体位置尺寸、行人步速、本车轨迹与眼点位置<b>解析求出</b>，被试间恒定，故 <span class="m">Δt′</span> 可直接作被试内因子。</li>
+          <li class="tight"><b>免复用被试。</b>实验 3 无须承接实验 0 的个体数据，招募约束大幅放宽。</li>
+          <li class="tight"><b>级间间隔不再自由。</b>盲区分层的两级分别锚于探测时刻与显露时刻，间隔由场景几何与传感架构共同决定。</li>
+        </ul>
+      </div>
+      <div class="box p">
+        <h3>由分段导出的三条可否证预测</h3>
+        <ul class="xs">
+          <li class="tight"><b>P1′</b>　放弃预告区段（<span class="m">Δt′ ≤ 0</span>）的绩效显著劣于跨越显露时刻的预警。</li>
+          <li class="tight"><b>P2′</b>　盲区最优 <span class="m">Δt′</span> 显著<b>大于</b>非盲区最优 <span class="m">Δt</span>——遮挡使预期性注视无从建立，且遮挡场景属<b>刺激驱动</b>而非目标导向，定向本身有额外耗时。</li>
+          <li class="tight"><b>P3′</b>　预告区段收益单调递增但<b>存在饱和</b>，饱和点对应预测与预置决策的完成时间——此即盲区下「过早预警收益递减」的<b>机制性解释</b>。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 8 技术路线 -->
+<section class="slide">
+  <h1 class="crumb">技术路线<em>由文献到规范的六个阶段与逐层固定参数的链条</em><span class="tag">6 / 8</span></h1>
+  <div class="body">
+    <div class="flow">
+      <div class="frow">
+        <div class="fnode s">阶段一<br>基础建设</div>
+        <div class="fnode"><b>文献补全</b>12 条补检题录取全文；四条事故占比核验分母；五处历史遗留题录清理</div>
+        <div class="fnode"><b>解析式推导</b>由遮挡体几何、行人步速、本车轨迹与眼点位置解出显露时刻；视线锥仿真验证</div>
+        <div class="fnode"><b>场景族开发</b>遮挡体、行人位置步速、车速与探测时刻全部取自已发表范式，保证可复现</div>
+        <div class="fnode"><b>指标与工具</b>四类动态兴趣区（警告／行人／<b>遮挡体</b>／未增强危险）；渲染与通信延迟测量链路</div>
+      </div>
+      <div class="farrow">▼ ▼ ▼ ▼</div>
+      <div class="frow">
+        <div class="fnode s">阶段二<br>双情境标定</div>
+        <div class="fnode g" style="flex:1 1 0"><b>实验 0　无 AR 预警基线：情境（非盲区／盲区）× 车速（40／60 km/h）</b>产出五项并全部被下游使用——① 非盲区自发察觉时刻分布（含被试内标准差）→ 实验 1 自变量换算基准；② 感知反应时 95 分位 → 运动学下界与可避险区校验；③ 零点时刻制动威胁数 → 触发阈值校准；④ 实测舒适减速度 → 全部实验的归一化分母；⑤ 方差成分 → 样本量估计与随机效应结构。<b>盲区两单元另验证显露时刻解析解并测显露后感知反应时。</b></div>
+      </div>
+      <div class="farrow">▼ ▼ ▼ ▼</div>
+      <div class="frow">
+        <div class="fnode s">阶段三<br>研究一</div>
+        <div class="fnode"><b>实验 1　时间参数</b>触发准则（固定阈值／制动威胁数）× 提前量（0／+1.0／+2.5 s）= 2 × 3；区块 B 比较持续与撤销三水平</div>
+        <div class="fnode"><b>实验 2　空间参数</b>锁定策略 5 水平 × 背景视觉复杂度 2 水平；<b>时间参数固定为实验 1 入选组合</b>；末尾嵌反向迁移区块</div>
+      </div>
+      <div class="farrow">▼ ▼ ▼ ▼</div>
+      <div class="frow">
+        <div class="fnode s">阶段四<br>研究二</div>
+        <div class="fnode p"><b>实验 3　时间参数与可靠性</b>提前量（−0.5／0／+1.0／+2.5 s）× 可靠性（100%／80%）= 4 × 2，另加无预警基线；区块 B 分层语义分化与升级仲裁</div>
+        <div class="fnode p"><b>实验 4　空间锚定</b>锚定策略 5 水平 × 遮挡几何 2 水平；<b>时间参数固定为实验 3 入选组合</b>；末尾嵌正向迁移区块</div>
+      </div>
+      <div class="farrow">▼ ▼ ▼ ▼</div>
+      <div class="frow">
+        <div class="fnode s">阶段五<br>整合</div>
+        <div class="fnode a"><b>迁移损失估计</b>情境 × 方案来源；报告点估计与 95% 置信区间；<b>检验 P6′</b></div>
+        <div class="fnode a"><b>帕累托前沿</b>按安全非劣 → 漏检非劣 → 制动平顺 → 认知代价 → 低可靠性稳健性 五步判定，不评选单一冠军</div>
+        <div class="fnode k"><b>规范输出</b>两套参数区间 + 显露时刻解析式 + 「遮挡几何 × 可用视场 → 推荐锚定」查表式规范 + 明确的结论边界七条</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 9 研究方法一 -->
+<section class="slide">
+  <h1 class="crumb">研究方法<em>研究一（非盲区情境）：实验 1 与实验 2</em><span class="tag">6 / 8</span></h1>
+  <div class="body">
+    <div class="cols2">
+      <div class="box">
+        <h3>实验 1　单层预警的时间参数</h3>
+        <p class="xs"><b>设计：</b>触发准则（固定时间阈值／制动威胁数）× 相对提前量（0／+1.0／+2.5 s）= 2 × 3 被试内；区块 B 比较持续与撤销三水平（固定 1.5 s／状态维持／风险耦合衰减）。</p>
+        <ul class="xs" style="margin-top:6px">
+          <li class="tight"><b>水平依据。</b>0 为「与自发察觉同时」的对照；+1.0 s 对应扫视加确认的工程估计，有产业级联 1.0 s 级间与 1.0 s 档距<b>双源支持</b>；+2.5 s 用于检验收益递减与代价递增。</li>
+          <li class="tight"><b>准则对照的必要性。</b>同一 TTC 2 s 在 40 km/h 下所需减速度 2.78 m/s²（制动威胁数 0.35，温和制动），在 80 km/h 下 5.56 m/s²（0.69，接近全力制动）——<b>固定秒数在物理上不可跨车速迁移，而人因侧从未做过准则类型的对照</b>。</li>
+          <li class="tight"><b>撤销侧</b>沿用 2 : 1 滞环（进入 4.0、解除 2.0 m/s²），本库中唯一以运动学量定义级间关系的先例。</li>
+          <li class="tight"><b>终点。</b>主要为最小 TTMD（安全非劣）；次要为峰值减速度、抖动率、首次注视时间、漏检率。</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>实验 2　空间参照系与锁定策略</h3>
+        <p class="xs"><b>设计：</b>锁定策略 5 水平（Baseline／屏幕固定／道路锁定／跟随目标／复合）× 背景视觉复杂度 2 水平被试内；时间参数固定为实验 1 入选组合。</p>
+        <ul class="xs" style="margin-top:6px">
+          <li class="tight"><b>基线须修正。</b>碰撞预警平视显示本身即屏幕固定式前视野显示，却已取得制动反应时快约 200 ms、漏报 1 次对 17 次的优势。<b>故 AR 收益必须拆成位置增益与共形增益</b>，混在一起会系统性高估共形性。</li>
+          <li class="tight"><b>方法学后果。</b>屏幕固定条件已含平视位置的大部分收益，故其余条件相对它的增量必然更小，<b>样本量估计须按更小的效应量做</b>。</li>
+          <li class="tight"><b>操纵检查。</b>背景复杂度以同时可见的行人与车辆数量、路侧广告密度分两水平，并以<b>边缘密度与颜色熵</b>两项图像统计量报告。</li>
+          <li class="tight"><b>并列主要终点。</b>漏检率，以及注视时长是否越过 2000 ms 分心上界——已有研究把 HUD 图形注视时长推到 3.33 s。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note" style="flex:0 0 auto"><b>硬约束：</b>实验 0 与实验 1 <b>必须共用同一场景族与同一套零点标定单元，且复用同一批被试</b>——自变量提前量需要被试自身的自发察觉时刻。实验 0 按「情境 × 车速」四单元分别标定：零点随车速与遮挡系统变化，遮挡直接改变光学膨胀率越过知觉阈值的时刻。实验 2 已固定全部时间参数，可另设场景操纵，不受此约束。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 10 研究方法二 -->
+<section class="slide">
+  <h1 class="crumb">研究方法<em>研究二（盲区情境）：实验 3 与实验 4</em><span class="tag">6 / 8</span></h1>
+  <div class="body">
+    <div class="cols2 w37">
+      <div class="box p">
+        <h3>实验 3　时间参数、预告区段与可靠性</h3>
+        <p class="xs"><b>设计：</b>提前量（−0.5／0／+1.0／+2.5 s）× 可靠性（100%／80%）= 4 × 2 被试内，另加无预警基线；所有水平须满足预警时刻不早于探测时刻。</p>
+        <ul class="xs" style="margin-top:6px">
+          <li class="tight"><b class="k">−0.5 s</b> 是预警发于行人已显露之后，即<b>完全放弃预告区段</b>——研究一无对应物的关键对照，直接检验 P1′。<b>+1.0／+2.5 s</b> 与研究一取值对齐，使跨情境比较落在同一刻度（P2′）。</li>
+          <li class="tight"><b>可靠性置于此处的三条理由：</b>虚警机制在盲区下才质变（<b>不可核验</b>）；<b>P4′</b> 预测盲区的信任损伤显著大于非盲区，可由双情境设计<b>直接</b>检验；盲区的时间上界本即探测可靠性，二者在同一物理量上闭合。</li>
+          <li class="tight"><b>80% 的依据：</b>15% 已证零效应故不提供信息；已有研究最低操纵档 20%；工程可达骚扰水平约 13.74%。故属<b>保守压力测试</b>。虚警<b>只施加在预告级</b>。</li>
+          <li class="tight"><b>区块 B　分层语义分化：预告级</b>语义为「遮挡体后方存在一个你看不见的行人」，<b>确认级</b>为「它现在出现了，在这里」；另设<b>状态条件化升级仲裁</b>（已检测到有效减速则取消升级，阈值 −0.075 g），依据是 <b>50% 被试在预警前已开始制动</b>。</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>实验 4　目标锁定不可实现时的锚定策略</h3>
+        <p class="xs"><b>设计：</b>锚定策略 5 水平 × 遮挡几何 2 水平（近距侧方／远距前方）被试内；时间参数固定为实验 3 入选组合。图形参数按四源收敛区间固定：不透明度 0.6、红与黄日夜鲁棒色对、条件间闪烁状态固定、<b>动画不得与本车运动耦合</b>。</p>
+        <table class="tiny" style="margin-top:6px">
+          <tr><th style="width:20%">水平</th><th style="width:44%">操作化与定位</th><th style="width:36%">主要风险与对应测量</th></tr>
+          <tr><td><b>遮挡体锚定</b></td><td>绘于遮挡体表面朝向行人一侧；语义为「危险来自这个物体后面」</td><td>构成叠加于遮挡物之上的构型 → <b>须测遮挡体误锚定率</b></td></tr>
+          <tr><td><b>推测地面锚定</b></td><td>贴地图形绘于按探测轨迹外推的行人推测位置，纵深按 TTC 乘车速缩放</td><td>外推误差转为空间误差 → 须报配准误差与冲突点空间误差</td></tr>
+          <tr><td><b>穿透显影</b></td><td>将遮挡体半透明化以显示其后行人，保持原空间语境</td><td><b>深度歧义</b> → 须测深度判断误差、晕动与不适；脱落率按 15% 估计</td></tr>
+          <tr><td><b>屏幕方位指示器</b></td><td>屏幕固定方向箭头，不做空间配准；视场受限时的<b>正当退化方案</b></td><td>不携带精确位置信息 → 须测定位转换成本</td></tr>
+          <tr><td>复合（探索）</td><td>遮挡体锚定 + 推测地面锚定</td><td>负荷叠加 → 须检验注视时长是否越 2000 ms</td></tr>
+        </table>
+        <p class="xs" style="margin-top:5px"><b>P5′：</b>17° 视场下近距侧方共形图形移出视场而失效，故预测<b>最优锚定随遮挡几何反转</b>；输出形式相应由「单一冠军」改为<b>查表式规范</b>。</p>
+      </div>
+    </div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 11 创新点 -->
+<section class="slide">
+  <h1 class="crumb">创新点<em>四项，逐项给出可检验的判据</em><span class="tag">7 / 8</span></h1>
+  <div class="body">
+    <div class="cols2">
+      <div class="box g">
+        <h3>创新一　把视线可见性确立为情境自变量，并附自我否证条款</h3>
+        <ul class="xs">
+          <li class="tight">既有研究把遮挡作为<b>场景背景</b>或<b>一个附加水平</b>处理。本研究论证盲区使既有结论的<b>六项前提不成立</b>（BD-1 至 BD-6），据此把可见性升格为情境自变量，并分别标定两套参数。</li>
+          <li class="tight"><b>判据 P6′：</b>双向迁移损失显著大于零。<b>否证条件：</b>迁移损失不显著 → 本切分不成立，应退回单情境处理。</li>
+          <li class="tight">该条款写入<b>预注册</b>，零结果照实报告并视为有效贡献——它意味着单一套参数即可跨情境使用，从而简化工程实现。<b>本创新的价值不取决于 P6′ 成立，而取决于它被明确检验了一次。</b></li>
+        </ul>
+      </div>
+      <div class="box p">
+        <h3>创新二　零点由心理量替换为几何量，并给出解析式</h3>
+        <ul class="xs">
+          <li class="tight">既有研究一律以<b>碰撞点或空间距离</b>为零点，故参数不可跨车速、跨研究比较。本研究以<b>自然显露时刻</b>为盲区零点，它与非盲区的自发察觉时刻<b>功能同位</b>——两者都是「驾驶员自力可及的起点」。</li>
+          <li class="tight">显露时刻为<b>几何量</b>，由遮挡体位置尺寸、行人步速、本车轨迹与眼点位置解析求出，<b>被试间恒定</b>；本研究提供解析式而非固定秒数，故可跨车型换算。</li>
+          <li class="tight"><b>判据：</b>解析解与实测眼动的偏差在预设阈值内（由实验 0 双重核验）。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cols2" style="flex:1 1 auto">
+      <div class="box a">
+        <h3>创新三　提出「预告区段」构念，把注意加工在时间轴上分段</h3>
+        <ul class="xs">
+          <li class="tight">既有注意框架把预警后的加工视为<b>单一连续过程</b>。本研究指出盲区把五阶段以显露时刻<b>强制拆成两段</b>：预告区段只能完成预测与预置决策，显露区段才能完成扫视与确认。</li>
+          <li class="tight">由此，盲区预警的功能不是<b>加速</b>已有链条，而是<b>从无到有创造</b>一个加工窗口——其理论收益上限高于非盲区，代价亦更高。</li>
+          <li class="tight"><b>判据 P1′／P2′／P3′：</b>放弃预告区段绩效更差；盲区最优提前量更大；收益单调递增且存在饱和。三条均给出明确否证条件。</li>
+          <li class="tight"><b>测量：</b>预告区段内向遮挡体边缘的<b>预期性注视</b>为直接指标。</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>创新四　输出形式由「单一冠军」改为查表式规范</h3>
+        <ul class="xs">
+          <li class="tight">既有研究的结论形式多为「某方案优于某方案」。本研究首次<b>正交比较遮挡条件下的四类锚定策略</b>，并把遮挡几何设为交叉因子。</li>
+          <li class="tight">因预测<b>最优解随遮挡几何反转</b>（P5′），输出形式相应改为<b>「遮挡几何 × 可用视场 → 推荐锚定」</b>的查表式规范，并按量产视场界定三档：当前可实现、有条件可实现、当前不可实现。</li>
+          <li class="tight">同时把参数一律以<b>运动学量</b>表达（制动威胁数、风险区纵深按 TTC 乘车速），使时间侧与空间侧建立在同一物理量上，便于最终整合为单一时空模型。</li>
+          <li class="tight"><b>判据：</b>存在显著的锚定策略 × 遮挡几何交互。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 12 可行性与风险 -->
+<section class="slide">
+  <h1 class="crumb">可行性分析<em>四项已具备的基础与三条预先声明的退化路径</em><span class="tag">7 / 8</span></h1>
+  <div class="body">
+    <div class="cols2">
+      <div class="box g">
+        <h3>已具备的基础</h3>
+        <ul class="xs">
+          <li class="tight"><b>文献基础已完成。</b>102 篇文献库建成并逐篇结构化；盲区专题筛查完成（85 条命中 → 21 篇可用，其中以遮挡为核心条件者 6 篇）；参考文献经按数字对象标识符、论文编号与接口三路核验。</li>
+          <li class="tight"><b>场景族可复现。</b>遮挡体、行人位置与步速、车速与探测时刻<b>全部取自已发表范式</b>（同色厢式货车与路侧公交车、边线外 2.5 m、1.0 与 1.5 m/s、40 与 60 km/h、距行人 100 m 触发），非自拟参数。</li>
+          <li class="tight"><b>方法学规范已定。</b>被试内设计加混合模型、主要结局预注册、次要结局按错误发现率校正、四类动态兴趣区、有效率不低于 80%、相邻危险事件间隔 60 s（依据：次任务后分心持续 30 s 以上，留一倍冗余）。</li>
+          <li class="tight"><b>招募压力已被结构性降低。</b>显露时刻为几何量、被试间恒定，故<b>实验 3 无须复用实验 0 的被试</b>；仅实验 0 与实验 1 需复用同批被试。</li>
+        </ul>
+      </div>
+      <div class="box r">
+        <h3>风险与预先声明的应对</h3>
+        <ul class="xs">
+          <li class="tight"><b>风险一：递进设计的阻塞。</b>下游实验以上游产出为固定参数。<b>应对①</b> 若自发察觉时刻方差过大而无法定出稳定基准，实验 1 退化为绝对时距与相对提前量的<b>双参数化并行报告</b>，即把提前量作协变量而非自变量。</li>
+          <li class="tight"><b>风险二：解析解失准。</b><b>应对②</b> 若显露时刻的解析解与实测眼动偏差超阈值，实验 3 改以<b>实测显露时刻</b>为零点，并把解析误差作为协变量报告。</li>
+          <li class="tight"><b>风险三：穿透显影的晕动脱落。</b><b>应对③</b> 若脱落率超过 25%，该水平<b>降级为探索性分析</b>，主分析在余下四水平上进行；样本量估计已按 15% 预留。</li>
+          <li class="tight"><b>风险四：场景可预期性。</b>被试数试次后即习得「遮挡体后必有行人」。<b>四项控制：</b>填充试次把遮挡事件压至不超过总事件四分之一；设置<b>遮挡体后无行人</b>的捕获试次；试次序号作协变量显式检验学习效应；报告首个遮挡试次的单独结果作为「无预期」近似。</li>
+          <li class="tight"><b class="k">三条退化路径均预先声明，不得在见到数据后选择。</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="warn" style="flex:0 0 auto"><b>结论边界（七条，须在论文中显式声明）：</b>① 短期模拟驾驶、视觉 AR-HUD、城市行人横穿，不外推长期使用与最后时刻的多模态干预；② 盲区限于<b>单一遮挡体的几何遮挡</b>，多重遮挡、行进车辆造成的间歇遮挡与天气致能见度下降均不在范围内；③ 显露时刻的解析解<b>跨车型须重算</b>；④ 探测时刻在模拟器中为程序设定而非真实传感器性能，其随遮挡比例的退化曲线为已知缺口；⑤ 探测时刻设定<b>依赖路侧与车路协同输入</b>；⑥ 穿透显影条件受渲染保真度限制，不外推至真实光学 AR-HUD；⑦ 场景可预期性无法完全消除，故效应量的<b>偏误方向不明</b>，须并列陈述高估与低估两种可能，不得单向断言保守。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 13 工作计划 -->
+<section class="slide gt">
+  <h1 class="crumb">工作计划<em>21 个月，六阶段，含两处并行与三处评审节点</em><span class="tag">8 / 8</span></h1>
+  <div class="body">
+    <table class="mini gantt">
+      <tr class="gh"><th style="width:19%">阶段与任务</th><th style="width:10%">起止</th>
+        <th>26<br>09</th><th>10</th><th>11</th><th>12</th><th>27<br>01</th><th>02</th><th>03</th><th>04</th><th>05</th><th>06</th><th>07</th><th>08</th><th>09</th><th>10</th><th>11</th><th>12</th><th>28<br>01</th><th>02</th><th>03</th><th>04</th><th>05</th></tr>
+      <tr><td><b>一　基础建设</b><br>文献补全 · 解析式推导 · 场景族开发 · 指标与工具链</td><td class="n">26.09<br>26.11</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar" style="left:0%;width:14.3%"></div></div></td></tr>
+      <tr><td><b>二　预实验与实验 0</b><br>双情境标定 · 解析解双重核验 · 方差成分与样本量重算</td><td class="n">26.12<br>27.01</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar g" style="left:14.3%;width:9.5%"></div></div></td></tr>
+      <tr><td><b>三　实验 1</b><br>非盲区时间参数（2 × 3）+ 区块 B 持续与撤销</td><td class="n">27.02<br>27.04</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar" style="left:23.8%;width:14.3%"></div></div></td></tr>
+      <tr><td><b>四　实验 2</b><br>非盲区空间参数（5 × 2）+ 反向迁移区块</td><td class="n">27.05<br>27.07</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar" style="left:38.1%;width:14.3%"></div></div></td></tr>
+      <tr><td><b>五　实验 3</b><br>盲区时间参数与可靠性（4 × 2）+ 区块 B 分层语义分化</td><td class="n">27.08<br>27.10</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar p" style="left:52.4%;width:14.3%"></div></div></td></tr>
+      <tr><td><b>六　实验 4</b><br>盲区锚定策略（5 × 2）+ 正向迁移区块</td><td class="n">27.11<br>28.01</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar p" style="left:66.7%;width:14.3%"></div></div></td></tr>
+      <tr><td><b>七　整合与撰写</b><br>迁移损失估计 · 帕累托前沿 · 规范输出 · 论文撰写与送审</td><td class="n">28.02<br>28.05</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar a" style="left:81.0%;width:19.0%"></div></div></td></tr>
+      <tr><td><b>并行：论文撰写</b><br>第 1–2 章随阶段一定稿；各实验章随实验完成即写</td><td class="n">26.10<br>28.05</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar" style="left:4.8%;width:95.2%;opacity:.42"></div></div></td></tr>
+      <tr><td><b class="k">评审节点</b><br>① 预注册提交　② 中期检查　③ 预答辩</td><td class="n">27.01<br>27.10<br>28.03</td>
+        <td colspan="21"><div class="gwrap"><div class="gbar k" style="left:19.0%;width:1.6%"></div><div class="gbar k" style="left:61.9%;width:1.6%"></div><div class="gbar k" style="left:85.7%;width:1.6%"></div></div></td></tr>
+    </table>
+    <div class="ok" style="flex:0 0 auto"><b>进度安排的三条依据：</b>① <b>预注册置于实验 0 之后、实验 1 之前</b>——因样本量须按实验 0 实测的方差成分重算，过早预注册会导致功效分析失效；② <b>实验 3 不排在实验 1 之后而排在实验 2 之后</b>——虽然实验 3 无须复用被试、理论上可与研究一并行，但其时间参数水平须与实验 1 入选值对齐以保证跨情境可比，故仍置于研究一之后；③ <b>两处迁移区块分别嵌入实验 2 与实验 4 的末尾</b>而非独立成实验，以节省一轮招募与场景开发。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 14 预期成果 -->
+<section class="slide">
+  <h1 class="crumb">预期成果<em>五类交付物与已完成部分</em><span class="tag">8 / 8</span></h1>
+  <div class="body">
+    <div class="cols2">
+      <div class="box">
+        <h3>预期交付物</h3>
+        <ul class="xs">
+          <li class="tight"><b>① 学位论文一部。</b>含双情境参数规范、显露时刻解析式、四类锚定策略的首次正交对照，以及迁移损失的实测。</li>
+          <li class="tight"><b>② 学术论文。</b>时间侧一篇（预告区段的独立价值与最优提前量的情境差）、空间侧一篇（遮挡条件下的锚定策略与几何交互）。</li>
+          <li class="tight"><b>③ 设计规范文本。</b>两套参数区间（提前量、触发准则、持续与撤销、分层语义、锚定策略），以运动学量表达以便跨车速迁移；并以<b>「遮挡几何 × 可用视场 → 推荐锚定」查表式规范</b>给出量产落地判据与退化路径。</li>
+          <li class="tight"><b>④ 可复现材料。</b>显露时刻解析式与推导、视线锥仿真脚本、场景族参数表、四类动态兴趣区定义、预注册记录与分析脚本。</li>
+          <li class="tight"><b>⑤ 证据底账。</b>盲区专题证据台账（含证据等级、数值锚点与引用禁则），以及 12 条补检题录的补全记录。</li>
+        </ul>
+      </div>
+      <div class="box g">
+        <h3>已完成部分（本次开题的支撑材料）</h3>
+        <ul class="xs">
+          <li class="tight"><b>文献库。</b>102 篇结构化笔记 + 综合表 + 参考文献表（经三路核验）；主线文献综述正文（七环节、七组冲突辨析、九项空白）。</li>
+          <li class="tight"><b>盲区专题。</b>全库 30 关键词正则筛查（85 条命中 → 21 篇可用，A 类 6 篇）；证据台账（六处边界推翻、17 项数值锚点、10 条引用禁则）；专题文献综述正文（含四组遮挡专题冲突辨析与七项空白）。</li>
+          <li class="tight"><b>框架文本。</b>双情境研究框架（术语表、三重约束情境分化、五实验设计、六条预测加五条假设、指标体系、结论边界七条）。</li>
+          <li class="tight"><b>汇报材料。</b>研究汇报 13 页与本开题报告，均经<b>自动化排版探针核验零溢出</b>；配套逐字讲稿经<b>逐页标题、分块与计时三项校验</b>；交付物另经目录级一致性校验器核验数值跨文件一致、术语统一、编号成套与路径可解析。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="def" style="flex:0 0 auto"><b>一句话总结本课题的贡献主张：</b>AR-HUD 行人碰撞预警的时空参数<b>不存在跨情境通用的取值</b>；决定取值的首要因素不是显示技术，而是危险目标在预警时刻是否可见。本研究以自然显露时刻替代自发察觉时刻作为盲区零点，提出并检验<b>预告区段</b>这一构念，首次正交比较遮挡条件下的四类锚定策略，并以<b>可自我否证的迁移损失检验</b>为这一整套主张提供成立或不成立的判据。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+</div>
+<div id="nav"><div id="bar"></div></div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+document.getElementById('tot').textContent=slides.length;
+function fit(){
+  const s=Math.min(window.innerWidth/1280, window.innerHeight/720)*0.965;
+  slides.forEach(el=>el.style.transform=`scale(${s})`);
+}
+function show(n){
+  slides.forEach((el,k)=>{const p=el.querySelector('.pg');
+    if(p)p.textContent=(k+1)+' / '+slides.length;});
+  i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((el,k)=>el.classList.toggle('on',k===i));
+  document.getElementById('cur').textContent=i+1;
+  document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
+  location.hash='p'+(i+1);
+}
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(e.key)){show(i+1);e.preventDefault();}
+  else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){show(i-1);e.preventDefault();}
+  else if(e.key==='Home'){show(0);}
+  else if(e.key==='End'){show(slides.length-1);}
+  else if(e.key==='f'||e.key==='F'){document.documentElement.requestFullscreen?.();}
+  else if(e.key==='o'||e.key==='O'){const n=prompt('跳转到第几页？（1–'+slides.length+'）');if(n)show(parseInt(n)-1);}
+});
+document.addEventListener('click',e=>{
+  if(e.target.closest('#hint')||e.target.closest('#hud'))return;
+  show(e.clientX>window.innerWidth*0.4?i+1:i-1);
+});
+let x0=null;
+document.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+document.addEventListener('touchend',e=>{
+  if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>44)show(dx<0?i+1:i-1);x0=null;
+},{passive:true});
+window.addEventListener('resize',fit);
+fit();
+const m=location.hash.match(/^#p(\d+)$/);
+show(m?parseInt(m[1])-1:0);
+</script>
+</body>
+</html>
