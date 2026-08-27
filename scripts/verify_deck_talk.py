@@ -69,7 +69,9 @@ def main() -> int:
     print("[3] 每页分块")
     miss = []
     for i, (t, body) in enumerate(tp, 1):
-        need = ["**讲稿：**"] if i == 1 else ["**讲稿：**", "**只说一句：**"]
+        # 封面页与标注「不讲，备查」的页面豁免「只说一句」
+        exempt = i == 1 or "不讲，备查" in body
+        need = ["**讲稿：**"] if exempt else ["**讲稿：**", "**只说一句：**"]
         lack = [k for k in need if k not in body]
         if lack:
             miss.append(f"p{i:02d} 缺 {lack}")

@@ -150,39 +150,39 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 
 <!-- 2 研究问题 -->
 <section class="slide">
-  <h1 class="crumb">研究问题<em>三个按情境展开的核心问题</em><span class="tag">1 / 6</span></h1>
+  <h1 class="crumb">研究问题<em>三个按情境展开的研究问题及其变量结构</em><span class="tag">1 / 6</span></h1>
   <div class="body">
-    <div class="def">本研究的对象是 AR-HUD 行人碰撞预警的<b>时空参数</b>。核心判断为：参数<b>不存在跨情境通用的取值</b>——决定其取值的首要因素不是显示技术，而是<b>危险目标在预警时刻是否可见</b>。故本研究按视线可见性把问题切成两个情境分别标定，并直接实测两套参数之间的迁移损失。</div>
+    <div class="def">本研究的对象是 AR-HUD 行人碰撞预警的<b>时空参数</b>。核心判断为：参数<b>不存在跨情境通用的取值</b>——决定其取值的首要因素不是显示技术，而是<b>危险目标在预警时刻是否可见</b>。故本研究按视线可见性把问题切成两个情境分别标定，并直接实测两套参数之间的迁移损失。<b>　四项分目标：O1′</b> 双情境零点的同批标定；<b>O2′</b> 非盲区时空参数标定；<b>O3′</b> 盲区零点重建与时空参数标定；<b>O4′</b> 迁移损失估计与切换判据输出。</div>
     <div class="cols3">
       <div class="box">
-        <h3>问题一　非盲区情境</h3>
+        <h3>RQ1′　非盲区情境的时空参数</h3>
         <ul class="xs">
           <li class="tight">行人自始可见时，预警相对驾驶员<b>自发察觉时刻 <span class="m">t<sub>0</sub></span></b> 应提前多少？</li>
           <li class="tight">触发准则应依据<b>固定时间阈值</b>还是<b>减速度归一化量 BTN</b>？</li>
-          <li class="tight">预警应锁定于屏幕、道路冲突点、行人目标还是复合？该优势是否随<b>背景视觉复杂度</b>变化？</li>
-          <li class="tight">对应<b>实验 1（时间）与实验 2（空间）</b></li>
+          <li class="tight">预警应锁定于屏幕、道路冲突点、行人目标还是复合？该优劣序是否随<b>背景视觉复杂度</b>与<b>次任务负荷</b>变化？</li>
+          <li class="tight">对应<b>实验 2（时间）与实验 3（空间）</b></li>
         </ul>
       </div>
       <div class="box p">
-        <h3>问题二　盲区情境</h3>
+        <h3>RQ2′　盲区情境的时空参数</h3>
         <ul class="xs">
           <li class="tight"><span class="m">t<sub>0</sub></span> 在物理上<b>不存在</b>时，零点应换成什么？预警相对<b>自然显露时刻 <span class="m">t<sub>reveal</sub></span></b> 应提前多少？</li>
           <li class="tight">「行人尚不可见而预警已呈现」的<b>预告区段</b>是否具有独立价值？</li>
           <li class="tight">目标锁定在物理上<b>不可实现</b>时，图形应锚定于何处？</li>
-          <li class="tight">对应<b>实验 3（时间）与实验 4（空间）</b></li>
+          <li class="tight">对应<b>实验 4（时间）与实验 5（空间）</b></li>
         </ul>
       </div>
       <div class="box a">
-        <h3>问题三　跨情境迁移</h3>
+        <h3>RQ3′　跨情境迁移损失</h3>
         <ul class="xs">
           <li class="tight">两套参数<b>能否互换</b>？双向<b>迁移损失</b>有多大？</li>
           <li class="tight">若需情境自适应，<b>切换判据</b>是什么？</li>
-          <li class="tight">此问题的答案<b>可以否证本研究的切分本身</b>：若迁移损失不显著，则应退回单情境处理。</li>
-          <li class="tight">对应<b>嵌入实验 2 与实验 4 的交叉迁移区块</b></li>
+          <li class="tight">该问题的答案<b>可否证本研究的情境切分本身</b>：若迁移损失不显著，则应退回单情境处理。</li>
+          <li class="tight">对应<b>嵌入实验 3 与实验 5 的交叉迁移区块</b></li>
         </ul>
       </div>
     </div>
-    <div class="note" style="flex:0 0 auto"><b>口径声明：</b>本研究的「盲区」专指<b>驾驶员视线的几何遮挡</b>，不含传感器盲区、后视盲区与认知性盲区（无意视盲）。后者不作为情境自变量，而作为<b>代价指标</b>进入两个情境共同的因变量集。</div>
+    <div class="note" style="flex:0 0 auto"><b>因变量口径：</b>两个情境共用同一因变量结构，归入四类构念——<b>安全绩效</b>（最小 TTMD、峰值减速度、碰撞率）、<b>认知负荷</b>（NASA-TLX、瞳孔变化率、注视熵）、<b>情境意识</b>（三阶段计分、危险漏检率、首次注视时间、预期性注视）、<b>用户体验</b>（信任、可接受度、扰烦度）。<br><b>盲区口径：</b>本研究的「盲区」专指<b>驾驶员视线的几何遮挡</b>，不含传感器盲区、后视盲区与认知性盲区（无意视盲）。后者不作为情境自变量，而作为<b>代价指标</b>归入两个情境共用的因变量集，即<b>情境意识</b>构念下的漏检率一项。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -207,7 +207,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         <ul class="xs">
           <li class="tight"><b>遮挡判据。</b>以驾驶员眼点为顶点的视线锥被遮挡体完全阻断，即行人在视网膜像平面上的<b>可见像素占比为零</b>。</li>
           <li class="tight"><b>显露时刻的定义。</b>可见像素占比<b>由零转正</b>的时刻；由遮挡体位置尺寸、行人步速、本车轨迹与眼点位置<b>联立解析求出</b>。</li>
-          <li class="tight"><b>部分遮挡的处理。</b>遮挡比例介于 0 与 1 之间的过渡段极短（60 km/h 下约 0.15 s），故按完全遮挡处理并声明该近似。<b>解析解由实验 0 以视线锥仿真与实测眼动双重核验</b>，误差超阈值时以实测为准。</li>
+          <li class="tight"><b>部分遮挡的处理。</b>遮挡比例介于 0 与 1 之间的过渡段极短（60 km/h 下约 0.15 s），故按完全遮挡处理并声明该近似。<b>解析解由实验 1 以视线锥仿真与实测眼动双重核验</b>，误差超阈值时以实测为准。</li>
         </ul>
       </div>
       <div class="box r">
@@ -285,7 +285,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         <h3>零点几何化的三项方法学收益</h3>
         <ul class="xs">
           <li class="tight"><b>不需按个体校准自变量。</b>显露时刻被试间恒定，故 <span class="m">Δt′</span> 可直接作被试内因子操纵。</li>
-          <li class="tight"><b>不需复用被试。</b>实验 3 无须承接实验 0 的个体数据；而实验 1 因 <span class="m">Δt</span> 依赖被试自身 <span class="m">t<sub>0</sub></span>，仍须与实验 0 复用同批被试。</li>
+          <li class="tight"><b>不需复用被试。</b>实验 4 无须承接实验 1 的个体数据；而实验 2 因 <span class="m">Δt</span> 依赖被试自身 <span class="m">t<sub>0</sub></span>，仍须与实验 1 复用同批被试。</li>
           <li class="tight"><b>级间间隔不再是自由参数。</b>盲区分层的两级分别锚于 <span class="m">t<sub>detect</sub></span> 与 <span class="m">t<sub>reveal</sub></span>，间隔由场景几何与传感架构共同决定，而非待搜索的取值。</li>
         </ul>
       </div>
@@ -311,8 +311,8 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         <h3>两情境自变量的可比性如何保证</h3>
         <ul class="xs">
           <li class="tight"><b>刻度对齐。</b>两情境提前量取相同水平（+1.0／+2.5 s）；盲区另加 −0.5 与 0 以检验预告区段。</li>
-          <li class="tight"><b>场景族对齐。</b>实验 0／1／3 共用场景族与标定单元，车速与遮挡按四单元分别标定，故运动学难度可比。</li>
-          <li class="tight"><b>归一化量对齐。</b>触发准则与风险量映射一律采用制动威胁数，分母由实验 0 在两情境中<b>分别实测</b>，故强度标度可比。</li>
+          <li class="tight"><b>场景族对齐。</b>实验 1／2／4 共用场景族与标定单元，车速与遮挡按四单元分别标定，故运动学难度可比。</li>
+          <li class="tight"><b>归一化量对齐。</b>触发准则与风险量映射一律采用制动威胁数，分母由实验 1 在两情境中<b>分别实测</b>，故强度标度可比。</li>
         </ul>
       </div>
     </div>
@@ -410,7 +410,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
   <div class="body">
     <div class="cols2">
       <div class="box">
-        <h3>实验 1　单层预警的时间参数</h3>
+        <h3>实验 2　单层预警的时间参数</h3>
         <p class="xs"><b>设计：</b>触发准则（固定时间阈值／BTN）× 相对提前量 <span class="m">Δt</span>（0／+1.0／+2.5 s）= 2 × 3 被试内；区块 B 另比较持续与撤销三水平（固定 1.5 s／状态维持／风险耦合衰减）。</p>
         <ul class="xs" style="margin-top:7px">
           <li class="tight"><b>水平依据。</b><span class="m">Δt</span> = 0 为「与自发察觉同时」的对照；+1.0 s 对应 Scanning 与 Identification 的工程估计，有产业级联的 1.0 s 级间与 1.0 s 档距双源支持；+2.5 s 用于检验收益递减与代价递增。</li>
@@ -420,8 +420,8 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         </ul>
       </div>
       <div class="box">
-        <h3>实验 2　空间参照系与锁定策略</h3>
-        <p class="xs"><b>设计：</b>锁定策略 5 水平（Baseline／BD／BR／BW／BW+BR）× 背景视觉复杂度 2 水平被试内；时间参数固定为实验 1 入选组合。</p>
+        <h3>实验 3　空间参照系与锁定策略</h3>
+        <p class="xs"><b>主设计：</b>锁定策略 5 水平（Baseline／BD／BR／BW／BW+BR）× 背景视觉复杂度 2 水平被试内；时间参数固定为实验 2 入选组合。<b>另设次任务负荷区块</b>：BD／BW × 次任务负荷 2 水平（纯音乐／意图诱导型听觉问答），背景固定为高拥挤，检验共形增益是否依赖负荷。</p>
         <ul class="xs" style="margin-top:7px">
           <li class="tight"><b>最强证据。</b>三方对照（<span class="m">N</span> = 36）：BW 首次注视 <b>617 ms</b>、BD <b>2563 ms</b>、BR <b>2730 ms</b>，差异接近四倍。</li>
           <li class="tight"><b>但基线设定须修正。</b>碰撞预警平视显示本身即屏幕固定式前视野显示，却已取得制动反应时快约 200 ms、漏报 1 次对 17 次的优势。<b>故 AR 的收益必须拆成位置增益与共形增益两项</b>，混在一起会系统性高估共形性。</li>
@@ -430,7 +430,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         </ul>
       </div>
     </div>
-    <div class="note" style="flex:0 0 auto"><b>硬约束：</b>实验 0 与实验 1 <b>必须共用同一场景族与同一套零点标定单元</b>，且<b>复用同一批被试</b>——自变量 <span class="m">Δt</span> 需要被试自身的 <span class="m">t<sub>0</sub></span>。实验 0 按「情境（非盲区／盲区）× 车速（40／60 km/h）」<b>四个单元分别标定</b>：零点随车速与遮挡系统变化，遮挡直接改变光学膨胀率越过知觉阈值的时刻。实验 2 已固定全部时间参数，可另设场景操纵，不受此约束。</div>
+    <div class="note" style="flex:0 0 auto"><b>硬约束：</b>实验 1 与实验 2 <b>必须共用同一场景族与同一套零点标定单元</b>，且<b>复用同一批被试</b>——自变量 <span class="m">Δt</span> 需要被试自身的 <span class="m">t<sub>0</sub></span>。实验 1 按「情境（非盲区／盲区）× 车速（40／60 km/h）」<b>四个单元分别标定</b>：零点随车速与遮挡系统变化，遮挡直接改变光学膨胀率越过知觉阈值的时刻。实验 3 已固定全部时间参数，可另设场景操纵，不受此约束。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -439,7 +439,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 <section class="slide">
   <h1 class="crumb">研究二<em>盲区情境：时间参数、预告区段与系统可靠性</em><span class="tag">4 / 6</span></h1>
   <div class="body">
-    <div class="def">实验 3 设计：相对提前量 <span class="m">Δt′<span class="up"> = </span>t<sub>reveal</sub><span class="up"> − </span>t<sub>warn</sub></span>（<b>−0.5／0／+1.0／+2.5 s</b>）× 系统可靠性（<b>100%／80%</b>）= 4 × 2 被试内，另加无预警基线对照；区块 B 比较分层语义分化与单层。所有水平须满足 <span class="m">t<sub>warn</sub> ≥ t<sub>detect</sub></span>。</div>
+    <div class="def">实验 4 设计：相对提前量 <span class="m">Δt′<span class="up"> = </span>t<sub>reveal</sub><span class="up"> − </span>t<sub>warn</sub></span>（<b>−0.5／0／+1.0／+2.5 s</b>）× 系统可靠性（<b>100%／80%</b>）= 4 × 2 被试内，另加无预警基线对照；区块 B 比较分层语义分化与单层。所有水平须满足 <span class="m">t<sub>warn</sub> ≥ t<sub>detect</sub></span>。</div>
     <div class="cols2 w37">
       <div class="box p">
         <h3>四个水平的分工</h3>
@@ -468,7 +468,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 <section class="slide">
   <h1 class="crumb">研究二<em>盲区情境：目标锁定不可实现时的四类锚定策略</em><span class="tag">4 / 6</span></h1>
   <div class="body">
-    <p class="xs" style="flex:0 0 auto">实验 4 设计：锚定策略 5 水平 × 遮挡几何 2 水平（近距侧方／远距前方）被试内；时间参数固定为实验 3 入选组合。图形参数按四源收敛区间固定：不透明度 0.6、红与黄日夜鲁棒色对、条件间闪烁状态固定、<b>动画不得与本车运动耦合</b>。</p>
+    <p class="xs" style="flex:0 0 auto">实验 5 设计：锚定策略 5 水平 × 遮挡几何 2 水平（近距侧方／远距前方）被试内；时间参数固定为实验 4 入选组合。图形参数按四源收敛区间固定：不透明度 0.6、红与黄日夜鲁棒色对、条件间闪烁状态固定、<b>动画不得与本车运动耦合</b>。</p>
     <table class="mini">
       <tr><th style="width:15%">水平</th><th style="width:29%">操作化</th><th style="width:27%">理论定位</th><th style="width:29%">主要风险与对应测量</th></tr>
       <tr><td><b>BO</b><br>遮挡体锚定</td><td>高亮或描边绘制于遮挡体表面朝向行人的一侧</td><td>指示「危险来自这个物体后面」</td><td>构成叠加于遮挡物之上的构型，而外周视野下叠加于图形之上的危险漏检率最高且反应时最长 → <b>须测遮挡体误锚定率</b></td></tr>
@@ -534,7 +534,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         </ul>
       </div>
     </div>
-    <div class="warn" style="flex:0 0 auto"><b>递进设计的风险与退化路径（须预先写入方案书）：</b>下游实验以上游产出为固定参数，故上游失败会阻塞下游。三条缓解方案——① 若实验 0 的自发察觉时刻方差过大而无法定出稳定基准，<b>实验 1 退化为绝对时距与相对提前量的双参数化并行报告</b>，即把提前量作协变量而非自变量；② 若显露时刻的解析解与实测眼动偏差超阈值，<b>实验 3 改以实测显露时刻为零点</b>，并把解析误差作为协变量报告；③ 若穿透显影条件的晕动脱落率超过 25%，<b>该水平降级为探索性分析</b>，主分析在余下四水平上进行。三条方案均<b>预先声明</b>，不得在见数据后选择。</div>
+    <div class="warn" style="flex:0 0 auto"><b>递进设计的风险与退化路径（须预先写入方案书）：</b>下游实验以上游产出为固定参数，故上游失败会阻塞下游。三条缓解方案——① 若实验 1 的自发察觉时刻方差过大而无法定出稳定基准，<b>实验 2 退化为绝对时距与相对提前量的双参数化并行报告</b>，即把提前量作协变量而非自变量；② 若显露时刻的解析解与实测眼动偏差超阈值，<b>实验 4 改以实测显露时刻为零点</b>，并把解析误差作为协变量报告；③ 若穿透显影条件的晕动脱落率超过 25%，<b>该水平降级为探索性分析</b>，主分析在余下四水平上进行。三条方案均<b>预先声明</b>，不得在见数据后选择。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -545,25 +545,25 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
   <div class="body">
     <table class="tiny">
       <tr><th style="width:11%">研究</th><th style="width:11%">实验</th><th style="width:26%">核心问题</th><th style="width:27%">核心变量与水平</th><th style="width:25%">主要机制指标</th></tr>
-      <tr><td>研究零<br>共用标定</td><td><b>实验 0</b><br>双情境无预警基线</td><td>两个零点各在何处？运动学可行域多大？</td><td>情境（非盲区／盲区）× 车速（40／60 km/h），<b>无 AR 预警</b></td><td>非盲区：<span class="m">t<sub>0</sub></span> 分布；盲区：<span class="m">t<sub>reveal</sub></span> 几何验证与显露后感知反应时；两情境的反应时分位数、舒适减速度、零点时刻 BTN、渲染延迟、方差成分</td></tr>
-      <tr><td rowspan="2">研究一<br>非盲区情境</td><td><b>实验 1</b><br>时间参数</td><td>相对自发察觉应提前多少？触发准则用时间还是减速度？</td><td>触发准则（固定时间阈值／BTN）× <span class="m">Δt</span>（0／+1.0／+2.5 s）= 2 × 3；区块 B 持续与撤销 3 水平</td><td>首次注视时间（警告／行人）；制动启动、峰值减速度、抖动率；安全约束为最小 TTMD</td></tr>
-      <tr><td><b>实验 2</b><br>空间参数</td><td>预警应锁定屏幕、道路、行人还是复合？</td><td>锁定策略 5 水平（Baseline／BD／BR／BW／BW+BR）× 背景视觉复杂度 2 水平</td><td>真实行人首次注视时间；定位转换成本；并列终点含漏检率与 2000 ms 上界</td></tr>
-      <tr><td rowspan="2">研究二<br>盲区情境</td><td><b>实验 3</b><br>时间参数与可靠性</td><td>相对自然显露应提前多少？预告区段是否有价值？可靠性如何调节？</td><td><span class="m">Δt′</span>（−0.5／0／+1.0／+2.5 s）× 可靠性（100%／80%）= 4 × 2，另加无预警基线；区块 B 分层语义分化</td><td>预告区段内的预期性注视；路径侵入预测正确率；显露后行人首次注视时间；信任量表、预告级依从率、取消升级率</td></tr>
-      <tr><td><b>实验 4</b><br>空间参数</td><td>目标锁定不可实现时应锚定于何处？最优解是否随遮挡几何变化？</td><td>锚定策略 5 水平（Baseline／BO／BR-p／DR／BD-dir）× 遮挡几何 2 水平</td><td>显露后行人首次注视时间；定位转换成本、<b>遮挡体误锚定率</b>；并列终点含漏检率、深度判断误差、晕动与不适</td></tr>
-      <tr><td>整合</td><td><b>交叉迁移区块</b><br>嵌入实验 2 与实验 4</td><td>两套参数能否互换？</td><td>情境（非盲区／盲区）× 方案来源（本情境入选／他情境入选）</td><td>迁移损失 = 他情境方案绩效 − 本情境方案绩效，报告点估计与 95% 置信区间</td></tr>
+      <tr><td>共用基础<br>双情境标定</td><td><b>实验 1</b><br>双情境无预警基线</td><td>两个零点各在何处？运动学可行域多大？</td><td>情境（非盲区／盲区）× 车速（40／60 km/h），<b>无 AR 预警</b></td><td>非盲区：<span class="m">t<sub>0</sub></span> 分布；盲区：<span class="m">t<sub>reveal</sub></span> 几何验证与显露后感知反应时；两情境的反应时分位数、舒适减速度、零点时刻 BTN、渲染延迟、方差成分</td></tr>
+      <tr><td rowspan="2">研究一<br>非盲区情境</td><td><b>实验 2</b><br>时间参数</td><td>相对自发察觉应提前多少？触发准则用时间还是减速度？</td><td>触发准则（固定时间阈值／BTN）× <span class="m">Δt</span>（0／+1.0／+2.5 s）= 2 × 3；区块 B 持续与撤销 3 水平</td><td>首次注视时间（警告／行人）；制动启动、峰值减速度、抖动率；安全约束为最小 TTMD</td></tr>
+      <tr><td><b>实验 3</b><br>空间参数</td><td>预警应锁定屏幕、道路、行人还是复合？</td><td>主设计：锁定策略 5 水平（Baseline／BD／BR／BW／BW+BR）× 背景视觉复杂度 2 水平；负荷区块：BD／BW × 次任务负荷 2 水平</td><td>真实行人首次注视时间；定位转换成本；并列终点含漏检率与 2000 ms 上界</td></tr>
+      <tr><td rowspan="2">研究二<br>盲区情境</td><td><b>实验 4</b><br>时间参数与可靠性</td><td>相对自然显露应提前多少？预告区段是否有价值？可靠性如何调节？</td><td><span class="m">Δt′</span>（−0.5／0／+1.0／+2.5 s）× 可靠性（100%／80%）= 4 × 2，另加无预警基线；区块 B 分层语义分化</td><td>预告区段内的预期性注视；路径侵入预测正确率；显露后行人首次注视时间；信任量表、预告级依从率、取消升级率</td></tr>
+      <tr><td><b>实验 5</b><br>空间参数</td><td>目标锁定不可实现时应锚定于何处？最优解是否随遮挡几何变化？</td><td>锚定策略 5 水平（Baseline／BO／BR-p／DR／BD-dir）× 遮挡几何 2 水平</td><td>显露后行人首次注视时间；定位转换成本、<b>遮挡体误锚定率</b>；并列终点含漏检率、深度判断误差、晕动与不适</td></tr>
+      <tr><td>整合</td><td><b>交叉迁移区块</b><br>嵌入实验 3 与实验 5</td><td>两套参数能否互换？</td><td>情境（非盲区／盲区）× 方案来源（本情境入选／他情境入选）</td><td>迁移损失 = 他情境方案绩效 − 本情境方案绩效，报告点估计与 95% 置信区间</td></tr>
     </table>
     <div class="note" style="flex:0 0 auto"><b>判定顺序（不评选单一冠军，结果以帕累托前沿呈现）：</b>① <b>安全非劣</b>——最小 TTMD 的组间差下限大于 −0.2 s 且碰撞率不高于基线；② <b>漏检非劣</b>——未增强危险漏检率不高于基线（<b>盲区情境下此条前置至第二位</b>，依据 H4′）；③ 制动更平顺者；④ 认知代价更低者；⑤ 低可靠性下退化更小者；⑥ 仅在上述条件相当时，才以反应时与主观偏好定选。</div>
     <div class="cols2" style="flex:0 0 auto">
       <div class="box g">
         <h3>被试与场次安排</h3>
         <ul class="xs">
-          <li class="tight"><b>实验 0 与实验 1 复用同一批被试</b>——自变量 <span class="m">Δt</span> 需要被试自身的 <span class="m">t<sub>0</sub></span>。</li>
-          <li class="tight"><b>实验 3 无须复用被试</b>——<span class="m">t<sub>reveal</sub></span> 为几何量、被试间恒定，故 <span class="m">Δt′</span> 可直接操纵，招募约束大幅放宽。</li>
+          <li class="tight"><b>实验 1 与实验 2 复用同一批被试</b>——自变量 <span class="m">Δt</span> 需要被试自身的 <span class="m">t<sub>0</sub></span>。</li>
+          <li class="tight"><b>实验 4 无须复用被试</b>——<span class="m">t<sub>reveal</sub></span> 为几何量、被试间恒定，故 <span class="m">Δt′</span> 可直接操纵，招募约束大幅放宽。</li>
           <li class="tight">若招募资源受限，两项研究各由一批被试完成两个场次，<b>场景集交叉替换并至少间隔 7 天</b>；样本量按预实验方差与约 10% 脱落重算，穿透显影条件按 15% 估计。</li>
         </ul>
       </div>
       <div class="box">
-        <h3>统一场景族（实验 0／1／3 共用）</h3>
+        <h3>统一场景族（实验 1／2／4 共用）</h3>
         <ul class="xs">
           <li class="tight"><b>遮挡体：</b>路侧停放的同色厢式货车（近距侧方）与路侧公交车（远距前方），均取自已发表范式。</li>
           <li class="tight"><b>行人：</b>机动车道右边线外 2.5 m、斑马线外，步速 1.0 m/s（主）与 1.5 m/s（稳健性检查）。</li>
@@ -588,7 +588,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
           <li class="tight">眼动采用动态兴趣区、有效率不低于 80%，<b>并区分四类兴趣区</b>：警告、真实行人、<b>遮挡体</b>、未增强危险。</li>
           <li class="tight"><b>相邻危险事件间隔取 60 秒。</b>依据：次任务结束后分心影响仍持续 30 秒以上，取 60 秒留一倍冗余；并插入填充试次与捕获试次抑制预期与习惯化。</li>
           <li class="tight">样本量以最小具有实际意义的差异加混合模型模拟确定，并按预实验方差与约 10% 的眼动无效或晕动脱落重新计算；穿透显影条件按 15% 估计。</li>
-          <li class="tight"><b>被试与场次安排：</b>实验 0 与实验 1 复用同一批被试；实验 3 因零点被试间恒定<b>无须复用</b>，可独立招募。</li>
+          <li class="tight"><b>被试与场次安排：</b>实验 1 与实验 2 复用同一批被试；实验 4 因零点被试间恒定<b>无须复用</b>，可独立招募。</li>
         </ul>
       </div>
       <div class="box p">

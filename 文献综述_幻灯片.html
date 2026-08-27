@@ -141,6 +141,11 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
 .m{font-family:"Cambria Math","Latin Modern Math","Times New Roman",serif;font-style:italic}
 .m sub,.m sup{font-style:normal;font-size:.7em;line-height:0}
 .m .up{font-style:normal}
+/* 研究目标／问题页紧排 */
+.slide.rq .body{gap:8px}
+.slide.rq .box{padding:10px 13px}
+.slide.rq .box h3{margin-bottom:6px}
+.slide.rq .small{line-height:1.6}
 </style>
 </head>
 <body data-math-fixed="1">
@@ -150,7 +155,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
 
 <!-- 1 封面 -->
 <section class="slide cover on">
-  <h1>AR-HUD 行人碰撞预警的时空参数设计<br>及其对驾驶员风险加工与避险绩效的影响</h1>
+  <h1>AR-HUD 行人碰撞预警的时空参数设计<br>及其对驾驶员情境意识与避险绩效的影响</h1>
   <h2>第 2 章　文献综述</h2>
   <div class="rule"></div>
   <div class="meta">硕士学位论文开题报告<br>2026 年</div>
@@ -175,13 +180,13 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         <p class="small"><span class="k">难处：</span>文献里出现过 1.8／2.0／2.5／3.0／4.0／5.0／6.0 s，<b>没有任何一篇说明自己为什么取这个值</b>。逐个试是无穷的。</p>
         <p class="small" style="margin-top:7px"><span class="k3">本章的回答：</span>都不取。改为<b>先确定参数被什么约束住</b>——建立<b>三重约束模型</b>（上界、下界、认知窗口 + 零点 <span class="m">t<sub>0</sub></span>），把「最优 TTC 是多少」换成<b>「可行区间在哪里」</b>。</p>
         <p class="cite" style="margin-top:6px">→ §2.1　概念 · 六项时间指标 · 六项空间要素 · 五项理论 · <b>三重约束模型</b> · 行人侧参数</p>
-        <div class="ok" style="margin-top:10px;font-size:12.6px"><b>由此产生的实验：</b>实验 0（把零点 <span class="m">t<sub>0</sub></span> 与运动学下界实测出来）——<b>没有它，实验 1 的自变量只能写成绝对 TTC</b>。</div>
+        <div class="ok" style="margin-top:10px;font-size:12.6px"><b>由此产生的实验：</b>实验 1（把零点 <span class="m">t<sub>0</sub></span> 与运动学下界实测出来）——<b>没有它，实验 2 的自变量只能写成绝对 TTC</b>。</div>
       </div>
       <div class="box"><h3>问题二　为什么文献结论互相矛盾？</h3>
-        <p class="small"><span class="k">难处：</span>同一个 <b>5.0 s</b>，Kang 等（2016）报告有效、Kim 等（2018）报告过度反应、Wang 等（2025）报告无增益。<b>取平均或各引一句都是错的。</b></p>
+        <p class="small"><span class="k">难处：</span>同一个 <b>5.0 s</b>，Kang 等（2016）报告<b>显著改善避险绩效</b>、Kim 等（2018）报告<b>峰值减速度上升 34.46%</b>、Wang 等（2025）报告<b>相对基线无显著增益</b>。<b>取平均或各引一句都是错的。</b></p>
         <p class="small" style="margin-top:7px"><span class="k3">本章的回答：</span>把每一组矛盾拆到<b>条件差异／记法口径／推论过度</b>三类来源上，逐组找出那个<b>未被控制的第三变量</b>——共<b>七组主要 + 四组次级冲突</b>。</p>
         <p class="cite" style="margin-top:6px">→ §2.2 时间侧证据｜§2.3 空间侧证据｜§2.4 冲突辨析与方法学评述</p>
-        <div class="ok" style="margin-top:10px;font-size:12.6px"><b>由此产生的实验：</b>每一个被找出的第三变量成为一个操纵维度——<b>提前量</b>（实验 1）、<b>可靠性</b>（实验 2）、<b>锁定策略</b>（实验 3）、<b>风险演化</b>（实验 4）。</div>
+        <div class="ok" style="margin-top:10px;font-size:12.6px"><b>由此产生的实验：</b>每一个被找出的第三变量成为一个操纵维度——<b>提前量</b>（实验 2）、<b>可靠性</b>（实验 3）、<b>锁定策略</b>（实验 4）、<b>风险演化</b>（实验 5）。</div>
       </div>
       <div class="box"><h3>问题三　哪些还没有人回答？</h3>
         <p class="small"><span class="k">难处：</span>综述若只汇总已有结论，就无法说明「为什么还要做实验」。必须指出<b>零对照的参数</b>。</p>
@@ -223,11 +228,41 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       <tr><td><b>TTMD</b></td><td>两者间距达到最小值的时刻距当前的时间</td><td><b>本研究固定采用</b>；在轨迹不相交（擦肩而过）时仍有定义，且避免与「最大减速度所需时间」同名缩写混淆</td></tr>
       <tr><td>THW</td><td><span class="m">d<span class="up">/</span>v<sub>ego</sub></span></td><td>只依赖自车速度，对逼近速率不敏感；Chen 等（2024b）以 THW ≤ 3 s 为高亮阈值</td></tr>
       <tr><td><b><span class="m">a<sub>req</sub></span> / BTN</b></td><td><span class="m">a<sub>req</sub><span class="up">=</span>v<sup>2</sup><span class="up">/(2</span>d<span class="up">)</span></span>；<span class="m"><span class="up">BTN</span><span class="up">=</span>a<sub>req</sub><span class="up">/</span>a<sub>max</sub></span></td><td><b>把车速内生化</b>；BTN = 1 意味着碰撞物理上已不可避免。同族指标为 Takada 等（2014）的 DCA</td></tr>
-      <tr><td><b>τ / <span class="m">θ̇</span></b></td><td>光学膨胀率；<span class="m">τ<span class="up">=</span>θ<span class="up">/</span>θ̇</span></td><td>Lee（1976）；觉察阈值约 <b>0.003 rad/s</b>；由 <span class="m">d<sub>th</sub><span class="up">=√(</span>wv<span class="up">/</span>θ̇<sub>th</sub><span class="up">)</span></span> 得 60 km/h 下 <b>TTC ≈ 3.2 s</b></td></tr>
+      <tr><td><b>τ 与光学膨胀率</b></td><td>光学膨胀率；<span class="m">τ<span class="up"> = </span>θ<span class="up"> / (</span>dθ<span class="up">/</span>dt<span class="up">)</span></span></td><td>Lee（1976）；觉察阈值约 <b>0.003 rad/s</b>；由 <span class="m">d<sub>th</sub><span class="up"> = √(</span>wv<span class="up"> / (</span>dθ<span class="up">/</span>dt<span class="up">)</span><sub>th</sub><span class="up">)</span></span> 得 60 km/h 下 <b>TTC ≈ 3.2 s</b></td></tr>
       <tr><td><b><span class="m">t<sub>0</sub></span> / <span class="m">Δt</span></b></td><td>无辅助时的自发察觉时刻；<span class="m">Δt<span class="up">=</span>t<sub>0</sub><span class="up">-</span>t<sub>warn</sub></span></td><td><b>本研究的核心主张</b>：决定预警有无信息增益的不是绝对 TTC，而是 <span class="m">Δt</span></td></tr>
       <tr><td>warning lag</td><td>触发条件满足 → 图形上屏</td><td>实车可达 <b>1.47 s</b>（Thammakaroon 与 Tangamchit, 2012）；本库<b>几乎无人报告</b></td></tr>
     </table>
     <div class="warn"><b>为什么必须引入 BTN：</b>同一个 TTC = 2.0 s，在 40 km/h 下只需 BTN 0.35 的温和制动，在 80 km/h 下已需 BTN 0.69 的接近全力制动。既有研究车速跨度从 24 km/h 到 60 km/h 不等——<b>这正是结论互相冲突的一个结构性原因</b>。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 2.1.3b BTN 三重角色 -->
+<section class="slide rq">
+  <h1 class="crumb">文献综述<em>制动威胁数的三重角色与自变量依据</em><span class="tag">2.1.3b</span></h1>
+  <div class="body">
+    <div class="def"><b>结论先行：</b>制动威胁数（brake threat number, BTN）是<b>无量纲运动学比值</b>（0–1），<b>既非时刻亦非时长</b>。<span class="m">BTN<span class="up"> = </span>a<sub>req</sub><span class="up"> / </span>a<sub>max</sub></span>，其中 <span class="m">a<sub>req</sub><span class="up"> = </span>v<sup>2</sup><span class="up"> / (2</span>d<sub>conflict</sub><span class="up">)</span></span>；<b>BTN = 1 即碰撞在物理上已不可避免</b>。本研究在三个层面上使用它，性质各不相同，故须分列。</div>
+    <table class="mini tt">
+      <tr><th style="width:15%">层面</th><th style="width:34%">用法</th><th style="width:24%">在设计中的性质</th><th>出处与依据</th></tr>
+      <tr><td><b>① 算法侧<br>触发量</b></td><td>预警触发条件写作 <span class="m">BTN ≥ θ</span>，替代 <span class="m">TTC ≤ θ</span>；实验 2 中作为<b>触发准则类型</b>这一自变量的<b>一个水平</b></td><td><b>自变量的水平</b><br><span class="small">（准则类型，二分类：固定时间阈值／减速度归一化）</span></td><td>Takada 等（2014）的避险减速度 DCA；Chen 等（2013）；Coelingh 等（2010）；量产自动紧急制动普遍采用同族量</td></tr>
+      <tr><td><b>② 材料侧<br>难度标度</b></td><td>事后计算每个试次在预警时刻的 BTN，核验各条件的<b>运动学难度是否等价</b>，并作跨车速比较的共同刻度</td><td><b>操纵检查量与协变量</b><br><span class="small">（非自变量）</span></td><td>表 2-3 的换算；本研究方法学要求</td></tr>
+      <tr><td><b>③ 空间侧<br>映射量</b></td><td>实验 5 的<b>风险量级空间映射</b>以 BTN 为映射源，即图形几何随 BTN 缩放</td><td><b>自变量的映射源</b><br><span class="small">（连续量 → 视觉量的转换基准）</span></td><td>Suzuki 等（2010）的 <span class="m">R<sub>x</sub><span class="up"> = </span>T<sub>tc</sub><span class="up">·</span>V<sub>car</sub></span> 属同源做法（§2.3.7）</td></tr>
+    </table>
+    <div class="cols2" style="flex:0 0 auto">
+      <div class="box g" style="margin:0"><h3>选它作自变量水平（角色①）的三条依据</h3>
+        <ul class="xs">
+          <li class="tight"><b>物理依据（决定性）。</b>TTC 2 s 在 40 km/h 下 BTN 0.35（温和制动）、在 80 km/h 下 BTN 0.69（接近全力）——<b>固定秒数在物理上不可跨车速迁移</b>，而 BTN 已把车速纳入分母。</li>
+          <li class="tight"><b>算法侧的一致主张 + 人因侧的零对照。</b>四篇算法侧研究一致主张以运动学量触发，但<b>无一与固定阈值做人因对照</b>——此即空白 G2。</li>
+          <li class="tight"><b>与因变量量纲一致。</b>安全绩效终点（峰值减速度、<span class="m">a<sub>req</sub></span> 可行域）与代价终点（制动平顺性）均为减速度量纲，以 BTN 触发可使自变量与因变量落在同一物理量上。</li>
+        </ul>
+      </div>
+      <div class="box r" style="margin:0"><h3>须显式声明的限制与一处易误读点</h3>
+        <ul class="xs">
+          <li class="tight"><b>分母敏感。</b>BTN 的绝对值取决于 <span class="m">a<sub>max</sub></span>。本研究统一取 <b>8 m/s²</b>（干燥沥青的车辆侧上限），并<b>另行报告以实验 1 实测舒适减速度为分母</b>的归一化值——因驾驶员可接受的减速度显著低于车辆上限。<b>两套分母并列报告，不择一而用。</b></li>
+          <li class="tight"><b class="k">易误读点：</b>BTN 不可读作「基准时间节点」一类时间量。本研究的时间量另有专名：<span class="m">t<sub>0</sub></span>（自发察觉时刻）、<span class="m">t<sub>warn</sub></span>（预警时刻）、<span class="m">t<sub>LPB</sub></span>（最晚制动点）、<span class="m">Δt</span>（相对提前量）。<b>凡首次出现处一律给出中文全称与公式。</b></li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div class="pg"></div>
 </section>
@@ -267,6 +302,23 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
   <div class="pg"></div>
 </section>
 
+<!-- 2.1.5b SA 与 SPIDER 的分工 -->
+<section class="slide rq">
+  <h1 class="crumb">文献综述<em>情境意识与 SPIDER 的分工及 t₀ 的构念定位</em><span class="tag">2.1.5b</span></h1>
+  <div class="body">
+    <div class="def"><b>结论先行：</b>两个理论<b>并列而非竞争</b>。<b>情境意识（SA）三级模型</b>（Endsley, 1995）提供<b>构念层级</b>，用以组织<b>因变量</b>；<b>SPIDER 五阶段</b>（Strayer 与 McDonnell, 2025）提供<b>过程细节</b>，用以组织<b>过程指标的阶段归属</b>。SA 回答「驾驶员对情境的掌握达到哪一层级」，SPIDER 回答「该层级通过哪一操作环节达成或失败」。</div>
+    <table class="mini tt">
+      <tr><th style="width:17%">SA 层级</th><th style="width:14%">SPIDER 阶段</th><th style="width:39%">本研究的操作化指标</th><th>相关自变量</th></tr>
+      <tr><td><b>层级 1　感知</b><br><span class="small">perception：觉察到相关要素</span></td><td class="n"><b>S</b>canning</td><td><b class="k3">自发察觉时刻 <span class="m">t<sub>0</sub></span></b>（无预警条件下首次注视行人的时刻）；有预警条件下的首次注视时间 TTFF；<b>危险漏检率</b></td><td>相对提前量 <span class="m">Δt</span>、空间参照系、图形显著性</td></tr>
+      <tr><td><b>层级 2　理解</b><br><span class="small">comprehension：理解要素对当前目标的意义</span></td><td class="n"><b>I</b>dentifying</td><td>目标验证时间（= TTFF<sub>行人</sub> − TTFF<sub>警告</sub>）、风险等级判断正确率、紧迫度判断</td><td>分层语义、图形形态与颜色编码、信息完整度</td></tr>
+      <tr><td><b>层级 3　预测</b><br><span class="small">projection：预测要素的未来状态</span></td><td class="n"><b>P</b>redicting</td><td>路径侵入预测正确率、冲突点空间误差、过街方向判断、<b>预期性注视比例</b></td><td>运动趋势空间映射、风险量级空间映射</td></tr>
+      <tr><td><span class="small">（SA 之外的执行侧）</span></td><td class="n"><b>D</b>eciding<br><b>E</b>xecuting</td><td>松油时刻、制动启动时间、峰值减速度、jerk</td><td>全部时间参数</td></tr>
+    </table>
+    <div class="warn" style="flex:0 0 auto"><b><span class="m">t<sub>0</sub></span> 的构念定位——一处必须区分的量纲问题：</b><span class="m">t<sub>0</sub></span> 是<b>时刻量</b>（单位 s，由眼动首次注视与首个避险动作实测），SA 层级 1 是<b>潜在构念</b>（无时间单位，以得分计）。二者是<b>「构念—操作化指标」关系</b>，不是同一事物的两个名称。故本研究的处理为三条：<b>①</b> <b>保留 <span class="m">t<sub>0</sub></span> 作变量名</b>，不改称构念名——因自变量定义式 <span class="m">Δt<span class="up"> = </span>t<sub>0</sub><span class="up"> − </span>t<sub>warn</sub></span> 要求 <span class="m">t<sub>0</sub></span> 具时间量纲，若以构念替换则该式在量纲上不成立；<b>②</b> <b>明确其理论归属</b>——<span class="m">t<sub>0</sub></span> 是 <b>SA 层级 1 在无辅助条件下达成时刻</b>的行为指标，亦即 Scanning 阶段自发完成的时刻，由此不再是孤立的工程量；<b>③</b> <b>另设 SA 三级得分为独立因变量</b>，与 <span class="m">t<sub>0</sub></span> 并存——<span class="m">t<sub>0</sub></span> 测「感知层何时达成」，三级得分测「三层各自达成到何程度」，<b>二者的相关性本身即一项可检验的效度证据</b>。</div>
+  </div>
+  <div class="pg"></div>
+</section>
+
 <!-- 6 三重约束 -->
 <section class="slide">
   <h1 class="crumb">文献综述<em>核心理论模型：预警时刻的三重约束</em><span class="tag">2.1.6</span></h1>
@@ -274,11 +326,11 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
     <div class="def">预警呈现时刻 <span class="m">t<sub>warn</sub></span> <b>不是待搜索的自由参数</b>。它同时受<b>三个约束</b>，并以自发察觉时刻 <span class="m">t<sub>0</sub></span> 为零点；三者的交集即<b>可行设计区间</b>。<b>本研究的贡献不是「猜一个更好的秒数」，而是把这个区间实测出来。</b></div>
     <figure><img src="figures/ch2_fig_three_bounds.png" alt="预警时刻的三重约束模型"></figure>
     <table class="mini">
-      <tr><th style="width:17%">约束</th><th style="width:15%">一句话含义</th><th style="width:30%">数学表述</th><th>由谁测定</th></tr>
-      <tr><td class="k3">① 运动学下界</td><td>预警<b>必须足够早</b>：来不及刹住就没有意义</td><td><span class="m">t<sub>warn</sub><span class="up">≥ </span><span class="up">PRT</span><sub>p95</sub><span class="up">+</span>v<sub>ego</sub><span class="up">/</span>a<sub>comf</sub><span class="up">+</span>δ<sub>brake</sub></span></td><td><b>实验 0</b> 测 PRT 分布与 <span class="m">a<sub>comf</sub></span>，由车速算出</td></tr>
-      <tr><td class="k">② 可靠性上界</td><td>预警<b>不能太早</b>：算法判不准，虚警毁掉信任</td><td><span class="m">t<sub>warn</sub><span class="up">≤ </span>t<sub>pred</sub><span class="up">(</span><span class="up">PPV</span><span class="up">≥</span>π<sup>*</sup><span class="up">)</span></span></td><td><b>实验 2</b> 操纵系统可靠性直接检验</td></tr>
-      <tr><td class="k4">③ 认知窗口</td><td>窗口宽度<b>必须容得下注意加工</b></td><td><span class="m">Δt<span class="up"> = </span>t<sub>0</sub><span class="up"> − </span>t<sub>warn</sub><span class="up"> ≥ </span></span>加工所需（<b>本研究估计</b> 0.9–1.2 s）</td><td><b>实验 1</b> 以 <span class="m">Δt</span> 为自变量直接检验</td></tr>
-      <tr><td class="k2">零点 <span class="m">t<sub>0</sub></span></td><td>没有零点，<b>「提前多少」无从定义</b></td><td>驾驶员在无辅助条件下的自发察觉时刻</td><td><b>实验 0</b> 实测；τ 理论给出校验值 TTC ≈ 3.2 s</td></tr>
+      <tr><th style="width:17%">约束</th><th style="width:15%">约束的实质</th><th style="width:30%">数学表述</th><th>由谁测定</th></tr>
+      <tr><td class="k3">① 运动学下界</td><td>预警<b>必须足够早</b>：来不及刹住就没有意义</td><td><span class="m">t<sub>warn</sub><span class="up">≥ </span><span class="up">PRT</span><sub>p95</sub><span class="up">+</span>v<sub>ego</sub><span class="up">/</span>a<sub>comf</sub><span class="up">+</span>δ<sub>brake</sub></span></td><td><b>实验 1</b> 测 PRT 分布与 <span class="m">a<sub>comf</sub></span>，由车速算出</td></tr>
+      <tr><td class="k">② 可靠性上界</td><td>预警<b>不能太早</b>：算法判不准，虚警毁掉信任</td><td><span class="m">t<sub>warn</sub><span class="up">≤ </span>t<sub>pred</sub><span class="up">(</span><span class="up">PPV</span><span class="up">≥</span>π<sup>*</sup><span class="up">)</span></span></td><td><b>实验 3</b> 操纵系统可靠性直接检验</td></tr>
+      <tr><td class="k4">③ 认知窗口</td><td>窗口宽度<b>必须容得下注意加工</b></td><td><span class="m">Δt<span class="up"> = </span>t<sub>0</sub><span class="up"> − </span>t<sub>warn</sub><span class="up"> ≥ </span></span>加工所需（<b>本研究估计</b> 0.9–1.2 s）</td><td><b>实验 2</b> 以 <span class="m">Δt</span> 为自变量直接检验</td></tr>
+      <tr><td class="k2">零点 <span class="m">t<sub>0</sub></span></td><td>零点缺失时<b>相对提前量在操作上无从定义</b></td><td>驾驶员在无辅助条件下的自发察觉时刻</td><td><b>实验 1</b> 实测；τ 理论给出校验值 TTC ≈ 3.2 s</td></tr>
     </table>
   </div>
   <div class="pg"></div>
@@ -302,7 +354,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         </table>
         <div class="note" style="margin-top:9px"><b>⚠ 一处文献冲突：</b>1.49–1.74 vs 1.22 / 0.91–0.99 相差最多 1.9 倍。本研究判读为<b>测量对象不同而非矛盾</b>——前者是<b>实际</b>速度实测均值，后者是配时<b>设计下限</b>。<b>不取平均</b>。</div>
         <div class="note" style="margin-top:8px"><b>行人的判断能力上限（Rasouli 与 Tsotsos, 2020）：</b>车速 &lt; 45 km/h 时行人能正确估计<b>车速</b>，&lt; 65 km/h 时能正确估计<b>车距</b>。反直觉推论：<b>同一 TTC 下来车越快，行人反而更常过街</b>（更依赖距离线索）。</div>
-        <div class="ok" style="margin-top:8px"><b>本研究取值（实验 0–4 共同场景规范）：</b>过街速度 <b>1.4–1.5 m/s</b>，边界校验 <b>0.9–1.2 m/s</b>；起步损失 <b>1.3 s</b>；车—人间隙 <b>1.5–7 s</b>，主条件取 <b>3–7 s</b> 模糊带。</div>
+        <div class="ok" style="margin-top:8px"><b>本研究取值（实验 1–5 共同场景规范）：</b>过街速度 <b>1.4–1.5 m/s</b>，边界校验 <b>0.9–1.2 m/s</b>；起步损失 <b>1.3 s</b>；车—人间隙 <b>1.5–7 s</b>，主条件取 <b>3–7 s</b> 模糊带。</div>
       </div>
       <div class="box"><h3>间隙接受：危险场景在生态上是否成立</h3>
         <table class="mini">
@@ -362,7 +414,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       <div class="box a"><h3>Large 等（2019）：4 档梯度</h3>
         <p class="small">TTC <b>2.0 / 3.0 / 4.0 / 5.0 s</b>（W1–W4），40 km/h。紧迫度主效应极强（松油门：<b>F = 5 037.10</b>）；模态主效应仅部分显著（首次注视行人 <b>p = .608 不显著</b>）。</p>
         <p class="small" style="margin-top:7px"><b>本研究由其数据推算的阶段耗时：</b>警报 → 松油门 <b>0.53–0.77 s</b>；松油门 → 踩刹车 <b>0.35 s（W1）→ 1.38 s（W4）</b>。</p>
-        <div class="warn" style="margin-top:8px"><b>方法学缺陷：</b>TTC 四水平与误报率 20/40/60/80% <b>共变</b>，「紧迫度主效应」实为「紧迫度 + 可靠性」的混合效应。<b>这正是本研究实验 2 把可靠性单列为自变量的直接理由。</b></div>
+        <div class="warn" style="margin-top:8px"><b>方法学缺陷：</b>TTC 四水平与误报率 20/40/60/80% <b>共变</b>，「紧迫度主效应」实为「紧迫度 + 可靠性」的混合效应。<b>这正是本研究实验 3 把可靠性单列为自变量的直接理由。</b></div>
       </div>
     </div>
     <div class="note"><b>Zhang 等（2015）的秒数是以什么为基线算出来的？——四点必须交代，否则不能迁移：</b>
@@ -412,7 +464,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         </table>
       </div>
     </div>
-    <div class="ok"><b>Takada 等（2014）的 2 : 1 滞环是本库唯一「用运动学量而非固定秒数定义级间关系」的先例</b>，其设计目的正是「级间间隔不能太短」的物理版表述。本研究在实验 1 的撤销策略与实验 2 的降级规则中直接沿用（退出阈值取进入阈值的 1/2）。<br><b>本研究据此把「触发准则类型」本身设为实验 1 的自变量</b>——这是时间参数侧最主要的方法学推进。</div>
+    <div class="ok"><b>Takada 等（2014）的 2 : 1 滞环是本库唯一「用运动学量而非固定秒数定义级间关系」的先例</b>，其设计目的正是「级间间隔不能太短」的物理版表述。本研究在实验 2 的撤销策略与实验 3 的降级规则中直接沿用（退出阈值取进入阈值的 1/2）。<br><b>本研究据此把「触发准则类型」本身设为实验 2 的自变量</b>——这是时间参数侧最主要的方法学推进。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -498,7 +550,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         </ul>
       </div>
     </div>
-    <div class="ok"><b>两者共同界定的边界：可靠性的行为后果随预警的「行动要求强度」放大。</b>→ 可否证预测：<b>L1（低行动要求）上的虚警代价应显著小于 L2（高行动要求）</b>。这是实验 2 把虚警<b>只施加在 L1</b> 的设计依据。</div>
+    <div class="ok"><b>两者共同界定的边界：可靠性的行为后果随预警的「行动要求强度」放大。</b>→ 可否证预测：<b>L1（低行动要求）上的虚警代价应显著小于 L2（高行动要求）</b>。这是实验 3 把虚警<b>只施加在 L1</b> 的设计依据。</div>
     <div class="note"><b>可靠性水平取值 20% 的三条依据：</b>① Large 等（2019）最低操纵档为 20%，可直接对照；② Schall 等（2013）的 15% 已证零效应，若仍取 15% 大概率复现零结果；③ 20% 高于 Wang 等（2026）A-TTC 动态标定后可达的 <b>13.74%</b>（569 车／3 519 条视频核验，威胁召回 89.25%，准确率 81.42%）。<br><b>⚠ 两处已撤回的引用：</b>A-TTC 正式版<b>删除了</b>「固定阈值误报率 25.16%」基线（出自 SSRN 预印本），故<b>不得</b>据此断言真实系统虚警率；「Bliss（2003）元分析的 30% 信任崩塌门限」<b>未能在任何原文中溯源</b>（该文实为航空事故档案分析），已改用 Bliss 等（1995）与 Bliss 与 Acton（2003）。</div>
   </div>
   <div class="pg"></div>
@@ -512,7 +564,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       <img src="figures/ch2_fig_time_window_tension.png" alt="三个时间窗的张力">
       <figcaption>图 2-3　本研究自绘，<b>不含本研究数据</b>。左：Chen 等（2019）Table 1 原值（该文的 TTA = 2 s 档因 97.1% 行人未过街被原作者排除，故不入图）。右：三条量级取自 Chang 与 Chang（2009）／Chen 等（2019）／Cangut 与 Alver（2026）；<b>最下 2–5 s 是本研究对本库 14 项取值的归纳</b>。</figcaption>
     </figure>
-    <div class="warn"><b>本领域一个根本性的张力：需求 6.07–6.28 s ＞ 人类判别上界 TTA 4 s ＞ 算法预测上界 0.5–1.0 s。</b>本领域实证研究几乎全部把预警设在 <b>2–5 s</b>——它不是任何一侧的最优值，而是「算法勉强能判、人还来得及反应、虚警率尚可接受」<b>三者的交集</b>。<br><b>对本研究的含义：</b>「把预警设得更早」在工程上并非可自由选择的方向。实验 1 的 <span class="m">Δt<span class="up"> = +2.5</span></span> s（相对 <span class="m">t<sub>0</sub><span class="up"> ≈ 3.2</span></span> s 即绝对约 5.7 s）已接近甚至超出人类判别的可靠上界，故 H2（收益递减 + 代价递增）有很强的先验支持。</div>
+    <div class="warn"><b>本领域一个根本性的张力：需求 6.07–6.28 s ＞ 人类判别上界 TTA 4 s ＞ 算法预测上界 0.5–1.0 s。</b>本领域实证研究几乎全部把预警设在 <b>2–5 s</b>——它不是任何一侧的最优值，而是「算法勉强能判、人还来得及反应、虚警率尚可接受」<b>三者的交集</b>。<br><b>对本研究的含义：</b>「把预警设得更早」在工程上并非可自由选择的方向。实验 2 的 <span class="m">Δt<span class="up"> = +2.5</span></span> s（相对 <span class="m">t<sub>0</sub><span class="up"> ≈ 3.2</span></span> s 即绝对约 5.7 s）已接近甚至超出人类判别的可靠上界，故 H2（收益递减 + 代价递增）有很强的先验支持。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -531,7 +583,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         </table>
         <div class="ok" style="margin-top:8px"><b>本研究的下界推导（60 km/h，取 <span class="m"><span class="up">PRT</span><sub>p95</sub></span> = 1.5 s、<span class="m">δ<sub>brake</sub></span> = 0.7 s）：</b><br>
           <span class="m">t<sub>warn</sub><span class="up"> ≥ 1.5 + 16.7/</span>a<span class="up"> + 0.7</span></span>　→　「舒适停住」（<span class="m">a<sub>comf</sub></span> = 3.5 m/s²）需 <b>≈ 6.97 s</b>；「仅避免碰撞」（<span class="m">a<sub>max</sub></span> = 8 m/s²）降至 <b>≈ 4.3 s</b>。<br>→ <b>梯度研究得出的 3.0–4.0 s 恰好位于两者之间</b>：真实驾驶员不追求舒适停住，而是接受较大减速度换取更晚的预警。</div>
-        <div class="note" style="margin-top:8px"><b>一条反直觉的设计原则（Huo 与 Alla, 2025）：</b>为避免新手过度依赖，应在<b>低负荷场景下降低 AR 视觉显著性，仅在高危场景下用强对比强提醒</b>——这与「AR 越显著越好」相反，与实验 1 区块 B 的「风险耦合衰减」方向一致。</div>
+        <div class="note" style="margin-top:8px"><b>一条反直觉的设计原则（Huo 与 Alla, 2025）：</b>为避免新手过度依赖，应在<b>低负荷场景下降低 AR 视觉显著性，仅在高危场景下用强对比强提醒</b>——这与「AR 越显著越好」相反，与实验 2 区块 B 的「风险耦合衰减」方向一致。</div>
         
       </div>
       <div class="box"><h3>七个调节变量与本研究的处理</h3>
@@ -539,11 +591,11 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
           <tr><th style="width:24%">变量</th><th>已知效应</th><th class="n" style="width:21%">处理</th></tr>
           <tr><td>年龄</td><td>老年 PRT 更长；临界场景偏好停车标志（Kazazi 等, 2015：BRT 1.9 → 1.2 s）</td><td class="n">不操纵<br>声明边界</td></tr>
           <tr><td>驾驶经验</td><td><b>低负荷下新手显著依赖 AR</b>，AR 故障时严重退化（Huo 与 Alla, 2025）</td><td class="n">作为协变量</td></tr>
-          <tr><td>分心</td><td>显著推后时机下限；<b>放大动效收益</b>（Shen 等：2 777.80 → 1 389.34 ms）</td><td class="n">不操纵<br>声明边界</td></tr>
+          <tr><td class="k2">分心／次任务负荷</td><td>显著推后时机下限；<b>放大动效收益</b>（Shen 等：2 777.80 → 1 389.34 ms）</td><td class="n"><b>实验 4 区块 F</b></td></tr>
           <tr><td>能见度</td><td>AR 相对收益放大（Zhang 等 2024 雾天再提前 27.8 m）</td><td class="n">固定晴天日间</td></tr>
           <tr><td class="k2">车速</td><td>同一秒数对应不同运动学难度</td><td class="n"><b>检验因素<br>40 / 60 km/h</b></td></tr>
-          <tr><td class="k2">遮挡</td><td>直接改变 <span class="m">t<sub>0</sub></span></td><td class="n"><b>实验 0 自变量</b></td></tr>
-          <tr><td class="k2">背景复杂度</td><td>调节锁定策略的价值</td><td class="n"><b>实验 3 自变量</b></td></tr>
+          <tr><td class="k2">遮挡</td><td>直接改变 <span class="m">t<sub>0</sub></span></td><td class="n"><b>实验 1 自变量</b></td></tr>
+          <tr><td class="k2">背景复杂度</td><td>调节锁定策略的价值</td><td class="n"><b>实验 4 主设计</b></td></tr>
         </table>
         <div class="warn" style="margin-top:7px"><b>⚠ 框架中出现三种不同的「上界／下界」，不可混用：</b>
           <table class="mini" style="margin-top:5px;font-size:10.9px">
@@ -576,7 +628,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         <p class="small" style="margin-top:7px">F(3,45) = 10.8, p &lt; .0001, 效应量 0.87</p>
       </div>
       <div class="box"><h3>两点实质修正</h3>
-        <div class="warn"><b>① 「屏幕固定」不是稻草人基线。</b>CWHUD 本身就是屏幕固定式前视野显示。→ 实验 3 的 <b>BD 条件已包含 HUD 位置的大部分收益，BW/BR 相对 BD 的增量必然更小，样本量估计必须按更小的效应量做</b>。</div>
+        <div class="warn"><b>① 「屏幕固定」不是稻草人基线。</b>CWHUD 本身就是屏幕固定式前视野显示。→ 实验 4 的 <b>BD 条件已包含 HUD 位置的大部分收益，BW/BR 相对 BD 的增量必然更小，样本量估计必须按更小的效应量做</b>。</div>
           <div class="ok" style="margin-top:10px"><b>② 漏报率的效应量级远大于反应时。</b>漏报 1 → 17（<b>17 倍</b>），反应时仅差 200 ms（<b>约 20%</b>）。→ <b>漏检率应提升为并列的主要因变量</b>，而既有综述普遍只把它列在「感知」项下。</div>
         <p class="small" style="margin-top:10px"><b>中国样本的印证（Zhang 等, 2024）：</b>HUD 相较高位下视显示使油门松开提前约 <b>20+ m</b>、首次制动提前约 <b>25 m</b>、最大减速度降低约 <b>2 m/s²</b>、最小冲突距离增加约 <b>6 m</b>。</p>
       </div>
@@ -611,7 +663,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         <div class="ok" style="margin-top:8px"><b>本研究的立场：</b>BW+BR 属 <b>Wang 等（2024）型的互补组合</b>（目标定位 + 冲突位置），而非 Wei 等（2025）型的<b>同类冗余叠加</b>，故预期方向与前者一致；但<b>必须实测负荷代价</b>并检验 TDT 是否越过 2 000 ms 上界。</div>
       </div>
     </div>
-    <div class="note"><b>不可见危险的锁定问题（You 等, 2023）：</b>当行人尚未进入驾驶员视线时，BW 在物理上<b>无对象可锁</b>，只能退化为 BR 或方向指示——这构成实验 3 结论适用边界的声明依据。</div>
+    <div class="note"><b>不可见危险的锁定问题（You 等, 2023）：</b>当行人尚未进入驾驶员视线时，BW 在物理上<b>无对象可锁</b>，只能退化为 BR 或方向指示——这构成实验 4 结论适用边界的声明依据。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -677,7 +729,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
           <tr><td>Kuo 等（2016）</td><td>危险区以 <b>1.5 m</b> 线划分左右子区；位置误差 0.12–0.15 m</td></tr>
           <tr><td>Zhang 等（2023）</td><td>按<b>行人心理安全距离</b>划分车辆坐标区（仅摘要，无数值）</td></tr>
         </table>
-        <div class="ok" style="margin-top:8px"><b>时空两侧最重要的收敛点：</b><span class="m">R<sub>x</sub><span class="up"> = </span>T<sub>tc</sub><span class="up">· </span>V<sub>car</sub></span> 与本研究把触发准则改为 BTN <b>同源</b>——都是把参数从「固定数值」改为「随运动学状态缩放」。→ 实验 3 的 BR 路面标记<b>按 <span class="m">R<sub>x</sub></span> 而非固定米数绘制</b>。</div>
+        <div class="ok" style="margin-top:8px"><b>时空两侧最重要的收敛点：</b><span class="m">R<sub>x</sub><span class="up"> = </span>T<sub>tc</sub><span class="up">· </span>V<sub>car</sub></span> 与本研究把触发准则改为 BTN <b>同源</b>——都是把参数从「固定数值」改为「随运动学状态缩放」。→ 实验 4 的 BR 路面标记<b>按 <span class="m">R<sub>x</sub></span> 而非固定米数绘制</b>。</div>
       </div>
     </div>
   </div>
@@ -700,7 +752,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       <tr><td>Kim 与 Gabbard（2019）</td><td>提出 AR-HUD 分心潜势评估方法：<b>中央检测任务 CDT + 周边检测任务 PDT</b> 双指标框架</td><td class="n">全文</td></tr>
       <tr><td><b>Huo 与 Alla（2025）</b></td><td>新手在 AR 系统随机故障时<b>严重反应退化</b>——「AR 依赖性」问题：AR 的收益<b>以系统可靠性为前提</b></td><td class="n">全文</td></tr>
     </table>
-    <div class="warn"><b>「AR 依赖性」的独立理论意义：</b>AR-HUD 的收益不是无条件的——<b>一旦系统失效，依赖 AR 的驾驶员可能比从未使用 AR 者更差</b>。这与可靠性上界论证相互印证，共同支撑本研究把系统可靠性设为实验 2 自变量的决定。</div>
+    <div class="warn"><b>「AR 依赖性」的独立理论意义：</b>AR-HUD 的收益不是无条件的——<b>一旦系统失效，依赖 AR 的驾驶员可能比从未使用 AR 者更差</b>。这与可靠性上界论证相互印证，共同支撑本研究把系统可靠性设为实验 3 自变量的决定。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -741,14 +793,14 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         <p class="small" style="margin-top:8px"><b>本章已执行三处降级：</b>① Wei 等（2025）的信任零结果；② Wang 等（2026）删除的 25.16% 基线；③ 未能溯源的「Bliss 30% 门限」。</p>
       </div>
     </div>
-    <div class="note"><b>本章共辨析 <b>七组主要冲突</b>（§2.4.2–2.4.8）与 <b>四组次级冲突</b>（§2.4.9）</b>：更早更好还是更差 · 2.5 s 有效还是无效 · 级间间隔 0.7 s · 信息完整还是精简 · 危险侧还是逃逸侧 · 不透明度 3 倍 · 频率还是占空比｜次级：固定阈值 vs 自适应 · 接触类比 vs 边界框 · 单目 vs 体三维 · 水平面 vs 垂直面</div>
+    <div class="note"><b>本章共辨析 <b>七组主要冲突</b>（§2.4.2–2.4.8）与 <b>四组次级冲突</b>（§2.4.9）</b>：提前量效应方向 · TTC 2.5 s 的效应存否 · 级间间隔 0.7 s 的最优性 · 信息完整度 · 图形指向侧 · 不透明度记法 · 频率与占空比的归因｜次级：固定阈值 vs 自适应 · 接触类比 vs 边界框 · 单目 vs 体三维 · 水平面 vs 垂直面</div>
   </div>
   <div class="pg"></div>
 </section>
 
 <!-- 24 冲突一 -->
 <section class="slide">
-  <h1 class="crumb">文献综述<em>冲突一：更早的预警是更好还是更差？</em><span class="tag">2.4.2</span></h1>
+  <h1 class="crumb">文献综述<em>冲突一：提前量效应的方向何以不一致</em><span class="tag">2.4.2</span></h1>
   <div class="body">
     <div class="vs">
       <div class="card a"><h3>更早更好</h3>
@@ -763,28 +815,28 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       </div>
     </div>
     <div class="cols3" style="flex:0 0 auto">
-      <div class="box"><h3>来源 a：模态差异</h3><p class="small">听觉不占用视觉资源，提前呈现代价低。<b>视觉符号在缺乏知觉支撑时</b>（<span class="m">θ̇</span> 尚低于 0.003 rad/s）需额外认知转换——看到「BRAKE」但看不出危险在哪、多急，于是采取<b>最保守的最大响应策略</b>。</p></div>
+      <div class="box"><h3>来源 a：模态差异</h3><p class="small">听觉不占用视觉资源，提前呈现代价低。<b>视觉符号在缺乏知觉支撑时</b>（<span class="m">dθ<span class="up">/</span>dt</span> 尚低于 0.003 rad/s）需额外认知转换——驾驶员可辨识指令内容却无法据以判断危险的方位与紧迫度，遂采取<b>最保守的最大响应策略</b>。</p></div>
       <div class="box"><h3>来源 b：共形性差异</h3><p class="small"><b>在同一研究内部得到验证</b>：Kim 等（2018）中<b>虚拟阴影在 Far 条件未出现过度反应</b>，而 BRAKE 文本出现了。→ 「过早」的代价<b>可以被共形性抵消</b>（共形图形自带距离与量级线索）。</p></div>
       <div class="box g"><h3>来源 c：未控制 <span class="m">t<sub>0</sub></span>（最根本）</h3><p class="small">三项研究都未测 <span class="m">t<sub>0</sub></span>。由 τ 理论：24 km/h 下 <span class="m">t<sub>0</sub><span class="up"> ≈ 5.0</span></span> s，60 km/h 下 <span class="m">t<sub>0</sub><span class="up"> ≈ 3.2</span></span> s。→ <b>Kim 等（2018）的 5.0 s 条件下 <span class="m">Δt<span class="up"> ≈ 0</span></span>（预警与自发察觉几乎同时），而 60 km/h 下同一个 5.0 s 意味着 <span class="m">Δt<span class="up"> ≈ 1.8</span></span> s</b>。同一秒数，两种信息增益。</p></div>
     </div>
-    <div class="ok"><b>冲突的转化：</b>把<b>模态、共形性、相对提前量 <span class="m">Δt</span></b> 三者显式纳入设计。「更早是更好还是更差」这个无法回答的问题，被替换为一个可回答的问题——<b>在给定的自发察觉基线上，提前多少才产生信息增益而不诱发过度反应？</b></div>
+    <div class="ok"><b>冲突的转化：</b>把<b>模态、共形性、相对提前量 <span class="m">Δt</span></b> 三者显式纳入设计。「提前量效应的方向为何」这一在原始形式下不可判定的问题，据此改写为可检验的形式——<b>在给定的自发察觉基线上，相对提前量取何区间方能产生信息增益而不诱发过度反应？</b></div>
   </div>
   <div class="pg"></div>
 </section>
 
 <!-- 25 冲突二三 -->
 <section class="slide">
-  <h1 class="crumb">文献综述<em>冲突二、三：2.5 s 有效吗？0.7 s 最优吗？</em><span class="tag">2.4.3–2.4.4</span></h1>
+  <h1 class="crumb">文献综述<em>冲突二与三：TTC 2.5 s 的效应存否与级间间隔 0.7 s 的最优性</em><span class="tag">2.4.3–2.4.4</span></h1>
   <div class="body">
-    <div class="box"><h3>冲突二：TTC 2.5 s 有效还是无效？</h3>
+    <div class="box"><h3>冲突二：TTC 2.5 s 的效应在不同研究间存否不一致</h3>
       <div class="vs" style="flex:0 0 auto;margin-top:4px">
         <div class="card a" style="padding:11px 14px"><h3 style="font-size:15px">有效</h3><p class="small">Lubbe（2017）Setting 3/4 在 2.5 s 加 HUD 提示，Setting 4 仅 <b>1 次</b>碰撞；Huo 与 Alla（2025）2.5 s 使危险感知时间 1.20 → <b>0.52 s</b>（p &lt; .01）<br><b>位置：分级体系的提示级</b>，其后还有 1.8 s 临界级 + 触觉脉冲</p></div>
         <div class="arrow" style="font-size:24px">⟷<small>在体系中的<br>位置不同</small></div>
         <div class="card b" style="padding:11px 14px"><h3 style="font-size:15px">无效</h3><p class="small">Zhang 等（2015）：2.5 s 在<b>全部时间切片上与无预警无显著差异</b>，碰撞率 29.4%<br><b>位置：唯一一次预警</b>，无后续升级</p></div>
       </div>
-      <div class="ok" style="margin-top:9px"><b>提炼出的关键推论：单层预警的有效阈值高于分层预警中任一级的阈值。</b>分层之所以能把临界级设在 1.8–2.0 s，是因为提示级已完成 Scanning 与 Identifying；单层必须在一次呈现中完成全部五个阶段。<b>→ 这条推论直接构成实验 2 的立论基础，也解释了为什么实验 2 必须保留「实验 1 入选的最优单层方案」作为对照，而不是与一个刻意削弱的基线对比。</b></div>
+      <div class="ok" style="margin-top:9px"><b>提炼出的关键推论：单层预警的有效阈值高于分层预警中任一级的阈值。</b>分层之所以能把临界级设在 1.8–2.0 s，是因为提示级已完成 Scanning 与 Identifying；单层必须在一次呈现中完成全部五个阶段。<b>→ 这条推论直接构成实验 3 的立论基础，也解释了为什么实验 3 必须保留「实验 2 入选的最优单层方案」作为对照，而不是与一个刻意削弱的基线对比。</b></div>
     </div>
-    <div class="box a" style="margin-top:2px"><h3>冲突三：级间间隔 0.7 s 是最优还是偏小？</h3>
+    <div class="box a" style="margin-top:2px"><h3>冲突三：级间间隔 0.7 s 的最优性存在分歧</h3>
       <ul class="small" style="margin-left:16px">
         <li><b>0.7 s 是孤证而非最优值</b>：Lubbe（2017）的 0.7 s <b>从未与其他间隔对照</b>——它是该研究采用的<b>唯一一个</b>级间间隔。「0.7 s 有效」只能读作「不至于失效」，<b>不能读作「最优」</b>。既有综述把它当最优值引用，属于把单点证据外推为最优点。</li>
         <li><b>本研究的工作假设指向 1.0 s</b>：L1 需承担 Scanning + Identifying，<span class="m">S<span class="up"> + </span>I<span class="up"> ≈ 0.9</span></span>–1.2 s；短于此则两级警告可能在知觉上<b>融合为单一刺激</b>，分层的语义结构失效。</li>
@@ -799,7 +851,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
 
 <!-- 26 冲突四五 -->
 <section class="slide">
-  <h1 class="crumb">文献综述<em>冲突四、五：信息多少？指向何方？</em><span class="tag">2.4.5–2.4.6</span></h1>
+  <h1 class="crumb">文献综述<em>冲突四与五：信息完整度与图形指向侧</em><span class="tag">2.4.5–2.4.6</span></h1>
   <div class="body">
     <div class="box"><h3>冲突四：信息越完整越好还是越少越好？</h3>
       <table class="mini">
@@ -815,7 +867,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       <div class="cols2" style="flex:0 0 auto;gap:14px">
         <div><p class="small"><b>Kang 等（2016）</b>：听觉行人预警中<b>刺激—反应不兼容（提示回避方向而非危险方向）优于兼容</b>；配合 TTC 4.0 s 时「更可靠、更有用」<span class="cite">（仅摘要）</span></p>
           <p class="small" style="margin-top:6px"><b>Straughn、Gray 与 Tan（2009，<i>IEEE Trans. Haptics</i>）</b>：<b>长 TTC 用危险侧方向、短 TTC 用逃逸方向</b>——经核验该文<b>本身即行人碰撞预警的 S-R 兼容性研究，属一手来源</b>（本课题此前误标为「经 Gray 等 2014 转引」）</p></div>
-        <div><div class="warn"><b>外部效度边界：</b>两项证据均为<b>听觉／触觉</b>预警。视觉 AR-HUD 的图形若指向「逃逸方向」而非行人所在，<b>可能与共形配准的基本逻辑冲突</b>——AR 的价值正在于把图形贴到危险对象上。<br><b>→ 本研究定位为探索性区块（实验 3 区块 D），不作主设计。</b></div>
+        <div><div class="warn"><b>外部效度边界：</b>两项证据均为<b>听觉／触觉</b>预警。视觉 AR-HUD 的图形若指向「逃逸方向」而非行人所在，<b>可能与共形配准的基本逻辑冲突</b>——AR 的价值正在于把图形贴到危险对象上。<br><b>→ 本研究定位为探索性区块（实验 4 区块 D），不作主设计。</b></div>
           <div class="ok" style="margin-top:8px"><b>预注册的条件化推断规则（不预设方向）：</b>若「映射方向 × 提前量」<b>交互</b>显著 → 支持 Straughn 的时间依赖假设；若仅<b>主效应</b>显著 → 支持 Kang 的单向假设。<b>必须在数据采集前写入预注册文件，以避免事后解释。</b></div></div>
       </div>
     </div>
@@ -830,7 +882,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
     <div class="cols2">
       <div class="box r"><h3>冲突六、七：两组 B 类（记法／口径）冲突</h3>
         <p class="small"><b class="k3">冲突六　不透明度 3 倍（本轮已裁定）</b>：① <b>记法已定</b>——Ye 与 Yin（2025）把 Hou 等的 T 标尺当作「提升<b>可见性</b>的 0.75」使用，故 T 功能上是 alpha，最优换算为 <b>0.5–0.75</b>；② <b>剩余差异是构念而非矛盾</b>——Lopez 原文为「20% 与 60% <b>均</b>支持情境意识」，<b>未推荐 20%</b>，与 Li 等在 <b>0.6</b> 上一致。<b>四源收敛 0.6–0.75。</b><br><b>处理更新：</b>主条件仍取 <b>0.6</b>（交集的保守下界），0.2 档的检验目的从「消解记法不确定」改为「<b>检验遮挡收益是否超过可读性代价</b>」。</p>
-        <p class="small" style="margin-top:8px"><b>冲突七　频率 8 倍 vs 占空比接近</b>：4 Hz/60% 与 0.5 Hz/50%。<br><b>机制假设：</b>占空比决定单位时间总光通量与亮灭时长比，频率只决定重复速率。Shen 等「无闪烁最差」说明至少需有 onset 事件，「50% 优于 75%」说明<b>并非 onset 越多越好</b>。<br><b>处理：</b>全条件<b>统一动效参数</b>（周期 2 s、占空比 50%）或全不闪烁，<b>不得让锁定策略与闪烁状态共变</b>。</p>
+        <p class="small" style="margin-top:8px"><b>冲突七　频率 8 倍 vs 占空比接近</b>：4 Hz/60% 与 0.5 Hz/50%。<br><b>机制假设：</b>占空比决定单位时间总光通量与亮灭时长比，频率只决定重复速率。Shen 等「无闪烁最差」说明至少需有 onset 事件，「50% 优于 75%」说明 onset 事件密度与绩效<b>并非单调正相关</b>。<br><b>处理：</b>全条件<b>统一动效参数</b>（周期 2 s、占空比 50%）或全不闪烁，<b>不得让锁定策略与闪烁状态共变</b>。</p>
         <div class="ok" style="margin-top:8px"><b>方法学意义（两层）：</b>① 记法不统一而无法取得全文时，应把不确定性<b>显式转化为敏感性检验</b>，而不是挑一个数值当定论。<br>② <b>本轮新得</b>：B 类冲突有时可由「<b>引用者如何使用该参数</b>」间接裁定——原文不可得时，一篇<b>引用并复现其设置</b>的开放获取文献，往往在方法节保留了记法方向的判据。代价是证据等级降为间接。<br><b class="k">须记录的漏检：</b>Hussain 与 Park（2023, IJHCI）专题研究「透明度水平 × 真实背景」，与本参数直接相关却<b>不在本库 102 篇内</b>。</div>
       </div>
       <div class="box"><h3>方法学评述：四项系统性报告缺失</h3>
@@ -871,19 +923,51 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
 </section>
 
 <!-- 29 问题提出 -->
-<section class="slide">
-  <h1 class="crumb">文献综述<em>问题提出：三个层层递进的核心问题</em><span class="tag">2.5.2</span></h1>
+<section class="slide rq">
+  <h1 class="crumb">文献综述<em>问题提出：三个递进的研究问题及其变量结构</em><span class="tag">2.5.2</span></h1>
   <div class="body">
-    <div class="box g"><h3>问题一　在没有任何预警辅助时，驾驶员什么时候自己发现横穿行人、多快做出第一个避险动作？</h3>
-      <p class="small">看似基础，却是全部后续设计的前提。<b>若不回答它，实验 1 的自变量只能写成绝对 TTC，而绝对 TTC 在不同车速下对应完全不同的信息增益——这正是既有文献结论互相冲突的方法学根源。</b></p>
-      <p class="small" style="margin-top:6px">四个子问题：(a) <span class="m">t<sub>0</sub></span> 的分布（中位数、p5、p95、被试内 SD）？(b) <span class="m">t<sub>0</sub></span> 如何随车速与遮挡变化？(c) PRT 的分位数分布及其分解？(d) 驾驶员实际使用的减速度范围与 BTN 可用阈值区间？<br><b>理论校验值：</b>60 km/h 无遮挡下 <span class="m">t<sub>0</sub></span> 中位数应落在 <b>3.0–3.5 s</b>（τ 理论推算 3.2 s，与 Phan 等实测约 3 s 吻合）。<b>若大幅偏离，须检查模拟器视觉保真度而非直接接受该值。</b></p>
+    <div class="box g"><h3>RQ1　参数化基准：无预警辅助条件下驾驶员自发风险察觉的时间特征</h3>
+      <p class="small">在无预警辅助的基线条件下，驾驶员对横穿行人的<b>自发察觉时刻</b>（<span class="m">t<sub>0</sub></span>）与<b>感知反应时</b>（PRT）的分布特征如何？二者如何受<b>行车速度</b>与<b>视线遮挡</b>两项情境因素的调节？<b>该问题构成后续全部参数标定的前提</b>——若 <span class="m">t<sub>0</sub></span> 未经实测，实验 2 的自变量只能表达为绝对碰撞时间，而后者在不同行车速度下对应不同的信息增益，此即既有文献结论方向不一致的方法学根源。</p>
+      <p class="small" style="margin-top:6px"><b>操作化指标：</b>(a) <span class="m">t<sub>0</sub></span> 的中位数、第 5 与第 95 百分位、被试内标准差；(b) <span class="m">t<sub>0</sub></span> 对速度与遮挡的主效应与交互；(c) PRT 的分位数分布及其成分分解；(d) 实际采用的减速度范围与制动威胁数可用阈值区间。<b>　理论校验值：</b>60 km/h 无遮挡条件下 <span class="m">t<sub>0</sub></span> 中位数的预期区间为 <b>3.0–3.5 s</b>（光学膨胀率理论推算 3.2 s，与 Phan 等实测约 3 s 收敛）；<b>若实测值大幅偏离，应先检验模拟器视觉保真度而非直接采信。</b></p>
     </div>
-    <div class="box" style="margin-top:2px"><h3>问题二　AR-HUD 行人预警应相对该基线提前多少、持续多久、何时升级？</h3>
-      <p class="small">(a) <b>相对提前量 <span class="m">Δt</span> 与触发准则</b>——<span class="m">Δt</span> 取多少？用固定时间阈值还是 BTN？是否与车速交互？<span class="cite">→ 填补 G1、G2</span><br>(b) <b>持续与撤销策略</b>——固定时长／状态维持／风险耦合衰减三者孰优？撤销是否需要滞环？<span class="cite">→ 填补 G3</span><br>(c) <b>分层升级规则与系统可靠性</b>——级间间隔取多少？可靠性下降时分层优势是否衰减？虚警在 L1 与 L2 上代价是否不同？<span class="cite">→ 填补 G4、G5</span></p>
+    <div class="box" style="margin-top:2px"><h3>RQ2　时间参数：预警时序变量对四类因变量的影响机制与适宜区间</h3>
+      <p class="small">时间参数如何影响驾驶员的<b>安全绩效、认知负荷、情境意识与用户体验</b>？各参数的适宜取值区间为何？<br>(a) <b>相对提前量 <span class="m">Δt</span> 与触发准则类型</b>——<span class="m">Δt</span> 的适宜区间为何？准则采用固定时间阈值抑或减速度归一化量？是否与行车速度交互？<span class="cite">→ 对应空白 G1、G2</span><br>(b) <b>持续与撤销策略</b>——固定时长、状态维持与风险耦合衰减三者的优劣序为何？撤销规则是否需引入滞环？<span class="cite">→ G3</span><br>(c) <b>分层升级规则与系统可靠性</b>——级间间隔的适宜取值为何？可靠性下降时分层结构的优势是否衰减？虚警发生于预告级与确认级时代价是否等同？<span class="cite">→ G4、G5</span></p>
     </div>
-    <div class="box" style="margin-top:2px"><h3>问题三　预警应锁定在哪里、空间信息如何随风险连续变化？</h3>
-      <p class="small">(a) <b>空间参照系与锁定策略</b>——BD / BR / BW / BW+BR 四者孰优？差异是否随背景视觉复杂度放大？图形应指向危险侧还是逃逸侧？<span class="cite">→ 填补 G6</span><br>(b) <b>风险演化动态</b>——把「动态」分解为<b>风险量级空间映射</b>（几何是否随 BTN 缩放）与<b>运动趋势空间映射</b>（是否显示预测轨迹与冲突点）两个正交维度后，各自的作用机制是什么？两者是否协同？<span class="cite">→ 填补 G7</span></p>
+    <div class="box" style="margin-top:2px"><h3>RQ3　空间参数：空间参照系与风险动态映射的作用路径</h3>
+      <p class="small">空间参照系与风险动态映射如何影响<b>危险定位效率、注意资源分配与情境意识各阶段的达成</b>？<br>(a) <b>空间参照系与锁定策略</b>——屏幕固定、道路锁定、跟随目标锁定与复合四水平的优劣序为何？该序是否随<b>背景视觉复杂度</b>与<b>次任务负荷</b>改变？图形指向危险侧抑或逃逸侧？<span class="cite">→ 对应空白 G6</span><br>(b) <b>风险演化的空间编码</b>——将「动态」分解为<b>风险量级空间映射</b>（几何是否随制动威胁数缩放）与<b>运动趋势空间映射</b>（是否呈现预测轨迹与冲突点）两个正交维度后，各维度的作用路径为何？二者是否存在协同效应？<span class="cite">→ G7</span></p>
     </div>
+  </div>
+  <div class="pg"></div>
+</section>
+
+<!-- 研究目标 2.5.2 -->
+<section class="slide rq">
+  <h1 class="crumb">文献综述<em>研究目标：总目标、四项分目标与四类因变量构念</em><span class="tag">2.5.2</span></h1>
+  <div class="body">
+    <div class="def"><b>总目标：</b>以驾驶员<b>情境意识模型</b>与<b>注意加工阶段理论</b>为理论基础，探索情境特异的 AR-HUD 行人碰撞预警<b>时空参数</b>与驾驶员<b>安全绩效、认知负荷、情境意识及用户体验</b>之间的关系，建立以自发察觉时刻为零点的参数化基准，<b>输出兼顾安全阈限与用户心理需求的 AR-HUD 行人预警时空参数设计标准</b>。</div>
+    <div class="cols2">
+      <div class="box g">
+        <h3>四项分目标（与 RQ 一一对应，逐层收敛）</h3>
+        <ul class="small" style="margin-left:15px">
+          <li class="tight"><b>O1　基准标定。</b>探索无预警辅助条件下驾驶员自发风险察觉的时间特征及其情境调节，<b>输出</b>以自发察觉时刻为零点的参数化基准、感知反应时分位数分布与运动学下界。<span class="cite">→ RQ1｜§2.1.6 三重约束模型的零点</span></li>
+          <li class="tight"><b>O2　时间参数标定。</b>探索相对提前量、触发准则类型、持续与撤销策略、分层级间间隔与系统可靠性对四类因变量的影响机制与作用边界，<b>输出</b>各时间参数的适宜取值区间及其运动学表达式。<span class="cite">→ RQ2｜填补 G1–G5</span></li>
+          <li class="tight"><b>O3　空间参数标定。</b>探索空间参照系与风险动态映射对危险定位效率、注意资源分配及情境意识三阶段的作用路径，<b>输出</b>锁定策略推荐序与动态编码规则，<b>分离位置增益与共形增益</b>，并判定推荐序<b>可否跨负荷迁移</b>。<span class="cite">→ RQ3｜填补 G6–G7</span></li>
+          <li class="tight"><b>O4　关系模型与标准整合。</b>建立「时空参数 → 情境意识 → 安全绩效与用户体验」的关系模型，<b>输出</b>可跨行车速度迁移、与量产显示视场及自动紧急制动时序对齐的设计标准，并明确适用边界。<span class="cite">→ §2.4 七组冲突的处置结果并入本目标</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>四类因变量构念及其操作化</h3>
+        <table class="mini">
+          <tr><th style="width:21%">构念</th><th>测量指标</th></tr>
+          <tr><td><b>安全绩效</b></td><td>最小碰撞余量距离、碰撞发生率、峰值减速度、制动反应时、方向盘抖动率</td></tr>
+          <tr><td><b>认知负荷</b></td><td>NASA-TLX 加权总分、瞳孔直径变化率、注视转移熵、次任务绩效衰减</td></tr>
+          <tr><td><b>情境意识</b></td><td>冻结探测法按<b>感知／理解／预测</b>三阶段分别计分；<b>危险漏检率</b>（并列主要因变量）、首次注视时间、预期性注视比例</td></tr>
+          <tr><td><b>用户体验</b></td><td>信任量表、可接受度、扰烦度评分、主观偏好序、晕动与不适自评</td></tr>
+        </table>
+        <p class="small" style="margin-top:6px"><b>情境意识不并入认知负荷的理由：</b>§2.3.10 与 §2.3.11 的证据显示二者<b>可解离</b>——存在主观负荷下降而危险漏检率上升的条件（注意隧道与无意视盲）。合并计量将掩盖该权衡，<b>故漏检率提升为与安全绩效并列的主要因变量</b>，且眼动指标一律按<b>区间判定</b>而非单调假设解释。</p>
+      </div>
+    </div>
+    <div class="note" style="flex:0 0 auto"><b>目标间的依赖关系：</b>O1 的产出（<span class="m">t<sub>0</sub></span> 分布、感知反应时分位数、实测舒适减速度、方差成分）构成 O2 的自变量换算基准与样本量估计输入；O2 的入选时间参数组合构成 O3 的固定条件；O4 以 O1–O3 的实测参数为输入，<b>不引入新的实验操纵</b>。四项目标的输出物均以<b>运动学量</b>而非固定秒数表达，以保证跨行车速度与跨车型的可迁移性——此即 §2.4.10 方法学评述所指出的、既有研究结论不可累积的直接对策。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -898,7 +982,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
         <table class="mini">
           <tr><th class="n" style="width:9%">编号</th><th>内容与「若被推翻意味着」</th></tr>
           <tr><td class="n"><b>H1</b></td><td>存在最小有效提前量 <span class="m">Δt<sub>min</sub><span class="up"> ≈ 0.9</span></span>–1.2 s；<span class="m">Δt<span class="up"> &lt; 0.9</span></span> s 时峰值减速度与 jerk 显著上升但碰撞率不降。<br><span class="cite">→ 被推翻意味着<b>本研究对阶段耗时的估计方式</b>被推翻（而非 SPIDER 框架本身）</span></td></tr>
-          <tr><td class="n"><b>H2</b></td><td><span class="m">Δt<span class="up"> = +2.5</span></span> s 相比 +1.0 s <b>反应时无显著增益，但主观负荷与侵入性更差</b>（收益递减 + 代价递增）。<br><span class="cite">→ 被推翻意味着「越早越好」成立，上界需重估</span></td></tr>
+          <tr><td class="n"><b>H2</b></td><td><span class="m">Δt<span class="up"> = +2.5</span></span> s 相比 +1.0 s <b>反应时无显著增益，但主观负荷与侵入性更差</b>（收益递减 + 代价递增）。<br><span class="cite">→ 若被推翻，则「提前量与绩效单调正相关」成立，上界须重估</span></td></tr>
           <tr><td class="n"><b>H3</b></td><td>BTN 归一化触发的<b>跨车速效应一致性显著优于</b>固定时间阈值（即「准则 × 车速」交互显著）。<br><span class="cite">→ 被推翻意味着固定 TTC 阈值已足够，无需引入 BTN</span></td></tr>
           <tr><td class="n"><b>H4</b></td><td>级间间隔存在<b>倒 U 型峰值且峰值位于 1.0 s</b>；分层增益主要位于 Identifying 与 Deciding 而非 Scanning。<br><span class="cite">→ 被推翻时 1.0 s 的<b>工程依据仍成立</b>，只是失去理论解释</span></td></tr>
         </table>
@@ -916,7 +1000,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
           <li class="tight"><b>H13</b>　组合动态只在未显著增加负荷时优于单一动态</li>
           <li class="tight"><b>H14</b>　时间分层与空间动态共同通过<b>缩短目标验证时间（SPIDER 的 I 阶段）</b>改善绩效</li>
         </ul>
-        <div class="warn" style="margin-top:8px"><b>全部为待检验假设。</b>H14 属跨实验整合推断，<b>只有在实验 2 与实验 4 的中介阶段指标均提供一致证据时</b>，才可作为机制性结论。</div>
+        <div class="warn" style="margin-top:8px"><b>全部为待检验假设。</b>H14 属跨实验整合推断，<b>只有在实验 3 与实验 5 的中介阶段指标均提供一致证据时</b>，才可作为机制性结论。</div>
       </div>
     </div>
   </div>
@@ -930,8 +1014,8 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
     <figure>
       <img src="figures/research_framework_3col.png" alt="研究框架三列图">
     </figure>
-    <div class="note" style="flex:0 0 auto"><b>五个实验的递进逻辑（这也是本研究不是「五个并列小实验」的理由）：</b>实验 0 提供<b>零点与下界</b>（<span class="m">t<sub>0</sub></span> 分布 → 实验 1 自变量换算基准；<span class="m"><span class="up">PRT</span><sub>p95</sub></span> → 可避险区校验；<span class="m">t<sub>0</sub></span> 时刻 BTN → 触发阈值校准；<span class="m">a<sub>comf</sub></span> 实测 → 全部实验的归一化分母；方差成分 → 样本量估计）→ 实验 1 建立<b>单层时间基线</b> → 实验 2 升级为<b>分层规则</b>并检验低可靠性稳健性 → 实验 3 <b>固定全部时间参数</b>只比较「锁定在哪里」 → 实验 4 <b>固定时间与空间载体</b>只比较「如何随风险变化」。</div>
-    <div class="warn" style="flex:0 0 auto;margin-top:7px"><b>由核心理论模型强制导出的一条设计约束：实验 0／1／2 必须共用同一场景族。</b>因为自变量是 <span class="m">Δt<span class="up"> = </span>t<sub>0</sub><span class="up"> − </span>t<sub>warn</sub></span>，而 <span class="m">t<sub>0</sub></span> <b>不是常数</b>——它随<b>车速</b>与<b>遮挡</b>系统变化（遮挡直接改变光学膨胀率 <span class="m">θ̇</span> 越过阈值的时刻）。因此：<b>实验 0 按「车速 40／60 × 遮挡 无／有」四个单元分别标定 <span class="m">t<sub>0</sub></span>；实验 1 只能在已标定的单元内换算 <span class="m">Δt</span>；实验 2 把车速与遮挡固定在实验 1 入选的水平上</b>，使 <span class="m">t<sub>0</sub></span> 成为常量，只让级间间隔与可靠性变化。<b>实验 3／4 已固定全部时间参数，故可另设场景操纵</b>（背景复杂度、风险演化），不受此约束。</div>
+    <div class="note" style="flex:0 0 auto"><b>五个实验的递进逻辑（这也是本研究不是「五个并列小实验」的理由）：</b>实验 1 提供<b>零点与下界</b>（<span class="m">t<sub>0</sub></span> 分布 → 实验 2 自变量换算基准；<span class="m"><span class="up">PRT</span><sub>p95</sub></span> → 可避险区校验；<span class="m">t<sub>0</sub></span> 时刻 BTN → 触发阈值校准；<span class="m">a<sub>comf</sub></span> 实测 → 全部实验的归一化分母；方差成分 → 样本量估计）→ 实验 2 建立<b>单层时间基线</b> → 实验 3 升级为<b>分层规则</b>并检验低可靠性稳健性 → 实验 4 <b>固定全部时间参数</b>只比较「锁定在哪里」 → 实验 5 <b>固定时间与空间载体</b>只比较「如何随风险变化」。</div>
+    <div class="warn" style="flex:0 0 auto;margin-top:7px"><b>由核心理论模型强制导出的一条设计约束：实验 1／2／3 必须共用同一场景族。</b>因为自变量是 <span class="m">Δt<span class="up"> = </span>t<sub>0</sub><span class="up"> − </span>t<sub>warn</sub></span>，而 <span class="m">t<sub>0</sub></span> <b>不是常数</b>——它随<b>车速</b>与<b>遮挡</b>系统变化（遮挡直接改变光学膨胀率越过知觉阈值的时刻）。因此：<b>实验 1 按「车速 40／60 × 遮挡 无／有」四个单元分别标定 <span class="m">t<sub>0</sub></span>；实验 2 只能在已标定的单元内换算 <span class="m">Δt</span>；实验 3 把车速与遮挡固定在实验 2 入选的水平上</b>，使 <span class="m">t<sub>0</sub></span> 成为常量，只让级间间隔与可靠性变化。<b>实验 4／5 已固定全部时间参数，故可另设场景操纵</b>（背景复杂度、风险演化），不受此约束。</div>
   </div>
   <div class="pg"></div>
 </section>
@@ -950,7 +1034,7 @@ figcaption{font-size:12.3px;color:var(--grey);margin-top:7px;text-align:center;l
       <tr><td class="n">5</td><td>仅在上述条件相当时，以<b>反应时与主观偏好</b>作最终依据</td><td>并列时选择更简单、侵入性更低的方案</td></tr>
     </table>
     <div class="warn"><b>这一顺序的必要性由本章的辨析直接支持：</b>若只看反应时，则 Kim 等（2018）的 BRAKE 文本在 Far 条件下会被判为「有效」（驾驶员确实更早制动），<b>而其 +34.46% 的峰值减速度上升会被忽略</b>。同理，若只看主观偏好，则 Wang 等（2025）的红地毯（16/21 偏好）会胜过虚拟墙，<b>而后者的让行成功率才是显著更优的</b>。</div>
-    <div class="ok"><b>五条由方法学质量导出的设计约束：</b>① 不得沿用文献典型样本量，须由实验 0 的方差成分反推；② 不得把零结果读作无效应，须报告效应量置信区间；③ 必须实测并报告系统渲染延迟；④ 必须完整报告六项视觉参数；⑤ 必须预注册反应时清洗规则（0.2–2.9 s）与注视定义（最小 80 ms、最大离散 100 像素）。</div>
+    <div class="ok"><b>五条由方法学质量导出的设计约束：</b>① 不得沿用文献典型样本量，须由实验 1 的方差成分反推；② 不得把零结果读作无效应，须报告效应量置信区间；③ 必须实测并报告系统渲染延迟；④ 必须完整报告六项视觉参数；⑤ 必须预注册反应时清洗规则（0.2–2.9 s）与注视定义（最小 80 ms、最大离散 100 像素）。</div>
   </div>
   <div class="pg"></div>
 </section>
