@@ -91,6 +91,12 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 .cover h1{font-size:35px;line-height:1.44;color:var(--blue-d);margin-bottom:14px;border:0;padding:0}
 .cover h2{font-size:19px;color:var(--blue);font-weight:400;margin-bottom:30px}
 .cover .rule{width:130px;height:3px;background:var(--blue);margin:0 auto 30px}
+.cover .q{
+  background:var(--blue-l);border-left:4px solid var(--blue);text-align:left;
+  padding:14px 19px;font-size:15.5px;line-height:1.78;color:var(--blue-d);max-width:950px;margin:0 auto;
+}
+.cover .rq{max-width:950px;margin:15px auto 0;text-align:left;font-size:13.2px;line-height:1.82;color:#444}
+.cover .rq b{color:var(--blue-d)}
 /* 双情境时间轴 */
 .tl{flex:0 0 auto;padding:2px 0}
 .tl h4{font-size:13.5px;color:var(--blue-d);margin-bottom:6px;font-weight:700}
@@ -109,6 +115,8 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 .tl-seg.q2{background:#F7F5FA;color:#7A7A8A}
 .mini.tt td{padding:3.4px 7px}
 .slide.dense .body{gap:8px}
+.slide.dense .tiny td{padding:3px 6px}
+.slide.dense .tiny th{padding:4px 6px}
 .slide.dense .xs li,.slide.dense li.xs{line-height:1.56}
 .slide.dense .box{padding:9px 13px}
 .slide.dense .box h3{margin-bottom:6px;padding-bottom:4px}
@@ -145,6 +153,17 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 <section class="slide cover on">
   <h1>AR-HUD 行人碰撞预警的情境依赖时空参数设计<br>非盲区与盲区双情境的分别标定及其迁移损失</h1>
   <div class="rule"></div>
+  <div class="q">
+    <b>核心论断：</b>时空参数<b>不存在一套跨情境通用的取值</b>。非盲区情境以驾驶员<b>自发察觉时刻</b>为零点，
+    盲区情境下该零点在物理上不存在，须改以行人<b>自然显露时刻</b>为零点；本研究分别标定两套参数，
+    并<b>直接实测两者之间的迁移损失</b>，据此判定参数是否须情境自适应。
+  </div>
+  <div class="rq">
+    <b>与主线题目的关系：</b>主线题目《AR-HUD 行人碰撞预警的时空参数设计及其对驾驶员情境意识与避险绩效的影响》按
+    <b>参数类型</b>切分（时间参数／空间参数）；本框架按<b>视线可见性</b>重新切分，每个研究内部同时覆盖时间与空间参数。
+    二者共用同一文献库（102 篇）、同一四类因变量构念与同一判定顺序，<b>并非两个课题，而是同一课题的两种切分方案</b>。<br>
+    <b>汇报性质：</b>组会研究汇报　|　<b>版本：</b>2026-08　|　<b>配套讲稿：</b>研究汇报_双情境框架_讲稿.md（13 页 / 19 分 40 秒）
+  </div>
   <div class="pg"></div>
 </section>
 
@@ -540,7 +559,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
 </section>
 
 <!-- 12 研究设计总览 -->
-<section class="slide">
+<section class="slide dense">
   <h1 class="crumb">研究设计<em>一个双情境标定实验 + 两组情境内主实验 + 交叉迁移区块</em><span class="tag">6 / 6</span></h1>
   <div class="body">
     <table class="tiny">
@@ -558,8 +577,8 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         <h3>被试与场次安排</h3>
         <ul class="xs">
           <li class="tight"><b>实验 1 与实验 2 复用同一批被试</b>——自变量 <span class="m">Δt</span> 需要被试自身的 <span class="m">t<sub>0</sub></span>。</li>
-          <li class="tight"><b>实验 4 无须复用被试</b>——<span class="m">t<sub>reveal</sub></span> 为几何量、被试间恒定，故 <span class="m">Δt′</span> 可直接操纵，招募约束大幅放宽。</li>
-          <li class="tight">若招募资源受限，两项研究各由一批被试完成两个场次，<b>场景集交叉替换并至少间隔 7 天</b>；样本量按预实验方差与约 10% 脱落重算，穿透显影条件按 15% 估计。</li>
+          <li class="tight"><b>实验 4 无须复用被试</b>——<span class="m">t<sub>reveal</sub></span> 为几何量、被试间恒定，故 <span class="m">Δt′</span> 可直接操纵。</li>
+          <li class="tight">招募受限时两项研究各由一批被试完成两个场次，<b>场景集交叉替换并至少间隔 7 天</b>；样本量按预实验方差与约 10% 脱落重算（穿透显影按 15%）。</li>
         </ul>
       </div>
       <div class="box">
@@ -567,7 +586,7 @@ figcaption{flex:0 0 auto;font-size:12.3px;color:var(--grey);margin-top:7px;text-
         <ul class="xs">
           <li class="tight"><b>遮挡体：</b>路侧停放的同色厢式货车（近距侧方）与路侧公交车（远距前方），均取自已发表范式。</li>
           <li class="tight"><b>行人：</b>机动车道右边线外 2.5 m、斑马线外，步速 1.0 m/s（主）与 1.5 m/s（稳健性检查）。</li>
-          <li class="tight"><b>车速 40／60 km/h；<span class="m">t<sub>detect</sub></span></b> 设于距行人 100 m（约 6 s @60 km/h）。<b>车—人间隙落在 1.5–7 s</b>，主实验取 3–7 s 决策模糊带；两端点为综述转引，<b>不作效应量依据</b>。</li>
+          <li class="tight"><b>车速 40／60 km/h；<span class="m">t<sub>detect</sub></span></b> 设于距行人 100 m（约 6 s @60 km/h）。<b>车—人间隙 1.5–7 s</b>，主实验取 3–7 s 模糊带（端点属综述转引，<b>不作效应量依据</b>）。</li>
         </ul>
       </div>
     </div>

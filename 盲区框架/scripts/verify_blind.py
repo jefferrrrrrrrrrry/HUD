@@ -10,8 +10,8 @@
   [3] 术语与记法统一（禁用词、旧提法）
   [4] 相对路径引用可解析
   [5] 六条边界（BD-1..6）与六条预测（P1'..P6')、七项空白（BG1..7）编号齐全
-  [6] 两套 deck 与讲稿对齐（转调 verify_deck_talk）
-  [7] 两套 deck 零溢出报告存在且无溢出页
+  [6] 三套 deck 与讲稿对齐（转调 verify_deck_talk）
+  [7] 三套 deck 零溢出报告存在且无溢出页
 """
 from __future__ import annotations
 
@@ -31,14 +31,25 @@ TALK = BD / "研究汇报_双情境框架_讲稿.md"
 REVIEW = BD / "thesis" / "盲区情境专题文献综述.md"
 PROP = BD / "开题报告_双情境框架.html"
 PTALK = BD / "开题报告_双情境框架_讲稿.md"
+RDECK = BD / "文献综述_盲区情境.html"
+RTALK = BD / "文献综述_盲区情境_讲稿.md"
 README = BD / "README.md"
 
-FILES = [LEDGER, FRAME, DECK, TALK, REVIEW, PROP, PTALK, README]
+# 论文正文（第 1、2B、3 章）与三份实验设计依据
+CH1 = BD / "thesis" / "第1章_研究背景及意义.md"
+CH3 = BD / "thesis" / "第3章_研究内容与预期目标.md"
+EXP1 = BD / "实验1_双情境零点同批标定_文献与设计依据.md"
+EXP4 = BD / "实验4_盲区时间参数与可靠性_文献与设计依据.md"
+EXP5 = BD / "实验5_盲区锚定策略与遮挡几何_文献与设计依据.md"
+
+FILES = [LEDGER, FRAME, DECK, TALK, REVIEW, PROP, PTALK, RDECK, RTALK, README,
+         CH1, CH3, EXP1, EXP4, EXP5]
 
 # (deck, talk, 溢出报告) 三元组
 PAIRS = [
     (DECK, TALK, "figures/blind_shots_overflow.json"),
     (PROP, PTALK, "figures/proposal_shots_overflow.json"),
+    (RDECK, RTALK, "figures/blind_review_shots_overflow.json"),
 ]
 
 # 关键数值：出现即必须与此处一致（正则 → 说明）
@@ -74,10 +85,10 @@ FORBIDDEN = {
 
 # 必须成套出现的编号
 SETS = {
-    "边界 BD": ([f"BD-{i}" for i in range(1, 7)], [FRAME, DECK, REVIEW, PROP]),
-    "预测 P′": ([f"P{i}′" for i in range(1, 7)], [FRAME, DECK, TALK, REVIEW, PROP, PTALK]),
-    "空白 BG": ([f"BG{i}" for i in range(1, 8)], [REVIEW]),
-    "假设 H′": ([f"H{i}′" for i in range(1, 6)], [FRAME, REVIEW]),
+    "边界 BD": ([f"BD-{i}" for i in range(1, 7)], [FRAME, DECK, REVIEW, PROP, CH1]),
+    "预测 P′": ([f"P{i}′" for i in range(1, 7)], [FRAME, DECK, TALK, REVIEW, PROP, PTALK, RTALK, CH3]),
+    "空白 BG": ([f"BG{i}" for i in range(1, 8)], [REVIEW, RTALK]),
+    "假设 H′": ([f"H{i}′" for i in range(1, 6)], [FRAME, REVIEW, CH3]),
 }
 
 

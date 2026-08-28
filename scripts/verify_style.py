@@ -65,6 +65,11 @@ DEFAULT = [
 ]
 
 
+def in_scope(txt: str) -> bool:
+    """[3][4] 仅适用于含研究目标页的汇报稿；专题综述稿予以豁免。"""
+    return "研究目标" in txt
+
+
 def check(path: Path) -> int:
     txt = path.read_text(encoding="utf-8")
     is_talk = path.suffix == ".md"
@@ -76,7 +81,7 @@ def check(path: Path) -> int:
     # 纠错语所在行视为正当的反面引用，予以豁免
     EXEMPT = ("禁则", "禁用", "不渲染", "缺字形", "应作", "不得写成",
               "改为", "朴素假设", "转述失真",
-              "不可读作", "不改称", "一类构念名", "一类时间量",
+              "不可读作", "不得读作", "不改称", "一类构念名", "一类时间量",
               "直接改名", "非时间节点")
     hits = []
     for n, line in enumerate(txt.splitlines(), 1):
@@ -115,6 +120,9 @@ def main() -> int:
         if not f.exists():
             continue
         t = f.read_text(encoding="utf-8")
+        if not in_scope(t):
+            print(f"  － {f.name} 不适用（无研究目标页）")
+            continue
         lack = [c for c in DV_CONSTRUCTS if c not in t]
         if lack:
             print(f"  ✗ {f.name} 缺构念 {lack}")
@@ -127,6 +135,9 @@ def main() -> int:
         if not f.exists():
             continue
         t = f.read_text(encoding="utf-8")
+        if not in_scope(t):
+            print(f"  － {f.name} 不适用（无研究目标页）")
+            continue
         lack = [i for i in ("RQ1", "RQ2", "RQ3") if i not in t]
         lack += [i for i in ("O1", "O2", "O3", "O4") if i not in t]
         if lack:
